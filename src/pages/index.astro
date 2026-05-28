@@ -1,124 +1,156 @@
 ---
-import SiteLayout from '../components/SiteLayout.astro';
+import '../styles.css';
 
 const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', description: 'Potencia visual para gaming y edición.' },
-  { label: 'Procesadores', slug: '/procesadores', description: 'CPU para multitarea y rendimiento extremo.' },
-  { label: 'Memoria RAM', slug: '/memoria-ram', description: 'Velocidad y capacidad para tus builds.' },
-  { label: 'SSD', slug: '/ssd', description: 'Almacenamiento rápido para juegos y programas.' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', description: 'Energía estable y eficiente para tu PC.' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', description: 'Enfriamiento silencioso y de alto rendimiento.' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', description: 'Ventiladores confiables para tu torre.' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', description: 'Estética, flujo de aire y espacio para tu setup.' },
-  { label: 'Teclados', slug: '/teclados', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
-  { label: 'Mouse', slug: '/mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
-  { label: 'Audífonos', slug: '/audifonos', description: 'Sonido inmersivo para tus partidas y streaming.' },
+  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: '🖥️', description: 'Potencia visual para gaming y edición.' },
+  { label: 'Procesadores', slug: '/procesadores', icon: '⚙️', description: 'CPU para multitarea y rendimiento extremo.' },
+  { label: 'Memoria RAM', slug: '/memoria-ram', icon: '🧠', description: 'Velocidad y capacidad para tus builds.' },
+  { label: 'SSD', slug: '/ssd', icon: '💾', description: 'Almacenamiento rápido para juegos y programas.' },
+  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: '🔌', description: 'Energía estable y eficiente para tu PC.' },
+  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: '🌊', description: 'Enfriamiento silencioso y de alto rendimiento.' },
+  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: '🌀', description: 'Ventiladores confiables para tu torre.' },
+  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: '🧱', description: 'Estética, flujo de aire y espacio para tu setup.' },
+  { label: 'Teclados', slug: '/teclados', icon: '⌨️', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
+  { label: 'Mouse', slug: '/mouse', icon: '🖱️', description: 'Precisión y ergonomía para juegos competitivos.' },
+  { label: 'Audífonos', slug: '/audifonos', icon: '🎧', description: 'Sonido inmersivo para tus partidas y streaming.' },
 ];
 ---
 
-<SiteLayout title="Zona Gaming | Componentes PC">
-  <section class="hero">
-    <div class="hero-copy">
-      <small>Tienda PC Gamer</small>
-      <h1>Equipos y componentes que elevan tu rendimiento al siguiente nivel.</h1>
-      <p>Descubre un catálogo curado de piezas para armado de PC, desde tarjetas gráficas y fuentes hasta teclados mecánicos y enfriamiento líquido. Diseño minimalista, velocidad máxima y estilo gamer real.</p>
-      <div class="hero-actions">
-        <button class="btn">Ver ofertas</button>
-        <button class="btn-secondary">Personalizar PC</button>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat-card">
-          <strong>+120</strong>
-          Modelos optimizados para gaming.
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Zona Gaming | Componentes PC</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">
+          <span></span>
+          Zona Gaming
         </div>
-        <div class="stat-card">
-          <strong>24h</strong>
-          Envío rápido y soporte técnico.
+        <nav>
+          <a href="#coleccion">Componentes</a>
+          <a href="#ventajas">Ventajas</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <small>Tienda PC Gamer</small>
+          <h1>Equipos y componentes que elevan tu rendimiento al siguiente nivel.</h1>
+          <p>Descubre un catálogo curado de piezas para armado de PC, desde tarjetas gráficas y fuentes hasta teclados mecánicos y enfriamiento líquido. Diseño minimalista, velocidad máxima y estilo gamer real.</p>
+          <div class="hero-actions">
+            <button class="btn">Ver ofertas</button>
+            <button class="btn-secondary">Personalizar PC</button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>+120</strong>
+              Modelos optimizados para gaming.
+            </div>
+            <div class="stat-card">
+              <strong>24h</strong>
+              Envío rápido y soporte técnico.
+            </div>
+            <div class="stat-card">
+              <strong>5 años</strong>
+              Garantía en componentes premium.
+            </div>
+          </div>
         </div>
-        <div class="stat-card">
-          <strong>5 años</strong>
-          Garantía en componentes premium.
+
+        <div class="hero-visual">
+          <div class="visual-panel">
+            <h2>Lleva tu setup al podio</h2>
+            <p>Haz que cada partida sea más inmersiva con hardware confiable, iluminación sutil y un diseño que queda perfecto en tu escritorio.</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="hero-visual">
-      <div class="visual-panel">
-        <h2>Lleva tu setup al podio</h2>
-        <p>Haz que cada partida sea más inmersiva con hardware confiable, iluminación sutil y un diseño que queda perfecto en tu escritorio.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="categorias" class="categories">
-    <div class="section-title">
-      <small>Categorías</small>
-      <h2>Explora por tipo de componente</h2>
-    </div>
-    <div class="category-grid">
-      {categories.map((category) => (
-        <a class="category-card" href={category.slug}>
-          <h3>{category.label}</h3>
-          <p>{category.description}</p>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <section id="coleccion" class="products">
-    <div class="section-title">
-      <small>Top ventas</small>
-      <h2>Selección de componentes</h2>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <h3>GPU Titan X</h3>
-        <p>Rendimiento extremo para juegos AAA, streaming y renderizado sin compromisos.</p>
-        <span>$1,299 USD</span>
-      </article>
-
-      <article class="product-card">
-        <h3>Placa madre NeoCore</h3>
-        <p>Compatibilidad total con DDR5, PCIe 5.0 y overclock estable para tus builds más audaces.</p>
-        <span>$249 USD</span>
-      </article>
-
-      <article class="product-card">
-        <h3>Fuente HyperFlow 850W</h3>
-        <p>Eficiencia Gold con cableado modular y protección inteligente para cada partida.</p>
-        <span>$159 USD</span>
-      </article>
-    </div>
-  </section>
-
-  <section id="ventajas" class="features">
-    <div class="section-title">
-      <small>Por qué elegirnos</small>
-      <h2>Ventajas del setup gamer</h2>
-    </div>
-    <div class="feature-list">
-      <div class="feature-item">
-        <div>1</div>
-        <div>
-          <strong>Diseño minimalista</strong>
-          <p>Una estética limpia y futurista pensada para que tu pc destaque sin recargar tu escritorio.</p>
+      <section id="categorias" class="categories">
+        <div class="section-title">
+          <small>Categorías</small>
+          <h2>Encuentra el componente ideal</h2>
         </div>
-      </div>
-      <div class="feature-item">
-        <div>2</div>
-        <div>
-          <strong>Calidad premium</strong>
-          <p>Seleccionamos componentes de marcas reconocidas con rendimiento estable y duradero.</p>
+        <div class="category-grid">
+          {categories.map((category) => (
+            <a class="category-card" href={category.slug}>
+              <span class="category-icon">{category.icon}</span>
+              <div>
+                <h3>{category.label}</h3>
+                <p>{category.description}</p>
+              </div>
+            </a>
+          ))}
         </div>
-      </div>
-      <div class="feature-item">
-        <div>3</div>
-        <div>
-          <strong>Asesoría experta</strong>
-          <p>Nuestro equipo te ayuda a elegir las piezas ideales según tu presupuesto y estilo de juego.</p>
+      </section>
+
+      <section id="coleccion" class="products">
+        <div class="section-title">
+          <small>Top ventas</small>
+          <h2>Selección de componentes</h2>
         </div>
-      </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>GPU Titan X</h3>
+            <p>Rendimiento extremo para juegos AAA, streaming y renderizado sin compromisos.</p>
+            <span>$1,299 USD</span>
+          </article>
+
+          <article class="product-card">
+            <h3>Placa madre NeoCore</h3>
+            <p>Compatibilidad total con DDR5, PCIe 5.0 y overclock estable para tus builds más audaces.</p>
+            <span>$249 USD</span>
+          </article>
+
+          <article class="product-card">
+            <h3>Fuente HyperFlow 850W</h3>
+            <p>Eficiencia Gold con cableado modular y protección inteligente para cada partida.</p>
+            <span>$159 USD</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="ventajas" class="features">
+        <div class="section-title">
+          <small>Por qué elegirnos</small>
+          <h2>Ventajas del setup gamer</h2>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div>1</div>
+            <div>
+              <strong>Diseño minimalista</strong>
+              <p>Una estética limpia y futurista pensada para que tu pc destaque sin recargar tu escritorio.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div>2</div>
+            <div>
+              <strong>Calidad premium</strong>
+              <p>Seleccionamos componentes de marcas reconocidas con rendimiento estable y duradero.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div>3</div>
+            <div>
+              <strong>Asesoría experta</strong>
+              <p>Nuestro equipo te ayuda a elegir las piezas ideales según tu presupuesto y estilo de juego.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contacto">
+        <div>Zona Gaming · Venta de componentes PC · Minimalismo gamer</div>
+        <div>¿Listo para mejorar tu setup? Contacto: hola@zonagaming.com</div>
+      </footer>
     </div>
-  </section>
-</SiteLayout>
+  </body>
+</html>

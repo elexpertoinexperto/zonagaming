@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
 const title = 'Fuentes de poder';
 const description = 'Fuentes modulares y certificadas para entregar energía limpia y segura a tu PC gamer.';
 const products = [
@@ -23,11 +24,7 @@ const products = [
 
   <section class="product-grid">
     {products.map((product) => (
-      <article class="product-card">
-        <h3>{product.name}</h3>
-        <p>{product.description}</p>
-        <span>{product.price}</span>
-      </article>
+      <ProductCard product={product} />
     ))}
   </section>
 </SiteLayout>
