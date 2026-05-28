@@ -1,5 +1,6 @@
 ---
 import '../styles.css';
+import Header from '../components/Header.astro';
 
 const categories = [
   { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: '🖥️', description: 'Potencia visual para gaming y edición.' },
@@ -27,17 +28,7 @@ const categories = [
   </head>
   <body>
     <div class="page">
-      <header>
-        <div class="brand">
-          <span></span>
-          Zona Gaming
-        </div>
-        <nav>
-          <a href="#coleccion">Componentes</a>
-          <a href="#ventajas">Ventajas</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </header>
+      <Header />
 
       <section class="hero">
         <div class="hero-copy">

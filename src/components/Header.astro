@@ -1,0 +1,147 @@
+---
+const categories = [
+  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: '🖥️' },
+  { label: 'Procesadores', slug: '/procesadores', icon: '⚙️' },
+  { label: 'Memoria RAM', slug: '/memoria-ram', icon: '🧠' },
+  { label: 'SSD', slug: '/ssd', icon: '💾' },
+  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: '🔌' },
+  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: '🌊' },
+  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: '🌀' },
+  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: '🧱' },
+  { label: 'Teclados', slug: '/teclados', icon: '⌨️' },
+  { label: 'Mouse', slug: '/mouse', icon: '🖱️' },
+  { label: 'Audífonos', slug: '/audifonos', icon: '🎧' },
+];
+---
+
+<header>
+  <div class="brand">
+    <span></span>
+    Zona Gaming
+  </div>
+  <nav>
+    <a href="/">Inicio</a>
+    
+    <!-- Dropdown de Componentes -->
+    <div class="dropdown-container">
+      <button class="dropdown-toggle" id="componentes-btn">
+        Componentes
+        <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="dropdown-menu" id="componentes-menu">
+        {categories.map((category) => (
+          <a href={category.slug} class="dropdown-item">
+            <span class="dropdown-icon-emoji">{category.icon}</span>
+            <span>{category.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('componentes-btn');
+  const menu = document.getElementById('componentes-menu');
+
+  if (btn && menu) {
+    // Toggle del menú
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un link
+    const links = menu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+      });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+  }
+</script>
+
+<style>
+  .dropdown-container {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #c8d8e8;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+
+  .dropdown-toggle:hover {
+    color: #7cffcb;
+  }
+
+  .dropdown-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-menu.active .dropdown-icon {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    min-width: 240px;
+    background: rgba(7, 27, 53, 0.95);
+    border: 1px solid rgba(124, 255, 203, 0.2);
+    border-radius: 12px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+  }
+
+  .dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #c8d8e8;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(124, 255, 203, 0.1);
+    color: #7cffcb;
+    padding-left: 20px;
+  }
+
+  .dropdown-icon-emoji {
+    font-size: 1.1rem;
+  }
+</style>

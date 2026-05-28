@@ -1,5 +1,6 @@
 ---
 import '../styles.css';
+import Header from './Header.astro';
 const { title } = Astro.props;
 ---
 
@@ -14,17 +15,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <div class="page">
-      <header>
-        <div class="brand">
-          <span></span>
-          Zona Gaming
-        </div>
-        <nav>
-          <a href="/">Inicio</a>
-          <a href="#coleccion">Componentes</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </header>
+      <Header />
 
       <slot />
 
