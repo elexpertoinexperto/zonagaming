@@ -377,6 +377,10 @@ nav a:hover {
   color: #7cffcb;
 }
 
+.feature-content{
+    width: max-content;
+}
+
 .feature-item p {
   margin: 0;
   overflow-wrap: break-word;
