@@ -372,8 +372,7 @@ nav a:hover {
   height: 30px;
   border-radius: 50%;
   display: grid;
-  place-items: center;
-  background: rgba(124, 255, 203, 0.12);
+  place-items: center;  
   color: #7cffcb;
 }
 
