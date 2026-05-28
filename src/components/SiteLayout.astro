@@ -1,0 +1,37 @@
+---
+import '../styles.css';
+const { title } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="brand">
+          <span></span>
+          Zona Gaming
+        </div>
+        <nav>
+          <a href="/">Inicio</a>
+          <a href="#coleccion">Componentes</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </header>
+
+      {Astro.slots.default}
+
+      <footer id="contacto">
+        <div>Zona Gaming · Venta de componentes PC · Minimalismo gamer</div>
+        <div>¿Listo para mejorar tu setup? Contacto: hola@zonagaming.com</div>
+      </footer>
+    </div>
+  </body>
+</html>

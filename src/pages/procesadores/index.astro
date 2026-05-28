@@ -1,0 +1,34 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+const title = 'Procesadores';
+const description = 'Selecciona CPUs potentes para gaming, streaming y multitarea con alto rendimiento.';
+const products = [
+  { name: 'Intel Core i9-14900K', price: '$699 USD', description: 'Velocidad máxima para jugadores y creadores de contenido.' },
+  { name: 'AMD Ryzen 9 7950X', price: '$699 USD', description: 'Rendimiento multinúcleo superior para carga pesada.' },
+  { name: 'Intel Core i7-14700K', price: '$419 USD', description: 'Gran opción para gaming competitivo y productividad.' },
+  { name: 'AMD Ryzen 7 7700X', price: '$329 USD', description: 'Excelente balance de precio y potencia para tu build.' },
+];
+---
+
+<SiteLayout title={`${title} | Zona Gaming`}>
+  <section class="category-hero">
+    <a class="category-back" href="/">← Volver al Home</a>
+    <small>Categoría</small>
+    <h1>{title}</h1>
+    <p class="category-description">{description}</p>
+    <div class="category-meta">
+      <span>{products.length} productos disponibles</span>
+      <span>Rendimiento y estabilidad garantizados</span>
+    </div>
+  </section>
+
+  <section class="product-grid">
+    {products.map((product) => (
+      <article class="product-card">
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <span>{product.price}</span>
+      </article>
+    ))}
+  </section>
+</SiteLayout>
