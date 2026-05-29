@@ -344,11 +344,6 @@ nav a:hover {
   color: #7cffcb;
 }
 
-.product-card-actions {
-  display: flex;
-  gap: 12px;
-}
-
 .btn-small {
   min-width: 160px;
   padding: 12px 18px;
