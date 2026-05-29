@@ -24,7 +24,7 @@ export const GET: APIRoute = () => {
     <priority>1.0</priority>
   </url>
   ${categories.map(cat => `  <url>
-    <loc>${baseUrl}${cat}</loc>
+    <loc>${new URL(cat, baseUrl).href}</loc>
     <priority>0.8</priority>
   </url>`).join('\n')}
 </urlset>`;
