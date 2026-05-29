@@ -15,7 +15,7 @@
     },
     {
       "id": 2,
-      "nombre": "NVIDIA RTX 4080",
+      "nombre": "NVIDIA RTX 40800",
       "descripcion": "Excelente rendimiento para gaming 4K y contenido profesional",
       "especificaciones": {
         "VRAM": "16GB GDDR6X",
