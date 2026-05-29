@@ -2,16 +2,16 @@
   "tarjetas-graficas": [
     {
       "id": 1,
-      "nombre": "NVIDIA RTX 4090",
-      "descripcion": "Tarjeta gráfica de última generación para gaming extremo y workstation",
+      "nombre": "ZOTAC GeForce GTX 960",
+      "descripcion": "Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, compatible con PCI Express 3.0, incluye salidas HDMI, DVI y DisplayPort, ideal para gaming y trabajo en video",
       "especificaciones": {
-        "VRAM": "24GB GDDR6X",
-        "Velocidad": "2520 MHz",
-        "AnchoBus": "384-bit",
-        "TDP": "450W"
+        "VRAM": "2GB GDDR5",
+        "Velocidad": "1177 MHz (Nucleo)",
+        "AnchoBus": "128-bit",
+        "TDP": "120W"
       },
-      "precio": 1599.99,
-      "enlaceAmazon": "https://amazon.com/dp/"
+      "precio": 200,
+      "enlaceAmazon": "https://amzn.to/4vfFX2q"
     },
     {
       "id": 2,
