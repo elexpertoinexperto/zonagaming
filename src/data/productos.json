@@ -801,8 +801,8 @@
         "Tipo": "Mecánico",
         "Switches": "Cherry MX",
         "Conexión": "USB 2.0",
-        "RGB": "Per Key",
-        "Teclas": "6x Macro"
+        "RGB": "Por Tecla",
+        "Teclas Macro": "6"
       },
       "precio": 199.99,
       "enlaceAmazon": "https://amazon.com/dp/"
@@ -815,8 +815,8 @@
         "Tipo": "Mecánico",
         "Switches": "OmniPoint Adjustable",
         "Conexión": "USB 2.0",
-        "RGB": "Per Key",
-        "Teclas": "12x Macro"
+        "RGB": "Por Tecla",
+        "Teclas Macro": "12"
       },
       "precio": 199.99,
       "enlaceAmazon": "https://amazon.com/dp/"
@@ -828,9 +828,9 @@
       "especificaciones": {
         "Tipo": "Mecánico",
         "Switches": "GL Clicky",
-        "Conexión": "2.4GHz Inalámbrico",
-        "RGB": "Per Key",
-        "Perfil": "Bajo (18mm)"
+        "Conexión": "Inalámbrico 2.4GHz",
+        "RGB": "Por Tecla",
+        "Altura": "18mm"
       },
       "precio": 249.99,
       "enlaceAmazon": "https://amazon.com/dp/"
@@ -843,8 +843,8 @@
         "Tipo": "Óptico",
         "Switches": "Razer Green",
         "Conexión": "USB 2.0 / Inalámbrico",
-        "RGB": "Per Key",
-        "Perfil": "Bajo"
+        "RGB": "Por Tecla",
+        "Altura": "Bajo"
       },
       "precio": 149.99,
       "enlaceAmazon": "https://amazon.com/dp/"
@@ -857,7 +857,7 @@
         "Tipo": "Mecánico",
         "Switches": "HyperX Red",
         "Conexión": "USB 2.0",
-        "RGB": "Per Key",
+        "RGB": "Por Tecla",
         "Tamaño": "65%"
       },
       "precio": 129.99,
@@ -871,8 +871,8 @@
         "Tipo": "Mecánico",
         "Switches": "Cherry MX Speed",
         "Conexión": "USB 2.0",
-        "RGB": "Per Key",
-        "Perfil": "Bajo"
+        "RGB": "Por Tecla",
+        "Altura": "Bajo"
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amazon.com/dp/"
@@ -885,7 +885,7 @@
         "Tipo": "Mecánico",
         "Switches": "Gateron Yellow",
         "Conexión": "USB 2.0",
-        "RGB": "Per Key",
+        "RGB": "Por Tecla",
         "Tamaño": "65%"
       },
       "precio": 159.99,
