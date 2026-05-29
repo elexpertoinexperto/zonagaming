@@ -3,6 +3,13 @@ import SiteLayout from '../../components/SiteLayout.astro';
 import ProductoDetalle from '../../components/ProductoDetalle.astro';
 import productos from '../../data/productos.json';
 
+export function getStaticPaths() {
+  const productosCategoria = productos['teclados' as keyof typeof productos];
+  return productosCategoria.map((p: any) => ({
+    params: { id: String(p.id) }
+  }));
+}
+
 const { id } = Astro.params;
 const categoria = 'teclados';
 const productosCategoria = productos[categoria as keyof typeof productos];
