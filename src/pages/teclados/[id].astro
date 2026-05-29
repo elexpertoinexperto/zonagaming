@@ -1,0 +1,48 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+import ProductoDetalle from '../../../components/ProductoDetalle.astro';
+import productos from '../../../data/productos.json';
+
+const { id } = Astro.params;
+const categoria = 'teclados';
+const productosCategoria = productos[categoria as keyof typeof productos];
+const producto = productosCategoria.find((p) => p.id === parseInt(id!));
+
+if (!producto) {
+  return Astro.redirect('/teclados');
+}
+---
+
+<SiteLayout title={`${producto.nombre} | Zona Gaming`}>
+  <div class="producto-header">
+    <a class="back-link" href="/teclados">← Volver a Teclados</a>
+  </div>
+  
+  <ProductoDetalle 
+    nombre={producto.nombre}
+    descripcion={producto.descripcion}
+    especificaciones={producto.especificaciones}
+    precio={producto.precio}
+    enlaceAmazon={producto.enlaceAmazon}
+    imagenPath={`/teclados/${id}/imagenes/producto.svg`}
+  />
+</SiteLayout>
+
+<style>
+  .producto-header {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1d4ed8;
+  }
+</style>

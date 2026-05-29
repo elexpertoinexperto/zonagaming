@@ -1,14 +1,17 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Procesadores';
 const description = 'Selecciona CPUs potentes para gaming, streaming y multitarea con alto rendimiento.';
-const products = [
-  { name: 'Intel Core i9-14900K', price: '$699 USD', description: 'Velocidad máxima para jugadores y creadores de contenido.' },
-  { name: 'AMD Ryzen 9 7950X', price: '$699 USD', description: 'Rendimiento multinúcleo superior para carga pesada.' },
-  { name: 'Intel Core i7-14700K', price: '$419 USD', description: 'Gran opción para gaming competitivo y productividad.' },
-  { name: 'AMD Ryzen 7 7700X', price: '$329 USD', description: 'Excelente balance de precio y potencia para tu build.' },
-];
+const productsData = productos['procesadores'];
+const products = productsData.map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  price: `$${p.precio.toFixed(2)} USD`,
+  description: p.descripcion,
+}));
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -25,7 +28,21 @@ const products = [
 
   <section class="product-grid">
     {products.map((product) => (
-      <ProductCard product={product} />
+      <a href={`/procesadores/${product.id}`} class="product-link">
+        <ProductCard product={product} />
+      </a>
     ))}
   </section>
 </SiteLayout>
+
+<style>
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+
+  .product-link:hover {
+    transform: translateY(-5px);
+  }
+</style>

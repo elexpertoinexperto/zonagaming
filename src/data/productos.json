@@ -1,0 +1,1095 @@
+{
+  "tarjetas-graficas": [
+    {
+      "id": 1,
+      "nombre": "NVIDIA RTX 4090",
+      "descripcion": "Tarjeta gráfica de última generación para gaming extremo y workstation",
+      "especificaciones": {
+        "VRAM": "24GB GDDR6X",
+        "Velocidad": "2520 MHz",
+        "AnchoBus": "384-bit",
+        "TDP": "450W"
+      },
+      "precio": 1599.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "NVIDIA RTX 4080",
+      "descripcion": "Excelente rendimiento para gaming 4K y contenido profesional",
+      "especificaciones": {
+        "VRAM": "16GB GDDR6X",
+        "Velocidad": "2505 MHz",
+        "AnchoBus": "256-bit",
+        "TDP": "320W"
+      },
+      "precio": 1199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "AMD Radeon RX 7900 XTX",
+      "descripcion": "Competidor directo con excelente relación precio-rendimiento",
+      "especificaciones": {
+        "VRAM": "24GB GDDR6",
+        "Velocidad": "2500 MHz",
+        "AnchoBus": "384-bit",
+        "TDP": "420W"
+      },
+      "precio": 899.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "NVIDIA RTX 4070 Ti",
+      "descripcion": "Opción premium para 1440p y gaming competitivo",
+      "especificaciones": {
+        "VRAM": "12GB GDDR6X",
+        "Velocidad": "2610 MHz",
+        "AnchoBus": "192-bit",
+        "TDP": "285W"
+      },
+      "precio": 799.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "NVIDIA RTX 4070",
+      "descripcion": "Rendimiento sólido para 1440p con eficiencia energética",
+      "especificaciones": {
+        "VRAM": "12GB GDDR6",
+        "Velocidad": "2475 MHz",
+        "AnchoBus": "192-bit",
+        "TDP": "200W"
+      },
+      "precio": 599.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "NVIDIA RTX 4060 Ti",
+      "descripcion": "Opción económica para 1080p y gaming casual",
+      "especificaciones": {
+        "VRAM": "8GB GDDR6",
+        "Velocidad": "2535 MHz",
+        "AnchoBus": "128-bit",
+        "TDP": "160W"
+      },
+      "precio": 299.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Intel Arc A770",
+      "descripcion": "Nueva generación de tarjetas gráficas discretas de Intel",
+      "especificaciones": {
+        "VRAM": "8GB GDDR6",
+        "Velocidad": "2400 MHz",
+        "AnchoBus": "128-bit",
+        "TDP": "225W"
+      },
+      "precio": 329.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "procesadores": [
+    {
+      "id": 1,
+      "nombre": "Intel Core i9-13900K",
+      "descripcion": "Procesador tope de gama para gaming y streaming simultáneo",
+      "especificaciones": {
+        "Núcleos": "24 (8P+16E)",
+        "Hilos": "32",
+        "Velocidad Base": "3.0 GHz",
+        "Velocidad Turbo": "5.8 GHz",
+        "TDP": "125W"
+      },
+      "precio": 589.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "AMD Ryzen 9 7950X",
+      "descripcion": "Powerhouse de 16 núcleos para gaming y productividad",
+      "especificaciones": {
+        "Núcleos": "16",
+        "Hilos": "32",
+        "Velocidad Base": "4.5 GHz",
+        "Velocidad Turbo": "5.7 GHz",
+        "TDP": "105W"
+      },
+      "precio": 549.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Intel Core i7-13700K",
+      "descripcion": "Excelente balance entre rendimiento y precio",
+      "especificaciones": {
+        "Núcleos": "16 (8P+8E)",
+        "Hilos": "24",
+        "Velocidad Base": "3.4 GHz",
+        "Velocidad Turbo": "5.4 GHz",
+        "TDP": "125W"
+      },
+      "precio": 419.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "AMD Ryzen 7 7700X",
+      "descripcion": "Rendimiento 1080p y 1440p excepcional",
+      "especificaciones": {
+        "Núcleos": "8",
+        "Hilos": "16",
+        "Velocidad Base": "4.5 GHz",
+        "Velocidad Turbo": "5.4 GHz",
+        "TDP": "105W"
+      },
+      "precio": 299.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Intel Core i5-13600K",
+      "descripcion": "Opción popular para gamers presupuestarios",
+      "especificaciones": {
+        "Núcleos": "14 (6P+8E)",
+        "Hilos": "20",
+        "Velocidad Base": "3.5 GHz",
+        "Velocidad Turbo": "5.1 GHz",
+        "TDP": "125W"
+      },
+      "precio": 289.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "AMD Ryzen 5 7600X",
+      "descripcion": "Procesador de 6 núcleos para gaming 1080p",
+      "especificaciones": {
+        "Núcleos": "6",
+        "Hilos": "12",
+        "Velocidad Base": "4.7 GHz",
+        "Velocidad Turbo": "5.3 GHz",
+        "TDP": "105W"
+      },
+      "precio": 229.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Intel Core i5-13400",
+      "descripcion": "Opción económica sin OC para PC gaming",
+      "especificaciones": {
+        "Núcleos": "10 (6P+4E)",
+        "Hilos": "16",
+        "Velocidad Base": "2.5 GHz",
+        "Velocidad Turbo": "4.6 GHz",
+        "TDP": "65W"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "memoria-ram": [
+    {
+      "id": 1,
+      "nombre": "Corsair Dominator Platinum RGB 32GB 6000MHz",
+      "descripcion": "RAM de alto rendimiento con RGB sincronizable",
+      "especificaciones": {
+        "Capacidad": "32GB (2x16GB)",
+        "Velocidad": "6000MHz",
+        "Latencia": "CAS 30",
+        "Voltaje": "1.4V",
+        "Tipo": "DDR5"
+      },
+      "precio": 349.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "G.Skill Flare X5 32GB 5600MHz",
+      "descripcion": "Memoria optimizada para Ryzen 7000",
+      "especificaciones": {
+        "Capacidad": "32GB (2x16GB)",
+        "Velocidad": "5600MHz",
+        "Latencia": "CAS 30",
+        "Voltaje": "1.25V",
+        "Tipo": "DDR5"
+      },
+      "precio": 299.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Kingston FURY Beast 32GB 3600MHz",
+      "descripcion": "RAM DDR4 confiable y económica",
+      "especificaciones": {
+        "Capacidad": "32GB (2x16GB)",
+        "Velocidad": "3600MHz",
+        "Latencia": "CAS 17",
+        "Voltaje": "1.35V",
+        "Tipo": "DDR4"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Corsair Vengeance 32GB 3600MHz",
+      "descripcion": "Clásico en RAM DDR4 para gaming",
+      "especificaciones": {
+        "Capacidad": "32GB (2x16GB)",
+        "Velocidad": "3600MHz",
+        "Latencia": "CAS 18",
+        "Voltaje": "1.35V",
+        "Tipo": "DDR4"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "G.Skill Trident Z5 64GB 6000MHz",
+      "descripcion": "Para creadores de contenido y gaming extremo",
+      "especificaciones": {
+        "Capacidad": "64GB (2x32GB)",
+        "Velocidad": "6000MHz",
+        "Latencia": "CAS 30",
+        "Voltaje": "1.4V",
+        "Tipo": "DDR5"
+      },
+      "precio": 699.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Corsair FURY Beast 16GB 3200MHz",
+      "descripcion": "RAM presupuestaria para gaming casual",
+      "especificaciones": {
+        "Capacidad": "16GB (2x8GB)",
+        "Velocidad": "3200MHz",
+        "Latencia": "CAS 16",
+        "Voltaje": "1.35V",
+        "Tipo": "DDR4"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Kingston Fury Beast 32GB 5600MHz DDR5",
+      "descripcion": "Rendimiento DDR5 a precio competitivo",
+      "especificaciones": {
+        "Capacidad": "32GB (2x16GB)",
+        "Velocidad": "5600MHz",
+        "Latencia": "CAS 28",
+        "Voltaje": "1.25V",
+        "Tipo": "DDR5"
+      },
+      "precio": 259.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "ssd": [
+    {
+      "id": 1,
+      "nombre": "Samsung 990 Pro 4TB",
+      "descripcion": "SSD NVMe PCIe 4.0 de máximo rendimiento",
+      "especificaciones": {
+        "Capacidad": "4TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "7450 MB/s",
+        "Velocidad Escritura": "6900 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 329.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "WD Black SN850X 2TB",
+      "descripcion": "SSD gaming de Western Digital con tecnología patentada",
+      "especificaciones": {
+        "Capacidad": "2TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "7100 MB/s",
+        "Velocidad Escritura": "6000 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 189.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Crucial P5 Plus 1TB",
+      "descripcion": "SSD económico con buen rendimiento PCIe 4.0",
+      "especificaciones": {
+        "Capacidad": "1TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "6600 MB/s",
+        "Velocidad Escritura": "5000 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Kingston A3000 2TB",
+      "descripcion": "SSD NVMe PCIe 3.0 confiable",
+      "especificaciones": {
+        "Capacidad": "2TB",
+        "Interfaz": "NVMe PCIe 3.0",
+        "Velocidad Lectura": "3000 MB/s",
+        "Velocidad Escritura": "2000 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 119.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Seagate FireCuda 530 4TB",
+      "descripcion": "Almacenamiento masivo para gaming y streaming",
+      "especificaciones": {
+        "Capacidad": "4TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "7100 MB/s",
+        "Velocidad Escritura": "6000 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 279.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Corsair MP600 ELITE 1TB",
+      "descripcion": "SSD presupuestario con garantía de calidad",
+      "especificaciones": {
+        "Capacidad": "1TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "4950 MB/s",
+        "Velocidad Escritura": "3950 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 74.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Sabrent Rocket 4 Plus 2TB",
+      "descripcion": "SSD PCIe 4.0 con relación precio-rendimiento",
+      "especificaciones": {
+        "Capacidad": "2TB",
+        "Interfaz": "NVMe PCIe 4.0",
+        "Velocidad Lectura": "7000 MB/s",
+        "Velocidad Escritura": "6500 MB/s",
+        "Factor Forma": "M.2 2280"
+      },
+      "precio": 169.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "fuentes-de-poder": [
+    {
+      "id": 1,
+      "nombre": "Corsair RM1000x 1000W Gold",
+      "descripcion": "Fuente modular 1000W certificada 80+ Gold",
+      "especificaciones": {
+        "Potencia": "1000W",
+        "Certificación": "80+ Gold",
+        "Modular": "Totalmente Modular",
+        "Garantía": "10 años",
+        "Ventilador": "135mm FDB"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "EVGA SuperNOVA 850 G5 850W",
+      "descripcion": "Fuente 850W Gold con protecciones avanzadas",
+      "especificaciones": {
+        "Potencia": "850W",
+        "Certificación": "80+ Gold",
+        "Modular": "Totalmente Modular",
+        "Garantía": "10 años",
+        "Ventilador": "140mm"
+      },
+      "precio": 149.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "MSI MPG A850GF 850W Gold",
+      "descripcion": "Fuente gaming modular con RGB",
+      "especificaciones": {
+        "Potencia": "850W",
+        "Certificación": "80+ Gold",
+        "Modular": "Totalmente Modular",
+        "Garantía": "10 años",
+        "Ventilador": "140mm FDB"
+      },
+      "precio": 129.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Seasonic Focus GX-750 750W",
+      "descripcion": "Fuente de confianza para builds gaming",
+      "especificaciones": {
+        "Potencia": "750W",
+        "Certificación": "80+ Gold",
+        "Modular": "Totalmente Modular",
+        "Garantía": "12 años",
+        "Ventilador": "135mm FDB"
+      },
+      "precio": 119.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Thermaltake Smart 750W",
+      "descripcion": "Fuente presupuestaria con buena potencia",
+      "especificaciones": {
+        "Potencia": "750W",
+        "Certificación": "80+ Bronze",
+        "Modular": "Semi Modular",
+        "Garantía": "5 años",
+        "Ventilador": "120mm"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Corsair CV650 650W",
+      "descripcion": "Fuente económica entrada nivel",
+      "especificaciones": {
+        "Potencia": "650W",
+        "Certificación": "80+ Bronze",
+        "Modular": "No Modular",
+        "Garantía": "3 años",
+        "Ventilador": "120mm"
+      },
+      "precio": 59.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Cooler Master V1000 Gold 1000W",
+      "descripcion": "Fuente 1000W para builds extremos",
+      "especificaciones": {
+        "Potencia": "1000W",
+        "Certificación": "80+ Gold",
+        "Modular": "Totalmente Modular",
+        "Garantía": "10 años",
+        "Ventilador": "140mm"
+      },
+      "precio": 179.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "refrigeracion-liquida": [
+    {
+      "id": 1,
+      "nombre": "NZXT Kraken X73 RGB",
+      "descripcion": "Refrigeración líquida All-in-One 360mm premium",
+      "especificaciones": {
+        "Radiador": "360mm",
+        "Bombín": "RGB LED",
+        "Ventiladores": "3x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~35 dB"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "Corsair iCUE Link H150i Elite",
+      "descripcion": "Sistema líquido All-in-One con tecnología iCUE",
+      "especificaciones": {
+        "Radiador": "360mm",
+        "Bombín": "RGB LED",
+        "Ventiladores": "3x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~32 dB"
+      },
+      "precio": 229.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Lian Li Galahad AIO 240",
+      "descripcion": "Refrigeración 240mm compacta y silenciosa",
+      "especificaciones": {
+        "Radiador": "240mm",
+        "Bombín": "RGB LED",
+        "Ventiladores": "2x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~30 dB"
+      },
+      "precio": 139.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Be Quiet! Dark Rock Liquid",
+      "descripcion": "AIO 360mm con enfoque en silencio",
+      "especificaciones": {
+        "Radiador": "360mm",
+        "Bombín": "Sin RGB",
+        "Ventiladores": "3x 120mm",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~20 dB"
+      },
+      "precio": 149.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "EK AIO 360D5",
+      "descripcion": "Sistema líquido personalizable de EK Water Blocks",
+      "especificaciones": {
+        "Radiador": "360mm",
+        "Bombín": "RGB LED",
+        "Ventiladores": "3x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~35 dB"
+      },
+      "precio": 289.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Thermaltake Liquid Freezer II 240",
+      "descripcion": "AIO 240mm económico y confiable",
+      "especificaciones": {
+        "Radiador": "240mm",
+        "Bombín": "RGB LED",
+        "Ventiladores": "2x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~32 dB"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "ASUS ROG Strix LC 360 RGB",
+      "descripcion": "Premium AIO con integración ROG",
+      "especificaciones": {
+        "Radiador": "360mm",
+        "Bombín": "RGB LED Addressable",
+        "Ventiladores": "3x 120mm RGB",
+        "Compatibilidad": "Intel y AMD",
+        "Ruido": "~34 dB"
+      },
+      "precio": 249.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "refrigeracion-normal": [
+    {
+      "id": 1,
+      "nombre": "Noctua NH-D15",
+      "descripcion": "Disipador de aire premium de doble torre",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Doble",
+        "Ventiladores": "2x 140mm",
+        "Altura": "165mm",
+        "Ruido": "~24 dB"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "Cooler Master RR-212S-20PC-R1",
+      "descripcion": "Disipador asequible con buen rendimiento",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Simple",
+        "Ventiladores": "1x 120mm",
+        "Altura": "159mm",
+        "Ruido": "~28 dB"
+      },
+      "precio": 34.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "be quiet! Dark Rock Pro 4",
+      "descripcion": "Torre silenciosa con tecnología Silent Wings",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Doble",
+        "Ventiladores": "2x 135mm",
+        "Altura": "163mm",
+        "Ruido": "~22 dB"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Corsair A70",
+      "descripcion": "Disipador gaming compacto",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Simple",
+        "Ventiladores": "1x 120mm",
+        "Altura": "157mm",
+        "Ruido": "~30 dB"
+      },
+      "precio": 44.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Thermalright Peerless Assassin 120 SE",
+      "descripcion": "Disipador de aire económico de alto rendimiento",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Doble",
+        "Ventiladores": "1x 120mm",
+        "Altura": "160mm",
+        "Ruido": "~26 dB"
+      },
+      "precio": 39.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Scythe Fuma 2",
+      "descripcion": "Disipador Japanese de bajo ruido",
+      "especificaciones": {
+        "Tipo": "Aire",
+        "Torre": "Doble",
+        "Ventiladores": "2x 120mm",
+        "Altura": "154mm",
+        "Ruido": "~23 dB"
+      },
+      "precio": 59.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Arctic Liquid Freezer II 120",
+      "descripcion": "Opción entrada AIO líquido",
+      "especificaciones": {
+        "Tipo": "Aire Premium",
+        "Torre": "Doble",
+        "Ventiladores": "2x 120mm",
+        "Altura": "162mm",
+        "Ruido": "~25 dB"
+      },
+      "precio": 69.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "gabinetes-gamer": [
+    {
+      "id": 1,
+      "nombre": "Corsair iCUE 5000T RGB",
+      "descripcion": "Gabinete premium con 3 paneles de vidrio templado",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 6x 2.5",
+        "Panel": "Vidrio Templado 4mm",
+        "Radiador Max": "420mm",
+        "Ventiladores": "4x 120mm preinstalados"
+      },
+      "precio": 249.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "NZXT H7 Flow",
+      "descripcion": "Gabinete elegante con flujo de aire optimizado",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 6x 2.5",
+        "Panel": "Vidrio Templado 3mm",
+        "Radiador Max": "360mm",
+        "Ventiladores": "2x 120mm preinstalados"
+      },
+      "precio": 129.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Lian Li Lancool 215",
+      "descripcion": "Gabinete presupuestario con buen rendimiento",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 3x 2.5",
+        "Panel": "Vidrio Templado 3mm",
+        "Radiador Max": "240mm",
+        "Ventiladores": "1x 120mm preinstalado"
+      },
+      "precio": 59.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Fractal Design North",
+      "descripcion": "Diseño nórdico minimalista",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 5x 2.5",
+        "Panel": "Acero",
+        "Radiador Max": "280mm",
+        "Ventiladores": "1x 120mm preinstalado"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Thermaltake V250 MG ARGB",
+      "descripcion": "Gabinete gaming con luces RGB",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 4x 2.5",
+        "Panel": "Vidrio Templado",
+        "Radiador Max": "280mm",
+        "Ventiladores": "1x 120mm preinstalado"
+      },
+      "precio": 74.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Cougar MX330-G",
+      "descripcion": "Gabinete económico y confiable",
+      "especificaciones": {
+        "Tamaño": "Mid Tower",
+        "Bahías": "2x 3.5 + 4x 2.5",
+        "Panel": "Vidrio Templado",
+        "Radiador Max": "240mm",
+        "Ventiladores": "2x 120mm preinstalados"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Seasonic Syncm 692",
+      "descripcion": "Gabinete ATX Full Tower",
+      "especificaciones": {
+        "Tamaño": "Full Tower",
+        "Bahías": "5x 3.5 + 7x 2.5",
+        "Panel": "Acero",
+        "Radiador Max": "480mm",
+        "Ventiladores": "3x 120mm preinstalados"
+      },
+      "precio": 139.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "teclados": [
+    {
+      "id": 1,
+      "nombre": "Corsair K95 Platinum XT",
+      "descripcion": "Teclado mecánico de gama alta con switches Cherry",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "Cherry MX",
+        "Conexión": "USB 2.0",
+        "RGB": "Per Key",
+        "Teclas": "6x Macro"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "SteelSeries Apex Pro",
+      "descripcion": "Teclado mecánico con switches ajustables",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "OmniPoint Adjustable",
+        "Conexión": "USB 2.0",
+        "RGB": "Per Key",
+        "Teclas": "12x Macro"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Logitech G915 LIGHTSPEED",
+      "descripcion": "Teclado inalámbrico mecánico de baja altura",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "GL Clicky",
+        "Conexión": "2.4GHz Inalámbrico",
+        "RGB": "Per Key",
+        "Perfil": "Bajo (18mm)"
+      },
+      "precio": 249.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Razer DeathStalker V2",
+      "descripcion": "Teclado óptico rápido y silencioso",
+      "especificaciones": {
+        "Tipo": "Óptico",
+        "Switches": "Razer Green",
+        "Conexión": "USB 2.0 / Inalámbrico",
+        "RGB": "Per Key",
+        "Perfil": "Bajo"
+      },
+      "precio": 149.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "HyperX Alloy Origins 65",
+      "descripcion": "Teclado compacto 65% mecánico",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "HyperX Red",
+        "Conexión": "USB 2.0",
+        "RGB": "Per Key",
+        "Tamaño": "65%"
+      },
+      "precio": 129.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "Corsair K60 RGB PRO",
+      "descripcion": "Teclado mecánico presupuestario",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "Cherry MX Speed",
+        "Conexión": "USB 2.0",
+        "RGB": "Per Key",
+        "Perfil": "Bajo"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Ducky One 3 SF",
+      "descripcion": "Teclado compact 65% de calidad premium",
+      "especificaciones": {
+        "Tipo": "Mecánico",
+        "Switches": "Gateron Yellow",
+        "Conexión": "USB 2.0",
+        "RGB": "Per Key",
+        "Tamaño": "65%"
+      },
+      "precio": 159.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "mouse": [
+    {
+      "id": 1,
+      "nombre": "Corsair M65 RGB Ultra",
+      "descripcion": "Ratón gaming inalámbrico de 24000 DPI",
+      "especificaciones": {
+        "Sensor": "22000 DPI",
+        "Tipo": "Inalámbrico / Cableado",
+        "Peso": "73g",
+        "Botones Macro": "6",
+        "RGB": "Per Zone"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "Logitech G Pro X Superlight 2",
+      "descripcion": "Ratón ultra ligero para esports competitivo",
+      "especificaciones": {
+        "Sensor": "32000 DPI",
+        "Tipo": "Inalámbrico",
+        "Peso": "63g",
+        "Botones": "6",
+        "RGB": "Monochrome"
+      },
+      "precio": 149.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "Razer DeathAdder V3",
+      "descripcion": "Ratón ergonómico con tecnología inalámbrica Focus Pro",
+      "especificaciones": {
+        "Sensor": "30000 DPI",
+        "Tipo": "Inalámbrico / Cableado",
+        "Peso": "63g",
+        "Botones Macro": "7",
+        "RGB": "Per Zone"
+      },
+      "precio": 69.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "SteelSeries Rival 3",
+      "descripcion": "Ratón presupuestario con buen rendimiento",
+      "especificaciones": {
+        "Sensor": "8500 DPI",
+        "Tipo": "Cableado",
+        "Peso": "77g",
+        "Botones": "6",
+        "RGB": "Single Color"
+      },
+      "precio": 29.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Finalmouse UltralightX",
+      "descripcion": "Ratón gaming ultraligero profesional",
+      "especificaciones": {
+        "Sensor": "8000 DPI",
+        "Tipo": "Cableado",
+        "Peso": "55g",
+        "Botones": "6",
+        "RGB": "No"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "HyperX Pulsefire Haste 2",
+      "descripcion": "Ratón gaming con sensor avanzado",
+      "especificaciones": {
+        "Sensor": "26000 DPI",
+        "Tipo": "Cableado",
+        "Peso": "59g",
+        "Botones": "6",
+        "RGB": "RGB per Zone"
+      },
+      "precio": 59.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Glorious Model O",
+      "descripcion": "Ratón óptico compacto con diseño honeycomb",
+      "especificaciones": {
+        "Sensor": "12000 DPI",
+        "Tipo": "Cableado",
+        "Peso": "66g",
+        "Botones": "6",
+        "RGB": "RGB per Zone"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ],
+  "audifonos": [
+    {
+      "id": 1,
+      "nombre": "Corsair Virtuoso RGB Wireless",
+      "descripcion": "Headset gaming inalámbrico con audio Hi-Res",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "2.4GHz Inalámbrico",
+        "Micrófono": "Omnidireccional con USB",
+        "Impedancia": "32 Ohm",
+        "Frecuencia": "20Hz - 40kHz"
+      },
+      "precio": 129.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 2,
+      "nombre": "SteelSeries Arctis Pro",
+      "descripcion": "Headset premium con sonido Spatial 360°",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "3.5mm / USB",
+        "Micrófono": "ClearCast con IA",
+        "Impedancia": "32 Ohm",
+        "Frecuencia": "20Hz - 20kHz"
+      },
+      "precio": 199.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 3,
+      "nombre": "HyperX Cloud Stinger 2",
+      "descripcion": "Headset gaming asequible y confiable",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "3.5mm / USB",
+        "Micrófono": "Desmontable",
+        "Impedancia": "32 Ohm",
+        "Frecuencia": "18Hz - 20kHz"
+      },
+      "precio": 59.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 4,
+      "nombre": "Razer Kraken X",
+      "descripcion": "Headset RGB con drivers de 40mm",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "3.5mm / USB",
+        "Micrófono": "Desmontable con enchufe macho de 3.5 mm",
+        "Impedancia": "32 Ohm",
+        "Frecuencia": "20Hz - 20kHz"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 5,
+      "nombre": "Audio-Technica ATH-G1",
+      "descripcion": "Headset gaming de la marca de audio profesional",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "3.5mm",
+        "Micrófono": "Bidireccional",
+        "Impedancia": "32 Ohm",
+        "Frecuencia": "20Hz - 20kHz"
+      },
+      "precio": 119.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 6,
+      "nombre": "SCUF H1",
+      "descripcion": "Headset wireless gaming de SCUF",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "2.4GHz Inalámbrico",
+        "Micrófono": "Desmontable",
+        "Impedancia": "20 Ohm",
+        "Frecuencia": "20Hz - 20kHz"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    },
+    {
+      "id": 7,
+      "nombre": "Turtle Beach Stealth 600 Gen 2",
+      "descripcion": "Headset inalámbrico presupuestario",
+      "especificaciones": {
+        "Tipo": "Over-Ear",
+        "Conexión": "2.4GHz Inalámbrico",
+        "Micrófono": "Flip-to-Mute",
+        "Impedancia": "16 Ohm",
+        "Frecuencia": "20Hz - 20kHz"
+      },
+      "precio": 69.99,
+      "enlaceAmazon": "https://amazon.com/dp/"
+    }
+  ]
+}

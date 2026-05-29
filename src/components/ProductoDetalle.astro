@@ -1,0 +1,167 @@
+---
+interface Props {
+  nombre: string;
+  descripcion: string;
+  especificaciones: Record<string, string | number>;
+  precio: number;
+  enlaceAmazon: string;
+  imagenPath: string;
+}
+
+const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath } = Astro.props;
+---
+
+<div class="producto-detalle">
+  <div class="producto-contenedor">
+    <div class="producto-imagenes">
+      <img src={imagenPath} alt={nombre} class="producto-imagen" />
+    </div>
+    
+    <div class="producto-info">
+      <h1>{nombre}</h1>
+      
+      <p class="descripcion">{descripcion}</p>
+      
+      <div class="especificaciones">
+        <h2>Especificaciones</h2>
+        <ul>
+          {Object.entries(especificaciones).map(([clave, valor]) => (
+            <li>
+              <span class="clave">{clave}:</span>
+              <span class="valor">{valor}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="compra">
+        <p class="precio">${precio.toFixed(2)}</p>
+        <a href={enlaceAmazon} target="_blank" rel="noopener noreferrer" class="btn-amazon">
+          Ver en Amazon
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .producto-detalle {
+    padding: 2rem;
+  }
+
+  .producto-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .producto-imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    min-height: 400px;
+  }
+
+  .producto-imagen {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  .producto-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .descripcion {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .especificaciones {
+    margin-bottom: 2rem;
+  }
+
+  .especificaciones h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .especificaciones ul {
+    list-style: none;
+    padding: 0;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .especificaciones li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .especificaciones li:last-child {
+    border-bottom: none;
+  }
+
+  .clave {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .valor {
+    color: #666;
+  }
+
+  .compra {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #eee;
+  }
+
+  .precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+  }
+
+  .btn-amazon {
+    display: inline-block;
+    background: #FF9900;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .btn-amazon:hover {
+    background: #FF8800;
+  }
+
+  @media (max-width: 768px) {
+    .producto-contenedor {
+      grid-template-columns: 1fr;
+    }
+
+    .producto-info h1 {
+      font-size: 1.5rem;
+    }
+
+    .precio {
+      font-size: 1.5rem;
+    }
+  }
+</style>

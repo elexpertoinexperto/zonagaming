@@ -1,13 +1,17 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Memoria RAM';
 const description = 'Módulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
-const products = [
-  { name: 'Corsair Vengeance DDR5 32GB', price: '$159 USD', description: 'Ideal para multitarea y gaming con overclock seguro.' },
-  { name: 'G.Skill Trident Z5 RGB 32GB', price: '$189 USD', description: 'Rendimiento premium con diseño gamer y RGB personalizable.' },
-  { name: 'Kingston Fury Beast 16GB', price: '$84 USD', description: 'Compatibilidad amplia y buena velocidad para PC de juegos.' },
-];
+const productsData = productos['memoria-ram'];
+const products = productsData.map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  price: `$${p.precio.toFixed(2)} USD`,
+  description: p.descripcion,
+}));
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -18,6 +22,30 @@ const products = [
     <p class="category-description">{description}</p>
     <div class="category-meta">
       <span>{products.length} productos disponibles</span>
+      <span>Compatibilidad probada con principales placas base</span>
+    </div>
+  </section>
+
+  <section class="product-grid">
+    {products.map((product) => (
+      <a href={`/memoria-ram/${product.id}`} class="product-link">
+        <ProductCard product={product} />
+      </a>
+    ))}
+  </section>
+</SiteLayout>
+
+<style>
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+
+  .product-link:hover {
+    transform: translateY(-5px);
+  }
+</style>
       <span>Latencia baja y overclock estable</span>
     </div>
   </section>

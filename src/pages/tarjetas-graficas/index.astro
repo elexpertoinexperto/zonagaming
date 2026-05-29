@@ -1,14 +1,17 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Tarjetas gráficas';
 const description = 'Encuentra tarjetas gráficas para juegos, streaming y renderizado con la mejor relación rendimiento/precio.';
-const products = [
-  { name: 'RTX 4090 Fury', price: '$1,899 USD', description: 'Rendimiento top para 4K y ray tracing sin límites.' },
-  { name: 'RX 7900 XT', price: '$1,099 USD', description: 'Excelente balance entre potencia y precio para esports.' },
-  { name: 'RTX 4080 Ultra', price: '$1,099 USD', description: 'Ideal para edición, gaming AAA y productividad avanzada.' },
-  { name: 'RX 7800 XT', price: '$749 USD', description: 'Gran opción para 1440p con altas tasas de refresco.' },
-];
+const productsData = productos['tarjetas-graficas'];
+const products = productsData.map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  price: `$${p.precio.toFixed(2)} USD`,
+  description: p.descripcion,
+}));
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -25,7 +28,20 @@ const products = [
 
   <section class="product-grid">
     {products.map((product) => (
-      <ProductCard product={product} />
+      <a href={`/tarjetas-graficas/${product.id}`} class="product-link">
+        <ProductCard product={product} />
+      </a>
     ))}
   </section>
-</SiteLayout>
+
+<style>
+  .product-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+  }
+
+  .product-link:hover {
+    transform: translateY(-5px);
+  }
+</style>
