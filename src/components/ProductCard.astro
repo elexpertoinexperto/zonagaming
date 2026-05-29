@@ -11,7 +11,10 @@ const { product } = Astro.props;
 
     <div class="product-card-footer">
       <span>{product.price}</span>
-      <button class="btn btn-small" type="button">Agregar al carrito</button>
+       <div class="product-card-actions">
+        <button class="btn btn-small" type="button">Detalles</button>
+        <button class="btn btn-small" type="button">Amazon</button>
+      </div>
     </div>
   </div>
 </article>
