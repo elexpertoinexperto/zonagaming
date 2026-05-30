@@ -224,9 +224,13 @@ nav a:hover {
   place-items: center;
   width: 56px;
   height: 56px;
-  border-radius: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(124, 255, 203, 0.24);
   background: rgba(124, 255, 203, 0.12);
-  font-size: 1.7rem;
+  color: #7cffcb;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .category-card:hover {

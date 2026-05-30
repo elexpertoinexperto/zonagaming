@@ -1,16 +1,16 @@
 ---
 const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: '🖥️' },
-  { label: 'Procesadores', slug: '/procesadores', icon: '⚙️' },
-  { label: 'Memoria RAM', slug: '/memoria-ram', icon: '🧠' },
-  { label: 'SSD', slug: '/ssd', icon: '💾' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: '🔌' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: '🌊' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: '🌀' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: '🧱' },
-  { label: 'Teclados', slug: '/teclados', icon: '⌨️' },
-  { label: 'Mouse', slug: '/mouse', icon: '🖱️' },
-  { label: 'Audífonos', slug: '/audifonos', icon: '🎧' },
+  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'GPU' },
+  { label: 'Procesadores', slug: '/procesadores', icon: 'CPU' },
+  { label: 'Memoria RAM', slug: '/memoria-ram', icon: 'RAM' },
+  { label: 'SSD', slug: '/ssd', icon: 'SSD' },
+  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: 'PSU' },
+  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: 'AIO' },
+  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: 'FAN' },
+  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: 'BOX' },
+  { label: 'Teclados', slug: '/teclados', icon: 'KEY' },
+  { label: 'Mouse', slug: '/mouse', icon: 'DPI' },
+  { label: 'Audífonos', slug: '/audifonos', icon: 'AUD' },
 ];
 ---
 
@@ -46,7 +46,7 @@ const categories = [
       <div class="dropdown-menu" id="componentes-menu">
         {categories.map((category) => (
           <a href={category.slug} class="dropdown-item">
-            <span class="dropdown-icon-emoji">{category.icon}</span>
+            <span class="dropdown-category-symbol">{category.icon}</span>
             <span>{category.label}</span>
           </a>
         ))}
@@ -242,8 +242,18 @@ const categories = [
     padding-left: 20px;
   }
 
-  .dropdown-icon-emoji {
-    font-size: 1.1rem;
+  .dropdown-category-symbol {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 24px;
+    border: 1px solid rgba(124, 255, 203, 0.22);
+    border-radius: 6px;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.08);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0;
   }
 
   .brand-logo {
