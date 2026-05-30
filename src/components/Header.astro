@@ -19,7 +19,20 @@ const categories = [
     <img src="/logo.png" alt="Zona Gaming" class="brand-logo" />
     Monckey Gamer
   </div>
-  <nav>
+  <button
+    class="menu-toggle"
+    id="mobile-menu-toggle"
+    type="button"
+    aria-label="Abrir menu"
+    aria-controls="primary-nav"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="main-nav" id="primary-nav">
     <a href="/">Inicio</a>
     
     <!-- Dropdown de Componentes -->
@@ -47,6 +60,17 @@ const categories = [
 <script>
   const btn = document.getElementById('componentes-btn');
   const menu = document.getElementById('componentes-menu');
+  const mobileToggle = document.getElementById('mobile-menu-toggle');
+  const nav = document.getElementById('primary-nav');
+
+  const closeMobileMenu = () => {
+    if (!mobileToggle || !nav) return;
+
+    mobileToggle.classList.remove('active');
+    nav.classList.remove('active');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileToggle.setAttribute('aria-label', 'Abrir menu');
+  };
 
   if (btn && menu) {
     // Toggle del menú
@@ -71,9 +95,83 @@ const categories = [
       }
     });
   }
+
+  if (mobileToggle && nav) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('active');
+
+      mobileToggle.classList.toggle('active', isOpen);
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileToggle.setAttribute('aria-label', isOpen ? 'Cerrar menu' : 'Abrir menu');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!(e.target instanceof Node)) return;
+
+      if (!mobileToggle.contains(e.target) && !nav.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+        menu?.classList.remove('active');
+      }
+    });
+  }
 </script>
 
 <style>
+  header {
+    position: relative;
+  }
+
+  .main-nav {
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e6f7ff;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .menu-toggle span + span {
+    margin-top: 6px;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .dropdown-container {
     position: relative;
   }
@@ -152,5 +250,80 @@ const categories = [
     width: 48px;
     height: 48px;
     object-fit: contain;
+  }
+
+  @media (max-width: 1024px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    .main-nav {
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      left: 0;
+      display: grid;
+      gap: 6px;
+      padding: 16px;
+      border: 1px solid rgba(124, 255, 203, 0.18);
+      border-radius: 16px;
+      background: rgba(7, 27, 53, 0.96);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-8px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    }
+
+    .main-nav.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .main-nav > a,
+    .dropdown-toggle {
+      width: 100%;
+      justify-content: space-between;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .main-nav > a:hover,
+    .dropdown-toggle:hover {
+      background: rgba(124, 255, 203, 0.08);
+    }
+
+    .dropdown-menu {
+      position: static;
+      min-width: 0;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      background: rgba(255, 255, 255, 0.04);
+      transition: max-height 0.2s ease, padding 0.2s ease;
+    }
+
+    .dropdown-menu.active {
+      max-height: 560px;
+      padding: 6px 0;
+      transform: none;
+    }
+
+    .dropdown-item {
+      padding: 10px 12px;
+    }
+
+    .dropdown-item:hover {
+      padding-left: 16px;
+    }
   }
 </style>
