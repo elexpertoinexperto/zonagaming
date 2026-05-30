@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Refrigeración normal';
 const description = 'Ventiladores y disipadores para mantener tu PC fría con aire eficiente y silencioso.';
-const products = [
-  { name: 'Noctua NH-D15', price: '$99 USD', description: 'Disipador premium con flujo de aire silencioso y gran capacidad.' },
-  { name: 'be quiet! Pure Wings 2', price: '$16 USD', description: 'Ventiladores duraderos y muy silenciosos para cualquier torre.' },
-  { name: 'Cooler Master Hyper 212', price: '$48 USD', description: 'Disipador clásico con excelente rendimiento por su precio.' },
-];
+const productsData = productos['refrigeracion-normal'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+      <span>{productsData.length} productos disponibles</span>
       <span>Opciones eficientes y accesibles</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/refrigeracion-normal/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

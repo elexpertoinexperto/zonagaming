@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Audífonos';
 const description = 'Audífonos gamer con sonido envolvente, micrófono claro y comodidad para largas sesiones.';
-const products = [
-  { name: 'HyperX Cloud II', price: '$99 USD', description: 'Audio envolvente con almohadillas cómodas para horas de juego.' },
-  { name: 'SteelSeries Arctis 7', price: '$149 USD', description: 'Wireless con claridad de voz y sonido preciso para cada partida.' },
-  { name: 'Razer BlackShark V2', price: '$129 USD', description: 'Ligero y con sonido de alta fidelidad para eSports.' },
-];
+const productsData = productos['audifonos'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+    <span>{productsData.length} productos disponibles</span>
       <span>Audio inmersivo y comunicación clara</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/audifonos/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

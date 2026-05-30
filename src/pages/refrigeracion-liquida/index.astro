@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Refrigeración líquida';
 const description = 'Sistemas de enfriamiento líquido para mantener temperaturas bajas y ruido mínimo en tu equipo.';
-const products = [
-  { name: 'Corsair iCUE H150i', price: '$199 USD', description: 'Radiador de 360mm con control RGB y gran capacidad de disipación.' },
-  { name: 'NZXT Kraken X63', price: '$169 USD', description: 'Enfriamiento silencioso con estética premium y montaje fácil.' },
-  { name: 'Arctic Liquid Freezer II 280', price: '$139 USD', description: 'Alto rendimiento térmico con ventiladores eficientes incluidos.' },
-];
+const productsData = productos['refrigeracion-liquida'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+      <span>{productsData.length} productos disponibles</span>
       <span>Enfriamiento extremo con estilo</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/refrigeracion-liquida/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

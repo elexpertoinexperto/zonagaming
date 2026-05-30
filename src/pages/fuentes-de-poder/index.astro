@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Fuentes de poder';
 const description = 'Fuentes modulares y certificadas para entregar energía limpia y segura a tu PC gamer.';
-const products = [
-  { name: 'Corsair RM850x', price: '$159 USD', description: '85+ Gold, silenciosa y con cableado modular completo.' },
-  { name: 'Seasonic Focus GX-750', price: '$139 USD', description: 'Alta eficiencia y rendimiento estable bajo carga pesada.' },
-  { name: 'NZXT C750', price: '$129 USD', description: 'Diseño compacto y controles para tu build moderna.' },
-];
+const productsData = productos['fuentes-de-poder'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+      <span>{productsData.length} productos disponibles</span>
       <span>Protección completa para tu equipo</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/fuentes-de-poder/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

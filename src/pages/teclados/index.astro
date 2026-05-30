@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Teclados';
 const description = 'Teclados mecánicos y gaming con iluminación y teclas rápidas para cada estilo de jugada.';
-const products = [
-  { name: 'Razer Huntsman V2', price: '$199 USD', description: 'Switches ópticos para actuación instantánea y RGB personalizable.' },
-  { name: 'Logitech G Pro X', price: '$149 USD', description: 'Teclado compacto con switches intercambiables y diseño premium.' },
-  { name: 'Corsair K70 RGB', price: '$169 USD', description: 'Resistente, con reposamuñecas y múltiples opciones de iluminación.' },
-];
+const productsData = productos['teclados'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+    <span>{productsData.length} productos disponibles</span>
       <span>Precisión y estilo para tu setup</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/teclados/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

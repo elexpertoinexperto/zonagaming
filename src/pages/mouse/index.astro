@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Mouse';
 const description = 'Ratones gaming ergonómicos con alta precisión y verdad táctil para cada tipo de jugador.';
-const products = [
-  { name: 'Logitech G502 X', price: '$79 USD', description: 'Sensor HERO de alta precisión con múltiples botones configurables.' },
-  { name: 'Razer DeathAdder V3', price: '$69 USD', description: 'Diseño clásico ergonómico con respuesta rápida y cómodo agarre.' },
-  { name: 'Glorious Model O', price: '$59 USD', description: 'Ligero, ágil y perfecto para FPS y juegos competitivos.' },
-];
+const productsData = productos['mouse'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+    <span>{productsData.length} productos disponibles</span>
       <span>Precisión y control para tu gameplay</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/mouse/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

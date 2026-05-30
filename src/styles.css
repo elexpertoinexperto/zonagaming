@@ -315,6 +315,16 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.product-link {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.product-link:hover {
+  transform: translateY(-5px);
+}
+
 .product-card {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.03);

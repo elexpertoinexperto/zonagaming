@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'SSD';
 const description = 'Unidades de estado sólido para tiempos de carga rápidos y transferencia segura de datos.';
-const products = [
-  { name: 'Samsung 980 Pro 1TB', price: '$139 USD', description: 'Velocidades PCIe 4.0 para proyecto y gaming exigente.' },
-  { name: 'WD Black SN770 1TB', price: '$109 USD', description: 'Excelente opción para rendimiento sostenido y fiabilidad.' },
-  { name: 'Kingston NV2 1TB', price: '$79 USD', description: 'Almacenamiento rápido y accesible para tu build.' },
-];
+const productsData = productos['ssd'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+      <span>{productsData.length} productos disponibles</span>
       <span>Instalación sencilla y arranque instantáneo</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/ssd/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>

@@ -1,13 +1,11 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import productos from '../../data/productos.json';
+
 const title = 'Gabinetes gamer';
 const description = 'Gabinetes con flujo de aire, diseño gamer y espacio para builds potentes y RGB.';
-const products = [
-  { name: 'Lian Li Lancool II', price: '$149 USD', description: 'Gabinete espacioso con excelente gestión de cables y refrigeración.' },
-  { name: 'NZXT H510 Flow', price: '$109 USD', description: 'Diseño moderno con panel frontal ventilado y montaje sencillo.' },
-  { name: 'Corsair 5000D Airflow', price: '$159 USD', description: 'Perfecto para builds de alto rendimiento y refrigeración directa.' },
-];
+const productsData = productos['gabinetes-gamer'];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -17,14 +15,21 @@ const products = [
     <h1>{title}</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{products.length} productos disponibles</span>
+      <span>{productsData.length} productos disponibles</span>
       <span>Estilo y rendimiento en una sola torre</span>
     </div>
   </section>
 
   <section class="product-grid">
-    {products.map((product) => (
-      <ProductCard product={product} />
+    {productsData.map((product) => (
+      <a href={`/gabinetes-gamer/${product.slug}-${product.id}`} class="product-link">
+        <ProductCard product={{
+          id: product.id,
+          name: product.nombre,
+          price: `$${product.precio.toFixed(2)} USD`,
+          description: product.descripcion,
+        }} />
+      </a>
     ))}
   </section>
 </SiteLayout>
