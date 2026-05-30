@@ -6,14 +6,16 @@ import productos from '../../data/productos.json';
 export function getStaticPaths() {
   const productosCategoria = productos['ssd' as keyof typeof productos];
   return productosCategoria.map((p: any) => ({
-    params: { id: String(p.id) }
+    params: { id: `${p.slug}-${p.id}` }
   }));
 }
 
 const { id } = Astro.params;
 const categoria = 'ssd';
 const productosCategoria = productos[categoria as keyof typeof productos];
-const producto = productosCategoria.find((p: any) => p.id === parseInt(id!));
+// Extraer el ID numérico del final del parámetro (slug-id)
+const numeroId = parseInt(id!.split('-').pop()!);
+const producto = productosCategoria.find((p: any) => p.id === numeroId);
 
 if (!producto) {
   return Astro.redirect('/ssd');
