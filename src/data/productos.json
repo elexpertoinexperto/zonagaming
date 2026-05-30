@@ -2,6 +2,7 @@
   "tarjetas-graficas": [
     {
       "id": 1,
+      "slug": "zotac-geforce-gtx-960",
       "nombre": "ZOTAC GeForce GTX 960",
       "descripcion": "Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, compatible con PCI Express 3.0, incluye salidas HDMI, DVI y DisplayPort, ideal para gaming y trabajo en video",
       "especificaciones": {
@@ -15,6 +16,7 @@
     },
     {
       "id": 2,
+      "slug": "nvidia-rtx-40800",
       "nombre": "NVIDIA RTX 40800",
       "descripcion": "Excelente rendimiento para gaming 4K y contenido profesional",
       "especificaciones": {
@@ -28,6 +30,7 @@
     },
     {
       "id": 3,
+      "slug": "amd-radeon-rx-7900-xtx",
       "nombre": "AMD Radeon RX 7900 XTX",
       "descripcion": "Competidor directo con excelente relación precio-rendimiento",
       "especificaciones": {
@@ -41,6 +44,7 @@
     },
     {
       "id": 4,
+      "slug": "nvidia-rtx-4070-ti",
       "nombre": "NVIDIA RTX 4070 Ti",
       "descripcion": "Opción premium para 1440p y gaming competitivo",
       "especificaciones": {
@@ -54,6 +58,7 @@
     },
     {
       "id": 5,
+      "slug": "nvidia-rtx-4070",
       "nombre": "NVIDIA RTX 4070",
       "descripcion": "Rendimiento sólido para 1440p con eficiencia energética",
       "especificaciones": {
@@ -67,6 +72,7 @@
     },
     {
       "id": 6,
+      "slug": "nvidia-rtx-4060-ti",
       "nombre": "NVIDIA RTX 4060 Ti",
       "descripcion": "Opción económica para 1080p y gaming casual",
       "especificaciones": {
@@ -80,6 +86,7 @@
     },
     {
       "id": 7,
+      "slug": "intel-arc-a770",
       "nombre": "Intel Arc A770",
       "descripcion": "Nueva generación de tarjetas gráficas discretas de Intel",
       "especificaciones": {
@@ -95,6 +102,7 @@
   "procesadores": [
     {
       "id": 1,
+      "slug": "intel-core-i9-13900k",
       "nombre": "Intel Core i9-13900K",
       "descripcion": "Procesador tope de gama para gaming y streaming simultáneo",
       "especificaciones": {
@@ -109,6 +117,7 @@
     },
     {
       "id": 2,
+      "slug": "amd-ryzen-9-7950x",
       "nombre": "AMD Ryzen 9 7950X",
       "descripcion": "Powerhouse de 16 núcleos para gaming y productividad",
       "especificaciones": {
@@ -123,6 +132,7 @@
     },
     {
       "id": 3,
+      "slug": "intel-core-i7-13700k",
       "nombre": "Intel Core i7-13700K",
       "descripcion": "Excelente balance entre rendimiento y precio",
       "especificaciones": {
@@ -137,6 +147,7 @@
     },
     {
       "id": 4,
+      "slug": "amd-ryzen-7-7700x",
       "nombre": "AMD Ryzen 7 7700X",
       "descripcion": "Rendimiento 1080p y 1440p excepcional",
       "especificaciones": {
@@ -151,6 +162,7 @@
     },
     {
       "id": 5,
+      "slug": "intel-core-i5-13600k",
       "nombre": "Intel Core i5-13600K",
       "descripcion": "Opción popular para gamers presupuestarios",
       "especificaciones": {
@@ -165,6 +177,7 @@
     },
     {
       "id": 6,
+      "slug": "amd-ryzen-5-7600x",
       "nombre": "AMD Ryzen 5 7600X",
       "descripcion": "Procesador de 6 núcleos para gaming 1080p",
       "especificaciones": {
@@ -179,6 +192,7 @@
     },
     {
       "id": 7,
+      "slug": "intel-core-i5-13400",
       "nombre": "Intel Core i5-13400",
       "descripcion": "Opción económica sin OC para PC gaming",
       "especificaciones": {
@@ -195,6 +209,7 @@
   "memoria-ram": [
     {
       "id": 1,
+      "slug": "corsair-dominator-platinum-rgb-32gb-6000mhz",
       "nombre": "Corsair Dominator Platinum RGB 32GB 6000MHz",
       "descripcion": "RAM de alto rendimiento con RGB sincronizable",
       "especificaciones": {
@@ -209,6 +224,7 @@
     },
     {
       "id": 2,
+      "slug": "gskill-flare-x5-32gb-5600mhz",
       "nombre": "G.Skill Flare X5 32GB 5600MHz",
       "descripcion": "Memoria optimizada para Ryzen 7000",
       "especificaciones": {
@@ -223,6 +239,7 @@
     },
     {
       "id": 3,
+      "slug": "kingston-fury-beast-32gb-3600mhz",
       "nombre": "Kingston FURY Beast 32GB 3600MHz",
       "descripcion": "RAM DDR4 confiable y económica",
       "especificaciones": {
@@ -237,6 +254,7 @@
     },
     {
       "id": 4,
+      "slug": "corsair-vengeance-32gb-3600mhz",
       "nombre": "Corsair Vengeance 32GB 3600MHz",
       "descripcion": "Clásico en RAM DDR4 para gaming",
       "especificaciones": {
@@ -251,6 +269,7 @@
     },
     {
       "id": 5,
+      "slug": "gskill-trident-z5-64gb-6000mhz",
       "nombre": "G.Skill Trident Z5 64GB 6000MHz",
       "descripcion": "Para creadores de contenido y gaming extremo",
       "especificaciones": {
@@ -265,6 +284,7 @@
     },
     {
       "id": 6,
+      "slug": "corsair-fury-beast-16gb-3200mhz",
       "nombre": "Corsair FURY Beast 16GB 3200MHz",
       "descripcion": "RAM presupuestaria para gaming casual",
       "especificaciones": {
@@ -279,6 +299,7 @@
     },
     {
       "id": 7,
+      "slug": "kingston-fury-beast-32gb-5600mhz-ddr5",
       "nombre": "Kingston Fury Beast 32GB 5600MHz DDR5",
       "descripcion": "Rendimiento DDR5 a precio competitivo",
       "especificaciones": {
@@ -295,6 +316,7 @@
   "ssd": [
     {
       "id": 1,
+      "slug": "samsung-990-pro-4tb",
       "nombre": "Samsung 990 Pro 4TB",
       "descripcion": "SSD NVMe PCIe 4.0 de máximo rendimiento",
       "especificaciones": {
@@ -309,6 +331,7 @@
     },
     {
       "id": 2,
+      "slug": "wd-black-sn850x-2tb",
       "nombre": "WD Black SN850X 2TB",
       "descripcion": "SSD gaming de Western Digital con tecnología patentada",
       "especificaciones": {
@@ -323,6 +346,7 @@
     },
     {
       "id": 3,
+      "slug": "crucial-p5-plus-1tb",
       "nombre": "Crucial P5 Plus 1TB",
       "descripcion": "SSD económico con buen rendimiento PCIe 4.0",
       "especificaciones": {
@@ -337,6 +361,7 @@
     },
     {
       "id": 4,
+      "slug": "kingston-a3000-2tb",
       "nombre": "Kingston A3000 2TB",
       "descripcion": "SSD NVMe PCIe 3.0 confiable",
       "especificaciones": {
@@ -351,6 +376,7 @@
     },
     {
       "id": 5,
+      "slug": "seagate-firecuda-530-4tb",
       "nombre": "Seagate FireCuda 530 4TB",
       "descripcion": "Almacenamiento masivo para gaming y streaming",
       "especificaciones": {
@@ -365,6 +391,7 @@
     },
     {
       "id": 6,
+      "slug": "corsair-mp600-elite-1tb",
       "nombre": "Corsair MP600 ELITE 1TB",
       "descripcion": "SSD presupuestario con garantía de calidad",
       "especificaciones": {
@@ -379,6 +406,7 @@
     },
     {
       "id": 7,
+      "slug": "sabrent-rocket-4-plus-2tb",
       "nombre": "Sabrent Rocket 4 Plus 2TB",
       "descripcion": "SSD PCIe 4.0 con relación precio-rendimiento",
       "especificaciones": {
@@ -395,6 +423,7 @@
   "fuentes-de-poder": [
     {
       "id": 1,
+      "slug": "corsair-rm1000x-1000w-gold",
       "nombre": "Corsair RM1000x 1000W Gold",
       "descripcion": "Fuente modular 1000W certificada 80+ Gold",
       "especificaciones": {
@@ -409,6 +438,7 @@
     },
     {
       "id": 2,
+      "slug": "evga-supernova-850-g5-850w",
       "nombre": "EVGA SuperNOVA 850 G5 850W",
       "descripcion": "Fuente 850W Gold con protecciones avanzadas",
       "especificaciones": {
@@ -423,6 +453,7 @@
     },
     {
       "id": 3,
+      "slug": "msi-mpg-a850gf-850w-gold",
       "nombre": "MSI MPG A850GF 850W Gold",
       "descripcion": "Fuente gaming modular con RGB",
       "especificaciones": {
@@ -437,6 +468,7 @@
     },
     {
       "id": 4,
+      "slug": "seasonic-focus-gx-750-750w",
       "nombre": "Seasonic Focus GX-750 750W",
       "descripcion": "Fuente de confianza para builds gaming",
       "especificaciones": {
@@ -451,6 +483,7 @@
     },
     {
       "id": 5,
+      "slug": "thermaltake-smart-750w",
       "nombre": "Thermaltake Smart 750W",
       "descripcion": "Fuente presupuestaria con buena potencia",
       "especificaciones": {
@@ -465,6 +498,7 @@
     },
     {
       "id": 6,
+      "slug": "corsair-cv650-650w",
       "nombre": "Corsair CV650 650W",
       "descripcion": "Fuente económica entrada nivel",
       "especificaciones": {
@@ -479,6 +513,7 @@
     },
     {
       "id": 7,
+      "slug": "cooler-master-v1000-gold-1000w",
       "nombre": "Cooler Master V1000 Gold 1000W",
       "descripcion": "Fuente 1000W para builds extremos",
       "especificaciones": {
@@ -495,6 +530,7 @@
   "refrigeracion-liquida": [
     {
       "id": 1,
+      "slug": "nzxt-kraken-x73-rgb",
       "nombre": "NZXT Kraken X73 RGB",
       "descripcion": "Refrigeración líquida All-in-One 360mm premium",
       "especificaciones": {
@@ -509,6 +545,7 @@
     },
     {
       "id": 2,
+      "slug": "corsair-icue-link-h150i-elite",
       "nombre": "Corsair iCUE Link H150i Elite",
       "descripcion": "Sistema líquido All-in-One con tecnología iCUE",
       "especificaciones": {
@@ -523,6 +560,7 @@
     },
     {
       "id": 3,
+      "slug": "lian-li-galahad-aio-240",
       "nombre": "Lian Li Galahad AIO 240",
       "descripcion": "Refrigeración 240mm compacta y silenciosa",
       "especificaciones": {
@@ -537,6 +575,7 @@
     },
     {
       "id": 4,
+      "slug": "be-quiet-dark-rock-liquid",
       "nombre": "Be Quiet! Dark Rock Liquid",
       "descripcion": "AIO 360mm con enfoque en silencio",
       "especificaciones": {
@@ -551,6 +590,7 @@
     },
     {
       "id": 5,
+      "slug": "ek-aio-360d5",
       "nombre": "EK AIO 360D5",
       "descripcion": "Sistema líquido personalizable de EK Water Blocks",
       "especificaciones": {
@@ -565,6 +605,7 @@
     },
     {
       "id": 6,
+      "slug": "thermaltake-liquid-freezer-ii-240",
       "nombre": "Thermaltake Liquid Freezer II 240",
       "descripcion": "AIO 240mm económico y confiable",
       "especificaciones": {
@@ -579,6 +620,7 @@
     },
     {
       "id": 7,
+      "slug": "asus-rog-strix-lc-360-rgb",
       "nombre": "ASUS ROG Strix LC 360 RGB",
       "descripcion": "Premium AIO con integración ROG",
       "especificaciones": {
@@ -595,6 +637,7 @@
   "refrigeracion-normal": [
     {
       "id": 1,
+      "slug": "noctua-nh-d15",
       "nombre": "Noctua NH-D15",
       "descripcion": "Disipador de aire premium de doble torre",
       "especificaciones": {
@@ -609,6 +652,7 @@
     },
     {
       "id": 2,
+      "slug": "cooler-master-rr-212s-20pc-r1",
       "nombre": "Cooler Master RR-212S-20PC-R1",
       "descripcion": "Disipador asequible con buen rendimiento",
       "especificaciones": {
@@ -623,6 +667,7 @@
     },
     {
       "id": 3,
+      "slug": "be-quiet-dark-rock-pro-4",
       "nombre": "be quiet! Dark Rock Pro 4",
       "descripcion": "Torre silenciosa con tecnología Silent Wings",
       "especificaciones": {
@@ -637,6 +682,7 @@
     },
     {
       "id": 4,
+      "slug": "corsair-a70",
       "nombre": "Corsair A70",
       "descripcion": "Disipador gaming compacto",
       "especificaciones": {
@@ -651,6 +697,7 @@
     },
     {
       "id": 5,
+      "slug": "thermalright-peerless-assassin-120-se",
       "nombre": "Thermalright Peerless Assassin 120 SE",
       "descripcion": "Disipador de aire económico de alto rendimiento",
       "especificaciones": {
@@ -665,6 +712,7 @@
     },
     {
       "id": 6,
+      "slug": "scythe-fuma-2",
       "nombre": "Scythe Fuma 2",
       "descripcion": "Disipador Japanese de bajo ruido",
       "especificaciones": {
@@ -679,6 +727,7 @@
     },
     {
       "id": 7,
+      "slug": "arctic-liquid-freezer-ii-120",
       "nombre": "Arctic Liquid Freezer II 120",
       "descripcion": "Opción entrada AIO líquido",
       "especificaciones": {
@@ -695,6 +744,7 @@
   "gabinetes-gamer": [
     {
       "id": 1,
+      "slug": "corsair-icue-5000t-rgb",
       "nombre": "Corsair iCUE 5000T RGB",
       "descripcion": "Gabinete premium con 3 paneles de vidrio templado",
       "especificaciones": {
@@ -709,6 +759,7 @@
     },
     {
       "id": 2,
+      "slug": "nzxt-h7-flow",
       "nombre": "NZXT H7 Flow",
       "descripcion": "Gabinete elegante con flujo de aire optimizado",
       "especificaciones": {
@@ -723,6 +774,7 @@
     },
     {
       "id": 3,
+      "slug": "lian-li-lancool-215",
       "nombre": "Lian Li Lancool 215",
       "descripcion": "Gabinete presupuestario con buen rendimiento",
       "especificaciones": {
@@ -737,6 +789,7 @@
     },
     {
       "id": 4,
+      "slug": "fractal-design-north",
       "nombre": "Fractal Design North",
       "descripcion": "Diseño nórdico minimalista",
       "especificaciones": {
@@ -751,6 +804,7 @@
     },
     {
       "id": 5,
+      "slug": "thermaltake-v250-mg-argb",
       "nombre": "Thermaltake V250 MG ARGB",
       "descripcion": "Gabinete gaming con luces RGB",
       "especificaciones": {
@@ -765,6 +819,7 @@
     },
     {
       "id": 6,
+      "slug": "cougar-mx330-g",
       "nombre": "Cougar MX330-G",
       "descripcion": "Gabinete económico y confiable",
       "especificaciones": {
@@ -779,6 +834,7 @@
     },
     {
       "id": 7,
+      "slug": "seasonic-syncm-692",
       "nombre": "Seasonic Syncm 692",
       "descripcion": "Gabinete ATX Full Tower",
       "especificaciones": {
@@ -795,6 +851,7 @@
   "teclados": [
     {
       "id": 1,
+      "slug": "corsair-k95-platinum-xt",
       "nombre": "Corsair K95 Platinum XT",
       "descripcion": "Teclado mecánico de gama alta con switches Cherry",
       "especificaciones": {
@@ -809,6 +866,7 @@
     },
     {
       "id": 2,
+      "slug": "steelseries-apex-pro",
       "nombre": "SteelSeries Apex Pro",
       "descripcion": "Teclado mecánico con switches ajustables",
       "especificaciones": {
@@ -823,6 +881,7 @@
     },
     {
       "id": 3,
+      "slug": "logitech-g915-lightspeed",
       "nombre": "Logitech G915 LIGHTSPEED",
       "descripcion": "Teclado inalámbrico mecánico de baja altura",
       "especificaciones": {
@@ -837,6 +896,7 @@
     },
     {
       "id": 4,
+      "slug": "razer-deathstalker-v2",
       "nombre": "Razer DeathStalker V2",
       "descripcion": "Teclado óptico rápido y silencioso",
       "especificaciones": {
@@ -851,6 +911,7 @@
     },
     {
       "id": 5,
+      "slug": "hyperx-alloy-origins-65",
       "nombre": "HyperX Alloy Origins 65",
       "descripcion": "Teclado compacto 65% mecánico",
       "especificaciones": {
@@ -865,6 +926,7 @@
     },
     {
       "id": 6,
+      "slug": "corsair-k60-rgb-pro",
       "nombre": "Corsair K60 RGB PRO",
       "descripcion": "Teclado mecánico presupuestario",
       "especificaciones": {
@@ -879,6 +941,7 @@
     },
     {
       "id": 7,
+      "slug": "ducky-one-3-sf",
       "nombre": "Ducky One 3 SF",
       "descripcion": "Teclado compact 65% de calidad premium",
       "especificaciones": {
@@ -895,6 +958,7 @@
   "mouse": [
     {
       "id": 1,
+      "slug": "corsair-m65-rgb-ultra",
       "nombre": "Corsair M65 RGB Ultra",
       "descripcion": "Ratón gaming inalámbrico de 24000 DPI",
       "especificaciones": {
@@ -909,6 +973,7 @@
     },
     {
       "id": 2,
+      "slug": "logitech-g-pro-x-superlight-2",
       "nombre": "Logitech G Pro X Superlight 2",
       "descripcion": "Ratón ultra ligero para esports competitivo",
       "especificaciones": {
@@ -923,6 +988,7 @@
     },
     {
       "id": 3,
+      "slug": "razer-deathAdder-v3",
       "nombre": "Razer DeathAdder V3",
       "descripcion": "Ratón ergonómico con tecnología inalámbrica Focus Pro",
       "especificaciones": {
@@ -937,6 +1003,7 @@
     },
     {
       "id": 4,
+      "slug": "steelseries-rival-3",
       "nombre": "SteelSeries Rival 3",
       "descripcion": "Ratón presupuestario con buen rendimiento",
       "especificaciones": {
@@ -951,6 +1018,7 @@
     },
     {
       "id": 5,
+      "slug": "finalmouse-ultralightx",
       "nombre": "Finalmouse UltralightX",
       "descripcion": "Ratón gaming ultraligero profesional",
       "especificaciones": {
@@ -965,6 +1033,7 @@
     },
     {
       "id": 6,
+      "slug": "hyperx-pulsefire-haste-2",
       "nombre": "HyperX Pulsefire Haste 2",
       "descripcion": "Ratón gaming con sensor avanzado",
       "especificaciones": {
@@ -979,6 +1048,7 @@
     },
     {
       "id": 7,
+      "slug": "glorious-model-o",
       "nombre": "Glorious Model O",
       "descripcion": "Ratón óptico compacto con diseño honeycomb",
       "especificaciones": {
@@ -995,6 +1065,7 @@
   "audifonos": [
     {
       "id": 1,
+      "slug": "corsair-virtuoso-rgb-wireless",
       "nombre": "Corsair Virtuoso RGB Wireless",
       "descripcion": "Headset gaming inalámbrico con audio Hi-Res",
       "especificaciones": {
@@ -1009,6 +1080,7 @@
     },
     {
       "id": 2,
+      "slug": "steelseries-arctis-pro",
       "nombre": "SteelSeries Arctis Pro",
       "descripcion": "Headset premium con sonido Spatial 360°",
       "especificaciones": {
@@ -1023,6 +1095,7 @@
     },
     {
       "id": 3,
+      "slug": "hyperx-cloud-stinger-2",
       "nombre": "HyperX Cloud Stinger 2",
       "descripcion": "Headset gaming asequible y confiable",
       "especificaciones": {
@@ -1037,6 +1110,7 @@
     },
     {
       "id": 4,
+      "slug": "razer-kraken-x",
       "nombre": "Razer Kraken X",
       "descripcion": "Headset RGB con drivers de 40mm",
       "especificaciones": {
@@ -1051,6 +1125,7 @@
     },
     {
       "id": 5,
+      "slug": "audio-technica-ath-g1",
       "nombre": "Audio-Technica ATH-G1",
       "descripcion": "Headset gaming de la marca de audio profesional",
       "especificaciones": {
@@ -1065,6 +1140,7 @@
     },
     {
       "id": 6,
+      "slug": "scuf-h1",
       "nombre": "SCUF H1",
       "descripcion": "Headset wireless gaming de SCUF",
       "especificaciones": {
@@ -1079,6 +1155,7 @@
     },
     {
       "id": 7,
+      "slug": "turtle-beach-stealth-600-gen-2",
       "nombre": "Turtle Beach Stealth 600 Gen 2",
       "descripcion": "Headset inalámbrico presupuestario",
       "especificaciones": {
