@@ -1,19 +1,20 @@
 ---
 import '../styles.css';
 import Header from '../components/Header.astro';
+import CategoryIcon from '../components/CategoryIcon.astro';
 
 const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'GPU', description: 'Potencia visual para gaming y edición.' },
-  { label: 'Procesadores', slug: '/procesadores', icon: 'CPU', description: 'CPU para multitarea y rendimiento extremo.' },
-  { label: 'Memoria RAM', slug: '/memoria-ram', icon: 'RAM', description: 'Velocidad y capacidad para tus builds.' },
-  { label: 'SSD', slug: '/ssd', icon: 'SSD', description: 'Almacenamiento rápido para juegos y programas.' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: 'PSU', description: 'Energía estable y eficiente para tu PC.' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: 'AIO', description: 'Enfriamiento silencioso y de alto rendimiento.' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: 'FAN', description: 'Ventiladores confiables para tu torre.' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: 'BOX', description: 'Estética, flujo de aire y espacio para tu setup.' },
-  { label: 'Teclados', slug: '/teclados', icon: 'KEY', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
-  { label: 'Mouse', slug: '/mouse', icon: 'DPI', description: 'Precisión y ergonomía para juegos competitivos.' },
-  { label: 'Audífonos', slug: '/audifonos', icon: 'AUD', description: 'Sonido inmersivo para tus partidas y streaming.' },
+  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
+  { label: 'Procesadores', slug: '/procesadores', icon: 'cpu', description: 'CPU para multitarea y rendimiento extremo.' },
+  { label: 'Memoria RAM', slug: '/memoria-ram', icon: 'ram', description: 'Velocidad y capacidad para tus builds.' },
+  { label: 'SSD', slug: '/ssd', icon: 'ssd', description: 'Almacenamiento rápido para juegos y programas.' },
+  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: 'psu', description: 'Energía estable y eficiente para tu PC.' },
+  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: 'aio', description: 'Enfriamiento silencioso y de alto rendimiento.' },
+  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: 'fan', description: 'Ventiladores confiables para tu torre.' },
+  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: 'box', description: 'Estética, flujo de aire y espacio para tu setup.' },
+  { label: 'Teclados', slug: '/teclados', icon: 'keyboard', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
+  { label: 'Mouse', slug: '/mouse', icon: 'mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
+  { label: 'Audífonos', slug: '/audifonos', icon: 'audio', description: 'Sonido inmersivo para tus partidas y streaming.' },
 ];
 ---
 
@@ -72,7 +73,9 @@ const categories = [
         <div class="category-grid">
           {categories.map((category) => (
             <a class="category-card" href={category.slug}>
-              <span class="category-icon">{category.icon}</span>
+              <span class="category-icon">
+                <CategoryIcon name={category.icon} />
+              </span>
               <div>
                 <h3>{category.label}</h3>
                 <p>{category.description}</p>

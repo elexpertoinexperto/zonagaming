@@ -1,0 +1,30 @@
+---
+const { name } = Astro.props;
+
+const icons = {
+  gpu: '<rect x="3" y="6" width="14" height="10" rx="2"/><path d="M7 10h4"/><path d="M17 9h4"/><path d="M17 13h4"/><path d="M8 18h4"/>',
+  cpu: '<rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M1 9h3"/><path d="M1 15h3"/><path d="M20 9h3"/><path d="M20 15h3"/>',
+  ram: '<rect x="3" y="8" width="18" height="8" rx="2"/><path d="M6 16v3"/><path d="M10 16v3"/><path d="M14 16v3"/><path d="M18 16v3"/><path d="M7 11h2"/><path d="M12 11h2"/><path d="M17 11h1"/>',
+  ssd: '<rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6"/><path d="M9 11h6"/><path d="M10 18h4"/>',
+  psu: '<rect x="4" y="5" width="16" height="14" rx="2"/><circle cx="12" cy="12" r="4"/><path d="M12 8v8"/><path d="M8 12h8"/>',
+  aio: '<path d="M12 3s6 6 6 11a6 6 0 0 1-12 0c0-5 6-11 6-11Z"/><path d="M9 15a3 3 0 0 0 6 0"/>',
+  fan: '<circle cx="12" cy="12" r="2"/><path d="M12 10c-1-5 4-7 7-4 1 4-2 7-7 6"/><path d="M14 13c5-1 7 4 4 7-4 1-7-2-6-7"/><path d="M10 13c-5 1-7-4-4-7 4-1 7 2 6 7"/>',
+  box: '<path d="M5 4h14v16H5z"/><path d="M8 8h8"/><path d="M8 12h4"/><circle cx="16" cy="17" r="1"/>',
+  keyboard: '<rect x="3" y="7" width="18" height="10" rx="2"/><path d="M7 10h.01"/><path d="M11 10h.01"/><path d="M15 10h.01"/><path d="M8 14h8"/>',
+  mouse: '<rect x="7" y="3" width="10" height="18" rx="5"/><path d="M12 3v6"/><path d="M7 10h10"/>',
+  audio: '<path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v4a2 2 0 0 0 2 2h2v-6H6a2 2 0 0 0-2 2"/><path d="M20 13v4a2 2 0 0 1-2 2h-2v-6h2a2 2 0 0 1 2 2"/>',
+};
+
+const icon = icons[name as keyof typeof icons] ?? icons.cpu;
+---
+
+<svg
+  aria-hidden="true"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.8"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  set:html={icon}
+/>

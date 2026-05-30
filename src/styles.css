@@ -228,9 +228,11 @@ nav a:hover {
   border: 1px solid rgba(124, 255, 203, 0.24);
   background: rgba(124, 255, 203, 0.12);
   color: #7cffcb;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0;
+}
+
+.category-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .category-card:hover {
