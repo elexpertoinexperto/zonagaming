@@ -315,6 +315,18 @@ nav a:hover {
   font-size: 2.1rem;
 }
 
+.section-title-stacked {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.section-title-stacked p {
+  margin: 0;
+  max-width: 520px;
+  color: #c8d8e8;
+  line-height: 1.7;
+}
+
 .product-grid {
   display: grid;
   gap: 20px;
@@ -346,6 +358,7 @@ nav a:hover {
   gap: 20px;
 }
 
+.product-card h2,
 .product-card h3 {
   margin: 0 0 12px;
   font-size: 1.35rem;

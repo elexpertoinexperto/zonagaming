@@ -2,6 +2,7 @@
 import '../styles.css';
 import Header from '../components/Header.astro';
 import CategoryIcon from '../components/CategoryIcon.astro';
+import BestSellers from '../components/BestSellers.astro';
 
 const categories = [
   { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
@@ -15,6 +16,30 @@ const categories = [
   { label: 'Teclados', slug: '/teclados', icon: 'keyboard', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
   { label: 'Mouse', slug: '/mouse', icon: 'mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
   { label: 'Audífonos', slug: '/audifonos', icon: 'audio', description: 'Sonido inmersivo para tus partidas y streaming.' },
+];
+
+const bestSellerProducts = [
+  {
+    id: 1,
+    name: 'ZOTAC GeForce GTX 960',
+    description: 'Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, ideal para gaming y trabajo en video.',
+    price: '$200.00 USD',
+    href: '/tarjetas-graficas/zotac-geforce-gtx-960-1',
+  },
+  {
+    id: 2,
+    name: 'Intel Core i9-13900K',
+    description: 'Procesador tope de gama para gaming, streaming y multitarea exigente.',
+    price: '$589.99 USD',
+    href: '/procesadores/intel-core-i9-13900k-1',
+  },
+  {
+    id: 3,
+    name: 'Corsair Dominator Platinum RGB 32GB 6000MHz',
+    description: 'Memoria DDR5 de alto rendimiento con RGB sincronizable para builds premium.',
+    price: '$189.99 USD',
+    href: '/memoria-ram/corsair-dominator-platinum-rgb-32gb-6000mhz-1',
+  },
 ];
 ---
 
@@ -85,31 +110,12 @@ const categories = [
         </div>
       </section>
 
-      <section id="coleccion" class="products">
-        <div class="section-title">
-          <small>Top ventas</small>
-          <h2>Selección de componentes</h2>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <h3>GPU Titan X</h3>
-            <p>Rendimiento extremo para juegos AAA, streaming y renderizado sin compromisos.</p>
-            <span>$1,299 USD</span>
-          </article>
-
-          <article class="product-card">
-            <h3>Placa madre NeoCore</h3>
-            <p>Compatibilidad total con DDR5, PCIe 5.0 y overclock estable para tus builds más audaces.</p>
-            <span>$249 USD</span>
-          </article>
-
-          <article class="product-card">
-            <h3>Fuente HyperFlow 850W</h3>
-            <p>Eficiencia Gold con cableado modular y protección inteligente para cada partida.</p>
-            <span>$159 USD</span>
-          </article>
-        </div>
-      </section>
+      <BestSellers
+        id="coleccion"
+        title="Los más vendidos"
+        description="Una selección manual por ahora; después puede conectarse al ranking real de ventas."
+        products={bestSellerProducts}
+      />
 
       <section id="ventajas" class="features">
         <div class="section-title">

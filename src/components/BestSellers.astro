@@ -1,0 +1,43 @@
+---
+import ProductCard from './ProductCard.astro';
+
+const {
+  products = [],
+  eyebrow = 'Top ventas',
+  title = 'Los más vendidos',
+  description = 'Los productos favoritos para armar o mejorar tu setup gamer.',
+  id = 'mas-vendidos',
+} = Astro.props;
+
+const bestSellers = products.slice(0, 3).map((product) => ({
+  id: product.id,
+  name: product.name ?? product.nombre,
+  description: product.description ?? product.descripcion,
+  price:
+    product.price ??
+    (typeof product.precio === 'number' ? `$${product.precio.toFixed(2)} USD` : product.precio),
+  href: product.href,
+}));
+---
+
+<section id={id} class="products best-sellers">
+  <div class="section-title section-title-stacked">
+    <div>
+      <small>{eyebrow}</small>
+      <h2>{title}</h2>
+    </div>
+    {description && <p>{description}</p>}
+  </div>
+
+  <div class="product-grid">
+    {bestSellers.map((product) => (
+      product.href ? (
+        <a href={product.href} class="product-link">
+          <ProductCard product={product} />
+        </a>
+      ) : (
+        <ProductCard product={product} />
+      )
+    ))}
+  </div>
+</section>
