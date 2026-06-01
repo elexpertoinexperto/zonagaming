@@ -390,9 +390,9 @@ nav a:hover {
 
 .product-card-actions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  width: 100%;
+  width: 70%;
 }
 
 .btn-small {
@@ -464,6 +464,10 @@ footer {
 
   .hero-stats,
   .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-actions {
     grid-template-columns: 1fr;
   }
 }

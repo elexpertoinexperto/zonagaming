@@ -26,8 +26,7 @@ interface Props {
 const {
   products = [],
   eyebrow = 'Top ventas',
-  title = 'Los más vendidos',
-  description = 'Los productos favoritos para armar o mejorar tu setup gamer.',
+  title = 'Los más vendidos',  
   id = 'mas-vendidos',
 } = Astro.props as Props;
 
@@ -49,8 +48,7 @@ const bestSellers = products.slice(0, 3).map((product) => ({
     <div>
       <small>{eyebrow}</small>
       <h2>{title}</h2>
-    </div>
-    {description && <p>{description}</p>}
+    </div>    
   </div>
 
   <div class="product-grid">
