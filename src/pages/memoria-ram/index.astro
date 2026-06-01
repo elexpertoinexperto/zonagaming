@@ -22,14 +22,14 @@ const productsData = productos['memoria-ram'];
 
   <section class="product-grid">
     {productsData.map((product) => (
-      <a href={`/memoria-ram/${product.slug}-${product.id}`} class="product-link">
-        <ProductCard product={{
-          id: product.id,
-          name: product.nombre,
-          price: `$${product.precio.toFixed(2)} USD`,
-          description: product.descripcion,
-        }} />
-      </a>
+      <ProductCard product={{
+        id: product.id,
+        name: product.nombre,
+        price: `$${product.precio.toFixed(2)} USD`,
+        description: product.descripcion,
+        detailHref: `/memoria-ram/${product.slug}-${product.id}`,
+        amazonHref: product.enlaceAmazon,
+      }} />
     ))}
   </section>
 </SiteLayout>

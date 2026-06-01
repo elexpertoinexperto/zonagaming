@@ -1,22 +1,46 @@
 ---
 import ProductCard from './ProductCard.astro';
 
+type BestSellerProduct = {
+  id?: number | string;
+  name?: string;
+  nombre?: string;
+  description?: string;
+  descripcion?: string;
+  price?: string;
+  precio?: number | string;
+  href?: string;
+  detailHref?: string;
+  amazonHref?: string;
+  enlaceAmazon?: string;
+};
+
+interface Props {
+  products?: BestSellerProduct[];
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  id?: string;
+}
+
 const {
   products = [],
   eyebrow = 'Top ventas',
   title = 'Los más vendidos',
   description = 'Los productos favoritos para armar o mejorar tu setup gamer.',
   id = 'mas-vendidos',
-} = Astro.props;
+} = Astro.props as Props;
 
 const bestSellers = products.slice(0, 3).map((product) => ({
   id: product.id,
-  name: product.name ?? product.nombre,
-  description: product.description ?? product.descripcion,
+  name: product.name ?? product.nombre ?? '',
+  description: product.description ?? product.descripcion ?? '',
   price:
     product.price ??
-    (typeof product.precio === 'number' ? `$${product.precio.toFixed(2)} USD` : product.precio),
-  href: product.href,
+    (typeof product.precio === 'number' ? `$${product.precio.toFixed(2)} USD` : product.precio) ??
+    '',
+  detailHref: product.detailHref ?? product.href,
+  amazonHref: product.amazonHref ?? product.enlaceAmazon,
 }));
 ---
 
@@ -31,13 +55,7 @@ const bestSellers = products.slice(0, 3).map((product) => ({
 
   <div class="product-grid">
     {bestSellers.map((product) => (
-      product.href ? (
-        <a href={product.href} class="product-link">
-          <ProductCard product={product} />
-        </a>
-      ) : (
-        <ProductCard product={product} />
-      )
+      <ProductCard product={product} />
     ))}
   </div>
 </section>

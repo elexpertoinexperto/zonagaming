@@ -113,6 +113,10 @@ nav a:hover {
   padding: 14px 26px;
   font-weight: 700;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .btn {
@@ -336,11 +340,6 @@ nav a:hover {
 .product-link {
   color: inherit;
   text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.product-link:hover {
-  transform: translateY(-5px);
 }
 
 .product-card {
@@ -351,6 +350,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 .product-card-content {
@@ -386,7 +390,7 @@ nav a:hover {
 
 .product-card-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
   width: 100%;
 }

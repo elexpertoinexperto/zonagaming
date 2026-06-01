@@ -22,14 +22,14 @@ const productsData = productos['teclados'];
 
   <section class="product-grid">
     {productsData.map((product) => (
-      <a href={`/teclados/${product.slug}-${product.id}`} class="product-link">
-        <ProductCard product={{
-          id: product.id,
-          name: product.nombre,
-          price: `$${product.precio.toFixed(2)} USD`,
-          description: product.descripcion,
-        }} />
-      </a>
+      <ProductCard product={{
+        id: product.id,
+        name: product.nombre,
+        price: `$${product.precio.toFixed(2)} USD`,
+        description: product.descripcion,
+        detailHref: `/teclados/${product.slug}-${product.id}`,
+        amazonHref: product.enlaceAmazon,
+      }} />
     ))}
   </section>
 </SiteLayout>

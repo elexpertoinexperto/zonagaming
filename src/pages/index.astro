@@ -24,21 +24,24 @@ const bestSellerProducts = [
     name: 'ZOTAC GeForce GTX 960',
     description: 'Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, ideal para gaming y trabajo en video.',
     price: '$200.00 USD',
-    href: '/tarjetas-graficas/zotac-geforce-gtx-960-1',
+    detailHref: '/tarjetas-graficas/zotac-geforce-gtx-960-1',
+    amazonHref: 'https://amzn.to/4vfFX2q',
   },
   {
     id: 2,
     name: 'Intel Core i9-13900K',
     description: 'Procesador tope de gama para gaming, streaming y multitarea exigente.',
     price: '$589.99 USD',
-    href: '/procesadores/intel-core-i9-13900k-1',
+    detailHref: '/procesadores/intel-core-i9-13900k-1',
+    amazonHref: 'https://amazon.com/dp/',
   },
   {
     id: 3,
     name: 'Corsair Dominator Platinum RGB 32GB 6000MHz',
     description: 'Memoria DDR5 de alto rendimiento con RGB sincronizable para builds premium.',
     price: '$189.99 USD',
-    href: '/memoria-ram/corsair-dominator-platinum-rgb-32gb-6000mhz-1',
+    detailHref: '/memoria-ram/corsair-dominator-platinum-rgb-32gb-6000mhz-1',
+    amazonHref: 'https://amazon.com/dp/',
   },
 ];
 ---
@@ -112,8 +115,7 @@ const bestSellerProducts = [
 
       <BestSellers
         id="coleccion"
-        title="Los más vendidos"
-        description="Una selección manual por ahora; después puede conectarse al ranking real de ventas."
+        title="Los más vendidos"        
         products={bestSellerProducts}
       />
 

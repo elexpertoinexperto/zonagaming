@@ -1,5 +1,14 @@
 ---
-const { product } = Astro.props;
+type ProductCardData = {
+  id?: number | string;
+  name: string;
+  description: string;
+  price: string;
+  detailHref?: string;
+  amazonHref?: string;
+};
+
+const { product } = Astro.props as { product: ProductCardData };
 ---
 
 <article class="product-card">
@@ -12,8 +21,19 @@ const { product } = Astro.props;
     <div class="product-card-footer">
       <span>{product.price}</span>
        <div class="product-card-actions">
-        <button class="btn btn-small" type="button">Detalles</button>
-        <button class="btn btn-small btn-amazon" type="button">Amazon</button>
+        {product.detailHref && (
+          <a class="btn btn-small" href={product.detailHref}>Detalles</a>
+        )}
+        {product.amazonHref && (
+          <a
+            class="btn btn-small btn-amazon"
+            href={product.amazonHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Amazon
+          </a>
+        )}
       </div>
     </div>
   </div>
