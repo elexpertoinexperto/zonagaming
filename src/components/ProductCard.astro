@@ -4,6 +4,7 @@ type ProductCardData = {
   name: string;
   description: string;
   price: string;
+  imageUrl?: string;
   detailHref?: string;
   amazonHref?: string;
 };
@@ -15,6 +16,13 @@ const { product } = Astro.props as { product: ProductCardData };
   <div class="product-card-content">
     <div>
       <h2>{product.name}</h2>
+      <div class="product-card-image">
+        <img
+          src={product.imageUrl || '/placeholder-product.svg'}
+          alt={`Imagen de ${product.name}`}
+          loading="lazy"
+        />
+      </div>
       <p>{product.description}</p>
     </div>
 

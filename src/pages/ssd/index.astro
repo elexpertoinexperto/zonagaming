@@ -1,11 +1,12 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'SSD';
 const description = 'Unidades de estado sólido para tiempos de carga rápidos y transferencia segura de datos.';
-const productsData = productos['ssd'];
+const productsData = productos['ssd'] as unknown as Producto[];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -27,6 +28,7 @@ const productsData = productos['ssd'];
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
+        imageUrl: product.imagenUrl,
         detailHref: `/ssd/${product.slug}-${product.id}`,
         amazonHref: product.enlaceAmazon,
       }} />

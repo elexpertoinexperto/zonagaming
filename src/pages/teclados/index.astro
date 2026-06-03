@@ -1,11 +1,12 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Teclados';
 const description = 'Teclados mecánicos y gaming con iluminación y teclas rápidas para cada estilo de jugada.';
-const productsData = productos['teclados'];
+const productsData = productos['teclados'] as unknown as Producto[];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -27,6 +28,7 @@ const productsData = productos['teclados'];
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
+        imageUrl: product.imagenUrl,
         detailHref: `/teclados/${product.slug}-${product.id}`,
         amazonHref: product.enlaceAmazon,
       }} />

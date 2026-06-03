@@ -1,11 +1,12 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Memoria RAM';
 const description = 'Modulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
-const productsData = productos['memoria-ram'];
+const productsData = productos['memoria-ram'] as unknown as Producto[];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -27,6 +28,7 @@ const productsData = productos['memoria-ram'];
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
+        imageUrl: product.imagenUrl,
         detailHref: `/memoria-ram/${product.slug}-${product.id}`,
         amazonHref: product.enlaceAmazon,
       }} />

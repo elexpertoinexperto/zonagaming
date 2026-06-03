@@ -9,6 +9,8 @@ type BestSellerProduct = {
   descripcion?: string;
   price?: string;
   precio?: number | string;
+  imageUrl?: string;
+  imagenUrl?: string;
   href?: string;
   detailHref?: string;
   amazonHref?: string;
@@ -38,6 +40,7 @@ const bestSellers = products.slice(0, 3).map((product) => ({
     product.price ??
     (typeof product.precio === 'number' ? `$${product.precio.toFixed(2)} USD` : product.precio) ??
     '',
+  imageUrl: product.imageUrl ?? product.imagenUrl,
   detailHref: product.detailHref ?? product.href,
   amazonHref: product.amazonHref ?? product.enlaceAmazon,
 }));

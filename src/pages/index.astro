@@ -24,6 +24,7 @@ const bestSellerProducts = [
     name: 'ZOTAC GeForce GTX 960',
     description: 'Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, ideal para gaming y trabajo en video.',
     price: '$200.00 USD',
+    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
     detailHref: '/tarjetas-graficas/zotac-geforce-gtx-960-1',
     amazonHref: 'https://amzn.to/4vfFX2q',
   },
@@ -32,6 +33,7 @@ const bestSellerProducts = [
     name: 'Intel Core i9-13900K',
     description: 'Procesador tope de gama para gaming, streaming y multitarea exigente.',
     price: '$589.99 USD',
+    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
     detailHref: '/procesadores/intel-core-i9-13900k-1',
     amazonHref: 'https://amazon.com/dp/',
   },
@@ -40,6 +42,7 @@ const bestSellerProducts = [
     name: 'Corsair Dominator Platinum RGB 32GB 6000MHz',
     description: 'Memoria DDR5 de alto rendimiento con RGB sincronizable para builds premium.',
     price: '$189.99 USD',
+    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
     detailHref: '/memoria-ram/corsair-dominator-platinum-rgb-32gb-6000mhz-1',
     amazonHref: 'https://amazon.com/dp/',
   },
@@ -54,7 +57,7 @@ const bestSellerProducts = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content="Tienda de componentes PC para gamers. Encuentra tarjetas gráficas, procesadores, memoria RAM, SSD, fuentes de poder y más. Calidad premium y asesoría experta para tu setup gamer." />
-    <title>Zona Gaming | Componentes PC</title>
+    <title> Componentes PC Gamer | Mockey Gamer</title>
   </head>
   <body>
     <div class="page">
@@ -66,22 +69,21 @@ const bestSellerProducts = [
           <p class="hero-copy-description">Equipos y componentes que elevan tu rendimiento al siguiente nivel.</p>
           <p>Descubre un catálogo curado de piezas para armado de PC, desde tarjetas gráficas y fuentes hasta teclados mecánicos y enfriamiento líquido. Diseño minimalista, velocidad máxima y estilo gamer real.</p>
           <div class="hero-actions">
-            <button class="btn">Ver ofertas</button>
-            <button class="btn-secondary">Personalizar PC</button>
+            <button class="btn">Los Más Vendidos </button>            
           </div>
 
           <div class="hero-stats">
             <div class="stat-card">
-              <strong>+120</strong>
-              Modelos optimizados para gaming.
+              <strong>+70</strong>
+              Componentes pensados para gaming.
             </div>
             <div class="stat-card">
               <strong>24h</strong>
-              Envío rápido y soporte técnico.
+              Disponible para ti.
             </div>
             <div class="stat-card">
-              <strong>5 años</strong>
-              Garantía en componentes premium.
+              <strong>Garantía</strong>
+              Garantía directa con Amazon.
             </div>
           </div>
         </div>

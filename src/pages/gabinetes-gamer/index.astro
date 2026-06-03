@@ -1,11 +1,12 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Gabinetes gamer';
 const description = 'Gabinetes con flujo de aire, diseño gamer y espacio para builds potentes y RGB.';
-const productsData = productos['gabinetes-gamer'];
+const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
 ---
 
 <SiteLayout title={`${title} | Zona Gaming`}>
@@ -27,6 +28,7 @@ const productsData = productos['gabinetes-gamer'];
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
+        imageUrl: product.imagenUrl,
         detailHref: `/gabinetes-gamer/${product.slug}-${product.id}`,
         amazonHref: product.enlaceAmazon,
       }} />
