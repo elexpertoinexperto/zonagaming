@@ -33,7 +33,7 @@ if (!producto) {
     especificaciones={producto.especificaciones}
     precio={producto.precio}
     enlaceAmazon={producto.enlaceAmazon}
-    imagenPath={`/gabinetes-gamer/${id}/imagenes/producto.svg`}
+    imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
   />
 </SiteLayout>
 

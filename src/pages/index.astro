@@ -3,6 +3,11 @@ import '../styles.css';
 import Header from '../components/Header.astro';
 import CategoryIcon from '../components/CategoryIcon.astro';
 import BestSellers from '../components/BestSellers.astro';
+import productos from '../data/productos.json';
+
+const tg  = (productos['tarjetas-graficas'] as any[]);
+const cpu = (productos['procesadores'] as any[]);
+const ram = (productos['memoria-ram'] as any[]);
 
 const categories = [
   { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
@@ -24,7 +29,7 @@ const bestSellerProducts = [
     name: 'ZOTAC GeForce GTX 960',
     description: 'Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, ideal para gaming y trabajo en video.',
     price: '$200.00 USD',
-    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
+    imageUrl: tg.find(p => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
     detailHref: '/tarjetas-graficas/zotac-geforce-gtx-960-1',
     amazonHref: 'https://amzn.to/4vfFX2q',
   },
@@ -33,7 +38,7 @@ const bestSellerProducts = [
     name: 'Intel Core i9-13900K',
     description: 'Procesador tope de gama para gaming, streaming y multitarea exigente.',
     price: '$589.99 USD',
-    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
+    imageUrl: cpu.find(p => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
     detailHref: '/procesadores/intel-core-i9-13900k-1',
     amazonHref: 'https://amazon.com/dp/',
   },
@@ -42,7 +47,7 @@ const bestSellerProducts = [
     name: 'Corsair Dominator Platinum RGB 32GB 6000MHz',
     description: 'Memoria DDR5 de alto rendimiento con RGB sincronizable para builds premium.',
     price: '$189.99 USD',
-    imageUrl: '/placeholder-product.svg', // reemplaza con la URL real de la imagen
+    imageUrl: ram.find(p => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
     detailHref: '/memoria-ram/corsair-dominator-platinum-rgb-32gb-6000mhz-1',
     amazonHref: 'https://amazon.com/dp/',
   },
@@ -124,15 +129,15 @@ const bestSellerProducts = [
 
       <section id="ventajas" class="features">
         <div class="section-title">
-          <small>Por qué elegirnos</small>
+          <small>Por qué visitar en Mockey Gamer</small>
           <h2>Ventajas del setup gamer</h2>
         </div>
         <div class="feature-list">
           <div class="feature-item">
             <div>1</div>
             <div class="feature-content">
-              <strong>Diseño minimalista</strong>
-              <p>Una estética limpia y futurista pensada para que tu pc destaque sin recargar tu escritorio.</p>
+              <strong>Componetes de Alta Calidad</strong>
+              <p>Aquí encontrarás los mejores componentes para tu setup gamer. y los podrás comprar a traves de Amazon.</p>
             </div>
           </div>
           <div class="feature-item">
@@ -145,8 +150,8 @@ const bestSellerProducts = [
           <div class="feature-item">
             <div>3</div>
             <div class="feature-content">
-              <strong>Asesoría experta</strong>
-              <p>Nuestro equipo te ayuda a elegir las piezas ideales según tu presupuesto y estilo de juego.</p>
+              <strong>Blogs interesantes</strong>
+              <p>Publicaré un blog interesante con consejos y actualizaciones sobre el mundo del gaming.</p>
             </div>
           </div>
         </div>
