@@ -17,10 +17,10 @@ const categories = [
 ---
 
 <header>
-  <div class="brand">
+  <a href="/" class="brand">
     <img src="/logo.png" alt="Zona Gaming" class="brand-logo" />
     Monckey Gamer
-  </div>
+  </a>
   <button
     class="menu-toggle"
     id="mobile-menu-toggle"
@@ -262,6 +262,11 @@ const categories = [
   .dropdown-category-symbol svg {
     width: 18px;
     height: 18px;
+  }
+
+  a.brand {
+    text-decoration: none;
+    color: inherit;
   }
 
   .brand-logo {
