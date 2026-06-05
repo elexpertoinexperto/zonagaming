@@ -3,334 +3,355 @@
     {
       "id": 1,
       "slug": "zotac-geforce-gtx-960",
-      "nombre": "ZOTAC GeForce GTX 960",
-      "descripcion": "Tarjeta gráfica de gama media con 2GB de VRAM GDDR5, compatible con PCI Express 3.0, incluye salidas HDMI, DVI y DisplayPort, ideal para gaming y trabajo en video",
+      "nombre": "ZOTAC GeForce GTX 960 2GB GDDR5",
+      "descripcion": "Tarjeta gráfica NVIDIA GTX 960 con 2GB GDDR5 y soporte para DirectX 12, ideal para juegos eSports y títulos ligeros en 1080p",
       "especificaciones": {
-        "VRAM": "2GB GDDR5",
-        "Velocidad": "1177 MHz (Nucleo)",
-        "AnchoBus": "128-bit",
-        "TDP": "120W"
+        "VRAM": "2 GB GDDR5",
+        "Velocidad": "1240 MHz Boost",
+        "AnchoBus": "128 bits",
+        "TDP": "120 W"
       },
       "precio": 200,
-      "enlaceAmazon": "https://amzn.to/4vfFX2q",
+      "enlaceAmazon": "https://amzn.to/4u5AmuV",
       "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L.jpg"
     },
     {
       "id": 2,
-      "slug": "nvidia-rtx-40800",
-      "nombre": "NVIDIA RTX 40800",
-      "descripcion": "Excelente rendimiento para gaming 4K y contenido profesional",
+      "slug": "asus-dual-rtx-5060-8gb-oc",
+      "nombre": "ASUS Dual NVIDIA GeForce RTX 5060 8GB GDDR7 OC Edition",
+      "descripcion": "Tarjeta gráfica RTX 5060 con 8GB GDDR7, DLSS 4 y arquitectura NVIDIA Blackwell para gaming moderno en 1080p y 1440p",
       "especificaciones": {
-        "VRAM": "16GB GDDR6X",
-        "Velocidad": "2505 MHz",
-        "AnchoBus": "256-bit",
-        "TDP": "320W"
+        "VRAM": "8 GB GDDR7",
+        "Velocidad": "2565 MHz Boost (OC)",
+        "AnchoBus": "128 bits",
+        "TDP": "145 W"
       },
-      "precio": 1199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 354.99,
+      "enlaceAmazon": "https://amzn.to/4ufHRzn",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "amd-radeon-rx-7900-xtx",
-      "nombre": "AMD Radeon RX 7900 XTX",
-      "descripcion": "Competidor directo con excelente relación precio-rendimiento",
+      "slug": "hyperrender-rx-580-8gb",
+      "nombre": "HyperRender RX 580 8GB 2048SP",
+      "descripcion": "Tarjeta gráfica RX 580 con 8GB GDDR5 y bus de 256 bits, ideal para gaming en 1080p y configuraciones multimonitor",
       "especificaciones": {
-        "VRAM": "24GB GDDR6",
-        "Velocidad": "2500 MHz",
-        "AnchoBus": "384-bit",
-        "TDP": "420W"
+        "VRAM": "8 GB GDDR5",
+        "Velocidad": "1286 MHz",
+        "AnchoBus": "256 bits",
+        "TDP": "150 W"
       },
-      "precio": 899.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 119.99,
+      "enlaceAmazon": "https://amzn.to/4uMk5Mw",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "nvidia-rtx-4070-ti",
-      "nombre": "NVIDIA RTX 4070 Ti",
-      "descripcion": "Opción premium para 1440p y gaming competitivo",
+      "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+      "nombre": "GIGABYTE Radeon RX 9060 XT Gaming OC 16G",
+      "descripcion": "Tarjeta gráfica Radeon RX 9060 XT con 16GB GDDR6, PCIe 5.0 y sistema WINDFORCE para gaming de alto rendimiento en 1440p",
       "especificaciones": {
-        "VRAM": "12GB GDDR6X",
-        "Velocidad": "2610 MHz",
-        "AnchoBus": "192-bit",
-        "TDP": "285W"
+        "VRAM": "16 GB GDDR6",
+        "Velocidad": "2700 MHz",
+        "AnchoBus": "128 bits",
+        "TDP": "182 W"
       },
-      "precio": 799.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 459.99,
+      "enlaceAmazon": "https://amzn.to/4a4BjME",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "nvidia-rtx-4070",
-      "nombre": "NVIDIA RTX 4070",
-      "descripcion": "Rendimiento sólido para 1440p con eficiencia energética",
+      "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+      "nombre": "ASUS Dual NVIDIA GeForce RTX 5060 Ti 16GB GDDR7 OC Edition",
+      "descripcion": "RTX 5060 Ti con 16GB GDDR7, DLSS 4 y arquitectura Blackwell. Excelente opción para gaming en 1440p y creación de contenido",
       "especificaciones": {
-        "VRAM": "12GB GDDR6",
-        "Velocidad": "2475 MHz",
-        "AnchoBus": "192-bit",
-        "TDP": "200W"
+        "VRAM": "16 GB GDDR7",
+        "Velocidad": "2632 MHz Boost (OC)",
+        "AnchoBus": "128 bits",
+        "TDP": "180 W"
       },
-      "precio": 599.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 571.3,
+      "enlaceAmazon": "https://amzn.to/4u8hP0K",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "nvidia-rtx-4060-ti",
-      "nombre": "NVIDIA RTX 4060 Ti",
-      "descripcion": "Opción económica para 1080p y gaming casual",
+      "slug": "gigabyte-rtx-5070-windforce-oc-sff-12g",
+      "nombre": "GIGABYTE GeForce RTX 5070 WINDFORCE OC SFF 12G",
+      "descripcion": "RTX 5070 con 12GB GDDR7 y DLSS 4, diseñada para gaming en 1440p de alta calidad y equipos compactos SFF",
       "especificaciones": {
-        "VRAM": "8GB GDDR6",
-        "Velocidad": "2535 MHz",
-        "AnchoBus": "128-bit",
-        "TDP": "160W"
+        "VRAM": "12 GB GDDR7",
+        "Velocidad": "2600 MHz",
+        "AnchoBus": "192 bits",
+        "TDP": "250 W"
       },
-      "precio": 299.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 635.99,
+      "enlaceAmazon": "https://amzn.to/4fUa8b8",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "intel-arc-a770",
-      "nombre": "Intel Arc A770",
-      "descripcion": "Nueva generación de tarjetas gráficas discretas de Intel",
+      "slug": "gigabyte-radeon-rx-9070-xt-gaming-oc-16g",
+      "nombre": "GIGABYTE Radeon RX 9070 XT Gaming OC 16G",
+      "descripcion": "Radeon RX 9070 XT con 16GB GDDR6 y refrigeración WINDFORCE, diseñada para gaming exigente en 1440p y 4K",
       "especificaciones": {
-        "VRAM": "8GB GDDR6",
-        "Velocidad": "2400 MHz",
-        "AnchoBus": "128-bit",
-        "TDP": "225W"
+        "VRAM": "16 GB GDDR6",
+        "Velocidad": "3060 MHz",
+        "AnchoBus": "256 bits",
+        "TDP": "304 W"
       },
-      "precio": 329.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 699.99,
+      "enlaceAmazon": "https://amzn.to/3RY1ZbH",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "procesadores": [
     {
       "id": 1,
-      "slug": "intel-core-i9-13900k",
-      "nombre": "Intel Core i9-13900K",
-      "descripcion": "Procesador tope de gama para gaming y streaming simultáneo",
+      "slug": "amd-ryzen-5-9600x",
+      "nombre": "AMD Ryzen 5 9600X",
+      "descripcion": "Procesador de 6 núcleos y 12 hilos basado en Zen 5, ideal para gaming de alto rendimiento y productividad",
       "especificaciones": {
-        "Núcleos": "24 (8P+16E)",
-        "Hilos": "32",
-        "Velocidad Base": "3.0 GHz",
-        "Velocidad Turbo": "5.8 GHz",
-        "TDP": "125W"
+        "Núcleos": "6",
+        "Hilos": "12",
+        "Velocidad Base": "3.9 GHz",
+        "Velocidad Turbo": "5.4 GHz",
+        "TDP": "65 W"
       },
-      "precio": 589.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 179,
+      "enlaceAmazon": "https://amzn.to/4uEUKUA",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "amd-ryzen-9-7950x",
-      "nombre": "AMD Ryzen 9 7950X",
-      "descripcion": "Powerhouse de 16 núcleos para gaming y productividad",
+      "slug": "intel-core-i5-12600",
+      "nombre": "Intel Core i5-12600",
+      "descripcion": "Procesador Intel de 12ª generación con 6 núcleos y 12 hilos, ideal para gaming y productividad diaria",
       "especificaciones": {
-        "Núcleos": "16",
-        "Hilos": "32",
-        "Velocidad Base": "4.5 GHz",
-        "Velocidad Turbo": "5.7 GHz",
-        "TDP": "105W"
+        "Núcleos": "6",
+        "Hilos": "12",
+        "Velocidad Base": "3.3 GHz",
+        "Velocidad Turbo": "4.8 GHz",
+        "TDP": "65 W"
       },
-      "precio": 549.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 315,
+      "enlaceAmazon": "https://amzn.to/4fUakam",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "intel-core-i7-13700k",
-      "nombre": "Intel Core i7-13700K",
-      "descripcion": "Excelente balance entre rendimiento y precio",
+      "slug": "amd-ryzen-5-5500",
+      "nombre": "AMD Ryzen 5 5500",
+      "descripcion": "Procesador de 6 núcleos y 12 hilos para gaming y productividad, con excelente relación rendimiento-precio",
       "especificaciones": {
-        "Núcleos": "16 (8P+8E)",
-        "Hilos": "24",
-        "Velocidad Base": "3.4 GHz",
-        "Velocidad Turbo": "5.4 GHz",
-        "TDP": "125W"
+        "Núcleos": "6",
+        "Hilos": "12",
+        "Velocidad Base": "3.6 GHz",
+        "Velocidad Turbo": "4.2 GHz",
+        "TDP": "65 W"
       },
-      "precio": 419.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 84,
+      "enlaceAmazon": "https://amzn.to/3PEAiEi",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "amd-ryzen-7-7700x",
-      "nombre": "AMD Ryzen 7 7700X",
-      "descripcion": "Rendimiento 1080p y 1440p excepcional",
+      "slug": "amd-ryzen-7-5800xt",
+      "nombre": "AMD Ryzen 7 5800XT",
+      "descripcion": "Procesador de 8 núcleos y 16 hilos basado en Zen 3, ideal para gaming avanzado y multitarea exigente",
       "especificaciones": {
         "Núcleos": "8",
         "Hilos": "16",
-        "Velocidad Base": "4.5 GHz",
-        "Velocidad Turbo": "5.4 GHz",
-        "TDP": "105W"
+        "Velocidad Base": "3.8 GHz",
+        "Velocidad Turbo": "4.8 GHz",
+        "TDP": "105 W"
       },
-      "precio": 299.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 227.45,
+      "enlaceAmazon": "https://amzn.to/435HhJx",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "intel-core-i5-13600k",
-      "nombre": "Intel Core i5-13600K",
-      "descripcion": "Opción popular para gamers presupuestarios",
-      "especificaciones": {
-        "Núcleos": "14 (6P+8E)",
-        "Hilos": "20",
-        "Velocidad Base": "3.5 GHz",
-        "Velocidad Turbo": "5.1 GHz",
-        "TDP": "125W"
-      },
-      "precio": 289.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
-    },
-    {
-      "id": 6,
       "slug": "amd-ryzen-5-7600x",
       "nombre": "AMD Ryzen 5 7600X",
-      "descripcion": "Procesador de 6 núcleos para gaming 1080p",
+      "descripcion": "Procesador de 6 núcleos y 12 hilos basado en Zen 4, ideal para gaming de alto rendimiento y productividad moderna",
       "especificaciones": {
         "Núcleos": "6",
         "Hilos": "12",
         "Velocidad Base": "4.7 GHz",
         "Velocidad Turbo": "5.3 GHz",
-        "TDP": "105W"
+        "TDP": "105 W"
       },
-      "precio": 229.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 167,
+      "enlaceAmazon": "https://amzn.to/4anaiEh",
+      "imagenUrl": "/placeholder-product.svg"
+    },
+    {
+      "id": 6,
+      "slug": "amd-ryzen-7-7700x",
+      "nombre": "AMD Ryzen 7 7700X",
+      "descripcion": "Procesador de 8 núcleos y 16 hilos basado en Zen 4, diseñado para gaming de alto rendimiento y multitarea avanzada",
+      "especificaciones": {
+        "Núcleos": "8",
+        "Hilos": "16",
+        "Velocidad Base": "4.5 GHz",
+        "Velocidad Turbo": "5.4 GHz",
+        "TDP": "105 W"
+      },
+      "precio": 234,
+      "enlaceAmazon": "https://amzn.to/4uMp4wJ",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "intel-core-i5-13400",
-      "nombre": "Intel Core i5-13400",
-      "descripcion": "Opción económica sin OC para PC gaming",
+      "slug": "amd-ryzen-7-5800x",
+      "nombre": "AMD Ryzen 7 5800X",
+      "descripcion": "Procesador de 8 núcleos y 16 hilos basado en Zen 3, ideal para gaming avanzado y productividad exigente",
       "especificaciones": {
-        "Núcleos": "10 (6P+4E)",
+        "Núcleos": "8",
         "Hilos": "16",
-        "Velocidad Base": "2.5 GHz",
-        "Velocidad Turbo": "4.6 GHz",
-        "TDP": "65W"
+        "Velocidad Base": "3.8 GHz",
+        "Velocidad Turbo": "4.7 GHz",
+        "TDP": "105 W"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 218.98,
+      "enlaceAmazon": "https://amzn.to/4dYSAIv",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "memoria-ram": [
     {
       "id": 1,
-      "slug": "corsair-dominator-platinum-rgb-32gb-6000mhz",
-      "nombre": "Corsair Dominator Platinum RGB 32GB 6000MHz",
-      "descripcion": "RAM de alto rendimiento con RGB sincronizable",
+      "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+      "nombre": "CORSAIR Vengeance RGB RS DDR5 16GB (2x8GB) 6000MHz CL36",
+      "descripcion": "Memoria DDR5 con iluminación RGB dinámica, compatible con AMD EXPO e Intel XMP para overclocking sencillo y regulación de voltaje integrada",
       "especificaciones": {
-        "Capacidad": "32GB (2x16GB)",
+        "Capacidad": "16GB (2x8GB)",
+        "Tipo": "DDR5",
         "Velocidad": "6000MHz",
-        "Latencia": "CAS 30",
-        "Voltaje": "1.4V",
-        "Tipo": "DDR5"
+        "Latencia": "CL36-44-44-96",
+        "Voltaje": "1.35V",
+        "Compatibilidad": "AMD EXPO / Intel XMP",
+        "Color": "Gray",
+        "Modelo": "CMG16GX5M2E6000Z36"
       },
-      "precio": 349.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 249.99,
+      "enlaceAmazon": "https://amzn.to/43ONmu1",
+      "imagenUrl": "/CORSAIR Vengeance RGB RS DDR5 RAM 16GB (2x8GB) Up to 6000MHz CL36-44-44-96 1.35V AMD EXPO Intel XMP Computer Desktop Memoria RAM_files"
     },
     {
       "id": 2,
-      "slug": "gskill-flare-x5-32gb-5600mhz",
-      "nombre": "G.Skill Flare X5 32GB 5600MHz",
-      "descripcion": "Memoria optimizada para Ryzen 7000",
+      "slug": "gigastone-game-pro-32gb-3200mhz",
+      "nombre": "Gigastone Game PRO 32GB (2x16GB) DDR4 3200MHz CL16",
+      "descripcion": "Memoria DDR4 de alta capacidad para gaming y multitarea, con perfil bajo y compatibilidad universal con placas Intel y AMD",
       "especificaciones": {
         "Capacidad": "32GB (2x16GB)",
-        "Velocidad": "5600MHz",
-        "Latencia": "CAS 30",
-        "Voltaje": "1.25V",
-        "Tipo": "DDR5"
+        "Tipo": "DDR4",
+        "Velocidad": "3200MHz",
+        "Latencia": "CL16",
+        "Voltaje": "1.35V",
+        "Compatibilidad": "Intel XMP",
+        "Color": "Black",
+        "Modelo": "Gigastone Game PRO"
       },
-      "precio": 299.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 228.89,
+      "enlaceAmazon": "https://amzn.to/43cHSsS",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "kingston-fury-beast-32gb-3600mhz",
-      "nombre": "Kingston FURY Beast 32GB 3600MHz",
-      "descripcion": "RAM DDR4 confiable y económica",
+      "slug": "oloy-white-owl-16gb-3200mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) White Owl 3200MHz CL16",
+      "descripcion": "Memoria DDR4 gaming con diseño White Owl, voltaje de 1.35V y compatibilidad con placas de escritorio 288-Pin para gaming diario",
       "especificaciones": {
-        "Capacidad": "32GB (2x16GB)",
-        "Velocidad": "3600MHz",
-        "Latencia": "CAS 17",
+        "Capacidad": "16GB (2x8GB)",
+        "Tipo": "DDR4",
+        "Velocidad": "3200MHz",
+        "Latencia": "CL16",
         "Voltaje": "1.35V",
-        "Tipo": "DDR4"
+        "Compatibilidad": "Intel XMP",
+        "Color": "White",
+        "Modelo": "MD4U0832161BHWDA"
       },
-      "precio": 99.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 124.99,
+      "enlaceAmazon": "https://amzn.to/4x53qFn",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "corsair-vengeance-32gb-3600mhz",
-      "nombre": "Corsair Vengeance 32GB 3600MHz",
-      "descripcion": "Clásico en RAM DDR4 para gaming",
+      "slug": "teamgroup-t-force-delta-rgb-16gb-3600mhz",
+      "nombre": "TEAMGROUP T-Force Delta RGB DDR4 16GB (2x8GB) 3600MHz CL18",
+      "descripcion": "Memoria DDR4 con iluminación RGB Delta y velocidad de 3600MHz, optimizada para gaming de alto rendimiento en plataformas Intel y AMD",
       "especificaciones": {
-        "Capacidad": "32GB (2x16GB)",
+        "Capacidad": "16GB (2x8GB)",
+        "Tipo": "DDR4",
         "Velocidad": "3600MHz",
-        "Latencia": "CAS 18",
+        "Latencia": "CL18",
         "Voltaje": "1.35V",
-        "Tipo": "DDR4"
+        "Compatibilidad": "Intel XMP",
+        "Color": "White",
+        "Modelo": "TF4D416G3600HC18JDC01"
       },
-      "precio": 89.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 169.99,
+      "enlaceAmazon": "https://amzn.to/4uSUHos",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "gskill-trident-z5-64gb-6000mhz",
-      "nombre": "G.Skill Trident Z5 64GB 6000MHz",
-      "descripcion": "Para creadores de contenido y gaming extremo",
+      "slug": "oloy-blade-rgb-16gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) Black Hairline Blade RGB 2666MHz CL19",
+      "descripcion": "Memoria DDR4 con diseño Blade RGB y perfil de baja latencia, ideal para builds gaming compactos con voltaje reducido de 1.2V",
       "especificaciones": {
-        "Capacidad": "64GB (2x32GB)",
-        "Velocidad": "6000MHz",
-        "Latencia": "CAS 30",
-        "Voltaje": "1.4V",
-        "Tipo": "DDR5"
+        "Capacidad": "16GB (2x8GB)",
+        "Tipo": "DDR4",
+        "Velocidad": "2666MHz",
+        "Latencia": "CL19",
+        "Voltaje": "1.2V",
+        "Compatibilidad": "Intel XMP",
+        "Color": "Black",
+        "Modelo": "MD4U0826190BRKDA"
       },
-      "precio": 699.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 106.99,
+      "enlaceAmazon": "https://amzn.to/4xgdRpY",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "corsair-fury-beast-16gb-3200mhz",
-      "nombre": "Corsair FURY Beast 16GB 3200MHz",
-      "descripcion": "RAM presupuestaria para gaming casual",
+      "slug": "oloy-warhawk-rgb-32gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 32GB (2x16GB) Warhawk Aura Sync RGB 2666MHz CL19",
+      "descripcion": "Memoria DDR4 de alta capacidad con sincronización Aura Sync RGB y diseño Warhawk, pensada para builds gaming con mucha memoria y personalización visual",
       "especificaciones": {
-        "Capacidad": "16GB (2x8GB)",
-        "Velocidad": "3200MHz",
-        "Latencia": "CAS 16",
-        "Voltaje": "1.35V",
-        "Tipo": "DDR4"
+        "Capacidad": "32GB (2x16GB)",
+        "Tipo": "DDR4",
+        "Velocidad": "2666MHz",
+        "Latencia": "CL19",
+        "Voltaje": "1.2V",
+        "Compatibilidad": "Intel XMP / Aura Sync",
+        "Color": "Black",
+        "Modelo": "MD4U162619BEDA"
       },
-      "precio": 49.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 194.99,
+      "enlaceAmazon": "https://amzn.to/4x53tkx",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "kingston-fury-beast-32gb-5600mhz-ddr5",
-      "nombre": "Kingston Fury Beast 32GB 5600MHz DDR5",
-      "descripcion": "Rendimiento DDR5 a precio competitivo",
+      "slug": "oloy-black-owl-16gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) Black Owl 2666MHz CL19",
+      "descripcion": "Memoria DDR4 con diseño Black Owl sin RGB, de bajo voltaje 1.2V y perfil compacto, ideal para builds gaming económicos y discretos",
       "especificaciones": {
-        "Capacidad": "32GB (2x16GB)",
-        "Velocidad": "5600MHz",
-        "Latencia": "CAS 28",
-        "Voltaje": "1.25V",
-        "Tipo": "DDR5"
+        "Capacidad": "16GB (2x8GB)",
+        "Tipo": "DDR4",
+        "Velocidad": "2666MHz",
+        "Latencia": "CL19",
+        "Voltaje": "1.2V",
+        "Compatibilidad": "Intel XMP",
+        "Color": "Black",
+        "Modelo": "MD4U082619BJDA"
       },
-      "precio": 259.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4dQYBIo",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
