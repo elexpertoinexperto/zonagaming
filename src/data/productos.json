@@ -28,7 +28,7 @@
       },
       "precio": 354.99,
       "enlaceAmazon": "https://amzn.to/4ufHRzn",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/35710ce7-7a2b-42ab-aa48-63c448e6c047/w800"
     },
     {
       "id": 3,
@@ -73,7 +73,7 @@
       },
       "precio": 571.3,
       "enlaceAmazon": "https://amzn.to/4u8hP0K",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/d9408583-9a6f-4a2b-b721-c09f1fe8cf99/w800"
     },
     {
       "id": 6,
@@ -238,7 +238,7 @@
       },
       "precio": 249.99,
       "enlaceAmazon": "https://amzn.to/43ONmu1",
-      "imagenUrl": "/CORSAIR Vengeance RGB RS DDR5 RAM 16GB (2x8GB) Up to 6000MHz CL36-44-44-96 1.35V AMD EXPO Intel XMP Computer Desktop Memoria RAM_files"
+      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-amd-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-32GB-GRAY_01.webp"
     },
     {
       "id": 2,
@@ -358,912 +358,912 @@
   "ssd": [
     {
       "id": 1,
-      "slug": "samsung-990-pro-4tb",
-      "nombre": "Samsung 990 Pro 4TB",
-      "descripcion": "SSD NVMe PCIe 4.0 de máximo rendimiento",
+      "slug": "six-nvme-m2-512gb-pcie4",
+      "nombre": "SIX NVMe M.2 SSD PCIe 4.0 512GB con Disipador",
+      "descripcion": "SSD NVMe PCIe Gen4 x4 de 512GB con disipador incluido, hasta 7100 MB/s de lectura, compatible con PS5, portátiles y PC de escritorio",
       "especificaciones": {
-        "Capacidad": "4TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "7450 MB/s",
-        "Velocidad Escritura": "6900 MB/s",
+        "Capacidad": "512 GB",
+        "Interfaz": "PCIe Gen4 x4 NVMe",
+        "Velocidad Lectura": "7100 MB/s",
+        "Velocidad Escritura": "N/D",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 329.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4o6FNIm",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "wd-black-sn850x-2tb",
-      "nombre": "WD Black SN850X 2TB",
-      "descripcion": "SSD gaming de Western Digital con tecnología patentada",
+      "slug": "kingston-nv3-1tb-pcie4",
+      "nombre": "Kingston NV3 1TB M.2 2280 NVMe PCIe Gen4",
+      "descripcion": "SSD NVMe Kingston NV3 de 1TB con PCIe Gen4 x4, hasta 6000 MB/s de lectura secuencial para almacenamiento rápido en PC y portátiles",
       "especificaciones": {
-        "Capacidad": "2TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "7100 MB/s",
-        "Velocidad Escritura": "6000 MB/s",
+        "Capacidad": "1 TB",
+        "Interfaz": "PCIe Gen4 x4 NVMe",
+        "Velocidad Lectura": "6000 MB/s",
+        "Velocidad Escritura": "N/D",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 189.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 163.9,
+      "enlaceAmazon": "https://amzn.to/4uRL2yn",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "crucial-p5-plus-1tb",
-      "nombre": "Crucial P5 Plus 1TB",
-      "descripcion": "SSD económico con buen rendimiento PCIe 4.0",
+      "slug": "samsung-990-pro-2tb-pcie4",
+      "nombre": "Samsung 990 PRO SSD 2TB NVMe M.2 PCIe Gen4",
+      "descripcion": "SSD Samsung 990 PRO de 2TB con PCIe Gen4, hasta 7450 MB/s de lectura, ideal para gaming avanzado y workstations de alta exigencia",
       "especificaciones": {
-        "Capacidad": "1TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "6600 MB/s",
-        "Velocidad Escritura": "5000 MB/s",
+        "Capacidad": "2 TB",
+        "Interfaz": "PCIe Gen4 NVMe",
+        "Velocidad Lectura": "7450 MB/s",
+        "Velocidad Escritura": "6900 MB/s",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 89.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 389.99,
+      "enlaceAmazon": "https://amzn.to/4o6tr2Z",
+      "imagenUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/mz-v9p2t0b-am/gallery/us-990pro-nvme-m2-ssd-mz-v9p2t0b-am-551141316"
     },
     {
       "id": 4,
-      "slug": "kingston-a3000-2tb",
-      "nombre": "Kingston A3000 2TB",
-      "descripcion": "SSD NVMe PCIe 3.0 confiable",
+      "slug": "fikwot-fn960-512gb-pcie4",
+      "nombre": "Fikwot FN960 512GB M.2 NVMe PCIe Gen4 con Disipador",
+      "descripcion": "SSD NVMe PCIe Gen4 x4 de 512GB con disipador, hasta 4800 MB/s de lectura, Dynamic SLC Cache y compatibilidad con PS5",
       "especificaciones": {
-        "Capacidad": "2TB",
-        "Interfaz": "NVMe PCIe 3.0",
-        "Velocidad Lectura": "3000 MB/s",
-        "Velocidad Escritura": "2000 MB/s",
+        "Capacidad": "512 GB",
+        "Interfaz": "PCIe Gen4 x4 NVMe",
+        "Velocidad Lectura": "4800 MB/s",
+        "Velocidad Escritura": "N/D",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 119.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4fZHiWO",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "seagate-firecuda-530-4tb",
-      "nombre": "Seagate FireCuda 530 4TB",
-      "descripcion": "Almacenamiento masivo para gaming y streaming",
+      "slug": "kootion-512gb-pcie3-nvme",
+      "nombre": "KOOTION 512GB PCIe 3.0 M.2 NVMe SSD",
+      "descripcion": "SSD NVMe PCIe Gen3 x4 de 512GB con hasta 3500 MB/s de lectura, bajo consumo térmico para PC y portátiles económicos",
       "especificaciones": {
-        "Capacidad": "4TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "7100 MB/s",
-        "Velocidad Escritura": "6000 MB/s",
+        "Capacidad": "512 GB",
+        "Interfaz": "PCIe Gen3 x4 NVMe",
+        "Velocidad Lectura": "3500 MB/s",
+        "Velocidad Escritura": "N/D",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 279.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 87.37,
+      "enlaceAmazon": "https://amzn.to/3RKHCyR",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "corsair-mp600-elite-1tb",
-      "nombre": "Corsair MP600 ELITE 1TB",
-      "descripcion": "SSD presupuestario con garantía de calidad",
+      "slug": "wd-black-sn7100-2tb-pcie4",
+      "nombre": "WD_Black SN7100 2TB NVMe SSD Gen4 PCIe",
+      "descripcion": "SSD WD Black SN7100 de 2TB con PCIe Gen4, hasta 7250 MB/s lectura y 6900 MB/s escritura, TLC 3D NAND de nueva generación para gaming y portátiles",
       "especificaciones": {
-        "Capacidad": "1TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "4950 MB/s",
-        "Velocidad Escritura": "3950 MB/s",
+        "Capacidad": "2 TB",
+        "Interfaz": "PCIe Gen4 NVMe",
+        "Velocidad Lectura": "7250 MB/s",
+        "Velocidad Escritura": "6900 MB/s",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 74.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 299.95,
+      "enlaceAmazon": "https://amzn.to/3RR3SHh",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "sabrent-rocket-4-plus-2tb",
-      "nombre": "Sabrent Rocket 4 Plus 2TB",
-      "descripcion": "SSD PCIe 4.0 con relación precio-rendimiento",
+      "slug": "fanxiang-s501q-512gb-pcie3",
+      "nombre": "fanxiang S501Q SSD 512GB PCIe 3.0 x4 NVMe",
+      "descripcion": "SSD NVMe PCIe Gen3 x4 de 512GB con SLC Cache y 3D NAND, hasta 3000 MB/s de lectura, opción económica para portátiles y PC de escritorio",
       "especificaciones": {
-        "Capacidad": "2TB",
-        "Interfaz": "NVMe PCIe 4.0",
-        "Velocidad Lectura": "7000 MB/s",
-        "Velocidad Escritura": "6500 MB/s",
+        "Capacidad": "512 GB",
+        "Interfaz": "PCIe Gen3 x4 NVMe",
+        "Velocidad Lectura": "3000 MB/s",
+        "Velocidad Escritura": "N/D",
         "Factor Forma": "M.2 2280"
       },
-      "precio": 169.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 85.99,
+      "enlaceAmazon": "https://amzn.to/4e2Vg7X",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "fuentes-de-poder": [
     {
       "id": 1,
-      "slug": "corsair-rm1000x-1000w-gold",
-      "nombre": "Corsair RM1000x 1000W Gold",
-      "descripcion": "Fuente modular 1000W certificada 80+ Gold",
+      "slug": "psu-1000w-gold-atx31-modular-black",
+      "nombre": "Fuente 1000W 80+ Gold Totalmente Modular ATX 3.1 Black",
+      "descripcion": "Fuente 1000W totalmente modular con 80+ Gold, ATX 3.1 y PCIe 5.1, ventilador de 140mm silencioso, capacitores japoneses a 105°C y conector 12V-2x6",
       "especificaciones": {
-        "Potencia": "1000W",
+        "Potencia": "1000 W",
         "Certificación": "80+ Gold",
+        "Estándar": "ATX 3.1 / PCIe 5.1",
         "Modular": "Totalmente Modular",
-        "Garantía": "10 años",
-        "Ventilador": "135mm FDB"
+        "Ventilador": "140mm"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/43kKiFR",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "evga-supernova-850-g5-850w",
-      "nombre": "EVGA SuperNOVA 850 G5 850W",
-      "descripcion": "Fuente 850W Gold con protecciones avanzadas",
+      "slug": "psu-1000w-gold-rgb-atx31-modular",
+      "nombre": "Fuente 1000W 80+ Gold Modular RGB Smart Fan ATX 3.1",
+      "descripcion": "Fuente 1000W totalmente modular con 80+ Gold, ATX 3.1 & PCIe 5.1, cable 12V-2x6 Dual-Color nativo, ventilador inteligente RGB y capacitores a 105°C",
       "especificaciones": {
-        "Potencia": "850W",
+        "Potencia": "1000 W",
         "Certificación": "80+ Gold",
+        "Estándar": "ATX 3.1 / PCIe 5.1",
         "Modular": "Totalmente Modular",
-        "Garantía": "10 años",
-        "Ventilador": "140mm"
+        "Ventilador": "RGB Smart Fan"
       },
-      "precio": 149.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/3SmBuwJ",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "msi-mpg-a850gf-850w-gold",
-      "nombre": "MSI MPG A850GF 850W Gold",
-      "descripcion": "Fuente gaming modular con RGB",
+      "slug": "corsair-rm750e-750w-atx31",
+      "nombre": "CORSAIR RM750e 750W ATX 3.1 PCIe 5.1 Totalmente Modular",
+      "descripcion": "Fuente Corsair RM750e de 750W totalmente modular con eficiencia Cybenetics Gold, ATX 3.1 & PCIe 5.1, modo Modern Standby y capacitores a 105°C",
       "especificaciones": {
-        "Potencia": "850W",
-        "Certificación": "80+ Gold",
+        "Potencia": "750 W",
+        "Certificación": "Cybenetics Gold",
+        "Estándar": "ATX 3.1 / PCIe 5.1",
         "Modular": "Totalmente Modular",
-        "Garantía": "10 años",
-        "Ventilador": "140mm FDB"
+        "Ventilador": "N/D"
       },
-      "precio": 129.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4ucnyml",
+      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/v1680126575/products/Power-Supply-Units/base-rme-series-2023-psu-config/Gallery/750W/RM750e_01.webp"
     },
     {
       "id": 4,
-      "slug": "seasonic-focus-gx-750-750w",
-      "nombre": "Seasonic Focus GX-750 750W",
-      "descripcion": "Fuente de confianza para builds gaming",
+      "slug": "golden-field-850w-gold-atx31",
+      "nombre": "GOLDEN FIELD 850W 80+ Gold Totalmente Modular ATX 3.1",
+      "descripcion": "Fuente gaming 850W totalmente modular con 80+ Gold, ATX 3.1 & PCIe 5.1, cable 12V-2x6 nativo de 600W y capacitores japoneses de alta calidad",
       "especificaciones": {
-        "Potencia": "750W",
+        "Potencia": "850 W",
         "Certificación": "80+ Gold",
+        "Estándar": "ATX 3.1 / PCIe 5.1",
         "Modular": "Totalmente Modular",
-        "Garantía": "12 años",
-        "Ventilador": "135mm FDB"
+        "Ventilador": "N/D"
       },
-      "precio": 119.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4o9nkep",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "thermaltake-smart-750w",
-      "nombre": "Thermaltake Smart 750W",
-      "descripcion": "Fuente presupuestaria con buena potencia",
+      "slug": "vetroo-850w-gold-modular-white",
+      "nombre": "Vetroo 850W 80+ Gold Totalmente Modular White PCIe 5.1",
+      "descripcion": "Fuente 850W totalmente modular blanca con 80+ Gold, ATX 3.1 & PCIe 5.1, ventilador FDB silencioso de 120mm y garantía de 10 años",
       "especificaciones": {
-        "Potencia": "750W",
-        "Certificación": "80+ Bronze",
-        "Modular": "Semi Modular",
-        "Garantía": "5 años",
-        "Ventilador": "120mm"
+        "Potencia": "850 W",
+        "Certificación": "80+ Gold",
+        "Estándar": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Totalmente Modular",
+        "Ventilador": "120mm FDB"
       },
       "precio": 79.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "enlaceAmazon": "https://amzn.to/4vt3ey7",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "corsair-cv650-650w",
-      "nombre": "Corsair CV650 650W",
-      "descripcion": "Fuente económica entrada nivel",
+      "slug": "asrock-pro-650g-650w-gold",
+      "nombre": "ASRock PRO-650G 650W 80+ Gold ATX 3.1",
+      "descripcion": "Fuente ASRock PRO-650G de 650W con 80+ Gold, ATX 3.1, ventilador silencioso de 120mm, protección completa de circuito y 3 años de garantía",
       "especificaciones": {
-        "Potencia": "650W",
-        "Certificación": "80+ Bronze",
+        "Potencia": "650 W",
+        "Certificación": "80+ Gold",
+        "Estándar": "ATX 3.1",
         "Modular": "No Modular",
-        "Garantía": "3 años",
         "Ventilador": "120mm"
       },
-      "precio": 59.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4ac6DJs",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "cooler-master-v1000-gold-1000w",
-      "nombre": "Cooler Master V1000 Gold 1000W",
-      "descripcion": "Fuente 1000W para builds extremos",
+      "slug": "asrock-pro-850g-850w-gold-atx31",
+      "nombre": "ASRock PRO 850G 850W 80+ Gold ATX 3.1 PCIe 5.1",
+      "descripcion": "Fuente ASRock PRO 850G de 850W con 80+ Gold, ATX 3.1 & PCIe 5.1, conector 12V-2x6 nativo, ventilador de 120mm de bajo ruido y 3 años de garantía",
       "especificaciones": {
-        "Potencia": "1000W",
+        "Potencia": "850 W",
         "Certificación": "80+ Gold",
-        "Modular": "Totalmente Modular",
-        "Garantía": "10 años",
-        "Ventilador": "140mm"
+        "Estándar": "ATX 3.1 / PCIe 5.1",
+        "Modular": "No Modular",
+        "Ventilador": "120mm"
       },
-      "precio": 179.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 64.99,
+      "enlaceAmazon": "https://amzn.to/4vyUQ0g",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "refrigeracion-liquida": [
     {
       "id": 1,
-      "slug": "nzxt-kraken-x73-rgb",
-      "nombre": "NZXT Kraken X73 RGB",
-      "descripcion": "Refrigeración líquida All-in-One 360mm premium",
+      "slug": "arctic-liquid-freezer-iii-pro-360-argb-black",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 A-RGB Black",
+      "descripcion": "AIO de 360mm negro con 3 ventiladores PWM A-RGB, radiador de 38mm, bomba PWM y ventilador VRM integrado, compatible con AM5/AM4 e Intel LGA1851/1700",
       "especificaciones": {
-        "Radiador": "360mm",
-        "Bombín": "RGB LED",
-        "Ventiladores": "3x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~35 dB"
+        "Radiador": "360mm (38mm grosor)",
+        "Ventiladores": "3x120mm PWM A-RGB",
+        "Bomba": "PWM",
+        "RGB": "A-RGB",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 92.99,
+      "enlaceAmazon": "https://amzn.to/4vyWVt6",
+      "imagenUrl": "https://www.arctic.de/media/2c/5d/f0/1741775358/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g00.png"
     },
     {
       "id": 2,
-      "slug": "corsair-icue-link-h150i-elite",
-      "nombre": "Corsair iCUE Link H150i Elite",
-      "descripcion": "Sistema líquido All-in-One con tecnología iCUE",
+      "slug": "arctic-liquid-freezer-iii-pro-360-argb-white",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 A-RGB White",
+      "descripcion": "AIO de 360mm blanco con 3 ventiladores PWM A-RGB, radiador de 38mm, bomba PWM y ventilador VRM integrado, compatible con AM5/AM4 e Intel LGA1851/1700",
       "especificaciones": {
-        "Radiador": "360mm",
-        "Bombín": "RGB LED",
-        "Ventiladores": "3x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~32 dB"
+        "Radiador": "360mm (38mm grosor)",
+        "Ventiladores": "3x120mm PWM A-RGB",
+        "Bomba": "PWM",
+        "RGB": "A-RGB",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 229.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 96.99,
+      "enlaceAmazon": "https://amzn.to/4v1YgbR",
+      "imagenUrl": "https://www.arctic.de/media/d8/01/85/1741775469/Liquid_Freezer_III_360_White_ARGB_Rainbow_g00.png"
     },
     {
       "id": 3,
-      "slug": "lian-li-galahad-aio-240",
-      "nombre": "Lian Li Galahad AIO 240",
-      "descripcion": "Refrigeración 240mm compacta y silenciosa",
+      "slug": "arctic-liquid-freezer-iii-pro-360-black",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 Black (Sin RGB)",
+      "descripcion": "AIO de 360mm sin RGB con 3 ventiladores PWM, radiador de 38mm y bomba PWM con ventilador VRM integrado, máximo rendimiento térmico con bajo ruido",
       "especificaciones": {
-        "Radiador": "240mm",
-        "Bombín": "RGB LED",
-        "Ventiladores": "2x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~30 dB"
+        "Radiador": "360mm (38mm grosor)",
+        "Ventiladores": "3x120mm PWM",
+        "Bomba": "PWM",
+        "RGB": "Sin RGB",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 139.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 83.99,
+      "enlaceAmazon": "https://amzn.to/4dMyJgI",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "be-quiet-dark-rock-liquid",
-      "nombre": "Be Quiet! Dark Rock Liquid",
-      "descripcion": "AIO 360mm con enfoque en silencio",
+      "slug": "corsair-nautilus-360-rs-argb",
+      "nombre": "CORSAIR Nautilus 360 RS ARGB Liquid CPU Cooler",
+      "descripcion": "AIO Corsair 360mm con 3 ventiladores RS120 ARGB, conexión directa a placa base, daisy-chain, bajo ruido y compatible con Intel LGA1851/1700 y AMD AM5/AM4",
       "especificaciones": {
         "Radiador": "360mm",
-        "Bombín": "Sin RGB",
-        "Ventiladores": "3x 120mm",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~20 dB"
+        "Ventiladores": "3x RS120 ARGB",
+        "Bomba": "ARGB",
+        "RGB": "ARGB",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 149.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 129.99,
+      "enlaceAmazon": "https://amzn.to/4e5l57h",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "ek-aio-360d5",
-      "nombre": "EK AIO 360D5",
-      "descripcion": "Sistema líquido personalizable de EK Water Blocks",
+      "slug": "minorsonic-aio-360mm-argb",
+      "nombre": "Minorsonic AIO CPU Cooler 360mm ARGB 3 Fases",
+      "descripcion": "AIO 360mm con motor de 3 fases, bomba de rodamiento cerámico de alta velocidad, 3 ventiladores PWM ARGB y excelente rendimiento térmico de bajo ruido",
       "especificaciones": {
         "Radiador": "360mm",
-        "Bombín": "RGB LED",
-        "Ventiladores": "3x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~35 dB"
+        "Ventiladores": "3x120mm PWM ARGB",
+        "Bomba": "Rodamiento Cerámico",
+        "RGB": "ARGB",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 289.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 52.99,
+      "enlaceAmazon": "https://amzn.to/4e8ymvW",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "thermaltake-liquid-freezer-ii-240",
-      "nombre": "Thermaltake Liquid Freezer II 240",
-      "descripcion": "AIO 240mm económico y confiable",
+      "slug": "antec-skeleton-360-argb",
+      "nombre": "Antec Skeleton 360 ARGB Liquid CPU Cooler",
+      "descripcion": "AIO 360mm con base de cobre, bomba de alto rendimiento y 3 ventiladores PWM ARGB de 120mm, compatible con AMD AM4/AM5 e Intel hasta LGA2011",
       "especificaciones": {
-        "Radiador": "240mm",
-        "Bombín": "RGB LED",
-        "Ventiladores": "2x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~32 dB"
+        "Radiador": "360mm",
+        "Ventiladores": "3x120mm PWM ARGB",
+        "Bomba": "Alto Rendimiento",
+        "RGB": "ARGB",
+        "Compatibilidad": "AM4/AM5 / LGA115X-1700"
       },
-      "precio": 89.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/3RLqJnG",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "asus-rog-strix-lc-360-rgb",
-      "nombre": "ASUS ROG Strix LC 360 RGB",
-      "descripcion": "Premium AIO con integración ROG",
+      "slug": "thermalright-aqua-elite-240-v3",
+      "nombre": "Thermalright Aqua Elite 240 V3 AIO 240mm ARGB",
+      "descripcion": "AIO de 240mm con 2 ventiladores PWM ARGB S-FDB, bomba PWM eficiente y radiador compacto, compatible con AMD AM4/AM5 e Intel hasta LGA1851",
       "especificaciones": {
-        "Radiador": "360mm",
-        "Bombín": "RGB LED Addressable",
-        "Ventiladores": "3x 120mm RGB",
-        "Compatibilidad": "Intel y AMD",
-        "Ruido": "~34 dB"
+        "Radiador": "240mm",
+        "Ventiladores": "2x120mm PWM ARGB",
+        "Bomba": "PWM S-FDB",
+        "RGB": "ARGB",
+        "Compatibilidad": "AM4/AM5 / LGA1150-1851"
       },
-      "precio": 249.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 44.9,
+      "enlaceAmazon": "https://amzn.to/4dMyORy",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "refrigeracion-normal": [
     {
       "id": 1,
-      "slug": "noctua-nh-d15",
-      "nombre": "Noctua NH-D15",
-      "descripcion": "Disipador de aire premium de doble torre",
+      "slug": "thermalright-peerless-assassin-120-vision-max-white",
+      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB White",
+      "descripcion": "Disipador dual tower blanco con pantalla IPS 5\" y 2 ventiladores ARGB a 2150 RPM, soporte AM4/AM5 e Intel LGA1851/1700 con alto rendimiento",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Doble",
-        "Ventiladores": "2x 140mm",
-        "Altura": "165mm",
-        "Ruido": "~24 dB"
+        "Torres": "Doble",
+        "Ventiladores": "2x120mm ARGB 2150 RPM",
+        "Extra": "Pantalla IPS 5\"",
+        "Compatibilidad": "AM4/AM5 / LGA1851/1700"
       },
-      "precio": 99.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 57.69,
+      "enlaceAmazon": "https://amzn.to/4dQ6rSz",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "cooler-master-rr-212s-20pc-r1",
-      "nombre": "Cooler Master RR-212S-20PC-R1",
-      "descripcion": "Disipador asequible con buen rendimiento",
+      "slug": "thermalright-assassin-spirit-120-evo",
+      "nombre": "Thermalright Assassin Spirit 120 EVO CPU Cooler",
+      "descripcion": "Disipador compacto con 4 heatpipes de 6mm, ventilador PWM silencioso TL-S12-S, altura de 156mm y compatible con AM4/AM5 e Intel LGA1700",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Simple",
-        "Ventiladores": "1x 120mm",
-        "Altura": "159mm",
-        "Ruido": "~28 dB"
+        "Torres": "Simple",
+        "Ventiladores": "1x120mm PWM",
+        "Extra": "4 Heatpipes 6mm / 156mm",
+        "Compatibilidad": "AM4/AM5 / LGA1700"
       },
-      "precio": 34.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 22.9,
+      "enlaceAmazon": "https://amzn.to/4o6hIl2",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "be-quiet-dark-rock-pro-4",
-      "nombre": "be quiet! Dark Rock Pro 4",
-      "descripcion": "Torre silenciosa con tecnología Silent Wings",
+      "slug": "vetroo-v5-cpu-air-cooler-white-argb",
+      "nombre": "Vetroo V5 CPU Air Cooler 5 Heatpipes ARGB White",
+      "descripcion": "Disipador blanco con 5 heatpipes, ventilador FDB PWM ARGB de 120mm y RGB sincronizable, compatible con AM5/AM4 e Intel hasta LGA1851",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Doble",
-        "Ventiladores": "2x 135mm",
-        "Altura": "163mm",
-        "Ruido": "~22 dB"
+        "Torres": "Simple",
+        "Ventiladores": "1x120mm FDB PWM ARGB",
+        "Extra": "5 Heatpipes",
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
-      "precio": 89.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 25.99,
+      "enlaceAmazon": "https://amzn.to/4dQQ203",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "corsair-a70",
-      "nombre": "Corsair A70",
-      "descripcion": "Disipador gaming compacto",
+      "slug": "noctua-nh-d15-g2-hbc",
+      "nombre": "Noctua NH-D15 G2 HBC Dual Tower Premium",
+      "descripcion": "Disipador premium dual tower Noctua con versión HBC (High Base Convexity) optimizada para Intel LGA1700, referencia en rendimiento y silencio absoluto",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Simple",
-        "Ventiladores": "1x 120mm",
-        "Altura": "157mm",
-        "Ruido": "~30 dB"
+        "Torres": "Doble",
+        "Ventiladores": "2x140mm NF-A15",
+        "Extra": "Alta Convexidad LGA1700",
+        "Compatibilidad": "Intel LGA1700"
       },
-      "precio": 44.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 164.95,
+      "enlaceAmazon": "https://amzn.to/49KpDia",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
       "slug": "thermalright-peerless-assassin-120-se",
-      "nombre": "Thermalright Peerless Assassin 120 SE",
-      "descripcion": "Disipador de aire económico de alto rendimiento",
+      "nombre": "Thermalright Peerless Assassin 120 SE CPU Cooler",
+      "descripcion": "Disipador dual tower con 6 heatpipes AGHP, 2 ventiladores PWM a 1550 RPM y soporte AM4/AM5 e Intel hasta LGA1851, relación rendimiento-precio excepcional",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Doble",
-        "Ventiladores": "1x 120mm",
-        "Altura": "160mm",
-        "Ruido": "~26 dB"
+        "Torres": "Doble",
+        "Ventiladores": "2x120mm PWM 1550 RPM",
+        "Extra": "6 Heatpipes AGHP",
+        "Compatibilidad": "AM4/AM5 / LGA1700/1851"
       },
-      "precio": 39.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 34.9,
+      "enlaceAmazon": "https://amzn.to/4g1ZQFS",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "scythe-fuma-2",
-      "nombre": "Scythe Fuma 2",
-      "descripcion": "Disipador Japanese de bajo ruido",
+      "slug": "kf620-dgt-dual-argb-display",
+      "nombre": "KF620-DGT CPU Cooler Dual ARGB con Display Digital",
+      "descripcion": "Disipador dual tower negro con pantalla digital en la carcasa, 6 heatpipes, 2 ventiladores ARGB PWM, compatible con AM4/AM5 e Intel hasta LGA1851",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torre": "Doble",
-        "Ventiladores": "2x 120mm",
-        "Altura": "154mm",
-        "Ruido": "~23 dB"
+        "Torres": "Doble",
+        "Ventiladores": "2x120mm ARGB PWM",
+        "Extra": "Display Digital",
+        "Compatibilidad": "AM4/AM5 / LGA1700/1851"
       },
-      "precio": 59.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4of8GCy",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "arctic-liquid-freezer-ii-120",
-      "nombre": "Arctic Liquid Freezer II 120",
-      "descripcion": "Opción entrada AIO líquido",
+      "slug": "ix20-argb-dual-tower-white-265w",
+      "nombre": "IX20 ARGB Dual Tower CPU Cooler White 265W TDP",
+      "descripcion": "Disipador dual tower blanco con 6 heatpipes de cobre, 2 ventiladores ARGB de 120mm, 157mm de altura y 265W de TDP máximo, compatible con AM4/AM5 e Intel hasta LGA1851",
       "especificaciones": {
-        "Tipo": "Aire Premium",
-        "Torre": "Doble",
-        "Ventiladores": "2x 120mm",
-        "Altura": "162mm",
-        "Ruido": "~25 dB"
+        "Tipo": "Aire",
+        "Torres": "Doble",
+        "Ventiladores": "2x120mm ARGB",
+        "Extra": "265W TDP / 157mm altura",
+        "Compatibilidad": "AM4/AM5 / LGA115X-1851"
       },
-      "precio": 69.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 33.9,
+      "enlaceAmazon": "https://amzn.to/4fxCUOR",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "gabinetes-gamer": [
     {
       "id": 1,
-      "slug": "corsair-icue-5000t-rgb",
-      "nombre": "Corsair iCUE 5000T RGB",
-      "descripcion": "Gabinete premium con 3 paneles de vidrio templado",
+      "slug": "foifkin-f600-atx-7fans-argb-black",
+      "nombre": "FOIFKIN F600 ATX Mid-Tower 7 Fans ARGB Black",
+      "descripcion": "Gabinete ATX Mid-Tower negro con 270 grados de vidrio panorámico, 7 ventiladores PWM ARGB preinstalados y puerto Type-C frontal",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 6x 2.5",
-        "Panel": "Vidrio Templado 4mm",
-        "Radiador Max": "420mm",
-        "Ventiladores": "4x 120mm preinstalados"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "270° Vidrio Templado",
+        "Ventiladores": "7x PWM ARGB",
+        "Puerto Frontal": "USB 3.0 + Type-C",
+        "Color": "Negro"
       },
-      "precio": 249.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 69.99,
+      "enlaceAmazon": "https://amzn.to/49CU6Pc",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "nzxt-h7-flow",
-      "nombre": "NZXT H7 Flow",
-      "descripcion": "Gabinete elegante con flujo de aire optimizado",
+      "slug": "ruix-ov303-atx-4fans-argb-black",
+      "nombre": "RUIX OV303 ATX Mid-Tower 4 Fans Prism ARGB Black",
+      "descripcion": "Gabinete ATX Mid-Tower negro con 4 ventiladores Prism ARGB PWM de 120mm preinstalados, puertos USB 3.0 y Type-C, alto flujo de aire",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 6x 2.5",
-        "Panel": "Vidrio Templado 3mm",
-        "Radiador Max": "360mm",
-        "Ventiladores": "2x 120mm preinstalados"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "Vidrio Templado",
+        "Ventiladores": "4x120mm ARGB PWM",
+        "Puerto Frontal": "USB 3.0 + Type-C",
+        "Color": "Negro"
       },
-      "precio": 129.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 79.99,
+      "enlaceAmazon": "https://amzn.to/3RPC4TJ",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "lian-li-lancool-215",
-      "nombre": "Lian Li Lancool 215",
-      "descripcion": "Gabinete presupuestario con buen rendimiento",
+      "slug": "gamdias-atx-3fans-argb-white",
+      "nombre": "GAMDIAS ATX Mid-Tower 3 Fans ARGB White con App",
+      "descripcion": "Gabinete ATX blanco con vidrio templado, 3 ventiladores ARGB PWM de 120mm, soporte para GPU 410mm y AIO 360mm, con display y app de control",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 3x 2.5",
-        "Panel": "Vidrio Templado 3mm",
-        "Radiador Max": "240mm",
-        "Ventiladores": "1x 120mm preinstalado"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "Vidrio Templado",
+        "Ventiladores": "3x120mm ARGB PWM",
+        "Puerto Frontal": "USB 3.0",
+        "Color": "Blanco"
       },
-      "precio": 59.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 86.99,
+      "enlaceAmazon": "https://amzn.to/4vpHfIo",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "fractal-design-north",
-      "nombre": "Fractal Design North",
-      "descripcion": "Diseño nórdico minimalista",
+      "slug": "jonsbo-tk2-atx-hyperboloid-aluminum-black",
+      "nombre": "JONSBO TK-2 ATX Mid-Tower Hyperboloid Glass Aluminio",
+      "descripcion": "Gabinete premium ATX con vidrio hiperboloide, estructura separada, carcasa de aleación de aluminio, soporte BTF y fuente ATX, diseño minimalista de alto nivel",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 5x 2.5",
-        "Panel": "Acero",
-        "Radiador Max": "280mm",
-        "Ventiladores": "1x 120mm preinstalado"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "Vidrio Hiperboloide",
+        "Ventiladores": "Sin incluir",
+        "Puerto Frontal": "USB 3.0",
+        "Color": "Negro"
       },
-      "precio": 99.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 169,
+      "enlaceAmazon": "https://amzn.to/4ea3cUX",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "thermaltake-v250-mg-argb",
-      "nombre": "Thermaltake V250 MG ARGB",
-      "descripcion": "Gabinete gaming con luces RGB",
+      "slug": "corsair-4000d-rs-argb-modular-black",
+      "nombre": "CORSAIR 4000D RS ARGB Modular ATX Mid-Tower Black",
+      "descripcion": "Gabinete CORSAIR 4000D RS con 3 ventiladores RS ARGB, sistema InfiniRail modular y compatible con ASUS BTF, MSI Zero y Gigabyte Stealth para cableado oculto",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 4x 2.5",
+        "Formato": "ATX Mid-Tower",
         "Panel": "Vidrio Templado",
-        "Radiador Max": "280mm",
-        "Ventiladores": "1x 120mm preinstalado"
+        "Ventiladores": "3x RS ARGB",
+        "Puerto Frontal": "USB 3.0",
+        "Color": "Negro"
       },
-      "precio": 74.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4dVdQ1u",
+      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/frame-4000d/Content/FRAME-4000D-RS-ARGB/Gallery/CC-9011296-WW_01.webp"
     },
     {
       "id": 6,
-      "slug": "cougar-mx330-g",
-      "nombre": "Cougar MX330-G",
-      "descripcion": "Gabinete económico y confiable",
+      "slug": "gaming-case-h4-7fans-argb-black",
+      "nombre": "Gaming PC Case H4 7 Fans ARGB Dual Vidrio Templado Black",
+      "descripcion": "Gabinete ATX negro con doble vidrio templado vista completa, 7 ventiladores PWM ARGB preinstalados y Type-C frontal para builds gaming con maxima visibilidad",
       "especificaciones": {
-        "Tamaño": "Mid Tower",
-        "Bahías": "2x 3.5 + 4x 2.5",
-        "Panel": "Vidrio Templado",
-        "Radiador Max": "240mm",
-        "Ventiladores": "2x 120mm preinstalados"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "Dual Vidrio Templado",
+        "Ventiladores": "7x PWM ARGB",
+        "Puerto Frontal": "USB 3.0 + Type-C",
+        "Color": "Negro"
       },
-      "precio": 49.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4o8APLt",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "seasonic-syncm-692",
-      "nombre": "Seasonic Syncm 692",
-      "descripcion": "Gabinete ATX Full Tower",
+      "slug": "gaming-case-7fans-argb-white",
+      "nombre": "White PC Case ATX 7 Fans ARGB Dual Vidrio Templado",
+      "descripcion": "Gabinete ATX gaming blanco con doble vidrio templado vista completa, 7 ventiladores PWM ARGB preinstalados y Type-C frontal, diseño limpio y luminoso",
       "especificaciones": {
-        "Tamaño": "Full Tower",
-        "Bahías": "5x 3.5 + 7x 2.5",
-        "Panel": "Acero",
-        "Radiador Max": "480mm",
-        "Ventiladores": "3x 120mm preinstalados"
+        "Formato": "ATX Mid-Tower",
+        "Panel": "Dual Vidrio Templado",
+        "Ventiladores": "7x PWM ARGB",
+        "Puerto Frontal": "USB 3.0 + Type-C",
+        "Color": "Blanco"
       },
-      "precio": 139.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 79.99,
+      "enlaceAmazon": "https://amzn.to/49JizlT",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "teclados": [
     {
       "id": 1,
-      "slug": "corsair-k95-platinum-xt",
-      "nombre": "Corsair K95 Platinum XT",
-      "descripcion": "Teclado mecánico de gama alta con switches Cherry",
+      "slug": "redthunder-k10-combo-rgb-wired",
+      "nombre": "RedThunder K10 Combo Teclado + Mouse + Reposamuñecas RGB",
+      "descripcion": "Combo gaming 3 en 1 con teclado RGB anti-ghosting de sensación mecánica, mouse de 7200 DPI y reposamuñecas de cuero suave, todo por USB para PC gamer",
       "especificaciones": {
-        "Tipo": "Mecánico",
-        "Switches": "Cherry MX",
-        "Conexión": "USB 2.0",
-        "RGB": "Por Tecla",
-        "Teclas Macro": "6"
+        "Tipo": "Membrana / Sensación Mecánica",
+        "Conexión": "USB Cableado",
+        "Switches": "Táctil Anti-ghosting",
+        "Layout": "Full-Size",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 39.99,
+      "enlaceAmazon": "https://amzn.to/4uf6cVO",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "steelseries-apex-pro",
-      "nombre": "SteelSeries Apex Pro",
-      "descripcion": "Teclado mecánico con switches ajustables",
+      "slug": "redthunder-k75-wireless-75pct-hotswap",
+      "nombre": "RedThunder K75 Mecánico Inalámbrico 75% Hot-Swap RGB",
+      "descripcion": "Teclado mecánico 75% inalámbrico con hot-swap, switches lineales pre-lubricados, keycaps PBT grabadas lateralmente, RGB y triple modo Wireless/USB/BT5.0",
       "especificaciones": {
         "Tipo": "Mecánico",
-        "Switches": "OmniPoint Adjustable",
-        "Conexión": "USB 2.0",
-        "RGB": "Por Tecla",
-        "Teclas Macro": "12"
+        "Conexión": "2.4GHz / USB / BT5.0",
+        "Switches": "Linear Pre-lubricados",
+        "Layout": "75%",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 68.99,
+      "enlaceAmazon": "https://amzn.to/43TJ4kY",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 3,
-      "slug": "logitech-g915-lightspeed",
-      "nombre": "Logitech G915 LIGHTSPEED",
-      "descripcion": "Teclado inalámbrico mecánico de baja altura",
+      "slug": "aula-f75-pro-wireless-75pct-reaper",
+      "nombre": "AULA F75 Pro Mecánico Inalámbrico 75% Reaper Switches",
+      "descripcion": "Teclado mecánico 75% con hot-swap, switches Reaper pre-lubricados, knob de volumen, keycaps PBT y triple conexión 2.4GHz/USB-C/BT5.0",
       "especificaciones": {
         "Tipo": "Mecánico",
-        "Switches": "GL Clicky",
-        "Conexión": "Inalámbrico 2.4GHz",
-        "RGB": "Por Tecla",
-        "Altura": "18mm"
+        "Conexión": "2.4GHz / USB-C / BT5.0",
+        "Switches": "Reaper Pre-lubricados",
+        "Layout": "75%",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 249.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 65.54,
+      "enlaceAmazon": "https://amzn.to/4enLhv3",
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
     },
     {
       "id": 4,
-      "slug": "razer-deathstalker-v2",
-      "nombre": "Razer DeathStalker V2",
-      "descripcion": "Teclado óptico rápido y silencioso",
+      "slug": "redragon-mechanical-wired-hotswap-red",
+      "nombre": "Redragon Mecánico Cableado Hot-Swap Red Switch RGB",
+      "descripcion": "Teclado mecánico cableado con switches Red hot-swappable, 11 modos de retroiluminación, anti-ghosting y keycaps PBT de doble inyección, para PC y Mac",
       "especificaciones": {
-        "Tipo": "Óptico",
-        "Switches": "Razer Green",
-        "Conexión": "USB 2.0 / Inalámbrico",
-        "RGB": "Por Tecla",
-        "Altura": "Bajo"
+        "Tipo": "Mecánico",
+        "Conexión": "USB Cableado",
+        "Switches": "Red Hot-Swap",
+        "Layout": "Full-Size",
+        "RGB": "11 Modos RGB"
       },
-      "precio": 149.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 29.99,
+      "enlaceAmazon": "https://amzn.to/43hRWAL",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "hyperx-alloy-origins-65",
-      "nombre": "HyperX Alloy Origins 65",
-      "descripcion": "Teclado compacto 65% mecánico",
+      "slug": "aula-f75-pro-white-wireless-knob",
+      "nombre": "AULA F75 Pro White Mecánico Inalámbrico 75% con Knob",
+      "descripcion": "Teclado mecánico 75% blanco con hot-swap, switches pre-lubricados, knob de volumen, keycaps PBT y triple conexión, sonido creamy y diseño minimalista",
       "especificaciones": {
         "Tipo": "Mecánico",
-        "Switches": "HyperX Red",
-        "Conexión": "USB 2.0",
-        "RGB": "Por Tecla",
-        "Tamaño": "65%"
+        "Conexión": "2.4GHz / USB / BT5.0",
+        "Switches": "Pre-lubricados",
+        "Layout": "75%",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 129.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 69.99,
+      "enlaceAmazon": "https://amzn.to/4dSfYZe",
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
     },
     {
       "id": 6,
-      "slug": "corsair-k60-rgb-pro",
-      "nombre": "Corsair K60 RGB PRO",
-      "descripcion": "Teclado mecánico presupuestario",
+      "slug": "m75-mechanical-gasket-75pct-black-pink",
+      "nombre": "M75 Mecánico Gasket 75% Black & Pink Hot-Swap RGB",
+      "descripcion": "Teclado mecánico 75% con estructura gasket, hot-swap, keycaps PBT grabadas lateralmente, RGB y triple conexión 2.4GHz/Bluetooth/USB-C en colores negro y rosa",
       "especificaciones": {
-        "Tipo": "Mecánico",
-        "Switches": "Cherry MX Speed",
-        "Conexión": "USB 2.0",
-        "RGB": "Por Tecla",
-        "Altura": "Bajo"
+        "Tipo": "Mecánico Gasket",
+        "Conexión": "2.4GHz / BT / USB-C",
+        "Switches": "Hot-Swap",
+        "Layout": "75%",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 99.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 53.99,
+      "enlaceAmazon": "https://amzn.to/4e6FNUc",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "ducky-one-3-sf",
-      "nombre": "Ducky One 3 SF",
-      "descripcion": "Teclado compact 65% de calidad premium",
+      "slug": "aula-s75-pro-screen-knob-trimode",
+      "nombre": "AULA S75 PRO Mecánico 75% Tri-Mode con Pantalla y Knob",
+      "descripcion": "Teclado mecánico 75% tri-mode con pantalla integrada, knob, switches hot-swap pre-lubricados y keycaps PBT, la opción más completa para gaming y creatividad",
       "especificaciones": {
         "Tipo": "Mecánico",
-        "Switches": "Gateron Yellow",
-        "Conexión": "USB 2.0",
-        "RGB": "Por Tecla",
-        "Tamaño": "65%"
+        "Conexión": "2.4GHz / BT / USB-C (Tri-Mode)",
+        "Switches": "Hot-Swap Pre-lubricados",
+        "Layout": "75% con Pantalla",
+        "RGB": "Retroiluminado RGB"
       },
-      "precio": 159.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 71.99,
+      "enlaceAmazon": "https://amzn.to/4vv1rJ4",
       "imagenUrl": "/placeholder-product.svg"
     }
   ],
   "mouse": [
     {
       "id": 1,
-      "slug": "corsair-m65-rgb-ultra",
-      "nombre": "Corsair M65 RGB Ultra",
-      "descripcion": "Ratón gaming inalámbrico de 24000 DPI",
+      "slug": "attack-shark-x3-wireless-paw3395-49g",
+      "nombre": "Attack Shark X3 Wireless 49g PAW3395 26000 DPI",
+      "descripcion": "Mouse gaming ultraligero de 49g con sensor PAW3395 de 26000 DPI, triple modo Bluetooth/2.4GHz/Cableado, switches Kailh GM8.0 y 200 horas de bateria recargable",
       "especificaciones": {
-        "Sensor": "22000 DPI",
-        "Tipo": "Inalámbrico / Cableado",
-        "Peso": "73g",
-        "Botones Macro": "6",
-        "RGB": "Per Zone"
+        "Sensor": "PAW3395",
+        "DPI": "26000 DPI",
+        "Peso": "49g",
+        "Conexión": "BT / 2.4GHz / USB",
+        "Switches": "Kailh GM8.0"
       },
-      "precio": 79.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 37.71,
+      "enlaceAmazon": "https://amzn.to/4o6ukIR",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 2,
-      "slug": "logitech-g-pro-x-superlight-2",
-      "nombre": "Logitech G Pro X Superlight 2",
-      "descripcion": "Ratón ultra ligero para esports competitivo",
+      "slug": "pulsar-x3-crazylight-wireless-43g-white",
+      "nombre": "Pulsar X3 Crazylight Wireless 43g XS-1 32000 DPI White",
+      "descripcion": "Mouse gaming inalámbrico ultraligero de 43g con sensor XS-1 de 32000 DPI, switch optico, diseño ergonamico hibrido, 750 IPS y compatibilidad 8K Hz",
       "especificaciones": {
-        "Sensor": "32000 DPI",
-        "Tipo": "Inalámbrico",
-        "Peso": "63g",
-        "Botones": "6",
-        "RGB": "Monochrome"
+        "Sensor": "XS-1",
+        "DPI": "32000 DPI",
+        "Peso": "43g",
+        "Conexión": "Inalambrico",
+        "Switches": "Optico"
       },
-      "precio": 149.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 129.95,
+      "enlaceAmazon": "https://amzn.to/3RLr9KM",
+      "imagenUrl": "https://www.pulsar.gg/cdn/shop/files/Pulsar-X3_rhd-Top-mini_large.png?v=1755750472"
     },
     {
       "id": 3,
-      "slug": "razer-deathAdder-v3",
-      "nombre": "Razer DeathAdder V3",
-      "descripcion": "Ratón ergonómico con tecnología inalámbrica Focus Pro",
+      "slug": "razer-basilisk-v3-wired-26k-11buttons",
+      "nombre": "Razer Basilisk V3 Cableado 26K DPI 11 Botones Ergonómico",
+      "descripcion": "Mouse gaming ergonomico con sensor optico de 26000 DPI, 11 botones programables, scroll HyperScroll inclinable, Chroma RGB y el switch Razer mas rapido",
       "especificaciones": {
-        "Sensor": "30000 DPI",
-        "Tipo": "Inalámbrico / Cableado",
-        "Peso": "63g",
-        "Botones Macro": "7",
-        "RGB": "Per Zone"
+        "Sensor": "Focus Pro 26K",
+        "DPI": "26000 DPI",
+        "Peso": "101g",
+        "Conexión": "USB Cableado",
+        "Switches": "Razer Optical Gen-2"
       },
-      "precio": 69.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 37.99,
+      "enlaceAmazon": "https://amzn.to/4ulGsaC",
+      "imagenUrl": "https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/basilisk.png"
     },
     {
       "id": 4,
-      "slug": "steelseries-rival-3",
-      "nombre": "SteelSeries Rival 3",
-      "descripcion": "Ratón presupuestario con buen rendimiento",
+      "slug": "razer-viper-v4-pro-wireless-50k-49g",
+      "nombre": "Razer Viper V4 Pro Wireless 49g 50000 DPI 8K Hz",
+      "descripcion": "Mouse gaming inalambrico ultraligero de 49g con sensor de 50000 DPI, polling 8K Hz, switches opticos Gen-4 y carga USB-C para esports competitivo de alto nivel",
       "especificaciones": {
-        "Sensor": "8500 DPI",
-        "Tipo": "Cableado",
-        "Peso": "77g",
-        "Botones": "6",
-        "RGB": "Single Color"
+        "Sensor": "Focus Pro 50K",
+        "DPI": "50000 DPI",
+        "Peso": "49g",
+        "Conexión": "HyperSpeed Wireless + USB-C",
+        "Switches": "Optico Gen-4"
       },
-      "precio": 29.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 159.99,
+      "enlaceAmazon": "https://amzn.to/3QqHeFf",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "finalmouse-ultralightx",
-      "nombre": "Finalmouse UltralightX",
-      "descripcion": "Ratón gaming ultraligero profesional",
+      "slug": "gravastar-mercury-m2-wireless-26k-rgb",
+      "nombre": "GravaStar Mercury M2 Wireless 26000 DPI PAW3395 RGB",
+      "descripcion": "Mouse gaming inalambrico de 79g con sensor PAW3395DM de 26000 DPI, diseno hueco con RGB Lightsync dinamico y 5 botones programables",
       "especificaciones": {
-        "Sensor": "8000 DPI",
-        "Tipo": "Cableado",
-        "Peso": "55g",
-        "Botones": "6",
-        "RGB": "No"
+        "Sensor": "PAW3395DM",
+        "DPI": "26000 DPI",
+        "Peso": "79g",
+        "Conexión": "Inalambrico",
+        "Switches": "5 Programables"
       },
-      "precio": 99.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 79.95,
+      "enlaceAmazon": "https://amzn.to/4ujsZjx",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 6,
-      "slug": "hyperx-pulsefire-haste-2",
-      "nombre": "HyperX Pulsefire Haste 2",
-      "descripcion": "Ratón gaming con sensor avanzado",
+      "slug": "ajazz-aj159p-wireless-paw3395-dock-rgb",
+      "nombre": "AJAZZ AJ159P Wireless PAW3395 26K DPI Base RGB Carga",
+      "descripcion": "Mouse gaming inalambrico de 56g con sensor PAW3395 de 26000 DPI, base de carga RGB incluida, diseno ergonomico ligero y 80 millones de clicks",
       "especificaciones": {
-        "Sensor": "26000 DPI",
-        "Tipo": "Cableado",
-        "Peso": "59g",
-        "Botones": "6",
-        "RGB": "RGB per Zone"
+        "Sensor": "PAW3395",
+        "DPI": "26000 DPI",
+        "Peso": "56g",
+        "Conexión": "Inalambrico + Base RGB",
+        "Switches": "ASIN 80M clicks"
       },
-      "precio": 59.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 42.99,
+      "enlaceAmazon": "https://amzn.to/4aeSsTX",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "glorious-model-o",
-      "nombre": "Glorious Model O",
-      "descripcion": "Ratón óptico compacto con diseño honeycomb",
+      "slug": "razer-basilisk-v3-x-hyperspeed-18k-285h",
+      "nombre": "Razer Basilisk V3 X HyperSpeed Wireless 18K DPI 285h",
+      "descripcion": "Mouse gaming inalambrico con sensor 5G Advanced de 18000 DPI, switches mecanicos Gen-2, 9 controles programables, Chroma RGB y 285 horas de bateria",
       "especificaciones": {
-        "Sensor": "12000 DPI",
-        "Tipo": "Cableado",
-        "Peso": "66g",
-        "Botones": "6",
-        "RGB": "RGB per Zone"
+        "Sensor": "5G Advanced 18K",
+        "DPI": "18000 DPI",
+        "Peso": "110g",
+        "Conexión": "HyperSpeed Wireless",
+        "Switches": "Mecanico Gen-2"
       },
-      "precio": 49.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 48.99,
+      "enlaceAmazon": "https://amzn.to/4vvwp3G",
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/433606e87c3512c0cd3b44faf9d114b2/razer-basilisk-v3-x-hyperspeed-hero-desktop.webp"
     }
   ],
   "audifonos": [
     {
       "id": 1,
-      "slug": "corsair-virtuoso-rgb-wireless",
-      "nombre": "Corsair Virtuoso RGB Wireless",
-      "descripcion": "Headset gaming inalámbrico con audio Hi-Res",
+      "slug": "eksa-e900-pro-usb-50mm-71-surround",
+      "nombre": "EKSA E900 Pro USB Gaming Headset 7.1 Surround 50mm",
+      "descripcion": "Headset gaming USB con drivers de 50mm, microfono desmontable con cancelacion de ruido, sonido envolvente 7.1 y compatible con PS4/PS5, Xbox, portatiles y PC",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "2.4GHz Inalámbrico",
-        "Micrófono": "Omnidireccional con USB",
-        "Impedancia": "32 Ohm",
-        "Frecuencia": "20Hz - 40kHz"
+        "Conexión": "USB",
+        "Drivers": "50mm",
+        "Microfono": "Desmontable Noise Cancel",
+        "Sonido": "7.1 Surround"
       },
-      "precio": 129.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4ufS1zS",
+      "imagenUrl": "https://cdn.shopify.com/s/files/1/0287/1138/7195/files/1_301b770a-d020-4a40-ba31-f5b39fd101cc.jpg?v=1695712531"
     },
     {
       "id": 2,
-      "slug": "steelseries-arctis-pro",
-      "nombre": "SteelSeries Arctis Pro",
-      "descripcion": "Headset premium con sonido Spatial 360°",
+      "slug": "hyperx-cloud-iii-wired-53mm-dts",
+      "nombre": "HyperX Cloud III Wired 53mm DTS Spatial Audio",
+      "descripcion": "Headset HyperX con drivers de 53mm, audio espacial DTS, microfono desmontable, firma HyperX Comfort y compatibilidad amplia con PC y consolas",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "3.5mm / USB",
-        "Micrófono": "ClearCast con IA",
-        "Impedancia": "32 Ohm",
-        "Frecuencia": "20Hz - 20kHz"
+        "Conexión": "USB / 3.5mm Cableado",
+        "Drivers": "53mm",
+        "Microfono": "Desmontable",
+        "Sonido": "DTS Spatial Audio"
       },
-      "precio": 199.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 57.99,
+      "enlaceAmazon": "https://amzn.to/4ok0cdd",
+      "imagenUrl": "https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_black_66x0048_main_1_e4cf7af3-d79e-4443-adc2-61f74184697e.jpg?v=1771520345"
     },
     {
       "id": 3,
-      "slug": "hyperx-cloud-stinger-2",
-      "nombre": "HyperX Cloud Stinger 2",
-      "descripcion": "Headset gaming asequible y confiable",
+      "slug": "logitech-g733-lightspeed-wireless-rgb",
+      "nombre": "Logitech G733 LIGHTSPEED Wireless Gaming Headset RGB",
+      "descripcion": "Headset inalambrico con LIGHTSPEED, microfono Blue VO!CE, Lightsync RGB, diadema de suspension y compatible con PC, PS5/PS4 y Nintendo Switch",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "3.5mm / USB",
-        "Micrófono": "Desmontable",
-        "Impedancia": "32 Ohm",
-        "Frecuencia": "18Hz - 20kHz"
+        "Conexión": "LIGHTSPEED Wireless",
+        "Drivers": "Pro-G Audio",
+        "Microfono": "Blue VO!CE",
+        "Sonido": "Stereo + RGB"
       },
-      "precio": 59.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 128.99,
+      "enlaceAmazon": "https://amzn.to/3S7ybcN",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 4,
-      "slug": "razer-kraken-x",
-      "nombre": "Razer Kraken X",
-      "descripcion": "Headset RGB con drivers de 40mm",
+      "slug": "wireless-gaming-headset-71-50mm-rgb-aluminum",
+      "nombre": "Wireless Gaming Headset 7.1 Surround 50mm RGB Aluminio",
+      "descripcion": "Headset inalambrico con drivers de 50mm, sonido 7.1 envolvente, microfono noise cancelling, almohadillas memory foam y marco de aluminio resistente",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "3.5mm / USB",
-        "Micrófono": "Desmontable con enchufe macho de 3.5 mm",
-        "Impedancia": "32 Ohm",
-        "Frecuencia": "20Hz - 20kHz"
+        "Conexión": "Inalambrico",
+        "Drivers": "50mm",
+        "Microfono": "Noise Cancelling",
+        "Sonido": "7.1 Surround"
       },
-      "precio": 79.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/3S5Fce5",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 5,
-      "slug": "audio-technica-ath-g1",
-      "nombre": "Audio-Technica ATH-G1",
-      "descripcion": "Headset gaming de la marca de audio profesional",
+      "slug": "razer-kraken-v3-x-usb-triforce-40mm-71",
+      "nombre": "Razer Kraken V3 X USB Triforce 40mm 7.1 Surround",
+      "descripcion": "Headset gaming USB ligero con drivers Triforce de 40mm, microfono cardioide HyperClear, sonido 7.1 envolvente y Chroma RGB para largas sesiones de juego",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "3.5mm",
-        "Micrófono": "Bidireccional",
-        "Impedancia": "32 Ohm",
-        "Frecuencia": "20Hz - 20kHz"
+        "Conexión": "USB Cableado",
+        "Drivers": "40mm Triforce",
+        "Microfono": "HyperClear Cardioid",
+        "Sonido": "7.1 Surround + Chroma RGB"
       },
-      "precio": 119.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
-      "imagenUrl": "/placeholder-product.svg"
+      "precio": 39.98,
+      "enlaceAmazon": "https://amzn.to/4dRMeMd",
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/711f9a9937345927cb4ed5fecce8a44f/razer-kraken-v3-x_hero-mobile-768x460.jpg"
     },
     {
       "id": 6,
-      "slug": "scuf-h1",
-      "nombre": "SCUF H1",
-      "descripcion": "Headset wireless gaming de SCUF",
+      "slug": "kz-zar-7ba-1dd-iem-hifi-bass",
+      "nombre": "KZ ZAR In-Ear Monitor 7BA+1DD HiFi Bass Gaming IEM",
+      "descripcion": "IEM gaming de alta fidelidad con 7 drivers BA y 1 dinamico, aislamiento pasivo de ruido, graves potentes y claridad en todo el espectro para audiologos y gamers",
       "especificaciones": {
-        "Tipo": "Over-Ear",
-        "Conexión": "2.4GHz Inalámbrico",
-        "Micrófono": "Desmontable",
-        "Impedancia": "20 Ohm",
-        "Frecuencia": "20Hz - 20kHz"
+        "Tipo": "In-Ear (IEM)",
+        "Conexión": "3.5mm Cableado",
+        "Drivers": "7BA + 1DD Hibrido",
+        "Microfono": "Sin Microfono",
+        "Sonido": "HiFi Bass / Stereo"
       },
-      "precio": 89.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/3RGyyLp",
       "imagenUrl": "/placeholder-product.svg"
     },
     {
       "id": 7,
-      "slug": "turtle-beach-stealth-600-gen-2",
-      "nombre": "Turtle Beach Stealth 600 Gen 2",
-      "descripcion": "Headset inalámbrico presupuestario",
+      "slug": "nubwo-hg03-usb-a-50mm-71-white",
+      "nombre": "NUBWO HG03 Wired USB-A 7.1 Surround 50mm White",
+      "descripcion": "Headset gaming USB-A blanco con drivers de 50mm, microfono con cancelacion de ruido, sonido 7.1 para PC y portatil a precio muy accesible",
       "especificaciones": {
         "Tipo": "Over-Ear",
-        "Conexión": "2.4GHz Inalámbrico",
-        "Micrófono": "Flip-to-Mute",
-        "Impedancia": "16 Ohm",
-        "Frecuencia": "20Hz - 20kHz"
+        "Conexión": "USB-A Cableado",
+        "Drivers": "50mm",
+        "Microfono": "Noise Cancelling",
+        "Sonido": "7.1 Surround"
       },
-      "precio": 69.99,
-      "enlaceAmazon": "https://amazon.com/dp/",
+      "precio": 35.99,
+      "enlaceAmazon": "https://amzn.to/4e5RN8q",
       "imagenUrl": "/placeholder-product.svg"
     }
   ]
