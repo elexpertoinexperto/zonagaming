@@ -630,7 +630,7 @@
       },
       "precio": 83.99,
       "enlaceAmazon": "https://amzn.to/4dMyJgI",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522_.jpg"
     },
     {
       "id": 4,
@@ -646,7 +646,7 @@
       },
       "precio": 129.99,
       "enlaceAmazon": "https://amzn.to/4e5l57h",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -662,7 +662,7 @@
       },
       "precio": 52.99,
       "enlaceAmazon": "https://amzn.to/4e8ymvW",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522_.jpg"
     },
     {
       "id": 6,
@@ -678,7 +678,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/3RLqJnG",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679_.jpg"
     },
     {
       "id": 7,
@@ -694,7 +694,7 @@
       },
       "precio": 44.9,
       "enlaceAmazon": "https://amzn.to/4dMyORy",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522_.jpg"
     }
   ],
   "refrigeracion-normal": [
@@ -712,7 +712,7 @@
       },
       "precio": 57.69,
       "enlaceAmazon": "https://amzn.to/4dQ6rSz",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522_.jpg"
     },
     {
       "id": 2,
@@ -728,7 +728,7 @@
       },
       "precio": 22.9,
       "enlaceAmazon": "https://amzn.to/4o6hIl2",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522_.jpg"
     },
     {
       "id": 3,
@@ -744,7 +744,7 @@
       },
       "precio": 25.99,
       "enlaceAmazon": "https://amzn.to/4dQQ203",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522_.jpg"
     },
     {
       "id": 4,
@@ -760,7 +760,7 @@
       },
       "precio": 164.95,
       "enlaceAmazon": "https://amzn.to/49KpDia",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522_.jpg"
     },
     {
       "id": 5,
@@ -776,7 +776,7 @@
       },
       "precio": 34.9,
       "enlaceAmazon": "https://amzn.to/4g1ZQFS",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -792,7 +792,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4of8GCy",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522_.jpg"
     },
     {
       "id": 7,
@@ -808,7 +808,7 @@
       },
       "precio": 33.9,
       "enlaceAmazon": "https://amzn.to/4fxCUOR",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522_.jpg"
     }
   ],
   "gabinetes-gamer": [
@@ -826,7 +826,7 @@
       },
       "precio": 69.99,
       "enlaceAmazon": "https://amzn.to/49CU6Pc",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466_.jpg"
     },
     {
       "id": 2,
@@ -842,7 +842,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/3RPC4TJ",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -858,7 +858,7 @@
       },
       "precio": 86.99,
       "enlaceAmazon": "https://amzn.to/4vpHfIo",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466_.jpg"
     },
     {
       "id": 4,
@@ -874,7 +874,7 @@
       },
       "precio": 169,
       "enlaceAmazon": "https://amzn.to/4ea3cUX",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -906,7 +906,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4o8APLt",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -922,7 +922,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/49JizlT",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466_.jpg"
     }
   ],
   "teclados": [
@@ -940,7 +940,7 @@
       },
       "precio": 39.99,
       "enlaceAmazon": "https://amzn.to/4uf6cVO",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466_.jpg"
     },
     {
       "id": 2,
@@ -956,7 +956,7 @@
       },
       "precio": 68.99,
       "enlaceAmazon": "https://amzn.to/43TJ4kY",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -988,7 +988,7 @@
       },
       "precio": 29.99,
       "enlaceAmazon": "https://amzn.to/43hRWAL",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -1020,7 +1020,7 @@
       },
       "precio": 53.99,
       "enlaceAmazon": "https://amzn.to/4e6FNUc",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -1036,7 +1036,7 @@
       },
       "precio": 71.99,
       "enlaceAmazon": "https://amzn.to/4vv1rJ4",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466_.jpg"
     }
   ],
   "mouse": [
@@ -1054,7 +1054,7 @@
       },
       "precio": 37.71,
       "enlaceAmazon": "https://amzn.to/4o6ukIR",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679_.jpg"
     },
     {
       "id": 2,
@@ -1102,7 +1102,7 @@
       },
       "precio": 159.99,
       "enlaceAmazon": "https://amzn.to/3QqHeFf",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -1118,7 +1118,7 @@
       },
       "precio": 79.95,
       "enlaceAmazon": "https://amzn.to/4ujsZjx",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -1134,7 +1134,7 @@
       },
       "precio": 42.99,
       "enlaceAmazon": "https://amzn.to/4aeSsTX",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679_.jpg"
     },
     {
       "id": 7,
@@ -1200,7 +1200,7 @@
       },
       "precio": 128.99,
       "enlaceAmazon": "https://amzn.to/3S7ybcN",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679_.jpg"
     },
     {
       "id": 4,
@@ -1216,7 +1216,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/3S5Fce5",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679_.jpg"
     },
     {
       "id": 5,
@@ -1248,7 +1248,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3RGyyLp",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679_.jpg"
     },
     {
       "id": 7,
@@ -1264,7 +1264,7 @@
       },
       "precio": 35.99,
       "enlaceAmazon": "https://amzn.to/4e5RN8q",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679_.jpg"
     }
   ]
 }
