@@ -460,7 +460,7 @@ nav a:hover {
 
 .feature-item {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-columns: 36px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
   padding: 18px 20px;
@@ -470,22 +470,45 @@ nav a:hover {
   min-width: 0;
 }
 
-.feature-item div {
-  width: auto;
-  height: 30px;
+.feature-item > div:first-child {
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: grid;
-  place-items: center;  
+  place-items: center;
   color: #7cffcb;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: rgba(124, 255, 203, 0.08);
+  border: 1px solid rgba(124, 255, 203, 0.2);
 }
 
-.feature-content{
-    width: max-content;
+.feature-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.feature-content strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #e6f7ff;
 }
 
 .feature-item p {
   margin: 0;
   overflow-wrap: break-word;
+  word-break: break-word;
+  color: #8aa0b8;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .feature-item {
+    padding: 14px 16px;
+    gap: 12px;
+  }
 }
 
 footer {
