@@ -43,7 +43,7 @@
       },
       "precio": 119.99,
       "enlaceAmazon": "https://amzn.to/4uMk5Mw",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466_.jpg"
     },
     {
       "id": 4,
@@ -58,7 +58,7 @@
       },
       "precio": 459.99,
       "enlaceAmazon": "https://amzn.to/4a4BjME",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -88,7 +88,7 @@
       },
       "precio": 635.99,
       "enlaceAmazon": "https://amzn.to/4fUa8b8",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -103,7 +103,7 @@
       },
       "precio": 699.99,
       "enlaceAmazon": "https://amzn.to/3RY1ZbH",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466_.jpg"
     }
   ],
   "procesadores": [
@@ -121,7 +121,7 @@
       },
       "precio": 179,
       "enlaceAmazon": "https://amzn.to/4uEUKUA",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466_.jpg"
     },
     {
       "id": 2,
@@ -137,7 +137,7 @@
       },
       "precio": 315,
       "enlaceAmazon": "https://amzn.to/4fUakam",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -153,7 +153,7 @@
       },
       "precio": 84,
       "enlaceAmazon": "https://amzn.to/3PEAiEi",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466_.jpg"
     },
     {
       "id": 4,
@@ -169,7 +169,7 @@
       },
       "precio": 227.45,
       "enlaceAmazon": "https://amzn.to/435HhJx",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -185,7 +185,7 @@
       },
       "precio": 167,
       "enlaceAmazon": "https://amzn.to/4anaiEh",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -201,7 +201,7 @@
       },
       "precio": 234,
       "enlaceAmazon": "https://amzn.to/4uMp4wJ",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -217,7 +217,7 @@
       },
       "precio": 218.98,
       "enlaceAmazon": "https://amzn.to/4dYSAIv",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466_.jpg"
     }
   ],
   "memoria-ram": [
@@ -238,7 +238,7 @@
       },
       "precio": 249.99,
       "enlaceAmazon": "https://amzn.to/43ONmu1",
-      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Memory/vengeance-rgb-amd-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-32GB-GRAY_01.webp"
+      "imagenUrl": "/imagenes/memoria-ram/1/producto.jpg"
     },
     {
       "id": 2,
@@ -257,7 +257,7 @@
       },
       "precio": 228.89,
       "enlaceAmazon": "https://amzn.to/43cHSsS",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -276,7 +276,7 @@
       },
       "precio": 124.99,
       "enlaceAmazon": "https://amzn.to/4x53qFn",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679_.jpg"
     },
     {
       "id": 4,
@@ -295,7 +295,7 @@
       },
       "precio": 169.99,
       "enlaceAmazon": "https://amzn.to/4uSUHos",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -314,7 +314,7 @@
       },
       "precio": 106.99,
       "enlaceAmazon": "https://amzn.to/4xgdRpY",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -333,7 +333,7 @@
       },
       "precio": 194.99,
       "enlaceAmazon": "https://amzn.to/4x53tkx",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -352,7 +352,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4dQYBIo",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466_.jpg"
     }
   ],
   "ssd": [
@@ -370,7 +370,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4o6FNIm",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466_.jpg"
     },
     {
       "id": 2,
@@ -386,7 +386,7 @@
       },
       "precio": 163.9,
       "enlaceAmazon": "https://amzn.to/4uRL2yn",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -418,7 +418,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4fZHiWO",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -434,7 +434,7 @@
       },
       "precio": 87.37,
       "enlaceAmazon": "https://amzn.to/3RKHCyR",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -450,7 +450,7 @@
       },
       "precio": 299.95,
       "enlaceAmazon": "https://amzn.to/3RR3SHh",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -466,7 +466,7 @@
       },
       "precio": 85.99,
       "enlaceAmazon": "https://amzn.to/4e2Vg7X",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466_.jpg"
     }
   ],
   "fuentes-de-poder": [
@@ -484,7 +484,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/43kKiFR",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466_.jpg"
     },
     {
       "id": 2,
@@ -500,7 +500,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3SmBuwJ",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466_.jpg"
     },
     {
       "id": 3,
@@ -516,7 +516,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4ucnyml",
-      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/v1680126575/products/Power-Supply-Units/base-rme-series-2023-psu-config/Gallery/750W/RM750e_01.webp"
+      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466_.jpg"
     },
     {
       "id": 4,
@@ -532,7 +532,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4o9nkep",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466_.jpg"
     },
     {
       "id": 5,
@@ -548,7 +548,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/4vt3ey7",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466_.jpg"
     },
     {
       "id": 6,
@@ -564,7 +564,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4ac6DJs",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466_.jpg"
     },
     {
       "id": 7,
@@ -580,7 +580,7 @@
       },
       "precio": 64.99,
       "enlaceAmazon": "https://amzn.to/4vyUQ0g",
-      "imagenUrl": "/placeholder-product.svg"
+      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466_.jpg"
     }
   ],
   "refrigeracion-liquida": [
