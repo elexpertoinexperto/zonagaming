@@ -117,11 +117,23 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 
 .btn {
   background: linear-gradient(135deg, #00ffe1, #1bb7ff);
   color: #05070b;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 225, 0.35);
+  filter: brightness(1.08);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -134,6 +146,17 @@ nav a:hover {
   background: #FF9900;
   color: white;
   text-decoration: none;
+}
+
+.btn-amazon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+  filter: brightness(1.1);
+}
+
+.btn-amazon:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .hero-stats {
