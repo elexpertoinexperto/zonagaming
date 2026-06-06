@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Audífonos';
 const description = 'Audífonos gamer con sonido envolvente, micrófono claro y comodidad para largas sesiones.';
 const productsData = productos['audifonos'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/audifonos/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['audifonos'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Qué audífonos gamer necesitas?</h2>
+    <p>Un buen par de audífonos mejora la inmersión y el posicionamiento de sonido en partidas competitivas:</p>
+    <ul>
+      <li>Diseño cerrado: aísla el entorno exterior; ideal para ambientes ruidosos.</li>
+      <li>Diseño abierto: soundstage más amplio y natural; mejor para experiencias single-player.</li>
+      <li>Sonido 7.1 virtual ayuda a detectar pasos y disparos por dirección en FPS.</li>
+      <li>Drivers de 50 mm o más ofrecen mejor respuesta de bajos para efectos de impacto.</li>
+      <li>Micrófono con cancelación de ruido es esencial para streaming o juego en equipo.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-audifonos"
+    title="Los más vendidos en Audifonos"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

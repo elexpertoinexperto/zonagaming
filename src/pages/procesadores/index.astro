@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Procesadores';
 const description = 'Selecciona CPUs potentes para gaming, streaming y multitarea con alto rendimiento.';
 const productsData = productos['procesadores'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/procesadores/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['procesadores'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Qué procesador te conviene?</h2>
+    <p>El CPU determina cuántas tareas puedes correr a la vez y qué tan rápido responde tu PC. Puntos clave:</p>
+    <ul>
+      <li>Para gaming puro, la frecuencia (GHz) importa más que la cantidad de núcleos.</li>
+      <li>6–8 núcleos son suficientes para jugar; 12 o más si también haces streaming o edición.</li>
+      <li>AMD Ryzen e Intel Core son igual de competitivos; elige según tu placa madre.</li>
+      <li>Verifica el socket: AM5 (AMD) o LGA1700/1851 (Intel) antes de comprar.</li>
+      <li>El caché L3 grande mejora los FPS en juegos; vale la pena compararlo.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-procesadores"
+    title="Los más vendidos en Procesadores"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

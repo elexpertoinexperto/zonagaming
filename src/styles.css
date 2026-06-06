@@ -511,6 +511,59 @@ nav a:hover {
   }
 }
 
+.category-buying-guide {
+  margin-top: 64px;
+  padding: 36px 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(124, 255, 203, 0.1);
+}
+
+.category-buying-guide h2 {
+  font-size: 1.4rem;
+  color: #e6f7ff;
+  margin: 0 0 12px;
+}
+
+.category-buying-guide p {
+  color: #8aa0b8;
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+.category-buying-guide ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.category-buying-guide li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #c8d8e8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.category-buying-guide li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7cffcb;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .category-buying-guide {
+    padding: 24px 20px;
+  }
+}
+
 footer {
   margin-top: 64px;
   padding-top: 28px;

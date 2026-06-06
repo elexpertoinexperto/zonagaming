@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Mouse';
 const description = 'Ratones gaming ergonómicos con alta precisión y verdad táctil para cada tipo de jugador.';
 const productsData = productos['mouse'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/mouse/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['mouse'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Cómo elegir el mouse gamer correcto?</h2>
+    <p>El mouse adecuado marca la diferencia en precisión y comodidad durante horas de juego:</p>
+    <ul>
+      <li>Sensor óptico es la elección para gaming competitivo; consistente en cualquier superficie.</li>
+      <li>El DPI alto no mejora la puntería; lo importante es la consistencia del sensor.</li>
+      <li>Ergonomía: palmgrip (palma apoyada), claw (dedos doblados) o fingertip según tu estilo.</li>
+      <li>Los inalámbricos modernos tienen latencia imperceptible; no sacrificas rendimiento.</li>
+      <li>Peso: ratones de 60–90 g favorecen la velocidad en FPS; más pesados para mayor control.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-mouse"
+    title="Los más vendidos en Mouse"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

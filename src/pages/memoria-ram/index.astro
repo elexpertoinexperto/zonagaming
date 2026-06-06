@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Memoria RAM';
 const description = 'Modulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
 const productsData = productos['memoria-ram'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/memoria-ram/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['memoria-ram'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Cuánta RAM necesitas para gaming?</h2>
+    <p>La RAM afecta la fluidez general del sistema y los tiempos de carga. Lo que debes saber:</p>
+    <ul>
+      <li>16 GB es el mínimo recomendado; 32 GB si combinas juegos con streaming o edición.</li>
+      <li>DDR5 es el estándar actual; DDR4 sigue siendo válida en plataformas anteriores.</li>
+      <li>Instala siempre en pares (dual channel) para aprovechar el doble de ancho de banda.</li>
+      <li>La velocidad (MHz) y latencia (CL) impactan más en plataformas AMD Ryzen.</li>
+      <li>Activa XMP/EXPO en la BIOS para correr la RAM a su frecuencia real.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-memoria-ram"
+    title="Los más vendidos en Memoria Ram"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

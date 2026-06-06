@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'SSD';
 const description = 'Unidades de estado sólido para tiempos de carga rápidos y transferencia segura de datos.';
 const productsData = productos['ssd'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/ssd/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['ssd'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Qué SSD necesitas para tu PC gamer?</h2>
+    <p>El SSD elimina los tiempos de carga y hace que tu sistema responda al instante. Aspectos a considerar:</p>
+    <ul>
+      <li>NVMe PCIe 4.0 alcanza 7,000 MB/s; ideal para el sistema operativo y juegos principales.</li>
+      <li>1 TB es el mínimo práctico hoy; los juegos AAA ocupan entre 50 y 150 GB cada uno.</li>
+      <li>SATA SSD es suficiente como almacenamiento secundario y resulta más económico.</li>
+      <li>PCIe 5.0 ya existe, pero la diferencia real en gaming no justifica el costo adicional.</li>
+      <li>Verifica que tu placa tenga ranura M.2 compatible antes de comprar un NVMe.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-ssd"
+    title="Los más vendidos en Ssd"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

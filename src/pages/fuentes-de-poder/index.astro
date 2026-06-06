@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Fuentes de poder';
 const description = 'Fuentes modulares y certificadas para entregar energía limpia y segura a tu PC gamer.';
 const productsData = productos['fuentes-de-poder'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/fuentes-de-poder/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['fuentes-de-poder'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Cómo elegir una fuente de poder segura?</h2>
+    <p>La PSU protege todos tus componentes. Un mal ahorro aquí puede costarte caro:</p>
+    <ul>
+      <li>Calcula el consumo total de tu build y añade un 20–30% de margen de seguridad.</li>
+      <li>Certificación 80+ Gold o superior garantiza mayor eficiencia y menos calor.</li>
+      <li>Modular o semi-modular simplifica el cableado y mejora el flujo de aire del gabinete.</li>
+      <li>Una PSU de calidad regula el voltaje y protege contra picos eléctricos.</li>
+      <li>Marcas recomendadas: Corsair, Seasonic, be quiet! y EVGA tienen excelente reputación.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-fuentes-de-poder"
+    title="Los más vendidos en Fuentes De Poder"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Teclados';
 const description = 'Teclados mecánicos y gaming con iluminación y teclas rápidas para cada estilo de jugada.';
 const productsData = productos['teclados'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/teclados/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['teclados'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Qué teclado gamer te conviene?</h2>
+    <p>El teclado es tu principal herramienta de control. Estos factores marcan la diferencia:</p>
+    <ul>
+      <li>Switches lineales (ej. Red): suaves y rápidos, ideales para gaming de acción.</li>
+      <li>Switches táctiles (ej. Brown): feedback sin ruido, buenos para gaming y escritura mixta.</li>
+      <li>TKL (sin numpad) libera espacio en el escritorio para mayor rango del mouse.</li>
+      <li>Hotswappable: permite cambiar switches sin necesidad de soldar.</li>
+      <li>Polling rate de 1,000 Hz es el estándar; suficiente para cualquier nivel de juego.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-teclados"
+    title="Los más vendidos en Teclados"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

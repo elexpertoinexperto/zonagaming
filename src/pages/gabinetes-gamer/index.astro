@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Gabinetes gamer';
 const description = 'Gabinetes con flujo de aire, diseño gamer y espacio para builds potentes y RGB.';
 const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/gabinetes-gamer/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Cómo elegir el gabinete ideal?</h2>
+    <p>El gabinete define el flujo de aire, el espacio y la estética de tu build. Lo esencial:</p>
+    <ul>
+      <li>Airflow primero: un buen flujo de aire mantiene temperaturas más bajas que cualquier cooler.</li>
+      <li>Verifica compatibilidad: tamaño de placa (ATX/mATX), longitud de GPU y altura del cooler.</li>
+      <li>Mid-tower es el formato más versátil para la mayoría de builds gaming.</li>
+      <li>Panel de vidrio templado permite lucir la iluminación RGB de tus componentes.</li>
+      <li>Gestión de cables: busca espacio trasero generoso para un cableado ordenado.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-gabinetes-gamer"
+    title="Los más vendidos en Gabinetes Gamer"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

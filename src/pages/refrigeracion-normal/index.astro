@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Refrigeración normal';
 const description = 'Ventiladores y disipadores para mantener tu PC fría con aire eficiente y silencioso.';
 const productsData = productos['refrigeracion-normal'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/refrigeracion-normal/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['refrigeracion-normal'] as unknown as Producto[];
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Vale la pena un cooler de aire?</h2>
+    <p>Los coolers de torre son confiables, duraderos y ofrecen excelente relación precio-rendimiento:</p>
+    <ul>
+      <li>Las torres dobles (twin tower) compiten en rendimiento con AIOs de 240 mm.</li>
+      <li>Sin riesgo de fugas ni bombas que puedan fallar con el tiempo.</li>
+      <li>Verifica la altura máxima permitida por tu gabinete antes de comprar.</li>
+      <li>La mayoría incluye pasta térmica de calidad en el paquete.</li>
+      <li>Opción inteligente si priorizas durabilidad y bajo mantenimiento.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-refrigeracion-normal"
+    title="Los más vendidos en Refrigeracion Normal"
+    products={bestSellerProducts}
+  />
 </SiteLayout>

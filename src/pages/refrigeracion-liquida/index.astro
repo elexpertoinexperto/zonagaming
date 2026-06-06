@@ -1,12 +1,22 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 
 const title = 'Refrigeración líquida';
 const description = 'Sistemas de enfriamiento líquido para mantener temperaturas bajas y ruido mínimo en tu equipo.';
 const productsData = productos['refrigeracion-liquida'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/refrigeracion-liquida/${p.slug}-${p.id}`,
+  amazonHref: p.enlaceAmazon,
+}));
 ---
 
 <SiteLayout title={`${title} | Monckey Gamer`}>
@@ -34,4 +44,22 @@ const productsData = productos['refrigeracion-liquida'] as unknown as Producto[]
       }} />
     ))}
   </section>
+
+  <section class="category-buying-guide">
+    <h2>¿Cuándo elegir refrigeración líquida?</h2>
+    <p>Los AIOs (all-in-one) son la opción premium para mantener temperaturas bajas con un look limpio:</p>
+    <ul>
+      <li>240 mm es suficiente para CPUs de gama media; usa 360 mm si haces overclocking.</li>
+      <li>Son más silenciosos que la mayoría de coolers de aire de alto rendimiento.</li>
+      <li>Instala el radiador en zonas de extracción para sacar el calor del gabinete.</li>
+      <li>Verifica compatibilidad de socket; no todos los AIOs son universales.</li>
+      <li>Ideal para gabinetes compactos donde un cooler de torre no tiene espacio.</li>
+    </ul>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-refrigeracion-liquida"
+    title="Los más vendidos en Refrigeracion Liquida"
+    products={bestSellerProducts}
+  />
 </SiteLayout>
