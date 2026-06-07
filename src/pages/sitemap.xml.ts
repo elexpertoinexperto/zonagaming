@@ -19,7 +19,7 @@ const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, ''
 
 export const GET: APIRoute = () => {
   const categoryUrls = categories.map(cat => `  <url>
-    <loc>${site}/${cat}</loc>
+    <loc>${site}/${cat}/</loc>
     <priority>0.8</priority>
   </url>`).join('\n');
 
@@ -34,7 +34,7 @@ export const GET: APIRoute = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>${site}</loc>
+    <loc>${site}/</loc>
     <priority>1.0</priority>
   </url>
   <url>
