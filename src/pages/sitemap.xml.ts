@@ -15,20 +15,18 @@ const categories = [
   'audifonos',
 ];
 
-const baseUrl = new URL(import.meta.env.SITE || 'http://localhost:3000');
+const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');
 
 export const GET: APIRoute = () => {
-  // URLs de categorías
   const categoryUrls = categories.map(cat => `  <url>
-    <loc>${new URL(`/${cat}`, baseUrl).href}</loc>
+    <loc>${site}/${cat}</loc>
     <priority>0.8</priority>
   </url>`).join('\n');
 
-  // URLs de productos individuales
   const productUrls = categories.map(cat => {
     const categoryProducts = productos[cat as keyof typeof productos];
     return categoryProducts.map(product => `  <url>
-    <loc>${new URL(`/${cat}/${product.slug}-${product.id}`, baseUrl).href}</loc>
+    <loc>${site}/${cat}/${product.slug}-${product.id}</loc>
     <priority>0.6</priority>
   </url>`).join('\n');
   }).join('\n');
@@ -36,8 +34,12 @@ export const GET: APIRoute = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>${baseUrl}</loc>
+    <loc>${site}</loc>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${site}/blog</loc>
+    <priority>0.7</priority>
   </url>
   ${categoryUrls}
   ${productUrls}
