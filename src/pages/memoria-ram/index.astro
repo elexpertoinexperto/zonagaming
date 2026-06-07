@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
+import Comparador from '../../components/Comparador.astro';
 
 const title = 'Memoria RAM';
 const description = 'Modulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
@@ -44,6 +45,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       }} />
     ))}
   </section>
+
+  <Comparador categoriaFija="memoria-ram" />
 
   <section class="category-buying-guide">
     <h2>¿Cuánta RAM necesitas para gaming?</h2>

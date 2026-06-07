@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CategoryIcon from '../components/CategoryIcon.astro';
 import BestSellers from '../components/BestSellers.astro';
+import Comparador from '../components/Comparador.astro';
 import productos from '../data/productos.json';
 
 const tg  = (productos['tarjetas-graficas'] as any[]);
@@ -127,6 +128,8 @@ const bestSellerProducts = [
         title="Los más vendidos"        
         products={bestSellerProducts}
       />
+
+      <Comparador />
 
       <section id="ventajas" class="features">
         <div class="section-title">

@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
+import Comparador from '../../components/Comparador.astro';
 
 const title = 'Audífonos';
 const description = 'Audífonos gamer con sonido envolvente, micrófono claro y comodidad para largas sesiones.';
@@ -44,6 +45,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       }} />
     ))}
   </section>
+
+  <Comparador categoriaFija="audifonos" />
 
   <section class="category-buying-guide">
     <h2>¿Qué audífonos gamer necesitas?</h2>

@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
+import Comparador from '../../components/Comparador.astro';
 
 const title = 'Refrigeración líquida';
 const description = 'Sistemas de enfriamiento líquido para mantener temperaturas bajas y ruido mínimo en tu equipo.';
@@ -44,6 +45,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       }} />
     ))}
   </section>
+
+  <Comparador categoriaFija="refrigeracion-liquida" />
 
   <section class="category-buying-guide">
     <h2>¿Cuándo elegir refrigeración líquida?</h2>

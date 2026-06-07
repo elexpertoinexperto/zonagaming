@@ -4,6 +4,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
+import Comparador from '../../components/Comparador.astro';
 
 const title = 'Refrigeración normal';
 const description = 'Ventiladores y disipadores para mantener tu PC fría con aire eficiente y silencioso.';
@@ -44,6 +45,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       }} />
     ))}
   </section>
+
+  <Comparador categoriaFija="refrigeracion-normal" />
 
   <section class="category-buying-guide">
     <h2>¿Vale la pena un cooler de aire?</h2>
