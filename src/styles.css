@@ -372,7 +372,7 @@ nav a:hover {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
   transition: transform 0.3s ease;
 }
 
@@ -381,8 +381,14 @@ nav a:hover {
 }
 
 .product-card-content {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0;
+}
+
+.product-card-content > div:first-child {
+  flex: 1;
 }
 
 .product-card h2,
@@ -420,6 +426,11 @@ nav a:hover {
   margin: 0;
   color: #c8d8e8;
   line-height: 1.75;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
 }
 
 .product-card-footer {
@@ -433,7 +444,10 @@ nav a:hover {
 .product-card-footer span {
   display: inline-flex;
   font-weight: 700;
+  font-size: 1.15rem;
   color: #7cffcb;
+  padding: 6px 0;
+  margin-bottom: 4px;
 }
 
 .product-card-actions {
