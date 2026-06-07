@@ -26,7 +26,7 @@ export const GET: APIRoute = () => {
   const productUrls = categories.map(cat => {
     const categoryProducts = productos[cat as keyof typeof productos];
     return categoryProducts.map(product => `  <url>
-    <loc>${site}/${cat}/${product.slug}-${product.id}</loc>
+    <loc>${site}/${cat}/${product.slug}-${product.id}/</loc>
     <priority>0.6</priority>
   </url>`).join('\n');
   }).join('\n');
