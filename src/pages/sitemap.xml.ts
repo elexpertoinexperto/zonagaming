@@ -38,7 +38,7 @@ export const GET: APIRoute = () => {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>${site}/blog</loc>
+    <loc>${site}/blog/</loc>
     <priority>0.7</priority>
   </url>
   <url>
