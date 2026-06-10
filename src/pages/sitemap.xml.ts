@@ -41,6 +41,10 @@ export const GET: APIRoute = () => {
     <loc>${site}/blog</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>${site}/blog/que-es-la-vram/</loc>
+    <priority>0.6</priority>
+  </url>
   ${categoryUrls}
   ${productUrls}
 </urlset>`;
