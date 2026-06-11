@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Memoria RAM';
+const metaDescription = "Memoria RAM DDR4 y DDR5 para gaming fluido y multitarea sin límites. Velocidad y RGB al mejor precio. ¡Mejora tu setup ya!";
 const description = 'Modulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
 const productsData = productos['memoria-ram'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">Volver al Home</a>
     <small>Categoria</small>

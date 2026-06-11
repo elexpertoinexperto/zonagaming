@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Tarjetas gráficas';
+const metaDescription = "Tarjetas gráficas gamer para 1080p, 1440p y 4K. Máximos FPS al mejor precio y envío Amazon. ¡Sube tu setup de nivel hoy!";
 const description = 'Encuentra tarjetas graficas para juegos, streaming y renderizado con la mejor relacion rendimiento/precio.';
 const productsData = productos['tarjetas-graficas'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">Volver al Home</a>
     <small>Categoria</small>

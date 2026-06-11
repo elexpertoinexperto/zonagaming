@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Refrigeración normal';
+const metaDescription = "Disipadores y ventiladores para una CPU fresca y silenciosa. Confiables y económicos. ¡Optimiza tu PC gamer al mejor precio!";
 const description = 'Ventiladores y disipadores para mantener tu PC fría con aire eficiente y silencioso.';
 const productsData = productos['refrigeracion-normal'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Categoría</small>

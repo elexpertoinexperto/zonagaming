@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Gabinetes gamer';
+const metaDescription = "Gabinetes gamer con gran flujo de aire, RGB y espacio de sobra. Estética brutal al mejor precio. ¡Dale vida a tu setup!";
 const description = 'Gabinetes con flujo de aire, diseño gamer y espacio para builds potentes y RGB.';
 const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Categoría</small>

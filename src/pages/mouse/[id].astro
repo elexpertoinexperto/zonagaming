@@ -20,9 +20,11 @@ const producto = productosCategoria.find((p: any) => p.id === numeroId);
 if (!producto) {
   return Astro.redirect('/mouse');
 }
+
+const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0, 58).replace(/\s+\S*$/, '') + '…' : producto.nombre} al mejor precio en Monckey Gamer. Specs, opiniones y compra con envío Amazon.`;
 ---
 
-<SiteLayout title={`${producto.nombre} | Monckey Gamer`}>
+<SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <div class="producto-header">
     <a class="back-link" href="/mouse">← Volver a Mouse</a>
   </div>

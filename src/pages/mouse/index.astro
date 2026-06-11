@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Mouse';
+const metaDescription = "Mouse gamer con precisión extrema y diseño ergonómico. Sensores top y ligeros al mejor precio. ¡Gana cada duelo online!";
 const description = 'Ratones gaming ergonómicos con alta precisión y verdad táctil para cada tipo de jugador.';
 const productsData = productos['mouse'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Categoría</small>

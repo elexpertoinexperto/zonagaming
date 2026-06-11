@@ -7,6 +7,7 @@ import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
 const title = 'Refrigeración líquida';
+const metaDescription = "Refrigeración líquida AIO: temperaturas bajo control y máximo rendimiento. Silenciosa y RGB al mejor precio. ¡Enfría tu PC!";
 const description = 'Sistemas de enfriamiento líquido para mantener temperaturas bajas y ruido mínimo en tu equipo.';
 const productsData = productos['refrigeracion-liquida'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -20,7 +21,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`}>
+<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Categoría</small>
