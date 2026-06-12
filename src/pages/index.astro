@@ -12,17 +12,17 @@ const cpu = (productos['procesadores'] as any[]);
 const ram = (productos['memoria-ram'] as any[]);
 
 const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
-  { label: 'Procesadores', slug: '/procesadores', icon: 'cpu', description: 'CPU para multitarea y rendimiento extremo.' },
-  { label: 'Memoria RAM', slug: '/memoria-ram', icon: 'ram', description: 'Velocidad y capacidad para tus builds.' },
-  { label: 'SSD', slug: '/ssd', icon: 'ssd', description: 'Almacenamiento rápido para juegos y programas.' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder', icon: 'psu', description: 'Energía estable y eficiente para tu PC.' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida', icon: 'aio', description: 'Enfriamiento silencioso y de alto rendimiento.' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal', icon: 'fan', description: 'Ventiladores confiables para tu torre.' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer', icon: 'box', description: 'Estética, flujo de aire y espacio para tu setup.' },
-  { label: 'Teclados', slug: '/teclados', icon: 'keyboard', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
-  { label: 'Mouse', slug: '/mouse', icon: 'mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
-  { label: 'Audífonos', slug: '/audifonos', icon: 'audio', description: 'Sonido inmersivo para tus partidas y streaming.' },
+  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas/', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
+  { label: 'Procesadores', slug: '/procesadores/', icon: 'cpu', description: 'CPU para multitarea y rendimiento extremo.' },
+  { label: 'Memoria RAM', slug: '/memoria-ram/', icon: 'ram', description: 'Velocidad y capacidad para tus builds.' },
+  { label: 'SSD', slug: '/ssd/', icon: 'ssd', description: 'Almacenamiento rápido para juegos y programas.' },
+  { label: 'Fuentes de poder', slug: '/fuentes-de-poder/', icon: 'psu', description: 'Energía estable y eficiente para tu PC.' },
+  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida/', icon: 'aio', description: 'Enfriamiento silencioso y de alto rendimiento.' },
+  { label: 'Refrigeración normal', slug: '/refrigeracion-normal/', icon: 'fan', description: 'Ventiladores confiables para tu torre.' },
+  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer/', icon: 'box', description: 'Estética, flujo de aire y espacio para tu setup.' },
+  { label: 'Teclados', slug: '/teclados/', icon: 'keyboard', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
+  { label: 'Mouse', slug: '/mouse/', icon: 'mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
+  { label: 'Audífonos', slug: '/audifonos/', icon: 'audio', description: 'Sonido inmersivo para tus partidas y streaming.' },
 ];
 
 const bestSellerProducts = [
@@ -32,7 +32,7 @@ const bestSellerProducts = [
     description: tg.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(tg.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: tg.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/tarjetas-graficas/${tg.find((p: any) => p.id === 1)?.slug}-1`,
+    detailHref: `/tarjetas-graficas/${tg.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: tg.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
   {
@@ -41,7 +41,7 @@ const bestSellerProducts = [
     description: cpu.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(cpu.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: cpu.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/procesadores/${cpu.find((p: any) => p.id === 1)?.slug}-1`,
+    detailHref: `/procesadores/${cpu.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: cpu.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
   {
@@ -50,7 +50,7 @@ const bestSellerProducts = [
     description: ram.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(ram.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: ram.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/memoria-ram/${ram.find((p: any) => p.id === 1)?.slug}-1`,
+    detailHref: `/memoria-ram/${ram.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: ram.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
 ];
@@ -59,7 +59,7 @@ const bestSellerProducts = [
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href={`${Astro.site}favicon.ico`} sizes="any" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />

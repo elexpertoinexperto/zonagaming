@@ -8,7 +8,7 @@ const { title, description, robots } = Astro.props;
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href={`${Astro.site}favicon.ico`} sizes="any" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     {robots && <meta name="robots" content={robots} />}

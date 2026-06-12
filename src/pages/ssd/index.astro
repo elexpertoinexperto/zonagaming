@@ -16,7 +16,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   description: p.descripcion,
   price: `$${p.precio.toFixed(2)} USD`,
   imageUrl: p.imagenUrl,
-  detailHref: `/ssd/${p.slug}-${p.id}`,
+  detailHref: `/ssd/${p.slug}-${p.id}/`,
   amazonHref: p.enlaceAmazon,
 }));
 ---
@@ -41,7 +41,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
         imageUrl: product.imagenUrl,
-        detailHref: `/ssd/${product.slug}-${product.id}`,
+        detailHref: `/ssd/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
       }} />
     ))}
