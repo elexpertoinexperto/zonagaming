@@ -1,0 +1,242 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Por qué es importante que el mouse gamer pese poco?';
+const description =
+  'El peso del mouse gamer afecta la precisión, la fatiga y el rendimiento competitivo. Descubre cuánto debe pesar un mouse gamer ideal y por qué importa en cada género.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '4 min de lectura';
+
+const secciones = [
+  { id: 'peso-rendimiento', label: 'Peso y rendimiento' },
+  { id: 'cuanto-pesa', label: '¿Cuánto debe pesar?' },
+  { id: 'generos', label: 'Peso según género de juego' },
+  { id: 'ultraligeros', label: 'Mice ultraligeros: ventajas y desventajas' },
+  { id: 'fatiga', label: 'Fatiga y sesiones largas' },
+  { id: 'recomendaciones', label: 'Recomendaciones concretas' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Periféricos</span>
+      <h1>¿Por qué es importante que el mouse gamer pese poco?</h1>
+      <p class="post-lead">
+        El peso de tu mouse afecta cómo mueves la mira, cuánto te cansas en sesiones largas
+        y qué tan preciso eres en situaciones de alta presión. No es marketing: hay física real detrás.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="peso-rendimiento">
+        <h2>Peso del mouse y rendimiento: la física que importa</h2>
+        <p>
+          Un mouse más ligero requiere <strong>menos fuerza para acelerarlo y detenerlo</strong>.
+          En gaming, donde haces microajustes constantes de la mira, esto se traduce en:
+        </p>
+        <ul class="post-list">
+          <li>Correcciones de trayectoria más rápidas y precisas.</li>
+          <li>Menor inercia al detener el movimiento (el mouse no "sigue" después de parar la mano).</li>
+          <li>Menor fatiga muscular en la muñeca y el antebrazo en sesiones largas.</li>
+        </ul>
+        <p>
+          No significa que un mouse pesado sea malo: hay jugadores profesionales que prefieren
+          el peso porque les da más control. Pero la tendencia general en el gaming competitivo
+          es hacia los mice ultraligeros.
+        </p>
+      </section>
+
+      <section id="cuanto-pesa">
+        <h2>¿Cuánto debe pesar un mouse gamer?</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Peso</th>
+                <th>Categoría</th>
+                <th>Para quién</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Menos de 50g</td><td>Ultraligero</td><td>Competitivo extremo / FPS pro</td></tr>
+              <tr><td>50–70g</td><td>Ligero</td><td>Gaming competitivo casual y semipro</td></tr>
+              <tr><td>70–90g</td><td>Medio</td><td>Gaming general, MOBA, RTS</td></tr>
+              <tr><td>90–120g</td><td>Estándar</td><td>Todo uso, preferencia de control</td></tr>
+              <tr><td>Más de 120g</td><td>Pesado</td><td>Uso office o preferencia personal</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          El sweet spot para gaming competitivo en 2026 está entre 50–70g. Menos de 50g es territorio
+          de mice con estructura "honeycomb" (perforada) o materiales premium.
+        </p>
+      </section>
+
+      <section id="generos">
+        <h2>Peso según el género que juegas</h2>
+        <ul class="post-list">
+          <li>
+            <strong>FPS (CS2, Valorant, Apex):</strong> cuanto más ligero, mejor.
+            Los movimientos de mira son frecuentes y rápidos. Los pros usan mice de 40–60g.
+            El <a href="/mouse/pulsar-x3-crazylight-wireless-43g-white-2/">Pulsar X3 CrazyLight 43g</a>
+            es un ejemplo extremo de esta filosofía.
+          </li>
+          <li>
+            <strong>MOBA (Dota 2, LoL):</strong> el peso importa menos. Movimientos lentos y precisos.
+            Un mouse de 80–100g con buen clic funciona perfectamente.
+          </li>
+          <li>
+            <strong>Battle Royale (Warzone, PUBG):</strong> peso medio-ligero (55–75g).
+            Mezcla de aimdown-sight preciso y movimiento de cámara libre.
+          </li>
+          <li>
+            <strong>RPG / Aventura:</strong> el peso es irrelevante. Prioriza botones adicionales
+            y comodidad ergonómica sobre el peso.
+          </li>
+        </ul>
+      </section>
+
+      <section id="ultraligeros">
+        <h2>Mice ultraligeros: ventajas y posibles desventajas</h2>
+        <p>
+          Los mice de menos de 60g tienen ventajas claras en competitivo, pero también
+          algunos compromisos:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Ventaja:</strong> menos fatiga, mayor velocidad de reacción,
+            correcciones más precisas. Ideal para jugadores con sensibilidad alta (low-DPI).
+          </li>
+          <li>
+            <strong>Posible inconveniente:</strong> sensación de mouse "barato" para usuarios
+            acostumbrados a mice más pesados. Requiere adaptación.
+          </li>
+          <li>
+            <strong>Sin honeycomb:</strong> los mejores ultraligeros modernos como el
+            <a href="/mouse/attack-shark-x3-wireless-paw3395-49g-1/">Attack Shark X3 49g</a>
+            logran bajo peso con materiales y diseño optimizado, sin agujeros en la carcasa.
+          </li>
+        </ul>
+      </section>
+
+      <section id="fatiga">
+        <h2>Peso y fatiga en sesiones largas</h2>
+        <p>
+          En una sesión de gaming de 3–4 horas, la diferencia entre un mouse de 120g y uno de 60g
+          se traduce en miles de movimientos repetidos con el doble de masa. El impacto acumulado
+          en muñeca y antebrazo es real.
+        </p>
+        <p>
+          Los jugadores que experimentan tendinitis o fatiga en la muñeca suelen mejorar
+          significativamente al cambiar a un mouse más ligero. No es solo rendimiento:
+          es también ergonomía a largo plazo.
+        </p>
+      </section>
+
+      <section id="recomendaciones">
+        <h2>Recomendaciones concretas por peso</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Ultra-ligero inalámbrico:</strong>
+            <a href="/mouse/pulsar-x3-crazylight-wireless-43g-white-2/">Pulsar X3 CrazyLight 43g</a>
+            — el más ligero de nuestro catálogo. Para FPS serio.
+          </li>
+          <li>
+            <strong>Ligero inalámbrico con sensor top:</strong>
+            <a href="/mouse/razer-viper-v4-pro-wireless-50k-49g-4/">Razer Viper V4 Pro 49g</a>
+            — sensor HyperTracking 50K en 49 gramos. Lo mejor del mercado.
+          </li>
+          <li>
+            <strong>Ligero con cable (sin latencia):</strong>
+            <a href="/mouse/razer-basilisk-v3-wired-26k-11buttons-3/">Razer Basilisk V3 Wired</a>
+            — más botones, sensor preciso, cable ultraflexible que no se nota.
+          </li>
+          <li>
+            <strong>Presupuesto ajustado:</strong>
+            <a href="/mouse/attack-shark-x3-wireless-paw3395-49g-1/">Attack Shark X3 49g</a>
+            — ultraligero sin pagar precio premium.
+          </li>
+        </ul>
+        <p>
+          Explora todos los modelos en nuestro catálogo de <a href="/mouse/">mouse gamer</a>
+          con el peso especificado en cada ficha.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Encuentra tu mouse ideal</h3>
+      <p>Mice gamer ligeros y ultraligeros con los mejores sensores al mejor precio.</p>
+      <a class="btn" href="/mouse/">Ver mouse gamer</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

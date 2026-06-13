@@ -1,0 +1,213 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Por qué es importante la velocidad de bus en una tarjeta gráfica?';
+const description =
+  'La velocidad de bus de una GPU determina cuántos datos mueve tu tarjeta por segundo. Descubre cómo afecta al rendimiento en juegos y qué velocidad necesitas.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '4 min de lectura';
+
+const secciones = [
+  { id: 'que-es', label: 'Velocidad de bus: definición' },
+  { id: 'ancho-banda', label: 'Ancho de banda de memoria' },
+  { id: 'gddr', label: 'GDDR6, GDDR6X y GDDR7' },
+  { id: 'importancia', label: '¿Cuándo importa más?' },
+  { id: 'tabla', label: 'Comparativa de velocidades' },
+  { id: 'conclusion', label: 'Resumen práctico' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>¿Por qué es importante la velocidad de bus en una tarjeta gráfica?</h1>
+      <p class="post-lead">
+        La velocidad de bus no es solo un número en las especificaciones: define directamente
+        qué tan rápido puede "pensar" tu GPU. Entenderlo te ayuda a elegir la tarjeta correcta
+        para tu resolución y tus juegos.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="que-es">
+        <h2>Velocidad de bus: ¿qué significa?</h2>
+        <p>
+          Cuando hablamos de <strong>velocidad de bus de memoria</strong> en una GPU, nos referimos a la
+          frecuencia a la que opera la VRAM: los gigabits por segundo (Gbps) que puede transferir
+          cada pin de memoria en un segundo.
+        </p>
+        <p>
+          No confundas esto con el <em>ancho de bus</em> (los bits). Son dos cosas distintas:
+          el ancho define cuántos carriles hay, y la velocidad define a qué ritmo corre cada carril.
+          Juntos determinan el <strong>ancho de banda total</strong>.
+        </p>
+      </section>
+
+      <section id="ancho-banda">
+        <h2>Ancho de banda: el número que de verdad importa</h2>
+        <p>
+          El ancho de banda es el resultado de multiplicar velocidad × ancho de bus.
+          Es lo que realmente dice cuántos datos por segundo puede manejar tu tarjeta.
+        </p>
+        <p>
+          Una tarjeta con GDDR7 a 28 Gbps y bus de 128 bits puede igualar o superar
+          el ancho de banda de una tarjeta antigua con 256 bits de GDDR5 a 8 Gbps.
+          Por eso la generación de VRAM importa tanto como el número de bits.
+        </p>
+        <p class="post-note">
+          Regla rápida: ancho de banda alto = menos stutters en texturas, menos caídas de FPS
+          cuando activas ajustes exigentes como ray tracing o resolución 4K.
+        </p>
+      </section>
+
+      <section id="gddr">
+        <h2>GDDR6, GDDR6X y GDDR7: diferencias de velocidad</h2>
+        <ul class="post-list">
+          <li>
+            <strong>GDDR6:</strong> velocidad típica de 14–18 Gbps por pin.
+            El estándar actual en la gama media. Presente en tarjetas como la
+            <a href="/tarjetas-graficas/gigabyte-radeon-rx-9060-xt-gaming-oc-16g-4/">RX 9060 XT</a>.
+          </li>
+          <li>
+            <strong>GDDR6X:</strong> versión modificada de GDDR6 con técnica PAM4 que dobla
+            la señalización efectiva. Velocidades de 19–23 Gbps. Usada en la gama alta NVIDIA.
+          </li>
+          <li>
+            <strong>GDDR7:</strong> la generación más nueva. 28–32 Gbps por pin,
+            con mejor eficiencia energética. Presente en la
+            <a href="/tarjetas-graficas/asus-dual-rtx-5060-8gb-oc-2/">RTX 5060</a> y modelos superiores.
+          </li>
+        </ul>
+      </section>
+
+      <section id="importancia">
+        <h2>¿Cuándo importa más la velocidad de bus?</h2>
+        <p>
+          El ancho de banda se convierte en cuello de botella especialmente en estos escenarios:
+        </p>
+        <ul class="post-list">
+          <li>Resoluciones altas: 1440p y 4K mueven hasta 4× más datos que 1080p.</li>
+          <li>Ray tracing: dobla o triplica la cantidad de datos que necesita la GPU.</li>
+          <li>Mods con texturas 4K o 8K en juegos de PC.</li>
+          <li>Juegos de mundo abierto con streaming masivo de assets (RDR2, Cyberpunk 2077).</li>
+        </ul>
+        <p>
+          En cambio, en shooters competitivos a 1080p bajo (CS2, Valorant, Apex), la velocidad
+          de bus apenas se nota porque las texturas son pequeñas y los FPS dependen más de la GPU y CPU.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>Comparativa de velocidades en tarjetas actuales</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Tarjeta</th>
+                <th>Tipo VRAM</th>
+                <th>Velocidad</th>
+                <th>Ancho de banda</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>RX 580</td><td>GDDR5</td><td>8 Gbps</td><td>~256 GB/s</td></tr>
+              <tr><td>RTX 5060 8GB</td><td>GDDR7</td><td>28 Gbps</td><td>~448 GB/s</td></tr>
+              <tr><td>RX 9060 XT 16G</td><td>GDDR6</td><td>18 Gbps</td><td>~576 GB/s</td></tr>
+              <tr><td>RX 9070 XT 16G</td><td>GDDR6</td><td>20 Gbps</td><td>~640 GB/s</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>Resumen práctico</h2>
+        <p>
+          No elijas una tarjeta solo por los GB de VRAM ni solo por el número de bits del bus.
+          Busca la <strong>combinación de tipo de VRAM + ancho de bus</strong> que dé el mayor
+          ancho de banda para tu presupuesto.
+        </p>
+        <p>
+          Para 1080p, cualquier tarjeta moderna con GDDR6 es más que suficiente.
+          Para 1440p o 4K, apunta a tarjetas con GDDR6X o GDDR7 y bus de 192 bits o más.
+          Explora nuestro catálogo de <a href="/tarjetas-graficas/">tarjetas gráficas</a>
+          con specs completas para comparar.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Encuentra tu GPU ideal</h3>
+      <p>Compara tarjetas gráficas con el ancho de banda que necesitas para tu setup.</p>
+      <a class="btn" href="/tarjetas-graficas/">Ver tarjetas gráficas</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

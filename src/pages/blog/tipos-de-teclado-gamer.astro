@@ -1,0 +1,230 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Cuáles son los tipos de teclado gamer? Guía completa';
+const description =
+  'Teclados mecánicos, de membrana o ópticos: guía rápida para entender los tipos de teclado gamer, sus diferencias y cuál conviene según tu forma de jugar.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '5 min de lectura';
+
+const secciones = [
+  { id: 'mecanico', label: 'Teclado mecánico' },
+  { id: 'membrana', label: 'Teclado de membrana' },
+  { id: 'optico', label: 'Teclado óptico' },
+  { id: 'tamanos', label: 'Tamaños: 100%, 75%, 60%' },
+  { id: 'cable-vs-inalambrico', label: 'Cable vs inalámbrico' },
+  { id: 'cual-elegir', label: '¿Cuál elegir?' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Periféricos</span>
+      <h1>¿Cuáles son los tipos de teclado gamer?</h1>
+      <p class="post-lead">
+        Antes de elegir un teclado gamer conviene saber que no todos son iguales por dentro.
+        La tecnología de los switches define completamente cómo se siente y cómo funciona tu teclado.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="mecanico">
+        <h2>Teclado mecánico: el rey del gaming</h2>
+        <p>
+          Los <strong>teclados mecánicos</strong> usan un switch individual para cada tecla,
+          con un mecanismo físico (resorte + contacto) que activa la pulsación. Son los más usados
+          en gaming por su respuesta precisa, durabilidad (50–100 millones de pulsaciones por switch)
+          y tacto personalizable según el tipo de switch.
+        </p>
+        <p>
+          Los tipos de switch más comunes son:
+        </p>
+        <ul class="post-list">
+          <li><strong>Lineales (Red, Speed Silver):</strong> sin punto de activación ni click. Fluidos y rápidos. Ideales para gaming.</li>
+          <li><strong>Táctiles (Brown):</strong> tienen un ligero "bump" al activarse, sin click audible. Para gaming y escritura.</li>
+          <li><strong>Clicky (Blue, Green):</strong> con bump y click audible. Satisfactorios al escribir, pueden molestar en espacios compartidos.</li>
+        </ul>
+        <p>
+          Opciones mecánicas como el
+          <a href="/teclados/redthunder-k75-wireless-75pct-hotswap-2/">RedThunder K75 Wireless Hot-swap</a>
+          o el <a href="/teclados/redragon-mechanical-wired-hotswap-red-4/">Redragon Mechanical Hot-swap Red</a>
+          son excelentes puntos de entrada al mundo mecánico.
+        </p>
+      </section>
+
+      <section id="membrana">
+        <h2>Teclado de membrana: económico y silencioso</h2>
+        <p>
+          Los teclados de <strong>membrana</strong> usan tres capas de plástico flexible que
+          se comprimen al pulsar una tecla. Son más baratos, silenciosos y resistentes al polvo,
+          pero tienen menor precisión táctil y vida útil más corta (5–10 millones de pulsaciones).
+        </p>
+        <p>
+          Para gaming casual o uso general son perfectamente válidos. No dan la ventaja
+          de respuesta de un mecánico, pero tampoco la necesitas si juegas de forma recreativa.
+        </p>
+      </section>
+
+      <section id="optico">
+        <h2>Teclado óptico: velocidad máxima</h2>
+        <p>
+          Los <strong>teclados ópticos</strong> usan un haz de luz infrarroja para detectar
+          la pulsación, sin contacto físico. Resultado: el tiempo de activación es prácticamente
+          instantáneo (0.2ms vs 1–2ms de un mecánico estándar).
+        </p>
+        <p>
+          Son ideales para gaming competitivo donde cada milisegundo cuenta.
+          También son más resistentes al rebote de contacto (key chatter).
+          El precio suele ser más alto que los mecánicos equivalentes.
+        </p>
+      </section>
+
+      <section id="tamanos">
+        <h2>Tamaños de teclado: 100%, 75%, 65%, 60%</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Tamaño</th>
+                <th>Teclas aprox.</th>
+                <th>Lo que elimina</th>
+                <th>Para quién</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>100% (Full)</td><td>104</td><td>Nada</td><td>Usuarios de numpad y funciones</td></tr>
+              <tr><td>75%</td><td>84</td><td>Numpad</td><td>Gaming + escritura equilibrado</td></tr>
+              <tr><td>65%</td><td>68</td><td>Numpad + F-row</td><td>Más espacio para el mouse</td></tr>
+              <tr><td>60%</td><td>61</td><td>Numpad + F-row + navegación</td><td>Minimalista / competitivo extremo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          El formato <strong>75%</strong> es el más popular en gaming actualmente: compacto
+          sin sacrificar las teclas que más se usan. El
+          <a href="/teclados/aula-f75-pro-wireless-75pct-reaper-3/">AULA F75 Pro Wireless</a>
+          es una opción sólida en este formato.
+        </p>
+      </section>
+
+      <section id="cable-vs-inalambrico">
+        <h2>Cable vs inalámbrico: ¿importa para gaming?</h2>
+        <p>
+          La latencia de los teclados inalámbricos modernos (1ms a 2.4GHz) es imperceptible
+          en gaming. La elección es casi siempre de comodidad:
+        </p>
+        <ul class="post-list">
+          <li><strong>Cable:</strong> cero riesgo de quedarte sin batería. Latencia garantizada.</li>
+          <li><strong>Inalámbrico:</strong> escritorio más limpio, libertad de movimiento. Necesita carga periódica.</li>
+        </ul>
+        <p>
+          El <a href="/teclados/aula-f75-pro-white-wireless-knob-5/">AULA F75 Pro White Wireless</a>
+          y el <a href="/teclados/aula-s75-pro-screen-knob-trimode-7/">AULA S75 Pro Tri-mode</a>
+          ofrecen conectividad triple (USB, Bluetooth 5.0 y 2.4GHz) para la máxima flexibilidad.
+        </p>
+      </section>
+
+      <section id="cual-elegir">
+        <h2>¿Qué tipo de teclado gamer elegir?</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Gaming competitivo / FPS:</strong> mecánico con switches lineales o teclado óptico.
+            Formato 65–75% para más espacio de mouse.
+          </li>
+          <li>
+            <strong>Gaming + streaming / trabajo:</strong> mecánico 75–100% con switches táctiles.
+            Inalámbrico si valoras el orden en el escritorio.
+          </li>
+          <li>
+            <strong>Presupuesto ajustado:</strong> el
+            <a href="/teclados/redthunder-k10-combo-rgb-wired-1/">RedThunder K10 Combo RGB</a>
+            es una opción mecánica económica que incluye mouse.
+          </li>
+          <li>
+            <strong>Experiencia premium:</strong> hot-swap (switches intercambiables sin soldadura)
+            para poder cambiar el feeling cuando quieras.
+          </li>
+        </ul>
+        <p>
+          Explora todas las opciones en nuestro catálogo de
+          <a href="/teclados/">teclados gamer</a> con specs completas de switches y conectividad.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Encuentra tu teclado gamer ideal</h3>
+      <p>Mecánicos, inalámbricos y con hot-swap al mejor precio con envío Amazon.</p>
+      <a class="btn" href="/teclados/">Ver teclados gamer</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

@@ -1,0 +1,251 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Qué tener en cuenta para comprar un gabinete gamer?';
+const description =
+  'Guía de compra de gabinetes gamer: tamaño, airflow, compatibilidad, materiales y qué errores evitar. Elige la caja correcta para tu build desde el principio.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '5 min de lectura';
+
+const secciones = [
+  { id: 'tamano', label: 'Tamaño: ATX, mATX, ITX' },
+  { id: 'airflow', label: 'Airflow: lo más importante' },
+  { id: 'compatibilidad', label: 'Compatibilidad de componentes' },
+  { id: 'materiales', label: 'Materiales y construcción' },
+  { id: 'estetica', label: 'Estética y gestión de cables' },
+  { id: 'errores', label: 'Errores comunes al elegir' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>¿Qué tener en cuenta para comprar un gabinete gamer?</h1>
+      <p class="post-lead">
+        El gabinete es el componente que más se ignora al armar un PC y el que más problemas
+        causa después: componentes que no caben, temperaturas altas, cables imposibles de gestionar.
+        Esta guía te evita esos errores.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="tamano">
+        <h2>Tamaño del gabinete: ATX, mATX o ITX</h2>
+        <p>
+          El tamaño del gabinete debe corresponder con el tamaño de tu placa base. Los tres formatos más comunes:
+        </p>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Formato</th>
+                <th>Placa base</th>
+                <th>Ventajas</th>
+                <th>Ideal para</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Full Tower</td><td>E-ATX / ATX</td><td>Máximo espacio y airflow</td><td>Builds high-end y water cooling custom</td></tr>
+              <tr><td>Mid Tower</td><td>ATX / mATX</td><td>Equilibrio espacio/tamaño</td><td>La mayoría de gaming builds</td></tr>
+              <tr><td>Mini Tower</td><td>mATX</td><td>Compacto, más económico</td><td>Builds económicas y secundarios</td></tr>
+              <tr><td>ITX</td><td>Mini-ITX</td><td>Muy pequeño</td><td>Builds compactas con limitaciones</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          El Mid Tower ATX es el formato más recomendado para el 90% de gamers: cabe cualquier
+          componente estándar y hay opciones para todos los presupuestos.
+        </p>
+      </section>
+
+      <section id="airflow">
+        <h2>Airflow: el factor más importante para temperaturas</h2>
+        <p>
+          El <strong>flujo de aire</strong> dentro del gabinete determina las temperaturas de todos
+          tus componentes, no solo del CPU. Un gabinete con mal airflow puede hacer que incluso
+          un AIO de 360mm dé peores temperaturas que un cooler de torre en un buen chasis.
+        </p>
+        <p>
+          Lo que necesitas para un buen airflow:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Paneles con malla:</strong> el panel frontal y superior de malla permiten
+            la entrada y salida de aire sin restricciones. Los paneles de vidrio templado
+            sólido en el frontal reducen el flujo de aire significativamente.
+          </li>
+          <li>
+            <strong>Ventiladores incluidos:</strong> la mayoría de gabinetes gamer incluyen
+            2–7 ventiladores ARGB. Verifica que vienen pre-instalados y si el flujo es intake/exhaust adecuado.
+          </li>
+          <li>
+            <strong>Configuración recomendada:</strong> aire frío entra por el frontal y la base,
+            aire caliente sale por la parte superior y trasera.
+          </li>
+        </ul>
+      </section>
+
+      <section id="compatibilidad">
+        <h2>Compatibilidad: comprueba estas medidas antes de comprar</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Longitud máxima de GPU:</strong> las tarjetas gráficas modernas como la
+            <a href="/tarjetas-graficas/gigabyte-radeon-rx-9070-xt-gaming-oc-16g-7/">RX 9070 XT 16G</a>
+            superan los 340mm. Verifica que tu gabinete las soporta.
+          </li>
+          <li>
+            <strong>Altura máxima de CPU cooler:</strong> los coolers de torre altos como el Noctua NH-D15
+            miden 168mm. Los gabinetes estándar admiten 160–170mm.
+          </li>
+          <li>
+            <strong>Soporte de radiador AIO:</strong> verifica el tamaño máximo de radiador
+            (240mm o 360mm) en frontal y superior.
+          </li>
+          <li>
+            <strong>Número de slots de expansión:</strong> las GPUs actuales ocupan 2–3 slots.
+          </li>
+        </ul>
+      </section>
+
+      <section id="materiales">
+        <h2>Materiales y construcción</h2>
+        <p>
+          La calidad de construcción del gabinete afecta al ruido, la durabilidad y la experiencia
+          de montaje. Los materiales más comunes:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Acero SPCC (0.5–0.7mm):</strong> el estándar en la gama media.
+            Suficientemente rígido para la mayoría de builds.
+          </li>
+          <li>
+            <strong>Aluminio:</strong> más ligero y premium. Aparece en gabinetes de gama alta.
+          </li>
+          <li>
+            <strong>Vidrio templado:</strong> el panel lateral de cristal es la norma actual.
+            Asegúrate de que el grosor sea de al menos 4mm.
+          </li>
+        </ul>
+      </section>
+
+      <section id="estetica">
+        <h2>Estética y gestión de cables</h2>
+        <p>
+          Un buen gabinete facilita la gestión de cables con:
+        </p>
+        <ul class="post-list">
+          <li>Espacio trasero de al menos 20mm para pasar cables por detrás de la bandeja.</li>
+          <li>Pasacables con ojales de goma en las posiciones estratégicas.</li>
+          <li>Bridas o velcro incluidos para organizar los manojos de cables.</li>
+        </ul>
+        <p>
+          En términos de estética, modelos como el
+          <a href="/gabinetes-gamer/corsair-4000d-rs-argb-modular-black-6/">Corsair 4000D RS ARGB</a>
+          o el <a href="/gabinetes-gamer/foifkin-f600-atx-7fans-argb-black-3/">Foifkin F600 con 7 fans ARGB</a>
+          combinan panel de cristal, buena gestión de cables y airflow sin restricciones.
+        </p>
+      </section>
+
+      <section id="errores">
+        <h2>Errores comunes al elegir gabinete</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Elegir por la estética y no verificar las medidas:</strong> la GPU no cabe,
+            el AIO no tiene espacio para el radiador, el cooler toca el panel lateral.
+          </li>
+          <li>
+            <strong>Ignorar el airflow por un panel frontal sólido "bonito":</strong>
+            los paneles sólidos pueden subir las temperaturas del sistema 5–10°C.
+          </li>
+          <li>
+            <strong>No verificar los conectores de la placa frontal:</strong> asegúrate de
+            que tu placa base tiene cabecera USB-C frontal si el gabinete lo incluye.
+          </li>
+          <li>
+            <strong>Comprar un gabinete demasiado pequeño para upgrades futuros:</strong>
+            si planeas añadir componentes, elige uno con espacio de sobra desde el principio.
+          </li>
+        </ul>
+        <p>
+          Compara todos nuestros modelos en el catálogo de
+          <a href="/gabinetes-gamer/">gabinetes gamer</a> con dimensiones y compatibilidad completas.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>¿Listo para elegir tu gabinete?</h3>
+      <p>Explora nuestra selección de gabinetes gamer con airflow, ARGB y las medidas que necesitas.</p>
+      <a class="btn" href="/gabinetes-gamer/">Ver gabinetes gamer</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

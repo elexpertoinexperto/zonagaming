@@ -1,0 +1,240 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = 'Refrigeración líquida vs cooler de aire: ¿cuál es mejor?';
+const description =
+  'AIO vs cooler de aire: ¿qué conviene para gaming en 2026? Comparativa honesta de temperaturas, precio, ruido y facilidad de instalación para que elijas bien.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '5 min de lectura';
+
+const secciones = [
+  { id: 'diferencias', label: 'Diferencias principales' },
+  { id: 'temperatura', label: 'Rendimiento térmico' },
+  { id: 'ruido', label: 'Ruido' },
+  { id: 'precio', label: 'Precio y valor' },
+  { id: 'instalacion', label: 'Instalación' },
+  { id: 'cual-elegir', label: '¿Cuál elegir?' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>Refrigeración líquida vs cooler de aire: ¿cuál es mejor?</h1>
+      <p class="post-lead">
+        La batalla eterna del PC gaming. La respuesta honesta es que no hay un ganador universal:
+        depende de tu CPU, tu gabinete y lo que priorices. Aquí lo comparamos todo de forma directa.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="diferencias">
+        <h2>Diferencias principales entre AIO y cooler de aire</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Cooler de aire</th>
+                <th>Refrigeración líquida (AIO)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Precio</td><td>Más económico</td><td>Mayor inversión</td></tr>
+              <tr><td>Instalación</td><td>Sencilla</td><td>Moderada</td></tr>
+              <tr><td>Temperaturas</td><td>Muy buenas en gama alta</td><td>Excelentes (360mm)</td></tr>
+              <tr><td>Ruido</td><td>Depende del modelo</td><td>Depende del modelo</td></tr>
+              <tr><td>Durabilidad</td><td>10+ años (sin partes móviles en riesgo)</td><td>5–8 años (bomba)</td></tr>
+              <tr><td>Estética</td><td>Bulk visible en el gabinete</td><td>Limpia, ARGB opcional</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="temperatura">
+        <h2>Rendimiento térmico: ¿cuál enfría mejor?</h2>
+        <p>
+          Un AIO 360mm de buena calidad bate en temperaturas a casi cualquier cooler de aire en pruebas de estrés.
+          Sin embargo, un cooler de torre doble como el
+          <a href="/refrigeracion-normal/noctua-nh-d15-g2-hbc-5/">Noctua NH-D15</a> o el
+          <a href="/refrigeracion-normal/thermalright-peerless-assassin-120-se-7/">Thermalright Peerless Assassin 120 SE</a>
+          iguala o supera a muchos AIOs 240mm en pruebas de larga duración.
+        </p>
+        <p>
+          La ventaja real del AIO aparece en:
+        </p>
+        <ul class="post-list">
+          <li>CPUs de muy alto TDP (125W+) en overclock sostenido.</li>
+          <li>Gabinetes pequeños donde no cabe un cooler de torre grande.</li>
+          <li>Temperaturas ambientales altas (más de 28°C).</li>
+        </ul>
+        <p class="post-note">
+          Dato: en gaming normal sin OC, la diferencia entre un buen cooler de aire y un AIO 240mm
+          es de solo 3–7°C. No es el salto enorme que muchos esperan.
+        </p>
+      </section>
+
+      <section id="ruido">
+        <h2>Ruido: empate técnico con matices</h2>
+        <p>
+          Contrario a lo que muchos creen, los AIOs no son automáticamente más silenciosos que los coolers de aire.
+        </p>
+        <ul class="post-list">
+          <li>
+            Un AIO trae 2–3 ventiladores en el radiador + la bomba, que suma ruidos.
+            Si la curva no está bien configurada, puede ser más ruidoso que un buen torre.
+          </li>
+          <li>
+            Un cooler de torre con un solo ventilador de calidad como el
+            <a href="/refrigeracion-normal/thermalright-peerless-assassin-120-se-7/">Thermalright Peerless Assassin 120 SE</a>
+            puede ser más silencioso que un AIO genérico a plena carga.
+          </li>
+        </ul>
+        <p>
+          Los AIOs de gama alta (Arctic, Corsair, Thermalright) incluyen ventiladores de calidad
+          que sí logran un perfil de ruido muy bajo a carga normal.
+        </p>
+      </section>
+
+      <section id="precio">
+        <h2>Precio y valor: cooler de aire gana en presupuesto ajustado</h2>
+        <p>
+          Por el mismo presupuesto, un cooler de torre de calidad enfría casi igual que un AIO 240mm
+          de gama media y dura más (sin bomba que pueda fallar a los 5 años).
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Budget gaming:</strong> el
+            <a href="/refrigeracion-normal/thermalright-assassin-spirit-120-evo-3/">Thermalright Assassin Spirit 120 EVO</a>
+            es una ganga para CPUs de 65–95W.
+          </li>
+          <li>
+            <strong>Gama media:</strong> el
+            <a href="/refrigeracion-liquida/thermalright-aqua-elite-240-v3-7/">Thermalright Aqua Elite 240 V3</a>
+            ofrece las ventajas de AIO sin romper el banco.
+          </li>
+          <li>
+            <strong>High-end:</strong> el
+            <a href="/refrigeracion-liquida/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>
+            es el rey en temperaturas para CPUs de 150W+ en OC.
+          </li>
+        </ul>
+      </section>
+
+      <section id="instalacion">
+        <h2>Instalación: aire es más sencillo</h2>
+        <p>
+          Un cooler de torre se instala en menos de 10 minutos: backplate, pasta térmica, encaja y atornilla.
+          Un AIO requiere montar el radiador en el gabinete, gestionar mangueras, conectar bomba
+          y ventiladores correctamente. Son unos 20–30 minutos la primera vez.
+        </p>
+        <p>
+          Si nunca has montado un PC y quieres simplicidad, el cooler de aire es más perdonador.
+          Si no te importa el proceso, el AIO no es difícil una vez lo ves en video.
+        </p>
+      </section>
+
+      <section id="cual-elegir">
+        <h2>¿Cuál elegir según tu caso?</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Si eres así...</th>
+                <th>Elige esto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Presupuesto ajustado, CPU de 65–95W</td><td>Cooler de torre bueno</td></tr>
+              <tr><td>Gabinete pequeño (ITX / mATX)</td><td>AIO 120mm / 240mm bajo</td></tr>
+              <tr><td>CPU 125W+ con OC</td><td>AIO 280mm o 360mm</td></tr>
+              <tr><td>Quieres lo más silencioso posible</td><td>Noctua NH-D15 o AIO high-end</td></tr>
+              <tr><td>Priorizas la estética ARGB</td><td>AIO con ARGB</td></tr>
+              <tr><td>Quieres máxima durabilidad sin mantenimiento</td><td>Cooler de aire</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Explora nuestros catálogos de
+          <a href="/refrigeracion-liquida/">refrigeración líquida</a> y
+          <a href="/refrigeracion-normal/">refrigeración normal</a> con todas las opciones disponibles.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>¿Ya sabes cuál necesitas?</h3>
+      <p>Coolers de aire y AIOs al mejor precio con envío Amazon en Monckey Gamer.</p>
+      <a class="btn" href="/refrigeracion-liquida/">Ver refrigeración</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

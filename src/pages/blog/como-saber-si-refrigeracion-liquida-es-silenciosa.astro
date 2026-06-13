@@ -1,0 +1,243 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Cómo saber si una refrigeración líquida no es ruidosa?';
+const description =
+  'Guía para identificar AIOs silenciosos: qué datos mirar en las specs, diferencia entre dB y dBA, y qué marcas hacen los AIOs más silenciosos del mercado.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '4 min de lectura';
+
+const secciones = [
+  { id: 'ruido-aio', label: '¿De dónde viene el ruido?' },
+  { id: 'db-specs', label: 'Los dB en las especificaciones' },
+  { id: 'ventiladores', label: 'Ventiladores: el factor clave' },
+  { id: 'bomba', label: 'Ruido de la bomba' },
+  { id: 'tabla', label: 'AIOs más silenciosos' },
+  { id: 'consejo', label: 'Consejos para reducir ruido' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>¿Cómo saber si una refrigeración líquida no es ruidosa?</h1>
+      <p class="post-lead">
+        Muchos compran un AIO esperando silencio y se encuentran con ventiladores que suenan
+        más que su cooler anterior. Esto es lo que tienes que mirar antes de comprar.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="ruido-aio">
+        <h2>¿De dónde viene el ruido en un AIO?</h2>
+        <p>
+          Un sistema de refrigeración líquida tiene dos fuentes de ruido:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Los ventiladores del radiador:</strong> son responsables del 80-90% del
+            ruido total. Cuantos más RPM, más ruido. La mayoría de AIOs traen ventiladores
+            que giran entre 800 y 2000 RPM según la carga.
+          </li>
+          <li>
+            <strong>La bomba:</strong> es continua y de baja intensidad. En la mayoría de AIOs
+            bien diseñados es casi inaudible. Solo se nota en las primeras horas si hay
+            microburbujas de aire que luego desaparecen.
+          </li>
+        </ul>
+      </section>
+
+      <section id="db-specs">
+        <h2>Los dB en las especificaciones: qué significan</h2>
+        <p>
+          El <strong>nivel de ruido en dBA</strong> (decibeles ponderados A) es el dato que
+          miden las marcas. Escala de referencia para ponerlo en contexto:
+        </p>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Nivel de ruido</th>
+                <th>Referencia</th>
+                <th>Percepción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>&lt; 25 dBA</td><td>Biblioteca</td><td>Casi inaudible</td></tr>
+              <tr><td>25–30 dBA</td><td>PC silencioso</td><td>Muy suave</td></tr>
+              <tr><td>30–35 dBA</td><td>PC normal</td><td>Audible pero no molesto</td></tr>
+              <tr><td>35–45 dBA</td><td>PC bajo carga</td><td>Claramente audible</td></tr>
+              <tr><td>&gt; 45 dBA</td><td>Aspiradora baja</td><td>Molesto para uso continuo</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          Aviso: muchas marcas miden el ruido en condiciones de carga mínima (800 RPM).
+          Busca la cifra a carga máxima para saber lo que escucharás en partidas exigentes.
+        </p>
+      </section>
+
+      <section id="ventiladores">
+        <h2>Los ventiladores: el factor más importante</h2>
+        <p>
+          No todos los ventiladores que incluyen los AIOs son iguales. Estos son los factores
+          que determinan el silencio:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>RPM máximas bajas:</strong> un ventilador que llega a 1200 RPM como máximo
+            será siempre más silencioso que uno que llega a 2000 RPM, asumiendo mismo diseño.
+          </li>
+          <li>
+            <strong>Rodamientos de calidad:</strong> los rodamientos FDB (Fluid Dynamic Bearing)
+            duran más y hacen menos ruido que los rodamientos de bolas baratos.
+          </li>
+          <li>
+            <strong>Perfil de la curva PWM:</strong> ventiladores con rango amplio de PWM
+            (20–100%) permiten velocidades muy bajas en reposo, imperceptibles al oído.
+          </li>
+        </ul>
+      </section>
+
+      <section id="bomba">
+        <h2>El ruido de la bomba: cuándo preocuparse</h2>
+        <p>
+          La bomba de un AIO de buena calidad emite un zumbido suave continuo que en la práctica
+          queda enmascarado por los ventiladores. No deberías escucharla si los fans están girando.
+        </p>
+        <p>
+          Señales de que algo va mal con la bomba:
+        </p>
+        <ul class="post-list">
+          <li>Burbujeo persistente después de las primeras 24 horas de uso.</li>
+          <li>Ruido de rascado o clic intermitente.</li>
+          <li>Temperaturas del CPU elevadas con el AIO en pleno funcionamiento.</li>
+        </ul>
+        <p>
+          Si notas alguno de estos síntomas pasadas las primeras 24 horas, contacta con el servicio
+          de garantía del fabricante.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>AIOs destacados por silencio</h2>
+        <p>
+          Algunos modelos de nuestro catálogo con excelente perfil de ruido:
+        </p>
+        <ul class="post-list">
+          <li>
+            <a href="/refrigeracion-liquida/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>:
+            ventiladores P-fan de alta presión estática con curva PWM muy suave. Uno de los AIOs
+            más silenciosos del mercado bajo carga media.
+          </li>
+          <li>
+            <a href="/refrigeracion-liquida/corsair-nautilus-360-rs-argb-4/">Corsair Nautilus 360 RS ARGB</a>:
+            ventiladores RS optimizados para balance ruido/rendimiento. Bomba extremadamente silenciosa.
+          </li>
+          <li>
+            <a href="/refrigeracion-liquida/thermalright-aqua-elite-240-v3-7/">Thermalright Aqua Elite 240 V3</a>:
+            opción 240mm compacta con ventiladores TL-C12 reconocidos por su silencio.
+          </li>
+        </ul>
+      </section>
+
+      <section id="consejo">
+        <h2>Consejos para reducir el ruido de tu AIO</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Configura una curva de ventilación personalizada</strong> en la BIOS o en el
+            software de tu placa base. Baja el punto de arranque de los fans a 60°C en lugar de 40°C.
+          </li>
+          <li>
+            <strong>Pon el radiador en intake frontal:</strong> los ventiladores giran más despacio
+            porque el aire frío es más fácil de mover que el aire caliente del interior del gabinete.
+          </li>
+          <li>
+            <strong>Almohadillas antivibraciones:</strong> instálalas entre el radiador y el gabinete
+            para eliminar cualquier zumbido de resonancia.
+          </li>
+        </ul>
+        <p>
+          Compara todos los modelos disponibles en nuestro catálogo de
+          <a href="/refrigeracion-liquida/">refrigeración líquida</a> con especificaciones
+          completas de ruido y flujo de aire.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>¿Buscas un AIO silencioso?</h3>
+      <p>Explora nuestra selección de refrigeración líquida con los mejores perfiles de ruido.</p>
+      <a class="btn" href="/refrigeracion-liquida/">Ver refrigeración líquida</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

@@ -1,0 +1,247 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Qué switches se sienten más satisfactorios al escribir?';
+const description =
+  'Los switches táctiles y clicky dan la mejor experiencia de escritura. Guía para encontrar el switch que más satisfacción te da según tu forma de escribir y jugar.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '4 min de lectura';
+
+const secciones = [
+  { id: 'satisfaccion', label: '¿Qué hace satisfactorio un switch?' },
+  { id: 'tactiles', label: 'Switches táctiles: el equilibrio perfecto' },
+  { id: 'clicky', label: 'Switches clicky: el feedback máximo' },
+  { id: 'lineales', label: '¿Y los lineales?' },
+  { id: 'tabla', label: 'Comparativa de sensaciones' },
+  { id: 'recomendacion', label: 'Mi recomendación según tu uso' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Periféricos</span>
+      <h1>¿Qué switches se sienten más satisfactorios al escribir?</h1>
+      <p class="post-lead">
+        La satisfacción al escribir en un mecánico es muy personal, pero hay patrones claros.
+        Si teclear se siente como música, probablemente estás usando el switch correcto.
+        Esta guía te ayuda a encontrar el tuyo.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="satisfaccion">
+        <h2>¿Qué hace que un switch se sienta satisfactorio?</h2>
+        <p>
+          La satisfacción al escribir en un teclado mecánico viene de la combinación de tres sensaciones:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Retroalimentación táctil (bump):</strong> el pequeño "rebote" que sientes al activar
+            la tecla, que confirma que la pulsación se registró sin necesidad de llegar al fondo.
+          </li>
+          <li>
+            <strong>Retroalimentación auditiva (click):</strong> el sonido que acompaña la activación.
+            Para muchos usuarios es la parte más placentera.
+          </li>
+          <li>
+            <strong>Peso de actuación:</strong> cuánta fuerza necesitas aplicar. Ni muy ligero (errores involuntarios)
+            ni muy pesado (fatiga). El rango ideal para la mayoría está entre 45g y 65g.
+          </li>
+        </ul>
+      </section>
+
+      <section id="tactiles">
+        <h2>Switches táctiles: el equilibrio perfecto para escritura</h2>
+        <p>
+          Los <strong>switches táctiles</strong> tienen un bump pronunciado sin click audible.
+          Son los favoritos para quien escribe muchas horas porque el feedback táctil mejora
+          la velocidad y reduce la fatiga: sabes cuándo activó la tecla sin golpear el fondo.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Cherry MX Brown:</strong> el más común. Bump suave a 45g. Fácil de aprender,
+            nunca frustra. El punto de entrada perfecto.
+          </li>
+          <li>
+            <strong>Gateron Brown:</strong> más suave y fluido que el Cherry Brown. Muchos lo prefieren
+            por su menor rugosidad en el recorrido.
+          </li>
+          <li>
+            <strong>Topre 45g:</strong> el premium de la categoría. Bump profundo y sonido "thock"
+            único. El favorito de muchos escritores profesionales.
+          </li>
+          <li>
+            <strong>Boba U4:</strong> táctil pronunciado y completamente silencioso. El nirvana
+            de quienes quieren satisfacción táctil sin ruido.
+          </li>
+        </ul>
+      </section>
+
+      <section id="clicky">
+        <h2>Switches clicky: el feedback máximo</h2>
+        <p>
+          Si quieres la experiencia más satisfactoria posible sin importarte el ruido, los switches
+          <strong>clicky</strong> son incomparables. El click audible + bump táctil crean
+          la sensación más completa de todas.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Cherry MX Blue:</strong> el clásico. Click agudo y bump notable. El sonido más
+            característico de los mecánicos. Activa a 45g, bump extra al click.
+          </li>
+          <li>
+            <strong>Kailh Box White:</strong> click más crujiente y consistente que el Blue.
+            Mejor resistencia al polvo y la humedad.
+          </li>
+          <li>
+            <strong>Cherry MX Green:</strong> versión más pesada del Blue (80g). Más satisfactorio
+            para quienes tienen dedos fuertes o prefieren resistencia.
+          </li>
+        </ul>
+        <p class="post-note">
+          Aviso: los switches clicky son MUY ruidosos. No los uses en espacios compartidos,
+          oficinas o con personas cerca a menos de que tengan auriculares.
+        </p>
+      </section>
+
+      <section id="lineales">
+        <h2>¿Y los switches lineales para escritura?</h2>
+        <p>
+          Los switches lineales (Red, Yellow, Speed Silver) no tienen bump ni click. Son suaves y fluidos,
+          ideales para gaming por su velocidad, pero para escritura intensa pueden generar más errores
+          (activan sin avisar) y menos satisfacción subjetiva.
+        </p>
+        <p>
+          Dicho esto, muchos escritores de alta velocidad (100+ WPM) prefieren lineales ligeros precisamente
+          porque el bump les interrumpe el ritmo. Es cuestión de preferencia personal.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>Comparativa de sensaciones por tipo de switch</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Switch</th>
+                <th>Tipo</th>
+                <th>Satisfacción táctil</th>
+                <th>Satisfacción sonora</th>
+                <th>Para quién</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Cherry MX Brown</td><td>Táctil</td><td>★★★☆</td><td>★★☆☆</td><td>Escritura + gaming</td></tr>
+              <tr><td>Cherry MX Blue</td><td>Clicky</td><td>★★★★</td><td>★★★★</td><td>Escritura pura</td></tr>
+              <tr><td>Gateron Brown</td><td>Táctil</td><td>★★★☆</td><td>★★☆☆</td><td>Todo uso suave</td></tr>
+              <tr><td>Kailh Box White</td><td>Clicky</td><td>★★★★</td><td>★★★★</td><td>Escritura / feedback alto</td></tr>
+              <tr><td>Cherry MX Red</td><td>Lineal</td><td>★☆☆☆</td><td>★☆☆☆</td><td>Gaming puro</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="recomendacion">
+        <h2>Recomendación según tu uso</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Escritura + gaming + no quieres molestar:</strong> switches táctiles silenciosos
+            (Gateron Silent Brown, Boba U4). Los mejores teclados con hot-swap como el
+            <a href="/teclados/redthunder-k75-wireless-75pct-hotswap-2/">RedThunder K75 Hot-swap</a>
+            te permiten probar diferentes switches sin soldar.
+          </li>
+          <li>
+            <strong>Máxima satisfacción, sin importar el ruido:</strong> switches clicky Blue o Box White.
+          </li>
+          <li>
+            <strong>Equilibrio universal:</strong> Cherry MX Brown o Gateron Brown. El punto de
+            partida que pocas personas lamentan.
+          </li>
+          <li>
+            <strong>Gaming puro con escritura secundaria:</strong> switches lineales Red o Yellow.
+            La velocidad compensa la falta de feedback.
+          </li>
+        </ul>
+        <p>
+          Todos nuestros teclados incluyen la descripción del switch en las especificaciones.
+          Explora el catálogo completo de <a href="/teclados/">teclados gamer</a> para comparar.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>El switch correcto cambia todo</h3>
+      <p>Teclados gamer mecánicos con los switches más satisfactorios del mercado.</p>
+      <a class="btn" href="/teclados/">Ver teclados gamer</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

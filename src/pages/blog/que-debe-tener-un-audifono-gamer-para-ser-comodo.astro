@@ -1,0 +1,253 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Qué debe tener un audífono gamer para ser cómodo?';
+const description =
+  'Los audífonos gamer cómodos no se eligen por precio: tienen características específicas. Guía para saber qué buscar en almohadillas, peso, diadema y drivers.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '5 min de lectura';
+
+const secciones = [
+  { id: 'almohadillas', label: 'Almohadillas: el factor #1' },
+  { id: 'peso', label: 'Peso y distribución' },
+  { id: 'diadema', label: 'Diadema ajustable' },
+  { id: 'presion', label: 'Presión lateral' },
+  { id: 'ventilacion', label: 'Ventilación y calor' },
+  { id: 'recomendaciones', label: 'Modelos cómodos recomendados' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Periféricos</span>
+      <h1>¿Qué debe tener un audífono gamer para ser cómodo?</h1>
+      <p class="post-lead">
+        La comodidad en un audífono gamer no es subjetiva: hay características técnicas concretas
+        que determinan si puedes usarlo 4 horas seguidas o si empiezas a quitártelo a la hora.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="almohadillas">
+        <h2>Almohadillas: el factor más importante de comodidad</h2>
+        <p>
+          Las almohadillas son el punto de contacto principal entre el audífono y tu cabeza.
+          Su material y forma determinan el 60% de la comodidad total:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Espuma memory foam:</strong> el mejor material para sesiones largas.
+            Se adapta a la forma de tu cabeza, distribuye la presión uniformemente
+            y no crea puntos de dolor. Presente en modelos premium.
+          </li>
+          <li>
+            <strong>Leatherette (cuero sintético):</strong> fácil de limpiar y durable,
+            pero genera más calor que la tela y puede sudar en sesiones largas de verano.
+          </li>
+          <li>
+            <strong>Tela / velour:</strong> la opción más transpirable y fresca.
+            Menos aislamiento acústico pero máxima comodidad en sesiones largas.
+          </li>
+          <li>
+            <strong>Diseño over-ear vs on-ear:</strong> el diseño <strong>over-ear</strong>
+            (auricular rodea la oreja completamente) es siempre más cómodo que el on-ear
+            (auricular apoya sobre la oreja) para uso prolongado.
+          </li>
+        </ul>
+      </section>
+
+      <section id="peso">
+        <h2>Peso y distribución de la carga</h2>
+        <p>
+          Un audífono más ligero no es necesariamente más cómodo si la distribución del peso
+          es mala. Lo ideal es un diseño que reparte el peso entre la diadema y las almohadillas
+          sin concentrarlo en un solo punto.
+        </p>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Peso total</th>
+                <th>Percepción</th>
+                <th>Sesiones largas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Menos de 250g</td><td>Muy ligero</td><td>Excelente</td></tr>
+              <tr><td>250–300g</td><td>Ligero</td><td>Muy bueno</td></tr>
+              <tr><td>300–350g</td><td>Normal</td><td>Bueno con buenas almohadillas</td></tr>
+              <tr><td>Más de 350g</td><td>Pesado</td><td>Fatiga en sesiones de 3h+</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="diadema">
+        <h2>Diadema ajustable: esencial para todos los tamaños de cabeza</h2>
+        <p>
+          Una buena diadema tiene ajuste suficiente para cubrir un amplio rango de tamaños de cabeza
+          sin quedar demasiado apretada ni demasiado suelta.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Diadema acolchada:</strong> la almohadilla en la parte superior de la diadema
+            reduce la presión sobre el cráneo, especialmente en modelos pesados.
+          </li>
+          <li>
+            <strong>Ajuste con clic (ratchet):</strong> permite ajustar de forma precisa a tu
+            medida exacta y que el audífono no se mueva con los movimientos de cabeza.
+          </li>
+          <li>
+            <strong>Flexibilidad del arco:</strong> el arco metálico o de plástico reforzado
+            debe poder doblarse ligeramente para adaptarse a la curvatura de tu cabeza.
+          </li>
+        </ul>
+      </section>
+
+      <section id="presion">
+        <h2>Presión lateral: el punto que más cansa</h2>
+        <p>
+          La <strong>presión lateral</strong> (clamping force) es la fuerza con la que los auriculares
+          aprietan los lados de la cabeza. Demasiada presión causa dolor en las sienes, orejas
+          y mandíbula después de 1–2 horas.
+        </p>
+        <p>
+          Los audífonos nuevos suelen tener más presión lateral que después de unos días de uso
+          (el arco se relaja). Trucos para reducir la presión de un audífono nuevo:
+        </p>
+        <ol class="post-steps">
+          <li>Extiende el arco al máximo y déjalo sobre una caja de zapatos o similar durante 24–48h.</li>
+          <li>Esto estira gradualmente el plástico o metal sin dañarlo.</li>
+          <li>Repite si es necesario hasta que la presión sea cómoda.</li>
+        </ol>
+      </section>
+
+      <section id="ventilacion">
+        <h2>Ventilación y calor: el problema del verano</h2>
+        <p>
+          Los audífonos closed-back (cerrados) aíslan bien el sonido pero generan calor.
+          En sesiones largas de verano, las orejas sudan y la incomodidad aumenta.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Open-back:</strong> los audífonos abiertos (con rejillas en el exterior del auricular)
+            tienen ventilación natural, eliminan el calor acumulado y suenan más "aireados".
+            Pero no aíslan el sonido exterior y se escuchan desde fuera.
+          </li>
+          <li>
+            <strong>Closed-back con velour:</strong> el mejor compromiso. Almohadillas de tela
+            velour reducen el calor incluso en diseños cerrados.
+          </li>
+        </ul>
+        <p>
+          Si juegas en casa sin ruido exterior, un diseño open-back o semi-open puede darte
+          mucho más confort en verano. Si juegas en entornos ruidosos o con más personas,
+          el closed-back es necesario.
+        </p>
+      </section>
+
+      <section id="recomendaciones">
+        <h2>Audífonos gamer cómodos de nuestro catálogo</h2>
+        <ul class="post-list">
+          <li>
+            <a href="/audifonos/hyperx-cloud-iii-wired-53mm-dts-2/">HyperX Cloud III</a>
+            — almohadillas memory foam + cuero sintético, reconocido por su comodidad en sesiones largas.
+          </li>
+          <li>
+            <a href="/audifonos/logitech-g733-lightspeed-wireless-rgb-3/">Logitech G733 LightSpeed</a>
+            — diadema de tela ajustable, muy ligero (278g), inalámbrico y excelente comodidad.
+          </li>
+          <li>
+            <a href="/audifonos/wireless-gaming-headset-71-50mm-rgb-aluminum-4/">Headset Gaming 7.1 Aluminum</a>
+            — estructura de aluminio ligera, almohadillas de cuero suave, over-ear completo.
+          </li>
+          <li>
+            <a href="/audifonos/nubwo-hg03-usb-a-50mm-71-white-7/">NUBWO HG03 7.1 White</a>
+            — diseño minimalista blanco, almohadillas suaves, opción económica y cómoda.
+          </li>
+        </ul>
+        <p>
+          Compara todos los modelos en nuestro catálogo de
+          <a href="/audifonos/">audífonos gamer</a> con peso y tipo de almohadillas especificados.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Comodidad para sesiones largas</h3>
+      <p>Audífonos gamer con almohadillas premium y diseño ergonómico al mejor precio.</p>
+      <a class="btn" href="/audifonos/">Ver audífonos gamer</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-steps { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: step; }
+  .post-steps li { color: #c8d8e8; line-height: 1.7; padding-left: 38px; position: relative; counter-increment: step; }
+  .post-steps li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: rgba(124,255,203,0.1); border: 1px solid rgba(124,255,203,0.3); color: #7cffcb; font-size: 0.8rem; font-weight: 700; display: grid; place-items: center; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

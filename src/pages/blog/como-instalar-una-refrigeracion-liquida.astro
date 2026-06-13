@@ -1,0 +1,220 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Cómo instalar una refrigeración líquida? Guía paso a paso';
+const description =
+  'Instalar un AIO (refrigeración líquida todo en uno) es más fácil de lo que parece. Guía paso a paso para gamers: herramientas, pasos y errores que evitar.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '6 min de lectura';
+
+const secciones = [
+  { id: 'que-necesitas', label: '¿Qué necesitas?' },
+  { id: 'preparacion', label: 'Preparación previa' },
+  { id: 'instalacion', label: 'Instalación paso a paso' },
+  { id: 'orientacion', label: 'Orientación del radiador' },
+  { id: 'errores', label: 'Errores comunes' },
+  { id: 'mantenimiento', label: 'Mantenimiento básico' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>¿Cómo instalar una refrigeración líquida?</h1>
+      <p class="post-lead">
+        Un AIO (All-In-One) parece complicado pero en realidad tiene solo 5 pasos claros.
+        Esta guía te lleva desde abrir la caja hasta el primer arranque sin ningún susto.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="que-necesitas">
+        <h2>¿Qué necesitas antes de empezar?</h2>
+        <ul class="post-list">
+          <li>El AIO (cabezal + radiador + mangueras + ventiladores).</li>
+          <li>Pasta térmica (muchos AIOs la incluyen pre-aplicada).</li>
+          <li>Destornillador de estrella Phillips #2.</li>
+          <li>El manual de tu placa base (para ver la distancia entre orificios del socket).</li>
+          <li>Una superficie antestática o pulsera ESD para no dañar componentes.</li>
+        </ul>
+        <p>
+          Los mejores AIOs del mercado como el
+          <a href="/refrigeracion-liquida/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>
+          o el <a href="/refrigeracion-liquida/corsair-nautilus-360-rs-argb-4/">Corsair Nautilus 360 RS ARGB</a>
+          incluyen todos los accesorios necesarios para los sockets más comunes.
+        </p>
+      </section>
+
+      <section id="preparacion">
+        <h2>Preparación previa</h2>
+        <ol class="post-steps">
+          <li>Apaga el PC, desconéctalo de la corriente y descarga la estática tocando el chasis metálico.</li>
+          <li>Retira el cooler anterior (si lo hay) y limpia los restos de pasta térmica con alcohol isopropílico.</li>
+          <li>Identifica el socket de tu CPU (AM4, AM5, LGA1700, etc.) y selecciona el bracket correcto que incluye el AIO.</li>
+          <li>Si necesitas instalar el backplate trasero, retira la placa base del gabinete para acceder a la parte posterior.</li>
+        </ol>
+      </section>
+
+      <section id="instalacion">
+        <h2>Instalación paso a paso</h2>
+        <ol class="post-steps">
+          <li>
+            <strong>Monta el backplate:</strong> coloca la placa trasera en los orificios correctos
+            para tu socket. Muchos AIOs modernos tienen backplate universal ajustable.
+          </li>
+          <li>
+            <strong>Instala los standoffs:</strong> rosca los tornillos separadores (standoffs) en
+            el backplate a través de la placa base hasta que queden firmes pero sin apretar con fuerza excesiva.
+          </li>
+          <li>
+            <strong>Aplica pasta térmica:</strong> si el cabezal no la trae pre-aplicada, pon
+            una cantidad del tamaño de un guisante en el centro del procesador.
+          </li>
+          <li>
+            <strong>Coloca el cabezal:</strong> bájalo en línea recta sobre el CPU y aprieta los
+            tornillos en diagonal (no en círculo) para una presión uniforme.
+          </li>
+          <li>
+            <strong>Monta el radiador:</strong> fíjalo en la ranura del gabinete (frontal o superior)
+            y conecta los ventiladores. Ver siguiente sección para orientación correcta.
+          </li>
+          <li>
+            <strong>Conecta los cables:</strong> bomba del AIO al conector <code>AIO_PUMP</code> o
+            <code>CPU_OPT</code> de la placa base. Ventiladores al hub o a los headers de la placa.
+          </li>
+        </ol>
+      </section>
+
+      <section id="orientacion">
+        <h2>¿Dónde colocar el radiador? Orientación correcta</h2>
+        <p>
+          La posición del radiador afecta al rendimiento térmico y a la longevidad de la bomba.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Frontal (intake, soplando hacia dentro):</strong> el aire frío entra directamente
+            al radiador. Es la posición más eficiente para la refrigeración del CPU.
+          </li>
+          <li>
+            <strong>Superior (exhaust, expulsando hacia fuera):</strong> el calor sale del gabinete
+            directamente. Calienta menos los componentes circundantes.
+          </li>
+          <li>
+            <strong>Posición de las mangueras:</strong> siempre orientadas hacia abajo o hacia los lados,
+            nunca apuntando hacia arriba. Evita que el aire quede atrapado en la bomba.
+          </li>
+        </ul>
+        <p class="post-note">
+          Consejo: si tienes dudas, frontal con ventiladores soplando hacia dentro es la opción
+          que da mejores temperaturas en la mayoría de gabinetes.
+        </p>
+      </section>
+
+      <section id="errores">
+        <h2>Errores comunes al instalar un AIO</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Conectar la bomba al header de ventilador CPU:</strong> la bomba debe ir a
+            <code>AIO_PUMP</code> o <code>CPU_OPT</code> para funcionar a velocidad constante.
+          </li>
+          <li>
+            <strong>Pasta térmica en exceso:</strong> más no es mejor. Un exceso puede manchar
+            el socket y empeorar la conductividad.
+          </li>
+          <li>
+            <strong>Apretar tornillos demasiado:</strong> puede doblarse la placa base o
+            el IHS del procesador. Aprieta hasta notar resistencia, no más.
+          </li>
+          <li>
+            <strong>No verificar la compatibilidad del socket:</strong> comprueba que tu AIO
+            trae el bracket para tu socket antes de instalar.
+          </li>
+        </ul>
+      </section>
+
+      <section id="mantenimiento">
+        <h2>Mantenimiento básico de tu AIO</h2>
+        <p>
+          Un AIO bien mantenido dura entre 5 y 8 años sin problemas. El mantenimiento es mínimo:
+        </p>
+        <ul class="post-list">
+          <li>Limpia los ventiladores con aire comprimido cada 6 meses para evitar acumulación de polvo.</li>
+          <li>Comprueba que la bomba no hace ruido inusual (burbujeo persistente indica aire atrapado).</li>
+          <li>Renueva la pasta térmica cada 2–3 años si notas que las temperaturas suben con el tiempo.</li>
+        </ul>
+        <p>
+          Si te estás planteando dar el salto a la refrigeración líquida, explora nuestro
+          catálogo de <a href="/refrigeracion-liquida/">refrigeración líquida</a> con AIOs
+          de 240 mm y 360 mm para todos los presupuestos.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>¿Listo para instalar tu AIO?</h3>
+      <p>Explora nuestra selección de refrigeración líquida AIO al mejor precio con envío Amazon.</p>
+      <a class="btn" href="/refrigeracion-liquida/">Ver refrigeración líquida</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body code { background: rgba(27,183,255,0.12); color: #1bb7ff; padding: 2px 7px; border-radius: 6px; font-size: 0.9em; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-steps { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: step; }
+  .post-steps li { color: #c8d8e8; line-height: 1.7; padding-left: 38px; position: relative; counter-increment: step; }
+  .post-steps li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: rgba(124,255,203,0.1); border: 1px solid rgba(124,255,203,0.3); color: #7cffcb; font-size: 0.8rem; font-weight: 700; display: grid; place-items: center; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+</style>

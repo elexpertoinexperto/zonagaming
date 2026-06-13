@@ -1,0 +1,226 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+
+const title = '¿Para qué sirven los núcleos e hilos de un procesador?';
+const description =
+  'Núcleos e hilos son los conceptos clave al comprar un procesador. Guía rápida para gamers: qué significan, cómo afectan al rendimiento y cuántos necesitas.';
+
+const fecha = '12 de junio de 2026';
+const tiempoLectura = '5 min de lectura';
+
+const secciones = [
+  { id: 'nucleos', label: '¿Qué son los núcleos?' },
+  { id: 'hilos', label: '¿Qué son los hilos?' },
+  { id: 'diferencia', label: 'Núcleos vs hilos' },
+  { id: 'gaming', label: '¿Cuántos necesitas para gaming?' },
+  { id: 'tabla', label: 'Comparativa de CPUs' },
+  { id: 'frecuencia', label: 'Núcleos vs frecuencia' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+  <article class="post">
+    <a class="category-back" href="/blog/">← Volver al Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Guía gamer · Hardware</span>
+      <h1>¿Para qué sirven los núcleos e hilos de un procesador?</h1>
+      <p class="post-lead">
+        Cuando ves "6 núcleos / 12 hilos" en las especificaciones de un procesador y no sabes
+        qué significa, este artículo te lo explica de forma directa y con ejemplos reales de gaming.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Contenido del artículo">
+      <span class="post-toc-title">En este artículo</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="nucleos">
+        <h2>¿Qué son los núcleos de un procesador?</h2>
+        <p>
+          Un <strong>núcleo</strong> (core) es una unidad de procesamiento independiente dentro del CPU.
+          Cada núcleo puede ejecutar instrucciones por su cuenta, como si fuera un procesador completo.
+        </p>
+        <p>
+          Un procesador de 6 núcleos puede hacer 6 cosas al mismo tiempo. Un procesador de 12 núcleos,
+          12 cosas simultáneas. En la práctica, más núcleos equivale a más capacidad multitarea y mejor
+          rendimiento en tareas paralelas.
+        </p>
+      </section>
+
+      <section id="hilos">
+        <h2>¿Qué son los hilos (threads)?</h2>
+        <p>
+          Un <strong>hilo</strong> es una secuencia de instrucciones que el sistema operativo puede
+          enviar a un núcleo. Normalmente cada núcleo maneja un hilo.
+        </p>
+        <p>
+          Con tecnologías como <strong>Hyper-Threading</strong> (Intel) o <strong>SMT</strong> (AMD),
+          cada núcleo puede manejar dos hilos simultáneos compartiendo recursos internos.
+          Por eso ves configuraciones como "6 núcleos / 12 hilos" o "8 núcleos / 16 hilos".
+        </p>
+      </section>
+
+      <section id="diferencia">
+        <h2>Núcleos vs hilos: ¿en qué se diferencian?</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>Núcleo</th>
+                <th>Hilo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Qué es</td><td>Hardware físico</td><td>Flujo lógico de trabajo</td></tr>
+              <tr><td>Cantidad típica</td><td>4–16 en gaming</td><td>El doble de núcleos con SMT/HT</td></tr>
+              <tr><td>Impacto</td><td>Mayor en cargas pesadas</td><td>Mejora multitarea y apps optimizadas</td></tr>
+              <tr><td>¿Se puede aumentar?</td><td>No</td><td>No (viene del CPU)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="gaming">
+        <h2>¿Cuántos núcleos necesitas para gaming?</h2>
+        <p>
+          Los juegos modernos están optimizados para entre 6 y 8 núcleos. Esta es la guía práctica:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>4 núcleos:</strong> cada vez más justo. Muchos juegos recientes lo usan al límite
+            y aparecen stutters. Solo recomendable como solución temporal.
+          </li>
+          <li>
+            <strong>6 núcleos / 12 hilos:</strong> el mínimo cómodo para gaming en 2026.
+            Un <a href="/procesadores/amd-ryzen-5-5500-3/">Ryzen 5 5500</a> o
+            <a href="/procesadores/amd-ryzen-5-9600x-1/">Ryzen 5 9600X</a> aquí son opciones sólidas.
+          </li>
+          <li>
+            <strong>8 núcleos / 16 hilos:</strong> el sweet spot. Juega hoy y graba, streamea
+            o edita sin sacrificar FPS. El <a href="/procesadores/amd-ryzen-7-7700x-6/">Ryzen 7 7700X</a>
+            es un ejemplo ideal.
+          </li>
+          <li>
+            <strong>12+ núcleos:</strong> territorio de creadores de contenido y workstations.
+            El gaming apenas lo aprovecha todavía.
+          </li>
+        </ul>
+        <p class="post-note">
+          Consejo: para gaming puro, 6–8 núcleos con alta frecuencia turbo supera a 12 núcleos
+          con baja frecuencia. Los juegos prefieren velocidad por núcleo sobre cantidad de núcleos.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>Comparativa de procesadores por núcleos</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Procesador</th>
+                <th>Núcleos / Hilos</th>
+                <th>Turbo máx.</th>
+                <th>Perfil</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ryzen 5 5500</td><td>6C / 12T</td><td>4.2 GHz</td><td>Gaming económico AM4</td></tr>
+              <tr><td>i5-12600</td><td>6P+4E / 16T</td><td>4.8 GHz</td><td>Gaming + multitarea Intel</td></tr>
+              <tr><td>Ryzen 5 9600X</td><td>6C / 12T</td><td>5.4 GHz</td><td>Gaming de alta frecuencia</td></tr>
+              <tr><td>Ryzen 7 7700X</td><td>8C / 16T</td><td>5.4 GHz</td><td>Gaming + streaming</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="frecuencia">
+        <h2>¿Importa más la frecuencia o los núcleos para gaming?</h2>
+        <p>
+          Para gaming, la <strong>frecuencia por núcleo</strong> (GHz en turbo) suele importar más
+          que la cantidad de núcleos, porque la mayoría de engines de juego usan 4–6 núcleos intensamente
+          y el resto en menor medida.
+        </p>
+        <p>
+          El <a href="/procesadores/amd-ryzen-5-9600x-1/">Ryzen 5 9600X</a> con 6 núcleos a 5.4 GHz
+          supera en gaming a procesadores de 12 núcleos con turbo bajo. Es el ejemplo perfecto
+          de que frecuencia + arquitectura moderna vence en este uso.
+        </p>
+        <p>
+          Si también haces streaming, edición o compilación, entonces los núcleos extra de un
+          <a href="/procesadores/amd-ryzen-7-7700x-6/">Ryzen 7 7700X</a> marcan la diferencia.
+          Explora todos nuestros <a href="/procesadores/">procesadores</a> con specs completas.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>¿Buscas el procesador correcto?</h3>
+      <p>Compara núcleos, frecuencia y precio en nuestro catálogo de CPUs para gaming.</p>
+      <a class="btn" href="/procesadores/">Ver procesadores</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>
