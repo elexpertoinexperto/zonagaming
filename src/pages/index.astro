@@ -72,31 +72,8 @@ const bestSellerProducts = [
       <Header />
 
       <section class="hero">
-        <div class="hero-copy">
-          <h1>Componentes PC - Tienda Gamer</h1>
-          <p class="hero-copy-description">Equipos y componentes que elevan tu rendimiento al siguiente nivel.</p>
-          <p>Descubre un catálogo curado de piezas para armado de PC, desde tarjetas gráficas y fuentes hasta teclados mecánicos y enfriamiento líquido. Diseño minimalista, velocidad máxima y estilo gamer real.</p>
-          <div class="hero-actions">
-            <button class="btn">Los Más Vendidos </button>            
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat-card">
-              <strong>+70</strong>
-              Componentes pensados para gaming.
-            </div>
-            <div class="stat-card">
-              <strong>24h</strong>
-              Disponible para ti.
-            </div>
-            <div class="stat-card">
-              <strong>Garantía</strong>
-              Garantía directa con Amazon.
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-visual">
+        <!-- Fondo animado synthwave (fullscreen) -->
+        <div class="hero-bg">
           <div class="hv-grid"></div>
           <div class="hv-horizon"></div>
           <div class="hv-particles">
@@ -105,11 +82,37 @@ const bestSellerProducts = [
             <span></span><span></span><span></span><span></span>
           </div>
           <div class="hv-scanline"></div>
-          <div class="visual-panel">
-            <span class="hv-badge">● ONLINE</span>
-            <h2>Lleva tu setup al podio hoy</h2>
-            <p>Haz que cada partida sea más inmersiva con hardware confiable, iluminación sutil y un diseño que queda perfecto en tu escritorio.</p>
+        </div>
+
+        <!-- Contenido con parallax -->
+        <div class="hero-copy" id="hero-copy">
+          <span class="hv-badge">● ONLINE</span>
+          <h1>Componentes PC<br /><em>Tienda Gamer</em></h1>
+          <p class="hero-copy-description">Equipos y componentes que elevan tu rendimiento al siguiente nivel.</p>
+          <p>Catálogo curado de piezas para armado de PC — tarjetas gráficas, fuentes, teclados mecánicos y enfriamiento líquido. Velocidad máxima y estilo gamer real.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#coleccion">Los Más Vendidos</a>
           </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>+70</strong>
+              Componentes para gaming.
+            </div>
+            <div class="stat-card">
+              <strong>24h</strong>
+              Disponible para ti.
+            </div>
+            <div class="stat-card">
+              <strong>Garantía</strong>
+              Directo con Amazon.
+            </div>
+          </div>
+        </div>
+
+        <!-- Flecha de scroll -->
+        <div class="hero-scroll-hint">
+          <span>Scroll</span>
+          <div class="hero-scroll-arrow"></div>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductoDetalle from '../../components/ProductoDetalle.astro';
+import JuegosCompatibles from '../../components/JuegosCompatibles.astro';
 import productos from '../../data/productos.json';
 
 export function getStaticPaths() {
@@ -29,13 +30,19 @@ const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0
     <a class="back-link" href="/procesadores/">← Volver a Procesadores</a>
   </div>
   
-  <ProductoDetalle 
+  <ProductoDetalle
     nombre={producto.nombre}
     descripcion={producto.descripcion}
     especificaciones={producto.especificaciones}
     precio={producto.precio}
     enlaceAmazon={producto.enlaceAmazon}
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
+  />
+
+  <JuegosCompatibles
+    categoria="procesadores"
+    productoId={numeroId}
+    productoNombre={producto.nombre}
   />
 </SiteLayout>
 

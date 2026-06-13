@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Tarjetas gráficas';
-const metaDescription = "Tarjetas gráficas gamer para 1080p, 1440p y 4K. Máximos FPS al mejor precio y envío Amazon. ¡Sube tu setup de nivel hoy!";
-const description = 'Encuentra tarjetas graficas para juegos, streaming y renderizado con la mejor relacion rendimiento/precio.';
+const metaDescription = "Las mejores tarjetas gráficas para PC gaming: 1080p, 1440p y 4K. Tarjetas de video NVIDIA y AMD al mejor precio con envío Amazon.";
+const description = 'Las mejores tarjetas gráficas y tarjetas de video para juegos, streaming y renderizado. Encuentra la GPU ideal para tu PC gamer con la mejor relación rendimiento/precio.';
 const productsData = productos['tarjetas-graficas'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title={`Tarjetas Gráficas para PC Gamer | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">Volver al Home</a>
-    <small>Categoria</small>
-    <h1>{title}</h1>
+    <small>Tarjetas de Video</small>
+    <h1>Tarjetas Gráficas para PC</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Stock validado y envio seguro</span>
+      <span>{productsData.length} tarjetas gráficas disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -40,7 +39,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
         description: product.descripcion,
-        imageUrl: product.imagenUrl, // reemplaza imagenUrl en productos.json con la URL real
+        imageUrl: product.imagenUrl,
         detailHref: `/tarjetas-graficas/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
       }} />
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="tarjetas-graficas" />
 
   <section class="category-buying-guide">
-    <h2>¿Cómo elegir tu tarjeta gráfica?</h2>
-    <p>La GPU define la calidad visual y los FPS de tu setup. Estos son los factores que realmente importan antes de comprar:</p>
+    <h2>¿Cómo elegir tu tarjeta gráfica para PC?</h2>
+    <p>La tarjeta gráfica es el componente más importante para gaming. Ya sea que busques una tarjeta de video para 1080p competitivo o una tarjeta gráfica para PC de alta gama a 4K, estos son los factores que definen tu elección:</p>
     <ul>
-      <li>VRAM: 8 GB para 1080p, 12 GB o más para 1440p y 4K.</li>
-      <li>Resolución objetivo: no gastes de más si juegas en Full HD.</li>
-      <li>DLSS (NVIDIA) y FSR (AMD) elevan el rendimiento sin perder calidad visual.</li>
-      <li>Ray tracing es exigente; prioriza framerate alto en modo competitivo.</li>
-      <li>Confirma que tu fuente tenga los conectores y vatios necesarios para el TDP de la GPU.</li>
+      <li><strong>VRAM:</strong> 8 GB para tarjetas gráficas en 1080p, 12 GB o más para 1440p y 4K.</li>
+      <li><strong>Resolución objetivo:</strong> no inviertas en una tarjeta de video de gama alta si juegas en Full HD.</li>
+      <li><strong>DLSS (NVIDIA) y FSR (AMD):</strong> tecnologías que elevan el rendimiento de tu tarjeta gráfica sin perder calidad visual.</li>
+      <li><strong>Ray tracing:</strong> exigente en cualquier tarjeta de video; prioriza framerate alto en modo competitivo.</li>
+      <li><strong>Fuente de poder:</strong> confirma que tenga los conectores y vatios necesarios para el TDP de tu tarjeta gráfica.</li>
     </ul>
+    <p>Todas las tarjetas gráficas para PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-tarjetas-graficas"
-    title="Los más vendidos en Tarjetas Graficas"
+    title="Tarjetas Gráficas más vendidas"
     products={bestSellerProducts}
   />
 </SiteLayout>

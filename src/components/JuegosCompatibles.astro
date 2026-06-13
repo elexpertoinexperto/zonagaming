@@ -1,0 +1,1370 @@
+---
+// App IDs de Steam — solo juegos con imagen verificada (HTTP 200)
+const steamIds: Record<string, number> = {
+  'Cyberpunk 2077': 1091500,
+  'Black Myth: Wukong': 2358720,
+  'Elden Ring': 1245620,
+  'Marvel Rivals': 2767030,
+  'GTA V': 271590,
+  'Red Dead Redemption 2': 1174180,
+  'The Witcher 3': 292030,
+  'Control': 870780,
+  'Apex Legends': 1172470,
+  'Dota 2': 570,
+  'Path of Exile 2': 2694490,
+  'Hogwarts Legacy': 990080,
+  'Starfield': 1716740,
+  'Star Wars Outlaws': 2842070,
+  'Dragon Age: The Veilguard': 1845910,
+  'Indiana Jones and the Great Circle': 2677660,
+  "Assassin's Creed Shadows": 3159330,
+  'Call of Duty: Warzone': 1962663,
+  'Forza Horizon 5': 1551360,
+  'Call of Duty: Black Ops 6': 2933620,
+  'Microsoft Flight Simulator 2024': 2537590,
+  'CS2': 730,
+};
+
+const steamImg = (titulo: string): string | null => {
+  const appId = steamIds[titulo];
+  if (!appId) return null;
+  return `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/header.jpg`;
+};
+
+interface Juego {
+  titulo: string;
+  genero: string;
+  resolucion: string;
+  fps: string;
+  setting: string;
+  recomendado: {
+    categoria: 'tarjetas-graficas' | 'procesadores' | 'memoria-ram';
+    slug: string;
+    id: number;
+    nombre: string;
+    razon: string;
+  };
+}
+
+interface Props {
+  categoria: 'tarjetas-graficas' | 'procesadores' | 'memoria-ram';
+  productoId: number;
+  productoNombre: string;
+}
+
+const { categoria, productoId, productoNombre } = Astro.props;
+
+// Mapa de juegos por producto (slug-id)
+const juegosMap: Record<string, Juego[]> = {
+
+  // ── TARJETAS GRÁFICAS ──────────────────────────────────────────────────────
+
+  'tarjetas-graficas-1': [ // GTX 960 2GB — entrada, eSports 1080p
+    {
+      titulo: 'Dota 2',
+      genero: 'MOBA',
+      resolucion: '1080p',
+      fps: '120+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'Este CPU libera el cuello de botella de la GTX 960 en eSports de alta frecuencia.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Medio',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: '16 GB a 3200 MHz eliminan los stutters de carga de mapas en CS2.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '60+ FPS',
+      setting: 'Bajo-Medio',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'intel-core-i5-12600',
+        id: 2,
+        nombre: 'Intel Core i5-12600',
+        razon: 'Apex Legends es muy dependiente de CPU; el i5-12600 maximiza los FPS con esta GPU.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-2': [ // RTX 5060 8GB GDDR7 — 1080p/1440p moderno
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra con DLSS 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 con 5.4 GHz Turbo elimina el cuello de botella en mundo abierto denso.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Alto con DLSS 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'DDR5 a 6000 MHz aprovecha el ancho de banda de la plataforma Blackwell al máximo.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS estables',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'Elden Ring escala bien con IPC alto; el 7700X en AM5 es el par ideal para la RTX 5060.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Muy Alto con DLSS 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: 'Alta frecuencia de RAM reduce la latencia frame-to-frame en shooters competitivos.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-3': [ // RX 580 8GB — 1080p medio
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '60+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'GTA V es CPU-intensive; el Ryzen 5 5500 equilibra perfectamente con la RX 580.',
+      },
+    },
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '45-60 FPS',
+      setting: 'Medio-Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'RDR2 puede superar los 16 GB con configuraciones altas; 32 GB previenen stutters.',
+      },
+    },
+    {
+      titulo: 'The Witcher 3',
+      genero: 'RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-7600x',
+        id: 5,
+        nombre: 'AMD Ryzen 5 7600X',
+        razon: 'Witcher 3 con parche next-gen pide IPC alto; el 7600X mantiene FPS estables.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-4': [ // RX 9060 XT 16GB — 1440p high-end
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra con Ray Tracing + FSR',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800xt',
+        id: 4,
+        nombre: 'AMD Ryzen 7 5800XT',
+        razon: '8 núcleos Zen 3 acompañan perfectamente la RX 9060 XT en mundos abiertos.',
+      },
+    },
+    {
+      titulo: 'Control',
+      genero: 'Action Thriller',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra con FSR',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'Control con ray tracing exige VRAM y RAM rápida; DDR5 marca una diferencia real.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra con FSR',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'Hogwarts Legacy escala muy bien con múltiples núcleos; el 7700X es el par natural.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'Starfield carga muchos assets en RAM; 32 GB evitan los tiempos de carga lentos.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-5': [ // RTX 5060 Ti 16GB — 1440p high-end
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra Psycho + DLSS 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: '8 núcleos AM5 con 5.4 GHz Turbo son el par ideal para la potencia de la RTX 5060 Ti.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Épico + DLSS 4 Quality',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'Los 16 GB GDDR7 de la Ti necesitan RAM rápida para no crear bottleneck de sistema.',
+      },
+    },
+    {
+      titulo: 'Star Wars Outlaws',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra + DLSS 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 maneja excelentemente la IA de NPC y el streaming del mundo abierto.',
+      },
+    },
+    {
+      titulo: 'Dragon Age: The Veilguard',
+      genero: 'RPG',
+      resolucion: '1440p',
+      fps: '90+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: 'Alta velocidad de RAM reduce los microfreezes en transiciones de escenas.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-6': [ // RTX 5070 12GB SFF — 1440p top
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Ultra + DLSS 4 Performance',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: '8 núcleos Zen 4 son el CPU que más aprovecha la arquitectura Ada del RTX 5070.',
+      },
+    },
+    {
+      titulo: 'Indiana Jones and the Great Circle',
+      genero: 'Acción Aventura',
+      resolucion: '1440p',
+      fps: '100+ FPS',
+      setting: 'Ultra + Path Tracing + DLSS 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'Path Tracing demanda máximo ancho de banda; DDR5 6000MHz es imprescindible aquí.',
+      },
+    },
+    {
+      titulo: 'Control',
+      genero: 'Action Thriller',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra + Path Tracing + DLSS 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800x',
+        id: 7,
+        nombre: 'AMD Ryzen 7 5800X',
+        razon: '8 núcleos Zen 3 mantienen la CPU fuera del cuello de botella en escenas densas.',
+      },
+    },
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Alto + DLSS 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'El Japón feudal de AC Shadows carga assets enormes; 32 GB son el colchón ideal.',
+      },
+    },
+  ],
+
+  'tarjetas-graficas-7': [ // RX 9070 XT 16GB — 1440p/4K flagship AMD
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '4K',
+      fps: '60+ FPS',
+      setting: 'Ultra + Ray Tracing + FSR 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'El ecosistema AMD AM5 + RDNA 4 ofrece la mejor sinergia con Smart Access Memory.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Épico + FSR 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'SAM (Smart Access Memory) de AMD rinde mejor con DDR5 de alta velocidad.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '4K',
+      fps: '60+ FPS',
+      setting: 'Ultra + FSR 4 Quality',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 IPC elevado mantiene el mundo de Hogwarts fluyendo sin microfreezes.',
+      },
+    },
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Ultra + FSR 4',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'Con 4K y texturas ultra, el sistema necesita 32 GB para no paginar a disco.',
+      },
+    },
+  ],
+
+  // ── PROCESADORES ──────────────────────────────────────────────────────────
+
+  'procesadores-1': [ // Ryzen 5 9600X — gaming high-end Zen 5
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra con DLSS/FSR',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'El 9600X desbloquea todo el potencial de la RTX 5060 en mundos abiertos densos.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1440p',
+      fps: '144+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'CPU rápido + GPU RDNA 4 con SAM dan la menor latencia posible en shooters.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Alto-Épico',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'El 9600X en AM5 aprovecha DDR5 6000MHz para reducir la latencia de acceso.',
+      },
+    },
+  ],
+
+  'procesadores-2': [ // i5-12600 — gaming mainstream Intel
+    {
+      titulo: 'Call of Duty: Warzone',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '120+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'Warzone es muy CPU-limitado; el i5-12600 elimina el cuello de botella con la RTX 5060.',
+      },
+    },
+    {
+      titulo: 'Forza Horizon 5',
+      genero: 'Carreras',
+      resolucion: '1080p',
+      fps: '120 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: 'FH5 está muy optimizado; la RX 580 exprime los 120 FPS con este CPU.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: '3600 MHz en DDR4 es el sweet spot para la plataforma LGA1700 del i5-12600.',
+      },
+    },
+  ],
+
+  'procesadores-3': [ // Ryzen 5 5500 — presupuesto AM4
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: 'Combo económico perfecto: el 5500 libera todo el potencial de la RX 580 en GTA V.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'Apex Legends necesita 16 GB para no paginar en partidas largas con el 5500.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '150+ FPS',
+      setting: 'Bajo para máximos FPS',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'zotac-geforce-gtx-960',
+        id: 1,
+        nombre: 'ZOTAC GeForce GTX 960 2GB',
+        razon: 'CS2 en settings competitivos no necesita más GPU; el 5500 es el factor limitante.',
+      },
+    },
+  ],
+
+  'procesadores-4': [ // Ryzen 7 5800XT — gaming/multitarea AM4
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'RDR2 usa bien los 8 núcleos; la RX 9060 XT lleva los gráficos a 1440p ultra.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'Hogwarts Legacy se beneficia enormemente de 32 GB en sistemas con streaming amplio.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'Starfield con mods de texturas necesita VRAM alta; los 16 GB de la Ti son ideales.',
+      },
+    },
+  ],
+
+  'procesadores-5': [ // Ryzen 5 7600X — gaming AM5 entry
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '70+ FPS',
+      setting: 'Ultra + FSR',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'AM5 + RDNA 4 con SAM es la combinación más eficiente para CP2077 en 1440p.',
+      },
+    },
+    {
+      titulo: 'Call of Duty: Black Ops 6',
+      genero: 'FPS',
+      resolucion: '1440p',
+      fps: '144+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'DDR5 6000MHz en AM5 reduce la latencia en shooters donde cada ms cuenta.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'El 7600X no crea cuello de botella con la RTX 5060 en mundos exigentes como Elden Ring.',
+      },
+    },
+  ],
+
+  'procesadores-6': [ // Ryzen 7 7700X — gaming/creación AM5
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '70+ FPS',
+      setting: 'Épico + FSR/DLSS',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-geforce-rtx-5070-windforce-oc-sff-12g',
+        id: 6,
+        nombre: 'GIGABYTE RTX 5070 WINDFORCE 12G',
+        razon: '8 núcleos Zen 4 + RTX 5070 es el combo más potente para este juego visualmente.',
+      },
+    },
+    {
+      titulo: 'Control',
+      genero: 'Action Thriller',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra + Path Tracing',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: '16 GB GDDR6 + 8 núcleos AM5 hacen que Control con ray tracing vuele sin caídas.',
+      },
+    },
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'El 7700X exprime DDR5 para poblar el mundo abierto del Japón feudal sin stutters.',
+      },
+    },
+  ],
+
+  'procesadores-7': [ // Ryzen 7 5800X — gaming/productividad AM4
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'Los 8 núcleos Zen 3 manejan perfectamente la IA de NPC densa de RDR2.',
+      },
+    },
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: '16 GB GDDR7 + 8 núcleos Zen 3 dan una experiencia sólida en Night City.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'El 5800X gestiona bien los hilos; 32 GB aseguran carga rápida en Hogwarts.',
+      },
+    },
+  ],
+
+  // ── MEMORIA RAM ───────────────────────────────────────────────────────────
+
+  'memoria-ram-1': [ // CORSAIR DDR5 16GB 6000MHz — high-end
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra + DLSS 4',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'DDR5 6000 MHz en AM5 + RTX 5060 Ti es el build más equilibrado para CP2077.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Épico + DLSS/FSR',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 + DDR5 6000MHz en AM5 es la plataforma que mejor aprovecha esta RAM.',
+      },
+    },
+    {
+      titulo: 'Control',
+      genero: 'Action Thriller',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'Control con ray tracing demanda VRAM alta; la RX 9070 XT con 16 GB GDDR6 lo cubre todo.',
+      },
+    },
+  ],
+
+  'memoria-ram-2': [ // Gigastone 32GB DDR4 3200MHz — capacidad gaming
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: '32 GB permiten texturas ultra; la RX 580 cubre los gráficos en 1080p.',
+      },
+    },
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1080p',
+      fps: '45+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800x',
+        id: 7,
+        nombre: 'AMD Ryzen 7 5800X',
+        razon: 'MSFS 2024 se beneficia de muchos núcleos para la simulación; 32 GB son imprescindibles.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'Starfield con 32 GB de RAM y la RX 9060 XT carga planetas sin tirones.',
+      },
+    },
+  ],
+
+  'memoria-ram-3': [ // OLOy DDR4 16GB 3200MHz — gaming estándar
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '120+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: '16 GB + RX 580 es el combo ideal para Apex Legends sin stutters en 1080p.',
+      },
+    },
+    {
+      titulo: 'The Witcher 3',
+      genero: 'RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'AM4 + 16 GB DDR4 3200MHz es el sweet spot de rendimiento/precio para Witcher 3.',
+      },
+    },
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '90+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'zotac-geforce-gtx-960',
+        id: 1,
+        nombre: 'ZOTAC GeForce GTX 960 2GB',
+        razon: 'GTA V es eficiente en VRAM; la GTX 960 con 16 GB de sistema funciona muy bien.',
+      },
+    },
+  ],
+
+  'memoria-ram-4': [ // TEAMGROUP DDR4 16GB 3600MHz
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-7600x',
+        id: 5,
+        nombre: 'AMD Ryzen 5 7600X',
+        razon: 'DDR4 3600MHz es el sweet spot de la plataforma AM5 con procesadores Zen 4.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: '3600 MHz + DLSS 4 en la RTX 5060 eliminan la latencia en shooters de ritmo rápido.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1080p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'intel-core-i5-12600',
+        id: 2,
+        nombre: 'Intel Core i5-12600',
+        razon: 'Hogwarts Legacy escala bien con IPC alto; el i5-12600 + DDR4 3600MHz es sólido.',
+      },
+    },
+  ],
+
+  'memoria-ram-5': [ // OLOy Blade 16GB 2666MHz — gaming económico
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '150+ FPS',
+      setting: 'Bajo-Medio',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'En CS2 competitivo la CPU manda; el 5500 con 16 GB mantiene 150+ FPS.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Medio-Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'zotac-geforce-gtx-960',
+        id: 1,
+        nombre: 'ZOTAC GeForce GTX 960 2GB',
+        razon: 'Apex Legends en settings medios funciona bien con la GTX 960 y 16 GB de RAM.',
+      },
+    },
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'intel-core-i5-12600',
+        id: 2,
+        nombre: 'Intel Core i5-12600',
+        razon: 'Build económico completo: i5-12600 + 16 GB 2666MHz corre GTA V sin problema.',
+      },
+    },
+  ],
+
+  'memoria-ram-6': [ // OLOy Warhawk 32GB 2666MHz Aura Sync
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1080p',
+      fps: '45+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800x',
+        id: 7,
+        nombre: 'AMD Ryzen 7 5800X',
+        razon: 'MSFS 2024 necesita CPU multicore potente; los 8 núcleos del 5800X con 32 GB son ideales.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: '32 GB de RAM + 16 GB VRAM en la RTX 5060 Ti: cero limitaciones en Starfield.',
+      },
+    },
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: '32 GB RAM + 16 GB VRAM deja RDR2 sin ningún límite de memoria visible.',
+      },
+    },
+  ],
+
+  'memoria-ram-7': [ // OLOy Black Owl 16GB 2666MHz — discreto básico
+    {
+      titulo: 'Dota 2',
+      genero: 'MOBA',
+      resolucion: '1080p',
+      fps: '200+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'zotac-geforce-gtx-960',
+        id: 1,
+        nombre: 'ZOTAC GeForce GTX 960 2GB',
+        razon: 'Dota 2 no exige VRAM; la GTX 960 con 16 GB de sistema mantiene 200+ FPS.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Bajo para máximos FPS',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'Para gaming competitivo, el Ryzen 5 5500 con 16 GB es la mejor inversión.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Medio',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: 'RX 580 + 16 GB es el build de entrada más completo para Apex Legends a 1080p.',
+      },
+    },
+  ],
+};
+
+const key = `${categoria}-${productoId}`;
+const juegos = (juegosMap[key] ?? []).slice(0, 3);
+
+const catLabel: Record<string, string> = {
+  'tarjetas-graficas': 'tarjeta gráfica',
+  'procesadores': 'procesador',
+  'memoria-ram': 'memoria RAM',
+};
+---
+
+{juegos.length > 0 && (
+  <section class="juegos-section">
+    <div class="juegos-header">
+      <span class="juegos-chip">🎮 Gaming Guide</span>
+      <h2>Juegos AAA que puedes correr con {productoNombre.split(' ').slice(0, 4).join(' ')}…</h2>
+      <p class="juegos-subtitle">
+        Guía orientativa basada en el rendimiento del hardware. Los FPS reales pueden variar según la configuración completa del sistema.
+      </p>
+    </div>
+
+    <div class="juegos-grid">
+      {juegos.map((juego) => (
+        <div class="juego-card">
+          {steamImg(juego.titulo) && (
+            <img
+              class="juego-img"
+              src={steamImg(juego.titulo)!}
+              alt={juego.titulo}
+              loading="lazy"
+              width="460"
+              height="215"
+            />
+          )}
+          <div class="juego-top">
+            <div class="juego-info">
+              <span class="juego-genero">{juego.genero}</span>
+              <h3 class="juego-titulo">{juego.titulo}</h3>
+            </div>
+            <div class="juego-badges">
+              <span class="badge-res">{juego.resolucion}</span>
+              <span class="badge-fps">{juego.fps}</span>
+            </div>
+          </div>
+
+          <div class="juego-setting">
+            <span class="setting-label">Calidad gráfica</span>
+            <span class="setting-value">{juego.setting}</span>
+          </div>
+
+          <div class="juego-rec">
+            <span class="rec-label">Para sacarle el máximo:</span>
+            <a
+              class="rec-link"
+              href={`/${juego.recomendado.categoria}/${juego.recomendado.slug}-${juego.recomendado.id}/`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="rec-cat">{catLabel[juego.recomendado.categoria]}</span>
+              <span class="rec-nombre">{juego.recomendado.nombre}</span>
+            </a>
+            <p class="rec-razon">{juego.recomendado.razon}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .juegos-section {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .juegos-header {
+    margin-bottom: 28px;
+  }
+
+  .juegos-chip {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.08);
+    border: 1px solid rgba(124, 255, 203, 0.22);
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  .juegos-header h2 {
+    margin: 0 0 10px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: #e6f7ff;
+    line-height: 1.3;
+  }
+
+  .juegos-subtitle {
+    margin: 0;
+    font-size: 0.83rem;
+    color: #6a849a;
+    line-height: 1.6;
+  }
+
+  .juegos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .juego-card {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .juego-card:hover {
+    border-color: rgba(124, 255, 203, 0.25);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .juego-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .juego-top {
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .juego-setting {
+    margin: 0 22px;
+  }
+
+  .juego-rec {
+    margin: 0 22px 22px;
+  }
+
+  .juego-genero {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8aa0b8;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .juego-titulo {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #e6f7ff;
+    line-height: 1.2;
+  }
+
+  .juego-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .badge-res,
+  .badge-fps {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .badge-res {
+    background: rgba(27, 183, 255, 0.12);
+    color: #1bb7ff;
+    border: 1px solid rgba(27, 183, 255, 0.25);
+  }
+
+  .badge-fps {
+    background: rgba(124, 255, 203, 0.1);
+    color: #7cffcb;
+    border: 1px solid rgba(124, 255, 203, 0.22);
+  }
+
+  .juego-setting {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .setting-label {
+    font-size: 0.75rem;
+    color: #6a849a;
+    white-space: nowrap;
+  }
+
+  .setting-value {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #c8d8e8;
+  }
+
+  .juego-rec {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .rec-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6a849a;
+  }
+
+  .rec-link {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(124, 255, 203, 0.05);
+    border: 1px solid rgba(124, 255, 203, 0.15);
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .rec-link:hover {
+    background: rgba(124, 255, 203, 0.1);
+    border-color: rgba(124, 255, 203, 0.35);
+  }
+
+  .rec-cat {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #7cffcb;
+  }
+
+  .rec-nombre {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #e6f7ff;
+    line-height: 1.3;
+  }
+
+  .rec-razon {
+    margin: 0;
+    font-size: 0.78rem;
+    color: #7a94aa;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 640px) {
+    .juegos-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .juego-top {
+      flex-direction: column;
+    }
+
+    .juego-badges {
+      flex-direction: row;
+    }
+  }
+</style>
