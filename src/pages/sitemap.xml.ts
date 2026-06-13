@@ -1,6 +1,28 @@
 import type { APIRoute } from 'astro';
 import productos from '../data/productos.json';
 
+const blogSlugs = [
+  'que-es-la-vram',
+  'que-es-el-ancho-de-bus-en-una-tarjeta-grafica',
+  'que-es-la-velocidad-bus-en-tarjeta-grafica',
+  'nucleos-e-hilos-en-un-procesador',
+  'que-es-el-ddr-en-memoria-ram',
+  'que-hace-la-latencia-en-ram',
+  'como-instalar-una-refrigeracion-liquida',
+  'como-saber-si-refrigeracion-liquida-es-silenciosa',
+  'refrigeracion-liquida-vs-cooler-de-aire',
+  'que-tener-en-cuenta-para-comprar-gabinete-gamer',
+  'tipos-de-teclado-gamer',
+  'teclado-gamer-cable-o-inalambrico',
+  'que-switches-suenan-menos-teclado-gamer',
+  'que-switches-son-mas-satisfactorios-para-escribir',
+  'por-que-importa-el-peso-del-mouse-gamer',
+  'mouse-gamer-inalambrico-tiene-lag',
+  'tipos-de-agarre-para-mouse-gamer',
+  'que-debe-tener-un-audifono-gamer-para-ser-comodo',
+  'beneficios-audifono-gamer-inalambrico',
+];
+
 const categories = [
   'tarjetas-graficas',
   'procesadores',
@@ -18,6 +40,11 @@ const categories = [
 const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');
 
 export const GET: APIRoute = () => {
+  const blogUrls = blogSlugs.map(slug => `  <url>
+    <loc>${site}/blog/${slug}/</loc>
+    <priority>0.6</priority>
+  </url>`).join('\n');
+
   const categoryUrls = categories.map(cat => `  <url>
     <loc>${site}/${cat}/</loc>
     <priority>0.8</priority>
@@ -41,10 +68,7 @@ export const GET: APIRoute = () => {
     <loc>${site}/blog/</loc>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>${site}/blog/que-es-la-vram/</loc>
-    <priority>0.6</priority>
-  </url>
+  ${blogUrls}
   ${categoryUrls}
   ${productUrls}
 </urlset>`;
