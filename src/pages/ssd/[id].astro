@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
 import ProductoDetalle from '../../components/ProductoDetalle.astro';
+import JuegosCompatibles from '../../components/JuegosCompatibles.astro';
 import productos from '../../data/productos.json';
 
 export function getStaticPaths() {
@@ -47,6 +48,8 @@ const breadcrumb = {
     enlaceAmazon={producto.enlaceAmazon}
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
   />
+
+  <JuegosCompatibles categoria="ssd" productoId={numeroId} productoNombre={producto.nombre} />
 
   <section class="pdp-seo-context">
     <h2>¿Por qué elegir este SSD para tu PC?</h2>

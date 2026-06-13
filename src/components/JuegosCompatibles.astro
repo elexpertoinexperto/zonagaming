@@ -31,6 +31,8 @@ const steamImg = (titulo: string): string | null => {
   return `https://cdn.akamai.steamstatic.com/steam/apps/${appId}/header.jpg`;
 };
 
+type Categoria = 'tarjetas-graficas' | 'procesadores' | 'memoria-ram' | 'ssd' | 'refrigeracion-normal' | 'refrigeracion-liquida';
+
 interface Juego {
   titulo: string;
   genero: string;
@@ -38,7 +40,7 @@ interface Juego {
   fps: string;
   setting: string;
   recomendado: {
-    categoria: 'tarjetas-graficas' | 'procesadores' | 'memoria-ram';
+    categoria: Categoria;
     slug: string;
     id: number;
     nombre: string;
@@ -47,7 +49,7 @@ interface Juego {
 }
 
 interface Props {
-  categoria: 'tarjetas-graficas' | 'procesadores' | 'memoria-ram';
+  categoria: Categoria;
   productoId: number;
   productoNombre: string;
 }
@@ -761,6 +763,957 @@ const juegosMap: Record<string, Juego[]> = {
     },
   ],
 
+  // ── SSD ───────────────────────────────────────────────────────────────────
+
+  'ssd-1': [ // SSD NVMe — carga ultrarrápida
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'Con un SSD NVMe rápido y la RTX 5060, Night City carga en segundos sin stutters.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800x',
+        id: 7,
+        nombre: 'AMD Ryzen 7 5800X',
+        razon: 'Starfield carga planetas en segundos con NVMe; el 5800X gestiona la IA sin caídas.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1080p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'SSD rápido + 32 GB de RAM eliminan por completo los tiempos de carga en Hogwarts.',
+      },
+    },
+  ],
+
+  'ssd-2': [
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'RDR2 usa el SSD constantemente para streaming; la RX 9060 XT lleva los gráficos a Ultra.',
+      },
+    },
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1080p',
+      fps: '45+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'MSFS 2024 hace streaming masivo desde SSD; el 7700X mantiene la simulación fluida.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'SSD NVMe + DDR5 reduce el tiempo entre zonas de Elden Ring a menos de 1 segundo.',
+      },
+    },
+  ],
+
+  'ssd-3': [
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: 'GTA V carga el mapa completo desde el SSD; la RX 580 mantiene 100+ FPS en 1080p.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '150+ FPS',
+      setting: 'Bajo para máximos FPS',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'CS2 carga mapas en menos de 5s con SSD; el Ryzen 5 5500 lleva los FPS al límite.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'SSD SATA + 16 GB DDR4 es el combo económico perfecto para Apex sin stutters.',
+      },
+    },
+  ],
+
+  'ssd-4': [
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'Black Myth carga texturas 8K desde el SSD; la RX 9070 XT las procesa sin caídas.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 + NVMe PCIe 4.0 eliminan completamente los tiempos de carga en Hogwarts.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'Starfield con NVMe rápido y 32 GB carga cada planeta en menos de 3 segundos.',
+      },
+    },
+  ],
+
+  'ssd-5': [
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra Psycho + DLSS 4',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'NVMe PCIe 4.0 + RTX 5060 Ti: Night City con texturas máximas sin ninguna espera.',
+      },
+    },
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'AC Shadows hace streaming continuo del mundo; SSD rápido + 7700X es la base ideal.',
+      },
+    },
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1080p',
+      fps: '45+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'MSFS 2024 usa SSD como caché de terreno; DDR5 6000MHz reduce la latencia total.',
+      },
+    },
+  ],
+
+  'ssd-6': [
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'RDR2 con texturas ultra necesita NVMe rápido y VRAM alta; este combo lo tiene.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-7600x',
+        id: 5,
+        nombre: 'AMD Ryzen 5 7600X',
+        razon: 'Elden Ring con NVMe y 7600X en AM5: cero tirones entre áreas y FPS estables.',
+      },
+    },
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: 'GTA V usa el SSD para streaming del mapa; 16 GB DDR4 3600MHz completa el sistema.',
+      },
+    },
+  ],
+
+  'ssd-7': [
+    {
+      titulo: 'Call of Duty: Black Ops 6',
+      genero: 'FPS',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'COD BO6 carga mapas en segundos con NVMe; la RTX 5060 lleva los FPS al límite.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'intel-core-i5-12600',
+        id: 2,
+        nombre: 'Intel Core i5-12600',
+        razon: 'Marvel Rivals con NVMe y i5-12600: partidas sin stutters ni tiempos de carga largos.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '120+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'Apex con SSD NVMe entra a partida en segundos; 16 GB DDR4 previenen micro-stutters.',
+      },
+    },
+  ],
+
+  // ── REFRIGERACIÓN NORMAL ──────────────────────────────────────────────────
+
+  'refrigeracion-normal-1': [
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1080p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-8gb-oc',
+        id: 2,
+        nombre: 'ASUS Dual RTX 5060 8GB OC',
+        razon: 'Un buen cooler de aire mantiene el CPU frío en sesiones largas de Night City.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '150+ FPS',
+      setting: 'Bajo para máximos FPS',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'El cooler de torre mantiene el Ryzen 5 5500 a plena frecuencia turbo en CS2.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'Sistema frío y 16 GB DDR4 garantizan sesiones largas de Apex sin throttling.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-2': [
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'El cooler tower mantiene temperaturas bajas en jefes largos de Elden Ring.',
+      },
+    },
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'El 9600X con cooler de torre no supera los 70°C ni en sesiones de 4 horas en GTA.',
+      },
+    },
+    {
+      titulo: 'The Witcher 3',
+      genero: 'RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'Witcher 3 con next-gen patch usa hasta 20 GB de RAM; 32 GB + cooler eficiente.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-3': [
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'Black Myth exige CPU al máximo; un cooler twin-tower evita el throttling sostenido.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800xt',
+        id: 4,
+        nombre: 'AMD Ryzen 7 5800XT',
+        razon: 'Starfield carga planetas con carga alta de CPU; el cooler mantiene boost sostenido.',
+      },
+    },
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: 'RDR2 con cooler eficiente y 16 GB DDR4 corre fluido sin picos de temperatura.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-4': [
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'El cooler twin-tower libera todo el potencial del CPU emparejado con la RX 9070 XT.',
+      },
+    },
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'El 7700X en AM5 genera calor; un buen cooler de torre mantiene el boost sin cortes.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1440p',
+      fps: '144+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'Marvel Rivals con CPU frío y DDR5 6000MHz no baja de 144 FPS en ningún momento.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-5': [
+    {
+      titulo: 'GTA V',
+      genero: 'Mundo Abierto',
+      resolucion: '1080p',
+      fps: '100+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'hyperrender-rx-580-8gb',
+        id: 3,
+        nombre: 'HyperRender RX 580 8GB',
+        razon: 'Cooler eficiente + RX 580 es el combo económico que exprime GTA V en 1080p.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-5500',
+        id: 3,
+        nombre: 'AMD Ryzen 5 5500',
+        razon: 'El Ryzen 5 5500 con cooler de torre rinde al máximo en Apex toda la sesión.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '150+ FPS',
+      setting: 'Bajo para máximos FPS',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'Sistema frío y 16 GB DDR4: la combinación perfecta para CS2 sin interrupciones.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-6': [
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'AC Shadows exige CPU sostenido; el cooler de torre mantiene boost para el mundo abierto.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1080p',
+      fps: '60 FPS',
+      setting: 'Alto',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800xt',
+        id: 4,
+        nombre: 'AMD Ryzen 7 5800XT',
+        razon: 'Black Myth bajo carga total: el 5800XT con cooler tower no supera los 75°C.',
+      },
+    },
+    {
+      titulo: 'Forza Horizon 5',
+      genero: 'Carreras',
+      resolucion: '1080p',
+      fps: '120 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'FH5 con CPU frío y 32 GB DDR4 carga el México abierto sin ningún hitch.',
+      },
+    },
+  ],
+
+  'refrigeracion-normal-7': [
+    {
+      titulo: 'Dota 2',
+      genero: 'MOBA',
+      resolucion: '1080p',
+      fps: '200+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'zotac-geforce-gtx-960',
+        id: 1,
+        nombre: 'ZOTAC GeForce GTX 960 2GB',
+        razon: 'Dota 2 es light; cooler de aire silencioso + GTX 960 mantiene 200+ FPS fácil.',
+      },
+    },
+    {
+      titulo: 'CS2',
+      genero: 'FPS Competitivo',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Bajo-Medio',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'intel-core-i5-12600',
+        id: 2,
+        nombre: 'Intel Core i5-12600',
+        razon: 'El i5-12600 con cooler de calidad mantiene boost consistente en CS2 competitivo.',
+      },
+    },
+    {
+      titulo: 'Apex Legends',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '80+ FPS',
+      setting: 'Medio-Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'oloy-white-owl-16gb-3200mhz',
+        id: 3,
+        nombre: 'OLOy DDR4 16GB 3200MHz',
+        razon: 'Build de entrada con cooler eficiente y 16 GB: Apex sin interrupciones ni lag.',
+      },
+    },
+  ],
+
+  // ── REFRIGERACIÓN LÍQUIDA ─────────────────────────────────────────────────
+
+  'refrigeracion-liquida-1': [
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '1440p',
+      fps: '80+ FPS',
+      setting: 'Ultra Psycho + DLSS 4',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'AIO 240mm mantiene el CPU bajo 65°C con overclock activo en Night City.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Épico',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'El 7700X necesita refrigeración líquida para mantener boost en escenas intensas.',
+      },
+    },
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1080p',
+      fps: '45+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'MSFS 2024 bajo carga máxima constante: AIO + DDR5 es la combo más estable.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-2': [
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'El AIO 360mm es indispensable para overclocking con la RX 9070 XT en 4K.',
+      },
+    },
+    {
+      titulo: 'Starfield',
+      genero: 'RPG Sci-Fi',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-9600x',
+        id: 1,
+        nombre: 'AMD Ryzen 5 9600X',
+        razon: 'Zen 5 con refrigeración líquida no hace throttling ni en las sesiones más largas.',
+      },
+    },
+    {
+      titulo: 'Red Dead Redemption 2',
+      genero: 'Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'RDR2 bajo carga total con AIO + 32 GB: sin un solo stutter en todo el mapa.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-3': [
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9060-xt-gaming-oc-16g',
+        id: 4,
+        nombre: 'GIGABYTE RX 9060 XT 16G',
+        razon: 'Refrigeración líquida mantiene el CPU fría en los jefes más largos de Elden Ring.',
+      },
+    },
+    {
+      titulo: 'Hogwarts Legacy',
+      genero: 'Action RPG',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800xt',
+        id: 4,
+        nombre: 'AMD Ryzen 7 5800XT',
+        razon: 'El AIO permite al 5800XT mantener boost máximo durante horas en Hogwarts.',
+      },
+    },
+    {
+      titulo: 'Call of Duty: Warzone',
+      genero: 'Battle Royale FPS',
+      resolucion: '1080p',
+      fps: '144+ FPS',
+      setting: 'Alto-Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'teamgroup-t-force-delta-rgb-16gb-3600mhz',
+        id: 4,
+        nombre: 'TEAMGROUP T-Force Delta DDR4 16GB 3600MHz',
+        razon: 'Warzone con CPU refrigerado con AIO y DDR4 3600MHz mantiene latencia mínima.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-4': [
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '4K',
+      fps: '60+ FPS',
+      setting: 'Ultra + Ray Tracing',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-geforce-rtx-5070-windforce-oc-sff-12g',
+        id: 6,
+        nombre: 'GIGABYTE RTX 5070 WINDFORCE 12G',
+        razon: 'AIO 360mm + RTX 5070: el setup de 4K con RT que nunca hace throttling.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Épico + FSR 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'Black Myth en 4K bajo carga extrema: el AIO mantiene el 7700X a plena potencia.',
+      },
+    },
+    {
+      titulo: 'Indiana Jones and the Great Circle',
+      genero: 'Acción Aventura',
+      resolucion: '1440p',
+      fps: '100+ FPS',
+      setting: 'Ultra + Path Tracing',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'Path Tracing con AIO activo y DDR5: el sistema nunca cae por temperatura.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-5': [
+    {
+      titulo: 'Dragon Age: The Veilguard',
+      genero: 'RPG',
+      resolucion: '1440p',
+      fps: '90+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'asus-dual-rtx-5060-ti-16gb-oc',
+        id: 5,
+        nombre: 'ASUS RTX 5060 Ti 16GB OC',
+        razon: 'Con AIO silencioso, el CPU no limita el rendimiento en escenas masivas de Dragon Age.',
+      },
+    },
+    {
+      titulo: 'Forza Horizon 5',
+      genero: 'Carreras',
+      resolucion: '1440p',
+      fps: '120 FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-5-7600x',
+        id: 5,
+        nombre: 'AMD Ryzen 5 7600X',
+        razon: 'El 7600X con AIO se mantiene bajo 60°C a 120 FPS en FH5 en 1440p.',
+      },
+    },
+    {
+      titulo: 'Marvel Rivals',
+      genero: 'Hero Shooter',
+      resolucion: '1440p',
+      fps: '144+ FPS',
+      setting: 'Muy Alto',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'AIO silencioso + DDR5: Marvel Rivals a 144+ FPS sin ruido ni fluctuaciones.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-6': [
+    {
+      titulo: 'Star Wars Outlaws',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '1440p',
+      fps: '60+ FPS',
+      setting: 'Ultra + DLSS 4',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'El AIO 360mm permite al CPU manejar la IA de Star Wars sin throttle.',
+      },
+    },
+    {
+      titulo: 'Cyberpunk 2077',
+      genero: 'RPG Mundo Abierto',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Ultra + RT Ultra',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-5800xt',
+        id: 4,
+        nombre: 'AMD Ryzen 7 5800XT',
+        razon: 'Zen 3+ con AIO es el techo de AM4; Night City en 4K sin un solo throttle.',
+      },
+    },
+    {
+      titulo: 'Elden Ring',
+      genero: 'Action RPG',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Máximo',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'gigastone-game-pro-32gb-3200mhz',
+        id: 2,
+        nombre: 'Gigastone Game PRO 32GB DDR4',
+        razon: 'AIO + 32 GB DDR4: el sistema de Elden Ring en 4K nunca toca sus límites.',
+      },
+    },
+  ],
+
+  'refrigeracion-liquida-7': [
+    {
+      titulo: 'Assassin\'s Creed Shadows',
+      genero: 'Acción Mundo Abierto',
+      resolucion: '4K',
+      fps: '60+ FPS',
+      setting: 'Ultra + FSR 4',
+      recomendado: {
+        categoria: 'tarjetas-graficas',
+        slug: 'gigabyte-radeon-rx-9070-xt-gaming-oc-16g',
+        id: 7,
+        nombre: 'GIGABYTE RX 9070 XT 16G',
+        razon: 'AIO 360mm + RX 9070 XT: AC Shadows en 4K sin compromisos de temperatura.',
+      },
+    },
+    {
+      titulo: 'Black Myth: Wukong',
+      genero: 'Action RPG',
+      resolucion: '4K',
+      fps: '60 FPS',
+      setting: 'Épico + FSR 4',
+      recomendado: {
+        categoria: 'procesadores',
+        slug: 'amd-ryzen-7-7700x',
+        id: 6,
+        nombre: 'AMD Ryzen 7 7700X',
+        razon: 'Refrigeración líquida + Zen 4 es el pico de rendimiento sostenido en Black Myth.',
+      },
+    },
+    {
+      titulo: 'Microsoft Flight Simulator 2024',
+      genero: 'Simulación',
+      resolucion: '1440p',
+      fps: '45+ FPS',
+      setting: 'Ultra',
+      recomendado: {
+        categoria: 'memoria-ram',
+        slug: 'corsair-vengeance-rgb-rs-16gb-6000mhz',
+        id: 1,
+        nombre: 'CORSAIR Vengeance DDR5 16GB 6000MHz',
+        razon: 'MSFS 2024 en Ultra con AIO y DDR5 es el simulador más fluido que puedes tener.',
+      },
+    },
+  ],
+
   // ── MEMORIA RAM ───────────────────────────────────────────────────────────
 
   'memoria-ram-1': [ // CORSAIR DDR5 16GB 6000MHz — high-end
@@ -1086,6 +2039,9 @@ const catLabel: Record<string, string> = {
   'tarjetas-graficas': 'tarjeta gráfica',
   'procesadores': 'procesador',
   'memoria-ram': 'memoria RAM',
+  'ssd': 'SSD',
+  'refrigeracion-normal': 'refrigeración',
+  'refrigeracion-liquida': 'refrigeración líquida',
 };
 ---
 
