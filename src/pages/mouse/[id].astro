@@ -23,9 +23,18 @@ if (!producto) {
 
 const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
 const metaDescription = `${nombreCorto} — mouse gamer al mejor precio. Specs, sensor y compra con envío Amazon en Monckey Gamer.`;
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Mouse Gamer", "item": "https://monckeygamer.com/mouse/" },
+    { "@type": "ListItem", "position": 3, "name": producto.nombre, "item": `https://monckeygamer.com/mouse/${id}/` }
+  ]
+};
 ---
 
-<SiteLayout title={`${producto.nombre} | Mouse Gamer | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title={`${producto.nombre} | Mouse Gamer | Monckey Gamer`} description={metaDescription} robots="index, follow" schema={breadcrumb}>
   <div class="producto-header">
     <a class="back-link" href="/mouse/">← Volver a Mouse Gamer</a>
   </div>

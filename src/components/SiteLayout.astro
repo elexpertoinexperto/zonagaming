@@ -2,7 +2,7 @@
 import '../styles.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
-const { title, description, robots } = Astro.props;
+const { title, description, robots, schema } = Astro.props;
 ---
 
 <html lang="es">
@@ -15,6 +15,7 @@ const { title, description, robots } = Astro.props;
     <link rel="canonical" href={Astro.url.href} />
     {description && <meta name="description" content={description} />}
     <title>{title}</title>
+    {schema && <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />}
   </head>
   <body>
     <div class="page">

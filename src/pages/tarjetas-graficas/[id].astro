@@ -24,9 +24,18 @@ if (!producto) {
 
 const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
 const metaDescription = `${nombreCorto} — tarjeta gráfica para PC al mejor precio. Specs, opiniones y compra con envío Amazon en Monckey Gamer.`;
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Tarjetas Gráficas", "item": "https://monckeygamer.com/tarjetas-graficas/" },
+    { "@type": "ListItem", "position": 3, "name": producto.nombre, "item": `https://monckeygamer.com/tarjetas-graficas/${id}/` }
+  ]
+};
 ---
 
-<SiteLayout title={`${producto.nombre} | Tarjeta Gráfica para PC | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title={`${producto.nombre} | Tarjeta Gráfica para PC | Monckey Gamer`} description={metaDescription} robots="index, follow" schema={breadcrumb}>
   <div class="producto-header">
     <a class="back-link" href="/tarjetas-graficas/">← Volver a Tarjetas Gráficas para PC</a>
   </div>

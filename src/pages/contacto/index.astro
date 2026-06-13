@@ -1,0 +1,184 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Contacto | Monckey Gamer"
+  description="¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos directamente a nuestro correo desde tu cuenta de Gmail."
+  robots="index, follow"
+>
+  <section class="contacto-hero">
+    <span class="contacto-chip">✉ Contacto</span>
+    <h1>¿Hablamos?</h1>
+    <p class="contacto-sub">
+      Puedes escribirnos directamente por correo. Para que tu mensaje llegue correctamente,
+      envíalo <strong>desde una cuenta de Gmail</strong>.
+    </p>
+  </section>
+
+  <section class="contacto-card-wrap">
+    <div class="contacto-card">
+      <div class="contacto-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="10" fill="rgba(124,255,203,0.08)"/>
+          <path d="M6 10.5C6 9.67 6.67 9 7.5 9h17c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-17C6.67 23 6 22.33 6 21.5v-11Z" stroke="#7cffcb" stroke-width="1.5"/>
+          <path d="M6 10.5l10 7 10-7" stroke="#7cffcb" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="contacto-info">
+        <span class="contacto-label">Correo electrónico</span>
+        <a class="contacto-email" href="mailto:elexpertoinexperto@gmail.com">
+          elexpertoinexperto@gmail.com
+        </a>
+      </div>
+
+      <a
+        class="contacto-btn"
+        href="https://mail.google.com/mail/?view=cm&to=elexpertoinexperto@gmail.com&su=Contacto%20desde%20Monckey%20Gamer"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Abrir en Gmail
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <p class="contacto-note">
+      El botón abre Gmail con el destinatario prellenado. Si usas otro cliente de correo,
+      copia la dirección y envía desde tu cuenta de Gmail para asegurarte de que el mensaje llegue.
+    </p>
+  </section>
+</SiteLayout>
+
+<style>
+  .contacto-hero {
+    max-width: 700px;
+    margin: 64px auto 0;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .contacto-chip {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.08);
+    border: 1px solid rgba(124, 255, 203, 0.22);
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+
+  .contacto-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #e6f7ff;
+    margin: 0 0 16px;
+  }
+
+  .contacto-sub {
+    color: #8aa0b8;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .contacto-sub strong {
+    color: #c8d8e8;
+  }
+
+  .contacto-card-wrap {
+    max-width: 560px;
+    margin: 48px auto 80px;
+    padding: 0 2rem;
+  }
+
+  .contacto-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(124, 255, 203, 0.18);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .contacto-icon {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: rgba(124, 255, 203, 0.06);
+    border: 1px solid rgba(124, 255, 203, 0.15);
+  }
+
+  .contacto-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .contacto-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6a849a;
+  }
+
+  .contacto-email {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #7cffcb;
+    text-decoration: none;
+    word-break: break-all;
+    transition: color 0.2s ease;
+  }
+
+  .contacto-email:hover {
+    color: #00ffe1;
+  }
+
+  .contacto-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background: rgba(124, 255, 203, 0.1);
+    border: 1px solid rgba(124, 255, 203, 0.3);
+    color: #7cffcb;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+
+  .contacto-btn:hover {
+    background: rgba(124, 255, 203, 0.18);
+    border-color: rgba(124, 255, 203, 0.55);
+    color: #e6f7ff;
+  }
+
+  .contacto-note {
+    margin: 20px 0 0;
+    font-size: 0.8rem;
+    color: #4a6478;
+    line-height: 1.6;
+    text-align: center;
+  }
+</style>

@@ -66,6 +66,20 @@ const bestSellerProducts = [
     <link rel="canonical" href={Astro.url.href} />
     <meta name="description" content="Componentes PC gamer al mejor precio: tarjetas gráficas, CPU, RAM, SSD y más. Calidad premium y envío Amazon. ¡Arma tu setup!" />
     <title>Componentes PC Gamer | Monckey Gamer</title>
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "OnlineStore",
+      "name": "Monckey Gamer",
+      "url": "https://monckeygamer.com/",
+      "description": "Tienda online de componentes PC para gaming: tarjetas gráficas, procesadores, memoria RAM, SSD y periféricos al mejor precio con envío Amazon.",
+      "email": "contacto@monckeygamer.com",
+      "inLanguage": "es",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Amazon",
+      "priceRange": "$$",
+      "hasMap": false,
+      "sameAs": []
+    })} />
   </head>
   <body>
     <div class="page">

@@ -20,7 +20,14 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Mouse Gamer de Alta Precisión | Monckey Gamer" description={metaDescription} robots="index, follow">
+<SiteLayout title="Mouse Gamer de Alta Precisión | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Mouse Gamer", "item": "https://monckeygamer.com/mouse/" }
+  ]
+}}>
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Ratón Gamer</small>

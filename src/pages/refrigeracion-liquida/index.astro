@@ -20,7 +20,14 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Refrigeración Líquida para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
+<SiteLayout title="Refrigeración Líquida para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Refrigeración Líquida", "item": "https://monckeygamer.com/refrigeracion-liquida/" }
+  ]
+}}>
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
     <small>Sistema de Refrigeración de PC AIO</small>
