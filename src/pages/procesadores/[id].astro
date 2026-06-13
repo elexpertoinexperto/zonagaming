@@ -22,14 +22,15 @@ if (!producto) {
   return Astro.redirect('/procesadores');
 }
 
-const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0, 58).replace(/\s+\S*$/, '') + '…' : producto.nombre} al mejor precio en Monckey Gamer. Specs, opiniones y compra con envío Amazon.`;
+const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
+const metaDescription = `${nombreCorto} — procesador de PC para gaming al mejor precio. Specs, opiniones y compra con envío Amazon en Monckey Gamer.`;
 ---
 
-<SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title={`${producto.nombre} | Procesador de PC | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <div class="producto-header">
-    <a class="back-link" href="/procesadores/">← Volver a Procesadores</a>
+    <a class="back-link" href="/procesadores/">← Volver a Procesadores de PC</a>
   </div>
-  
+
   <ProductoDetalle
     nombre={producto.nombre}
     descripcion={producto.descripcion}
@@ -44,23 +45,62 @@ const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0
     productoId={numeroId}
     productoNombre={producto.nombre}
   />
+
+  <section class="pdp-seo-context">
+    <h2>¿Por qué elegir este procesador de PC para tu build?</h2>
+    <p>
+      El <strong>{producto.nombre}</strong> es un procesador de PC diseñado para gamers que exigen rendimiento real sin pagar de más.
+      Como CPU de computadora para gaming, ofrece la potencia necesaria para jugar con fluidez en los títulos más exigentes del mercado.
+    </p>
+    <p>
+      Si estás buscando procesadores de PC que equilibren precio y rendimiento, esta opción está disponible con envío directo desde Amazon,
+      con garantía oficial y devoluciones sin complicaciones. Compara con otros CPUs de computadora en nuestro
+      <a href="/procesadores/">catálogo completo de procesadores de PC</a>.
+    </p>
+  </section>
 </SiteLayout>
 
 <style>
   .producto-header {
-    padding: 2rem;
+    padding: 2rem 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .back-link {
-    color: #3b82f6;
+    color: #7cffcb;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
   }
 
   .back-link:hover {
-    color: #1d4ed8;
+    color: #00ffe1;
+  }
+
+  .pdp-seo-context {
+    max-width: 1200px;
+    margin: 48px auto 0;
+    padding: 32px 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .pdp-seo-context h2 {
+    font-size: 1.2rem;
+    color: #e6f7ff;
+    margin: 0 0 14px;
+  }
+
+  .pdp-seo-context p {
+    color: #8aa0b8;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+  }
+
+  .pdp-seo-context a {
+    color: #7cffcb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 </style>

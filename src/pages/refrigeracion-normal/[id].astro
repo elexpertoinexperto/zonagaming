@@ -21,15 +21,16 @@ if (!producto) {
   return Astro.redirect('/refrigeracion-normal');
 }
 
-const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0, 58).replace(/\s+\S*$/, '') + '…' : producto.nombre} al mejor precio en Monckey Gamer. Specs, opiniones y compra con envío Amazon.`;
+const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
+const metaDescription = `${nombreCorto} — refrigeración cooler para PC al mejor precio. Specs, rendimiento térmico y compra con envío Amazon en Monckey Gamer.`;
 ---
 
-<SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title={`${producto.nombre} | Refrigeración Cooler para PC | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <div class="producto-header">
     <a class="back-link" href="/refrigeracion-normal/">← Volver a Refrigeración Normal</a>
   </div>
-  
-  <ProductoDetalle 
+
+  <ProductoDetalle
     nombre={producto.nombre}
     descripcion={producto.descripcion}
     especificaciones={producto.especificaciones}
@@ -37,23 +38,63 @@ const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0
     enlaceAmazon={producto.enlaceAmazon}
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
   />
+
+  <section class="pdp-seo-context">
+    <h2>¿Por qué elegir este refrigeración cooler para tu PC?</h2>
+    <p>
+      El <strong>{producto.nombre}</strong> es un sistema de enfriamiento por aire diseñado para mantener tu CPU a temperatura
+      óptima sin el costo ni la complejidad de una refrigeración líquida. Como refrigeración cooler de torre, ofrece
+      silencio, durabilidad y excelente disipación sin riesgo de fugas.
+    </p>
+    <p>
+      Si estás buscando un sistema de enfriamiento por aire que equilibre precio y rendimiento térmico, esta opción está disponible
+      con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones. Compara con otros coolers en nuestro
+      <a href="/refrigeracion-normal/">catálogo completo de refrigeración normal</a>.
+    </p>
+  </section>
 </SiteLayout>
 
 <style>
   .producto-header {
-    padding: 2rem;
+    padding: 2rem 2rem 0;
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .back-link {
-    color: #3b82f6;
+    color: #7cffcb;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
   }
 
   .back-link:hover {
-    color: #1d4ed8;
+    color: #00ffe1;
+  }
+
+  .pdp-seo-context {
+    max-width: 1200px;
+    margin: 48px auto 0;
+    padding: 32px 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .pdp-seo-context h2 {
+    font-size: 1.2rem;
+    color: #e6f7ff;
+    margin: 0 0 14px;
+  }
+
+  .pdp-seo-context p {
+    color: #8aa0b8;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+  }
+
+  .pdp-seo-context a {
+    color: #7cffcb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 </style>

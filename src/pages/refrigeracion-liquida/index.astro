@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Refrigeración líquida';
-const metaDescription = "Refrigeración líquida AIO: temperaturas bajo control y máximo rendimiento. Silenciosa y RGB al mejor precio. ¡Enfría tu PC!";
-const description = 'Sistemas de enfriamiento líquido para mantener temperaturas bajas y ruido mínimo en tu equipo.';
+const metaDescription = "La mejor refrigeración líquida para PC gaming: AIOs 240 mm y 360 mm. Sistema de refrigeración de PC con enfriamiento líquido silencioso al mejor precio con envío Amazon.";
+const description = 'La mejor refrigeración líquida para PC y sistemas de refrigeración de PC AIO. Enfriamiento líquido silencioso y eficiente para gaming con overclocking y RGB.';
 const productsData = productos['refrigeracion-liquida'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Refrigeración Líquida para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Sistema de Refrigeración de PC AIO</small>
+    <h1>Refrigeración Líquida</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Enfriamiento extremo con estilo</span>
+      <span>{productsData.length} sistemas disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="refrigeracion-liquida" />
 
   <section class="category-buying-guide">
-    <h2>¿Cuándo elegir refrigeración líquida?</h2>
-    <p>Los AIOs (all-in-one) son la opción premium para mantener temperaturas bajas con un look limpio:</p>
+    <h2>¿Cómo elegir tu refrigeración líquida para PC?</h2>
+    <p>La refrigeración líquida para PC es la opción premium para mantener temperaturas bajas con el mínimo ruido y un look limpio. Ya sea que busques un sistema de refrigeración de PC básico o enfriamiento líquido para overclocking, estos son los factores clave:</p>
     <ul>
-      <li>240 mm es suficiente para CPUs de gama media; usa 360 mm si haces overclocking.</li>
-      <li>Son más silenciosos que la mayoría de coolers de aire de alto rendimiento.</li>
-      <li>Instala el radiador en zonas de extracción para sacar el calor del gabinete.</li>
-      <li>Verifica compatibilidad de socket; no todos los AIOs son universales.</li>
-      <li>Ideal para gabinetes compactos donde un cooler de torre no tiene espacio.</li>
+      <li><strong>Tamaño del radiador:</strong> 240 mm es suficiente para CPUs de gama media; elige 360 mm si tu sistema de refrigeración de PC va a soportar overclocking intensivo.</li>
+      <li><strong>Silencio:</strong> la refrigeración líquida para PC es más silenciosa que la mayoría de coolers de aire de alto rendimiento.</li>
+      <li><strong>Instalación:</strong> coloca el radiador de tu sistema de enfriamiento líquido en zonas de extracción para expulsar el calor del gabinete eficientemente.</li>
+      <li><strong>Compatibilidad de socket:</strong> verifica que tu refrigeración líquida para PC sea compatible con tu socket AM5, LGA1700 u otro antes de comprar.</li>
+      <li><strong>Espacio:</strong> el enfriamiento líquido es ideal para gabinetes compactos donde un cooler de torre de aire no tiene espacio suficiente.</li>
     </ul>
+    <p>Todos los sistemas de refrigeración de PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-refrigeracion-liquida"
-    title="Los más vendidos en Refrigeracion Liquida"
+    title="Refrigeración Líquida más vendida"
     products={bestSellerProducts}
   />
 </SiteLayout>

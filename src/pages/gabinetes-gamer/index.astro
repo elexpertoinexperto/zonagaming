@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Gabinetes gamer';
-const metaDescription = "Gabinetes gamer con gran flujo de aire, RGB y espacio de sobra. Estética brutal al mejor precio. ¡Dale vida a tu setup!";
-const description = 'Gabinetes con flujo de aire, diseño gamer y espacio para builds potentes y RGB.';
+const metaDescription = "Los mejores gabinetes gamer para PC: mid-tower y full-tower con airflow, vidrio templado y RGB. Gabinete para PC al mejor precio con envío Amazon.";
+const description = 'Los mejores gabinetes gamer y gabinetes para PC con máximo flujo de aire, panel de vidrio templado y espacio para builds potentes. Encuentra el gabinete ideal para tu setup.';
 const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Gabinetes Gamer para PC | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Gabinete para PC</small>
+    <h1>Gabinetes Gamer</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Estilo y rendimiento en una sola torre</span>
+      <span>{productsData.length} gabinetes disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="gabinetes-gamer" />
 
   <section class="category-buying-guide">
-    <h2>¿Cómo elegir el gabinete ideal?</h2>
-    <p>El gabinete define el flujo de aire, el espacio y la estética de tu build. Lo esencial:</p>
+    <h2>¿Cómo elegir tu gabinete gamer para PC?</h2>
+    <p>El gabinete gamer define el flujo de aire, el espacio y la estética de todo tu build. Ya sea que busques un gabinete para PC compacto o una torre full-size, estos son los factores clave:</p>
     <ul>
-      <li>Airflow primero: un buen flujo de aire mantiene temperaturas más bajas que cualquier cooler.</li>
-      <li>Verifica compatibilidad: tamaño de placa (ATX/mATX), longitud de GPU y altura del cooler.</li>
-      <li>Mid-tower es el formato más versátil para la mayoría de builds gaming.</li>
-      <li>Panel de vidrio templado permite lucir la iluminación RGB de tus componentes.</li>
-      <li>Gestión de cables: busca espacio trasero generoso para un cableado ordenado.</li>
+      <li><strong>Airflow primero:</strong> un gabinete gamer con buen flujo de aire mantiene temperaturas más bajas que cualquier cooler por sí solo.</li>
+      <li><strong>Compatibilidad:</strong> verifica que tu gabinete para PC soporte el tamaño de placa (ATX/mATX), la longitud de GPU y la altura del cooler.</li>
+      <li><strong>Formato mid-tower:</strong> el gabinete gamer más versátil para la mayoría de builds gaming; equilibra espacio y tamaño.</li>
+      <li><strong>Vidrio templado:</strong> un gabinete para PC con panel transparente permite lucir la iluminación RGB de tus componentes.</li>
+      <li><strong>Gestión de cables:</strong> busca un gabinete gamer con espacio trasero generoso para mantener el cableado ordenado y el flujo de aire libre.</li>
     </ul>
+    <p>Todos los gabinetes gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-gabinetes-gamer"
-    title="Los más vendidos en Gabinetes Gamer"
+    title="Gabinetes Gamer más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>

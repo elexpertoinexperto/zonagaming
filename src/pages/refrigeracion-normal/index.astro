@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Refrigeración normal';
-const metaDescription = "Disipadores y ventiladores para una CPU fresca y silenciosa. Confiables y económicos. ¡Optimiza tu PC gamer al mejor precio!";
-const description = 'Ventiladores y disipadores para mantener tu PC fría con aire eficiente y silencioso.';
+const metaDescription = "Los mejores refrigeración cooler para PC: disipadores de torre y sistemas de enfriamiento por aire al mejor precio con envío Amazon.";
+const description = 'Los mejores refrigeración cooler y sistemas de enfriamiento por aire para gaming. Disipadores de torre silenciosos y eficientes para mantener tu CPU a temperatura óptima.';
 const productsData = productos['refrigeracion-normal'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Refrigeración Cooler para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Sistema de Enfriamiento por Aire</small>
+    <h1>Refrigeración Normal</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Opciones eficientes y accesibles</span>
+      <span>{productsData.length} coolers disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="refrigeracion-normal" />
 
   <section class="category-buying-guide">
-    <h2>¿Vale la pena un cooler de aire?</h2>
-    <p>Los coolers de torre son confiables, duraderos y ofrecen excelente relación precio-rendimiento:</p>
+    <h2>¿Cómo elegir tu refrigeración cooler para PC?</h2>
+    <p>Un buen sistema de enfriamiento por aire mantiene tu CPU a temperatura óptima, reduce el ruido y alarga la vida de tus componentes. Estos son los factores clave:</p>
     <ul>
-      <li>Las torres dobles (twin tower) compiten en rendimiento con AIOs de 240 mm.</li>
-      <li>Sin riesgo de fugas ni bombas que puedan fallar con el tiempo.</li>
-      <li>Verifica la altura máxima permitida por tu gabinete antes de comprar.</li>
-      <li>La mayoría incluye pasta térmica de calidad en el paquete.</li>
-      <li>Opción inteligente si priorizas durabilidad y bajo mantenimiento.</li>
+      <li><strong>Torre doble:</strong> los refrigeración cooler de twin tower compiten en rendimiento con AIOs de 240 mm a menor costo.</li>
+      <li><strong>Sin fugas:</strong> a diferencia de la refrigeración líquida, un sistema de enfriamiento por aire no tiene bombas ni tubos que fallen.</li>
+      <li><strong>Altura:</strong> verifica la altura máxima de tu gabinete antes de elegir tu refrigeración cooler de torre.</li>
+      <li><strong>Pasta térmica:</strong> la mayoría de sistemas de enfriamiento por aire incluyen pasta térmica de calidad en el paquete.</li>
+      <li><strong>Mantenimiento:</strong> el refrigeración cooler de aire solo necesita limpieza ocasional; ideal si priorizas durabilidad.</li>
     </ul>
+    <p>Todos los sistemas de refrigeración de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-refrigeracion-normal"
-    title="Los más vendidos en Refrigeracion Normal"
+    title="Refrigeración Cooler más vendida"
     products={bestSellerProducts}
   />
 </SiteLayout>

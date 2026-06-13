@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Memoria RAM';
-const metaDescription = "Memoria RAM DDR4 y DDR5 para gaming fluido y multitarea sin límites. Velocidad y RGB al mejor precio. ¡Mejora tu setup ya!";
-const description = 'Modulos DDR5 y DDR4 optimizados para velocidad, capacidad y estabilidad en cada build.';
+const metaDescription = "La mejor Memoria RAM para PC gaming: DDR4 y DDR5 de alto rendimiento. Tarjeta RAM con velocidad real al mejor precio con envío Amazon.";
+const description = 'La mejor memoria RAM para gaming, streaming y multitarea. Encuentra tu tarjeta RAM DDR4 o DDR5 ideal con la mejor relación rendimiento/precio para tu PC.';
 const productsData = productos['memoria-ram'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Memoria RAM para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">Volver al Home</a>
-    <small>Categoria</small>
-    <h1>{title}</h1>
+    <small>Tarjeta RAM DDR4 / DDR5</small>
+    <h1>Memoria RAM</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Compatibilidad probada con principales placas base</span>
+      <span>{productsData.length} módulos de RAM disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="memoria-ram" />
 
   <section class="category-buying-guide">
-    <h2>¿Cuánta RAM necesitas para gaming?</h2>
-    <p>La RAM afecta la fluidez general del sistema y los tiempos de carga. Lo que debes saber:</p>
+    <h2>¿Cómo elegir tu memoria RAM para gaming?</h2>
+    <p>La memoria RAM determina la fluidez general de tu PC y los tiempos de carga en juego. Ya sea que busques una tarjeta RAM económica o un módulo DDR5 de alta velocidad, estos son los factores clave:</p>
     <ul>
-      <li>16 GB es el mínimo recomendado; 32 GB si combinas juegos con streaming o edición.</li>
-      <li>DDR5 es el estándar actual; DDR4 sigue siendo válida en plataformas anteriores.</li>
-      <li>Instala siempre en pares (dual channel) para aprovechar el doble de ancho de banda.</li>
-      <li>La velocidad (MHz) y latencia (CL) impactan más en plataformas AMD Ryzen.</li>
-      <li>Activa XMP/EXPO en la BIOS para correr la RAM a su frecuencia real.</li>
+      <li><strong>Capacidad:</strong> 16 GB de memoria RAM es el mínimo recomendado para gaming; 32 GB si combinas juegos con streaming o edición.</li>
+      <li><strong>DDR4 vs DDR5:</strong> la tarjeta RAM DDR5 es el estándar actual; DDR4 sigue siendo válida y económica en plataformas anteriores.</li>
+      <li><strong>Dual channel:</strong> instala siempre tu memoria RAM en pares para aprovechar el doble de ancho de banda.</li>
+      <li><strong>Velocidad y latencia:</strong> la frecuencia (MHz) y el CL de tu tarjeta RAM impactan especialmente en plataformas AMD Ryzen.</li>
+      <li><strong>XMP / EXPO:</strong> activa este perfil en la BIOS para que tu memoria RAM corra a su velocidad real anunciada.</li>
     </ul>
+    <p>Toda la memoria RAM de nuestro catálogo está disponible con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-memoria-ram"
-    title="Los más vendidos en Memoria Ram"
+    title="Memoria RAM más vendida"
     products={bestSellerProducts}
   />
 </SiteLayout>

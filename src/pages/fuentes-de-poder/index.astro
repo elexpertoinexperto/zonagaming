@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Fuentes de poder';
-const metaDescription = "Fuentes de poder certificadas para tu PC gamer. Energía estable, segura y eficiente al mejor precio. ¡Protege tu setup!";
-const description = 'Fuentes modulares y certificadas para entregar energía limpia y segura a tu PC gamer.';
+const metaDescription = "Las mejores fuentes de poder para PC: certificadas 80+, modulares y eficientes. Fuente de poder para PC y fuente de alimentación PC al mejor precio con envío Amazon.";
+const description = 'Las mejores fuentes de poder para PC, modulares y certificadas 80+. Encuentra tu fuente de alimentación PC ideal para proteger tu build y entregar energía limpia y estable.';
 const productsData = productos['fuentes-de-poder'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Fuentes de Poder para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Fuente de Alimentación PC</small>
+    <h1>Fuentes de Poder</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Protección completa para tu equipo</span>
+      <span>{productsData.length} fuentes de poder disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="fuentes-de-poder" />
 
   <section class="category-buying-guide">
-    <h2>¿Cómo elegir una fuente de poder segura?</h2>
-    <p>La PSU protege todos tus componentes. Un mal ahorro aquí puede costarte caro:</p>
+    <h2>¿Cómo elegir tu fuente de poder para PC?</h2>
+    <p>La fuente de poder es el componente que protege toda tu inversión. Una fuente de alimentación PC de mala calidad puede dañar tu GPU, CPU o RAM. Estos son los factores clave:</p>
     <ul>
-      <li>Calcula el consumo total de tu build y añade un 20–30% de margen de seguridad.</li>
-      <li>Certificación 80+ Gold o superior garantiza mayor eficiencia y menos calor.</li>
-      <li>Modular o semi-modular simplifica el cableado y mejora el flujo de aire del gabinete.</li>
-      <li>Una PSU de calidad regula el voltaje y protege contra picos eléctricos.</li>
-      <li>Marcas recomendadas: Corsair, Seasonic, be quiet! y EVGA tienen excelente reputación.</li>
+      <li><strong>Vatios:</strong> calcula el consumo total de tu build y añade un 20–30% de margen; una buena fuente de poder para PC nunca trabaja al límite.</li>
+      <li><strong>Certificación 80+:</strong> Gold o superior en tu fuente de alimentación PC garantiza mayor eficiencia energética y menos calor generado.</li>
+      <li><strong>Modular o semi-modular:</strong> una fuente de poder modular simplifica el cableado y mejora el flujo de aire en el gabinete.</li>
+      <li><strong>Protecciones:</strong> la fuente de alimentación PC debe incluir protección contra sobrevoltaje, sobrecorriente y cortocircuito.</li>
+      <li><strong>Marcas:</strong> Corsair, Seasonic y be quiet! son referentes en fuentes de poder para PC con excelente reputación y garantía.</li>
     </ul>
+    <p>Todas las fuentes de poder de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-fuentes-de-poder"
-    title="Los más vendidos en Fuentes De Poder"
+    title="Fuentes de Poder más vendidas"
     products={bestSellerProducts}
   />
 </SiteLayout>

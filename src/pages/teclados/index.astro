@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Teclados';
-const metaDescription = "Teclados mecánicos y RGB para gaming competitivo. Switches premium y respuesta precisa al mejor precio. ¡Domina cada partida!";
-const description = 'Teclados mecánicos y gaming con iluminación y teclas rápidas para cada estilo de jugada.';
+const metaDescription = "Los mejores teclados gamer mecánicos y RGB. Teclado gaming con switches premium y respuesta precisa al mejor precio con envío Amazon.";
+const description = 'Los mejores teclados gamer mecánicos con iluminación RGB y switches rápidos. Encuentra tu teclado gaming ideal para gaming competitivo y cada estilo de jugada.';
 const productsData = productos['teclados'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Teclados Gamer Mecánicos | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Teclado Gaming</small>
+    <h1>Teclados Gamer</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-    <span>{productsData.length} productos disponibles</span>
-      <span>Precisión y estilo para tu setup</span>
+      <span>{productsData.length} teclados disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="teclados" />
 
   <section class="category-buying-guide">
-    <h2>¿Qué teclado gamer te conviene?</h2>
-    <p>El teclado es tu principal herramienta de control. Estos factores marcan la diferencia:</p>
+    <h2>¿Cómo elegir tu teclado gamer?</h2>
+    <p>El teclado gamer es tu principal herramienta de control en cada partida. Ya sea que busques un teclado gaming mecánico de alto rendimiento o una opción económica, estos factores marcan la diferencia:</p>
     <ul>
-      <li>Switches lineales (ej. Red): suaves y rápidos, ideales para gaming de acción.</li>
-      <li>Switches táctiles (ej. Brown): feedback sin ruido, buenos para gaming y escritura mixta.</li>
-      <li>TKL (sin numpad) libera espacio en el escritorio para mayor rango del mouse.</li>
-      <li>Hotswappable: permite cambiar switches sin necesidad de soldar.</li>
-      <li>Polling rate de 1,000 Hz es el estándar; suficiente para cualquier nivel de juego.</li>
+      <li><strong>Switches lineales (Red):</strong> el teclado gamer más rápido para gaming de acción; pulsación suave sin punto de activación.</li>
+      <li><strong>Switches táctiles (Brown):</strong> un teclado gaming con feedback perceptible sin ruido excesivo, ideal para gaming y escritura mixta.</li>
+      <li><strong>Formato TKL:</strong> el teclado gamer sin numpad libera espacio en el escritorio y da mayor rango de movimiento al mouse.</li>
+      <li><strong>Hotswappable:</strong> permite cambiar los switches de tu teclado gaming sin necesidad de soldar; ideal para personalizar.</li>
+      <li><strong>Polling rate:</strong> 1,000 Hz es el estándar en teclados gamer; suficiente para cualquier nivel competitivo.</li>
     </ul>
+    <p>Todos los teclados gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-teclados"
-    title="Los más vendidos en Teclados"
+    title="Teclados Gamer más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>

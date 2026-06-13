@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Audífonos';
-const metaDescription = "Audífonos gamer con sonido inmersivo y micrófono nítido. Escucha cada paso y juega mejor al mejor precio. ¡Sube tu nivel!";
-const description = 'Audífonos gamer con sonido envolvente, micrófono claro y comodidad para largas sesiones.';
+const metaDescription = "Los mejores audífonos gamer con sonido 7.1 y micrófono nítido. Diademas gamer y cascos gamer al mejor precio con envío Amazon.";
+const description = 'Los mejores audífonos gamer, diademas gamer y cascos gamer con sonido envolvente, micrófono con cancelación de ruido y comodidad para largas sesiones de juego.';
 const productsData = productos['audifonos'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Audífonos Gamer con Sonido 7.1 | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Diademas Gamer / Cascos Gamer</small>
+    <h1>Audífonos Gamer</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-    <span>{productsData.length} productos disponibles</span>
-      <span>Audio inmersivo y comunicación clara</span>
+      <span>{productsData.length} audífonos disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="audifonos" />
 
   <section class="category-buying-guide">
-    <h2>¿Qué audífonos gamer necesitas?</h2>
-    <p>Un buen par de audífonos mejora la inmersión y el posicionamiento de sonido en partidas competitivas:</p>
+    <h2>¿Cómo elegir tus audífonos gamer?</h2>
+    <p>Unos buenos audífonos gamer mejoran la inmersión y el posicionamiento de sonido en partidas competitivas. Ya sea que busques diademas gamer para FPS o cascos gamer para inmersión total, estos son los factores clave:</p>
     <ul>
-      <li>Diseño cerrado: aísla el entorno exterior; ideal para ambientes ruidosos.</li>
-      <li>Diseño abierto: soundstage más amplio y natural; mejor para experiencias single-player.</li>
-      <li>Sonido 7.1 virtual ayuda a detectar pasos y disparos por dirección en FPS.</li>
-      <li>Drivers de 50 mm o más ofrecen mejor respuesta de bajos para efectos de impacto.</li>
-      <li>Micrófono con cancelación de ruido es esencial para streaming o juego en equipo.</li>
+      <li><strong>Diseño cerrado:</strong> los audífonos gamer de diseño cerrado aíslan el entorno exterior; ideales para ambientes ruidosos y gaming competitivo.</li>
+      <li><strong>Diseño abierto:</strong> las diademas gamer abiertas ofrecen un soundstage más amplio y natural; mejores para experiencias single-player.</li>
+      <li><strong>Sonido 7.1 virtual:</strong> los cascos gamer con 7.1 ayudan a detectar pasos y disparos por dirección en FPS; ventaja real en competitivo.</li>
+      <li><strong>Drivers de 50 mm:</strong> los audífonos gamer con drivers grandes ofrecen mejor respuesta de bajos para efectos de impacto y explosiones.</li>
+      <li><strong>Micrófono:</strong> las diademas gamer con cancelación de ruido son esenciales para streaming o comunicación en equipo.</li>
     </ul>
+    <p>Todos los audífonos gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-audifonos"
-    title="Los más vendidos en Audifonos"
+    title="Audífonos Gamer más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>

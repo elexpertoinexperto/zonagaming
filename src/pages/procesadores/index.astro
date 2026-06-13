@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Procesadores';
-const metaDescription = "Procesadores AMD e Intel para gaming y multitarea. Potencia real al mejor precio y envío Amazon. ¡Arma el PC de tus sueños!";
-const description = 'Selecciona CPUs potentes para gaming, streaming y multitarea con alto rendimiento.';
+const metaDescription = "Los mejores procesadores de PC para gaming: AMD Ryzen e Intel Core. CPU de computadora de alto rendimiento al mejor precio con envío Amazon.";
+const description = 'Los mejores procesadores de PC para gaming, streaming y multitarea. Encuentra el CPU de computadora ideal para tu build con la mejor relación rendimiento/precio.';
 const productsData = productos['procesadores'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Procesadores de PC para Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">Volver al Home</a>
-    <small>Categoria</small>
-    <h1>{title}</h1>
+    <small>CPU de Computadora</small>
+    <h1>Procesadores de PC</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Rendimiento y estabilidad garantizados</span>
+      <span>{productsData.length} procesadores disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="procesadores" />
 
   <section class="category-buying-guide">
-    <h2>¿Qué procesador te conviene?</h2>
-    <p>El CPU determina cuántas tareas puedes correr a la vez y qué tan rápido responde tu PC. Puntos clave:</p>
+    <h2>¿Cómo elegir tu procesador de PC para gaming?</h2>
+    <p>El procesador de PC es el cerebro de tu build: determina cuántas tareas corres a la vez y qué tan rápido responde tu sistema. Ya sea que busques un CPU de computadora para gaming competitivo o para creación de contenido, estos son los factores clave:</p>
     <ul>
-      <li>Para gaming puro, la frecuencia (GHz) importa más que la cantidad de núcleos.</li>
-      <li>6–8 núcleos son suficientes para jugar; 12 o más si también haces streaming o edición.</li>
-      <li>AMD Ryzen e Intel Core son igual de competitivos; elige según tu placa madre.</li>
-      <li>Verifica el socket: AM5 (AMD) o LGA1700/1851 (Intel) antes de comprar.</li>
-      <li>El caché L3 grande mejora los FPS en juegos; vale la pena compararlo.</li>
+      <li><strong>Frecuencia (GHz):</strong> en procesadores de PC para gaming puro, el reloj alto importa más que el número de núcleos.</li>
+      <li><strong>Núcleos e hilos:</strong> 6–8 núcleos son suficientes para jugar; 12 o más si tu CPU de computadora también maneja streaming o edición.</li>
+      <li><strong>AMD Ryzen vs Intel Core:</strong> ambas marcas ofrecen procesadores de PC competitivos; elige según tu placa madre y presupuesto.</li>
+      <li><strong>Socket:</strong> verifica AM5 (AMD) o LGA1700/1851 (Intel) antes de comprar tu procesador de PC.</li>
+      <li><strong>Caché L3:</strong> un caché L3 grande mejora los FPS en juegos; compáralo al evaluar CPUs de computadora.</li>
     </ul>
+    <p>Todos los procesadores de PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-procesadores"
-    title="Los más vendidos en Procesadores"
+    title="Procesadores de PC más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>

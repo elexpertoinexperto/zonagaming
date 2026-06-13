@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'SSD';
-const metaDescription = "SSD NVMe ultrarrápidos: carga tus juegos en segundos. Más velocidad y espacio al mejor precio. ¡Dile adiós a las esperas!";
-const description = 'Unidades de estado sólido para tiempos de carga rápidos y transferencia segura de datos.';
+const metaDescription = "Los mejores SSD para PC gaming: NVMe y SATA de alta velocidad. Memoria SSD al mejor precio con envío Amazon para cargar tus juegos en segundos.";
+const description = 'Los mejores SSD y memoria SSD para gaming, streaming y productividad. Encuentra tu unidad NVMe o SATA ideal con la mejor relación velocidad/precio para tu PC.';
 const productsData = productos['ssd'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="SSD para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Memoria SSD NVMe / SATA</small>
+    <h1>SSD</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-      <span>{productsData.length} productos disponibles</span>
-      <span>Instalación sencilla y arranque instantáneo</span>
+      <span>{productsData.length} unidades SSD disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="ssd" />
 
   <section class="category-buying-guide">
-    <h2>¿Qué SSD necesitas para tu PC gamer?</h2>
-    <p>El SSD elimina los tiempos de carga y hace que tu sistema responda al instante. Aspectos a considerar:</p>
+    <h2>¿Cómo elegir tu SSD o memoria SSD para gaming?</h2>
+    <p>El SSD elimina los tiempos de carga y hace que tu PC responda al instante. Ya sea que busques una memoria SSD NVMe de alta velocidad o un SSD SATA económico, estos son los factores clave:</p>
     <ul>
-      <li>NVMe PCIe 4.0 alcanza 7,000 MB/s; ideal para el sistema operativo y juegos principales.</li>
-      <li>1 TB es el mínimo práctico hoy; los juegos AAA ocupan entre 50 y 150 GB cada uno.</li>
-      <li>SATA SSD es suficiente como almacenamiento secundario y resulta más económico.</li>
-      <li>PCIe 5.0 ya existe, pero la diferencia real en gaming no justifica el costo adicional.</li>
-      <li>Verifica que tu placa tenga ranura M.2 compatible antes de comprar un NVMe.</li>
+      <li><strong>NVMe PCIe 4.0:</strong> la memoria SSD más rápida del mercado, alcanza 7,000 MB/s; ideal para el SO y tus juegos principales.</li>
+      <li><strong>Capacidad:</strong> 1 TB de SSD es el mínimo práctico hoy; los juegos AAA ocupan entre 50 y 150 GB cada uno.</li>
+      <li><strong>SATA SSD:</strong> suficiente como almacenamiento secundario y la opción más económica de memoria SSD.</li>
+      <li><strong>PCIe 5.0:</strong> ya existe, pero la diferencia real en gaming no justifica el costo adicional frente a un buen SSD PCIe 4.0.</li>
+      <li><strong>Compatibilidad:</strong> verifica que tu placa tenga ranura M.2 compatible antes de comprar tu memoria SSD NVMe.</li>
     </ul>
+    <p>Todos los SSD de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-ssd"
-    title="Los más vendidos en Ssd"
+    title="SSD más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>

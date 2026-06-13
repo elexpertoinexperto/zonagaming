@@ -6,9 +6,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 
-const title = 'Mouse';
-const metaDescription = "Mouse gamer con precisión extrema y diseño ergonómico. Sensores top y ligeros al mejor precio. ¡Gana cada duelo online!";
-const description = 'Ratones gaming ergonómicos con alta precisión y verdad táctil para cada tipo de jugador.';
+const metaDescription = "Los mejores mouse gamer ópticos y ergonómicos para gaming competitivo. Ratón gamer con sensor de precisión al mejor precio con envío Amazon.";
+const description = 'Los mejores mouse gamer y ratón gamer para gaming competitivo. Sensores ópticos de alta precisión, diseño ergonómico y máxima velocidad para cada tipo de jugador.';
 const productsData = productos['mouse'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -21,15 +20,15 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+<SiteLayout title="Mouse Gamer de Alta Precisión | Monckey Gamer" description={metaDescription} robots="index, follow">
   <section class="category-hero">
     <a class="category-back" href="/">← Volver al Home</a>
-    <small>Categoría</small>
-    <h1>{title}</h1>
+    <small>Ratón Gamer</small>
+    <h1>Mouse Gamer</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">
-    <span>{productsData.length} productos disponibles</span>
-      <span>Precisión y control para tu gameplay</span>
+      <span>{productsData.length} mouse disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
 
@@ -50,20 +49,21 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <Comparador categoriaFija="mouse" />
 
   <section class="category-buying-guide">
-    <h2>¿Cómo elegir el mouse gamer correcto?</h2>
-    <p>El mouse adecuado marca la diferencia en precisión y comodidad durante horas de juego:</p>
+    <h2>¿Cómo elegir tu mouse gamer?</h2>
+    <p>El mouse gamer correcto marca la diferencia en precisión, velocidad y comodidad durante horas de juego. Ya sea que busques un ratón gamer ligero para FPS o uno ergonómico para sesiones largas, estos son los factores clave:</p>
     <ul>
-      <li>Sensor óptico es la elección para gaming competitivo; consistente en cualquier superficie.</li>
-      <li>El DPI alto no mejora la puntería; lo importante es la consistencia del sensor.</li>
-      <li>Ergonomía: palmgrip (palma apoyada), claw (dedos doblados) o fingertip según tu estilo.</li>
-      <li>Los inalámbricos modernos tienen latencia imperceptible; no sacrificas rendimiento.</li>
-      <li>Peso: ratones de 60–90 g favorecen la velocidad en FPS; más pesados para mayor control.</li>
+      <li><strong>Sensor óptico:</strong> el estándar en todo mouse gamer competitivo; respuesta consistente en cualquier superficie sin aceleración.</li>
+      <li><strong>DPI:</strong> en un ratón gamer, el DPI alto no mejora la puntería por sí solo; lo importante es la consistencia y precisión del sensor.</li>
+      <li><strong>Agarre:</strong> elige tu mouse gamer según tu estilo — palmgrip (palma apoyada), claw (dedos doblados) o fingertip.</li>
+      <li><strong>Inalámbrico:</strong> los ratón gamer wireless modernos tienen latencia imperceptible; no sacrificas rendimiento competitivo.</li>
+      <li><strong>Peso:</strong> un mouse gamer de 60–90 g favorece la velocidad en FPS; modelos más pesados ofrecen mayor control en RTS y MMO.</li>
     </ul>
+    <p>Todos los mouse gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
 
   <BestSellers
     id="mas-vendidos-mouse"
-    title="Los más vendidos en Mouse"
+    title="Mouse Gamer más vendidos"
     products={bestSellerProducts}
   />
 </SiteLayout>
