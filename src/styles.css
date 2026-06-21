@@ -163,13 +163,23 @@ nav a:hover {
 @media (max-width: 768px) {
   .hero {
     min-height: 100svh;
-    padding: 0 20px;
+    padding: 0 24px;
+    align-items: flex-start;
   }
   .hero-copy {
-    padding: 100px 0 100px;
+    padding: 100px 0 60px;
+    width: 100%;
+    max-width: 100%;
   }
   .hero-copy h1 {
     font-size: clamp(2.4rem, 10vw, 3.8rem);
+  }
+  .hero-copy p {
+    max-width: 100%;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 

@@ -6,6 +6,7 @@ const description =
   '¿Qué es la VRAM? Descubre para qué sirve, cuánta necesitas y en qué se diferencia de la RAM. Guía gamer rápida y sencilla.';
 
 const fecha = '9 de junio de 2026';
+const dateISO = '2026-06-09';
 const tiempoLectura = '5 min de lectura';
 
 const secciones = [
@@ -20,7 +21,7 @@ const secciones = [
 ];
 ---
 
-<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow">
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
   <article class="post">
     <a class="category-back" href="/blog/">← Volver al Blog</a>
 

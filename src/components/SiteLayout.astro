@@ -2,7 +2,34 @@
 import '../styles.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
-const { title, description, robots, schema } = Astro.props;
+const { title, description, robots, schema, article } = Astro.props;
+
+const articleSchema = article ? {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.title,
+  "description": description,
+  "datePublished": article.dateISO,
+  "dateModified": article.dateISO,
+  "author": {
+    "@type": "Organization",
+    "name": "Monckey Gamer",
+    "url": "https://monckeygamer.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Monckey Gamer",
+    "url": "https://monckeygamer.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://monckeygamer.com/logo-fondoblanco.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
+} : null;
 ---
 
 <html lang="es">
@@ -17,6 +44,7 @@ const { title, description, robots, schema } = Astro.props;
     {description && <meta name="description" content={description} />}
     <title>{title}</title>
     {schema && <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />}
+    {articleSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
   </head>
   <body>
     <div class="page">

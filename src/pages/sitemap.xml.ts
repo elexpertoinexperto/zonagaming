@@ -1,5 +1,20 @@
 import type { APIRoute } from 'astro';
 import productos from '../data/productos.json';
+import { statSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { resolve, dirname } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+function fileMtime(relativePath: string): string {
+  try {
+    const abs = resolve(__dirname, relativePath);
+    const mtime = statSync(abs).mtime;
+    return mtime.toISOString().split('T')[0];
+  } catch {
+    return new Date().toISOString().split('T')[0];
+  }
+}
 
 const blogSlugs = [
   'que-es-la-vram',
@@ -40,32 +55,48 @@ const categories = [
 const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');
 
 export const GET: APIRoute = () => {
-  const blogUrls = blogSlugs.map(slug => `  <url>
+  const blogUrls = blogSlugs.map(slug => {
+    const lastmod = fileMtime(`blog/${slug}.astro`);
+    return `  <url>
     <loc>${site}/blog/${slug}/</loc>
+    <lastmod>${lastmod}</lastmod>
     <priority>0.6</priority>
-  </url>`).join('\n');
+  </url>`;
+  }).join('\n');
 
-  const categoryUrls = categories.map(cat => `  <url>
+  const categoryUrls = categories.map(cat => {
+    const lastmod = fileMtime(`${cat}/index.astro`);
+    return `  <url>
     <loc>${site}/${cat}/</loc>
+    <lastmod>${lastmod}</lastmod>
     <priority>0.8</priority>
-  </url>`).join('\n');
+  </url>`;
+  }).join('\n');
 
   const productUrls = categories.map(cat => {
     const categoryProducts = productos[cat as keyof typeof productos];
-    return categoryProducts.map(product => `  <url>
+    return categoryProducts.map(product => {
+      const lastmod = fileMtime(`${cat}/[id].astro`);
+      return `  <url>
     <loc>${site}/${cat}/${product.slug}-${product.id}/</loc>
+    <lastmod>${lastmod}</lastmod>
     <priority>0.6</priority>
-  </url>`).join('\n');
+  </url>`;
+    }).join('\n');
   }).join('\n');
+
+  const indexLastmod = fileMtime('index.astro');
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>${site}</loc>
+    <loc>${site}/</loc>
+    <lastmod>${indexLastmod}</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>${site}/blog/</loc>
+    <lastmod>${fileMtime('blog.astro')}</lastmod>
     <priority>0.7</priority>
   </url>
   ${blogUrls}
