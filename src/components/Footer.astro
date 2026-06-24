@@ -1,9 +1,21 @@
 <footer>
+  <div class="footer-glow"></div>
+
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="footer-logo">Monckey Gamer</span>
-      <p>Componentes PC para gaming al mejor precio con envío Amazon.</p>
+      <div class="footer-brand-logo">
+        <img src="/logo-fondoblanco.png" alt="Monckey Gamer" width="40" height="40" />
+        <span>Monckey Gamer</span>
+      </div>
+      <p class="footer-brand-tagline">El setup perfecto<br /><em>empieza aquí.</em></p>
+      <p class="footer-brand-desc">Componentes PC para gaming seleccionados al detalle. Envío rápido vía Amazon.</p>
+      <div class="footer-brand-badge">
+        <span class="badge-dot"></span>
+        Tienda activa · 24/7
+      </div>
     </div>
+
+    <div class="footer-divider"></div>
 
     <nav class="footer-nav" aria-label="Catálogos">
       <span class="footer-nav-title">Catálogos</span>
@@ -33,49 +45,158 @@
   </div>
 
   <div class="footer-bottom">
-    <span>© 2026 Monckey Gamer · Todos los derechos reservados</span>
+    <span class="footer-copy">© 2026 Monckey Gamer</span>
+    <span class="footer-made">Hecho para gamers, por gamers <span class="footer-heart">▲</span></span>
   </div>
 </footer>
 
 <style>
   footer {
-    margin-top: 80px;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 48px 2rem 24px;
+    position: relative;
+    margin-top: 100px;
+    padding: 0 2rem 0;
+    overflow: hidden;
+  }
+
+  /* Glow superior */
+  .footer-glow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #7cffcb, transparent);
+  }
+
+  .footer-glow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% -50%;
+    width: 300px;
+    height: 120px;
+    background: radial-gradient(ellipse, rgba(124, 255, 203, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Watermark fondo */
+  footer::before {
+    content: 'MG';
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    font-size: 18rem;
+    font-weight: 900;
+    color: rgba(124, 255, 203, 0.025);
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+    user-select: none;
   }
 
   .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 48px;
+    grid-template-columns: 1.6fr 1px 1fr 1fr;
+    gap: 0 56px;
     align-items: start;
+    padding: 56px 0 48px;
   }
 
-  .footer-brand p {
-    margin: 8px 0 0;
-    color: #8aa0b8;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    max-width: 260px;
+  /* Brand */
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .footer-logo {
-    font-size: 1.1rem;
+  .footer-brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-brand-logo img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .footer-brand-logo span {
+    font-size: 1rem;
     font-weight: 700;
-    color: #7cffcb;
+    color: #e6f7ff;
     letter-spacing: 0.02em;
   }
 
+  .footer-brand-tagline {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #e6f7ff;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .footer-brand-tagline em {
+    font-style: normal;
+    color: #7cffcb;
+  }
+
+  .footer-brand-desc {
+    font-size: 0.88rem;
+    color: #8aa0b8;
+    line-height: 1.7;
+    margin: 0;
+    max-width: 280px;
+  }
+
+  .footer-brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.06);
+    border: 1px solid rgba(124, 255, 203, 0.15);
+    border-radius: 100px;
+    padding: 5px 14px 5px 10px;
+    width: fit-content;
+  }
+
+  .badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7cffcb;
+    box-shadow: 0 0 6px #7cffcb;
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Divisor vertical */
+  .footer-divider {
+    width: 1px;
+    align-self: stretch;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,0.07) 20%, rgba(255,255,255,0.07) 80%, transparent);
+  }
+
+  /* Nav */
   .footer-nav-title {
     display: block;
-    font-size: 0.72rem;
-    font-weight: 600;
+    font-size: 0.68rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.16em;
     color: #7cffcb;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
 
   .footer-nav ul {
@@ -83,48 +204,104 @@
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 10px;
+    gap: 12px;
   }
 
   .footer-nav a {
     color: #8aa0b8;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.2s ease;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    transition: color 0.2s ease, translate 0.2s ease;
+    position: relative;
+  }
+
+  .footer-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #7cffcb;
+    transition: width 0.25s ease;
   }
 
   .footer-nav a:hover {
-    color: #7cffcb;
+    color: #e6f7ff;
+    translate: 4px 0;
   }
 
+  .footer-nav a:hover::before {
+    width: 100%;
+  }
+
+  /* Bottom bar */
   .footer-bottom {
     max-width: 1200px;
-    margin: 40px auto 0;
-    padding-top: 20px;
+    margin: 0 auto;
+    padding: 20px 0 28px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #8aa0b8;
-    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  @media (max-width: 768px) {
+  .footer-copy {
+    color: rgba(138, 160, 184, 0.6);
+    font-size: 0.8rem;
+  }
+
+  .footer-made {
+    color: rgba(138, 160, 184, 0.4);
+    font-size: 0.78rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-heart {
+    color: #7cffcb;
+    font-size: 0.6rem;
+    opacity: 0.7;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
     .footer-inner {
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
+      gap: 40px;
+    }
+
+    .footer-divider {
+      display: none;
     }
 
     .footer-brand {
       grid-column: 1 / -1;
     }
 
-    .footer-brand p {
-      max-width: 100%;
+    .footer-brand-tagline {
+      font-size: 1.6rem;
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 540px) {
     .footer-inner {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 32px;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+
+    .footer-brand-tagline {
+      font-size: 1.4rem;
     }
   }
 </style>
