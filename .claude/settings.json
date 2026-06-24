@@ -3,7 +3,9 @@
     "allow": [
       "Bash(npm install *)",
       "WebFetch(domain:monckeygamer.com)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
