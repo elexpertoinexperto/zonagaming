@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm install *)",
-      "WebFetch(domain:monckeygamer.com)"
+      "WebFetch(domain:monckeygamer.com)",
+      "Bash(git add *)"
     ]
   }
 }
