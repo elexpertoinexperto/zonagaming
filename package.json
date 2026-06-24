@@ -14,5 +14,9 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.0.2"
+  },
+  "optionalDependencies": {
+    "@emnapi/core": "1.11.1",
+    "@emnapi/runtime": "1.11.1"
   }
 }
