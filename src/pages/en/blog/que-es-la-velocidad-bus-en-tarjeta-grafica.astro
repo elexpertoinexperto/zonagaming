@@ -1,0 +1,214 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'Why does bus speed matter on a graphics card?';
+const description =
+  'A GPU\'s bus speed determines how much data your card moves per second. Find out how it affects gaming performance and what speed you need.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '4 min read';
+
+const secciones = [
+  { id: 'que-es', label: 'Bus speed: definition' },
+  { id: 'ancho-banda', label: 'Memory bandwidth' },
+  { id: 'gddr', label: 'GDDR6, GDDR6X and GDDR7' },
+  { id: 'importancia', label: 'When does it matter most?' },
+  { id: 'tabla', label: 'Speed comparison' },
+  { id: 'conclusion', label: 'Practical summary' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>Why does bus speed matter on a graphics card?</h1>
+      <p class="post-lead">
+        Bus speed is not just a number in the specs: it directly defines
+        how fast your GPU can "think". Understanding it helps you choose the right card
+        for your resolution and your games.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="que-es">
+        <h2>Bus speed: what does it mean?</h2>
+        <p>
+          When we talk about a GPU's <strong>memory bus speed</strong>, we mean the
+          frequency at which the VRAM operates: the gigabits per second (Gbps) each
+          memory pin can transfer in one second.
+        </p>
+        <p>
+          Don't confuse this with the <em>bus width</em> (the bits). They are two different things:
+          the width defines how many lanes there are, and the speed defines how fast each lane runs.
+          Together they determine the <strong>total bandwidth</strong>.
+        </p>
+      </section>
+
+      <section id="ancho-banda">
+        <h2>Bandwidth: the number that really matters</h2>
+        <p>
+          Bandwidth is the result of multiplying speed × bus width.
+          It is what actually tells you how much data per second your card can handle.
+        </p>
+        <p>
+          A card with GDDR7 at 28 Gbps and a 128-bit bus can match or beat
+          the bandwidth of an older card with 256-bit GDDR5 at 8 Gbps.
+          That is why the VRAM generation matters as much as the bit count.
+        </p>
+        <p class="post-note">
+          Quick rule: high bandwidth = fewer texture stutters and fewer FPS drops
+          when you enable demanding settings like ray tracing or 4K resolution.
+        </p>
+      </section>
+
+      <section id="gddr">
+        <h2>GDDR6, GDDR6X and GDDR7: speed differences</h2>
+        <ul class="post-list">
+          <li>
+            <strong>GDDR6:</strong> typical speed of 14–18 Gbps per pin.
+            The current mid-range standard. Found on cards like the
+            <a href="/en/graphics-cards/gigabyte-radeon-rx-9060-xt-gaming-oc-16g-4/">RX 9060 XT</a>.
+          </li>
+          <li>
+            <strong>GDDR6X:</strong> a modified GDDR6 with PAM4 signaling that doubles
+            the effective data rate. Speeds of 19–23 Gbps. Used in NVIDIA's high end.
+          </li>
+          <li>
+            <strong>GDDR7:</strong> the newest generation. 28–32 Gbps per pin,
+            with better power efficiency. Found on the
+            <a href="/en/graphics-cards/asus-dual-rtx-5060-8gb-oc-2/">RTX 5060</a> and higher models.
+          </li>
+        </ul>
+      </section>
+
+      <section id="importancia">
+        <h2>When does bus speed matter most?</h2>
+        <p>
+          Bandwidth becomes a bottleneck especially in these scenarios:
+        </p>
+        <ul class="post-list">
+          <li>High resolutions: 1440p and 4K move up to 4× more data than 1080p.</li>
+          <li>Ray tracing: it doubles or triples the amount of data the GPU needs.</li>
+          <li>Mods with 4K or 8K textures in PC games.</li>
+          <li>Open-world games with massive asset streaming (RDR2, Cyberpunk 2077).</li>
+        </ul>
+        <p>
+          By contrast, in competitive shooters at low 1080p settings (CS2, Valorant, Apex), bus
+          speed is barely noticeable because textures are small and FPS depends more on the GPU and CPU.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>Speed comparison on current cards</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Card</th>
+                <th>VRAM type</th>
+                <th>Speed</th>
+                <th>Bandwidth</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>RX 580</td><td>GDDR5</td><td>8 Gbps</td><td>~256 GB/s</td></tr>
+              <tr><td>RTX 5060 8GB</td><td>GDDR7</td><td>28 Gbps</td><td>~448 GB/s</td></tr>
+              <tr><td>RX 9060 XT 16G</td><td>GDDR6</td><td>18 Gbps</td><td>~576 GB/s</td></tr>
+              <tr><td>RX 9070 XT 16G</td><td>GDDR6</td><td>20 Gbps</td><td>~640 GB/s</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>Practical summary</h2>
+        <p>
+          Don't choose a card just by the GB of VRAM or just by the bus bit count.
+          Look for the <strong>combination of VRAM type + bus width</strong> that gives the highest
+          bandwidth for your budget.
+        </p>
+        <p>
+          For 1080p, any modern card with GDDR6 is more than enough.
+          For 1440p or 4K, aim for cards with GDDR6X or GDDR7 and a 192-bit bus or wider.
+          Browse our <a href="/en/graphics-cards/">graphics cards</a> catalog
+          with full specs to compare.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Find your ideal GPU</h3>
+      <p>Compare graphics cards with the bandwidth you need for your setup.</p>
+      <a class="btn" href="/en/graphics-cards/">View graphics cards</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

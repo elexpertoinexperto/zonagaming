@@ -6,9 +6,14 @@ interface Props {
   precio: number;
   enlaceAmazon: string;
   imagenPath: string;
+  lang?: 'es' | 'en';
 }
 
-const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath } = Astro.props;
+const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath, lang = 'es' } = Astro.props;
+const isEn = lang === 'en';
+const tSpecs = isEn ? 'Specifications' : 'Especificaciones';
+const tPrice = isEn ? 'Price' : 'Precio';
+const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
 ---
 
 <div class="producto-detalle">
@@ -23,7 +28,7 @@ const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath 
       <p class="descripcion">{descripcion}</p>
       
       <div class="especificaciones">
-        <h2>Especificaciones</h2>
+        <h2>{tSpecs}</h2>
         <ul>
           {Object.entries(especificaciones).map(([clave, valor]) => (
             <li>
@@ -35,10 +40,10 @@ const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath 
       </div>
       
       <div class="compra">
-        <h2 class="precio-label">Precio</h2>
+        <h2 class="precio-label">{tPrice}</h2>
         <p class="precio">${precio.toFixed(2)}</p>
         <a href={enlaceAmazon} target="_blank" rel="noopener noreferrer" class="btn-amazon">
-          Ver en Amazon
+          {tAmazon}
         </a>
       </div>
     </div>

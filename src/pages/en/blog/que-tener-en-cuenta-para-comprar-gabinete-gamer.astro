@@ -1,0 +1,252 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'What to look for when buying a gaming case';
+const description =
+  'Gaming case buying guide: size, airflow, compatibility, materials and mistakes to avoid. Pick the right case for your build from the start.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '5 min read';
+
+const secciones = [
+  { id: 'tamano', label: 'Size: ATX, mATX, ITX' },
+  { id: 'airflow', label: 'Airflow: the top priority' },
+  { id: 'compatibilidad', label: 'Component compatibility' },
+  { id: 'materiales', label: 'Materials and build' },
+  { id: 'estetica', label: 'Looks and cable management' },
+  { id: 'errores', label: 'Common buying mistakes' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>What to look for when buying a gaming case</h1>
+      <p class="post-lead">
+        The case is the most ignored component when building a PC — and the one that causes
+        the most problems later: parts that don't fit, high temperatures, impossible cable management.
+        This guide saves you from those mistakes.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="tamano">
+        <h2>Case size: ATX, mATX or ITX</h2>
+        <p>
+          The case size must match your motherboard size. The three most common formats:
+        </p>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Format</th>
+                <th>Motherboard</th>
+                <th>Advantages</th>
+                <th>Ideal for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Full Tower</td><td>E-ATX / ATX</td><td>Maximum space and airflow</td><td>High-end builds and custom water cooling</td></tr>
+              <tr><td>Mid Tower</td><td>ATX / mATX</td><td>Space/size balance</td><td>Most gaming builds</td></tr>
+              <tr><td>Mini Tower</td><td>mATX</td><td>Compact, more affordable</td><td>Budget and secondary builds</td></tr>
+              <tr><td>ITX</td><td>Mini-ITX</td><td>Very small</td><td>Compact builds with constraints</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          The Mid Tower ATX is the recommended format for 90% of gamers: any standard
+          component fits, and there are options for every budget.
+        </p>
+      </section>
+
+      <section id="airflow">
+        <h2>Airflow: the most important factor for temperatures</h2>
+        <p>
+          The <strong>airflow</strong> inside the case determines the temperatures of all
+          your components, not just the CPU. A case with bad airflow can make even
+          a 360mm AIO run hotter than a tower cooler inside a good chassis.
+        </p>
+        <p>
+          What you need for good airflow:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Mesh panels:</strong> a mesh front and top panel let air in and out
+            without restriction. Solid tempered-glass front panels significantly
+            reduce airflow.
+          </li>
+          <li>
+            <strong>Included fans:</strong> most gaming cases include
+            2–7 ARGB fans. Check that they come pre-installed and whether the intake/exhaust layout is right.
+          </li>
+          <li>
+            <strong>Recommended configuration:</strong> cool air enters through the front and bottom,
+            hot air exits through the top and rear.
+          </li>
+        </ul>
+      </section>
+
+      <section id="compatibilidad">
+        <h2>Compatibility: check these measurements before buying</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Maximum GPU length:</strong> modern graphics cards like the
+            <a href="/en/graphics-cards/gigabyte-radeon-rx-9070-xt-gaming-oc-16g-7/">RX 9070 XT 16G</a>
+            exceed 340mm. Verify your case supports them.
+          </li>
+          <li>
+            <strong>Maximum CPU cooler height:</strong> tall tower coolers like the Noctua NH-D15
+            measure 168mm. Standard cases allow 160–170mm.
+          </li>
+          <li>
+            <strong>AIO radiator support:</strong> check the maximum radiator size
+            (240mm or 360mm) at the front and top.
+          </li>
+          <li>
+            <strong>Number of expansion slots:</strong> current GPUs take up 2–3 slots.
+          </li>
+        </ul>
+      </section>
+
+      <section id="materiales">
+        <h2>Materials and build quality</h2>
+        <p>
+          The case's build quality affects noise, durability and the assembly
+          experience. The most common materials:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>SPCC steel (0.5–0.7mm):</strong> the mid-range standard.
+            Rigid enough for most builds.
+          </li>
+          <li>
+            <strong>Aluminum:</strong> lighter and more premium. Found in high-end cases.
+          </li>
+          <li>
+            <strong>Tempered glass:</strong> a glass side panel is the norm today.
+            Make sure it is at least 4mm thick.
+          </li>
+        </ul>
+      </section>
+
+      <section id="estetica">
+        <h2>Looks and cable management</h2>
+        <p>
+          A good case makes cable management easy with:
+        </p>
+        <ul class="post-list">
+          <li>At least 20mm of rear space to route cables behind the tray.</li>
+          <li>Rubber-grommeted cable pass-throughs in strategic positions.</li>
+          <li>Included zip ties or velcro straps to organize cable bundles.</li>
+        </ul>
+        <p>
+          Aesthetically, models like the
+          <a href="/en/gaming-cases/corsair-4000d-rs-argb-modular-black-6/">Corsair 4000D RS ARGB</a>
+          or the <a href="/en/gaming-cases/foifkin-f600-atx-7fans-argb-black-3/">Foifkin F600 with 7 ARGB fans</a>
+          combine a glass panel, good cable management and unrestricted airflow.
+        </p>
+      </section>
+
+      <section id="errores">
+        <h2>Common mistakes when choosing a case</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Choosing by looks without checking measurements:</strong> the GPU doesn't fit,
+            the AIO has no room for its radiator, the cooler touches the side panel.
+          </li>
+          <li>
+            <strong>Ignoring airflow for a "pretty" solid front panel:</strong>
+            solid panels can raise system temperatures 5–10°C.
+          </li>
+          <li>
+            <strong>Not checking the front-panel connectors:</strong> make sure
+            your motherboard has a front USB-C header if the case includes one.
+          </li>
+          <li>
+            <strong>Buying a case too small for future upgrades:</strong>
+            if you plan to add components, pick one with spare room from the start.
+          </li>
+        </ul>
+        <p>
+          Compare all our models in the
+          <a href="/en/gaming-cases/">gaming cases</a> catalog with full dimensions and compatibility.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Ready to choose your case?</h3>
+      <p>Browse our selection of gaming cases with airflow, ARGB and the measurements you need.</p>
+      <a class="btn" href="/en/gaming-cases/">View gaming cases</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

@@ -1,0 +1,221 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'How to install a liquid cooler? Step-by-step guide';
+const description =
+  'Installing an AIO (all-in-one liquid cooler) is easier than it looks. A step-by-step guide for gamers: tools, steps and mistakes to avoid.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '6 min read';
+
+const secciones = [
+  { id: 'que-necesitas', label: 'What do you need?' },
+  { id: 'preparacion', label: 'Preparation' },
+  { id: 'instalacion', label: 'Step-by-step installation' },
+  { id: 'orientacion', label: 'Radiator orientation' },
+  { id: 'errores', label: 'Common mistakes' },
+  { id: 'mantenimiento', label: 'Basic maintenance' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>How to install a liquid cooler?</h1>
+      <p class="post-lead">
+        An AIO (All-In-One) looks complicated but actually comes down to 5 clear steps.
+        This guide takes you from opening the box to the first boot with zero scares.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="que-necesitas">
+        <h2>What do you need before starting?</h2>
+        <ul class="post-list">
+          <li>The AIO (block + radiator + tubes + fans).</li>
+          <li>Thermal paste (many AIOs include it pre-applied).</li>
+          <li>A Phillips #2 screwdriver.</li>
+          <li>Your motherboard manual (to check the socket hole spacing).</li>
+          <li>An anti-static surface or ESD strap to avoid damaging components.</li>
+        </ul>
+        <p>
+          The best AIOs on the market like the
+          <a href="/en/liquid-cooling/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>
+          or the <a href="/en/liquid-cooling/corsair-nautilus-360-rs-argb-4/">Corsair Nautilus 360 RS ARGB</a>
+          include every accessory needed for the most common sockets.
+        </p>
+      </section>
+
+      <section id="preparacion">
+        <h2>Preparation</h2>
+        <ol class="post-steps">
+          <li>Turn off the PC, unplug it from the wall and discharge static by touching the metal chassis.</li>
+          <li>Remove the previous cooler (if any) and clean the old thermal paste with isopropyl alcohol.</li>
+          <li>Identify your CPU socket (AM4, AM5, LGA1700, etc.) and pick the correct bracket included with the AIO.</li>
+          <li>If you need to install the rear backplate, remove the motherboard from the case to access the back.</li>
+        </ol>
+      </section>
+
+      <section id="instalacion">
+        <h2>Step-by-step installation</h2>
+        <ol class="post-steps">
+          <li>
+            <strong>Mount the backplate:</strong> place the rear plate into the correct holes
+            for your socket. Many modern AIOs have an adjustable universal backplate.
+          </li>
+          <li>
+            <strong>Install the standoffs:</strong> thread the standoff screws into
+            the backplate through the motherboard until firm — do not overtighten.
+          </li>
+          <li>
+            <strong>Apply thermal paste:</strong> if the block does not come pre-applied, put
+            a pea-sized amount in the center of the processor.
+          </li>
+          <li>
+            <strong>Seat the block:</strong> lower it straight down onto the CPU and tighten the
+            screws in a diagonal pattern (not in a circle) for even pressure.
+          </li>
+          <li>
+            <strong>Mount the radiator:</strong> fix it in the case slot (front or top)
+            and connect the fans. See the next section for correct orientation.
+          </li>
+          <li>
+            <strong>Connect the cables:</strong> AIO pump to the motherboard's <code>AIO_PUMP</code> or
+            <code>CPU_OPT</code> header. Fans to the hub or to the board's fan headers.
+          </li>
+        </ol>
+      </section>
+
+      <section id="orientacion">
+        <h2>Where to mount the radiator? Correct orientation</h2>
+        <p>
+          The radiator's position affects thermal performance and pump longevity.
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Front (intake, blowing inward):</strong> cool air hits the radiator
+            directly. The most efficient position for CPU cooling.
+          </li>
+          <li>
+            <strong>Top (exhaust, blowing outward):</strong> heat leaves the case
+            directly. It warms the surrounding components less.
+          </li>
+          <li>
+            <strong>Tube position:</strong> always pointing down or sideways,
+            never upward. It prevents air from getting trapped in the pump.
+          </li>
+        </ul>
+        <p class="post-note">
+          Tip: when in doubt, front-mounted with fans blowing inward gives the best
+          temperatures in most cases.
+        </p>
+      </section>
+
+      <section id="errores">
+        <h2>Common mistakes when installing an AIO</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Connecting the pump to the CPU fan header:</strong> the pump must go to
+            <code>AIO_PUMP</code> or <code>CPU_OPT</code> to run at constant speed.
+          </li>
+          <li>
+            <strong>Too much thermal paste:</strong> more is not better. Excess can spill onto
+            the socket and worsen conductivity.
+          </li>
+          <li>
+            <strong>Overtightening screws:</strong> it can bend the motherboard or
+            the processor's IHS. Tighten until you feel resistance, no further.
+          </li>
+          <li>
+            <strong>Not checking socket compatibility:</strong> confirm your AIO
+            includes the bracket for your socket before installing.
+          </li>
+        </ul>
+      </section>
+
+      <section id="mantenimiento">
+        <h2>Basic AIO maintenance</h2>
+        <p>
+          A well-maintained AIO lasts 5 to 8 years without issues. Maintenance is minimal:
+        </p>
+        <ul class="post-list">
+          <li>Clean the fans with compressed air every 6 months to prevent dust buildup.</li>
+          <li>Check that the pump makes no unusual noise (persistent bubbling means trapped air).</li>
+          <li>Replace the thermal paste every 2–3 years if temperatures creep up over time.</li>
+        </ul>
+        <p>
+          If you are considering the jump to liquid cooling, browse our
+          <a href="/en/liquid-cooling/">liquid cooling</a> catalog with 240 mm
+          and 360 mm AIOs for every budget.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Ready to install your AIO?</h3>
+      <p>Browse our AIO liquid cooling selection at the best price with Amazon shipping.</p>
+      <a class="btn" href="/en/liquid-cooling/">View liquid cooling</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body code { background: rgba(27,183,255,0.12); color: #1bb7ff; padding: 2px 7px; border-radius: 6px; font-size: 0.9em; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-steps { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; counter-reset: step; }
+  .post-steps li { color: #c8d8e8; line-height: 1.7; padding-left: 38px; position: relative; counter-increment: step; }
+  .post-steps li::before { content: counter(step); position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: rgba(124,255,203,0.1); border: 1px solid rgba(124,255,203,0.3); color: #7cffcb; font-size: 0.8rem; font-weight: 700; display: grid; place-items: center; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+</style>

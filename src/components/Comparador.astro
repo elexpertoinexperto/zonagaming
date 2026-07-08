@@ -1,7 +1,18 @@
 ---
-import productos from '../data/productos.json';
+import productosEs from '../data/productos.json';
+import productosEnData from '../data/productos-en.json';
+import { CATS_EN, UI_EN, SLUG_EN } from '../i18n/en';
 
-const categorias = [
+const { categoriaFija, lang = 'es' } = Astro.props as { categoriaFija?: string; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const productos = isEn ? productosEnData : productosEs;
+const urlPrefix = isEn ? '/en' : '';
+// Mapa clave ES → slug de URL según idioma (en ES el slug es la propia clave)
+const catSlugs = Object.fromEntries(
+  Object.keys(productosEs).map((k) => [k, isEn ? (SLUG_EN[k] || k) : k])
+);
+
+const categoriasEs = [
   { key: 'tarjetas-graficas',     label: 'Tarjetas gráficas' },
   { key: 'procesadores',          label: 'Procesadores' },
   { key: 'memoria-ram',           label: 'Memoria RAM' },
@@ -15,22 +26,59 @@ const categorias = [
   { key: 'audifonos',             label: 'Audífonos' },
 ];
 
-const { categoriaFija } = Astro.props as { categoriaFija?: string };
+const categorias = categoriasEs.map((c) => ({
+  key: c.key,
+  label: isEn ? CATS_EN[c.key].label : c.label,
+}));
+
+const t = isEn
+  ? {
+      eyebrow: UI_EN.comparador.eyebrow,
+      title: UI_EN.comparador.title,
+      category: UI_EN.comparador.category,
+      chooseCategory: UI_EN.comparador.chooseCategory,
+      productA: UI_EN.comparador.productA,
+      productB: UI_EN.comparador.productB,
+      chooseProduct: UI_EN.comparador.chooseProduct,
+      selectProduct: UI_EN.comparador.selectProduct,
+      comparison: UI_EN.comparador.comparison,
+      sideBySide: UI_EN.comparador.sideBySide,
+      specification: UI_EN.comparador.specification,
+      bestPrice: UI_EN.comparador.bestPrice,
+      details: UI_EN.product.details,
+      price: UI_EN.product.price,
+    }
+  : {
+      eyebrow: 'Herramienta',
+      title: 'Comparador de productos',
+      category: 'Categoría',
+      chooseCategory: '— Elige una categoría —',
+      productA: 'Producto A',
+      productB: 'Producto B',
+      chooseProduct: '— Elige un producto —',
+      selectProduct: 'Selecciona un producto',
+      comparison: 'Comparativa',
+      sideBySide: 'Especificaciones lado a lado',
+      specification: 'Especificación',
+      bestPrice: 'Mejor precio',
+      details: 'Detalles',
+      price: 'Precio',
+    };
 ---
 
 <section class="products comparador-section" id="comparador">
   <div class="section-title section-title-stacked">
     <div>
-      <small>Herramienta</small>
-      <h2>Comparador de productos</h2>
+      <small>{t.eyebrow}</small>
+      <h2>{t.title}</h2>
     </div>
   </div>
 
   <!-- Selector de categoría (oculto cuando hay categoriaFija) -->
   <div class="comparador-cat-wrap" style={categoriaFija ? 'display:none' : ''}>
-    <label for="comp-categoria">Categoría</label>
+    <label for="comp-categoria">{t.category}</label>
     <select id="comp-categoria" class="comp-select">
-      <option value="">— Elige una categoría —</option>
+      <option value="">{t.chooseCategory}</option>
       {categorias.map(c => <option value={c.key}>{c.label}</option>)}
     </select>
   </div>
@@ -40,9 +88,9 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
     <!-- Slot A -->
     <div class="product-card comp-slot-card" id="slot-a">
       <div class="comp-slot-selector">
-        <label for="comp-a">Producto A</label>
+        <label for="comp-a">{t.productA}</label>
         <select id="comp-a" class="comp-select" disabled>
-          <option value="">— Elige un producto —</option>
+          <option value="">{t.chooseProduct}</option>
         </select>
       </div>
       <div class="comp-slot-empty" id="slot-a-empty">
@@ -51,7 +99,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
             <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
             <path d="M24 18v12M18 24h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <span>Selecciona un producto</span>
+          <span>{t.selectProduct}</span>
         </div>
       </div>
       <div class="comp-slot-content" id="slot-a-content" hidden>
@@ -65,7 +113,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
           <span id="slot-a-price"></span>
         </div>
         <div class="product-card-actions">
-          <a id="slot-a-detail" class="btn btn-small" href="#">Detalles</a>
+          <a id="slot-a-detail" class="btn btn-small" href="#">{t.details}</a>
           <a id="slot-a-amazon" class="btn btn-small btn-amazon" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
         </div>
       </div>
@@ -79,9 +127,9 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
     <!-- Slot B -->
     <div class="product-card comp-slot-card" id="slot-b">
       <div class="comp-slot-selector">
-        <label for="comp-b">Producto B</label>
+        <label for="comp-b">{t.productB}</label>
         <select id="comp-b" class="comp-select" disabled>
-          <option value="">— Elige un producto —</option>
+          <option value="">{t.chooseProduct}</option>
         </select>
       </div>
       <div class="comp-slot-empty" id="slot-b-empty">
@@ -90,7 +138,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
             <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/>
             <path d="M24 18v12M18 24h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
-          <span>Selecciona un producto</span>
+          <span>{t.selectProduct}</span>
         </div>
       </div>
       <div class="comp-slot-content" id="slot-b-content" hidden>
@@ -104,7 +152,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
           <span id="slot-b-price"></span>
         </div>
         <div class="product-card-actions">
-          <a id="slot-b-detail" class="btn btn-small" href="#">Detalles</a>
+          <a id="slot-b-detail" class="btn btn-small" href="#">{t.details}</a>
           <a id="slot-b-amazon" class="btn btn-small btn-amazon" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
         </div>
       </div>
@@ -114,8 +162,8 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
   <!-- Tabla comparativa -->
   <div class="comp-table-wrap" id="comp-tabla" hidden>
     <div class="comp-table-header">
-      <small>Comparativa</small>
-      <h3>Especificaciones lado a lado</h3>
+      <small>{t.comparison}</small>
+      <h3>{t.sideBySide}</h3>
     </div>
     <div class="comp-table-scroll">
       <table class="comp-table" id="comp-table"></table>
@@ -123,7 +171,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
   </div>
 </section>
 
-<script define:vars={{ productosData: productos, categoriasData: categorias, categoriaFija }} is:inline>
+<script define:vars={{ productosData: productos, categoriasData: categorias, categoriaFija, urlPrefix, catSlugs, jsT: { chooseProduct: t.chooseProduct, specification: t.specification, price: t.price, bestPrice: t.bestPrice } }} is:inline>
   const selCat   = document.getElementById('comp-categoria');
   const selA     = document.getElementById('comp-a');
   const selB     = document.getElementById('comp-b');
@@ -145,7 +193,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
       .map(([k, v]) => `<li><span class="spec-k" style="color:#00ffe1;font-weight:500;white-space:nowrap">${k}: </span><span class="spec-v">${v}</span></li>`)
       .join('');
 
-    const href = `/${catKey}/${product.slug}-${product.id}/`;
+    const href = `${urlPrefix}/${catSlugs[catKey] || catKey}/${product.slug}-${product.id}/`;
     document.getElementById(`slot-${slot}-detail`).href = href;
     document.getElementById(`slot-${slot}-amazon`).href = product.enlaceAmazon;
 
@@ -182,20 +230,20 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
       </colgroup>
       <thead>
         <tr>
-          <th style="text-align:left">Especificación</th>
+          <th style="text-align:left">${jsT.specification}</th>
           <th>${pA.nombre}</th>
           <th>${pB.nombre}</th>
         </tr>
       </thead>
       <tbody>
         <tr class="price-row">
-          <td style="${specStyle}">Precio</td>
+          <td style="${specStyle}">${jsT.price}</td>
           <td class="${cheaperA ? 'price-winner' : ''}">
-            ${cheaperA ? '<span class="winner-badge">Mejor precio</span>' : ''}
+            ${cheaperA ? `<span class="winner-badge">${jsT.bestPrice}</span>` : ''}
             $${pA.precio.toFixed(2)} USD
           </td>
           <td class="${cheaperB ? 'price-winner' : ''}">
-            ${cheaperB ? '<span class="winner-badge">Mejor precio</span>' : ''}
+            ${cheaperB ? `<span class="winner-badge">${jsT.bestPrice}</span>` : ''}
             $${pB.precio.toFixed(2)} USD
           </td>
         </tr>
@@ -222,7 +270,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
   selCat.addEventListener('change', () => {
     tabla.hidden = true;
     [selA, selB].forEach(sel => {
-      sel.innerHTML = '<option value="">— Elige un producto —</option>';
+      sel.innerHTML = `<option value="">${jsT.chooseProduct}</option>`;
       sel.disabled = !selCat.value;
     });
     clearSlot('a');
@@ -263,7 +311,7 @@ const { categoriaFija } = Astro.props as { categoriaFija?: string };
     selCat.value = categoriaFija;
     const products = productosData[categoriaFija] || [];
     [selA, selB].forEach(sel => {
-      sel.innerHTML = '<option value="">— Elige un producto —</option>';
+      sel.innerHTML = `<option value="">${jsT.chooseProduct}</option>`;
       sel.disabled = false;
       products.forEach(p => {
         const opt = document.createElement('option');

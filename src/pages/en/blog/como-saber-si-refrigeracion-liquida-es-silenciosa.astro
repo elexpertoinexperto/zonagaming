@@ -1,0 +1,244 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'How to tell if a liquid cooler is quiet';
+const description =
+  'A guide to spotting quiet AIOs: which specs to look at, the difference between dB and dBA, and which brands make the quietest AIOs on the market.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '4 min read';
+
+const secciones = [
+  { id: 'ruido-aio', label: 'Where does the noise come from?' },
+  { id: 'db-specs', label: 'The dB in the specs' },
+  { id: 'ventiladores', label: 'Fans: the key factor' },
+  { id: 'bomba', label: 'Pump noise' },
+  { id: 'tabla', label: 'Quietest AIOs' },
+  { id: 'consejo', label: 'Tips to reduce noise' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>How to tell if a liquid cooler is quiet</h1>
+      <p class="post-lead">
+        Many people buy an AIO expecting silence and end up with fans louder than
+        their previous cooler. This is what to look at before buying.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="ruido-aio">
+        <h2>Where does the noise in an AIO come from?</h2>
+        <p>
+          A liquid cooling system has two noise sources:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>The radiator fans:</strong> they account for 80-90% of the
+            total noise. More RPM, more noise. Most AIOs come with fans
+            spinning between 800 and 2,000 RPM depending on load.
+          </li>
+          <li>
+            <strong>The pump:</strong> continuous but low intensity. On most
+            well-designed AIOs it is nearly inaudible. You may only notice it in the first
+            hours if there are air microbubbles, which later disappear.
+          </li>
+        </ul>
+      </section>
+
+      <section id="db-specs">
+        <h2>The dB in the specifications: what they mean</h2>
+        <p>
+          The <strong>noise level in dBA</strong> (A-weighted decibels) is the figure
+          brands measure. A reference scale to put it in context:
+        </p>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Noise level</th>
+                <th>Reference</th>
+                <th>Perception</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>&lt; 25 dBA</td><td>Library</td><td>Nearly inaudible</td></tr>
+              <tr><td>25–30 dBA</td><td>Quiet PC</td><td>Very soft</td></tr>
+              <tr><td>30–35 dBA</td><td>Normal PC</td><td>Audible but not annoying</td></tr>
+              <tr><td>35–45 dBA</td><td>PC under load</td><td>Clearly audible</td></tr>
+              <tr><td>&gt; 45 dBA</td><td>Vacuum on low</td><td>Annoying for continuous use</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          Warning: many brands measure noise at minimum load (800 RPM).
+          Look for the full-load figure to know what you will hear in demanding matches.
+        </p>
+      </section>
+
+      <section id="ventiladores">
+        <h2>The fans: the most important factor</h2>
+        <p>
+          Not all fans included with AIOs are the same. These factors
+          determine the silence:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Low maximum RPM:</strong> a fan that tops out at 1,200 RPM
+            will always be quieter than one reaching 2,000 RPM, given the same design.
+          </li>
+          <li>
+            <strong>Quality bearings:</strong> FDB (Fluid Dynamic Bearing) bearings
+            last longer and make less noise than cheap ball bearings.
+          </li>
+          <li>
+            <strong>PWM curve profile:</strong> fans with a wide PWM range
+            (20–100%) allow very low idle speeds, imperceptible to the ear.
+          </li>
+        </ul>
+      </section>
+
+      <section id="bomba">
+        <h2>Pump noise: when to worry</h2>
+        <p>
+          The pump of a good-quality AIO emits a soft continuous hum that in practice
+          gets masked by the fans. You should not hear it while the fans are spinning.
+        </p>
+        <p>
+          Signs that something is wrong with the pump:
+        </p>
+        <ul class="post-list">
+          <li>Persistent bubbling after the first 24 hours of use.</li>
+          <li>Scratching noise or intermittent clicking.</li>
+          <li>High CPU temperatures with the AIO fully running.</li>
+        </ul>
+        <p>
+          If you notice any of these symptoms past the first 24 hours, contact the
+          manufacturer's warranty service.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>AIOs known for silence</h2>
+        <p>
+          Some models from our catalog with an excellent noise profile:
+        </p>
+        <ul class="post-list">
+          <li>
+            <a href="/en/liquid-cooling/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>:
+            high-static-pressure P-fans with a very smooth PWM curve. One of the quietest AIOs
+            on the market under medium load.
+          </li>
+          <li>
+            <a href="/en/liquid-cooling/corsair-nautilus-360-rs-argb-4/">Corsair Nautilus 360 RS ARGB</a>:
+            RS fans optimized for a noise/performance balance. An extremely quiet pump.
+          </li>
+          <li>
+            <a href="/en/liquid-cooling/thermalright-aqua-elite-240-v3-7/">Thermalright Aqua Elite 240 V3</a>:
+            a compact 240mm option with TL-C12 fans renowned for their silence.
+          </li>
+        </ul>
+      </section>
+
+      <section id="consejo">
+        <h2>Tips to reduce your AIO's noise</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Set a custom fan curve</strong> in the BIOS or your motherboard
+            software. Raise the fans' ramp-up point to 60°C instead of 40°C.
+          </li>
+          <li>
+            <strong>Mount the radiator as front intake:</strong> the fans spin slower
+            because cool air is easier to move than the hot air inside the case.
+          </li>
+          <li>
+            <strong>Anti-vibration pads:</strong> install them between the radiator and the case
+            to eliminate any resonance hum.
+          </li>
+        </ul>
+        <p>
+          Compare every available model in our
+          <a href="/en/liquid-cooling/">liquid cooling</a> catalog with full noise
+          and airflow specifications.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Looking for a quiet AIO?</h3>
+      <p>Browse our liquid cooling selection with the best noise profiles.</p>
+      <a class="btn" href="/en/liquid-cooling/">View liquid cooling</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

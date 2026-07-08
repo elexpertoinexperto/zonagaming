@@ -1,0 +1,70 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import BestSellers from '../../../components/BestSellers.astro';
+import Comparador from '../../../components/Comparador.astro';
+import productos from '../../../data/productos-en.json';
+import { CATS_EN } from '../../../i18n/en';
+
+const catKey = 'procesadores';
+const categoria = 'processors';
+const cat = CATS_EN[catKey];
+const productsData = productos[catKey] as any[];
+
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/en/${categoria}/${p.slug}-${p.id}/`,
+  amazonHref: p.enlaceAmazon,
+}));
+---
+
+<SiteLayout title={cat.pageTitle} description={cat.metaDescription} robots="index, follow">
+  <section class="category-hero">
+    <a class="category-back" href="/en/">Back to Home</a>
+    <small>Category</small>
+    <h1>{cat.heroTitle}</h1>
+    <p class="category-description">{cat.heroDescription}</p>
+    <div class="category-meta">
+      <span>{productsData.length} products available</span>
+      <span>Verified stock and secure shipping</span>
+    </div>
+  </section>
+
+  <section class="product-grid">
+    {productsData.map((product) => (
+      <ProductCard lang="en" product={{
+        id: product.id,
+        name: product.nombre,
+        price: `$${product.precio.toFixed(2)} USD`,
+        description: product.descripcion,
+        imageUrl: product.imagenUrl,
+        detailHref: `/en/${categoria}/${product.slug}-${product.id}/`,
+        amazonHref: product.enlaceAmazon,
+      }}/>
+    ))}
+  </section>
+
+  <Comparador categoriaFija={catKey} lang="en" />
+
+  <section class="category-buying-guide">
+    <h2>{cat.guide.title}</h2>
+    <p>{cat.guide.intro}</p>
+    <ul>
+      {cat.guide.bullets.map((item) => (
+        <li><strong>{item.b}</strong> {item.t}</li>
+      ))}
+    </ul>
+    <p>{cat.guide.outro}</p>
+  </section>
+
+  <BestSellers
+    id={`best-selling-${categoria}`}
+    eyebrow="Top sellers"
+    title={cat.bsTitle}
+    products={bestSellerProducts}
+  />
+</SiteLayout>

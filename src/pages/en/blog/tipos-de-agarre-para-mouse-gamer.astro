@@ -1,0 +1,224 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'What grip styles are there for a gaming mouse?';
+const description =
+  'Palm grip, claw grip or fingertip: the three grip styles determine which gaming mouse shape suits you. A quick guide to picking the right one for how you play.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '4 min read';
+
+const secciones = [
+  { id: 'palm', label: 'Palm grip' },
+  { id: 'claw', label: 'Claw grip' },
+  { id: 'fingertip', label: 'Fingertip grip' },
+  { id: 'cual-eres', label: 'Which grip is yours?' },
+  { id: 'forma', label: 'Mouse shape by grip' },
+  { id: 'recomendaciones', label: 'Recommended mice by grip' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Peripherals</span>
+      <h1>What grip styles are there for a gaming mouse?</h1>
+      <p class="post-lead">
+        Not everyone holds the mouse the same way. Your grip style determines which mouse shape and size
+        gives you more control and less fatigue. Knowing it completely changes how you choose.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="palm">
+        <h2>Palm grip: your whole palm on the mouse</h2>
+        <p>
+          In the <strong>palm grip</strong>, your whole hand rests on the mouse:
+          the palm sits on the back, the fingers extend relaxed over the buttons
+          and the thumb and pinky hold the sides.
+        </p>
+        <ul class="post-list">
+          <li><strong>Feel:</strong> relaxed, comfortable for long sessions, less fatigue.</li>
+          <li><strong>Control:</strong> large movements from the elbow and shoulder. Less precision on micro-adjustments.</li>
+          <li><strong>Ideal for:</strong> MOBA, RPG, low-sensitivity (low-DPI) FPS, general use.</li>
+          <li><strong>Ideal mouse:</strong> large size (130mm+), raised shape at the back.</li>
+        </ul>
+      </section>
+
+      <section id="claw">
+        <h2>Claw grip: fingers arched like a claw</h2>
+        <p>
+          In the <strong>claw grip</strong>, the palm only touches the back
+          of the mouse and the fingers bend into a "claw": the knuckles are raised and
+          the fingertips are what press the buttons.
+        </p>
+        <ul class="post-list">
+          <li><strong>Feel:</strong> more control and agility than palm. Takes some getting used to.</li>
+          <li><strong>Control:</strong> a mix of wrist and arm movement. Very versatile.</li>
+          <li><strong>Ideal for:</strong> competitive FPS, Battle Royale, any genre.</li>
+          <li><strong>Ideal mouse:</strong> medium size (120–130mm), not too tall a profile.</li>
+        </ul>
+        <p>
+          Claw is the most common grip among competitive PC gamers. It offers precise
+          control without sacrificing movement speed.
+        </p>
+      </section>
+
+      <section id="fingertip">
+        <h2>Fingertip grip: only the fingertips in control</h2>
+        <p>
+          In the <strong>fingertip grip</strong>, the palm does not touch the mouse at all.
+          Only the fingertips are in contact with it. Movement comes exclusively
+          from fingers and wrist.
+        </p>
+        <ul class="post-list">
+          <li><strong>Feel:</strong> maximum agility and turning speed. Takes practice.</li>
+          <li><strong>Control:</strong> fast, precise movements. Fatigues faster in long sessions.</li>
+          <li><strong>Ideal for:</strong> high-sensitivity (high-DPI) FPS, precise flicking.</li>
+          <li><strong>Ideal mouse:</strong> small size (110–120mm), low profile and low weight.</li>
+        </ul>
+      </section>
+
+      <section id="cual-eres">
+        <h2>How to find your natural grip</h2>
+        <p>
+          Place the mouse on the desk and grab it in a relaxed way without thinking about it.
+          Look at where your palm rests:
+        </p>
+        <ul class="post-list">
+          <li>Palm rests fully on the mouse → <strong>Palm grip</strong></li>
+          <li>Palm touches the back, fingers bent → <strong>Claw grip</strong></li>
+          <li>Palm does not touch the mouse, only fingers → <strong>Fingertip grip</strong></li>
+        </ul>
+        <p>
+          Your hand size matters too. Measuring from wrist to middle finger:
+          under 17cm = small hand; 17–19cm = medium hand; over 19cm = large hand.
+        </p>
+      </section>
+
+      <section id="forma">
+        <h2>Mouse shape based on your grip</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Grip</th>
+                <th>Ideal length</th>
+                <th>Profile</th>
+                <th>Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Palm grip</td><td>125–145 mm</td><td>Tall and curved</td><td>Any (75–120g)</td></tr>
+              <tr><td>Claw grip</td><td>120–130 mm</td><td>Medium</td><td>50–85g ideal</td></tr>
+              <tr><td>Fingertip grip</td><td>110–120 mm</td><td>Low and compact</td><td>Under 65g ideal</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="recomendaciones">
+        <h2>Recommended mice by grip type</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Palm grip — long sessions:</strong>
+            <a href="/en/gaming-mice/razer-basilisk-v3-wired-26k-11buttons-3/">Razer Basilisk V3</a>
+            — right-handed ergonomic, tall profile, very comfortable.
+          </li>
+          <li>
+            <strong>Claw grip — competitive:</strong>
+            <a href="/en/gaming-mice/attack-shark-x3-wireless-paw3395-49g-1/">Attack Shark X3 49g</a>
+            — medium ambidextrous shape, light, ideal for claw.
+          </li>
+          <li>
+            <strong>Fingertip grip — high-sensitivity FPS:</strong>
+            <a href="/en/gaming-mice/pulsar-x3-crazylight-wireless-43g-white-2/">Pulsar X3 CrazyLight 43g</a>
+            — the lightest in our catalog, compact shape for fingertip.
+          </li>
+          <li>
+            <strong>Claw / fingertip wireless with battery life:</strong>
+            <a href="/en/gaming-mice/razer-basilisk-v3-x-hyperspeed-18k-285h-7/">Razer Basilisk V3 X HyperSpeed</a>
+            — 285h of battery, ambidextrous claw/palm shape.
+          </li>
+        </ul>
+        <p>
+          Every product page in our <a href="/en/gaming-mice/">gaming mice</a> catalog
+          includes dimensions so you can check compatibility with your grip.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>The right mouse for your grip</h3>
+      <p>Find the ideal gaming mouse for palm, claw or fingertip in our catalog.</p>
+      <a class="btn" href="/en/gaming-mice/">View gaming mice</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

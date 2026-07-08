@@ -1,0 +1,1270 @@
+{
+  "tarjetas-graficas": [
+    {
+      "id": 1,
+      "slug": "zotac-geforce-gtx-960",
+      "nombre": "ZOTAC GeForce GTX 960 2GB GDDR5",
+      "descripcion": "NVIDIA GTX 960 graphics card with 2GB GDDR5 and DirectX 12 support, ideal for eSports titles and light 1080p gaming",
+      "especificaciones": {
+        "VRAM": "2 GB GDDR5",
+        "Speed": "1240 MHz Boost",
+        "Bus Width": "128 bits",
+        "TDP": "120 W"
+      },
+      "precio": 200,
+      "enlaceAmazon": "https://amzn.to/4u5AmuV",
+      "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L_transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "asus-dual-rtx-5060-8gb-oc",
+      "nombre": "ASUS Dual NVIDIA GeForce RTX 5060 8GB GDDR7 OC Edition",
+      "descripcion": "RTX 5060 graphics card with 8GB GDDR7, DLSS 4 and NVIDIA Blackwell architecture for modern gaming at 1080p and 1440p",
+      "especificaciones": {
+        "VRAM": "8 GB GDDR7",
+        "Speed": "2565 MHz Boost (OC)",
+        "Bus Width": "128 bits",
+        "TDP": "145 W"
+      },
+      "precio": 354.99,
+      "enlaceAmazon": "https://amzn.to/4ufHRzn",
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/35710ce7-7a2b-42ab-aa48-63c448e6c047/w800"
+    },
+    {
+      "id": 3,
+      "slug": "hyperrender-rx-580-8gb",
+      "nombre": "HyperRender RX 580 8GB 2048SP",
+      "descripcion": "RX 580 graphics card with 8GB GDDR5 and a 256-bit bus, ideal for 1080p gaming and multi-monitor setups",
+      "especificaciones": {
+        "VRAM": "8 GB GDDR5",
+        "Speed": "1286 MHz",
+        "Bus Width": "256 bits",
+        "TDP": "150 W"
+      },
+      "precio": 119.99,
+      "enlaceAmazon": "https://amzn.to/4uMk5Mw",
+      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+      "nombre": "GIGABYTE Radeon RX 9060 XT Gaming OC 16G",
+      "descripcion": "Radeon RX 9060 XT graphics card with 16GB GDDR6, PCIe 5.0 and the WINDFORCE cooling system for high-performance 1440p gaming",
+      "especificaciones": {
+        "VRAM": "16 GB GDDR6",
+        "Speed": "2700 MHz",
+        "Bus Width": "128 bits",
+        "TDP": "182 W"
+      },
+      "precio": 459.99,
+      "enlaceAmazon": "https://amzn.to/4a4BjME",
+      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+      "nombre": "ASUS Dual NVIDIA GeForce RTX 5060 Ti 16GB GDDR7 OC Edition",
+      "descripcion": "RTX 5060 Ti with 16GB GDDR7, DLSS 4 and Blackwell architecture. An excellent choice for 1440p gaming and content creation",
+      "especificaciones": {
+        "VRAM": "16 GB GDDR7",
+        "Speed": "2632 MHz Boost (OC)",
+        "Bus Width": "128 bits",
+        "TDP": "180 W"
+      },
+      "precio": 571.3,
+      "enlaceAmazon": "https://amzn.to/4u8hP0K",
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/d9408583-9a6f-4a2b-b721-c09f1fe8cf99/w800"
+    },
+    {
+      "id": 6,
+      "slug": "gigabyte-rtx-5070-windforce-oc-sff-12g",
+      "nombre": "GIGABYTE GeForce RTX 5070 WINDFORCE OC SFF 12G",
+      "descripcion": "RTX 5070 with 12GB GDDR7 and DLSS 4, built for high-quality 1440p gaming and compact SFF builds",
+      "especificaciones": {
+        "VRAM": "12 GB GDDR7",
+        "Speed": "2600 MHz",
+        "Bus Width": "192 bits",
+        "TDP": "250 W"
+      },
+      "precio": 635.99,
+      "enlaceAmazon": "https://amzn.to/4fUa8b8",
+      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "gigabyte-radeon-rx-9070-xt-gaming-oc-16g",
+      "nombre": "GIGABYTE Radeon RX 9070 XT Gaming OC 16G",
+      "descripcion": "Radeon RX 9070 XT with 16GB GDDR6 and WINDFORCE cooling, built for demanding gaming at 1440p and 4K",
+      "especificaciones": {
+        "VRAM": "16 GB GDDR6",
+        "Speed": "3060 MHz",
+        "Bus Width": "256 bits",
+        "TDP": "304 W"
+      },
+      "precio": 699.99,
+      "enlaceAmazon": "https://amzn.to/3RY1ZbH",
+      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466__transparent.png"
+    }
+  ],
+  "procesadores": [
+    {
+      "id": 1,
+      "slug": "amd-ryzen-5-9600x",
+      "nombre": "AMD Ryzen 5 9600X",
+      "descripcion": "6-core, 12-thread processor based on Zen 5, ideal for high-performance gaming and productivity",
+      "especificaciones": {
+        "Cores": "6",
+        "Threads": "12",
+        "Base Clock": "3.9 GHz",
+        "Turbo Clock": "5.4 GHz",
+        "TDP": "65 W"
+      },
+      "precio": 179,
+      "enlaceAmazon": "https://amzn.to/4uEUKUA",
+      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "intel-core-i5-12600",
+      "nombre": "Intel Core i5-12600",
+      "descripcion": "12th-gen Intel processor with 6 cores and 12 threads, ideal for gaming and everyday productivity",
+      "especificaciones": {
+        "Cores": "6",
+        "Threads": "12",
+        "Base Clock": "3.3 GHz",
+        "Turbo Clock": "4.8 GHz",
+        "TDP": "65 W"
+      },
+      "precio": 315,
+      "enlaceAmazon": "https://amzn.to/4fUakam",
+      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "amd-ryzen-5-5500",
+      "nombre": "AMD Ryzen 5 5500",
+      "descripcion": "6-core, 12-thread processor for gaming and productivity with an excellent performance-to-price ratio",
+      "especificaciones": {
+        "Cores": "6",
+        "Threads": "12",
+        "Base Clock": "3.6 GHz",
+        "Turbo Clock": "4.2 GHz",
+        "TDP": "65 W"
+      },
+      "precio": 84,
+      "enlaceAmazon": "https://amzn.to/3PEAiEi",
+      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "amd-ryzen-7-5800xt",
+      "nombre": "AMD Ryzen 7 5800XT",
+      "descripcion": "8-core, 16-thread processor based on Zen 3, ideal for advanced gaming and demanding multitasking",
+      "especificaciones": {
+        "Cores": "8",
+        "Threads": "16",
+        "Base Clock": "3.8 GHz",
+        "Turbo Clock": "4.8 GHz",
+        "TDP": "105 W"
+      },
+      "precio": 227.45,
+      "enlaceAmazon": "https://amzn.to/435HhJx",
+      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "amd-ryzen-5-7600x",
+      "nombre": "AMD Ryzen 5 7600X",
+      "descripcion": "6-core, 12-thread processor based on Zen 4, ideal for high-performance gaming and modern productivity",
+      "especificaciones": {
+        "Cores": "6",
+        "Threads": "12",
+        "Base Clock": "4.7 GHz",
+        "Turbo Clock": "5.3 GHz",
+        "TDP": "105 W"
+      },
+      "precio": 167,
+      "enlaceAmazon": "https://amzn.to/4anaiEh",
+      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "amd-ryzen-7-7700x",
+      "nombre": "AMD Ryzen 7 7700X",
+      "descripcion": "8-core, 16-thread processor based on Zen 4, designed for high-performance gaming and advanced multitasking",
+      "especificaciones": {
+        "Cores": "8",
+        "Threads": "16",
+        "Base Clock": "4.5 GHz",
+        "Turbo Clock": "5.4 GHz",
+        "TDP": "105 W"
+      },
+      "precio": 234,
+      "enlaceAmazon": "https://amzn.to/4uMp4wJ",
+      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "amd-ryzen-7-5800x",
+      "nombre": "AMD Ryzen 7 5800X",
+      "descripcion": "8-core, 16-thread processor based on Zen 3, ideal for advanced gaming and demanding productivity",
+      "especificaciones": {
+        "Cores": "8",
+        "Threads": "16",
+        "Base Clock": "3.8 GHz",
+        "Turbo Clock": "4.7 GHz",
+        "TDP": "105 W"
+      },
+      "precio": 218.98,
+      "enlaceAmazon": "https://amzn.to/4dYSAIv",
+      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466__transparent.png"
+    }
+  ],
+  "memoria-ram": [
+    {
+      "id": 1,
+      "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+      "nombre": "CORSAIR Vengeance RGB RS DDR5 16GB (2x8GB) 6000MHz CL36",
+      "descripcion": "DDR5 memory with dynamic RGB lighting, AMD EXPO and Intel XMP support for easy overclocking, and on-module voltage regulation",
+      "especificaciones": {
+        "Capacity": "16GB (2x8GB)",
+        "Type": "DDR5",
+        "Speed": "6000MHz",
+        "Latency": "CL36-44-44-96",
+        "Voltage": "1.35V",
+        "Compatibility": "AMD EXPO / Intel XMP",
+        "Color": "Gray",
+        "Model": "CMG16GX5M2E6000Z36"
+      },
+      "precio": 249.99,
+      "enlaceAmazon": "https://amzn.to/43ONmu1",
+      "imagenUrl": "/imagenes/memoria-ram/1/1_transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "gigastone-game-pro-32gb-3200mhz",
+      "nombre": "Gigastone Game PRO 32GB (2x16GB) DDR4 3200MHz CL16",
+      "descripcion": "High-capacity DDR4 memory for gaming and multitasking, with a low-profile design and universal compatibility with Intel and AMD boards",
+      "especificaciones": {
+        "Capacity": "32GB (2x16GB)",
+        "Type": "DDR4",
+        "Speed": "3200MHz",
+        "Latency": "CL16",
+        "Voltage": "1.35V",
+        "Compatibility": "Intel XMP",
+        "Color": "Black",
+        "Model": "Gigastone Game PRO"
+      },
+      "precio": 228.89,
+      "enlaceAmazon": "https://amzn.to/43cHSsS",
+      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "oloy-white-owl-16gb-3200mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) White Owl 3200MHz CL16",
+      "descripcion": "DDR4 gaming memory with the White Owl design, 1.35V voltage and 288-pin desktop board compatibility for everyday gaming",
+      "especificaciones": {
+        "Capacity": "16GB (2x8GB)",
+        "Type": "DDR4",
+        "Speed": "3200MHz",
+        "Latency": "CL16",
+        "Voltage": "1.35V",
+        "Compatibility": "Intel XMP",
+        "Color": "White",
+        "Model": "MD4U0832161BHWDA"
+      },
+      "precio": 124.99,
+      "enlaceAmazon": "https://amzn.to/4x53qFn",
+      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "teamgroup-t-force-delta-rgb-16gb-3600mhz",
+      "nombre": "TEAMGROUP T-Force Delta RGB DDR4 16GB (2x8GB) 3600MHz CL18",
+      "descripcion": "DDR4 memory with Delta RGB lighting and 3600MHz speed, optimized for high-performance gaming on Intel and AMD platforms",
+      "especificaciones": {
+        "Capacity": "16GB (2x8GB)",
+        "Type": "DDR4",
+        "Speed": "3600MHz",
+        "Latency": "CL18",
+        "Voltage": "1.35V",
+        "Compatibility": "Intel XMP",
+        "Color": "White",
+        "Model": "TF4D416G3600HC18JDC01"
+      },
+      "precio": 169.99,
+      "enlaceAmazon": "https://amzn.to/4uSUHos",
+      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "oloy-blade-rgb-16gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) Black Hairline Blade RGB 2666MHz CL19",
+      "descripcion": "DDR4 memory with the Blade RGB design and a low-latency profile, ideal for compact gaming builds with a reduced 1.2V voltage",
+      "especificaciones": {
+        "Capacity": "16GB (2x8GB)",
+        "Type": "DDR4",
+        "Speed": "2666MHz",
+        "Latency": "CL19",
+        "Voltage": "1.2V",
+        "Compatibility": "Intel XMP",
+        "Color": "Black",
+        "Model": "MD4U0826190BRKDA"
+      },
+      "precio": 106.99,
+      "enlaceAmazon": "https://amzn.to/4xgdRpY",
+      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "oloy-warhawk-rgb-32gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 32GB (2x16GB) Warhawk Aura Sync RGB 2666MHz CL19",
+      "descripcion": "High-capacity DDR4 memory with Aura Sync RGB and the Warhawk design, made for memory-heavy gaming builds with visual customization",
+      "especificaciones": {
+        "Capacity": "32GB (2x16GB)",
+        "Type": "DDR4",
+        "Speed": "2666MHz",
+        "Latency": "CL19",
+        "Voltage": "1.2V",
+        "Compatibility": "Intel XMP / Aura Sync",
+        "Color": "Black",
+        "Model": "MD4U162619BEDA"
+      },
+      "precio": 194.99,
+      "enlaceAmazon": "https://amzn.to/4x53tkx",
+      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "oloy-black-owl-16gb-2666mhz",
+      "nombre": "OLOy DDR4 RAM 16GB (2x8GB) Black Owl 2666MHz CL19",
+      "descripcion": "DDR4 memory with the RGB-free Black Owl design, low 1.2V voltage and a compact profile, ideal for budget-friendly, understated gaming builds",
+      "especificaciones": {
+        "Capacity": "16GB (2x8GB)",
+        "Type": "DDR4",
+        "Speed": "2666MHz",
+        "Latency": "CL19",
+        "Voltage": "1.2V",
+        "Compatibility": "Intel XMP",
+        "Color": "Black",
+        "Model": "MD4U082619BJDA"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4dQYBIo",
+      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466__transparent.png"
+    }
+  ],
+  "ssd": [
+    {
+      "id": 1,
+      "slug": "six-nvme-m2-512gb-pcie4",
+      "nombre": "SIX NVMe M.2 SSD PCIe 4.0 512GB con Disipador",
+      "descripcion": "512GB NVMe PCIe Gen4 x4 SSD with included heatsink, up to 7,100 MB/s reads, compatible with PS5, laptops and desktop PCs",
+      "especificaciones": {
+        "Capacity": "512 GB",
+        "Interface": "PCIe Gen4 x4 NVMe",
+        "Read Speed": "7100 MB/s",
+        "Write Speed": "N/A",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4o6FNIm",
+      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "kingston-nv3-1tb-pcie4",
+      "nombre": "Kingston NV3 1TB M.2 2280 NVMe PCIe Gen4",
+      "descripcion": "Kingston NV3 1TB NVMe SSD with PCIe Gen4 x4 and up to 6,000 MB/s sequential reads for fast storage in PCs and laptops",
+      "especificaciones": {
+        "Capacity": "1 TB",
+        "Interface": "PCIe Gen4 x4 NVMe",
+        "Read Speed": "6000 MB/s",
+        "Write Speed": "N/A",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 163.9,
+      "enlaceAmazon": "https://amzn.to/4uRL2yn",
+      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "samsung-990-pro-2tb-pcie4",
+      "nombre": "Samsung 990 PRO SSD 2TB NVMe M.2 PCIe Gen4",
+      "descripcion": "Samsung 990 PRO 2TB SSD with PCIe Gen4 and up to 7,450 MB/s reads, ideal for advanced gaming and demanding workstations",
+      "especificaciones": {
+        "Capacity": "2 TB",
+        "Interface": "PCIe Gen4 NVMe",
+        "Read Speed": "7450 MB/s",
+        "Write Speed": "6900 MB/s",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 389.99,
+      "enlaceAmazon": "https://amzn.to/4o6tr2Z",
+      "imagenUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/mz-v9p2t0b-am/gallery/us-990pro-nvme-m2-ssd-mz-v9p2t0b-am-551141316"
+    },
+    {
+      "id": 4,
+      "slug": "fikwot-fn960-512gb-pcie4",
+      "nombre": "Fikwot FN960 512GB M.2 NVMe PCIe Gen4 con Disipador",
+      "descripcion": "512GB NVMe PCIe Gen4 x4 SSD with heatsink, up to 4,800 MB/s reads, Dynamic SLC Cache and PS5 compatibility",
+      "especificaciones": {
+        "Capacity": "512 GB",
+        "Interface": "PCIe Gen4 x4 NVMe",
+        "Read Speed": "4800 MB/s",
+        "Write Speed": "N/A",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4fZHiWO",
+      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "kootion-512gb-pcie3-nvme",
+      "nombre": "KOOTION 512GB PCIe 3.0 M.2 NVMe SSD",
+      "descripcion": "512GB NVMe PCIe Gen3 x4 SSD with up to 3,500 MB/s reads and low thermal output for budget PCs and laptops",
+      "especificaciones": {
+        "Capacity": "512 GB",
+        "Interface": "PCIe Gen3 x4 NVMe",
+        "Read Speed": "3500 MB/s",
+        "Write Speed": "N/A",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 87.37,
+      "enlaceAmazon": "https://amzn.to/3RKHCyR",
+      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "wd-black-sn7100-2tb-pcie4",
+      "nombre": "WD_Black SN7100 2TB NVMe SSD Gen4 PCIe",
+      "descripcion": "WD Black SN7100 2TB SSD with PCIe Gen4, up to 7,250 MB/s reads and 6,900 MB/s writes, next-gen 3D TLC NAND for gaming and laptops",
+      "especificaciones": {
+        "Capacity": "2 TB",
+        "Interface": "PCIe Gen4 NVMe",
+        "Read Speed": "7250 MB/s",
+        "Write Speed": "6900 MB/s",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 299.95,
+      "enlaceAmazon": "https://amzn.to/3RR3SHh",
+      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "fanxiang-s501q-512gb-pcie3",
+      "nombre": "fanxiang S501Q SSD 512GB PCIe 3.0 x4 NVMe",
+      "descripcion": "512GB NVMe PCIe Gen3 x4 SSD with SLC Cache and 3D NAND, up to 3,000 MB/s reads, a budget option for laptops and desktop PCs",
+      "especificaciones": {
+        "Capacity": "512 GB",
+        "Interface": "PCIe Gen3 x4 NVMe",
+        "Read Speed": "3000 MB/s",
+        "Write Speed": "N/A",
+        "Form Factor": "M.2 2280"
+      },
+      "precio": 85.99,
+      "enlaceAmazon": "https://amzn.to/4e2Vg7X",
+      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466__transparent.png"
+    }
+  ],
+  "fuentes-de-poder": [
+    {
+      "id": 1,
+      "slug": "psu-1000w-gold-atx31-modular-black",
+      "nombre": "Fuente 1000W 80+ Gold Totalmente Modular ATX 3.1 Black",
+      "descripcion": "1000W fully modular PSU with 80+ Gold, ATX 3.1 and PCIe 5.1, quiet 140mm fan, 105°C Japanese capacitors and a 12V-2x6 connector",
+      "especificaciones": {
+        "Wattage": "1000 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Fully Modular",
+        "Fan": "140mm"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/43kKiFR",
+      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "psu-1000w-gold-rgb-atx31-modular",
+      "nombre": "Fuente 1000W 80+ Gold Modular RGB Smart Fan ATX 3.1",
+      "descripcion": "1000W fully modular PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, native Dual-Color 12V-2x6 cable, smart RGB fan and 105°C capacitors",
+      "especificaciones": {
+        "Wattage": "1000 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Fully Modular",
+        "Fan": "RGB Smart Fan"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/3SmBuwJ",
+      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "corsair-rm750e-750w-atx31",
+      "nombre": "CORSAIR RM750e 750W ATX 3.1 PCIe 5.1 Totalmente Modular",
+      "descripcion": "Corsair RM750e 750W fully modular PSU with Cybenetics Gold efficiency, ATX 3.1 & PCIe 5.1, Modern Standby mode and 105°C capacitors",
+      "especificaciones": {
+        "Wattage": "750 W",
+        "Certification": "Cybenetics Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Fully Modular",
+        "Fan": "N/A"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4ucnyml",
+      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "golden-field-850w-gold-atx31",
+      "nombre": "GOLDEN FIELD 850W 80+ Gold Totalmente Modular ATX 3.1",
+      "descripcion": "850W fully modular gaming PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, native 600W 12V-2x6 cable and high-quality Japanese capacitors",
+      "especificaciones": {
+        "Wattage": "850 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Fully Modular",
+        "Fan": "N/A"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/4o9nkep",
+      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "vetroo-850w-gold-modular-white",
+      "nombre": "Vetroo 850W 80+ Gold Totalmente Modular White PCIe 5.1",
+      "descripcion": "850W fully modular white PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, quiet 120mm FDB fan and a 10-year warranty",
+      "especificaciones": {
+        "Wattage": "850 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Fully Modular",
+        "Fan": "120mm FDB"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amzn.to/4vt3ey7",
+      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "asrock-pro-650g-650w-gold",
+      "nombre": "ASRock PRO-650G 650W 80+ Gold ATX 3.1",
+      "descripcion": "ASRock PRO-650G 650W PSU with 80+ Gold, ATX 3.1, quiet 120mm fan, full circuit protection and a 3-year warranty",
+      "especificaciones": {
+        "Wattage": "650 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1",
+        "Modular": "Non-Modular",
+        "Fan": "120mm"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4ac6DJs",
+      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "asrock-pro-850g-850w-gold-atx31",
+      "nombre": "ASRock PRO 850G 850W 80+ Gold ATX 3.1 PCIe 5.1",
+      "descripcion": "ASRock PRO 850G 850W PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, native 12V-2x6 connector, low-noise 120mm fan and a 3-year warranty",
+      "especificaciones": {
+        "Wattage": "850 W",
+        "Certification": "80+ Gold",
+        "Standard": "ATX 3.1 / PCIe 5.1",
+        "Modular": "Non-Modular",
+        "Fan": "120mm"
+      },
+      "precio": 64.99,
+      "enlaceAmazon": "https://amzn.to/4vyUQ0g",
+      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466__transparent.png"
+    }
+  ],
+  "refrigeracion-liquida": [
+    {
+      "id": 1,
+      "slug": "arctic-liquid-freezer-iii-pro-360-argb-black",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 A-RGB Black",
+      "descripcion": "Black 360mm AIO with 3 A-RGB PWM fans, 38mm radiator, PWM pump and built-in VRM fan, compatible with AM5/AM4 and Intel LGA1851/1700",
+      "especificaciones": {
+        "Radiator": "360mm (38mm thick)",
+        "Fans": "3x120mm PWM A-RGB",
+        "Pump": "PWM",
+        "RGB": "A-RGB",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 92.99,
+      "enlaceAmazon": "https://amzn.to/4vyWVt6",
+      "imagenUrl": "https://www.arctic.de/media/2c/5d/f0/1741775358/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g00.png"
+    },
+    {
+      "id": 2,
+      "slug": "arctic-liquid-freezer-iii-pro-360-argb-white",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 A-RGB White",
+      "descripcion": "White 360mm AIO with 3 A-RGB PWM fans, 38mm radiator, PWM pump and built-in VRM fan, compatible with AM5/AM4 and Intel LGA1851/1700",
+      "especificaciones": {
+        "Radiator": "360mm (38mm thick)",
+        "Fans": "3x120mm PWM A-RGB",
+        "Pump": "PWM",
+        "RGB": "A-RGB",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 96.99,
+      "enlaceAmazon": "https://amzn.to/4v1YgbR",
+      "imagenUrl": "https://www.arctic.de/media/d8/01/85/1741775469/Liquid_Freezer_III_360_White_ARGB_Rainbow_g00.png"
+    },
+    {
+      "id": 3,
+      "slug": "arctic-liquid-freezer-iii-pro-360-black",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 Black (Sin RGB)",
+      "descripcion": "RGB-free 360mm AIO with 3 PWM fans, 38mm radiator and PWM pump with built-in VRM fan — maximum thermal performance with low noise",
+      "especificaciones": {
+        "Radiator": "360mm (38mm thick)",
+        "Fans": "3x120mm PWM",
+        "Pump": "PWM",
+        "RGB": "No RGB",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 83.99,
+      "enlaceAmazon": "https://amzn.to/4dMyJgI",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "corsair-nautilus-360-rs-argb",
+      "nombre": "CORSAIR Nautilus 360 RS ARGB Liquid CPU Cooler",
+      "descripcion": "Corsair 360mm AIO with 3 RS120 ARGB fans, direct motherboard connection, daisy-chaining, low noise and support for Intel LGA1851/1700 and AMD AM5/AM4",
+      "especificaciones": {
+        "Radiator": "360mm",
+        "Fans": "3x RS120 ARGB",
+        "Pump": "ARGB",
+        "RGB": "ARGB",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 129.99,
+      "enlaceAmazon": "https://amzn.to/4e5l57h",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "minorsonic-aio-360mm-argb",
+      "nombre": "Minorsonic AIO CPU Cooler 360mm ARGB 3 Fases",
+      "descripcion": "360mm AIO with a 3-phase motor, high-speed ceramic-bearing pump, 3 ARGB PWM fans and excellent low-noise thermal performance",
+      "especificaciones": {
+        "Radiator": "360mm",
+        "Fans": "3x120mm PWM ARGB",
+        "Pump": "Ceramic Bearing",
+        "RGB": "ARGB",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 52.99,
+      "enlaceAmazon": "https://amzn.to/4e8ymvW",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "antec-skeleton-360-argb",
+      "nombre": "Antec Skeleton 360 ARGB Liquid CPU Cooler",
+      "descripcion": "360mm AIO with a copper cold plate, high-performance pump and 3 120mm ARGB PWM fans, compatible with AMD AM4/AM5 and Intel up to LGA2011",
+      "especificaciones": {
+        "Radiator": "360mm",
+        "Fans": "3x120mm PWM ARGB",
+        "Pump": "High Performance",
+        "RGB": "ARGB",
+        "Compatibility": "AM4/AM5 / LGA115X-1700"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/3RLqJnG",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "thermalright-aqua-elite-240-v3",
+      "nombre": "Thermalright Aqua Elite 240 V3 AIO 240mm ARGB",
+      "descripcion": "240mm AIO with 2 S-FDB ARGB PWM fans, an efficient PWM pump and a compact radiator, compatible with AMD AM4/AM5 and Intel up to LGA1851",
+      "especificaciones": {
+        "Radiator": "240mm",
+        "Fans": "2x120mm PWM ARGB",
+        "Pump": "PWM S-FDB",
+        "RGB": "ARGB",
+        "Compatibility": "AM4/AM5 / LGA1150-1851"
+      },
+      "precio": 44.9,
+      "enlaceAmazon": "https://amzn.to/4dMyORy",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522__transparent.png"
+    }
+  ],
+  "refrigeracion-normal": [
+    {
+      "id": 1,
+      "slug": "thermalright-peerless-assassin-120-vision-max-white",
+      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB White",
+      "descripcion": "White dual-tower air cooler with a 5\" IPS display and 2 ARGB fans at 2,150 RPM, supporting AM4/AM5 and Intel LGA1851/1700 with high performance",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x120mm ARGB 2150 RPM",
+        "Extra": "5\" IPS Display",
+        "Compatibility": "AM4/AM5 / LGA1851/1700"
+      },
+      "precio": 57.69,
+      "enlaceAmazon": "https://amzn.to/4dQ6rSz",
+      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "thermalright-assassin-spirit-120-evo",
+      "nombre": "Thermalright Assassin Spirit 120 EVO CPU Cooler",
+      "descripcion": "Compact air cooler with 4 6mm heatpipes, a quiet TL-S12-S PWM fan, 156mm height and AM4/AM5 and Intel LGA1700 compatibility",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Single",
+        "Fans": "1x120mm PWM",
+        "Extra": "4 Heatpipes 6mm / 156mm",
+        "Compatibility": "AM4/AM5 / LGA1700"
+      },
+      "precio": 22.9,
+      "enlaceAmazon": "https://amzn.to/4o6hIl2",
+      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "vetroo-v5-cpu-air-cooler-white-argb",
+      "nombre": "Vetroo V5 CPU Air Cooler 5 Heatpipes ARGB White",
+      "descripcion": "White air cooler with 5 heatpipes, a 120mm FDB PWM ARGB fan and syncable RGB, compatible with AM5/AM4 and Intel up to LGA1851",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Single",
+        "Fans": "1x120mm FDB PWM ARGB",
+        "Extra": "5 Heatpipes",
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
+      },
+      "precio": 25.99,
+      "enlaceAmazon": "https://amzn.to/4dQQ203",
+      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "noctua-nh-d15-g2-hbc",
+      "nombre": "Noctua NH-D15 G2 HBC Dual Tower Premium",
+      "descripcion": "Premium Noctua dual-tower cooler in the HBC (High Base Convexity) version optimized for Intel LGA1700 — the benchmark in performance and absolute silence",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x140mm NF-A15",
+        "Extra": "High Convexity LGA1700",
+        "Compatibility": "Intel LGA1700"
+      },
+      "precio": 164.95,
+      "enlaceAmazon": "https://amzn.to/49KpDia",
+      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "thermalright-peerless-assassin-120-se",
+      "nombre": "Thermalright Peerless Assassin 120 SE CPU Cooler",
+      "descripcion": "Dual-tower cooler with 6 AGHP heatpipes, 2 PWM fans at 1,550 RPM and AM4/AM5 and Intel support up to LGA1851 — an exceptional performance-to-price ratio",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x120mm PWM 1550 RPM",
+        "Extra": "6 Heatpipes AGHP",
+        "Compatibility": "AM4/AM5 / LGA1700/1851"
+      },
+      "precio": 34.9,
+      "enlaceAmazon": "https://amzn.to/4g1ZQFS",
+      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "kf620-dgt-dual-argb-display",
+      "nombre": "KF620-DGT CPU Cooler Dual ARGB con Display Digital",
+      "descripcion": "Black dual-tower cooler with a digital display on the shroud, 6 heatpipes and 2 ARGB PWM fans, compatible with AM4/AM5 and Intel up to LGA1851",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x120mm ARGB PWM",
+        "Extra": "Digital Display",
+        "Compatibility": "AM4/AM5 / LGA1700/1851"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4of8GCy",
+      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "ix20-argb-dual-tower-white-265w",
+      "nombre": "IX20 ARGB Dual Tower CPU Cooler White 265W TDP",
+      "descripcion": "White dual-tower cooler with 6 copper heatpipes, 2 120mm ARGB fans, 157mm height and 265W max TDP, compatible with AM4/AM5 and Intel up to LGA1851",
+      "especificaciones": {
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x120mm ARGB",
+        "Extra": "265W TDP / 157mm height",
+        "Compatibility": "AM4/AM5 / LGA115X-1851"
+      },
+      "precio": 33.9,
+      "enlaceAmazon": "https://amzn.to/4fxCUOR",
+      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png"
+    }
+  ],
+  "gabinetes-gamer": [
+    {
+      "id": 1,
+      "slug": "foifkin-f600-atx-7fans-argb-black",
+      "nombre": "FOIFKIN F600 ATX Mid-Tower 7 Fans ARGB Black",
+      "descripcion": "Black ATX mid-tower case with 270-degree panoramic glass, 7 pre-installed ARGB PWM fans and a front Type-C port",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "270° Tempered Glass",
+        "Fans": "7x PWM ARGB",
+        "Front Ports": "USB 3.0 + Type-C",
+        "Color": "Black"
+      },
+      "precio": 69.99,
+      "enlaceAmazon": "https://amzn.to/49CU6Pc",
+      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "ruix-ov303-atx-4fans-argb-black",
+      "nombre": "RUIX OV303 ATX Mid-Tower 4 Fans Prism ARGB Black",
+      "descripcion": "Black ATX mid-tower case with 4 pre-installed 120mm Prism ARGB PWM fans, USB 3.0 and Type-C ports, and high airflow",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered Glass",
+        "Fans": "4x120mm ARGB PWM",
+        "Front Ports": "USB 3.0 + Type-C",
+        "Color": "Black"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amzn.to/3RPC4TJ",
+      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "gamdias-atx-3fans-argb-white",
+      "nombre": "GAMDIAS ATX Mid-Tower 3 Fans ARGB White con App",
+      "descripcion": "White ATX case with tempered glass, 3 120mm ARGB PWM fans, support for 410mm GPUs and 360mm AIOs, plus a display and control app",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered Glass",
+        "Fans": "3x120mm ARGB PWM",
+        "Front Ports": "USB 3.0",
+        "Color": "White"
+      },
+      "precio": 86.99,
+      "enlaceAmazon": "https://amzn.to/4vpHfIo",
+      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "jonsbo-tk2-atx-hyperboloid-aluminum-black",
+      "nombre": "JONSBO TK-2 ATX Mid-Tower Hyperboloid Glass Aluminio",
+      "descripcion": "Premium ATX case with hyperboloid glass, a split structure, aluminum-alloy shell, BTF and ATX PSU support — high-end minimalist design",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Hyperboloid Glass",
+        "Fans": "Not included",
+        "Front Ports": "USB 3.0",
+        "Color": "Black"
+      },
+      "precio": 169,
+      "enlaceAmazon": "https://amzn.to/4ea3cUX",
+      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "corsair-4000d-rs-argb-modular-black",
+      "nombre": "CORSAIR 4000D RS ARGB Modular ATX Mid-Tower Black",
+      "descripcion": "CORSAIR 4000D RS case with 3 RS ARGB fans, the modular InfiniRail system and support for ASUS BTF, MSI Zero and Gigabyte Stealth hidden cabling",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered Glass",
+        "Fans": "3x RS ARGB",
+        "Front Ports": "USB 3.0",
+        "Color": "Black"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4dVdQ1u",
+      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/frame-4000d/Content/FRAME-4000D-RS-ARGB/Gallery/CC-9011296-WW_01.webp"
+    },
+    {
+      "id": 6,
+      "slug": "gaming-case-h4-7fans-argb-black",
+      "nombre": "Gaming PC Case H4 7 Fans ARGB Dual Vidrio Templado Black",
+      "descripcion": "Black ATX case with full-view dual tempered glass, 7 pre-installed ARGB PWM fans and front Type-C for gaming builds with maximum visibility",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Dual Tempered Glass",
+        "Fans": "7x PWM ARGB",
+        "Front Ports": "USB 3.0 + Type-C",
+        "Color": "Black"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/4o8APLt",
+      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "gaming-case-7fans-argb-white",
+      "nombre": "White PC Case ATX 7 Fans ARGB Dual Vidrio Templado",
+      "descripcion": "White ATX gaming case with full-view dual tempered glass, 7 pre-installed ARGB PWM fans and front Type-C — a clean, bright design",
+      "especificaciones": {
+        "Format": "ATX Mid-Tower",
+        "Panel": "Dual Tempered Glass",
+        "Fans": "7x PWM ARGB",
+        "Front Ports": "USB 3.0 + Type-C",
+        "Color": "White"
+      },
+      "precio": 79.99,
+      "enlaceAmazon": "https://amzn.to/49JizlT",
+      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.png"
+    }
+  ],
+  "teclados": [
+    {
+      "id": 1,
+      "slug": "redthunder-k10-combo-rgb-wired",
+      "nombre": "RedThunder K10 Combo Teclado + Mouse + Reposamuñecas RGB",
+      "descripcion": "3-in-1 gaming combo with an anti-ghosting RGB keyboard with a mechanical feel, a 7,200 DPI mouse and a soft leather wrist rest, all over USB for gaming PCs",
+      "especificaciones": {
+        "Type": "Membrane / Mechanical Feel",
+        "Connection": "USB Wired",
+        "Switches": "Tactile Anti-ghosting",
+        "Layout": "Full-Size",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 39.99,
+      "enlaceAmazon": "https://amzn.to/4uf6cVO",
+      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "redthunder-k75-wireless-75pct-hotswap",
+      "nombre": "RedThunder K75 Mecánico Inalámbrico 75% Hot-Swap RGB",
+      "descripcion": "75% wireless mechanical keyboard with hot-swap, pre-lubed linear switches, side-printed PBT keycaps, RGB and triple Wireless/USB/BT5.0 modes",
+      "especificaciones": {
+        "Type": "Mechanical",
+        "Connection": "2.4GHz / USB / BT5.0",
+        "Switches": "Linear Pre-lubed",
+        "Layout": "75%",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 68.99,
+      "enlaceAmazon": "https://amzn.to/43TJ4kY",
+      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 3,
+      "slug": "aula-f75-pro-wireless-75pct-reaper",
+      "nombre": "AULA F75 Pro Mecánico Inalámbrico 75% Reaper Switches",
+      "descripcion": "75% mechanical keyboard with hot-swap, pre-lubed Reaper switches, a volume knob, PBT keycaps and triple 2.4GHz/USB-C/BT5.0 connectivity",
+      "especificaciones": {
+        "Type": "Mechanical",
+        "Connection": "2.4GHz / USB-C / BT5.0",
+        "Switches": "Reaper Pre-lubed",
+        "Layout": "75%",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 65.54,
+      "enlaceAmazon": "https://amzn.to/4enLhv3",
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
+    },
+    {
+      "id": 4,
+      "slug": "redragon-mechanical-wired-hotswap-red",
+      "nombre": "Redragon Mecánico Cableado Hot-Swap Red Switch RGB",
+      "descripcion": "Wired mechanical keyboard with hot-swappable Red switches, 11 backlight modes, anti-ghosting and double-shot PBT keycaps, for PC and Mac",
+      "especificaciones": {
+        "Type": "Mechanical",
+        "Connection": "USB Wired",
+        "Switches": "Red Hot-Swap",
+        "Layout": "Full-Size",
+        "RGB": "11 RGB Modes"
+      },
+      "precio": 29.99,
+      "enlaceAmazon": "https://amzn.to/43hRWAL",
+      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "aula-f75-pro-white-wireless-knob",
+      "nombre": "AULA F75 Pro White Mecánico Inalámbrico 75% con Knob",
+      "descripcion": "White 75% mechanical keyboard with hot-swap, pre-lubed switches, a volume knob, PBT keycaps and triple connectivity — creamy sound and minimalist design",
+      "especificaciones": {
+        "Type": "Mechanical",
+        "Connection": "2.4GHz / USB / BT5.0",
+        "Switches": "Pre-lubed",
+        "Layout": "75%",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 69.99,
+      "enlaceAmazon": "https://amzn.to/4dSfYZe",
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
+    },
+    {
+      "id": 6,
+      "slug": "m75-mechanical-gasket-75pct-black-pink",
+      "nombre": "M75 Mecánico Gasket 75% Black & Pink Hot-Swap RGB",
+      "descripcion": "75% mechanical keyboard with a gasket-mount structure, hot-swap, side-printed PBT keycaps, RGB and triple 2.4GHz/Bluetooth/USB-C connectivity in black and pink",
+      "especificaciones": {
+        "Type": "Mechanical Gasket",
+        "Connection": "2.4GHz / BT / USB-C",
+        "Switches": "Hot-Swap",
+        "Layout": "75%",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 53.99,
+      "enlaceAmazon": "https://amzn.to/4e6FNUc",
+      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "aula-s75-pro-screen-knob-trimode",
+      "nombre": "AULA S75 PRO Mecánico 75% Tri-Mode con Pantalla y Knob",
+      "descripcion": "75% tri-mode mechanical keyboard with a built-in display, knob, pre-lubed hot-swap switches and PBT keycaps — the most complete option for gaming and creativity",
+      "especificaciones": {
+        "Type": "Mechanical",
+        "Connection": "2.4GHz / BT / USB-C (Tri-Mode)",
+        "Switches": "Hot-Swap Pre-lubed",
+        "Layout": "75% with Display",
+        "RGB": "RGB Backlit"
+      },
+      "precio": 71.99,
+      "enlaceAmazon": "https://amzn.to/4vv1rJ4",
+      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466__transparent.png"
+    }
+  ],
+  "mouse": [
+    {
+      "id": 1,
+      "slug": "attack-shark-x3-wireless-paw3395-49g",
+      "nombre": "Attack Shark X3 Wireless 49g PAW3395 26000 DPI",
+      "descripcion": "Ultralight 49g gaming mouse with a 26,000 DPI PAW3395 sensor, triple Bluetooth/2.4GHz/Wired modes, Kailh GM8.0 switches and 200 hours of rechargeable battery",
+      "especificaciones": {
+        "Sensor": "PAW3395",
+        "DPI": "26000 DPI",
+        "Weight": "49g",
+        "Connection": "BT / 2.4GHz / USB",
+        "Switches": "Kailh GM8.0"
+      },
+      "precio": 37.71,
+      "enlaceAmazon": "https://amzn.to/4o6ukIR",
+      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 2,
+      "slug": "pulsar-x3-crazylight-wireless-43g-white",
+      "nombre": "Pulsar X3 Crazylight Wireless 43g XS-1 32000 DPI White",
+      "descripcion": "Ultralight 43g wireless gaming mouse with a 32,000 DPI XS-1 sensor, optical switches, a hybrid ergonomic design, 750 IPS and 8K Hz support",
+      "especificaciones": {
+        "Sensor": "XS-1",
+        "DPI": "32000 DPI",
+        "Weight": "43g",
+        "Connection": "Wireless",
+        "Switches": "Optical"
+      },
+      "precio": 129.95,
+      "enlaceAmazon": "https://amzn.to/3RLr9KM",
+      "imagenUrl": "https://www.pulsar.gg/cdn/shop/files/Pulsar-X3_rhd-Top-mini_large.png?v=1755750472"
+    },
+    {
+      "id": 3,
+      "slug": "razer-basilisk-v3-wired-26k-11buttons",
+      "nombre": "Razer Basilisk V3 Cableado 26K DPI 11 Botones Ergonómico",
+      "descripcion": "Ergonomic gaming mouse with a 26,000 DPI optical sensor, 11 programmable buttons, tiltable HyperScroll wheel, Chroma RGB and Razer's fastest switch",
+      "especificaciones": {
+        "Sensor": "Focus Pro 26K",
+        "DPI": "26000 DPI",
+        "Weight": "101g",
+        "Connection": "USB Wired",
+        "Switches": "Razer Optical Gen-2"
+      },
+      "precio": 37.99,
+      "enlaceAmazon": "https://amzn.to/4ulGsaC",
+      "imagenUrl": "https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/basilisk.png"
+    },
+    {
+      "id": 4,
+      "slug": "razer-viper-v4-pro-wireless-50k-49g",
+      "nombre": "Razer Viper V4 Pro Wireless 49g 50000 DPI 8K Hz",
+      "descripcion": "Ultralight 49g wireless gaming mouse with a 50,000 DPI sensor, 8K Hz polling, Gen-4 optical switches and USB-C charging for top-level competitive esports",
+      "especificaciones": {
+        "Sensor": "Focus Pro 50K",
+        "DPI": "50000 DPI",
+        "Weight": "49g",
+        "Connection": "HyperSpeed Wireless + USB-C",
+        "Switches": "Optical Gen-4"
+      },
+      "precio": 159.99,
+      "enlaceAmazon": "https://amzn.to/3QqHeFf",
+      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "gravastar-mercury-m2-wireless-26k-rgb",
+      "nombre": "GravaStar Mercury M2 Wireless 26000 DPI PAW3395 RGB",
+      "descripcion": "79g wireless gaming mouse with a 26,000 DPI PAW3395DM sensor, a shell design with dynamic Lightsync RGB and 5 programmable buttons",
+      "especificaciones": {
+        "Sensor": "PAW3395DM",
+        "DPI": "26000 DPI",
+        "Weight": "79g",
+        "Connection": "Wireless",
+        "Switches": "5 Programmable"
+      },
+      "precio": 79.95,
+      "enlaceAmazon": "https://amzn.to/4ujsZjx",
+      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466__transparent.png"
+    },
+    {
+      "id": 6,
+      "slug": "ajazz-aj159p-wireless-paw3395-dock-rgb",
+      "nombre": "AJAZZ AJ159P Wireless PAW3395 26K DPI Base RGB Carga",
+      "descripcion": "56g wireless gaming mouse with a 26,000 DPI PAW3395 sensor, included RGB charging dock, a light ergonomic design and 80 million clicks",
+      "especificaciones": {
+        "Sensor": "PAW3395",
+        "DPI": "26000 DPI",
+        "Weight": "56g",
+        "Connection": "Wireless + RGB Base",
+        "Switches": "ASIN 80M clicks"
+      },
+      "precio": 42.99,
+      "enlaceAmazon": "https://amzn.to/4aeSsTX",
+      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "razer-basilisk-v3-x-hyperspeed-18k-285h",
+      "nombre": "Razer Basilisk V3 X HyperSpeed Wireless 18K DPI 285h",
+      "descripcion": "Wireless gaming mouse with an 18,000 DPI 5G Advanced sensor, Gen-2 mechanical switches, 9 programmable controls, Chroma RGB and 285 hours of battery",
+      "especificaciones": {
+        "Sensor": "5G Advanced 18K",
+        "DPI": "18000 DPI",
+        "Weight": "110g",
+        "Connection": "HyperSpeed Wireless",
+        "Switches": "Mechanical Gen-2"
+      },
+      "precio": 48.99,
+      "enlaceAmazon": "https://amzn.to/4vvwp3G",
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/433606e87c3512c0cd3b44faf9d114b2/razer-basilisk-v3-x-hyperspeed-hero-desktop.webp"
+    }
+  ],
+  "audifonos": [
+    {
+      "id": 1,
+      "slug": "eksa-e900-pro-usb-50mm-71-surround",
+      "nombre": "EKSA E900 Pro USB Gaming Headset 7.1 Surround 50mm",
+      "descripcion": "USB gaming headset with 50mm drivers, a detachable noise-cancelling microphone, 7.1 surround sound and PS4/PS5, Xbox, laptop and PC compatibility",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "USB",
+        "Drivers": "50mm",
+        "Microphone": "Detachable Noise Cancel",
+        "Sound": "7.1 Surround"
+      },
+      "precio": 49.99,
+      "enlaceAmazon": "https://amzn.to/4ufS1zS",
+      "imagenUrl": "https://cdn.shopify.com/s/files/1/0287/1138/7195/files/1_301b770a-d020-4a40-ba31-f5b39fd101cc.jpg?v=1695712531"
+    },
+    {
+      "id": 2,
+      "slug": "hyperx-cloud-iii-wired-53mm-dts",
+      "nombre": "HyperX Cloud III Wired 53mm DTS Spatial Audio",
+      "descripcion": "HyperX headset with 53mm drivers, DTS spatial audio, a detachable microphone, HyperX Comfort signature and broad PC and console compatibility",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "USB / 3.5mm Wired",
+        "Drivers": "53mm",
+        "Microphone": "Detachable",
+        "Sound": "DTS Spatial Audio"
+      },
+      "precio": 57.99,
+      "enlaceAmazon": "https://amzn.to/4ok0cdd",
+      "imagenUrl": "https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_black_66x0048_main_1_e4cf7af3-d79e-4443-adc2-61f74184697e.jpg?v=1771520345"
+    },
+    {
+      "id": 3,
+      "slug": "logitech-g733-lightspeed-wireless-rgb",
+      "nombre": "Logitech G733 LIGHTSPEED Wireless Gaming Headset RGB",
+      "descripcion": "Wireless headset with LIGHTSPEED, a Blue VO!CE microphone, Lightsync RGB, a suspension headband and PC, PS5/PS4 and Nintendo Switch compatibility",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "LIGHTSPEED Wireless",
+        "Drivers": "Pro-G Audio",
+        "Microphone": "Blue VO!CE",
+        "Sound": "Stereo + RGB"
+      },
+      "precio": 128.99,
+      "enlaceAmazon": "https://amzn.to/3S7ybcN",
+      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679__transparent.png"
+    },
+    {
+      "id": 4,
+      "slug": "wireless-gaming-headset-71-50mm-rgb-aluminum",
+      "nombre": "Wireless Gaming Headset 7.1 Surround 50mm RGB Aluminio",
+      "descripcion": "Wireless headset with 50mm drivers, 7.1 surround sound, a noise-cancelling microphone, memory-foam ear pads and a tough aluminum frame",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "Wireless",
+        "Drivers": "50mm",
+        "Microphone": "Noise Cancelling",
+        "Sound": "7.1 Surround"
+      },
+      "precio": 89.99,
+      "enlaceAmazon": "https://amzn.to/3S5Fce5",
+      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 5,
+      "slug": "razer-kraken-v3-x-usb-triforce-40mm-71",
+      "nombre": "Razer Kraken V3 X USB Triforce 40mm 7.1 Surround",
+      "descripcion": "Lightweight USB gaming headset with 40mm Triforce drivers, a HyperClear cardioid microphone, 7.1 surround sound and Chroma RGB for long gaming sessions",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "USB Wired",
+        "Drivers": "40mm Triforce",
+        "Microphone": "HyperClear Cardioid",
+        "Sound": "7.1 Surround + Chroma RGB"
+      },
+      "precio": 39.98,
+      "enlaceAmazon": "https://amzn.to/4dRMeMd",
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/711f9a9937345927cb4ed5fecce8a44f/razer-kraken-v3-x_hero-mobile-768x460.jpg"
+    },
+    {
+      "id": 6,
+      "slug": "kz-zar-7ba-1dd-iem-hifi-bass",
+      "nombre": "KZ ZAR In-Ear Monitor 7BA+1DD HiFi Bass Gaming IEM",
+      "descripcion": "High-fidelity gaming IEM with 7 BA drivers and 1 dynamic driver, passive noise isolation, powerful bass and clarity across the spectrum for audiophiles and gamers",
+      "especificaciones": {
+        "Type": "In-Ear (IEM)",
+        "Connection": "3.5mm Wired",
+        "Drivers": "7BA + 1DD Hybrid",
+        "Microphone": "No Microphone",
+        "Sound": "HiFi Bass / Stereo"
+      },
+      "precio": 99.99,
+      "enlaceAmazon": "https://amzn.to/3RGyyLp",
+      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679__transparent.png"
+    },
+    {
+      "id": 7,
+      "slug": "nubwo-hg03-usb-a-50mm-71-white",
+      "nombre": "NUBWO HG03 Wired USB-A 7.1 Surround 50mm White",
+      "descripcion": "White USB-A gaming headset with 50mm drivers, a noise-cancelling microphone and 7.1 sound for PC and laptops at a very accessible price",
+      "especificaciones": {
+        "Type": "Over-Ear",
+        "Connection": "USB-A Wired",
+        "Drivers": "50mm",
+        "Microphone": "Noise Cancelling",
+        "Sound": "7.1 Surround"
+      },
+      "precio": 35.99,
+      "enlaceAmazon": "https://amzn.to/4e5RN8q",
+      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679__transparent.png"
+    }
+  ]
+}

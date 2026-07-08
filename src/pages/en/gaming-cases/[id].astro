@@ -1,0 +1,63 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+import ProductoDetalle from '../../../components/ProductoDetalle.astro';
+import productos from '../../../data/productos-en.json';
+import { CATS_EN } from '../../../i18n/en';
+
+export function getStaticPaths() {
+  const productosCategoria = productos['gabinetes-gamer'] as any[];
+  return productosCategoria.map((p) => ({
+    params: { id: `${p.slug}-${p.id}` }
+  }));
+}
+
+const { id } = Astro.params;
+const catKey = 'gabinetes-gamer';
+const categoria = 'gaming-cases';
+const cat = CATS_EN[catKey];
+const productosCategoria = productos[catKey] as any[];
+// Extraer el ID numérico del final del parámetro (slug-id)
+const numeroId = parseInt(id!.split('-').pop()!);
+const producto = productosCategoria.find((p) => p.id === numeroId);
+
+if (!producto) {
+  return Astro.redirect(`/en/${categoria}/`);
+}
+
+const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0, 58).replace(/\s+\S*$/, '') + '…' : producto.nombre} at the best price at Monckey Gamer. Specs, reviews and Amazon shipping.`;
+---
+
+<SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">
+  <div class="producto-header">
+    <a class="back-link" href={`/en/${categoria}/`}>← {cat.backLabel}</a>
+  </div>
+
+  <ProductoDetalle
+    lang="en"
+    nombre={producto.nombre}
+    descripcion={producto.descripcion}
+    especificaciones={producto.especificaciones}
+    precio={producto.precio}
+    enlaceAmazon={producto.enlaceAmazon}
+    imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
+  />
+</SiteLayout>
+
+<style>
+  .producto-header {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1d4ed8;
+  }
+</style>

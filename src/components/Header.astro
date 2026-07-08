@@ -1,23 +1,46 @@
 ---
 import CategoryIcon from './CategoryIcon.astro';
+import { CATS_EN, UI_EN, SLUG_EN, toEnPath, toEsPath } from '../i18n/en';
 
-const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas/', icon: 'gpu' },
-  { label: 'Procesadores', slug: '/procesadores/', icon: 'cpu' },
-  { label: 'Memoria RAM', slug: '/memoria-ram/', icon: 'ram' },
-  { label: 'SSD', slug: '/ssd/', icon: 'ssd' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder/', icon: 'psu' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida/', icon: 'aio' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal/', icon: 'fan' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer/', icon: 'box' },
-  { label: 'Teclados', slug: '/teclados/', icon: 'keyboard' },
-  { label: 'Mouse', slug: '/mouse/', icon: 'mouse' },
-  { label: 'Audífonos', slug: '/audifonos/', icon: 'audio' },
+// Idioma derivado de la URL: /en/... es inglés
+const pathname = Astro.url.pathname;
+const isEn = pathname === '/en' || pathname.startsWith('/en/');
+const prefix = isEn ? '/en' : '';
+
+// Rutas equivalentes para el selector de idioma (slugs de categoría traducidos)
+const esPath = toEsPath(pathname);
+const enPath = toEnPath(esPath);
+
+const categoriesEs = [
+  { label: 'Tarjetas gráficas', key: 'tarjetas-graficas', icon: 'gpu' },
+  { label: 'Procesadores', key: 'procesadores', icon: 'cpu' },
+  { label: 'Memoria RAM', key: 'memoria-ram', icon: 'ram' },
+  { label: 'SSD', key: 'ssd', icon: 'ssd' },
+  { label: 'Fuentes de poder', key: 'fuentes-de-poder', icon: 'psu' },
+  { label: 'Refrigeración líquida', key: 'refrigeracion-liquida', icon: 'aio' },
+  { label: 'Refrigeración normal', key: 'refrigeracion-normal', icon: 'fan' },
+  { label: 'Gabinetes gamer', key: 'gabinetes-gamer', icon: 'box' },
+  { label: 'Teclados', key: 'teclados', icon: 'keyboard' },
+  { label: 'Mouse', key: 'mouse', icon: 'mouse' },
+  { label: 'Audífonos', key: 'audifonos', icon: 'audio' },
 ];
+
+const categories = categoriesEs.map((c) => ({
+  label: isEn ? CATS_EN[c.key].label : c.label,
+  slug: isEn ? `/en/${SLUG_EN[c.key]}/` : `/${c.key}/`,
+  icon: c.icon,
+}));
+
+const t = {
+  home: isEn ? UI_EN.nav.home : 'Inicio',
+  components: isEn ? UI_EN.nav.components : 'Componentes',
+  blog: isEn ? UI_EN.nav.blog : 'Blog',
+  contact: isEn ? UI_EN.nav.contact : 'Contacto',
+};
 ---
 
 <header>
-  <a href="/" class="brand">
+  <a href={isEn ? '/en/' : '/'} class="brand">
     <img src="/logo.png" alt="Monckey Gamer" class="brand-logo" />
     Monckey Gamer
   </a>
@@ -35,12 +58,12 @@ const categories = [
   </button>
 
   <nav class="main-nav" id="primary-nav">
-    <a href="/">Inicio</a>
-    
+    <a href={isEn ? '/en/' : '/'}>{t.home}</a>
+
     <!-- Dropdown de Componentes -->
     <div class="dropdown-container">
       <button class="dropdown-toggle" id="componentes-btn">
-        Componentes
+        {t.components}
         <svg class="dropdown-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -57,8 +80,47 @@ const categories = [
       </div>
     </div>
 
-    <a href="/blog/">Blog</a>
-    <a href="/contacto/">Contacto</a>
+    <a href={`${prefix}/blog/`}>{t.blog}</a>
+    <a href={`${prefix}/contacto/`}>{t.contact}</a>
+
+    <!-- Selector de idioma -->
+    <div class="lang-switch" aria-label="Idioma / Language">
+      <a href={esPath} class={`lang-btn${!isEn ? ' lang-active' : ''}`} title="Español" aria-label="Versión en español">
+        <svg class="lang-flag" viewBox="0 0 20 14" width="20" height="14" aria-hidden="true">
+          <rect width="20" height="7" fill="#FCD116"/>
+          <rect y="7" width="20" height="3.5" fill="#003893"/>
+          <rect y="10.5" width="20" height="3.5" fill="#CE1126"/>
+        </svg>
+        <span>ES</span>
+      </a>
+      <a href={enPath} class={`lang-btn${isEn ? ' lang-active' : ''}`} title="English" aria-label="English version">
+        <svg class="lang-flag" viewBox="0 0 20 14" width="20" height="14" aria-hidden="true">
+          <rect width="20" height="14" fill="#b22234"/>
+          <g fill="#fff">
+            <rect y="1.6" width="20" height="1.1"/>
+            <rect y="3.8" width="20" height="1.1"/>
+            <rect y="6" width="20" height="1.1"/>
+            <rect y="8.2" width="20" height="1.1"/>
+            <rect y="10.4" width="20" height="1.1"/>
+            <rect y="12.6" width="20" height="1.1"/>
+          </g>
+          <rect width="9" height="7" fill="#3c3b6e"/>
+          <g fill="#fff">
+            <circle cx="1.6" cy="1.4" r="0.5"/>
+            <circle cx="4.5" cy="1.4" r="0.5"/>
+            <circle cx="7.4" cy="1.4" r="0.5"/>
+            <circle cx="3" cy="2.9" r="0.5"/>
+            <circle cx="6" cy="2.9" r="0.5"/>
+            <circle cx="1.6" cy="4.4" r="0.5"/>
+            <circle cx="4.5" cy="4.4" r="0.5"/>
+            <circle cx="7.4" cy="4.4" r="0.5"/>
+            <circle cx="3" cy="5.9" r="0.5"/>
+            <circle cx="6" cy="5.9" r="0.5"/>
+          </g>
+        </svg>
+        <span>EN</span>
+      </a>
+    </div>
   </nav>
 </header>
 
@@ -269,6 +331,49 @@ const categories = [
     color: inherit;
   }
 
+  /* Selector de idioma con banderas */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #8aa0b8;
+    text-decoration: none;
+    opacity: 0.55;
+    transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .lang-btn:hover {
+    opacity: 1;
+    color: #e6f7ff;
+  }
+
+  .lang-btn.lang-active {
+    opacity: 1;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.08);
+  }
+
+  .lang-flag {
+    border-radius: 2px;
+    display: block;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15);
+  }
+
   .brand-logo {
     width: 48px;
     height: 48px;
@@ -347,6 +452,11 @@ const categories = [
 
     .dropdown-item:hover {
       padding-left: 16px;
+    }
+
+    .lang-switch {
+      justify-self: start;
+      margin-top: 6px;
     }
   }
 </style>

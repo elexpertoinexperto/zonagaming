@@ -1,3 +1,66 @@
+---
+import { CATS_EN, UI_EN, SLUG_EN, toEnPath, toEsPath } from '../i18n/en';
+
+// Idioma derivado de la URL: /en/... es inglés
+const pathname = Astro.url.pathname;
+const isEn = pathname === '/en' || pathname.startsWith('/en/');
+const prefix = isEn ? '/en' : '';
+
+// Rutas equivalentes para el selector de idioma (slugs de categoría traducidos)
+const esPath = toEsPath(pathname);
+const enPath = toEnPath(esPath);
+
+const catKeys = [
+  'tarjetas-graficas', 'procesadores', 'memoria-ram', 'ssd', 'fuentes-de-poder',
+  'refrigeracion-liquida', 'refrigeracion-normal', 'gabinetes-gamer', 'teclados', 'mouse', 'audifonos',
+];
+
+const labelsEs: Record<string, string> = {
+  'tarjetas-graficas': 'Tarjetas gráficas',
+  'procesadores': 'Procesadores',
+  'memoria-ram': 'Memoria RAM',
+  'ssd': 'SSD',
+  'fuentes-de-poder': 'Fuentes de poder',
+  'refrigeracion-liquida': 'Refrigeración líquida',
+  'refrigeracion-normal': 'Refrigeración normal',
+  'gabinetes-gamer': 'Gabinetes gamer',
+  'teclados': 'Teclados',
+  'mouse': 'Mouse',
+  'audifonos': 'Audífonos',
+};
+
+const cats = catKeys.map((key) => ({
+  href: isEn ? `/en/${SLUG_EN[key]}/` : `/${key}/`,
+  label: isEn ? CATS_EN[key].label : labelsEs[key],
+}));
+
+const t = isEn
+  ? {
+      tagline1: UI_EN.footer.tagline1,
+      tagline2: UI_EN.footer.tagline2,
+      desc: UI_EN.footer.desc,
+      badge: UI_EN.footer.badge,
+      catalogs: UI_EN.footer.catalogs,
+      info: UI_EN.footer.info,
+      blog: 'Blog',
+      contact: UI_EN.footer.contact,
+      sitemap: UI_EN.footer.sitemap,
+      made: UI_EN.footer.made,
+    }
+  : {
+      tagline1: 'El setup perfecto',
+      tagline2: 'empieza aquí.',
+      desc: 'Componentes PC para gaming seleccionados al detalle. Envío rápido vía Amazon.',
+      badge: 'Tienda activa · 24/7',
+      catalogs: 'Catálogos',
+      info: 'Información',
+      blog: 'Blog',
+      contact: 'Contacto',
+      sitemap: 'Mapa del sitio',
+      made: 'Hecho para gamers, por gamers',
+    };
+---
+
 <footer>
   <div class="footer-glow"></div>
 
@@ -7,46 +70,76 @@
         <img src="/logo-fondoblanco.png" alt="Monckey Gamer" width="40" height="40" />
         <span>Monckey Gamer</span>
       </div>
-      <p class="footer-brand-tagline">El setup perfecto<br /><em>empieza aquí.</em></p>
-      <p class="footer-brand-desc">Componentes PC para gaming seleccionados al detalle. Envío rápido vía Amazon.</p>
+      <p class="footer-brand-tagline">{t.tagline1}<br /><em>{t.tagline2}</em></p>
+      <p class="footer-brand-desc">{t.desc}</p>
       <div class="footer-brand-badge">
         <span class="badge-dot"></span>
-        Tienda activa · 24/7
+        {t.badge}
       </div>
     </div>
 
     <div class="footer-divider"></div>
 
-    <nav class="footer-nav" aria-label="Catálogos">
-      <span class="footer-nav-title">Catálogos</span>
+    <nav class="footer-nav" aria-label={t.catalogs}>
+      <span class="footer-nav-title">{t.catalogs}</span>
       <ul>
-        <li><a href="/tarjetas-graficas/">Tarjetas gráficas</a></li>
-        <li><a href="/procesadores/">Procesadores</a></li>
-        <li><a href="/memoria-ram/">Memoria RAM</a></li>
-        <li><a href="/ssd/">SSD</a></li>
-        <li><a href="/fuentes-de-poder/">Fuentes de poder</a></li>
-        <li><a href="/refrigeracion-liquida/">Refrigeración líquida</a></li>
-        <li><a href="/refrigeracion-normal/">Refrigeración normal</a></li>
-        <li><a href="/gabinetes-gamer/">Gabinetes gamer</a></li>
-        <li><a href="/teclados/">Teclados</a></li>
-        <li><a href="/mouse/">Mouse</a></li>
-        <li><a href="/audifonos/">Audífonos</a></li>
+        {cats.map((c) => (
+          <li><a href={c.href}>{c.label}</a></li>
+        ))}
       </ul>
     </nav>
 
-    <nav class="footer-nav" aria-label="Información">
-      <span class="footer-nav-title">Información</span>
+    <nav class="footer-nav" aria-label={t.info}>
+      <span class="footer-nav-title">{t.info}</span>
       <ul>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/contacto/">Contacto</a></li>
-        <li><a href="/sitemap.xml">Mapa del sitio</a></li>
+        <li><a href={`${prefix}/blog/`}>{t.blog}</a></li>
+        <li><a href={`${prefix}/contacto/`}>{t.contact}</a></li>
+        <li><a href="/sitemap.xml">{t.sitemap}</a></li>
       </ul>
+
+      <div class="footer-lang" aria-label="Idioma / Language">
+        <a href={esPath} class={`footer-lang-btn${!isEn ? ' footer-lang-active' : ''}`} title="Español">
+          <svg viewBox="0 0 20 14" width="18" height="13" aria-hidden="true">
+            <rect width="20" height="7" fill="#FCD116"/>
+            <rect y="7" width="20" height="3.5" fill="#003893"/>
+            <rect y="10.5" width="20" height="3.5" fill="#CE1126"/>
+          </svg>
+          Español
+        </a>
+        <a href={enPath} class={`footer-lang-btn${isEn ? ' footer-lang-active' : ''}`} title="English">
+          <svg viewBox="0 0 20 14" width="18" height="13" aria-hidden="true">
+            <rect width="20" height="14" fill="#b22234"/>
+            <g fill="#fff">
+              <rect y="1.6" width="20" height="1.1"/>
+              <rect y="3.8" width="20" height="1.1"/>
+              <rect y="6" width="20" height="1.1"/>
+              <rect y="8.2" width="20" height="1.1"/>
+              <rect y="10.4" width="20" height="1.1"/>
+              <rect y="12.6" width="20" height="1.1"/>
+            </g>
+            <rect width="9" height="7" fill="#3c3b6e"/>
+            <g fill="#fff">
+              <circle cx="1.6" cy="1.4" r="0.5"/>
+              <circle cx="4.5" cy="1.4" r="0.5"/>
+              <circle cx="7.4" cy="1.4" r="0.5"/>
+              <circle cx="3" cy="2.9" r="0.5"/>
+              <circle cx="6" cy="2.9" r="0.5"/>
+              <circle cx="1.6" cy="4.4" r="0.5"/>
+              <circle cx="4.5" cy="4.4" r="0.5"/>
+              <circle cx="7.4" cy="4.4" r="0.5"/>
+              <circle cx="3" cy="5.9" r="0.5"/>
+              <circle cx="6" cy="5.9" r="0.5"/>
+            </g>
+          </svg>
+          English
+        </a>
+      </div>
     </nav>
   </div>
 
   <div class="footer-bottom">
     <span class="footer-copy">© 2026 Monckey Gamer</span>
-    <span class="footer-made">Hecho para gamers, por gamers <span class="footer-heart">▲</span></span>
+    <span class="footer-made">{t.made} <span class="footer-heart">▲</span></span>
   </div>
 </footer>
 
@@ -236,6 +329,40 @@
 
   .footer-nav a:hover::before {
     width: 100%;
+  }
+
+  /* Selector de idioma */
+  .footer-lang {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .footer-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #8aa0b8;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+
+  .footer-lang-btn svg {
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  .footer-lang-btn:hover {
+    opacity: 1;
+    color: #e6f7ff;
+  }
+
+  .footer-lang-active {
+    opacity: 1;
+    color: #7cffcb;
   }
 
   /* Bottom bar */

@@ -1,0 +1,227 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'What are CPU cores and threads for?';
+const description =
+  'Cores and threads are the key concepts when buying a processor. A quick gamer guide: what they mean, how they affect performance and how many you need.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '5 min read';
+
+const secciones = [
+  { id: 'nucleos', label: 'What are cores?' },
+  { id: 'hilos', label: 'What are threads?' },
+  { id: 'diferencia', label: 'Cores vs threads' },
+  { id: 'gaming', label: 'How many do you need for gaming?' },
+  { id: 'tabla', label: 'CPU comparison' },
+  { id: 'frecuencia', label: 'Cores vs frequency' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>What are CPU cores and threads for?</h1>
+      <p class="post-lead">
+        When you see "6 cores / 12 threads" in a processor's specs and don't know
+        what it means, this article explains it head-on with real gaming examples.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="nucleos">
+        <h2>What are processor cores?</h2>
+        <p>
+          A <strong>core</strong> is an independent processing unit inside the CPU.
+          Each core can execute instructions on its own, as if it were a complete processor.
+        </p>
+        <p>
+          A 6-core processor can do 6 things at the same time. A 12-core processor,
+          12 simultaneous things. In practice, more cores means more multitasking capacity and better
+          performance in parallel workloads.
+        </p>
+      </section>
+
+      <section id="hilos">
+        <h2>What are threads?</h2>
+        <p>
+          A <strong>thread</strong> is a sequence of instructions the operating system can
+          send to a core. Normally each core handles one thread.
+        </p>
+        <p>
+          With technologies like <strong>Hyper-Threading</strong> (Intel) or <strong>SMT</strong> (AMD),
+          each core can handle two simultaneous threads by sharing internal resources.
+          That is why you see configurations like "6 cores / 12 threads" or "8 cores / 16 threads".
+        </p>
+      </section>
+
+      <section id="diferencia">
+        <h2>Cores vs threads: how do they differ?</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Core</th>
+                <th>Thread</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>What it is</td><td>Physical hardware</td><td>Logical work stream</td></tr>
+              <tr><td>Typical count</td><td>4–16 in gaming</td><td>Double the cores with SMT/HT</td></tr>
+              <tr><td>Impact</td><td>Bigger in heavy workloads</td><td>Improves multitasking and optimized apps</td></tr>
+              <tr><td>Upgradeable?</td><td>No</td><td>No (it comes from the CPU)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="gaming">
+        <h2>How many cores do you need for gaming?</h2>
+        <p>
+          Modern games are optimized for 6 to 8 cores. Here is the practical guide:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>4 cores:</strong> increasingly tight. Many recent games push them to the limit
+            and stutters appear. Only recommendable as a temporary solution.
+          </li>
+          <li>
+            <strong>6 cores / 12 threads:</strong> the comfortable minimum for gaming in 2026.
+            A <a href="/en/processors/amd-ryzen-5-5500-3/">Ryzen 5 5500</a> or
+            <a href="/en/processors/amd-ryzen-5-9600x-1/">Ryzen 5 9600X</a> are solid options here.
+          </li>
+          <li>
+            <strong>8 cores / 16 threads:</strong> the sweet spot. Game today and record, stream
+            or edit without sacrificing FPS. The <a href="/en/processors/amd-ryzen-7-7700x-6/">Ryzen 7 7700X</a>
+            is an ideal example.
+          </li>
+          <li>
+            <strong>12+ cores:</strong> content-creator and workstation territory.
+            Gaming barely takes advantage of it yet.
+          </li>
+        </ul>
+        <p class="post-note">
+          Tip: for pure gaming, 6–8 cores with a high turbo frequency beats 12 cores
+          at a low frequency. Games prefer per-core speed over core count.
+        </p>
+      </section>
+
+      <section id="tabla">
+        <h2>Processor comparison by cores</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Processor</th>
+                <th>Cores / Threads</th>
+                <th>Max turbo</th>
+                <th>Profile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Ryzen 5 5500</td><td>6C / 12T</td><td>4.2 GHz</td><td>Budget AM4 gaming</td></tr>
+              <tr><td>i5-12600</td><td>6P+4E / 16T</td><td>4.8 GHz</td><td>Intel gaming + multitasking</td></tr>
+              <tr><td>Ryzen 5 9600X</td><td>6C / 12T</td><td>5.4 GHz</td><td>High-frequency gaming</td></tr>
+              <tr><td>Ryzen 7 7700X</td><td>8C / 16T</td><td>5.4 GHz</td><td>Gaming + streaming</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="frecuencia">
+        <h2>What matters more for gaming: frequency or cores?</h2>
+        <p>
+          For gaming, <strong>per-core frequency</strong> (turbo GHz) usually matters more
+          than core count, because most game engines use 4–6 cores intensively
+          and the rest to a lesser extent.
+        </p>
+        <p>
+          The <a href="/en/processors/amd-ryzen-5-9600x-1/">Ryzen 5 9600X</a> with 6 cores at 5.4 GHz
+          beats 12-core processors with low turbo in gaming. It is the perfect example
+          that frequency + a modern architecture wins in this use case.
+        </p>
+        <p>
+          If you also stream, edit or compile, then the extra cores of a
+          <a href="/en/processors/amd-ryzen-7-7700x-6/">Ryzen 7 7700X</a> make the difference.
+          Explore all our <a href="/en/processors/">processors</a> with full specs.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Looking for the right processor?</h3>
+      <p>Compare cores, frequency and price in our gaming CPU catalog.</p>
+      <a class="btn" href="/en/processors/">View processors</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

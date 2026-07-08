@@ -1,29 +1,23 @@
 ---
-import '../styles.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import CategoryIcon from '../components/CategoryIcon.astro';
-import BestSellers from '../components/BestSellers.astro';
-import Comparador from '../components/Comparador.astro';
-import productos from '../data/productos.json';
+import '../../styles.css';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CategoryIcon from '../../components/CategoryIcon.astro';
+import BestSellers from '../../components/BestSellers.astro';
+import Comparador from '../../components/Comparador.astro';
+import productos from '../../data/productos-en.json';
+import { CATS_EN, SLUG_EN } from '../../i18n/en';
 
 const tg  = (productos['tarjetas-graficas'] as any[]);
 const cpu = (productos['procesadores'] as any[]);
 const ram = (productos['memoria-ram'] as any[]);
 
-const categories = [
-  { label: 'Tarjetas gráficas', slug: '/tarjetas-graficas/', icon: 'gpu', description: 'Potencia visual para gaming y edición.' },
-  { label: 'Procesadores', slug: '/procesadores/', icon: 'cpu', description: 'CPU para multitarea y rendimiento extremo.' },
-  { label: 'Memoria RAM', slug: '/memoria-ram/', icon: 'ram', description: 'Velocidad y capacidad para tus builds.' },
-  { label: 'SSD', slug: '/ssd/', icon: 'ssd', description: 'Almacenamiento rápido para juegos y programas.' },
-  { label: 'Fuentes de poder', slug: '/fuentes-de-poder/', icon: 'psu', description: 'Energía estable y eficiente para tu PC.' },
-  { label: 'Refrigeración líquida', slug: '/refrigeracion-liquida/', icon: 'aio', description: 'Enfriamiento silencioso y de alto rendimiento.' },
-  { label: 'Refrigeración normal', slug: '/refrigeracion-normal/', icon: 'fan', description: 'Ventiladores confiables para tu torre.' },
-  { label: 'Gabinetes gamer', slug: '/gabinetes-gamer/', icon: 'box', description: 'Estética, flujo de aire y espacio para tu setup.' },
-  { label: 'Teclados', slug: '/teclados/', icon: 'keyboard', description: 'Periféricos mecánicos y RGB para cada tipo de jugador.' },
-  { label: 'Mouse', slug: '/mouse/', icon: 'mouse', description: 'Precisión y ergonomía para juegos competitivos.' },
-  { label: 'Audífonos', slug: '/audifonos/', icon: 'audio', description: 'Sonido inmersivo para tus partidas y streaming.' },
-];
+const categories = Object.entries(CATS_EN).map(([key, cat]) => ({
+  label: cat.label,
+  slug: `/en/${SLUG_EN[key]}/`,
+  icon: cat.icon,
+  description: cat.cardDescription,
+}));
 
 const bestSellerProducts = [
   {
@@ -32,7 +26,7 @@ const bestSellerProducts = [
     description: tg.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(tg.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: tg.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/tarjetas-graficas/${tg.find((p: any) => p.id === 1)?.slug}-1/`,
+    detailHref: `/en/graphics-cards/${tg.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: tg.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
   {
@@ -41,7 +35,7 @@ const bestSellerProducts = [
     description: cpu.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(cpu.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: cpu.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/procesadores/${cpu.find((p: any) => p.id === 1)?.slug}-1/`,
+    detailHref: `/en/processors/${cpu.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: cpu.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
   {
@@ -50,13 +44,13 @@ const bestSellerProducts = [
     description: ram.find((p: any) => p.id === 1)?.descripcion || '',
     price: `$${(ram.find((p: any) => p.id === 1)?.precio ?? 0).toFixed(2)} USD`,
     imageUrl: ram.find((p: any) => p.id === 1)?.imagenUrl || '/placeholder-product.svg',
-    detailHref: `/memoria-ram/${ram.find((p: any) => p.id === 1)?.slug}-1/`,
+    detailHref: `/en/ram-memory/${ram.find((p: any) => p.id === 1)?.slug}-1/`,
     amazonHref: ram.find((p: any) => p.id === 1)?.enlaceAmazon || '',
   },
 ];
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/logo-fondoblanco.png" type="image/png" sizes="256x256" />
@@ -68,16 +62,16 @@ const bestSellerProducts = [
     <link rel="alternate" hreflang="es-CO" href="https://monckeygamer.com/" />
     <link rel="alternate" hreflang="en-US" href="https://monckeygamer.com/en/" />
     <link rel="alternate" hreflang="x-default" href="https://monckeygamer.com/" />
-    <meta name="description" content="Componentes PC gamer al mejor precio: tarjetas gráficas, CPU, RAM, SSD y más. Calidad premium y envío Amazon. ¡Arma tu setup!" />
-    <title>Componentes PC Gamer | Monckey Gamer</title>
+    <meta name="description" content="PC gaming components at the best price: graphics cards, CPUs, RAM, SSDs and more. Premium quality with Amazon shipping. Build your setup!" />
+    <title>PC Gaming Components | Monckey Gamer</title>
     <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "OnlineStore",
       "name": "Monckey Gamer",
-      "url": "https://monckeygamer.com/",
-      "description": "Tienda online de componentes PC para gaming: tarjetas gráficas, procesadores, memoria RAM, SSD y periféricos al mejor precio con envío Amazon.",
+      "url": "https://monckeygamer.com/en/",
+      "description": "Online store for PC gaming components: graphics cards, processors, RAM, SSDs and peripherals at the best price with Amazon shipping.",
       "email": "contacto@monckeygamer.com",
-      "inLanguage": "es",
+      "inLanguage": "en",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Amazon",
       "priceRange": "$$",
@@ -105,24 +99,24 @@ const bestSellerProducts = [
         <!-- Contenido con parallax -->
         <div class="hero-copy" id="hero-copy">
           <span class="hv-badge">● ONLINE</span>
-          <h1>Componentes PC<br /><em>Tienda Gamer</em></h1>
-          <p class="hero-copy-description">Equipos y componentes que elevan tu rendimiento al siguiente nivel</p>
-          <p>Catálogo curado de piezas para armado de PC — tarjetas gráficas, fuentes, teclados mecánicos y enfriamiento líquido. Velocidad máxima y estilo gamer real.</p>
+          <h1>PC Components<br /><em>Gamer Store</em></h1>
+          <p class="hero-copy-description">Gear and components that take your performance to the next level</p>
+          <p>A curated catalog of PC-building parts — graphics cards, power supplies, mechanical keyboards and liquid cooling. Maximum speed and real gamer style.</p>
           <div class="hero-actions">
-            <a class="btn" href="#coleccion">Los Más Vendidos</a>
+            <a class="btn" href="#coleccion">Best Sellers</a>
           </div>
           <div class="hero-stats">
             <div class="stat-card">
               <strong>+70</strong>
-              Componentes para gaming.
+              Components for gaming.
             </div>
             <div class="stat-card">
               <strong>24h</strong>
-              Disponible para ti.
+              Available for you.
             </div>
             <div class="stat-card">
-              <strong>Garantía</strong>
-              Directo con Amazon.
+              <strong>Warranty</strong>
+              Direct with Amazon.
             </div>
           </div>
         </div>
@@ -136,8 +130,8 @@ const bestSellerProducts = [
 
       <section id="categorias" class="categories">
         <div class="section-title">
-          <small>Categorías</small>
-          <h2>Encuentra el componente ideal</h2>
+          <small>Categories</small>
+          <h2>Find the ideal component</h2>
         </div>
         <div class="category-grid">
           {categories.map((category) => (
@@ -156,37 +150,38 @@ const bestSellerProducts = [
 
       <BestSellers
         id="coleccion"
-        title="Los más vendidos"        
+        eyebrow="Top sellers"
+        title="Best sellers"
         products={bestSellerProducts}
       />
 
-      <Comparador />
+      <Comparador lang="en" />
 
       <section id="ventajas" class="features">
         <div class="section-title">
-          <small>Por qué visitar en Monckey Gamer</small>
-          <h2>Ventajas del setup gamer</h2>
+          <small>Why visit Monckey Gamer</small>
+          <h2>Gamer setup advantages</h2>
         </div>
         <div class="feature-list">
           <div class="feature-item">
             <div>1</div>
             <div class="feature-content">
-              <strong>Componetes de Alta Calidad</strong>
-              <p>Aquí encontrarás los mejores componentes para tu setup gamer. y los podrás comprar a traves de Amazon.</p>
+              <strong>High-Quality Components</strong>
+              <p>Here you will find the best components for your gaming setup, ready to buy through Amazon.</p>
             </div>
           </div>
           <div class="feature-item">
             <div>2</div>
             <div class="feature-content">
-              <strong>Calidad premium</strong>
-              <p>Seleccionamos componentes de marcas reconocidas con rendimiento estable y duradero.</p>
+              <strong>Premium quality</strong>
+              <p>We select components from well-known brands with stable, long-lasting performance.</p>
             </div>
           </div>
           <div class="feature-item">
             <div>3</div>
             <div class="feature-content">
-              <strong>Blogs interesantes</strong>
-              <p>Publicaré un blog interesante con consejos y actualizaciones sobre el mundo del gaming.</p>
+              <strong>Interesting blogs</strong>
+              <p>I publish an interesting blog with tips and updates about the gaming world.</p>
             </div>
           </div>
         </div>

@@ -9,7 +9,9 @@ type ProductCardData = {
   amazonHref?: string;
 };
 
-const { product } = Astro.props as { product: ProductCardData };
+const { product, lang = 'es' } = Astro.props as { product: ProductCardData; lang?: 'es' | 'en' };
+const tDetails = lang === 'en' ? 'Details' : 'Detalles';
+const tImageOf = lang === 'en' ? 'Image of' : 'Imagen de';
 ---
 
 <article class="product-card">
@@ -19,7 +21,7 @@ const { product } = Astro.props as { product: ProductCardData };
       <div class="product-card-image">
         <img
           src={product.imageUrl || '/placeholder-product.svg'}
-          alt={`Imagen de ${product.name}`}
+          alt={`${tImageOf} ${product.name}`}
           loading="lazy"
         />
       </div>
@@ -30,7 +32,7 @@ const { product } = Astro.props as { product: ProductCardData };
       <span>{product.price}</span>
        <div class="product-card-actions">
         {product.detailHref && (
-          <a class="btn btn-small" href={product.detailHref}>Detalles</a>
+          <a class="btn btn-small" href={product.detailHref}>{tDetails}</a>
         )}
         {product.amazonHref && (
           <a

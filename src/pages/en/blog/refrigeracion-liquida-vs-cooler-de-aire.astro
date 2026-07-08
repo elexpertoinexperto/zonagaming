@@ -1,0 +1,241 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'Liquid cooling vs air cooler: which is better?';
+const description =
+  'AIO vs air cooler: which is right for gaming in 2026? An honest comparison of temperatures, price, noise and ease of installation so you choose well.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '5 min read';
+
+const secciones = [
+  { id: 'diferencias', label: 'Main differences' },
+  { id: 'temperatura', label: 'Thermal performance' },
+  { id: 'ruido', label: 'Noise' },
+  { id: 'precio', label: 'Price and value' },
+  { id: 'instalacion', label: 'Installation' },
+  { id: 'cual-elegir', label: 'Which to choose?' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Hardware</span>
+      <h1>Liquid cooling vs air cooler: which is better?</h1>
+      <p class="post-lead">
+        The eternal PC gaming battle. The honest answer is there is no universal winner:
+        it depends on your CPU, your case and what you prioritize. Here we compare everything head-on.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="diferencias">
+        <h2>Main differences between an AIO and an air cooler</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Air cooler</th>
+                <th>Liquid cooling (AIO)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Price</td><td>More affordable</td><td>Bigger investment</td></tr>
+              <tr><td>Installation</td><td>Simple</td><td>Moderate</td></tr>
+              <tr><td>Temperatures</td><td>Very good at the high end</td><td>Excellent (360mm)</td></tr>
+              <tr><td>Noise</td><td>Depends on the model</td><td>Depends on the model</td></tr>
+              <tr><td>Durability</td><td>10+ years (no at-risk moving parts)</td><td>5–8 years (pump)</td></tr>
+              <tr><td>Looks</td><td>Visible bulk in the case</td><td>Clean, optional ARGB</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="temperatura">
+        <h2>Thermal performance: which cools better?</h2>
+        <p>
+          A good-quality 360mm AIO beats almost any air cooler in stress-test temperatures.
+          However, a dual-tower cooler like the
+          <a href="/en/air-cooling/noctua-nh-d15-g2-hbc-5/">Noctua NH-D15</a> or the
+          <a href="/en/air-cooling/thermalright-peerless-assassin-120-se-7/">Thermalright Peerless Assassin 120 SE</a>
+          matches or beats many 240mm AIOs in long-duration tests.
+        </p>
+        <p>
+          The AIO's real advantage shows up in:
+        </p>
+        <ul class="post-list">
+          <li>Very high-TDP CPUs (125W+) under sustained overclocking.</li>
+          <li>Small cases where a large tower cooler does not fit.</li>
+          <li>High ambient temperatures (over 28°C).</li>
+        </ul>
+        <p class="post-note">
+          Fact: in normal gaming without OC, the difference between a good air cooler and a 240mm AIO
+          is only 3–7°C. Not the huge leap many expect.
+        </p>
+      </section>
+
+      <section id="ruido">
+        <h2>Noise: a technical tie with nuances</h2>
+        <p>
+          Contrary to popular belief, AIOs are not automatically quieter than air coolers.
+        </p>
+        <ul class="post-list">
+          <li>
+            An AIO brings 2–3 fans on the radiator + the pump, which adds noise sources.
+            If the fan curve is not well set, it can be louder than a good tower.
+          </li>
+          <li>
+            A tower cooler with a single quality fan like the
+            <a href="/en/air-cooling/thermalright-peerless-assassin-120-se-7/">Thermalright Peerless Assassin 120 SE</a>
+            can be quieter than a generic AIO at full load.
+          </li>
+        </ul>
+        <p>
+          High-end AIOs (Arctic, Corsair, Thermalright) include quality fans
+          that do achieve a very low noise profile under normal load.
+        </p>
+      </section>
+
+      <section id="precio">
+        <h2>Price and value: air wins on a tight budget</h2>
+        <p>
+          For the same money, a quality tower cooler cools almost as well as a mid-range 240mm AIO
+          and lasts longer (no pump that could fail at year 5).
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>Budget gaming:</strong> the
+            <a href="/en/air-cooling/thermalright-assassin-spirit-120-evo-3/">Thermalright Assassin Spirit 120 EVO</a>
+            is a bargain for 65–95W CPUs.
+          </li>
+          <li>
+            <strong>Mid-range:</strong> the
+            <a href="/en/liquid-cooling/thermalright-aqua-elite-240-v3-7/">Thermalright Aqua Elite 240 V3</a>
+            delivers the AIO advantages without breaking the bank.
+          </li>
+          <li>
+            <strong>High-end:</strong> the
+            <a href="/en/liquid-cooling/arctic-liquid-freezer-iii-pro-360-argb-black-1/">Arctic Liquid Freezer III Pro 360</a>
+            is the temperature king for 150W+ CPUs under OC.
+          </li>
+        </ul>
+      </section>
+
+      <section id="instalacion">
+        <h2>Installation: air is simpler</h2>
+        <p>
+          A tower cooler installs in under 10 minutes: backplate, thermal paste, seat it and screw it down.
+          An AIO requires mounting the radiator in the case, managing tubes, and connecting the pump
+          and fans correctly. Around 20–30 minutes the first time.
+        </p>
+        <p>
+          If you have never built a PC and want simplicity, the air cooler is more forgiving.
+          If the process does not scare you, an AIO is not hard once you watch a video.
+        </p>
+      </section>
+
+      <section id="cual-elegir">
+        <h2>Which to choose for your case?</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>If this is you...</th>
+                <th>Choose this</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Tight budget, 65–95W CPU</td><td>A good tower cooler</td></tr>
+              <tr><td>Small case (ITX / mATX)</td><td>Low-profile 120mm / 240mm AIO</td></tr>
+              <tr><td>125W+ CPU with OC</td><td>280mm or 360mm AIO</td></tr>
+              <tr><td>You want the quietest possible</td><td>Noctua NH-D15 or a high-end AIO</td></tr>
+              <tr><td>You prioritize ARGB looks</td><td>AIO with ARGB</td></tr>
+              <tr><td>You want maximum durability, zero maintenance</td><td>Air cooler</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Browse our
+          <a href="/en/liquid-cooling/">liquid cooling</a> and
+          <a href="/en/air-cooling/">air cooling</a> catalogs with every option available.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Know which one you need?</h3>
+      <p>Air coolers and AIOs at the best price with Amazon shipping at Monckey Gamer.</p>
+      <a class="btn" href="/en/liquid-cooling/">View cooling</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

@@ -1,0 +1,235 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'Does a wireless gaming mouse have latency issues?';
+const description =
+  'Modern wireless mice no longer lag. Find out why 2.4GHz technology matches the cable and when Bluetooth can actually be a problem for gaming.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '4 min read';
+
+const secciones = [
+  { id: 'mito', label: 'The wireless lag myth' },
+  { id: 'tecnologias', label: '2.4GHz vs Bluetooth vs Cable' },
+  { id: 'cuando-importa', label: 'When does latency matter?' },
+  { id: 'interferencias', label: 'Interference and stability' },
+  { id: 'bateria', label: 'Battery and endurance' },
+  { id: 'recomendaciones', label: 'Recommended wireless mice' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Peripherals</span>
+      <h1>Does a wireless gaming mouse have latency issues?</h1>
+      <p class="post-lead">
+        Ten years ago the answer was yes. Today, in 2026, the answer is that the best wireless mice
+        have latencies identical to or lower than their wired equivalents. Here is why.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="mito">
+        <h2>The wireless lag myth: where does it come from?</h2>
+        <p>
+          The wireless mouse lag myth comes from 2005–2015, when Bluetooth
+          was the only option and had latencies of 40–80ms. That was indeed noticeable in gaming.
+        </p>
+        <p>
+          The revolution came with dedicated <strong>2.4GHz</strong> USB receivers
+          (Logitech LightSpeed, Razer HyperSpeed, etc.) that operate on an exclusive frequency
+          with gaming-optimized protocols. The result: latencies of 1ms or less,
+          identical to the cable.
+        </p>
+      </section>
+
+      <section id="tecnologias">
+        <h2>2.4GHz vs Bluetooth vs Cable: the real comparison</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Connection</th>
+                <th>Typical latency</th>
+                <th>For competitive gaming</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>USB Cable</td><td>~1 ms</td><td>Perfect</td><td>Zero interference</td></tr>
+              <tr><td>2.4GHz receiver</td><td>~1 ms</td><td>Perfect</td><td>Same as cable in practice</td></tr>
+              <tr><td>Bluetooth 5.3+</td><td>5–15 ms</td><td>Casual / TV</td><td>Varies by device</td></tr>
+              <tr><td>Bluetooth 5.0</td><td>10–40 ms</td><td>Not recommended</td><td>Noticeable latency in FPS</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="post-note">
+          Golden rule: for competitive gaming, always use the 2.4GHz USB receiver included
+          with the mouse, never Bluetooth.
+        </p>
+      </section>
+
+      <section id="cuando-importa">
+        <h2>When does mouse latency actually matter?</h2>
+        <p>
+          Mouse latency matters more than people think in:
+        </p>
+        <ul class="post-list">
+          <li>
+            <strong>High-level competitive FPS</strong> (CS2, Valorant, Apex): where duels
+            are won by fractions of a second. Here the 1ms of a 2.4GHz receiver is the standard.
+          </li>
+          <li>
+            <strong>Rhythm games (osu!, Beat Saber):</strong> timing precision is critical.
+            Cable or 2.4GHz is mandatory.
+          </li>
+        </ul>
+        <p>
+          In casual gaming, MOBA, RPG or anything that is not competitive FPS, the difference
+          between 1ms and Bluetooth's 10ms is completely imperceptible. The limiting factor
+          is always human reaction time (~150–250ms), not the hardware.
+        </p>
+      </section>
+
+      <section id="interferencias">
+        <h2>Interference and stability: a real problem?</h2>
+        <p>
+          A 2.4GHz signal can be affected by Wi-Fi networks, other Bluetooth devices
+          and wireless microphones. In practice, modern gaming USB receivers have
+          smart frequency management that minimizes this.
+        </p>
+        <p>
+          Tips to avoid interference:
+        </p>
+        <ul class="post-list">
+          <li>Plug the USB receiver into a rear port of the PC (less electrical noise).</li>
+          <li>Use a USB extender to bring the receiver closer to the mouse if you get signal issues.</li>
+          <li>Keep the receiver away from your Wi-Fi router.</li>
+        </ul>
+      </section>
+
+      <section id="bateria">
+        <h2>Battery: how long they last and how to charge</h2>
+        <p>
+          The battery life of modern wireless gaming mice is more than enough for daily use:
+        </p>
+        <ul class="post-list">
+          <li>With RGB on: 15–40 hours of continuous use.</li>
+          <li>Without RGB: 70–300 hours depending on the model.</li>
+          <li>All modern models charge over USB-C, which also works as a play cable if the battery runs out.</li>
+        </ul>
+        <p>
+          The <a href="/en/gaming-mice/ajazz-aj159p-wireless-paw3395-dock-rgb-6/">Ajazz AJ159P</a>
+          includes a charging dock: it recharges simply by resting on the stand.
+          The <a href="/en/gaming-mice/gravastar-mercury-m2-wireless-26k-rgb-5/">Gravastar Mercury M2</a>
+          combines light weight with extended battery life.
+        </p>
+      </section>
+
+      <section id="recomendaciones">
+        <h2>Recommended wireless gaming mice</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Maximum performance:</strong>
+            <a href="/en/gaming-mice/razer-viper-v4-pro-wireless-50k-49g-4/">Razer Viper V4 Pro</a>
+            — 50K DPI sensor, 49g, HyperSpeed 2.4GHz receiver. The ceiling of the market.
+          </li>
+          <li>
+            <strong>Ultralight without the premium price:</strong>
+            <a href="/en/gaming-mice/attack-shark-x3-wireless-paw3395-49g-1/">Attack Shark X3</a>
+            — PAW3395 sensor, 49g, 2.4GHz receiver, excellent price.
+          </li>
+          <li>
+            <strong>Wireless with charging dock:</strong>
+            <a href="/en/gaming-mice/ajazz-aj159p-wireless-paw3395-dock-rgb-6/">Ajazz AJ159P</a>
+            — PAW3395, dock included, customizable RGB.
+          </li>
+          <li>
+            <strong>On a tight budget:</strong>
+            <a href="/en/gaming-mice/razer-basilisk-v3-x-hyperspeed-18k-285h-7/">Razer Basilisk V3 X HyperSpeed</a>
+            — 285 hours of battery, 18K sensor, HyperSpeed connection.
+          </li>
+        </ul>
+        <p>
+          Compare all the wireless mice in our
+          <a href="/en/gaming-mice/">gaming mice</a> catalog with weight, sensor and battery life on every page.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>No cable, no compromises</h3>
+      <p>Wireless gaming mice with a 2.4GHz receiver for lag-free competitive gaming.</p>
+      <a class="btn" href="/en/gaming-mice/">View gaming mice</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>

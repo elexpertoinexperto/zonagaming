@@ -1,0 +1,231 @@
+---
+import SiteLayout from '../../../components/SiteLayout.astro';
+
+const title = 'What types of gaming keyboards are there? Full guide';
+const description =
+  'Mechanical, membrane or optical keyboards: a quick guide to understanding gaming keyboard types, their differences and which suits your playstyle.';
+
+const fecha = 'June 12, 2026';
+const dateISO = '2026-06-12';
+const tiempoLectura = '5 min read';
+
+const secciones = [
+  { id: 'mecanico', label: 'Mechanical keyboard' },
+  { id: 'membrana', label: 'Membrane keyboard' },
+  { id: 'optico', label: 'Optical keyboard' },
+  { id: 'tamanos', label: 'Sizes: 100%, 75%, 60%' },
+  { id: 'cable-vs-inalambrico', label: 'Wired vs wireless' },
+  { id: 'cual-elegir', label: 'Which to choose?' },
+];
+---
+
+<SiteLayout title={`${title} | Monckey Gamer`} description={description} robots="index, follow" article={{ title, dateISO }}>
+  <article class="post">
+    <a class="category-back" href="/en/blog/">← Back to Blog</a>
+
+    <header class="post-header">
+      <span class="post-tag"><span class="post-tag-gg">GG</span> Gamer guide · Peripherals</span>
+      <h1>What types of gaming keyboards are there?</h1>
+      <p class="post-lead">
+        Before choosing a gaming keyboard, know that they are not all the same inside.
+        The switch technology completely defines how your keyboard feels and performs.
+      </p>
+      <div class="post-meta">
+        <span>{fecha}</span>
+        <span class="post-meta-dot"></span>
+        <span>{tiempoLectura}</span>
+      </div>
+    </header>
+
+    <nav class="post-toc" aria-label="Article contents">
+      <span class="post-toc-title">In this article</span>
+      <ul>
+        {secciones.map((s) => (
+          <li><a href={`#${s.id}`}>{s.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="post-body">
+      <section id="mecanico">
+        <h2>Mechanical keyboard: the king of gaming</h2>
+        <p>
+          <strong>Mechanical keyboards</strong> use an individual switch for each key,
+          with a physical mechanism (spring + contact) that registers the press. They are the most used
+          in gaming for their precise response, durability (50–100 million presses per switch)
+          and a feel you can customize by switch type.
+        </p>
+        <p>
+          The most common switch types are:
+        </p>
+        <ul class="post-list">
+          <li><strong>Linear (Red, Speed Silver):</strong> no tactile bump or click. Smooth and fast. Ideal for gaming.</li>
+          <li><strong>Tactile (Brown):</strong> a slight "bump" at actuation, with no audible click. For gaming and typing.</li>
+          <li><strong>Clicky (Blue, Green):</strong> bump plus an audible click. Satisfying for typing, can annoy in shared spaces.</li>
+        </ul>
+        <p>
+          Mechanical options like the
+          <a href="/en/keyboards/redthunder-k75-wireless-75pct-hotswap-2/">RedThunder K75 Wireless Hot-swap</a>
+          or the <a href="/en/keyboards/redragon-mechanical-wired-hotswap-red-4/">Redragon Mechanical Hot-swap Red</a>
+          are excellent entry points into the mechanical world.
+        </p>
+      </section>
+
+      <section id="membrana">
+        <h2>Membrane keyboard: affordable and quiet</h2>
+        <p>
+          <strong>Membrane</strong> keyboards use three layers of flexible plastic that
+          compress when you press a key. They are cheaper, quieter and dust-resistant,
+          but they have less tactile precision and a shorter lifespan (5–10 million presses).
+        </p>
+        <p>
+          For casual gaming or general use they are perfectly valid. They do not give you the
+          response advantage of a mechanical, but you do not need it if you play recreationally.
+        </p>
+      </section>
+
+      <section id="optico">
+        <h2>Optical keyboard: maximum speed</h2>
+        <p>
+          <strong>Optical keyboards</strong> use an infrared light beam to detect
+          the press, with no physical contact. The result: actuation time is practically
+          instant (0.2ms vs 1–2ms on a standard mechanical).
+        </p>
+        <p>
+          They are ideal for competitive gaming where every millisecond counts.
+          They also resist contact bounce (key chatter) better.
+          The price is usually higher than equivalent mechanicals.
+        </p>
+      </section>
+
+      <section id="tamanos">
+        <h2>Keyboard sizes: 100%, 75%, 65%, 60%</h2>
+        <div class="post-table-wrap">
+          <table class="post-table">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Approx. keys</th>
+                <th>What it drops</th>
+                <th>Who it's for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>100% (Full)</td><td>104</td><td>Nothing</td><td>Numpad and function users</td></tr>
+              <tr><td>75%</td><td>84</td><td>Numpad</td><td>Balanced gaming + typing</td></tr>
+              <tr><td>65%</td><td>68</td><td>Numpad + F-row</td><td>More room for the mouse</td></tr>
+              <tr><td>60%</td><td>61</td><td>Numpad + F-row + nav keys</td><td>Minimalist / extreme competitive</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          The <strong>75%</strong> format is the most popular in gaming right now: compact
+          without sacrificing the keys you use most. The
+          <a href="/en/keyboards/aula-f75-pro-wireless-75pct-reaper-3/">AULA F75 Pro Wireless</a>
+          is a solid option in this format.
+        </p>
+      </section>
+
+      <section id="cable-vs-inalambrico">
+        <h2>Wired vs wireless: does it matter for gaming?</h2>
+        <p>
+          The latency of modern wireless keyboards (1ms at 2.4GHz) is imperceptible
+          in gaming. The choice is almost always about convenience:
+        </p>
+        <ul class="post-list">
+          <li><strong>Wired:</strong> zero risk of running out of battery. Guaranteed latency.</li>
+          <li><strong>Wireless:</strong> a cleaner desk, freedom of movement. Needs periodic charging.</li>
+        </ul>
+        <p>
+          The <a href="/en/keyboards/aula-f75-pro-white-wireless-knob-5/">AULA F75 Pro White Wireless</a>
+          and the <a href="/en/keyboards/aula-s75-pro-screen-knob-trimode-7/">AULA S75 Pro Tri-mode</a>
+          offer triple connectivity (USB, Bluetooth 5.0 and 2.4GHz) for maximum flexibility.
+        </p>
+      </section>
+
+      <section id="cual-elegir">
+        <h2>Which type of gaming keyboard should you choose?</h2>
+        <ul class="post-list">
+          <li>
+            <strong>Competitive gaming / FPS:</strong> mechanical with linear switches or an optical keyboard.
+            65–75% format for more mouse room.
+          </li>
+          <li>
+            <strong>Gaming + streaming / work:</strong> 75–100% mechanical with tactile switches.
+            Wireless if you value a tidy desk.
+          </li>
+          <li>
+            <strong>Tight budget:</strong> the
+            <a href="/en/keyboards/redthunder-k10-combo-rgb-wired-1/">RedThunder K10 Combo RGB</a>
+            is an affordable mechanical-feel option that includes a mouse.
+          </li>
+          <li>
+            <strong>Premium experience:</strong> hot-swap (switches replaceable without soldering)
+            so you can change the feel whenever you want.
+          </li>
+        </ul>
+        <p>
+          Explore every option in our
+          <a href="/en/keyboards/">gaming keyboards</a> catalog with full switch and connectivity specs.
+        </p>
+      </section>
+    </div>
+
+    <aside class="post-cta">
+      <h3>Find your ideal gaming keyboard</h3>
+      <p>Mechanical, wireless and hot-swap keyboards at the best price with Amazon shipping.</p>
+      <a class="btn" href="/en/keyboards/">View gaming keyboards</a>
+    </aside>
+  </article>
+</SiteLayout>
+
+<style>
+  .post { max-width: 760px; margin: 0 auto; }
+  .post-header { margin: 18px 0 32px; }
+  .post-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.14em; color: #8aa0b8; }
+  .post-tag-gg { font-weight: 800; letter-spacing: 0.05em; color: #7cffcb; border: 1px solid rgba(124,255,203,0.3); border-radius: 5px; padding: 1px 5px; font-size: 0.62rem; }
+  .post-header h1 { margin: 18px 0 16px; font-size: clamp(1.6rem,6vw,2.8rem); line-height: 1.15; overflow-wrap: break-word; }
+  .post-lead { margin: 0 0 18px; color: #c8d8e8; font-size: 1.1rem; line-height: 1.7; }
+  .post-meta { display: flex; align-items: center; gap: 12px; color: #8aa0b8; font-size: 0.9rem; }
+  .post-meta-dot { width: 4px; height: 4px; border-radius: 50%; background: #8aa0b8; }
+  .post-toc { margin: 0 0 40px; padding: 24px 28px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); }
+  .post-toc-title { display: block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7cffcb; margin-bottom: 14px; }
+  .post-toc ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px 24px; }
+  .post-toc a { color: #c8d8e8; text-decoration: none; font-size: 0.95rem; transition: color 0.2s ease; }
+  .post-toc a:hover { color: #7cffcb; }
+  .post-body section { margin-bottom: 40px; scroll-margin-top: 24px; }
+  .post-body h2 { font-size: 1.5rem; color: #e6f7ff; margin: 0 0 16px; padding-left: 14px; border-left: 3px solid #7cffcb; }
+  .post-body p { color: #c8d8e8; line-height: 1.8; margin: 0 0 16px; }
+  .post-body strong { color: #e6f7ff; }
+  .post-body a { color: #7cffcb; text-decoration: underline; text-underline-offset: 3px; }
+  .post-list { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 12px; }
+  .post-list li { color: #c8d8e8; line-height: 1.7; padding-left: 26px; position: relative; }
+  .post-list li::before { content: ""; position: absolute; left: 4px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: #7cffcb; }
+  .post-table-wrap { margin: 0 0 18px; overflow-x: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,0.08); }
+  .post-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .post-table th { text-align: left; padding: 14px 20px; color: #7cffcb; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; background: rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .post-table td { padding: 13px 20px; color: #c8d8e8; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .post-table tbody tr:last-child td { border-bottom: none; }
+  .post-table td:first-child { color: #e6f7ff; font-weight: 500; }
+  .post-note { background: rgba(27,183,255,0.06); border: 1px solid rgba(27,183,255,0.18); border-radius: 14px; padding: 16px 20px; color: #c8d8e8 !important; font-size: 0.95rem; }
+  .post-cta { margin-top: 48px; padding: 36px; border-radius: 24px; text-align: center; background: linear-gradient(135deg,rgba(0,255,225,0.06),rgba(27,183,255,0.06)); border: 1px solid rgba(124,255,203,0.15); }
+  .post-cta h3 { margin: 0 0 8px; font-size: 1.4rem; color: #e6f7ff; }
+  .post-cta p { margin: 0 0 20px; color: #c8d8e8; }
+  @media (max-width: 640px) {
+    .post-toc { padding: 20px; margin-bottom: 28px; }
+    .post-toc ul { grid-template-columns: 1fr; }
+    .post-lead { font-size: 1rem; }
+    .post-meta { flex-wrap: wrap; gap: 8px; }
+    .post-body section { margin-bottom: 32px; }
+    .post-body h2 { font-size: 1.3rem; }
+    .post-table { font-size: 0.85rem; }
+    .post-table th { padding: 11px 12px; font-size: 0.7rem; }
+    .post-table td { padding: 10px 12px; }
+    .post-cta { padding: 28px 20px; }
+    .post-cta h3 { font-size: 1.25rem; }
+    .post-cta .btn { width: 100%; }
+  }
+  @media (max-width: 380px) {
+    .post-table th, .post-table td { padding: 9px 10px; font-size: 0.8rem; }
+  }
+</style>
