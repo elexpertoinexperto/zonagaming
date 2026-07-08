@@ -94,9 +94,9 @@ export function buildUrlset(lang: 'es' | 'en'): string {
       const loc = lang === 'es' ? esLoc : enLoc;
       return `  <url>
     <loc>${loc}</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="${esLoc}"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${enLoc}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${esLoc}"/>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="${esLoc}" type="application/xhtml+xml"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="${enLoc}" type="application/xhtml+xml"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${esLoc}" type="application/xhtml+xml"/>
     <lastmod>${e.lastmod}</lastmod>
     <priority>${e.priority}</priority>
   </url>`;
