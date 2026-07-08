@@ -1,0 +1,40 @@
+# Monckey Gamer
+
+> Monckey Gamer is a bilingual (Spanish/English) e-commerce affiliate site selling PC gaming components — graphics cards, processors, RAM, SSDs, power supplies, cooling, cases, keyboards, mice, and headsets. Every product links out to Amazon for purchase; the site itself does not process payments. Content includes buying guides per category and educational blog articles about PC hardware.
+
+The Spanish version is the primary/default site at the root domain, targeted at Colombia and Latin American Spanish speakers (hreflang es-CO). The English version lives under /en/ and targets the United States (hreflang en-US). Each category and product page exists in both languages with translated URL slugs (e.g. /tarjetas-graficas/ in Spanish is /en/graphics-cards/ in English). Category slugs in English: graphics-cards, processors, ram-memory, ssd, power-supplies, liquid-cooling, air-cooling, gaming-cases, keyboards, gaming-mice, headsets.
+
+Product pages include full specifications, pricing in USD, and a direct outbound link to the product's Amazon listing. Category pages include a product grid, a comparison tool (select two products from the same category to compare specs side by side), and a buying guide explaining what to look for in that component type. Prices and stock are illustrative catalog data, not live-synced with Amazon.
+
+## Site
+
+- [Home (Spanish)](https://monckeygamer.com/): Landing page with featured categories and best sellers.
+- [Home (English)](https://monckeygamer.com/en/): English version of the homepage.
+- [Sitemap index](https://monckeygamer.com/sitemap.xml): Points to sitemap-es.xml and sitemap-en.xml, the full lists of indexable URLs per language.
+- [Contact (Spanish)](https://monckeygamer.com/contacto/): Contact page with email.
+- [Contact (English)](https://monckeygamer.com/en/contacto/): English version of the contact page.
+
+## Categories
+
+- [Graphics cards](https://monckeygamer.com/tarjetas-graficas/) · [EN](https://monckeygamer.com/en/graphics-cards/): GPUs for 1080p, 1440p and 4K gaming, NVIDIA and AMD.
+- [Processors](https://monckeygamer.com/procesadores/) · [EN](https://monckeygamer.com/en/processors/): AMD Ryzen and Intel Core CPUs for gaming and productivity.
+- [RAM memory](https://monckeygamer.com/memoria-ram/) · [EN](https://monckeygamer.com/en/ram-memory/): DDR4 and DDR5 memory kits.
+- [SSD](https://monckeygamer.com/ssd/) · [EN](https://monckeygamer.com/en/ssd/): NVMe and SATA storage drives.
+- [Power supplies](https://monckeygamer.com/fuentes-de-poder/) · [EN](https://monckeygamer.com/en/power-supplies/): 80+ certified, modular PSUs.
+- [Liquid cooling](https://monckeygamer.com/refrigeracion-liquida/) · [EN](https://monckeygamer.com/en/liquid-cooling/): 240mm and 360mm AIO coolers.
+- [Air cooling](https://monckeygamer.com/refrigeracion-normal/) · [EN](https://monckeygamer.com/en/air-cooling/): Tower heatsinks and air coolers.
+- [Gaming cases](https://monckeygamer.com/gabinetes-gamer/) · [EN](https://monckeygamer.com/en/gaming-cases/): Mid-tower and full-tower PC cases.
+- [Keyboards](https://monckeygamer.com/teclados/) · [EN](https://monckeygamer.com/en/keyboards/): Mechanical and RGB gaming keyboards.
+- [Mice](https://monckeygamer.com/mouse/) · [EN](https://monckeygamer.com/en/gaming-mice/): Optical gaming mice with high-precision sensors.
+- [Headsets](https://monckeygamer.com/audifonos/) · [EN](https://monckeygamer.com/en/headsets/): Gaming headsets with 7.1 surround sound.
+
+## Blog
+
+Educational hardware guides in Spanish at /blog/ and English at /en/blog/, covering VRAM, memory bus width and speed, CPU cores and threads, RAM DDR generations and latency, liquid vs air cooling, case buying criteria, keyboard switch types, mouse grip styles and weight, and headset comfort/wireless topics.
+
+- [Blog index (Spanish)](https://monckeygamer.com/blog/)
+- [Blog index (English)](https://monckeygamer.com/en/blog/)
+
+## Optional
+
+- [robots.txt](https://monckeygamer.com/robots.txt): Crawler rules; allows all agents and references the sitemap index.
