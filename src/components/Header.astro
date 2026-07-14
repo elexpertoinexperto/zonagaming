@@ -393,6 +393,11 @@ const t = {
       display: grid;
       gap: 6px;
       padding: 16px;
+      max-height: calc(100svh - 100px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(124, 255, 203, 0.4) transparent;
       border: 1px solid rgba(124, 255, 203, 0.18);
       border-radius: 16px;
       background: rgba(7, 27, 53, 0.96);
@@ -403,6 +408,23 @@ const t = {
       transform: translateY(-8px);
       pointer-events: none;
       transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    }
+
+    .main-nav::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .main-nav::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .main-nav::-webkit-scrollbar-thumb {
+      background: rgba(124, 255, 203, 0.4);
+      border-radius: 999px;
+    }
+
+    .main-nav::-webkit-scrollbar-thumb:hover {
+      background: rgba(124, 255, 203, 0.65);
     }
 
     .main-nav.active {
@@ -441,9 +463,30 @@ const t = {
     }
 
     .dropdown-menu.active {
-      max-height: 560px;
+      max-height: min(560px, 55vh);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(124, 255, 203, 0.4) transparent;
       padding: 6px 0;
       transform: none;
+    }
+
+    .dropdown-menu.active::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .dropdown-menu.active::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .dropdown-menu.active::-webkit-scrollbar-thumb {
+      background: rgba(124, 255, 203, 0.4);
+      border-radius: 999px;
+    }
+
+    .dropdown-menu.active::-webkit-scrollbar-thumb:hover {
+      background: rgba(124, 255, 203, 0.65);
     }
 
     .dropdown-item {
