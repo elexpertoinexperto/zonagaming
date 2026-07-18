@@ -34,6 +34,7 @@ const categories = categoriesEs.map((c) => ({
 const t = {
   home: isEn ? UI_EN.nav.home : 'Inicio',
   components: isEn ? UI_EN.nav.components : 'Componentes',
+  recommender: isEn ? UI_EN.nav.recommender : 'Recomendador',
   blog: isEn ? UI_EN.nav.blog : 'Blog',
   contact: isEn ? UI_EN.nav.contact : 'Contacto',
 };
@@ -80,6 +81,7 @@ const t = {
       </div>
     </div>
 
+    <a href={isEn ? '/en/recommender/' : '/recomendador/'}>{t.recommender}</a>
     <a href={`${prefix}/blog/`}>{t.blog}</a>
     <a href={`${prefix}/contacto/`}>{t.contact}</a>
 

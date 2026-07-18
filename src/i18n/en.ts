@@ -16,6 +16,7 @@ export const SLUG_EN: Record<string, string> = {
   'teclados': 'keyboards',
   'mouse': 'gaming-mice',
   'audifonos': 'headsets',
+  'recomendador': 'recommender',
 };
 
 // Slug EN → clave ES (inverso)
@@ -319,6 +320,7 @@ export const UI_EN = {
   nav: {
     home: 'Home',
     components: 'Components',
+    recommender: 'Recommender',
     blog: 'Blog',
     contact: 'Contact',
   },

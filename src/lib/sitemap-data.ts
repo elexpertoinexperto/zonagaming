@@ -62,6 +62,7 @@ type Entry = { path: string; lastmod: string; priority: string };
 function allEntries(): Entry[] {
   const entries: Entry[] = [
     { path: '/', lastmod: fileMtime('index.astro'), priority: '1.0' },
+    { path: '/recomendador/', lastmod: fileMtime('recomendador/index.astro'), priority: '0.8' },
     { path: '/blog/', lastmod: fileMtime('blog.astro'), priority: '0.7' },
     { path: '/contacto/', lastmod: fileMtime('contacto/index.astro'), priority: '0.5' },
   ];

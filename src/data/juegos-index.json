@@ -1,0 +1,884 @@
+[
+  {
+    "titulo": "Cyberpunk 2077",
+    "tituloEn": "Cyberpunk 2077",
+    "steamId": 1091500,
+    "genero": "RPG Mundo Abierto",
+    "generoEn": "Open World RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+        "id": 5,
+        "nombre": "ASUS RTX 5060 Ti 16GB OC",
+        "resolucion": "1440p",
+        "fps": "80+ FPS",
+        "setting": "Ultra Psycho + DLSS 4",
+        "razon": "16 GB GDDR7 + DLSS 4 hacen que Night City sea fluido y espectacular.",
+        "razonEn": "16 GB GDDR7 + DLSS 4 make Night City smooth and spectacular."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-9600x",
+        "id": 1,
+        "nombre": "AMD Ryzen 5 9600X",
+        "resolucion": "1440p",
+        "fps": "80+ FPS",
+        "setting": "Ultra + DLSS/FSR",
+        "razon": "Zen 5 con 5.4 GHz Turbo elimina el bottleneck de CPU en mundo abierto denso.",
+        "razonEn": "Zen 5 at 5.4 GHz Turbo eliminates the CPU bottleneck in dense open-world scenes."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "80+ FPS",
+        "setting": "Ultra + DLSS 4",
+        "razon": "DDR5 6000MHz en AM5 + RTX 5060 Ti es el build más equilibrado para CP2077.",
+        "razonEn": "DDR5 6000MHz on AM5 + RTX 5060 Ti is the most balanced build for CP2077."
+      }
+    ]
+  },
+  {
+    "titulo": "Black Myth: Wukong",
+    "tituloEn": "Black Myth: Wukong",
+    "steamId": 2358720,
+    "genero": "Action RPG",
+    "generoEn": "Action RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-geforce-rtx-5070-windforce-oc-sff-12g",
+        "id": 6,
+        "nombre": "GIGABYTE RTX 5070 WINDFORCE 12G",
+        "resolucion": "1440p",
+        "fps": "70+ FPS",
+        "setting": "Épico + FSR/DLSS",
+        "razon": "8 núcleos Zen 4 + RTX 5070 es el combo más potente para este título visualmente exigente.",
+        "razonEn": "8-core Zen 4 + RTX 5070 is the most powerful combo for this visually demanding title."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Épico",
+        "razon": "El 7700X con refrigeración líquida mantiene boost máximo en las escenas más intensas.",
+        "razonEn": "The 7700X with liquid cooling sustains maximum boost through the most intense scenes."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Alto con DLSS 4",
+        "razon": "DDR5 6000MHz aprovecha al máximo el ancho de banda de la plataforma Blackwell.",
+        "razonEn": "DDR5 6000MHz fully leverages the bandwidth of the Blackwell platform."
+      }
+    ]
+  },
+  {
+    "titulo": "Elden Ring",
+    "tituloEn": "Elden Ring",
+    "steamId": 1245620,
+    "genero": "Action RPG",
+    "generoEn": "Action RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+        "id": 4,
+        "nombre": "GIGABYTE RX 9060 XT 16G",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Máximo",
+        "razon": "16 GB VRAM lleva Elden Ring a 1440p máximo sin caídas en los jefes más largos.",
+        "razonEn": "16 GB VRAM takes Elden Ring to 1440p maximum with no drops during the longest boss fights."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-7600x",
+        "id": 5,
+        "nombre": "AMD Ryzen 5 7600X",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Máximo",
+        "razon": "Zen 4 en AM5 es el sweet spot de rendimiento/precio para Elden Ring en 1440p.",
+        "razonEn": "Zen 4 on AM5 is the performance/price sweet spot for Elden Ring at 1440p."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Máximo",
+        "razon": "SSD NVMe + DDR5 reduce el tiempo de carga entre zonas a menos de 1 segundo.",
+        "razonEn": "NVMe SSD + DDR5 cuts zone load times to under 1 second."
+      }
+    ]
+  },
+  {
+    "titulo": "Marvel Rivals",
+    "tituloEn": "Marvel Rivals",
+    "steamId": 2767030,
+    "genero": "Hero Shooter",
+    "generoEn": "Hero Shooter",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+        "id": 4,
+        "nombre": "GIGABYTE RX 9060 XT 16G",
+        "resolucion": "1440p",
+        "fps": "144+ FPS",
+        "setting": "Muy Alto",
+        "razon": "CPU rápido + GPU RDNA 4 con SAM dan la menor latencia en shooters competitivos.",
+        "razonEn": "Fast CPU + RDNA 4 GPU with SAM deliver the lowest latency in competitive shooters."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-9600x",
+        "id": 1,
+        "nombre": "AMD Ryzen 5 9600X",
+        "resolucion": "1440p",
+        "fps": "144+ FPS",
+        "setting": "Muy Alto",
+        "razon": "Zen 5 IPC elevado mantiene 144+ FPS constantes en las partidas más intensas.",
+        "razonEn": "High Zen 5 IPC sustains 144+ FPS through Marvel Rivals' most intense matches."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "144+ FPS",
+        "setting": "Muy Alto",
+        "razon": "DDR5 6000MHz garantiza que Marvel Rivals no baje de 144 FPS en ninguna partida.",
+        "razonEn": "DDR5 6000MHz ensures Marvel Rivals never drops below 144 FPS in any match."
+      }
+    ]
+  },
+  {
+    "titulo": "GTA V",
+    "tituloEn": "GTA V",
+    "steamId": 271590,
+    "genero": "Mundo Abierto",
+    "generoEn": "Open World",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "hyperrender-rx-580-8gb",
+        "id": 3,
+        "nombre": "HyperRender RX 580 8GB",
+        "resolucion": "1080p",
+        "fps": "100+ FPS",
+        "setting": "Muy Alto",
+        "razon": "Combo económico perfecto: la RX 580 exprime GTA V en 1080p a 100+ FPS.",
+        "razonEn": "The perfect budget combo: the RX 580 pushes GTA V past 100 FPS at 1080p."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-5500",
+        "id": 3,
+        "nombre": "AMD Ryzen 5 5500",
+        "resolucion": "1080p",
+        "fps": "100+ FPS",
+        "setting": "Muy Alto",
+        "razon": "GTA V es CPU-intensive; el Ryzen 5 5500 equilibra perfectamente con la RX 580.",
+        "razonEn": "GTA V is CPU-intensive; the Ryzen 5 5500 pairs perfectly with the RX 580."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "teamgroup-t-force-delta-rgb-16gb-3600mhz",
+        "id": 4,
+        "nombre": "TEAMGROUP T-Force Delta DDR4 16GB 3600MHz",
+        "resolucion": "1080p",
+        "fps": "100+ FPS",
+        "setting": "Muy Alto",
+        "razon": "16 GB DDR4 3600MHz eliminan cualquier stutter al cargar el mapa completo de GTA.",
+        "razonEn": "16 GB DDR4 3600MHz eliminates any stutter when loading GTA's full map."
+      }
+    ]
+  },
+  {
+    "titulo": "Red Dead Redemption 2",
+    "tituloEn": "Red Dead Redemption 2",
+    "steamId": 1174180,
+    "genero": "Mundo Abierto",
+    "generoEn": "Open World",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+        "id": 4,
+        "nombre": "GIGABYTE RX 9060 XT 16G",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Ultra",
+        "razon": "Los 16 GB VRAM son ideales para las texturas ultra de RDR2 en 1440p sin stutters.",
+        "razonEn": "16 GB VRAM handles RDR2 ultra textures at 1440p without stutters."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-5800x",
+        "id": 7,
+        "nombre": "AMD Ryzen 7 5800X",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Ultra",
+        "razon": "Los 8 núcleos Zen 3 manejan perfectamente la IA de NPC densa de RDR2.",
+        "razonEn": "8 Zen 3 cores perfectly handle RDR2's dense NPC AI without breaking a sweat."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Medio-Alto",
+        "razon": "RDR2 puede superar los 16 GB con configuraciones altas; 32 GB previenen stutters.",
+        "razonEn": "RDR2 can exceed 16 GB at high settings; 32 GB prevents any stutter."
+      }
+    ]
+  },
+  {
+    "titulo": "The Witcher 3",
+    "tituloEn": "The Witcher 3",
+    "steamId": 292030,
+    "genero": "RPG",
+    "generoEn": "RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "hyperrender-rx-580-8gb",
+        "id": 3,
+        "nombre": "HyperRender RX 580 8GB",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Alto",
+        "razon": "La RX 580 mantiene 60 FPS estables en Witcher 3 con el parche next-gen a 1080p.",
+        "razonEn": "The RX 580 holds a steady 60 FPS in Witcher 3 with the next-gen patch at 1080p."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-7600x",
+        "id": 5,
+        "nombre": "AMD Ryzen 5 7600X",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Alto",
+        "razon": "Witcher 3 next-gen pide IPC alto; el 7600X mantiene FPS estables sin esfuerzo.",
+        "razonEn": "Witcher 3 next-gen demands high IPC; the 7600X delivers stable FPS effortlessly."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Ultra",
+        "razon": "El next-gen patch puede usar hasta 20 GB de RAM; 32 GB dejan margen de sobra.",
+        "razonEn": "The next-gen patch can use up to 20 GB of RAM; 32 GB gives comfortable headroom."
+      }
+    ]
+  },
+  {
+    "titulo": "Control",
+    "tituloEn": "Control",
+    "steamId": 870780,
+    "genero": "Action Thriller",
+    "generoEn": "Action Thriller",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9070-xt-gaming-oc-16g",
+        "id": 7,
+        "nombre": "GIGABYTE RX 9070 XT 16G",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra + Path Tracing",
+        "razon": "16 GB GDDR6 + 8 núcleos AM5 hacen que Control con ray tracing vuele sin caídas.",
+        "razonEn": "16 GB GDDR6 + 8-core AM5 make Control with ray tracing fly with no frame drops."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra + Path Tracing",
+        "razon": "8 núcleos Zen 4 no crean bottleneck en Control con path tracing activo.",
+        "razonEn": "8 Zen 4 cores don't bottleneck Control even with path tracing enabled."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Ultra",
+        "razon": "Control con ray tracing exige RAM rápida; DDR5 marca una diferencia real.",
+        "razonEn": "Control with ray tracing demands fast RAM; DDR5 makes a real difference here."
+      }
+    ]
+  },
+  {
+    "titulo": "Apex Legends",
+    "tituloEn": "Apex Legends",
+    "steamId": 1172470,
+    "genero": "Battle Royale FPS",
+    "generoEn": "Battle Royale FPS",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "hyperrender-rx-580-8gb",
+        "id": 3,
+        "nombre": "HyperRender RX 580 8GB",
+        "resolucion": "1080p",
+        "fps": "120+ FPS",
+        "setting": "Alto",
+        "razon": "16 GB + RX 580 es el combo ideal para Apex Legends sin stutters en 1080p.",
+        "razonEn": "16 GB + RX 580 is the ideal combo for Apex Legends without stutters at 1080p."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-5500",
+        "id": 3,
+        "nombre": "AMD Ryzen 5 5500",
+        "resolucion": "1080p",
+        "fps": "80+ FPS",
+        "setting": "Alto",
+        "razon": "Apex es muy dependiente del CPU; el 5500 maximiza los FPS con GPU media.",
+        "razonEn": "Apex is very CPU-dependent; the 5500 maximizes FPS when paired with a mid-range GPU."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "oloy-white-owl-16gb-3200mhz",
+        "id": 3,
+        "nombre": "OLOy DDR4 16GB 3200MHz",
+        "resolucion": "1080p",
+        "fps": "100+ FPS",
+        "setting": "Alto",
+        "razon": "Sistema frío y 16 GB DDR4 garantizan sesiones largas de Apex sin throttling.",
+        "razonEn": "A cool system and 16 GB DDR4 guarantee long Apex sessions without thermal throttling."
+      }
+    ]
+  },
+  {
+    "titulo": "Dota 2",
+    "tituloEn": "Dota 2",
+    "steamId": 570,
+    "genero": "MOBA",
+    "generoEn": "MOBA",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "zotac-geforce-gtx-960",
+        "id": 1,
+        "nombre": "ZOTAC GeForce GTX 960 2GB",
+        "resolucion": "1080p",
+        "fps": "200+ FPS",
+        "setting": "Muy Alto",
+        "razon": "Dota 2 no exige VRAM; la GTX 960 mantiene 200+ FPS para juego competitivo.",
+        "razonEn": "Dota 2 doesn't demand VRAM; the GTX 960 keeps 200+ FPS for competitive play."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-5500",
+        "id": 3,
+        "nombre": "AMD Ryzen 5 5500",
+        "resolucion": "1080p",
+        "fps": "120+ FPS",
+        "setting": "Muy Alto",
+        "razon": "El 5500 libera el cuello de botella de la GTX 960 en eSports de alta frecuencia.",
+        "razonEn": "The 5500 removes the CPU bottleneck on the GTX 960 for high-fps eSports titles."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "oloy-white-owl-16gb-3200mhz",
+        "id": 3,
+        "nombre": "OLOy DDR4 16GB 3200MHz",
+        "resolucion": "1080p",
+        "fps": "200+ FPS",
+        "setting": "Muy Alto",
+        "razon": "16 GB a 3200 MHz eliminan los micro-stutters de carga de mapas en Dota 2.",
+        "razonEn": "16 GB at 3200 MHz eliminates map-loading micro-stutters in Dota 2."
+      }
+    ]
+  },
+  {
+    "titulo": "Hogwarts Legacy",
+    "tituloEn": "Hogwarts Legacy",
+    "steamId": 990080,
+    "genero": "Action RPG",
+    "generoEn": "Action RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9060-xt-gaming-oc-16g",
+        "id": 4,
+        "nombre": "GIGABYTE RX 9060 XT 16G",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra con FSR",
+        "razon": "16 GB VRAM lleva el mundo de Hogwarts a 1440p Ultra sin compromisos.",
+        "razonEn": "16 GB VRAM takes the Hogwarts world to 1440p Ultra without compromise."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra",
+        "razon": "Hogwarts Legacy escala muy bien con múltiples núcleos; el 7700X es el par natural.",
+        "razonEn": "Hogwarts Legacy scales well with multiple cores; the 7700X is the natural pairing."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra",
+        "razon": "Hogwarts Legacy se beneficia enormemente de 32 GB con streaming amplio de activos.",
+        "razonEn": "Hogwarts Legacy benefits enormously from 32 GB with heavy asset streaming."
+      }
+    ]
+  },
+  {
+    "titulo": "Starfield",
+    "tituloEn": "Starfield",
+    "steamId": 1716740,
+    "genero": "RPG Sci-Fi",
+    "generoEn": "Sci-Fi RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+        "id": 5,
+        "nombre": "ASUS RTX 5060 Ti 16GB OC",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Alto-Ultra",
+        "razon": "Starfield con mods de texturas necesita VRAM alta; los 16 GB de la Ti son ideales.",
+        "razonEn": "Starfield with texture mods demands high VRAM; the Ti's 16 GB is ideal."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-5800x",
+        "id": 7,
+        "nombre": "AMD Ryzen 7 5800X",
+        "resolucion": "1080p",
+        "fps": "60 FPS",
+        "setting": "Alto",
+        "razon": "Los 8 núcleos Zen 3 manejan la IA de planetas de Starfield sin caídas de FPS.",
+        "razonEn": "8 Zen 3 cores handle Starfield's planet AI without any FPS drops."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1440p",
+        "fps": "60 FPS",
+        "setting": "Ultra",
+        "razon": "Starfield carga muchos assets en RAM; 32 GB evitan tiempos de carga lentos.",
+        "razonEn": "Starfield loads many assets into RAM; 32 GB prevents slow load times."
+      }
+    ]
+  },
+  {
+    "titulo": "Indiana Jones and the Great Circle",
+    "tituloEn": "Indiana Jones and the Great Circle",
+    "steamId": 2677660,
+    "genero": "Acción Aventura",
+    "generoEn": "Action Adventure",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-geforce-rtx-5070-windforce-oc-sff-12g",
+        "id": 6,
+        "nombre": "GIGABYTE RTX 5070 WINDFORCE 12G",
+        "resolucion": "1440p",
+        "fps": "100+ FPS",
+        "setting": "Ultra + Path Tracing + DLSS 4",
+        "razon": "Path Tracing en Indiana Jones requiere GPU de alta gama; el RTX 5070 lo maneja sin esfuerzo.",
+        "razonEn": "Path Tracing in Indiana Jones requires a high-end GPU; the RTX 5070 handles it effortlessly."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "4K",
+        "fps": "60 FPS",
+        "setting": "Ultra + Path Tracing",
+        "razon": "8 núcleos Zen 4 con refrigeración líquida: el CPU nunca throttlea en sesiones largas.",
+        "razonEn": "8 Zen 4 cores with liquid cooling: the CPU never throttles during long gaming sessions."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "100+ FPS",
+        "setting": "Ultra + Path Tracing + DLSS 4",
+        "razon": "Path Tracing demanda máximo ancho de banda; DDR5 6000MHz es imprescindible.",
+        "razonEn": "Path Tracing demands maximum bandwidth; DDR5 6000MHz is essential here."
+      }
+    ]
+  },
+  {
+    "titulo": "Assassin's Creed Shadows",
+    "tituloEn": "Assassin's Creed Shadows",
+    "steamId": 3159330,
+    "genero": "Acción Mundo Abierto",
+    "generoEn": "Open World Action",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-radeon-rx-9070-xt-gaming-oc-16g",
+        "id": 7,
+        "nombre": "GIGABYTE RX 9070 XT 16G",
+        "resolucion": "4K",
+        "fps": "60+ FPS",
+        "setting": "Ultra + FSR 4",
+        "razon": "16 GB GDDR6 + FSR 4: AC Shadows en 4K sin compromisos de temperatura ni de calidad.",
+        "razonEn": "16 GB GDDR6 + FSR 4: AC Shadows at 4K with no thermal or quality compromises."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "1440p",
+        "fps": "80+ FPS",
+        "setting": "Ultra",
+        "razon": "El 7700X exprime DDR5 para poblar el mundo abierto del Japón feudal sin stutters.",
+        "razonEn": "The 7700X leverages DDR5 to populate feudal Japan's open world without stutters."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "4K",
+        "fps": "60 FPS",
+        "setting": "Ultra + FSR 4",
+        "razon": "Con 4K y texturas ultra, el sistema necesita 32 GB para no paginar a disco.",
+        "razonEn": "At 4K with ultra textures, the system needs 32 GB to avoid paging to disk."
+      }
+    ]
+  },
+  {
+    "titulo": "Call of Duty: Warzone",
+    "tituloEn": "Call of Duty: Warzone",
+    "steamId": 1962663,
+    "genero": "Battle Royale FPS",
+    "generoEn": "Battle Royale FPS",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-8gb-oc",
+        "id": 2,
+        "nombre": "ASUS Dual RTX 5060 8GB OC",
+        "resolucion": "1080p",
+        "fps": "120+ FPS",
+        "setting": "Alto-Ultra",
+        "razon": "Warzone es muy CPU-limitado; la RTX 5060 elimina cualquier cuello de botella de GPU.",
+        "razonEn": "Warzone is heavily CPU-limited; the RTX 5060 removes any GPU bottleneck."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "intel-core-i5-12600",
+        "id": 2,
+        "nombre": "Intel Core i5-12600",
+        "resolucion": "1080p",
+        "fps": "120+ FPS",
+        "setting": "Alto-Ultra",
+        "razon": "El i5-12600 elimina el bottleneck de CPU en Warzone paired con la RTX 5060.",
+        "razonEn": "The i5-12600 removes the CPU bottleneck in Warzone when paired with the RTX 5060."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "teamgroup-t-force-delta-rgb-16gb-3600mhz",
+        "id": 4,
+        "nombre": "TEAMGROUP T-Force Delta DDR4 16GB 3600MHz",
+        "resolucion": "1080p",
+        "fps": "144+ FPS",
+        "setting": "Alto-Ultra",
+        "razon": "DDR4 3600MHz mantiene latencia mínima en Warzone competitivo.",
+        "razonEn": "DDR4 3600MHz maintains minimum latency in competitive Warzone play."
+      }
+    ]
+  },
+  {
+    "titulo": "Forza Horizon 5",
+    "tituloEn": "Forza Horizon 5",
+    "steamId": 1551360,
+    "genero": "Carreras",
+    "generoEn": "Racing",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "hyperrender-rx-580-8gb",
+        "id": 3,
+        "nombre": "HyperRender RX 580 8GB",
+        "resolucion": "1080p",
+        "fps": "120 FPS",
+        "setting": "Ultra",
+        "razon": "FH5 está muy optimizado; la RX 580 exprime 120 FPS junto al i5-12600.",
+        "razonEn": "FH5 is very well optimized; the RX 580 pushes 120 FPS when paired with the i5-12600."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-7600x",
+        "id": 5,
+        "nombre": "AMD Ryzen 5 7600X",
+        "resolucion": "1440p",
+        "fps": "120 FPS",
+        "setting": "Ultra",
+        "razon": "El 7600X con refrigeración se mantiene bajo 60°C a 120 FPS en FH5 en 1440p.",
+        "razonEn": "The 7600X with liquid cooling stays below 60°C at 120 FPS in FH5 at 1440p."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1080p",
+        "fps": "120 FPS",
+        "setting": "Ultra",
+        "razon": "FH5 carga el México abierto sin ningún hitch con 32 GB de RAM.",
+        "razonEn": "FH5 loads Mexico's open world without any hiccup with 32 GB of RAM."
+      }
+    ]
+  },
+  {
+    "titulo": "Call of Duty: Black Ops 6",
+    "tituloEn": "Call of Duty: Black Ops 6",
+    "steamId": 2933620,
+    "genero": "FPS",
+    "generoEn": "FPS",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-8gb-oc",
+        "id": 2,
+        "nombre": "ASUS Dual RTX 5060 8GB OC",
+        "resolucion": "1080p",
+        "fps": "144+ FPS",
+        "setting": "Alto",
+        "razon": "La RTX 5060 lleva BO6 a 144+ FPS en 1080p con DLSS 4 activado.",
+        "razonEn": "The RTX 5060 pushes BO6 to 144+ FPS at 1080p with DLSS 4 enabled."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-7600x",
+        "id": 5,
+        "nombre": "AMD Ryzen 5 7600X",
+        "resolucion": "1440p",
+        "fps": "144+ FPS",
+        "setting": "Alto",
+        "razon": "Zen 4 en AM5 reduce la latencia en shooters donde cada milisegundo cuenta.",
+        "razonEn": "Zen 4 on AM5 reduces latency in shooters where every millisecond counts."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "144+ FPS",
+        "setting": "Alto",
+        "razon": "DDR5 6000MHz en AM5 es el estándar para shooters competitivos de alta frecuencia.",
+        "razonEn": "DDR5 6000MHz on AM5 is the standard for high-refresh competitive shooters."
+      }
+    ]
+  },
+  {
+    "titulo": "Microsoft Flight Simulator 2024",
+    "tituloEn": "Microsoft Flight Simulator 2024",
+    "steamId": 2537590,
+    "genero": "Simulación",
+    "generoEn": "Simulation",
+    "recomendaciones": [
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-7-7700x",
+        "id": 6,
+        "nombre": "AMD Ryzen 7 7700X",
+        "resolucion": "1080p",
+        "fps": "45+ FPS",
+        "setting": "Alto",
+        "razon": "MSFS 2024 hace streaming masivo desde SSD; el 7700X mantiene la simulación fluida.",
+        "razonEn": "MSFS 2024 streams massively from SSD; the 7700X keeps the simulation smooth."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "gigastone-game-pro-32gb-3200mhz",
+        "id": 2,
+        "nombre": "Gigastone Game PRO 32GB DDR4",
+        "resolucion": "1080p",
+        "fps": "45+ FPS",
+        "setting": "Alto",
+        "razon": "MSFS 2024 necesita CPU multicore potente y 32 GB para la simulación de mundo abierto.",
+        "razonEn": "MSFS 2024 needs a powerful multicore CPU and 32 GB for its open-world simulation."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "45+ FPS",
+        "setting": "Ultra",
+        "razon": "MSFS 2024 en Ultra con AIO y DDR5 es el simulador más fluido que puedes tener.",
+        "razonEn": "MSFS 2024 on Ultra with AIO cooling and DDR5 is the smoothest simulator experience."
+      }
+    ]
+  },
+  {
+    "titulo": "Dragon Age: The Veilguard",
+    "tituloEn": "Dragon Age: The Veilguard",
+    "steamId": 1845910,
+    "genero": "RPG",
+    "generoEn": "RPG",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+        "id": 5,
+        "nombre": "ASUS RTX 5060 Ti 16GB OC",
+        "resolucion": "1440p",
+        "fps": "90+ FPS",
+        "setting": "Ultra",
+        "razon": "Con AIO silencioso el CPU no limita el rendimiento en las escenas masivas de Dragon Age.",
+        "razonEn": "With a silent AIO the CPU doesn't limit performance in Dragon Age's massive scenes."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-7600x",
+        "id": 5,
+        "nombre": "AMD Ryzen 5 7600X",
+        "resolucion": "1440p",
+        "fps": "90+ FPS",
+        "setting": "Ultra",
+        "razon": "El 7600X mantiene boost máximo durante las batallas más largas de Dragon Age.",
+        "razonEn": "The 7600X sustains maximum boost through Dragon Age's longest battles."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "teamgroup-t-force-delta-rgb-16gb-3600mhz",
+        "id": 4,
+        "nombre": "TEAMGROUP T-Force Delta DDR4 16GB 3600MHz",
+        "resolucion": "1440p",
+        "fps": "90+ FPS",
+        "setting": "Ultra",
+        "razon": "Alta velocidad de RAM reduce los microfreezes en transiciones de escenas.",
+        "razonEn": "High RAM speed reduces microfreezes during scene transitions."
+      }
+    ]
+  },
+  {
+    "titulo": "Star Wars Outlaws",
+    "tituloEn": "Star Wars Outlaws",
+    "steamId": 2842070,
+    "genero": "Acción Mundo Abierto",
+    "generoEn": "Open World Action",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "asus-dual-rtx-5060-ti-16gb-oc",
+        "id": 5,
+        "nombre": "ASUS RTX 5060 Ti 16GB OC",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra + DLSS 4",
+        "razon": "NVMe + RTX 5060 Ti: Star Wars Outlaws con texturas máximas sin ninguna espera.",
+        "razonEn": "NVMe + RTX 5060 Ti: Star Wars Outlaws at max textures with no wait times."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-9600x",
+        "id": 1,
+        "nombre": "AMD Ryzen 5 9600X",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra + DLSS 4",
+        "razon": "Zen 5 maneja excelentemente la IA de NPC y el streaming del mundo abierto.",
+        "razonEn": "Zen 5 excellently handles the NPC AI and open-world streaming demands."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
+        "id": 1,
+        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "resolucion": "1440p",
+        "fps": "60+ FPS",
+        "setting": "Ultra + DLSS 4",
+        "razon": "DDR5 6000MHz en AM5 con Zen 5 elimina cualquier stutter en el mundo abierto.",
+        "razonEn": "DDR5 6000MHz on AM5 with Zen 5 eliminates any stutter in the open world."
+      }
+    ]
+  },
+  {
+    "titulo": "CS2",
+    "tituloEn": "Counter-Strike 2",
+    "steamId": 730,
+    "genero": "FPS Competitivo",
+    "generoEn": "Competitive FPS",
+    "recomendaciones": [
+      {
+        "categoria": "tarjetas-graficas",
+        "slug": "zotac-geforce-gtx-960",
+        "id": 1,
+        "nombre": "ZOTAC GeForce GTX 960 2GB",
+        "resolucion": "1080p",
+        "fps": "150+ FPS",
+        "setting": "Bajo para máximos FPS",
+        "razon": "CS2 en settings competitivos no necesita más GPU que la GTX 960 para 150+ FPS.",
+        "razonEn": "CS2 at competitive settings doesn't need more GPU than the GTX 960 for 150+ FPS."
+      },
+      {
+        "categoria": "procesadores",
+        "slug": "amd-ryzen-5-5500",
+        "id": 3,
+        "nombre": "AMD Ryzen 5 5500",
+        "resolucion": "1080p",
+        "fps": "150+ FPS",
+        "setting": "Bajo para máximos FPS",
+        "razon": "En CS2 competitivo la CPU manda; el 5500 con 16 GB mantiene 150+ FPS estables.",
+        "razonEn": "In competitive CS2, the CPU rules; the 5500 with 16 GB sustains a stable 150+ FPS."
+      },
+      {
+        "categoria": "memoria-ram",
+        "slug": "oloy-white-owl-16gb-3200mhz",
+        "id": 3,
+        "nombre": "OLOy DDR4 16GB 3200MHz",
+        "resolucion": "1080p",
+        "fps": "100+ FPS",
+        "setting": "Medio",
+        "razon": "16 GB a 3200 MHz eliminan los stutters de carga de mapas en CS2.",
+        "razonEn": "16 GB at 3200 MHz eliminates map-loading stutters in CS2."
+      }
+    ]
+  }
+]
