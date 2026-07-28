@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "La mejor refrigeración líquida para PC gaming: AIOs 240 mm y 360 mm. Sistema de refrigeración de PC con enfriamiento líquido silencioso al mejor precio con envío Amazon.";
 const description = 'La mejor refrigeración líquida para PC y sistemas de refrigeración de PC AIO. Enfriamiento líquido silencioso y eficiente para gaming con overclocking y RGB.';
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/refrigeracion-liquida/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="Refrigeración Líquida más vendida"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-liquida']} />
 </SiteLayout>

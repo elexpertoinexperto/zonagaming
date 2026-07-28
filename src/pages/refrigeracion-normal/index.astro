@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores refrigeración cooler para PC: disipadores de torre y sistemas de enfriamiento por aire al mejor precio con envío Amazon.";
 const description = 'Los mejores refrigeración cooler y sistemas de enfriamiento por aire para gaming. Disipadores de torre silenciosos y eficientes para mantener tu CPU a temperatura óptima.';
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/refrigeracion-normal/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="Refrigeración Cooler más vendida"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-normal']} />
 </SiteLayout>

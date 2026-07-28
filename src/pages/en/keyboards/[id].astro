@@ -40,6 +40,7 @@ const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0
     precio={producto.precio}
     enlaceAmazon={producto.enlaceAmazon}
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
+    marca={(producto as any).marca}
   />
 </SiteLayout>
 

@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores audífonos gamer con sonido 7.1 y micrófono nítido. Diademas gamer y cascos gamer al mejor precio con envío Amazon.";
 const description = 'Los mejores audífonos gamer, diademas gamer y cascos gamer con sonido envolvente, micrófono con cancelación de ruido y comodidad para largas sesiones de juego.';
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/audifonos/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="Audífonos Gamer más vendidos"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['audifonos']} />
 </SiteLayout>

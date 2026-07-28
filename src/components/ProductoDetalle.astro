@@ -7,9 +7,10 @@ interface Props {
   enlaceAmazon: string;
   imagenPath: string;
   lang?: 'es' | 'en';
+  marca?: string;
 }
 
-const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath, lang = 'es' } = Astro.props;
+const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath, lang = 'es', marca } = Astro.props;
 const isEn = lang === 'en';
 const tSpecs = isEn ? 'Specifications' : 'Especificaciones';
 const tPrice = isEn ? 'Price' : 'Precio';
@@ -23,6 +24,7 @@ const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
     </div>
     
     <div class="producto-info">
+      {marca && <span class="brand-tag">{marca}</span>}
       <h1>{nombre}</h1>
       
       <p class="descripcion">{descripcion}</p>
@@ -77,6 +79,20 @@ const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
     max-height: 100%;
     object-fit: contain;
     padding: 12px;
+  }
+
+  .brand-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.1);
+    border: 1px solid rgba(124, 255, 203, 0.3);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-bottom: 10px;
   }
 
   .producto-info h1 {

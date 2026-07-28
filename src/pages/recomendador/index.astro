@@ -50,7 +50,7 @@ const schema = {
     <section class="rec-hero">
       <div class="rec-hero-inner">
         <span class="rec-eyebrow">🎮 Herramienta</span>
-        <h1>Recomendador de componentes</h1>
+        <h1>Recomendador de componentes: ¿Qué componentes de PC me sirven para un juego en específico?</h1>
         <p>Selecciona un juego y te mostramos exactamente qué GPU, CPU y RAM necesitas para correrlo al máximo.</p>
       </div>
     </section>
@@ -149,7 +149,11 @@ const schema = {
     panelImg.src = `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`;
     panelImg.alt = juego.titulo;
 
-    panelCards.innerHTML = juego.recomendaciones.map(rec => {
+    const catOrder = { 'tarjetas-graficas': 0, 'procesadores': 1, 'memoria-ram': 2 };
+    const sorted = [...juego.recomendaciones].sort((a, b) =>
+      (catOrder[a.categoria] ?? 9) - (catOrder[b.categoria] ?? 9)
+    );
+    panelCards.innerHTML = sorted.map(rec => {
       const color = catColor[rec.categoria] || '#7cffcb';
       const label = catLabel[rec.categoria] || rec.categoria;
       const href = getProductPath(rec.categoria, rec.slug, rec.id);

@@ -3,6 +3,8 @@ import SiteLayout from '../../../components/SiteLayout.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import BestSellers from '../../../components/BestSellers.astro';
 import Comparador from '../../../components/Comparador.astro';
+import FAQ from '../../../components/FAQ.astro';
+import { faqEn } from '../../../data/faq';
 import productos from '../../../data/productos-en.json';
 import { CATS_EN } from '../../../i18n/en';
 
@@ -44,6 +46,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/en/${categoria}/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }}/>
     ))}
   </section>
@@ -67,4 +70,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title={cat.bsTitle}
     products={bestSellerProducts}
   />
+  <FAQ title="Frequently Asked Questions" items={faqEn['teclados']} />
 </SiteLayout>

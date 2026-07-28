@@ -151,7 +151,11 @@ const schema = {
     panelImg.src = `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`;
     panelImg.alt = juego.tituloEn;
 
-    panelCards.innerHTML = juego.recomendaciones.map(rec => {
+    const catOrder = { 'tarjetas-graficas': 0, 'procesadores': 1, 'memoria-ram': 2 };
+    const sorted = [...juego.recomendaciones].sort((a, b) =>
+      (catOrder[a.categoria] ?? 9) - (catOrder[b.categoria] ?? 9)
+    );
+    panelCards.innerHTML = sorted.map(rec => {
       const color = catColor[rec.categoria] || '#7cffcb';
       const label = catLabelEn[rec.categoria] || rec.categoria;
       const href = getProductPath(rec.categoria, rec.slug, rec.id);

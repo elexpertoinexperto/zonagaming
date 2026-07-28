@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores gabinetes gamer para PC: mid-tower y full-tower con airflow, vidrio templado y RGB. Gabinete para PC al mejor precio con envío Amazon.";
 const description = 'Los mejores gabinetes gamer y gabinetes para PC con máximo flujo de aire, panel de vidrio templado y espacio para builds potentes. Encuentra el gabinete ideal para tu setup.';
@@ -20,7 +22,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Gabinetes Gamer para PC | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title="Gabinetes/Chasis Gamer para PC ¡A buenos precios!" description={metaDescription} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/gabinetes-gamer/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="Gabinetes Gamer más vendidos"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['gabinetes-gamer']} />
 </SiteLayout>

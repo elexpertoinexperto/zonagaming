@@ -13,7 +13,8 @@
       },
       "precio": 200,
       "enlaceAmazon": "https://amzn.to/4u5AmuV",
-      "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L_transparent.png"
+      "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L_transparent.png",
+      "marca": "ZOTAC"
     },
     {
       "id": 2,
@@ -28,7 +29,8 @@
       },
       "precio": 354.99,
       "enlaceAmazon": "https://amzn.to/4ufHRzn",
-      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/35710ce7-7a2b-42ab-aa48-63c448e6c047/w800"
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/35710ce7-7a2b-42ab-aa48-63c448e6c047/w800",
+      "marca": "ASUS"
     },
     {
       "id": 3,
@@ -43,7 +45,8 @@
       },
       "precio": 119.99,
       "enlaceAmazon": "https://amzn.to/4uMk5Mw",
-      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466__transparent.png",
+      "marca": "HyperRender"
     },
     {
       "id": 4,
@@ -58,7 +61,8 @@
       },
       "precio": 459.99,
       "enlaceAmazon": "https://amzn.to/4a4BjME",
-      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466__transparent.png",
+      "marca": "GIGABYTE"
     },
     {
       "id": 5,
@@ -73,7 +77,8 @@
       },
       "precio": 571.3,
       "enlaceAmazon": "https://amzn.to/4u8hP0K",
-      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/d9408583-9a6f-4a2b-b721-c09f1fe8cf99/w800"
+      "imagenUrl": "https://dlcdnwebimgs.asus.com/gain/d9408583-9a6f-4a2b-b721-c09f1fe8cf99/w800",
+      "marca": "ASUS"
     },
     {
       "id": 6,
@@ -88,7 +93,8 @@
       },
       "precio": 635.99,
       "enlaceAmazon": "https://amzn.to/4fUa8b8",
-      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466__transparent.png",
+      "marca": "GIGABYTE"
     },
     {
       "id": 7,
@@ -103,7 +109,8 @@
       },
       "precio": 699.99,
       "enlaceAmazon": "https://amzn.to/3RY1ZbH",
-      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466__transparent.png",
+      "marca": "GIGABYTE"
     }
   ],
   "procesadores": [
@@ -121,7 +128,8 @@
       },
       "precio": 179,
       "enlaceAmazon": "https://amzn.to/4uEUKUA",
-      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466__transparent.png",
+      "marca": "AMD"
     },
     {
       "id": 2,
@@ -137,7 +145,8 @@
       },
       "precio": 315,
       "enlaceAmazon": "https://amzn.to/4fUakam",
-      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466__transparent.png",
+      "marca": "Intel"
     },
     {
       "id": 3,
@@ -153,7 +162,8 @@
       },
       "precio": 84,
       "enlaceAmazon": "https://amzn.to/3PEAiEi",
-      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466__transparent.png",
+      "marca": "AMD"
     },
     {
       "id": 4,
@@ -169,7 +179,8 @@
       },
       "precio": 227.45,
       "enlaceAmazon": "https://amzn.to/435HhJx",
-      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466__transparent.png",
+      "marca": "AMD"
     },
     {
       "id": 5,
@@ -185,7 +196,8 @@
       },
       "precio": 167,
       "enlaceAmazon": "https://amzn.to/4anaiEh",
-      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466__transparent.png",
+      "marca": "AMD"
     },
     {
       "id": 6,
@@ -201,7 +213,8 @@
       },
       "precio": 234,
       "enlaceAmazon": "https://amzn.to/4uMp4wJ",
-      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466__transparent.png",
+      "marca": "AMD"
     },
     {
       "id": 7,
@@ -217,7 +230,8 @@
       },
       "precio": 218.98,
       "enlaceAmazon": "https://amzn.to/4dYSAIv",
-      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466__transparent.png",
+      "marca": "AMD"
     }
   ],
   "memoria-ram": [
@@ -238,7 +252,8 @@
       },
       "precio": 249.99,
       "enlaceAmazon": "https://amzn.to/43ONmu1",
-      "imagenUrl": "/imagenes/memoria-ram/1/1_transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/1/1_transparent.png",
+      "marca": "CORSAIR"
     },
     {
       "id": 2,
@@ -257,7 +272,8 @@
       },
       "precio": 228.89,
       "enlaceAmazon": "https://amzn.to/43cHSsS",
-      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466__transparent.png",
+      "marca": "Gigastone"
     },
     {
       "id": 3,
@@ -276,7 +292,8 @@
       },
       "precio": 124.99,
       "enlaceAmazon": "https://amzn.to/4x53qFn",
-      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679__transparent.png",
+      "marca": "OLOy"
     },
     {
       "id": 4,
@@ -295,7 +312,8 @@
       },
       "precio": 169.99,
       "enlaceAmazon": "https://amzn.to/4uSUHos",
-      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466__transparent.png",
+      "marca": "TEAMGROUP"
     },
     {
       "id": 5,
@@ -314,7 +332,8 @@
       },
       "precio": 106.99,
       "enlaceAmazon": "https://amzn.to/4xgdRpY",
-      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466__transparent.png",
+      "marca": "OLOy"
     },
     {
       "id": 6,
@@ -333,7 +352,8 @@
       },
       "precio": 194.99,
       "enlaceAmazon": "https://amzn.to/4x53tkx",
-      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png",
+      "marca": "OLOy"
     },
     {
       "id": 7,
@@ -352,7 +372,8 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4dQYBIo",
-      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466__transparent.png",
+      "marca": "OLOy"
     }
   ],
   "ssd": [
@@ -370,7 +391,8 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4o6FNIm",
-      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466__transparent.png",
+      "marca": "SIX"
     },
     {
       "id": 2,
@@ -386,7 +408,8 @@
       },
       "precio": 163.9,
       "enlaceAmazon": "https://amzn.to/4uRL2yn",
-      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466__transparent.png",
+      "marca": "Kingston"
     },
     {
       "id": 3,
@@ -402,7 +425,8 @@
       },
       "precio": 389.99,
       "enlaceAmazon": "https://amzn.to/4o6tr2Z",
-      "imagenUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/mz-v9p2t0b-am/gallery/us-990pro-nvme-m2-ssd-mz-v9p2t0b-am-551141316"
+      "imagenUrl": "https://images.samsung.com/is/image/samsung/p6pim/us/mz-v9p2t0b-am/gallery/us-990pro-nvme-m2-ssd-mz-v9p2t0b-am-551141316",
+      "marca": "Samsung"
     },
     {
       "id": 4,
@@ -418,7 +442,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4fZHiWO",
-      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466__transparent.png",
+      "marca": "Fikwot"
     },
     {
       "id": 5,
@@ -434,7 +459,8 @@
       },
       "precio": 87.37,
       "enlaceAmazon": "https://amzn.to/3RKHCyR",
-      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466__transparent.png",
+      "marca": "KOOTION"
     },
     {
       "id": 6,
@@ -450,7 +476,8 @@
       },
       "precio": 299.95,
       "enlaceAmazon": "https://amzn.to/3RR3SHh",
-      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466__transparent.png",
+      "marca": "WD"
     },
     {
       "id": 7,
@@ -466,7 +493,8 @@
       },
       "precio": 85.99,
       "enlaceAmazon": "https://amzn.to/4e2Vg7X",
-      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466__transparent.png",
+      "marca": "fanxiang"
     }
   ],
   "fuentes-de-poder": [
@@ -484,7 +512,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/43kKiFR",
-      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 2,
@@ -500,7 +529,8 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3SmBuwJ",
-      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 3,
@@ -516,7 +546,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4ucnyml",
-      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466__transparent.png",
+      "marca": "CORSAIR"
     },
     {
       "id": 4,
@@ -532,7 +563,8 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4o9nkep",
-      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466__transparent.png",
+      "marca": "GOLDEN FIELD"
     },
     {
       "id": 5,
@@ -548,7 +580,8 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/4vt3ey7",
-      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466__transparent.png",
+      "marca": "Vetroo"
     },
     {
       "id": 6,
@@ -564,7 +597,8 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4ac6DJs",
-      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466__transparent.png",
+      "marca": "ASRock"
     },
     {
       "id": 7,
@@ -580,7 +614,8 @@
       },
       "precio": 64.99,
       "enlaceAmazon": "https://amzn.to/4vyUQ0g",
-      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466__transparent.png",
+      "marca": "ASRock"
     }
   ],
   "refrigeracion-liquida": [
@@ -598,7 +633,8 @@
       },
       "precio": 92.99,
       "enlaceAmazon": "https://amzn.to/4vyWVt6",
-      "imagenUrl": "https://www.arctic.de/media/2c/5d/f0/1741775358/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g00.png"
+      "imagenUrl": "https://www.arctic.de/media/2c/5d/f0/1741775358/Liquid_Freezer_III_360_Black_ARGB_Rainbow_g00.png",
+      "marca": "ARCTIC"
     },
     {
       "id": 2,
@@ -614,7 +650,8 @@
       },
       "precio": 96.99,
       "enlaceAmazon": "https://amzn.to/4v1YgbR",
-      "imagenUrl": "https://www.arctic.de/media/d8/01/85/1741775469/Liquid_Freezer_III_360_White_ARGB_Rainbow_g00.png"
+      "imagenUrl": "https://www.arctic.de/media/d8/01/85/1741775469/Liquid_Freezer_III_360_White_ARGB_Rainbow_g00.png",
+      "marca": "ARCTIC"
     },
     {
       "id": 3,
@@ -630,7 +667,8 @@
       },
       "precio": 83.99,
       "enlaceAmazon": "https://amzn.to/4dMyJgI",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522__transparent.png",
+      "marca": "ARCTIC"
     },
     {
       "id": 4,
@@ -646,7 +684,8 @@
       },
       "precio": 129.99,
       "enlaceAmazon": "https://amzn.to/4e5l57h",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466__transparent.png",
+      "marca": "CORSAIR"
     },
     {
       "id": 5,
@@ -662,7 +701,8 @@
       },
       "precio": 52.99,
       "enlaceAmazon": "https://amzn.to/4e8ymvW",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522__transparent.png",
+      "marca": "Minorsonic"
     },
     {
       "id": 6,
@@ -678,7 +718,8 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/3RLqJnG",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679__transparent.png",
+      "marca": "Antec"
     },
     {
       "id": 7,
@@ -694,7 +735,8 @@
       },
       "precio": 44.9,
       "enlaceAmazon": "https://amzn.to/4dMyORy",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522__transparent.png",
+      "marca": "Thermalright"
     }
   ],
   "refrigeracion-normal": [
@@ -712,7 +754,8 @@
       },
       "precio": 57.69,
       "enlaceAmazon": "https://amzn.to/4dQ6rSz",
-      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522__transparent.png",
+      "marca": "Thermalright"
     },
     {
       "id": 2,
@@ -728,7 +771,8 @@
       },
       "precio": 22.9,
       "enlaceAmazon": "https://amzn.to/4o6hIl2",
-      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522__transparent.png",
+      "marca": "Thermalright"
     },
     {
       "id": 3,
@@ -744,7 +788,8 @@
       },
       "precio": 25.99,
       "enlaceAmazon": "https://amzn.to/4dQQ203",
-      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522__transparent.png",
+      "marca": "Vetroo"
     },
     {
       "id": 4,
@@ -760,7 +805,8 @@
       },
       "precio": 164.95,
       "enlaceAmazon": "https://amzn.to/49KpDia",
-      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522__transparent.png",
+      "marca": "Noctua"
     },
     {
       "id": 5,
@@ -776,7 +822,8 @@
       },
       "precio": 34.9,
       "enlaceAmazon": "https://amzn.to/4g1ZQFS",
-      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466__transparent.png",
+      "marca": "Thermalright"
     },
     {
       "id": 6,
@@ -792,7 +839,8 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4of8GCy",
-      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 7,
@@ -808,7 +856,8 @@
       },
       "precio": 33.9,
       "enlaceAmazon": "https://amzn.to/4fxCUOR",
-      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png"
+      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png",
+      "marca": "Genérico"
     }
   ],
   "gabinetes-gamer": [
@@ -826,7 +875,8 @@
       },
       "precio": 69.99,
       "enlaceAmazon": "https://amzn.to/49CU6Pc",
-      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.png",
+      "marca": "FOIFKIN"
     },
     {
       "id": 2,
@@ -842,7 +892,8 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/3RPC4TJ",
-      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.png",
+      "marca": "RUIX"
     },
     {
       "id": 3,
@@ -858,7 +909,8 @@
       },
       "precio": 86.99,
       "enlaceAmazon": "https://amzn.to/4vpHfIo",
-      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.png",
+      "marca": "GAMDIAS"
     },
     {
       "id": 4,
@@ -874,7 +926,8 @@
       },
       "precio": 169,
       "enlaceAmazon": "https://amzn.to/4ea3cUX",
-      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.png",
+      "marca": "JONSBO"
     },
     {
       "id": 5,
@@ -890,7 +943,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4dVdQ1u",
-      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/frame-4000d/Content/FRAME-4000D-RS-ARGB/Gallery/CC-9011296-WW_01.webp"
+      "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/frame-4000d/Content/FRAME-4000D-RS-ARGB/Gallery/CC-9011296-WW_01.webp",
+      "marca": "CORSAIR"
     },
     {
       "id": 6,
@@ -906,7 +960,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4o8APLt",
-      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 7,
@@ -922,7 +977,8 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/49JizlT",
-      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.png",
+      "marca": "Genérico"
     }
   ],
   "teclados": [
@@ -940,7 +996,8 @@
       },
       "precio": 39.99,
       "enlaceAmazon": "https://amzn.to/4uf6cVO",
-      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466__transparent.png",
+      "marca": "RedThunder"
     },
     {
       "id": 2,
@@ -956,7 +1013,8 @@
       },
       "precio": 68.99,
       "enlaceAmazon": "https://amzn.to/43TJ4kY",
-      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466__transparent.png",
+      "marca": "RedThunder"
     },
     {
       "id": 3,
@@ -972,7 +1030,8 @@
       },
       "precio": 65.54,
       "enlaceAmazon": "https://amzn.to/4enLhv3",
-      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939",
+      "marca": "AULA"
     },
     {
       "id": 4,
@@ -988,7 +1047,8 @@
       },
       "precio": 29.99,
       "enlaceAmazon": "https://amzn.to/43hRWAL",
-      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466__transparent.png",
+      "marca": "Redragon"
     },
     {
       "id": 5,
@@ -1004,7 +1064,8 @@
       },
       "precio": 69.99,
       "enlaceAmazon": "https://amzn.to/4dSfYZe",
-      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939"
+      "imagenUrl": "https://www.aulagaming.com/cdn/shop/files/AULA_F75PRO.webp?v=1763003939",
+      "marca": "AULA"
     },
     {
       "id": 6,
@@ -1020,7 +1081,8 @@
       },
       "precio": 53.99,
       "enlaceAmazon": "https://amzn.to/4e6FNUc",
-      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 7,
@@ -1036,7 +1098,8 @@
       },
       "precio": 71.99,
       "enlaceAmazon": "https://amzn.to/4vv1rJ4",
-      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466__transparent.png",
+      "marca": "AULA"
     }
   ],
   "mouse": [
@@ -1054,7 +1117,8 @@
       },
       "precio": 37.71,
       "enlaceAmazon": "https://amzn.to/4o6ukIR",
-      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679__transparent.png",
+      "marca": "Attack Shark"
     },
     {
       "id": 2,
@@ -1070,7 +1134,8 @@
       },
       "precio": 129.95,
       "enlaceAmazon": "https://amzn.to/3RLr9KM",
-      "imagenUrl": "https://www.pulsar.gg/cdn/shop/files/Pulsar-X3_rhd-Top-mini_large.png?v=1755750472"
+      "imagenUrl": "https://www.pulsar.gg/cdn/shop/files/Pulsar-X3_rhd-Top-mini_large.png?v=1755750472",
+      "marca": "Pulsar"
     },
     {
       "id": 3,
@@ -1086,7 +1151,8 @@
       },
       "precio": 37.99,
       "enlaceAmazon": "https://amzn.to/4ulGsaC",
-      "imagenUrl": "https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/basilisk.png"
+      "imagenUrl": "https://assets2.razerzone.com/pages/basilisk-v3-4D578898E8144Le8da21dde32b7a9f5f/basilisk.png",
+      "marca": "Razer"
     },
     {
       "id": 4,
@@ -1102,7 +1168,8 @@
       },
       "precio": 159.99,
       "enlaceAmazon": "https://amzn.to/3QqHeFf",
-      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466__transparent.png",
+      "marca": "Razer"
     },
     {
       "id": 5,
@@ -1118,7 +1185,8 @@
       },
       "precio": 79.95,
       "enlaceAmazon": "https://amzn.to/4ujsZjx",
-      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466__transparent.png"
+      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466__transparent.png",
+      "marca": "GravaStar"
     },
     {
       "id": 6,
@@ -1134,7 +1202,8 @@
       },
       "precio": 42.99,
       "enlaceAmazon": "https://amzn.to/4aeSsTX",
-      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679__transparent.png",
+      "marca": "AJAZZ"
     },
     {
       "id": 7,
@@ -1150,7 +1219,8 @@
       },
       "precio": 48.99,
       "enlaceAmazon": "https://amzn.to/4vvwp3G",
-      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/433606e87c3512c0cd3b44faf9d114b2/razer-basilisk-v3-x-hyperspeed-hero-desktop.webp"
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/433606e87c3512c0cd3b44faf9d114b2/razer-basilisk-v3-x-hyperspeed-hero-desktop.webp",
+      "marca": "Razer"
     }
   ],
   "audifonos": [
@@ -1168,7 +1238,8 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4ufS1zS",
-      "imagenUrl": "https://cdn.shopify.com/s/files/1/0287/1138/7195/files/1_301b770a-d020-4a40-ba31-f5b39fd101cc.jpg?v=1695712531"
+      "imagenUrl": "https://cdn.shopify.com/s/files/1/0287/1138/7195/files/1_301b770a-d020-4a40-ba31-f5b39fd101cc.jpg?v=1695712531",
+      "marca": "EKSA"
     },
     {
       "id": 2,
@@ -1184,7 +1255,8 @@
       },
       "precio": 57.99,
       "enlaceAmazon": "https://amzn.to/4ok0cdd",
-      "imagenUrl": "https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_black_66x0048_main_1_e4cf7af3-d79e-4443-adc2-61f74184697e.jpg?v=1771520345"
+      "imagenUrl": "https://hyperx.com/cdn/shop/files/hyperx_cloud_iii_black_66x0048_main_1_e4cf7af3-d79e-4443-adc2-61f74184697e.jpg?v=1771520345",
+      "marca": "HyperX"
     },
     {
       "id": 3,
@@ -1200,7 +1272,8 @@
       },
       "precio": 128.99,
       "enlaceAmazon": "https://amzn.to/3S7ybcN",
-      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679__transparent.png",
+      "marca": "Logitech"
     },
     {
       "id": 4,
@@ -1216,7 +1289,8 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/3S5Fce5",
-      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.png",
+      "marca": "Genérico"
     },
     {
       "id": 5,
@@ -1232,7 +1306,8 @@
       },
       "precio": 39.98,
       "enlaceAmazon": "https://amzn.to/4dRMeMd",
-      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/711f9a9937345927cb4ed5fecce8a44f/razer-kraken-v3-x_hero-mobile-768x460.jpg"
+      "imagenUrl": "https://assets2.razerzone.com/images/pnx.assets/711f9a9937345927cb4ed5fecce8a44f/razer-kraken-v3-x_hero-mobile-768x460.jpg",
+      "marca": "Razer"
     },
     {
       "id": 6,
@@ -1248,7 +1323,8 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3RGyyLp",
-      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679__transparent.png",
+      "marca": "KZ"
     },
     {
       "id": 7,
@@ -1264,7 +1340,8 @@
       },
       "precio": 35.99,
       "enlaceAmazon": "https://amzn.to/4e5RN8q",
-      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679__transparent.png"
+      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679__transparent.png",
+      "marca": "NUBWO"
     }
   ]
 }

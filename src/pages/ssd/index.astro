@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores SSD para PC gaming: NVMe y SATA de alta velocidad. Memoria SSD al mejor precio con envío Amazon para cargar tus juegos en segundos.";
 const description = 'Los mejores SSD y memoria SSD para gaming, streaming y productividad. Encuentra tu unidad NVMe o SATA ideal con la mejor relación velocidad/precio para tu PC.';
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/ssd/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="SSD más vendidos"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['ssd']} />
 </SiteLayout>

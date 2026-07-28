@@ -7,6 +7,7 @@ type ProductCardData = {
   imageUrl?: string;
   detailHref?: string;
   amazonHref?: string;
+  marca?: string;
 };
 
 const { product, lang = 'es' } = Astro.props as { product: ProductCardData; lang?: 'es' | 'en' };
@@ -17,6 +18,7 @@ const tImageOf = lang === 'en' ? 'Image of' : 'Imagen de';
 <article class="product-card">
   <div class="product-card-content">
     <div>
+      {product.marca && <span class="brand-tag">{product.marca}</span>}
       <h2>{product.name}</h2>
       <div class="product-card-image">
         <img
@@ -48,3 +50,19 @@ const tImageOf = lang === 'en' ? 'Image of' : 'Imagen de';
     </div>
   </div>
 </article>
+
+<style>
+  .brand-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7cffcb;
+    background: rgba(124, 255, 203, 0.1);
+    border: 1px solid rgba(124, 255, 203, 0.3);
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-bottom: 6px;
+  }
+</style>

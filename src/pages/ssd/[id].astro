@@ -47,6 +47,7 @@ const breadcrumb = {
     precio={producto.precio}
     enlaceAmazon={producto.enlaceAmazon}
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
+    marca={(producto as any).marca}
   />
 
   <JuegosCompatibles categoria="ssd" productoId={numeroId} productoNombre={producto.nombre} />

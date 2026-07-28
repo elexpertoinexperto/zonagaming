@@ -1,0 +1,100 @@
+---
+import type { FaqItem } from '../data/faq';
+
+interface Props {
+  title: string;
+  items: FaqItem[];
+}
+
+const { title, items } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+---
+
+<section class="faq">
+  <div class="faq-inner">
+    <h2>{title}</h2>
+    <dl class="faq-list">
+      {items.map(({ q, a }) => (
+        <div class="faq-item">
+          <dt>{q}</dt>
+          <dd>{a}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+<style>
+  .faq {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    margin-top: 64px;
+  }
+
+  .faq-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 2rem 64px;
+  }
+
+  .faq h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7cffcb;
+    margin: 0 0 36px;
+    letter-spacing: -0.01em;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .faq-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  dt {
+    font-size: 0.97rem;
+    font-weight: 700;
+    color: #e6f7ff;
+    margin: 0 0 7px;
+    line-height: 1.4;
+  }
+
+  dd {
+    font-size: 0.91rem;
+    color: #8aa0b8;
+    line-height: 1.72;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .faq-inner {
+      padding: 40px 1.25rem 48px;
+    }
+
+    .faq h2 {
+      font-size: 1.25rem;
+    }
+
+    dt {
+      font-size: 0.93rem;
+    }
+  }
+</style>

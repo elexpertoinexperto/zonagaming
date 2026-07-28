@@ -721,37 +721,37 @@
     "generoEn": "Simulation",
     "recomendaciones": [
       {
+        "categoria": "tarjetas-graficas",
+        "slug": "gigabyte-rtx-5070-windforce-oc-sff-12g",
+        "id": 6,
+        "nombre": "GIGABYTE GeForce RTX 5070 WINDFORCE OC SFF 12G",
+        "resolucion": "1440p",
+        "fps": "45+ FPS",
+        "setting": "Ultra",
+        "razon": "MSFS 2024 es muy exigente en GPU para renderizar terreno detallado; la RTX 5070 mantiene 45+ FPS en Ultra a 1440p.",
+        "razonEn": "MSFS 2024 is extremely GPU-demanding for detailed terrain rendering; the RTX 5070 holds 45+ FPS at 1440p Ultra."
+      },
+      {
         "categoria": "procesadores",
         "slug": "amd-ryzen-7-7700x",
         "id": 6,
         "nombre": "AMD Ryzen 7 7700X",
-        "resolucion": "1080p",
+        "resolucion": "1440p",
         "fps": "45+ FPS",
         "setting": "Alto",
-        "razon": "MSFS 2024 hace streaming masivo desde SSD; el 7700X mantiene la simulación fluida.",
-        "razonEn": "MSFS 2024 streams massively from SSD; the 7700X keeps the simulation smooth."
+        "razon": "MSFS 2024 hace streaming masivo desde SSD; el 7700X mantiene la simulación fluida sin cuello de botella.",
+        "razonEn": "MSFS 2024 streams massively from SSD; the 7700X keeps simulation smooth without CPU bottleneck."
       },
       {
         "categoria": "memoria-ram",
         "slug": "gigastone-game-pro-32gb-3200mhz",
         "id": 2,
-        "nombre": "Gigastone Game PRO 32GB DDR4",
-        "resolucion": "1080p",
-        "fps": "45+ FPS",
-        "setting": "Alto",
-        "razon": "MSFS 2024 necesita CPU multicore potente y 32 GB para la simulación de mundo abierto.",
-        "razonEn": "MSFS 2024 needs a powerful multicore CPU and 32 GB for its open-world simulation."
-      },
-      {
-        "categoria": "memoria-ram",
-        "slug": "corsair-vengeance-rgb-rs-16gb-6000mhz",
-        "id": 1,
-        "nombre": "CORSAIR Vengeance DDR5 16GB 6000MHz",
+        "nombre": "Gigastone Game PRO 32GB DDR4 3200MHz",
         "resolucion": "1440p",
         "fps": "45+ FPS",
-        "setting": "Ultra",
-        "razon": "MSFS 2024 en Ultra con AIO y DDR5 es el simulador más fluido que puedes tener.",
-        "razonEn": "MSFS 2024 on Ultra with AIO cooling and DDR5 is the smoothest simulator experience."
+        "setting": "Alto",
+        "razon": "MSFS 2024 consume 24–28 GB de RAM en Ultra; 32 GB son el mínimo para evitar stutters por falta de memoria.",
+        "razonEn": "MSFS 2024 uses 24–28 GB of RAM on Ultra; 32 GB is the minimum to avoid memory-shortage stutters."
       }
     ]
   },

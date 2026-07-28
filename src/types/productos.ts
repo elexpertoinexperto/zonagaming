@@ -10,4 +10,5 @@ export interface Producto {
   imagenAboveFold?: boolean;
   imagenProducto?: string;
   imagenAlt?: string;
+  marca?: string;
 }

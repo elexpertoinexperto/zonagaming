@@ -5,6 +5,8 @@ import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores mouse gamer ópticos y ergonómicos para gaming competitivo. Ratón gamer con sensor de precisión al mejor precio con envío Amazon.";
 const description = 'Los mejores mouse gamer y ratón gamer para gaming competitivo. Sensores ópticos de alta precisión, diseño ergonómico y máxima velocidad para cada tipo de jugador.';
@@ -49,6 +51,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
         imageUrl: product.imagenUrl,
         detailHref: `/mouse/${product.slug}-${product.id}/`,
         amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
       }} />
     ))}
   </section>
@@ -73,4 +76,5 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title="Mouse Gamer más vendidos"
     products={bestSellerProducts}
   />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['mouse']} />
 </SiteLayout>
