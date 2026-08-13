@@ -175,6 +175,13 @@ const schema = {
               <path d="M3 7H11M8 4L11 7L8 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
+          ${rec.alternativas && rec.alternativas.length ? `
+          <div class="rec-alts">
+            <p class="rec-alts-label">También te sirven:</p>
+            <ul class="rec-alts-list">
+              ${rec.alternativas.map(a => `<li>${a}</li>`).join('')}
+            </ul>
+          </div>` : ''}
         </div>
       `;
     }).join('');
@@ -588,6 +595,42 @@ const schema = {
 
   .rec-card-link:hover {
     gap: 10px;
+  }
+
+  /* Alternatives */
+  .rec-alts {
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .rec-alts-label {
+    font-size: 0.67rem;
+    font-weight: 600;
+    color: #334d63;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
+
+  .rec-alts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .rec-alts-list li {
+    font-size: 0.75rem;
+    color: #3d5a72;
+    line-height: 1.45;
+  }
+
+  .rec-alts-list li::before {
+    content: '· ';
+    color: #2a3f52;
   }
 
   /* Responsive */
