@@ -1,0 +1,57 @@
+---
+import SiteLayout from '../components/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Página no encontrada | Monckey Gamer"
+  description="La página que buscas no existe o fue movida."
+  robots="noindex, nofollow"
+>
+  <section class="nf">
+    <span class="nf-code">404</span>
+    <h1>Página no encontrada</h1>
+    <p>La página que buscas no existe o fue movida. <span lang="en">Page not found.</span></p>
+    <div class="nf-links">
+      <a href="/" class="nf-btn">Ir al inicio</a>
+      <a href="/en/" class="nf-btn nf-btn-alt">Go to home (EN)</a>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .nf {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 96px 20px;
+    text-align: center;
+  }
+  .nf-code {
+    display: block;
+    font-size: clamp(64px, 14vw, 120px);
+    font-weight: 800;
+    line-height: 1;
+    color: #7cffcb;
+  }
+  .nf h1 { margin: 12px 0 8px; }
+  .nf p { opacity: 0.8; }
+  .nf-links {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+  .nf-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #7cffcb;
+    color: #0b0f14;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .nf-btn-alt {
+    background: transparent;
+    color: #7cffcb;
+    border: 1px solid #7cffcb;
+  }
+</style>
