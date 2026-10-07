@@ -79,6 +79,13 @@ export const faqEs: FaqData = {
     { q: '¿Drivers de 40mm o 50mm?', a: '50 mm: más bass y mayor volumen máximo. 40 mm: más ligero y compacto. Para gaming, 50 mm suele ofrecer mejor posicionamiento de audio.' },
     { q: '¿Necesito cancelación de ruido activa (ANC)?', a: 'No es prioritaria en gaming. Los mejores headsets usan diseño cerrado y almohadillas memory foam para aislamiento pasivo suficiente sin ANC.' },
   ],
+  'monitores': [
+    { q: '¿Qué resolución elegir para un monitor gamer?', a: '1080p para GPUs de entrada y máximos FPS; 1440p (QHD) es el equilibrio ideal entre nitidez y rendimiento; 4K solo si tu tarjeta gráfica es de gama alta.' },
+    { q: '¿144 Hz, 240 Hz o más?', a: '144 Hz ya es muy fluido. 240 Hz o más aporta ventaja en shooters competitivos si tu PC mantiene esos FPS de forma estable.' },
+    { q: '¿IPS, VA u OLED?', a: 'IPS: mejores colores y ángulos. VA: mayor contraste a menor precio. OLED/QD-OLED: negros perfectos y respuesta de 0.03 ms, pero con precio más alto.' },
+    { q: '¿Qué es G-SYNC y FreeSync?', a: 'Son tecnologías de sincronización adaptativa que igualan la tasa de refresco del monitor a los FPS de tu GPU, eliminando el tearing y los tirones.' },
+    { q: '¿Vale la pena un monitor ultrawide para gaming?', a: 'Sí, si buscas inmersión en simuladores, carreras y mundo abierto. En shooters competitivos muchos jugadores prefieren 24-27" por el campo visual compacto.' },
+  ],
 };
 
 export const faqEn: FaqData = {
@@ -158,5 +165,12 @@ export const faqEn: FaqData = {
     { q: 'Does wireless add latency in games?', a: '2.4 GHz headsets have under 20 ms latency — imperceptible in gameplay. Bluetooth can reach 80–200 ms; not recommended for competitive play.' },
     { q: '40mm or 50mm drivers?', a: '50 mm: more bass and higher max volume. 40 mm: lighter and more compact. For gaming, 50 mm typically delivers better positional audio.' },
     { q: 'Do I need active noise cancellation (ANC)?', a: 'Not a priority for gaming. Top gaming headsets use closed-back design and memory foam earpads for sufficient passive isolation without ANC.' },
+  ],
+  'monitores': [
+    { q: 'What resolution should I choose for a gaming monitor?', a: '1080p for entry-level GPUs and maximum FPS; 1440p (QHD) is the ideal balance of sharpness and performance; 4K only if you have a high-end graphics card.' },
+    { q: '144 Hz, 240 Hz or higher?', a: '144 Hz is already very smooth. 240 Hz or more gives an edge in competitive shooters if your PC holds those frame rates consistently.' },
+    { q: 'IPS, VA or OLED?', a: 'IPS: better colors and viewing angles. VA: higher contrast at a lower price. OLED/QD-OLED: perfect blacks and 0.03 ms response, but at a higher price.' },
+    { q: 'What are G-SYNC and FreeSync?', a: 'Adaptive sync technologies that match the monitor refresh rate to your GPU frame rate, removing tearing and stutter.' },
+    { q: 'Is an ultrawide monitor worth it for gaming?', a: 'Yes, for immersion in sims, racing and open-world games. In competitive shooters many players prefer 24-27 inch screens for a compact field of view.' },
   ],
 };

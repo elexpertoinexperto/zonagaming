@@ -1,0 +1,109 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+import ProductoDetalle from '../../components/ProductoDetalle.astro';
+import productos from '../../data/productos.json';
+
+export function getStaticPaths() {
+  const productosCategoria = productos['monitores' as keyof typeof productos];
+  return productosCategoria.map((p: any) => ({
+    params: { id: `${p.slug}-${p.id}` }
+  }));
+}
+
+const { id } = Astro.params;
+const categoria = 'monitores';
+const productosCategoria = productos[categoria as keyof typeof productos];
+// Extraer el ID numérico del final del parámetro (slug-id)
+const numeroId = parseInt(id!.split('-').pop()!);
+const producto = productosCategoria.find((p: any) => p.id === numeroId);
+
+if (!producto) {
+  return Astro.redirect('/monitores');
+}
+
+const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
+const metaDescription = `${nombreCorto} — monitor gamer al mejor precio. Specs, resolución, tasa de refresco y compra con envío Amazon en Monckey Gamer.`;
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Monitores Gamer", "item": "https://monckeygamer.com/monitores/" },
+    { "@type": "ListItem", "position": 3, "name": producto.nombre, "item": `https://monckeygamer.com/monitores/${id}/` }
+  ]
+};
+---
+
+<SiteLayout title={`${producto.nombre} | Monitor Gamer | Monckey Gamer`} description={metaDescription} robots="index, follow" schema={breadcrumb}>
+  <div class="producto-header">
+    <a class="back-link" href="/monitores/">← Volver a Monitores Gamer</a>
+  </div>
+
+  <ProductoDetalle
+    nombre={producto.nombre}
+    descripcion={producto.descripcion}
+    especificaciones={producto.especificaciones}
+    precio={producto.precio}
+    enlaceAmazon={producto.enlaceAmazon}
+    imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
+    marca={(producto as any).marca}
+  />
+
+  <section class="pdp-seo-context">
+    <h2>¿Por qué elegir este monitor gamer para tu setup?</h2>
+    <p>
+      El <strong>{producto.nombre}</strong> es un monitor gamer pensado para jugadores que buscan imagen nítida, movimiento fluido
+      y baja latencia. Revisa su resolución, tasa de refresco y tipo de panel para asegurarte de que se ajusta a tu tarjeta gráfica y a tu estilo de juego.
+    </p>
+    <p>
+      Si estás buscando un monitor gaming que equilibre precio y rendimiento, esta opción está disponible
+      con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones. Compara con otros modelos en nuestro
+      <a href="/monitores/">catálogo completo de monitores gamer</a>.
+    </p>
+  </section>
+</SiteLayout>
+
+<style>
+  .producto-header {
+    padding: 2rem 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    color: #7cffcb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  .back-link:hover {
+    color: #00ffe1;
+  }
+
+  .pdp-seo-context {
+    max-width: 1200px;
+    margin: 48px auto 0;
+    padding: 32px 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .pdp-seo-context h2 {
+    font-size: 1.2rem;
+    color: #e6f7ff;
+    margin: 0 0 14px;
+  }
+
+  .pdp-seo-context p {
+    color: #8aa0b8;
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+  }
+
+  .pdp-seo-context a {
+    color: #7cffcb;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

@@ -52,6 +52,7 @@ const categories = [
   'teclados',
   'mouse',
   'audifonos',
+  'monitores',
 ];
 
 export const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');

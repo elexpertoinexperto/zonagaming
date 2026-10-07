@@ -16,6 +16,7 @@ export const SLUG_EN: Record<string, string> = {
   'teclados': 'keyboards',
   'mouse': 'gaming-mice',
   'audifonos': 'headsets',
+  'monitores': 'gaming-monitors',
   'recomendador': 'recommender',
 };
 
@@ -312,6 +313,30 @@ export const CATS_EN: Record<string, CategoryEn> = {
         { b: 'Microphone:', t: 'headsets with noise cancellation are essential for streaming or team communication.' },
       ],
       outro: 'Every gaming headset in our catalog ships directly from Amazon, with official warranty and hassle-free returns.',
+    },
+  },
+  'monitores': {
+    label: 'Monitors',
+    cardDescription: 'Fast, sharp displays for competitive and immersive gaming.',
+    icon: 'monitor',
+    pageTitle: 'Gaming Monitors: 1080p, 1440p, 4K & OLED | Monckey Gamer',
+    metaDescription: 'The best gaming monitors: 1080p, 1440p, 4K, OLED and ultrawide with high refresh rates. Compare prices and buy gaming monitors with Amazon shipping.',
+    heroTitle: 'Gaming Monitors',
+    heroDescription: 'Gaming monitors for every budget: 240 Hz Full HD, 180 to 300 Hz QHD, 4K, curved ultrawides and OLED panels with 0.03 ms response. Find the right gaming monitor for your PC and graphics card.',
+    bsTitle: 'Best-selling Gaming Monitors',
+    backLabel: 'Back to Monitors',
+    guide: {
+      title: 'How to choose your gaming monitor?',
+      intro: 'A gaming monitor determines how much you see and how smooth every match feels. Whether you want a budget 1080p gaming monitor or a high-end OLED panel, these are the key factors:',
+      bullets: [
+        { b: 'Resolution:', t: '1080p suits entry-level graphics cards, 1440p (QHD) is the sweet spot for most players, and 4K demands a powerful GPU.' },
+        { b: 'Refresh rate:', t: '144 Hz already feels smooth; 240 Hz or more favors competitive shooters.' },
+        { b: 'Panel type:', t: 'IPS delivers better colors, VA offers higher contrast, and OLED/QD-OLED gives perfect blacks with 0.03 ms response.' },
+        { b: 'Response time:', t: '1 ms or lower reduces motion blur in fast-paced games.' },
+        { b: 'Adaptive sync:', t: 'G-SYNC or FreeSync removes tearing and stutter when your frame rate varies.' },
+        { b: 'Ultrawide and curved:', t: '34-inch ultrawide monitors add immersion in sims and open-world games.' },
+      ],
+      outro: 'Every gaming monitor in our catalog ships directly from Amazon, with official warranty and hassle-free returns.',
     },
   },
 };

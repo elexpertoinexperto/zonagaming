@@ -1,0 +1,81 @@
+---
+import SiteLayout from '../../components/SiteLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import BestSellers from '../../components/BestSellers.astro';
+import type { Producto } from '../../types/productos';
+import productos from '../../data/productos.json';
+import Comparador from '../../components/Comparador.astro';
+import FAQ from '../../components/FAQ.astro';
+import { faqEs } from '../../data/faq';
+
+const metaDescription = "Los mejores monitores gamer 1080p, 1440p, 4K, OLED y ultrawide con alta tasa de refresco. Compara precios y compra monitores gaming con envío Amazon.";
+const description = 'Monitores gamer para cada presupuesto: Full HD de 240 Hz, QHD de 180 a 300 Hz, 4K, ultrawide curvos y paneles OLED con respuesta de 0.03 ms. Encuentra el monitor gaming ideal para tu PC y tu tarjeta gráfica.';
+const productsData = productos['monitores'] as unknown as Producto[];
+const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
+  id: p.id,
+  name: p.nombre,
+  description: p.descripcion,
+  price: `$${p.precio.toFixed(2)} USD`,
+  imageUrl: p.imagenUrl,
+  detailHref: `/monitores/${p.slug}-${p.id}/`,
+  amazonHref: p.enlaceAmazon,
+}));
+---
+
+<SiteLayout title="Monitores Gamer: 1080p, 1440p, 4K y OLED | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://monckeygamer.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Monitores Gamer", "item": "https://monckeygamer.com/monitores/" }
+  ]
+}}>
+  <section class="category-hero">
+    <a class="category-back" href="/">← Volver al Home</a>
+    <small>Monitor Gaming</small>
+    <h1>Monitores Gamer</h1>
+    <p class="category-description">{description}</p>
+    <div class="category-meta">
+      <span>{productsData.length} monitores disponibles</span>
+      <span>Stock validado y envío seguro vía Amazon</span>
+    </div>
+  </section>
+
+  <section class="product-grid">
+    {productsData.map((product) => (
+      <ProductCard product={{
+        id: product.id,
+        name: product.nombre,
+        price: `$${product.precio.toFixed(2)} USD`,
+        description: product.descripcion,
+        imageUrl: product.imagenUrl,
+        detailHref: `/monitores/${product.slug}-${product.id}/`,
+        amazonHref: product.enlaceAmazon,
+        marca: (product as any).marca,
+      }} />
+    ))}
+  </section>
+
+  <Comparador categoriaFija="monitores" />
+
+  <section class="category-buying-guide">
+    <h2>¿Cómo elegir tu monitor gamer?</h2>
+    <p>El monitor gamer define cuánto ves y qué tan fluido se siente cada partida. Ya sea que busques un monitor gaming 1080p económico o un panel OLED de alta gama, estos factores marcan la diferencia:</p>
+    <ul>
+      <li><strong>Resolución:</strong> 1080p es ideal con tarjetas gráficas de entrada, 1440p (QHD) es el punto dulce para la mayoría y 4K exige una GPU potente.</li>
+      <li><strong>Tasa de refresco:</strong> 144 Hz ya se siente fluido; 240 Hz o más favorece los juegos competitivos tipo shooter.</li>
+      <li><strong>Tipo de panel:</strong> IPS ofrece mejores colores, VA mayor contraste y OLED/QD-OLED negros perfectos con respuesta de 0.03 ms.</li>
+      <li><strong>Tiempo de respuesta:</strong> 1 ms o menos reduce el desenfoque en movimiento en juegos rápidos.</li>
+      <li><strong>Sincronización adaptativa:</strong> G-SYNC o FreeSync eliminan el tearing y los tirones cuando los FPS varían.</li>
+      <li><strong>Ultrawide y curvos:</strong> los monitores de 34" dan más inmersión en simuladores y juegos de mundo abierto.</li>
+    </ul>
+    <p>Todos los monitores gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
+  </section>
+
+  <BestSellers
+    id="mas-vendidos-monitores"
+    title="Monitores Gamer más vendidos"
+    products={bestSellerProducts}
+  />
+  <FAQ title="Preguntas Frecuentes" items={faqEs['monitores']} />
+</SiteLayout>

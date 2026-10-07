@@ -1,8 +1,8 @@
 # Monckey Gamer
 
-> Monckey Gamer is a bilingual (Spanish/English) e-commerce affiliate site selling PC gaming components — graphics cards, processors, RAM, SSDs, power supplies, cooling, cases, keyboards, mice, and headsets. Every product links out to Amazon for purchase; the site itself does not process payments. Content includes buying guides per category and educational blog articles about PC hardware.
+> Monckey Gamer is a bilingual (Spanish/English) e-commerce affiliate site selling PC gaming components — graphics cards, processors, RAM, SSDs, power supplies, cooling, cases, keyboards, mice, headsets, and gaming monitors. Every product links out to Amazon for purchase; the site itself does not process payments. Content includes buying guides per category and educational blog articles about PC hardware.
 
-The Spanish version is the primary/default site at the root domain, targeted at Colombia and Latin American Spanish speakers (hreflang es-CO). The English version lives under /en/ and targets the United States (hreflang en-US). Each category and product page exists in both languages with translated URL slugs (e.g. /tarjetas-graficas/ in Spanish is /en/graphics-cards/ in English). Category slugs in English: graphics-cards, processors, ram-memory, ssd, power-supplies, liquid-cooling, air-cooling, gaming-cases, keyboards, gaming-mice, headsets.
+The Spanish version is the primary/default site at the root domain, targeted at Colombia and Latin American Spanish speakers (hreflang es-CO). The English version lives under /en/ and targets the United States (hreflang en-US). Each category and product page exists in both languages with translated URL slugs (e.g. /tarjetas-graficas/ in Spanish is /en/graphics-cards/ in English). Category slugs in English: graphics-cards, processors, ram-memory, ssd, power-supplies, liquid-cooling, air-cooling, gaming-cases, keyboards, gaming-mice, headsets, gaming-monitors.
 
 Product pages include full specifications, pricing in USD, and a direct outbound link to the product's Amazon listing. Category pages include a product grid, a comparison tool (select two products from the same category to compare specs side by side), and a buying guide explaining what to look for in that component type. Prices and stock are illustrative catalog data, not live-synced with Amazon.
 
@@ -27,6 +27,7 @@ Product pages include full specifications, pricing in USD, and a direct outbound
 - [Keyboards](https://monckeygamer.com/teclados/) · [EN](https://monckeygamer.com/en/keyboards/): Mechanical and RGB gaming keyboards.
 - [Mice](https://monckeygamer.com/mouse/) · [EN](https://monckeygamer.com/en/gaming-mice/): Optical gaming mice with high-precision sensors.
 - [Headsets](https://monckeygamer.com/audifonos/) · [EN](https://monckeygamer.com/en/headsets/): Gaming headsets with 7.1 surround sound.
+- [Gaming monitors](https://monckeygamer.com/monitores/) · [EN](https://monckeygamer.com/en/gaming-monitors/): 1080p, 1440p, 4K, OLED and ultrawide gaming monitors with high refresh rates.
 
 ## Blog
 
