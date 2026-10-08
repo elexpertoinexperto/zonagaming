@@ -50,33 +50,32 @@ const categories = [
 export const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');
 
 export type TipoSitemap = 'pages' | 'product' | 'blog';
-type Entry = { path: string; lastmod: string; priority: string; tipo: TipoSitemap };
+type Entry = { path: string; lastmod: string; tipo: TipoSitemap };
 
 // Todas las rutas del sitio expresadas en su forma española
 function allEntries(): Entry[] {
   const entries: Entry[] = [
-    { path: '/', lastmod: fileMtime('index.astro'), priority: '1.0', tipo: 'pages' },
-    { path: '/recomendador/', lastmod: fileMtime('recomendador/index.astro'), priority: '0.8', tipo: 'pages' },
-    { path: '/blog/', lastmod: fileMtime('blog.astro'), priority: '0.7', tipo: 'blog' },
-    { path: '/contacto/', lastmod: fileMtime('contacto/index.astro'), priority: '0.5', tipo: 'pages' },
+    { path: '/', lastmod: fileMtime('index.astro'), tipo: 'pages' },
+    { path: '/recomendador/', lastmod: fileMtime('recomendador/index.astro'), tipo: 'pages' },
+    { path: '/blog/', lastmod: fileMtime('blog.astro'), tipo: 'blog' },
+    { path: '/contacto/', lastmod: fileMtime('contacto/index.astro'), tipo: 'pages' },
   ];
 
   for (const slug of blogSlugs) {
-    entries.push({ path: `/blog/${slug}/`, lastmod: fileMtime(`blog/${slug}.astro`), priority: '0.6', tipo: 'blog' });
+    entries.push({ path: `/blog/${slug}/`, lastmod: fileMtime(`blog/${slug}.astro`), tipo: 'blog' });
   }
 
   for (const cat of categories) {
-    entries.push({ path: `/${cat}/`, lastmod: fileMtime(`${cat}/index.astro`), priority: '0.8', tipo: 'pages' });
+    entries.push({ path: `/${cat}/`, lastmod: fileMtime(`${cat}/index.astro`), tipo: 'pages' });
     // Subcategorías (filtros) de la categoría: /categoria/para-1080p/ (prioridad entre la categoría y las fichas)
     for (const filtro of FILTROS[cat] ?? []) {
-      entries.push({ path: `/${cat}/${filtro.slugEs}/`, lastmod: fileMtime(`${cat}/[filtro].astro`), priority: '0.7', tipo: 'pages' });
+      entries.push({ path: `/${cat}/${filtro.slugEs}/`, lastmod: fileMtime(`${cat}/[filtro].astro`), tipo: 'pages' });
     }
     const categoryProducts = productos[cat as keyof typeof productos];
     for (const product of categoryProducts) {
       entries.push({
         path: `/${cat}/${product.slug}-${product.id}/`,
         lastmod: fileMtime(`${cat}/[id].astro`),
-        priority: '0.6',
         tipo: 'product',
       });
     }
@@ -100,7 +99,7 @@ const xml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // Orden de los elementos de cada <url> según el esquema oficial (sitemaps.org/schemas/sitemap/0.9/sitemap.xsd):
-// loc → lastmod → changefreq → priority → elementos de otros espacios de nombres (xhtml:link para hreflang).
+// loc → lastmod → elementos de otros espacios de nombres (xhtml:link para hreflang).
 // Cada URL lista TODAS sus versiones, incluida ella misma (requisito de Google para hreflang en sitemaps).
 export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap): string {
   const urls = entradasDe(tipo)
@@ -111,7 +110,6 @@ export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap): string {
       return `  <url>
     <loc>${xml(loc)}</loc>
     <lastmod>${e.lastmod}</lastmod>
-    <priority>${e.priority}</priority>
     <xhtml:link rel="alternate" hreflang="es-CO" href="${xml(esLoc)}"/>
     <xhtml:link rel="alternate" hreflang="en-US" href="${xml(enLoc)}"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${xml(esLoc)}"/>

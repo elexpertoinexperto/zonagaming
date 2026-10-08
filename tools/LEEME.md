@@ -58,7 +58,7 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   versión en inglés), y las fichas y subcategorías salen de `productos.json`. No hay listas que mantener a mano.
 - Prueba: `npm run build && node tools/probar-sitemaps.mjs` (toda página en un sitemap, ninguna repetida ni rota, blog solo
   en los sitemaps del blog, hreflang a páginas reales, canonical y noindex).
-- Formato: cada `<url>` sigue el orden del esquema oficial (`loc` → `lastmod` → `priority` → `xhtml:link` de hreflang; Google exige que
+- Formato: cada `<url>` sigue el orden del esquema oficial (`loc` → `lastmod` → `xhtml:link` de hreflang, sin `priority` porque Google lo ignora; Google exige que
   cada URL liste todas sus versiones, incluida ella misma). Las URLs van escapadas para XML y los archivos se sirven como
   `application/xml; charset=utf-8` (`public/_headers`). Validación contra los XSD oficiales de sitemaps.org:
   `npm i --no-save xmllint-wasm && node tools/validar-sitemaps-xsd.mjs`.

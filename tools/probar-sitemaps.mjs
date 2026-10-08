@@ -75,10 +75,11 @@ for (const h of [...esperados, 'sitemap.xml']) {
     if (/&(?!amp;|apos;|quot;|lt;|gt;)/.test(l)) err(`${h}: & sin escapar → ${l}`);
   }
   if (h === 'sitemap.xml') continue;
-  // orden de los elementos de cada <url>: loc, lastmod, [changefreq], [priority], luego xhtml:link
+  // orden de los elementos de cada <url>: loc, lastmod y luego xhtml:link (sin priority ni changefreq: Google los ignora)
   for (const b of xml.match(/<url>[\s\S]*?<\/url>/g) ?? []) {
     const orden = [...b.matchAll(/<(loc|lastmod|changefreq|priority|xhtml:link)[ >\/]/g)].map((m) => m[1]);
     const rango = { loc: 0, lastmod: 1, changefreq: 2, priority: 3, 'xhtml:link': 4 };
+    if (/<priority>|<changefreq>/.test(b)) err(`${h}: lleva priority o changefreq (Google los ignora; no se usan)`);
     if (orden.some((e, i) => i && rango[e] < rango[orden[i - 1]])) { err(`${h}: elementos de <url> en orden incorrecto → ${b.match(/<loc>([^<]+)/)[1]}`); break; }
     if (!/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(b)) err(`${h}: lastmod ausente o con formato incorrecto`);
     if (/xhtml:link[^>]*type=/.test(b)) err(`${h}: xhtml:link con atributo type (no está en la especificación de Google)`);
