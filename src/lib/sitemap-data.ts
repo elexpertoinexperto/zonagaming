@@ -1,7 +1,8 @@
 // Lógica compartida de los sitemaps.
-// /sitemap.xml (índice) → 4 sitemaps:
-//   sitemap-es.xml · sitemap-en.xml            (todo menos el blog)
-//   sitemap-blog-es.xml · sitemap-blog-en.xml  (solo /blog/ y /en/blog/)
+// /sitemap.xml (índice) → 6 sitemaps, cada uno en español e inglés:
+//   sitemap-pages-es.xml · sitemap-pages-en.xml      inicio, recomendador, contacto, categorías y subcategorías
+//   sitemap-product-es.xml · sitemap-product-en.xml  solo las fichas de producto
+//   sitemap-blog-es.xml · sitemap-blog-en.xml        solo /blog/ y /en/blog/
 import productos from '../data/productos.json';
 import { toEnPath } from '../i18n/en';
 import { FILTROS } from './filtros-catalogo';
@@ -48,30 +49,27 @@ const categories = [
 
 export const site = (import.meta.env.SITE || 'http://localhost:3000').replace(/\/$/, '');
 
-export type TipoSitemap = 'general' | 'blog';
-type Entry = { path: string; lastmod: string; priority: string };
-
-// Todo lo que cuelga de /blog/ va al sitemap del blog
-const esBlog = (path: string) => path === '/blog/' || path.startsWith('/blog/');
+export type TipoSitemap = 'pages' | 'product' | 'blog';
+type Entry = { path: string; lastmod: string; priority: string; tipo: TipoSitemap };
 
 // Todas las rutas del sitio expresadas en su forma española
 function allEntries(): Entry[] {
   const entries: Entry[] = [
-    { path: '/', lastmod: fileMtime('index.astro'), priority: '1.0' },
-    { path: '/recomendador/', lastmod: fileMtime('recomendador/index.astro'), priority: '0.8' },
-    { path: '/blog/', lastmod: fileMtime('blog.astro'), priority: '0.7' },
-    { path: '/contacto/', lastmod: fileMtime('contacto/index.astro'), priority: '0.5' },
+    { path: '/', lastmod: fileMtime('index.astro'), priority: '1.0', tipo: 'pages' },
+    { path: '/recomendador/', lastmod: fileMtime('recomendador/index.astro'), priority: '0.8', tipo: 'pages' },
+    { path: '/blog/', lastmod: fileMtime('blog.astro'), priority: '0.7', tipo: 'blog' },
+    { path: '/contacto/', lastmod: fileMtime('contacto/index.astro'), priority: '0.5', tipo: 'pages' },
   ];
 
   for (const slug of blogSlugs) {
-    entries.push({ path: `/blog/${slug}/`, lastmod: fileMtime(`blog/${slug}.astro`), priority: '0.6' });
+    entries.push({ path: `/blog/${slug}/`, lastmod: fileMtime(`blog/${slug}.astro`), priority: '0.6', tipo: 'blog' });
   }
 
   for (const cat of categories) {
-    entries.push({ path: `/${cat}/`, lastmod: fileMtime(`${cat}/index.astro`), priority: '0.8' });
+    entries.push({ path: `/${cat}/`, lastmod: fileMtime(`${cat}/index.astro`), priority: '0.8', tipo: 'pages' });
     // Subcategorías (filtros) de la categoría: /categoria/para-1080p/ (prioridad entre la categoría y las fichas)
     for (const filtro of FILTROS[cat] ?? []) {
-      entries.push({ path: `/${cat}/${filtro.slugEs}/`, lastmod: fileMtime(`${cat}/[filtro].astro`), priority: '0.7' });
+      entries.push({ path: `/${cat}/${filtro.slugEs}/`, lastmod: fileMtime(`${cat}/[filtro].astro`), priority: '0.7', tipo: 'pages' });
     }
     const categoryProducts = productos[cat as keyof typeof productos];
     for (const product of categoryProducts) {
@@ -79,6 +77,7 @@ function allEntries(): Entry[] {
         path: `/${cat}/${product.slug}-${product.id}/`,
         lastmod: fileMtime(`${cat}/[id].astro`),
         priority: '0.6',
+        tipo: 'product',
       });
     }
   }
@@ -86,9 +85,9 @@ function allEntries(): Entry[] {
   return entries;
 }
 
-// Genera el <urlset> de un idioma y un tipo (general o blog). Cada entrada lleva sus hreflang recíprocos.
+// Genera el <urlset> de un idioma y un tipo (pages, product o blog). Cada entrada lleva sus hreflang recíprocos.
 export function entradasDe(tipo: TipoSitemap): Entry[] {
-  return allEntries().filter((e) => (tipo === 'blog') === esBlog(e.path));
+  return allEntries().filter((e) => e.tipo === tipo);
 }
 
 // Fecha de la última modificación de un sitemap (la más reciente de sus URLs), para el índice
@@ -96,7 +95,7 @@ export function ultimaModificacion(tipo: TipoSitemap): string {
   return entradasDe(tipo).map((e) => e.lastmod).sort().pop() ?? new Date().toISOString().split('T')[0];
 }
 
-export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap = 'general'): string {
+export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap): string {
   const urls = entradasDe(tipo)
     .map((e) => {
       const esLoc = `${site}${e.path}`;

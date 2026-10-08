@@ -1,7 +1,7 @@
 // Uso:  npm run build && node tools/probar-filtros.mjs
 // Comprueba sobre dist/ que TODAS las subcategorías (filtros) están bien:
 //  - existen en español e inglés, con hreflang recíproco correcto (cada una apunta a su equivalente);
-//  - están en sitemap-es.xml y sitemap-en.xml;
+//  - están en sitemap-pages-es.xml y sitemap-pages-en.xml;
 //  - tienen title, description (≤160), canonical, OG, un solo H1, migas de pan y ItemList válidos;
 //  - títulos y descripciones únicos en todo el sitio;
 //  - enlazan a su categoría madre y la madre las enlaza a ellas;
@@ -14,8 +14,9 @@ const { construirFiltros } = await import('../src/lib/filtros.mjs');
 const productos = leer('src/data/productos.json');
 const SLUG_EN = { 'tarjetas-graficas': 'graphics-cards', procesadores: 'processors', 'memoria-ram': 'ram-memory', ssd: 'ssd', 'fuentes-de-poder': 'power-supplies', 'refrigeracion-liquida': 'liquid-cooling', 'refrigeracion-normal': 'air-cooling', 'gabinetes-gamer': 'gaming-cases', teclados: 'keyboards', mouse: 'gaming-mice', audifonos: 'headsets', monitores: 'gaming-monitors' };
 const filtros = construirFiltros(productos);
-const sitemapEs = fs.readFileSync('dist/sitemap-es.xml', 'utf8');
-const sitemapEn = fs.readFileSync('dist/sitemap-en.xml', 'utf8');
+const sitemapEs = fs.readFileSync('dist/sitemap-pages-es.xml', 'utf8');
+const sitemapEn = fs.readFileSync('dist/sitemap-pages-en.xml', 'utf8');
+const sitemapProductosEs = fs.readFileSync('dist/sitemap-product-es.xml', 'utf8');
 const errores = [];
 const err = (m) => errores.push(m);
 const titulos = new Map(), descripciones = new Map();
@@ -69,7 +70,7 @@ for (const [d, r] of descripciones) if (r.length > 1) err(`description repetida:
 
 // Ninguna ficha de producto debe haberse alterado: siguen todas en el sitemap
 for (const [cat, lista] of Object.entries(productos)) for (const p of lista) {
-  if (!sitemapEs.includes(`<loc>${SITE}/${cat}/${p.slug}-${p.id}/</loc>`)) err(`ficha ES ausente del sitemap: ${cat}/${p.slug}-${p.id}`);
+  if (!sitemapProductosEs.includes(`<loc>${SITE}/${cat}/${p.slug}-${p.id}/</loc>`)) err(`ficha ES ausente del sitemap: ${cat}/${p.slug}-${p.id}`);
 }
 console.log(`Subcategorías: ${Object.values(filtros).reduce((s, l) => s + l.length, 0)} · páginas revisadas (ES+EN): ${n}`);
 if (errores.length) { console.error('\nERRORES (' + errores.length + '):\n' + errores.slice(0, 40).map((e) => ' - ' + e).join('\n')); process.exit(1); }

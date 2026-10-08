@@ -51,8 +51,9 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 
 ## Sitemaps (`src/lib/sitemap-data.ts`)
 
-- `/sitemap.xml` (índice) → `sitemap-es.xml` + `sitemap-en.xml` (tienda, categorías, subcategorías y fichas) y
-  `sitemap-blog-es.xml` + `sitemap-blog-en.xml` (solo `/blog/` y `/en/blog/`).
+- `/sitemap.xml` (índice) → 6 sitemaps, cada uno en español e inglés: `sitemap-pages-es/en.xml` (inicio, recomendador, contacto,
+  categorías y subcategorías), `sitemap-product-es/en.xml` (solo fichas de producto) y `sitemap-blog-es/en.xml` (solo `/blog/` y
+  `/en/blog/`). Los nombres antiguos `sitemap-es.xml` y `sitemap-en.xml` redirigen (301) a `sitemap-pages-*` desde `public/_redirects`.
 - Todo se descubre solo: los artículos del blog son los archivos de `src/pages/blog/*.astro` (el build avisa si uno no tiene
   versión en inglés), y las fichas y subcategorías salen de `productos.json`. No hay listas que mantener a mano.
 - Prueba: `npm run build && node tools/probar-sitemaps.mjs` (toda página en un sitemap, ninguna repetida ni rota, blog solo

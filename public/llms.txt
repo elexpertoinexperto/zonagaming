@@ -10,7 +10,7 @@ Product pages include full specifications, pricing in USD, and a direct outbound
 
 - [Home (Spanish)](https://monckeygamer.com/): Landing page with featured categories and best sellers.
 - [Home (English)](https://monckeygamer.com/en/): English version of the homepage.
-- [Sitemap index](https://monckeygamer.com/sitemap.xml): Points to four sitemaps — sitemap-es.xml and sitemap-en.xml (shop, categories, subcategories and products) plus sitemap-blog-es.xml and sitemap-blog-en.xml (blog articles).
+- [Sitemap index](https://monckeygamer.com/sitemap.xml): Points to six sitemaps, each in Spanish and English: sitemap-pages-es.xml / sitemap-pages-en.xml (home, recommender, contact, categories and subcategories), sitemap-product-es.xml / sitemap-product-en.xml (product pages only) and sitemap-blog-es.xml / sitemap-blog-en.xml (blog articles).
 - [Contact (Spanish)](https://monckeygamer.com/contacto/): Contact page with email.
 - [Contact (English)](https://monckeygamer.com/en/contacto/): English version of the contact page.
 
