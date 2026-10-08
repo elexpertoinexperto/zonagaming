@@ -7,6 +7,9 @@ import BestSellers from '../components/BestSellers.astro';
 import Comparador from '../components/Comparador.astro';
 import productos from '../data/productos.json';
 
+// Total de productos del catálogo, redondeado a la decena inferior (+360, +370…)
+const totalComponentes = Math.floor(Object.values(productos).reduce((n: number, l: any) => n + l.length, 0) / 10) * 10;
+
 const tg  = (productos['tarjetas-graficas'] as any[]);
 const cpu = (productos['procesadores'] as any[]);
 const ram = (productos['memoria-ram'] as any[]);
@@ -126,7 +129,7 @@ const bestSellerProducts = [
           </div>
           <div class="hero-stats">
             <div class="stat-card">
-              <strong>+70</strong>
+              <strong>+{totalComponentes}</strong>
               Componentes para gaming.
             </div>
             <div class="stat-card">

@@ -1,9 +1,12 @@
 ---
 import SiteLayout from '../../../components/SiteLayout.astro';
 import juegosRaw from '../../../data/juegos-index.json';
+import productos from '../../../data/productos.json';
+import { juegosConRecomendaciones } from '../../../lib/rendimiento.mjs';
 import { SLUG_EN } from '../../../i18n/en';
 
-const juegos = juegosRaw as typeof juegosRaw;
+// Las recomendaciones (GPU + CPU + RAM por juego) se calculan en el build con todo el catálogo
+const juegos = juegosConRecomendaciones(juegosRaw as any, productos as any);
 
 const catLabelEn: Record<string, string> = {
   'tarjetas-graficas': 'Graphics Card',
@@ -42,7 +45,7 @@ const schema = {
 
 <SiteLayout
   title="PC Component Recommender by Game | Monckey Gamer"
-  description="Pick a game and discover exactly which GPU, CPU and RAM you need to run it at maximum performance. Component recommendations for 21 AAA titles."
+  description="Pick a game and discover exactly which GPU, CPU and RAM you need to run it at maximum performance. Component recommendations for 50+ popular games."
   robots="index, follow"
   schema={schema}
 >
@@ -181,7 +184,7 @@ const schema = {
           <div class="rec-alts">
             <p class="rec-alts-label">Also worth considering:</p>
             <ul class="rec-alts-list">
-              ${rec.alternativas.map(a => `<li>${a}</li>`).join('')}
+              ${rec.alternativas.map(a => `<li><a href="${getProductPath(a.categoria, a.slug, a.id)}">${a.nombre}</a></li>`).join('')}
             </ul>
           </div>` : ''}
         </div>
@@ -617,6 +620,16 @@ const schema = {
     font-size: 0.75rem;
     color: #3d5a72;
     line-height: 1.45;
+  }
+
+  .rec-alts-list a {
+    color: inherit;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+  }
+
+  .rec-alts-list a:hover {
+    color: #7cffcb;
   }
 
   .rec-alts-list li::before {

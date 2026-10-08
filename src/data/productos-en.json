@@ -137,7 +137,7 @@
       },
       "precio": 257.22,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CVCG2VPK?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/8/fabricante.png",
       "marca": "ASUS",
       "asin": "B0CVCG2VPK",
       "precioFecha": "2026-10-07"
@@ -155,7 +155,7 @@
       },
       "precio": 259.97,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CTK1SFVD?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/9/fabricante.webp",
       "marca": "MSI",
       "asin": "B0CTK1SFVD",
       "precioFecha": "2026-10-07"
@@ -173,7 +173,7 @@
       },
       "precio": 459.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CLF23DXB?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/10/fabricante.png",
       "marca": "GIGABYTE",
       "asin": "B0CLF23DXB",
       "precioFecha": "2026-10-07"
@@ -245,7 +245,7 @@
       },
       "precio": 519.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F8B59WP7?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/14/fabricante.png",
       "marca": "ASRock",
       "asin": "B0F8B59WP7",
       "precioFecha": "2026-10-07"
@@ -261,9 +261,9 @@
         "Bus Width": "128 bits",
         "TDP": "160 W"
       },
-      "precio": 529.0,
+      "precio": 529,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FLHBFFX4?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/15/fabricante.png",
       "marca": "ASUS",
       "asin": "B0FLHBFFX4",
       "precioFecha": "2026-10-07"
@@ -281,7 +281,7 @@
       },
       "precio": 579.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0H3MCRPSV?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/16/fabricante.png",
       "marca": "ASUS",
       "asin": "B0H3MCRPSV",
       "precioFecha": "2026-10-07"
@@ -297,9 +297,9 @@
         "Bus Width": "256 bits",
         "TDP": "304 W"
       },
-      "precio": 829.0,
+      "precio": 829,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DRRMZDH6?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/17/fabricante.png",
       "marca": "ASUS",
       "asin": "B0DRRMZDH6",
       "precioFecha": "2026-10-07"
@@ -317,7 +317,7 @@
       },
       "precio": 856.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DS6WPTLL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/18/fabricante.png",
       "marca": "ASUS",
       "asin": "B0DS6WPTLL",
       "precioFecha": "2026-10-07"
@@ -353,7 +353,7 @@
       },
       "precio": 1653.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DS2R6948?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/20/fabricante.png",
       "marca": "GIGABYTE",
       "asin": "B0DS2R6948",
       "precioFecha": "2026-10-07"
@@ -371,7 +371,7 @@
       },
       "precio": 459.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F8LDHQ7Y?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/21/fabricante.png",
       "marca": "Gigabyte",
       "asin": "B0F8LDHQ7Y",
       "precioFecha": "2026-10-07"
@@ -389,7 +389,7 @@
       },
       "precio": 489.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F77H7NBK?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/22/fabricante.png",
       "marca": "ASUS",
       "asin": "B0F77H7NBK",
       "precioFecha": "2026-10-07"
@@ -407,7 +407,7 @@
       },
       "precio": 509.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FRC51HMF?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/23/fabricante.png",
       "marca": "ASUS",
       "asin": "B0FRC51HMF",
       "precioFecha": "2026-10-07"
@@ -425,7 +425,7 @@
       },
       "precio": 349.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DR25XD68?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/24/fabricante.jpg",
       "marca": "XFX",
       "asin": "B0DR25XD68",
       "precioFecha": "2026-10-07"
@@ -443,7 +443,7 @@
       },
       "precio": 529.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F5B8KQJR?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/25/fabricante.png",
       "marca": "Gigabyte",
       "asin": "B0F5B8KQJR",
       "precioFecha": "2026-10-07"
@@ -461,7 +461,7 @@
       },
       "precio": 788.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F4RZDFD5?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/26/fabricante.png",
       "marca": "ASUS",
       "asin": "B0F4RZDFD5",
       "precioFecha": "2026-10-07"
@@ -497,7 +497,7 @@
       },
       "precio": 732.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DS2QZC9P?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/28/fabricante.png",
       "marca": "Gigabyte",
       "asin": "B0DS2QZC9P",
       "precioFecha": "2026-10-07"
@@ -533,7 +533,7 @@
       },
       "precio": 1831.31,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DQSMMCSH?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/tarjetas-graficas/30/fabricante.png",
       "marca": "ASUS",
       "asin": "B0DQSMMCSH",
       "precioFecha": "2026-10-07"
@@ -685,9 +685,9 @@
         "Turbo Clock": "5.2 GHz",
         "TDP": "120 W"
       },
-      "precio": 429.0,
+      "precio": 429,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DKFMSMYK?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/procesadores/8/fabricante.jpg",
       "marca": "AMD",
       "asin": "B0DKFMSMYK",
       "precioFecha": "2026-10-07"
@@ -704,9 +704,9 @@
         "Turbo Clock": "5.5 GHz",
         "TDP": "65 W"
       },
-      "precio": 299.0,
+      "precio": 299,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D6NMDNNX?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/procesadores/9/fabricante.jpg",
       "marca": "AMD",
       "asin": "B0D6NMDNNX",
       "precioFecha": "2026-10-07"
@@ -723,7 +723,7 @@
         "Turbo Clock": "5.6 GHz",
         "TDP": "120 W"
       },
-      "precio": 328.0,
+      "precio": 328,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D6NN87T8?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "AMD",
@@ -744,7 +744,7 @@
       },
       "precio": 359.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BTZB7F88?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/procesadores/11/fabricante.jpg",
       "marca": "AMD",
       "asin": "B0BTZB7F88",
       "precioFecha": "2026-10-07"
@@ -782,7 +782,7 @@
       },
       "precio": 147.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B08166SLDF?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/procesadores/13/fabricante.jpg",
       "marca": "AMD",
       "asin": "B08166SLDF",
       "precioFecha": "2026-10-07"
@@ -799,7 +799,7 @@
         "Turbo Clock": "4.4 GHz",
         "TDP": "65 W"
       },
-      "precio": 156.0,
+      "precio": 156,
       "enlaceAmazon": "https://www.amazon.com/dp/B09VCHR1VH?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "AMD",
@@ -837,7 +837,7 @@
         "Turbo Clock": "4.4 GHz",
         "TDP": "65 W"
       },
-      "precio": 221.0,
+      "precio": 221,
       "enlaceAmazon": "https://www.amazon.com/dp/B09NMPD8V2?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Intel",
@@ -932,7 +932,7 @@
         "Turbo Clock": "5.7 GHz",
         "TDP": "125 W"
       },
-      "precio": 479.0,
+      "precio": 479,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DFKC99VL?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Intel",
@@ -951,7 +951,7 @@
         "Turbo Clock": "5.2 GHz",
         "TDP": "125 W"
       },
-      "precio": 177.0,
+      "precio": 177,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DFK8HHK4?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Intel",
@@ -1103,9 +1103,9 @@
         "Turbo Clock": "5.7 GHz",
         "TDP": "170 W"
       },
-      "precio": 549.0,
+      "precio": 549,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D6NNRBGP?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/procesadores/30/fabricante.jpg",
       "marca": "AMD",
       "asin": "B0D6NNRBGP",
       "precioFecha": "2026-10-07"
@@ -1305,7 +1305,7 @@
       },
       "precio": 529.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CBRJ63RT?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/memoria-ram/9/fabricante.png",
       "marca": "CORSAIR",
       "asin": "B0CBRJ63RT",
       "precioFecha": "2026-10-07"
@@ -1347,7 +1347,7 @@
         "Color": "N/D",
         "Model": "N/D"
       },
-      "precio": 540.0,
+      "precio": 540,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2JLWLWZ?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Crucial",
@@ -1393,7 +1393,7 @@
       },
       "precio": 434.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BRQ44JSB?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/memoria-ram/13/fabricante.jpg",
       "marca": "TEAMGROUP",
       "asin": "B0BRQ44JSB",
       "precioFecha": "2026-10-07"
@@ -1613,7 +1613,7 @@
       },
       "precio": 639.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DPJ9DJ3D?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/memoria-ram/23/fabricante.png",
       "marca": "Corsair",
       "asin": "B0DPJ9DJ3D",
       "precioFecha": "2026-10-07"
@@ -1635,7 +1635,7 @@
       },
       "precio": 619.51,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BPTKD797?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/memoria-ram/24/fabricante.png",
       "marca": "Corsair",
       "asin": "B0BPTKD797",
       "precioFecha": "2026-10-07"
@@ -1655,7 +1655,7 @@
         "Color": "Gris",
         "Model": "T-Force Vulcan Z"
       },
-      "precio": 118.0,
+      "precio": 118,
       "enlaceAmazon": "https://www.amazon.com/dp/B08MF31FSZ?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "TEAMGROUP",
@@ -1677,7 +1677,7 @@
         "Color": "Negro",
         "Model": "Ripjaws V"
       },
-      "precio": 259.0,
+      "precio": 259,
       "enlaceAmazon": "https://www.amazon.com/dp/B07Z45XB3G?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "G.SKILL",
@@ -1699,7 +1699,7 @@
         "Color": "Negro",
         "Model": "Ripjaws V"
       },
-      "precio": 239.0,
+      "precio": 239,
       "enlaceAmazon": "https://www.amazon.com/dp/B0171GQR0C?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "G.SKILL",
@@ -2016,7 +2016,7 @@
       },
       "precio": 271.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CGKHGMW5?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/ssd/13/fabricante.png",
       "marca": "Lexar",
       "asin": "B0CGKHGMW5",
       "precioFecha": "2026-10-07"
@@ -2147,7 +2147,7 @@
         "Write Speed": "N/D",
         "Form Factor": "2.5\""
       },
-      "precio": 89.0,
+      "precio": 89,
       "enlaceAmazon": "https://www.amazon.com/dp/B07XZLN9KM?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "PNY",
@@ -2168,7 +2168,7 @@
       },
       "precio": 319.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C91X5DZL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/ssd/21/fabricante.png",
       "marca": "Lexar",
       "asin": "B0C91X5DZL",
       "precioFecha": "2026-10-07"
@@ -2225,7 +2225,7 @@
       },
       "precio": 485.06,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F3BD1W6R?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/ssd/24/fabricante.png",
       "marca": "Western Digital",
       "asin": "B0F3BD1W6R",
       "precioFecha": "2026-10-07"
@@ -2299,7 +2299,7 @@
         "Write Speed": "N/D",
         "Form Factor": "M.2 2280"
       },
-      "precio": 949.0,
+      "precio": 949,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CHGT1KFJ?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Samsung",
@@ -2337,7 +2337,7 @@
         "Write Speed": "N/D",
         "Form Factor": "2.5\""
       },
-      "precio": 259.0,
+      "precio": 259,
       "enlaceAmazon": "https://www.amazon.com/dp/B07YD5F561?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Crucial",
@@ -2492,7 +2492,7 @@
       },
       "precio": 94.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DPR86ZC8?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/8/fabricante.png",
       "marca": "CORSAIR",
       "asin": "B0DPR86ZC8",
       "precioFecha": "2026-10-07"
@@ -2530,7 +2530,7 @@
       },
       "precio": 72.1,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CKY88GMT?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/10/fabricante.jpg",
       "marca": "Thermaltake",
       "asin": "B0CKY88GMT",
       "precioFecha": "2026-10-07"
@@ -2549,7 +2549,7 @@
       },
       "precio": 94.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FF7TGMD2?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/11/fabricante.webp",
       "marca": "MSI",
       "asin": "B0FF7TGMD2",
       "precioFecha": "2026-10-07"
@@ -2568,7 +2568,7 @@
       },
       "precio": 80.74,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CC3QBGDL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/12/fabricante.webp",
       "marca": "MSI",
       "asin": "B0CC3QBGDL",
       "precioFecha": "2026-10-07"
@@ -2625,7 +2625,7 @@
       },
       "precio": 54.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CQMJN49P?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/15/fabricante.png",
       "marca": "CORSAIR",
       "asin": "B0CQMJN49P",
       "precioFecha": "2026-10-07"
@@ -2644,7 +2644,7 @@
       },
       "precio": 66.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FF7RW48D?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/16/fabricante.webp",
       "marca": "MSI",
       "asin": "B0FF7RW48D",
       "precioFecha": "2026-10-07"
@@ -2701,7 +2701,7 @@
       },
       "precio": 109.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FQ6MH33Q?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/19/fabricante.png",
       "marca": "NZXT",
       "asin": "B0FQ6MH33Q",
       "precioFecha": "2026-10-07"
@@ -2720,7 +2720,7 @@
       },
       "precio": 113.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FF8F48PB?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/20/fabricante.webp",
       "marca": "MSI",
       "asin": "B0FF8F48PB",
       "precioFecha": "2026-10-07"
@@ -2796,7 +2796,7 @@
       },
       "precio": 132.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DZXKYWSH?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/fuentes-de-poder/24/fabricante.png",
       "marca": "Corsair",
       "asin": "B0DZXKYWSH",
       "precioFecha": "2026-10-07"
@@ -3064,7 +3064,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FLTZ2SHM?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/8/fabricante.png",
       "marca": "NZXT",
       "asin": "B0FLTZ2SHM",
       "precioFecha": "2026-10-07"
@@ -3102,7 +3102,7 @@
       },
       "precio": 84.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DPY1CVK4?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/10/fabricante.webp",
       "marca": "MSI",
       "asin": "B0DPY1CVK4",
       "precioFecha": "2026-10-07"
@@ -3140,7 +3140,7 @@
       },
       "precio": 59.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CCXHZBSV?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/12/fabricante.jpg",
       "marca": "Thermaltake",
       "asin": "B0CCXHZBSV",
       "precioFecha": "2026-10-07"
@@ -3197,7 +3197,7 @@
       },
       "precio": 64.19,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DLWGL38S?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/15/fabricante.png",
       "marca": "ARCTIC",
       "asin": "B0DLWGL38S",
       "precioFecha": "2026-10-07"
@@ -3311,7 +3311,7 @@
       },
       "precio": 58.79,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DLWFBHSL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/21/fabricante.png",
       "marca": "ARCTIC",
       "asin": "B0DLWFBHSL",
       "precioFecha": "2026-10-07"
@@ -3330,7 +3330,7 @@
       },
       "precio": 56.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DPY1WQMJ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/22/fabricante.webp",
       "marca": "MSI",
       "asin": "B0DPY1WQMJ",
       "precioFecha": "2026-10-07"
@@ -3368,7 +3368,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DF7DH5Z5?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/24/fabricante.png",
       "marca": "Corsair",
       "asin": "B0DF7DH5Z5",
       "precioFecha": "2026-10-07"
@@ -3425,7 +3425,7 @@
       },
       "precio": 59.94,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DM4CBKFY?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/27/fabricante.webp",
       "marca": "MSI",
       "asin": "B0DM4CBKFY",
       "precioFecha": "2026-10-07"
@@ -3729,7 +3729,7 @@
         "Extra": "4 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
-      "precio": 42.0,
+      "precio": 42,
       "enlaceAmazon": "https://www.amazon.com/dp/B07H25DYM3?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Cooler Master",
@@ -3767,7 +3767,7 @@
         "Extra": "4 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
-      "precio": 31.0,
+      "precio": 31,
       "enlaceAmazon": "https://www.amazon.com/dp/B07NXZL1CL?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Cooler Master",
@@ -3978,7 +3978,7 @@
       },
       "precio": 30.54,
       "enlaceAmazon": "https://www.amazon.com/dp/B09VH14935?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-normal/26/fabricante.png",
       "marca": "ARCTIC",
       "asin": "B09VH14935",
       "precioFecha": "2026-10-07"
@@ -3997,7 +3997,7 @@
       },
       "precio": 36.63,
       "enlaceAmazon": "https://www.amazon.com/dp/B09VH4YDS9?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-normal/27/fabricante.png",
       "marca": "ARCTIC",
       "asin": "B09VH4YDS9",
       "precioFecha": "2026-10-07"
@@ -4016,7 +4016,7 @@
       },
       "precio": 22.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B09VG6NBSJ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/refrigeracion-normal/28/fabricante.png",
       "marca": "ARCTIC",
       "asin": "B09VG6NBSJ",
       "precioFecha": "2026-10-07"
@@ -4200,7 +4200,7 @@
       },
       "precio": 75.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ2ZBK8J?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/8/fabricante.png",
       "marca": "Corsair",
       "asin": "B0FJ2ZBK8J",
       "precioFecha": "2026-10-07"
@@ -4219,7 +4219,7 @@
       },
       "precio": 75.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ2Y9GK1?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/9/fabricante.png",
       "marca": "Corsair",
       "asin": "B0FJ2Y9GK1",
       "precioFecha": "2026-10-07"
@@ -4314,7 +4314,7 @@
       },
       "precio": 119.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DQPSPPSZ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/14/fabricante.png",
       "marca": "NZXT",
       "asin": "B0DQPSPPSZ",
       "precioFecha": "2026-10-07"
@@ -4333,7 +4333,7 @@
       },
       "precio": 101.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ2QMQYC?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/15/fabricante.png",
       "marca": "Corsair",
       "asin": "B0FJ2QMQYC",
       "precioFecha": "2026-10-07"
@@ -4352,7 +4352,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GF9L2P4J?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/16/fabricante.png",
       "marca": "Corsair",
       "asin": "B0GF9L2P4J",
       "precioFecha": "2026-10-07"
@@ -4371,7 +4371,7 @@
       },
       "precio": 69.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B09246FCTZ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/17/fabricante.webp",
       "marca": "Montech",
       "asin": "B09246FCTZ",
       "precioFecha": "2026-10-07"
@@ -4447,7 +4447,7 @@
       },
       "precio": 64.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2MK6NML?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/21/fabricante.png",
       "marca": "NZXT",
       "asin": "B0D2MK6NML",
       "precioFecha": "2026-10-07"
@@ -4485,7 +4485,7 @@
       },
       "precio": 69.97,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C89FCDFP?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/23/fabricante.png",
       "marca": "NZXT",
       "asin": "B0C89FCDFP",
       "precioFecha": "2026-10-07"
@@ -4504,7 +4504,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C89S5PC5?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/24/fabricante.png",
       "marca": "NZXT",
       "asin": "B0C89S5PC5",
       "precioFecha": "2026-10-07"
@@ -4561,7 +4561,7 @@
       },
       "precio": 119.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BQSL8JG2?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/27/fabricante.png",
       "marca": "NZXT",
       "asin": "B0BQSL8JG2",
       "precioFecha": "2026-10-07"
@@ -4618,7 +4618,7 @@
       },
       "precio": 199.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GQ9L7QRW?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/gabinetes-gamer/30/fabricante.png",
       "marca": "NZXT",
       "asin": "B0GQ9L7QRW",
       "precioFecha": "2026-10-07"
@@ -4828,7 +4828,7 @@
       },
       "precio": 94.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FD5276Z6?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/11/fabricante.webp",
       "marca": "Razer",
       "asin": "B0FD5276Z6",
       "precioFecha": "2026-10-07"
@@ -4883,9 +4883,9 @@
         "Layout": "60%",
         "RGB": "Razer Chroma RGB"
       },
-      "precio": 69.0,
+      "precio": 69,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F2GVF5HC?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/14/fabricante.jpg",
       "marca": "Razer",
       "asin": "B0F2GVF5HC",
       "precioFecha": "2026-10-07"
@@ -4923,7 +4923,7 @@
       },
       "precio": 122.55,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C7KFZ5TL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/16/fabricante.png",
       "marca": "ASUS ROG",
       "asin": "B0C7KFZ5TL",
       "precioFecha": "2026-10-07"
@@ -5018,7 +5018,7 @@
       },
       "precio": 199.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DGZLHN8G?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/21/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B0DGZLHN8G",
       "precioFecha": "2026-10-07"
@@ -5037,7 +5037,7 @@
       },
       "precio": 95.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B07ZGDD6B1?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/22/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B07ZGDD6B1",
       "precioFecha": "2026-10-07"
@@ -5056,7 +5056,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B07ZGDPT4M?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/23/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B07ZGDPT4M",
       "precioFecha": "2026-10-07"
@@ -5075,7 +5075,7 @@
       },
       "precio": 109.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CH3MRGK7?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/24/fabricante.png",
       "marca": "Corsair",
       "asin": "B0CH3MRGK7",
       "precioFecha": "2026-10-07"
@@ -5094,7 +5094,7 @@
       },
       "precio": 49.97,
       "enlaceAmazon": "https://www.amazon.com/dp/B09FTNMT84?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/25/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B09FTNMT84",
       "precioFecha": "2026-10-07"
@@ -5113,7 +5113,7 @@
       },
       "precio": 134.72,
       "enlaceAmazon": "https://www.amazon.com/dp/B07SWNSXQN?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/26/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B07SWNSXQN",
       "precioFecha": "2026-10-07"
@@ -5132,7 +5132,7 @@
       },
       "precio": 197.59,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D4RKYZJ5?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/27/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B0D4RKYZJ5",
       "precioFecha": "2026-10-07"
@@ -5170,7 +5170,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GVSCLFJ9?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/29/fabricante.jpg",
       "marca": "HyperX",
       "asin": "B0GVSCLFJ9",
       "precioFecha": "2026-10-07"
@@ -5189,7 +5189,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C5MCP7BF?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/teclados/30/fabricante.png",
       "marca": "Corsair",
       "asin": "B0C5MCP7BF",
       "precioFecha": "2026-10-07"
@@ -5362,7 +5362,7 @@
       },
       "precio": 85.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BHFDVLF8?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/9/fabricante.jpg",
       "marca": "Razer",
       "asin": "B0BHFDVLF8",
       "precioFecha": "2026-10-07"
@@ -5381,7 +5381,7 @@
       },
       "precio": 61.74,
       "enlaceAmazon": "https://www.amazon.com/dp/B0B6XZLNHQ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/10/fabricante.jpg",
       "marca": "Razer",
       "asin": "B0B6XZLNHQ",
       "precioFecha": "2026-10-07"
@@ -5552,7 +5552,7 @@
       },
       "precio": 39.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B09BRFNP6F?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/19/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B09BRFNP6F",
       "precioFecha": "2026-10-07"
@@ -5647,7 +5647,7 @@
       },
       "precio": 21.8,
       "enlaceAmazon": "https://www.amazon.com/dp/B08GDDZML8?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/24/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B08GDDZML8",
       "precioFecha": "2026-10-07"
@@ -5666,7 +5666,7 @@
       },
       "precio": 66.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F6NJYMWF?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/25/fabricante.png",
       "marca": "Corsair",
       "asin": "B0F6NJYMWF",
       "precioFecha": "2026-10-07"
@@ -5683,9 +5683,9 @@
         "Connection": "Cableado",
         "Switches": "Mecánicos"
       },
-      "precio": 62.0,
+      "precio": 62,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FWR3P1FT?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/26/fabricante.png",
       "marca": "Corsair",
       "asin": "B0FWR3P1FT",
       "precioFecha": "2026-10-07"
@@ -5704,7 +5704,7 @@
       },
       "precio": 72.18,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FSG67VPX?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/27/fabricante.webp",
       "marca": "Razer",
       "asin": "B0FSG67VPX",
       "precioFecha": "2026-10-07"
@@ -5723,7 +5723,7 @@
       },
       "precio": 125.42,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CW25XR5S?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/28/fabricante.webp",
       "marca": "Razer",
       "asin": "B0CW25XR5S",
       "precioFecha": "2026-10-07"
@@ -5742,7 +5742,7 @@
       },
       "precio": 63.24,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D38B66W3?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/mouse/29/fabricante.jpg",
       "marca": "Glorious",
       "asin": "B0D38B66W3",
       "precioFecha": "2026-10-07"
@@ -5933,7 +5933,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FH5YWH7B?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/9/fabricante.webp",
       "marca": "Razer",
       "asin": "B0FH5YWH7B",
       "precioFecha": "2026-10-07"
@@ -5971,7 +5971,7 @@
       },
       "precio": 113.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2YBQQ1P?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/11/fabricante.jpg",
       "marca": "SteelSeries",
       "asin": "B0D2YBQQ1P",
       "precioFecha": "2026-10-07"
@@ -5990,7 +5990,7 @@
       },
       "precio": 33.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B086PKMZ21?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/12/fabricante.webp",
       "marca": "Razer",
       "asin": "B086PKMZ21",
       "precioFecha": "2026-10-07"
@@ -6007,7 +6007,7 @@
         "Microphone": "Micrófono unidireccional",
         "Sound": "Dolby 7.1"
       },
-      "precio": 59.0,
+      "precio": 59,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CY5VSLL3?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Corsair",
@@ -6104,7 +6104,7 @@
       },
       "precio": 94.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FLKRYRP1?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/18/fabricante.png",
       "marca": "Corsair",
       "asin": "B0FLKRYRP1",
       "precioFecha": "2026-10-07"
@@ -6123,7 +6123,7 @@
       },
       "precio": 159.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DB96KTGL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/19/fabricante.png",
       "marca": "Turtle Beach",
       "asin": "B0DB96KTGL",
       "precioFecha": "2026-10-07"
@@ -6197,7 +6197,7 @@
         "Microphone": "Micrófono flexible",
         "Sound": "Estéreo"
       },
-      "precio": 25.0,
+      "precio": 25,
       "enlaceAmazon": "https://www.amazon.com/dp/B0B6GWV7P7?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "ASTRO",
@@ -6256,7 +6256,7 @@
       },
       "precio": 45.1,
       "enlaceAmazon": "https://www.amazon.com/dp/B00SAYCXWG?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/26/fabricante.jpg",
       "marca": "HyperX",
       "asin": "B00SAYCXWG",
       "precioFecha": "2026-10-07"
@@ -6275,7 +6275,7 @@
       },
       "precio": 108.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B09TRW57WB?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/audifonos/27/fabricante.jpg",
       "marca": "HyperX",
       "asin": "B09TRW57WB",
       "precioFecha": "2026-10-07"
@@ -6292,7 +6292,7 @@
         "Microphone": "Micrófono",
         "Sound": "N/D"
       },
-      "precio": 109.0,
+      "precio": 109,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CYWFH5Y9?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "Turtle Beach",
@@ -6370,9 +6370,9 @@
         "Panel": "IPS",
         "Response Time": "1ms"
       },
-      "precio": 129.0,
+      "precio": 129,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FP1FDQ2Y?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/2/fabricante.png",
       "marca": "ASUS",
       "asin": "B0FP1FDQ2Y",
       "precioFecha": "2026-10-07"
@@ -6429,7 +6429,7 @@
       },
       "precio": 74.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FG5XLWNV?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/5/fabricante.webp",
       "marca": "MSI",
       "asin": "B0FG5XLWNV",
       "precioFecha": "2026-10-07"
@@ -6505,7 +6505,7 @@
       },
       "precio": 189.05,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F233D6W1?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/9/fabricante.png",
       "marca": "ASUS",
       "asin": "B0F233D6W1",
       "precioFecha": "2026-10-07"
@@ -6524,7 +6524,7 @@
       },
       "precio": 170.05,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BZR9TMBJ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/10/fabricante.png",
       "marca": "ASUS",
       "asin": "B0BZR9TMBJ",
       "precioFecha": "2026-10-07"
@@ -6543,7 +6543,7 @@
       },
       "precio": 179.55,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CV24GQ9W?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/11/fabricante.png",
       "marca": "ASUS ROG",
       "asin": "B0CV24GQ9W",
       "precioFecha": "2026-10-07"
@@ -6562,7 +6562,7 @@
       },
       "precio": 142.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2FZS3JM?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/12/fabricante.jpg",
       "marca": "LG",
       "asin": "B0D2FZS3JM",
       "precioFecha": "2026-10-07"
@@ -6573,9 +6573,9 @@
       "nombre": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD",
       "descripcion": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD gaming monitor from Samsung: N/D display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "N/D",
+        "Size": "27\"",
         "Resolution": "2560x1440 (QHD)",
-        "Refresh Rate": "N/D",
+        "Refresh Rate": "240Hz",
         "Panel": "QD-OLED",
         "Response Time": "N/D"
       },
@@ -6600,7 +6600,7 @@
       },
       "precio": 549.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CTS1RQ6Y?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/14/fabricante.webp",
       "marca": "MSI",
       "asin": "B0CTS1RQ6Y",
       "precioFecha": "2026-10-07"
@@ -6619,7 +6619,7 @@
       },
       "precio": 534.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D7NSZRJW?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/15/fabricante.png",
       "marca": "ASUS ROG",
       "asin": "B0D7NSZRJW",
       "precioFecha": "2026-10-07"
@@ -6655,9 +6655,9 @@
         "Panel": "OLED",
         "Response Time": "N/D"
       },
-      "precio": 384.0,
+      "precio": 384,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FWHPY1GJ?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/17/fabricante.png",
       "marca": "ASUS ROG",
       "asin": "B0FWHPY1GJ",
       "precioFecha": "2026-10-07"
@@ -6733,7 +6733,7 @@
       },
       "precio": 249.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B08LCMYT54?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/21/fabricante.png",
       "marca": "ASUS",
       "asin": "B08LCMYT54",
       "precioFecha": "2026-10-07"
@@ -6809,7 +6809,7 @@
       },
       "precio": 265.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FDC85CGL?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/25/fabricante.jpg",
       "marca": "LG",
       "asin": "B0FDC85CGL",
       "precioFecha": "2026-10-07"
@@ -6826,7 +6826,7 @@
         "Panel": "IPS",
         "Response Time": "1ms"
       },
-      "precio": 259.0,
+      "precio": 259,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DHG1GTG2?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-product.svg",
       "marca": "ASUS",
@@ -6866,7 +6866,7 @@
       },
       "precio": 189.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GS3FHR7L?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/28/fabricante.jpg",
       "marca": "Acer",
       "asin": "B0GS3FHR7L",
       "precioFecha": "2026-10-07"
@@ -6904,7 +6904,7 @@
       },
       "precio": 179.55,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DQ9MMZVV?tag=mockeygamer-20",
-      "imagenUrl": "/placeholder-product.svg",
+      "imagenUrl": "/imagenes/monitores/30/fabricante.png",
       "marca": "ASUS",
       "asin": "B0DQ9MMZVV",
       "precioFecha": "2026-10-07"
