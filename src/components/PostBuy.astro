@@ -1,0 +1,165 @@
+---
+// Bloque "siguiente paso" dentro de un artículo del blog, SOLO para los momentos de decisión de compra
+// (recomendaciones, "¿cuál elegir?", guías de compra). Enlaza a subcategorías del catálogo; el texto
+// y los nombres salen del catálogo real, así que si una subcategoría deja de existir el build falla
+// en lugar de dejar un enlace roto.
+import { FILTROS, NOMBRES, etiqueta, slugDe, tituloFiltro } from '../lib/filtros-catalogo';
+import { SLUG_EN } from '../i18n/en';
+
+type Item = { cat: string; filtro: string; nota?: string };
+const { lang = 'es', titulo, texto, items } = Astro.props as {
+  lang?: 'es' | 'en';
+  titulo: string;
+  texto: string;
+  items: Item[];
+};
+const isEn = lang === 'en';
+
+const enlaces = items.map((it) => {
+  const f = (FILTROS[it.cat] ?? []).find((x) => x.slugEs === it.filtro);
+  if (!f) throw new Error(`[PostBuy] la subcategoría "${it.cat}/${it.filtro}" no existe en el catálogo`);
+  const base = isEn ? `/en/${SLUG_EN[it.cat]}` : `/${it.cat}`;
+  return {
+    href: `${base}/${slugDe(f, lang)}/`,
+    etiqueta: tituloFiltro(f, lang),
+    total: f.total,
+    nota: it.nota,
+  };
+});
+const t = isEn ? { productos: 'products' } : { productos: 'productos' };
+---
+
+<aside class="post-buy" aria-label={titulo}>
+  <div class="post-buy-head">
+    <span class="post-buy-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.5 8.5a2 2 0 01-2 1.5H9.5a2 2 0 01-2-1.6L5.5 4H3"/><circle cx="10" cy="20.5" r="1"/><circle cx="16" cy="20.5" r="1"/></svg>
+    </span>
+    <div>
+      <strong class="post-buy-title">{titulo}</strong>
+      <p class="post-buy-text">{texto}</p>
+    </div>
+  </div>
+  <ul class="post-buy-links">
+    {enlaces.map((e) => (
+      <li>
+        <a href={e.href}>
+          <span class="post-buy-label">{e.etiqueta}{e.nota && <em>{e.nota}</em>}</span>
+          <span class="post-buy-count">{e.total} {t.productos}</span>
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </li>
+    ))}
+  </ul>
+</aside>
+
+<style is:global>
+  .post-buy {
+    margin: 8px 0 44px;
+    padding: 20px 22px 22px;
+    border-radius: 20px;
+    border: 1px solid rgba(124, 255, 203, 0.22);
+    background:
+      linear-gradient(135deg, rgba(0, 255, 225, 0.07), rgba(27, 183, 255, 0.05)),
+      rgba(255, 255, 255, 0.02);
+  }
+
+  .post-buy-head {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .post-buy-icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: var(--accent);
+    background: rgba(124, 255, 203, 0.1);
+    border: 1px solid rgba(124, 255, 203, 0.3);
+  }
+
+  .post-buy-title {
+    display: block;
+    color: var(--text);
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+
+  .post-body .post-buy-text,
+  .post-buy-text {
+    margin: 4px 0 0;
+    color: var(--text-muted);
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+
+  .post-buy-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .post-body .post-buy-links a,
+  .post-buy-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: rgba(5, 7, 11, 0.45);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.2s var(--ease), background 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+
+  .post-buy-links a:hover {
+    border-color: rgba(124, 255, 203, 0.55);
+    background: rgba(124, 255, 203, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .post-buy-label {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.93rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .post-buy-label em {
+    display: block;
+    margin-top: 2px;
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .post-buy-count {
+    flex: none;
+    color: var(--text-dim);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .post-buy-links svg {
+    flex: none;
+    color: var(--accent);
+    transition: transform 0.2s var(--ease);
+  }
+
+  .post-buy-links a:hover svg { transform: translateX(3px); }
+
+  @media (max-width: 560px) {
+    .post-buy { padding: 16px; }
+    .post-buy-links { grid-template-columns: 1fr; }
+  }
+</style>

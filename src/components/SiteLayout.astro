@@ -128,7 +128,7 @@ const articleSchema = article ? {
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C73Q4ZW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="page">
+    <div class={`page${article ? ' page-article' : ''}`}>
       <Header />
 
       <slot />

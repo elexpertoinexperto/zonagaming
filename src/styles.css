@@ -161,6 +161,12 @@ header {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* En los artículos del blog la cabecera no acompaña al hacer scroll: se lee mejor sin una barra fija encima */
+.page-article header {
+  position: relative;
+  top: 0;
+}
+
 /* ── Botones ────────────────────────────────────────────────── */
 .btn,
 .btn-secondary {

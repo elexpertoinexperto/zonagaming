@@ -62,3 +62,16 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   cada URL liste todas sus versiones, incluida ella misma). Las URLs van escapadas para XML y los archivos se sirven como
   `application/xml; charset=utf-8` (`public/_headers`). Validación contra los XSD oficiales de sitemaps.org:
   `npm i --no-save xmllint-wasm && node tools/validar-sitemaps-xsd.mjs`.
+
+## Blog (`BlogPost.astro`, `BlogIndex.astro`, `PostBuy.astro`)
+
+- Los 19 artículos en español y los 19 en inglés usan la misma plantilla `BlogPost.astro` (cabecera editorial, índice lateral
+  que sigue la lectura y desplegable en móvil, barra de progreso, tabla/lista/pasos/nota con estilo de marca, CTA final y
+  "Sigue leyendo"). En los artículos la cabecera del sitio NO es pegajosa (clase `page-article`, solo cuando hay `article`).
+- Un artículo nuevo = un archivo en `src/pages/blog/` y otro en `src/pages/en/blog/` con las constantes (`title`, `description`,
+  `fecha`, `dateISO`, `tiempoLectura`, `secciones`) y el contenido como `<section id="…">` dentro de `<BlogPost …>`.
+  Añádelo también a `src/data/blog-es.ts` (ES) y a `ARTICLES_EN` en `src/i18n/en.ts` (EN) para que salga en la portada del blog.
+- `PostBuy` es el bloque "siguiente paso": enlaza a subcategorías del catálogo (`items={[{ cat, filtro, nota? }]}`; `filtro` es el
+  slug en español). Si la subcategoría no existe, el build falla. REGLA: solo tras secciones donde la persona ya decide qué
+  comprar (recomendaciones, "¿cuál elegir?", conclusión de una guía de compra), nunca en secciones puramente informativas.
+- Prueba: `npm run build && node tools/probar-blog.mjs` (plantilla, enlaces internos, índice, bloques de compra, paridad ES/EN).
