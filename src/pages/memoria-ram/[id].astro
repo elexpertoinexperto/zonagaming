@@ -3,6 +3,7 @@ import SiteLayout from '../../components/SiteLayout.astro';
 import ProductoDetalle from '../../components/ProductoDetalle.astro';
 import JuegosCompatibles from '../../components/JuegosCompatibles.astro';
 import productos from '../../data/productos.json';
+import { nombreCortoUnico } from '../../lib/seo.mjs';
 
 export function getStaticPaths() {
   const productosCategoria = productos['memoria-ram' as keyof typeof productos];
@@ -22,7 +23,7 @@ if (!producto) {
   return Astro.redirect('/memoria-ram');
 }
 
-const nombreCorto = producto.nombre.length > 50 ? producto.nombre.slice(0, 50).replace(/\s+\S*$/, '') + '…' : producto.nombre;
+const nombreCorto = nombreCortoUnico(producto, productosCategoria as any[], 50);
 const metaDescription = `${nombreCorto} — memoria RAM para gaming al mejor precio. Specs, opiniones y compra con envío Amazon en Monckey Gamer.`;
 const breadcrumb = {
   "@context": "https://schema.org",

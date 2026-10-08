@@ -1,0 +1,13 @@
+---
+// Subcategorías (filtros) de esta categoría: /gabinetes-gamer/<filtro>/ — ver src/lib/filtros.mjs
+import FiltroPagina from '../../components/FiltroPagina.astro';
+import { FILTROS } from '../../lib/filtros-catalogo';
+
+export function getStaticPaths() {
+  return FILTROS['gabinetes-gamer'].map((f) => ({ params: { filtro: f.slugEs } }));
+}
+
+const { filtro } = Astro.params;
+---
+
+<FiltroPagina catKey="gabinetes-gamer" slug={filtro!} lang="es" />

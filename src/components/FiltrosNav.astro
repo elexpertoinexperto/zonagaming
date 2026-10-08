@@ -1,0 +1,115 @@
+---
+// Barra de subcategorías (filtros) de una categoría. Son enlaces normales a páginas estáticas
+// (/tarjetas-graficas/para-1080p/), así funcionan sin JavaScript y Google los rastrea.
+// Se usa en la página de la categoría (arriba) y en cada subcategoría (con la actual marcada).
+import { FILTROS, GRUPOS, etiqueta, slugDe } from '../lib/filtros-catalogo';
+import { SLUG_EN } from '../i18n/en';
+
+const { catKey, lang = 'es', actual = '' } = Astro.props as { catKey: string; lang?: 'es' | 'en'; actual?: string };
+const isEn = lang === 'en';
+const lista = FILTROS[catKey] ?? [];
+const base = isEn ? `/en/${SLUG_EN[catKey] ?? catKey}` : `/${catKey}`;
+
+// Agrupa respetando el orden de definición
+const grupos: { clave: string; filtros: typeof lista }[] = [];
+for (const f of lista) {
+  let g = grupos.find((x) => x.clave === f.grupo);
+  if (!g) { g = { clave: f.grupo, filtros: [] }; grupos.push(g); }
+  g.filtros.push(f);
+}
+const titulo = isEn ? 'Browse by subcategory' : 'Explora por subcategoría';
+---
+
+{lista.length > 0 && (
+  <nav class="filtros-nav" aria-label={titulo}>
+    <p class="filtros-titulo">{titulo}</p>
+    {grupos.map((g) => (
+      <div class="filtros-grupo">
+        <span class="filtros-grupo-nombre">{isEn ? (GRUPOS as any)[g.clave].en : (GRUPOS as any)[g.clave].es}</span>
+        <ul>
+          {g.filtros.map((f) => {
+            const slug = slugDe(f, lang);
+            const activo = slug === actual;
+            return (
+              <li>
+                {activo ? (
+                  <span class="chip chip-activo" aria-current="page">{etiqueta(f, lang)} <small>{f.total}</small></span>
+                ) : (
+                  <a class="chip" href={`${base}/${slug}/`}>{etiqueta(f, lang)} <small>{f.total}</small></a>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    ))}
+  </nav>
+)}
+
+<style>
+  .filtros-nav {
+    margin: 0 0 28px;
+    padding: 18px 20px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+  }
+  .filtros-titulo {
+    margin: 0 0 12px;
+    color: #7cffcb;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .filtros-grupo {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    padding: 6px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .filtros-grupo:first-of-type { border-top: 0; }
+  .filtros-grupo-nombre {
+    flex: 0 0 150px;
+    color: #8aa3b8;
+    font-size: 0.82rem;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #d6e6f2;
+    font-size: 0.86rem;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+  .chip small { color: #7a94aa; font-size: 0.74rem; }
+  a.chip:hover {
+    border-color: rgba(124, 255, 203, 0.55);
+    background: rgba(124, 255, 203, 0.1);
+    color: #fff;
+  }
+  .chip-activo {
+    border-color: #7cffcb;
+    background: rgba(124, 255, 203, 0.16);
+    color: #fff;
+    font-weight: 700;
+  }
+  @media (max-width: 720px) {
+    .filtros-grupo { flex-direction: column; gap: 6px; }
+    .filtros-grupo-nombre { flex-basis: auto; }
+  }
+</style>

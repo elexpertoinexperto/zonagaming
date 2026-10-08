@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
+import FiltrosNav from '../../components/FiltrosNav.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
@@ -40,6 +41,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       <span>Stock validado y envío seguro vía Amazon</span>
     </div>
   </section>
+
+  <FiltrosNav catKey="teclados" lang="es" />
 
   <section class="product-grid">
     {productsData.map((product) => (

@@ -1,0 +1,13 @@
+---
+// Subcategorías (filtros) de esta categoría: /tarjetas-graficas/<filtro>/ — ver src/lib/filtros.mjs
+import FiltroPagina from '../../components/FiltroPagina.astro';
+import { FILTROS } from '../../lib/filtros-catalogo';
+
+export function getStaticPaths() {
+  return FILTROS['tarjetas-graficas'].map((f) => ({ params: { filtro: f.slugEs } }));
+}
+
+const { filtro } = Astro.params;
+---
+
+<FiltroPagina catKey="tarjetas-graficas" slug={filtro!} lang="es" />

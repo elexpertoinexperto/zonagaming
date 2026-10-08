@@ -1,0 +1,13 @@
+---
+// Subcategorías (filtros) de esta categoría: /audifonos/<filtro>/ — ver src/lib/filtros.mjs
+import FiltroPagina from '../../components/FiltroPagina.astro';
+import { FILTROS } from '../../lib/filtros-catalogo';
+
+export function getStaticPaths() {
+  return FILTROS['audifonos'].map((f) => ({ params: { filtro: f.slugEs } }));
+}
+
+const { filtro } = Astro.params;
+---
+
+<FiltroPagina catKey="audifonos" slug={filtro!} lang="es" />

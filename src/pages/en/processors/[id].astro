@@ -2,6 +2,7 @@
 import SiteLayout from '../../../components/SiteLayout.astro';
 import ProductoDetalle from '../../../components/ProductoDetalle.astro';
 import productos from '../../../data/productos-en.json';
+import { nombreCortoUnico } from '../../../lib/seo.mjs';
 import { CATS_EN } from '../../../i18n/en';
 
 export function getStaticPaths() {
@@ -24,7 +25,7 @@ if (!producto) {
   return Astro.redirect(`/en/${categoria}/`);
 }
 
-const metaDescription = `${producto.nombre.length > 58 ? producto.nombre.slice(0, 58).replace(/\s+\S*$/, '') + '…' : producto.nombre} at the best price at Monckey Gamer. Specs, reviews and Amazon shipping.`;
+const metaDescription = `${nombreCortoUnico(producto, productosCategoria, 58)} at the best price at Monckey Gamer. Specs, reviews and Amazon shipping.`;
 ---
 
 <SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">

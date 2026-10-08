@@ -1,0 +1,180 @@
+---
+// Página de una subcategoría (filtro) dentro de su categoría madre:
+//   /tarjetas-graficas/para-1080p/  ·  /en/graphics-cards/for-1080p/
+// Es una página estática con contenido propio (título, descripción, texto con datos reales, listado de
+// productos), migas de pan Inicio > Categoría > Subcategoría, ItemList en JSON-LD y enlaces a la madre y a las hermanas.
+import SiteLayout from './SiteLayout.astro';
+import ProductCard from './ProductCard.astro';
+import FiltrosNav from './FiltrosNav.astro';
+import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
+import { SLUG_EN, CATS_EN } from '../i18n/en';
+
+const { catKey, slug, lang = 'es' } = Astro.props as { catKey: string; slug: string; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const f = FILTROS[catKey].find((x) => slugDe(x, lang) === slug)!;
+const nombres = (NOMBRES as any)[catKey];
+const catEn = SLUG_EN[catKey] ?? catKey;
+const site = 'https://monckeygamer.com';
+
+const base = isEn ? `/en/${catEn}` : `/${catKey}`;
+const urlCategoria = `${base}/`;
+const urlFiltro = `${base}/${slug}/`;
+const urlHome = isEn ? '/en/' : '/';
+const h1 = tituloFiltro(f, lang);
+const catNombre = isEn ? nombres.enTit : nombres.esTit;
+const plural = isEn ? nombres.en : nombres.es;
+const etiq = etiqueta(f, lang);
+
+// Productos: del más barato al más caro (el orden se puede cambiar en la página)
+const items = productosDelFiltro(f, lang).slice().sort((a: any, b: any) => a.precio - b.precio);
+const precio = (n: number) => `$${n.toFixed(2)}`;
+const hrefProducto = (p: any) => `${base}/${p.slug}-${p.id}/`;
+const barato = items[0];
+const caro = items[items.length - 1];
+const marcas = f.marcas.slice(0, 5);
+const listaMarcas = marcas.join(', ');
+
+const title = `${h1} | Monckey Gamer`;
+const description = isEn
+  ? `Compare ${f.total} ${plural} ${etiq}: from $${Math.round(f.min)} to $${Math.round(f.max)} USD. Specs, prices and direct Amazon links at Monckey Gamer.`
+  : `Compara ${f.total} ${plural} ${etiq}: desde $${Math.round(f.min)} hasta $${Math.round(f.max)} USD. Specs, precios y compra directa en Amazon con Monckey Gamer.`;
+
+const intro = isEn
+  ? `We have ${f.total} ${plural} ${etiq} in our catalog, with prices from ${precio(f.min)} to ${precio(f.max)} USD. All of them link straight to Amazon.`
+  : `Tenemos ${f.total} ${plural} ${etiq} en el catálogo, con precios desde ${precio(f.min)} hasta ${precio(f.max)} USD. Todos enlazan directo a Amazon.`;
+const tip = isEn ? f.tipEn : f.tipEs;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: isEn ? 'Home' : 'Inicio', item: `${site}${urlHome}` },
+      { '@type': 'ListItem', position: 2, name: catNombre, item: `${site}${urlCategoria}` },
+      { '@type': 'ListItem', position: 3, name: h1, item: `${site}${urlFiltro}` },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: h1,
+    description,
+    url: `${site}${urlFiltro}`,
+    inLanguage: lang,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: items.length,
+      itemListElement: items.map((p: any, i: number) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${site}${hrefProducto(p)}`,
+        name: p.nombre,
+      })),
+    },
+  },
+];
+
+const primeraImagen = items.find((p: any) => !String(p.imagenUrl).includes('placeholder'))?.imagenUrl;
+const t = isEn
+  ? { back: 'Back to Home', all: `See all ${plural}`, avail: 'products found', stock: 'Verified stock and secure shipping',
+      sort: 'Sort by', def: 'Price: low to high', desc: 'Price: high to low', quick: 'Quick guide', cheapest: 'Cheapest', priciest: 'Most expensive',
+      brands: 'Brands in this selection', more: `More ${plural}`, small: catNombre }
+  : { back: 'Volver al Home', all: `Ver todas las ${plural}`, avail: 'productos encontrados', stock: 'Stock validado y envío seguro vía Amazon',
+      sort: 'Ordenar por', def: 'Precio: de menor a mayor', desc: 'Precio: de mayor a menor', quick: 'Guía rápida', cheapest: 'El más económico', priciest: 'El más completo / caro',
+      brands: 'Marcas en esta selección', more: `Más ${plural}`, small: catNombre };
+---
+
+<SiteLayout title={title} description={description} robots="index, follow" schema={schema} ogImage={primeraImagen}>
+  <section class="category-hero">
+    <a class="category-back" href={urlHome}>{t.back}</a>
+    <small>{t.small}</small>
+    <h1>{h1}</h1>
+    <p class="category-description">{intro}</p>
+    <div class="category-meta">
+      <span>{items.length} {t.avail}</span>
+      <span>{t.stock}</span>
+      <a class="meta-link" href={urlCategoria}>← {t.all}</a>
+    </div>
+  </section>
+
+  <FiltrosNav catKey={catKey} lang={lang} actual={slug} />
+
+  <div class="orden-barra">
+    <label for="orden-select">{t.sort}</label>
+    <select id="orden-select">
+      <option value="asc">{t.def}</option>
+      <option value="desc">{t.desc}</option>
+    </select>
+  </div>
+
+  <section class="product-grid" id="listado-filtro">
+    {items.map((p: any) => (
+      <div class="pc-wrap" data-precio={p.precio}>
+        <ProductCard lang={lang} product={{
+          id: p.id,
+          name: p.nombre,
+          price: `$${p.precio.toFixed(2)} USD`,
+          description: p.descripcion,
+          imageUrl: p.imagenUrl,
+          detailHref: hrefProducto(p),
+          amazonHref: p.enlaceAmazon,
+          marca: p.marca,
+        }} />
+      </div>
+    ))}
+  </section>
+
+  <section class="category-buying-guide">
+    <h2>{t.quick}: {h1}</h2>
+    <p>{tip}</p>
+    <ul>
+      <li><strong>{t.cheapest}:</strong> <a href={hrefProducto(barato)}>{barato.nombre}</a> — {precio(barato.precio)} USD</li>
+      <li><strong>{t.priciest}:</strong> <a href={hrefProducto(caro)}>{caro.nombre}</a> — {precio(caro.precio)} USD</li>
+      <li><strong>{t.brands}:</strong> {listaMarcas}</li>
+    </ul>
+    <p>
+      {isEn ? 'Looking for something different? ' : '¿Buscas algo distinto? '}
+      <a href={urlCategoria}>{t.more}</a>
+    </p>
+  </section>
+</SiteLayout>
+
+<script>
+  // Orden por precio sin recargar la página (las páginas funcionan igual sin JavaScript)
+  const select = document.getElementById('orden-select') as HTMLSelectElement | null;
+  const grid = document.getElementById('listado-filtro');
+  select?.addEventListener('change', () => {
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.pc-wrap'));
+    cards.sort((a, b) => (Number(a.dataset.precio) - Number(b.dataset.precio)) * (select.value === 'desc' ? -1 : 1));
+    cards.forEach((c) => grid.appendChild(c));
+  });
+</script>
+
+<style>
+  .pc-wrap { display: flex; }
+  .pc-wrap :global(.product-card) { width: 100%; }
+  .meta-link {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(124, 255, 203, 0.35);
+    color: #7cffcb;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .orden-barra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    color: #c8d8e8;
+  }
+  .orden-barra select {
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #0b1118;
+    color: #e6f7ff;
+  }
+  .category-buying-guide a { color: #7cffcb; }
+</style>

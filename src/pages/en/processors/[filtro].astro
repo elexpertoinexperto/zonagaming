@@ -1,0 +1,13 @@
+---
+// Subcategories (filters) for this category: /en/processors/<filter>/ — see src/lib/filtros.mjs
+import FiltroPagina from '../../../components/FiltroPagina.astro';
+import { FILTROS } from '../../../lib/filtros-catalogo';
+
+export function getStaticPaths() {
+  return FILTROS['procesadores'].map((f) => ({ params: { filtro: f.slugEn } }));
+}
+
+const { filtro } = Astro.params;
+---
+
+<FiltroPagina catKey="procesadores" slug={filtro!} lang="en" />

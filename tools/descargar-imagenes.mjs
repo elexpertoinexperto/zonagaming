@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import { aWebp } from './optimizar-imagenes.mjs';
 
 const root = process.cwd();
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'tools/image-manifest.json'), 'utf8'));
@@ -63,7 +64,8 @@ for (const [cat, items] of Object.entries(manifest)) {
       if (!ir.ok) throw new Error('imagen HTTP ' + ir.status);
       const type = ir.headers.get('content-type') || '';
       if (!type.startsWith('image/')) throw new Error('no es imagen: ' + type);
-      const ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('svg') ? 'svg' : 'jpg';
+      const esSvg = type.includes('svg');
+      const ext = esSvg ? 'svg' : 'webp'; // todo raster se guarda como WebP ligero (máx. 900 px)
       const dir = path.join(root, 'public/imagenes', cat, String(id));
       fs.mkdirSync(dir, { recursive: true });
       const buf = Buffer.from(await ir.arrayBuffer());
@@ -72,7 +74,7 @@ for (const [cat, items] of Object.entries(manifest)) {
       const otro = huellas.get(huella);
       if (otro && otro !== cat + '/' + id) throw new Error('imagen idéntica a la de ' + otro + ' (logo o banner genérico)');
       huellas.set(huella, cat + '/' + id);
-      fs.writeFileSync(path.join(dir, `fabricante.${ext}`), buf);
+      fs.writeFileSync(path.join(dir, `fabricante.${ext}`), esSvg ? buf : await aWebp(buf));
       const rel = `/imagenes/${cat}/${id}/fabricante.${ext}`;
       for (const d of data) { const p = d[cat].find((x) => x.id === num); if (p) p.imagenUrl = rel; }
       report.ok.push([cat, id, rel]);

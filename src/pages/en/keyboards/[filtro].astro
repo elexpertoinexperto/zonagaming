@@ -1,0 +1,13 @@
+---
+// Subcategories (filters) for this category: /en/keyboards/<filter>/ — see src/lib/filtros.mjs
+import FiltroPagina from '../../../components/FiltroPagina.astro';
+import { FILTROS } from '../../../lib/filtros-catalogo';
+
+export function getStaticPaths() {
+  return FILTROS['teclados'].map((f) => ({ params: { filtro: f.slugEn } }));
+}
+
+const { filtro } = Astro.params;
+---
+
+<FiltroPagina catKey="teclados" slug={filtro!} lang="en" />

@@ -2,6 +2,7 @@
 // /sitemap.xml (índice) → /sitemap-es.xml + /sitemap-en.xml
 import productos from '../data/productos.json';
 import { toEnPath } from '../i18n/en';
+import { FILTROS } from './filtros-catalogo';
 import { statSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { resolve, dirname } from 'path';
@@ -74,6 +75,10 @@ function allEntries(): Entry[] {
 
   for (const cat of categories) {
     entries.push({ path: `/${cat}/`, lastmod: fileMtime(`${cat}/index.astro`), priority: '0.8' });
+    // Subcategorías (filtros) de la categoría: /categoria/para-1080p/ (prioridad entre la categoría y las fichas)
+    for (const filtro of FILTROS[cat] ?? []) {
+      entries.push({ path: `/${cat}/${filtro.slugEs}/`, lastmod: fileMtime(`${cat}/[filtro].astro`), priority: '0.7' });
+    }
     const categoryProducts = productos[cat as keyof typeof productos];
     for (const product of categoryProducts) {
       entries.push({

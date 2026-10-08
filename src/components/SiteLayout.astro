@@ -3,7 +3,9 @@ import '../styles.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import { toEnPath, toEsPath } from '../i18n/en';
-const { title, description, robots, schema, article } = Astro.props;
+import productosEs from '../data/productos.json';
+import productosEn from '../data/productos-en.json';
+const { title, description, robots, schema, article, ogImage: ogImageProp } = Astro.props;
 
 // Idioma derivado de la URL: /en/... es inglés, el resto español
 const pathname = Astro.url.pathname;
@@ -17,6 +19,37 @@ const enPath = toEnPath(esPath);
 const site = (Astro.site?.href || 'https://monckeygamer.com/').replace(/\/$/, '');
 const esUrl = `${site}${esPath}`;
 const enUrl = `${site}${enPath}`;
+
+// ¿Es una ficha de producto? (/categoria/slug-id/ o /en/categoria-en/slug-id/) → datos para OG y JSON-LD Product
+const segs = esPath.split('/').filter(Boolean);
+const idProducto = segs.length === 2 ? parseInt(segs[1].split('-').pop() ?? '', 10) : NaN;
+const listaCat = (productosEs as any)[segs[0]];
+// El slug completo debe coincidir (slug-id): así una subcategoría como /por-menos-de-30/ no se confunde con un producto
+const productoPagina = Number.isFinite(idProducto) && listaCat ? listaCat.find((p: any) => p.id === idProducto && segs[1] === `${p.slug}-${p.id}`) : null;
+const productoLang = productoPagina ? ((productosEn as any)[segs[0]]?.find((p: any) => p.id === idProducto) ?? productoPagina) : null;
+const sinImagen = !productoPagina || String(productoPagina.imagenUrl).includes('placeholder');
+const imagenProducto = productoPagina && !sinImagen ? `${site}${productoPagina.imagenUrl}` : null;
+// Imagen para redes sociales: la del producto (si es real) o el logo
+const ogImage = ogImageProp ? `${site}${ogImageProp}` : (imagenProducto ?? `${site}/logo-fondoblanco.png`);
+const ogType = article ? 'article' : productoPagina ? 'product' : 'website';
+
+const productSchema = productoPagina && productoLang ? {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": productoPagina.nombre,
+  "description": (isEn ? productoLang : productoPagina).descripcion,
+  ...(imagenProducto ? { "image": [imagenProducto] } : {}),
+  ...(productoPagina.marca ? { "brand": { "@type": "Brand", "name": productoPagina.marca } } : {}),
+  ...(productoPagina.asin ? { "sku": productoPagina.asin } : {}),
+  "inLanguage": lang,
+  "offers": {
+    "@type": "Offer",
+    "url": Astro.url.href,
+    "price": Number(productoPagina.precio).toFixed(2),
+    "priceCurrency": "USD",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+} : null;
 
 const articleSchema = article ? {
   "@context": "https://schema.org",
@@ -65,9 +98,22 @@ const articleSchema = article ? {
     <link rel="alternate" hreflang="en-US" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={esUrl} />
     {description && <meta name="description" content={description} />}
+    <meta property="og:site_name" content="Monckey Gamer" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={isEn ? 'en_US' : 'es_CO'} />
+    <meta property="og:locale:alternate" content={isEn ? 'es_CO' : 'en_US'} />
+    <meta name="twitter:card" content={imagenProducto || ogImageProp ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={ogImage} />
     <title>{title}</title>
     {schema && <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />}
     {articleSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
+    {productSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />}
 
     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

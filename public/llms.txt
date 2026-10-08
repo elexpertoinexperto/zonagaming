@@ -29,6 +29,10 @@ Product pages include full specifications, pricing in USD, and a direct outbound
 - [Headsets](https://monckeygamer.com/audifonos/) · [EN](https://monckeygamer.com/en/headsets/): Gaming headsets with 7.1 surround sound.
 - [Gaming monitors](https://monckeygamer.com/monitores/) · [EN](https://monckeygamer.com/en/gaming-monitors/): 1080p, 1440p, 4K, OLED and ultrawide gaming monitors with high refresh rates.
 
+## Subcategories
+
+Every category has subcategory pages nested under it, in both languages, listing only the products that match: for example graphics cards for 1080p, 1440p or 4K (/tarjetas-graficas/para-1080p/ · /en/graphics-cards/for-1080p/), by VRAM size, by chip maker or model; processors by Ryzen/Core series, socket and core count; RAM by DDR type, capacity and speed; SSDs by capacity and interface (NVMe, SATA, PCIe 4.0/5.0); power supplies by wattage (650 W to 1000 W) and 80 Plus rating; monitors by resolution (Full HD, 2K, 4K, ultrawide), panel (IPS, VA, OLED), size and refresh rate; plus keyboards, mice, headsets, cases and coolers by type, connection, brand and price range. Each subcategory page is linked from its parent category page and carries hreflang to its equivalent in the other language. All of them are listed in the sitemaps.
+
 ## Blog
 
 Educational hardware guides in Spanish at /blog/ and English at /en/blog/, covering VRAM, memory bus width and speed, CPU cores and threads, RAM DDR generations and latency, liquid vs air cooling, case buying criteria, keyboard switch types, mouse grip styles and weight, and headset comfort/wireless topics.
