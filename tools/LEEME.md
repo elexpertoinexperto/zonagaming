@@ -48,3 +48,12 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - Cada página tiene su title/description únicos, H1, texto con datos reales (rango de precios, más barato/más caro, marcas),
   `BreadcrumbList` + `CollectionPage/ItemList` en JSON-LD, Open Graph, y enlaza a su madre y a sus hermanas.
 - Prueba: `npm run build && node tools/probar-filtros.mjs` (hreflang, sitemap, canonical, H1, JSON-LD, enlaces madre↔hija, unicidad).
+
+## Sitemaps (`src/lib/sitemap-data.ts`)
+
+- `/sitemap.xml` (índice) → `sitemap-es.xml` + `sitemap-en.xml` (tienda, categorías, subcategorías y fichas) y
+  `sitemap-blog-es.xml` + `sitemap-blog-en.xml` (solo `/blog/` y `/en/blog/`).
+- Todo se descubre solo: los artículos del blog son los archivos de `src/pages/blog/*.astro` (el build avisa si uno no tiene
+  versión en inglés), y las fichas y subcategorías salen de `productos.json`. No hay listas que mantener a mano.
+- Prueba: `npm run build && node tools/probar-sitemaps.mjs` (toda página en un sitemap, ninguna repetida ni rota, blog solo
+  en los sitemaps del blog, hreflang a páginas reales, canonical y noindex).

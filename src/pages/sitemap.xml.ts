@@ -1,19 +1,22 @@
 import type { APIRoute } from 'astro';
-import { site, xmlHeaders } from '../lib/sitemap-data';
+import { site, ultimaModificacion, xmlHeaders } from '../lib/sitemap-data';
 
-// Índice de sitemaps: uno por idioma
+// Índice de sitemaps: sitio y blog, cada uno en español e inglés
 export const GET: APIRoute = () => {
-  const now = new Date().toISOString().split('T')[0];
+  const general = ultimaModificacion('general');
+  const blog = ultimaModificacion('blog');
+  const hijos = [
+    ['sitemap-es.xml', general],
+    ['sitemap-en.xml', general],
+    ['sitemap-blog-es.xml', blog],
+    ['sitemap-blog-en.xml', blog],
+  ];
   const index = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>${site}/sitemap-es.xml</loc>
-    <lastmod>${now}</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>${site}/sitemap-en.xml</loc>
-    <lastmod>${now}</lastmod>
-  </sitemap>
+${hijos.map(([archivo, fecha]) => `  <sitemap>
+    <loc>${site}/${archivo}</loc>
+    <lastmod>${fecha}</lastmod>
+  </sitemap>`).join('\n')}
 </sitemapindex>`;
 
   return new Response(index, { headers: xmlHeaders });
