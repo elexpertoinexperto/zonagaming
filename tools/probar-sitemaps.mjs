@@ -57,6 +57,34 @@ for (const h of esperados) {
   }
 }
 
+// Formato del protocolo (sitemaps.org y documentación de Google)
+for (const h of [...esperados, 'sitemap.xml']) {
+  const ruta = `dist/${h}`;
+  if (!fs.existsSync(ruta)) continue;
+  const bytes = fs.statSync(ruta).size;
+  const xml = fs.readFileSync(ruta, 'utf8');
+  if (bytes > 50 * 1024 * 1024) err(`${h}: pesa más de 50 MB`);
+  if (!xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>')) err(`${h}: falta la declaración XML UTF-8 al principio`);
+  if (xml.charCodeAt(0) === 0xfeff) err(`${h}: lleva BOM`);
+  const locs = [...xml.matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]);
+  if (h !== 'sitemap.xml' && locs.length > 50000) err(`${h}: más de 50.000 URLs`);
+  for (const l of locs) {
+    if (!l.startsWith(SITE + '/')) err(`${h}: URL no absoluta o de otro dominio → ${l}`);
+    if (l.length > 2048) err(`${h}: URL de más de 2048 caracteres → ${l.slice(0, 80)}`);
+    if (/[^!-~]/.test(l)) err(`${h}: URL con espacios o caracteres no ASCII sin codificar → ${l}`);
+    if (/&(?!amp;|apos;|quot;|lt;|gt;)/.test(l)) err(`${h}: & sin escapar → ${l}`);
+  }
+  if (h === 'sitemap.xml') continue;
+  // orden de los elementos de cada <url>: loc, lastmod, [changefreq], [priority], luego xhtml:link
+  for (const b of xml.match(/<url>[\s\S]*?<\/url>/g) ?? []) {
+    const orden = [...b.matchAll(/<(loc|lastmod|changefreq|priority|xhtml:link)[ >\/]/g)].map((m) => m[1]);
+    const rango = { loc: 0, lastmod: 1, changefreq: 2, priority: 3, 'xhtml:link': 4 };
+    if (orden.some((e, i) => i && rango[e] < rango[orden[i - 1]])) { err(`${h}: elementos de <url> en orden incorrecto → ${b.match(/<loc>([^<]+)/)[1]}`); break; }
+    if (!/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(b)) err(`${h}: lastmod ausente o con formato incorrecto`);
+    if (/xhtml:link[^>]*type=/.test(b)) err(`${h}: xhtml:link con atributo type (no está en la especificación de Google)`);
+  }
+}
+
 for (const [url, html] of paginas) {
   if (url === SITE + '/404/') continue;
   if (!enSitemaps.has(url)) err(`página fuera de los sitemaps: ${url}`);

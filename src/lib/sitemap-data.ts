@@ -95,6 +95,13 @@ export function ultimaModificacion(tipo: TipoSitemap): string {
   return entradasDe(tipo).map((e) => e.lastmod).sort().pop() ?? new Date().toISOString().split('T')[0];
 }
 
+// Escapa los caracteres reservados de XML (& ' " < >) en las URLs, como exige el protocolo de sitemaps
+const xml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/'/g, '&apos;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// Orden de los elementos de cada <url> según el esquema oficial (sitemaps.org/schemas/sitemap/0.9/sitemap.xsd):
+// loc → lastmod → changefreq → priority → elementos de otros espacios de nombres (xhtml:link para hreflang).
+// Cada URL lista TODAS sus versiones, incluida ella misma (requisito de Google para hreflang en sitemaps).
 export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap): string {
   const urls = entradasDe(tipo)
     .map((e) => {
@@ -102,12 +109,12 @@ export function buildUrlset(lang: 'es' | 'en', tipo: TipoSitemap): string {
       const enLoc = `${site}${toEnPath(e.path)}`;
       const loc = lang === 'es' ? esLoc : enLoc;
       return `  <url>
-    <loc>${loc}</loc>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="${esLoc}" type="application/xhtml+xml"/>
-    <xhtml:link rel="alternate" hreflang="en-US" href="${enLoc}" type="application/xhtml+xml"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${esLoc}" type="application/xhtml+xml"/>
+    <loc>${xml(loc)}</loc>
     <lastmod>${e.lastmod}</lastmod>
     <priority>${e.priority}</priority>
+    <xhtml:link rel="alternate" hreflang="es-CO" href="${xml(esLoc)}"/>
+    <xhtml:link rel="alternate" hreflang="en-US" href="${xml(enLoc)}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${xml(esLoc)}"/>
   </url>`;
     })
     .join('\n');
@@ -118,4 +125,4 @@ ${urls}
 </urlset>`;
 }
 
-export const xmlHeaders = { 'Content-Type': 'application/xml' };
+export const xmlHeaders = { 'Content-Type': 'application/xml; charset=utf-8' };

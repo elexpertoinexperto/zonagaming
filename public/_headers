@@ -1,0 +1,15 @@
+# Los sitemaps se sirven como XML en UTF-8 (Cloudflare solo manda "application/xml" por defecto)
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-pages-es.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-pages-en.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-product-es.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-product-en.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-blog-es.xml
+  Content-Type: application/xml; charset=utf-8
+/sitemap-blog-en.xml
+  Content-Type: application/xml; charset=utf-8
