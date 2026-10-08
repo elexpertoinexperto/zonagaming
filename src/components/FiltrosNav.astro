@@ -1,7 +1,7 @@
 ---
-// Barra de subcategorías (filtros) de una categoría. Son enlaces normales a páginas estáticas
-// (/tarjetas-graficas/para-1080p/), así funcionan sin JavaScript y Google los rastrea.
-// Se usa en la página de la categoría (arriba) y en cada subcategoría (con la actual marcada).
+// Filtros de una categoría como una barra compacta de menús desplegables (Resolución ▾, Memoria de video ▾,
+// Marca ▾, Precio ▾…). Cada opción es un enlace normal a una página estática (/tarjetas-graficas/para-1080p/):
+// funciona sin JavaScript (<details>), Google rastrea todos los enlaces y los menús se abren de uno en uno.
 import { FILTROS, GRUPOS, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN } from '../i18n/en';
 
@@ -17,118 +17,299 @@ for (const f of lista) {
   if (!g) { g = { clave: f.grupo, filtros: [] }; grupos.push(g); }
   g.filtros.push(f);
 }
-const titulo = isEn ? 'Browse by subcategory' : 'Explora por subcategoría';
+
+const t = isEn
+  ? { titulo: 'Filter by', limpiar: 'Clear filter', aria: 'Filter products by subcategory' }
+  : { titulo: 'Filtrar por', limpiar: 'Quitar filtro', aria: 'Filtrar productos por subcategoría' };
+
+// Iconos de línea (24×24, trazo 1.8) para cada grupo
+const CHIP = '<rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>';
+const MONITOR = '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>';
+const MEMORIA = '<rect x="3" y="8" width="18" height="8" rx="1.5"/><path d="M7 8v8M11 8v8M15 8v8M6 16v3M18 16v3"/>';
+const CAPAS = '<path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/>';
+const RAYO = '<path d="M13 3L5 14h6l-1 7 8-11h-6l1-7z"/>';
+const ICONOS: Record<string, string> = {
+  resolucion: MONITOR, panel: MONITOR,
+  vram: MEMORIA, capacidad: MEMORIA,
+  chip: CHIP, modelo: CHIP,
+  serie: CAPAS, nucleos: CAPAS,
+  socket: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/>',
+  tipo: '<path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/>',
+  velocidad: RAYO, potencia: RAYO,
+  certificacion: '<circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/>',
+  caracteristicas: '<path d="M5 7l2 2 3-3M5 17l2 2 3-3M14 8h6M14 18h6"/>',
+  tamano: '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+  conexion: '<path d="M5 12.5a10 10 0 0114 0M8.5 16a5 5 0 017 0"/><circle cx="12" cy="19" r="1"/>',
+  color: '<path d="M12 3a9 9 0 100 18c1.5 0 2-1 1.5-2.2-.5-1.3.2-2.3 1.6-2.3H17a4 4 0 004-4c0-5-4-9.5-9-9.5z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/>',
+  marca: '<path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="8.5" r="1.2"/>',
+  precio: '<path d="M12 3v18M16 7.5c0-1.7-1.8-3-4-3s-4 1.1-4 2.8c0 4.2 8 2 8 6.2 0 1.7-1.8 3-4 3s-4-1.3-4-3"/>',
+};
+const icono = (clave: string) => ICONOS[clave] ?? ICONOS.tipo;
 ---
 
 {lista.length > 0 && (
-  <div class="filtros-nav" role="navigation" aria-label={titulo}>
-    <p class="filtros-titulo">{titulo}</p>
-    {grupos.map((g) => (
-      <div class="filtros-grupo">
-        <span class="filtros-grupo-nombre">{isEn ? (GRUPOS as any)[g.clave].en : (GRUPOS as any)[g.clave].es}</span>
-        <ul>
-          {g.filtros.map((f) => {
-            const slug = slugDe(f, lang);
-            const activo = slug === actual;
-            return (
-              <li>
-                {activo ? (
-                  <span class="chip chip-activo" aria-current="page">{etiqueta(f, lang)} <small>{f.total}</small></span>
-                ) : (
-                  <a class="chip" href={`${base}/${slug}/`}>{etiqueta(f, lang)} <small>{f.total}</small></a>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    ))}
+  <div class="filtros" role="navigation" aria-label={t.aria}>
+    <span class="filtros-etiqueta">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+      {t.titulo}
+    </span>
+
+    {grupos.map((g) => {
+      const sel = g.filtros.find((f) => slugDe(f, lang) === actual);
+      const nombreGrupo = isEn ? (GRUPOS as any)[g.clave].en : (GRUPOS as any)[g.clave].es;
+      return (
+        <details class={`fg${sel ? ' fg-activo' : ''}`} name="filtros-grupo">
+          <summary>
+            <svg class="fg-icono" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={icono(g.clave)} />
+            <span class="fg-nombre">{nombreGrupo}</span>
+            {sel && <span class="fg-valor">{etiqueta(sel, lang)}</span>}
+            <svg class="fg-flecha" viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="fg-panel">
+            <ul class={g.filtros.length > 8 ? 'dos-columnas' : ''}>
+              {g.filtros.map((f) => {
+                const slug = slugDe(f, lang);
+                return (
+                  <li>
+                    {slug === actual ? (
+                      <span class="op op-activo" aria-current="page">
+                        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span class="op-texto">{etiqueta(f, lang)}</span>
+                        <small>{f.total}</small>
+                      </span>
+                    ) : (
+                      <a class="op" href={`${base}/${slug}/`}>
+                        <span class="op-texto">{etiqueta(f, lang)}</span>
+                        <small>{f.total}</small>
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </details>
+      );
+    })}
+
+    {actual && (
+      <a class="filtros-limpiar" href={`${base}/`}>
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        {t.limpiar}
+      </a>
+    )}
   </div>
 )}
 
+<script>
+  // Cierra el menú abierto al hacer clic fuera o con Escape, y lo alinea a la derecha si se saldría de la pantalla
+  const grupos = () => Array.from(document.querySelectorAll<HTMLDetailsElement>('.filtros .fg'));
+  document.addEventListener('click', (e) => {
+    const t = e.target as Node;
+    grupos().forEach((d) => { if (d.open && !d.contains(t)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      grupos().forEach((d) => {
+        if (d.open) { d.open = false; (d.querySelector('summary') as HTMLElement | null)?.focus(); }
+      });
+    }
+  });
+  grupos().forEach((d) => d.addEventListener('toggle', () => {
+    const panel = d.querySelector<HTMLElement>('.fg-panel');
+    if (!d.open || !panel) return;
+    panel.classList.remove('fg-der');
+    if (panel.getBoundingClientRect().right > window.innerWidth - 12) panel.classList.add('fg-der');
+  }));
+</script>
+
 <style>
-  .filtros-nav {
-    margin: 0 0 28px;
-    padding: 6px 20px;
-    border-radius: var(--r-lg);
-    border: 1px solid var(--line);
-    background: var(--surface);
-  }
-  .filtros-titulo {
-    margin: 0;
-    padding: 14px 0 8px;
-    color: var(--text);
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-  .filtros-grupo {
-    display: grid;
-    grid-template-columns: 148px minmax(0, 1fr);
-    gap: 14px;
+  .filtros {
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 10px 0;
-    border-top: 1px solid var(--line);
+    gap: 10px;
+    margin: 0 0 26px;
   }
-  .filtros-grupo-nombre {
+
+  .filtros-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 4px;
     color: var(--text-dim);
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     font-weight: 500;
   }
+
+  .fg {
+    position: relative;
+  }
+
+  .fg > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+  }
+
+  .fg > summary::-webkit-details-marker { display: none; }
+
+  .fg > summary:hover {
+    border-color: rgba(124, 255, 203, 0.35);
+    color: var(--text);
+  }
+
+  .fg-icono { color: var(--accent); flex: none; }
+
+  .fg-flecha {
+    flex: none;
+    color: var(--text-dim);
+    transition: transform 0.25s var(--ease);
+  }
+
+  .fg[open] > summary {
+    border-color: var(--accent);
+    background: rgba(124, 255, 203, 0.1);
+    color: var(--text);
+  }
+
+  .fg[open] .fg-flecha {
+    transform: rotate(180deg);
+    color: var(--accent);
+  }
+
+  /* El grupo que contiene el filtro actual se ve marcado */
+  .fg-activo > summary {
+    border-color: rgba(124, 255, 203, 0.5);
+    background: rgba(124, 255, 203, 0.12);
+    color: var(--text);
+  }
+
+  .fg-valor {
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--brand-grad);
+    color: #05070b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .fg-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 40;
+    min-width: 250px;
+    max-width: min(360px, calc(100vw - 32px));
+    padding: 8px;
+    border-radius: var(--r-lg);
+    border: 1px solid rgba(124, 255, 203, 0.2);
+    background: var(--navy);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.75);
+    animation: fg-in 0.18s var(--ease);
+  }
+
+  .fg-panel.fg-der { left: auto; right: 0; }
+
+  @keyframes fg-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: none; }
+  }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    gap: 2px;
+    max-height: min(60vh, 420px);
+    overflow-y: auto;
+  }
+
+  ul.dos-columnas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 440px;
+  }
+
+  .op {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .chip {
-    display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.03);
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: var(--r-sm);
     color: var(--text-muted);
-    font-size: 0.85rem;
-    line-height: 1.3;
-    white-space: nowrap;
+    font-size: 0.9rem;
     text-decoration: none;
-    transition: border-color 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+    transition: background 0.15s var(--ease), color 0.15s var(--ease);
   }
-  .chip small {
+
+  .op-texto { flex: 1; min-width: 0; }
+
+  .op small {
     color: var(--text-dim);
-    font-size: 0.74rem;
+    font-size: 0.78rem;
     font-variant-numeric: tabular-nums;
   }
-  a.chip:hover {
-    border-color: var(--accent-line);
-    background: var(--accent-soft);
-    color: var(--text);
+
+  a.op:hover {
+    background: rgba(124, 255, 203, 0.1);
+    color: #fff;
   }
-  .chip-activo {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: var(--accent-ink);
+
+  .op-activo {
+    background: rgba(124, 255, 203, 0.14);
+    color: var(--accent);
     font-weight: 600;
   }
-  .chip-activo small { color: rgba(4, 18, 13, 0.7); }
+
+  .filtros-limpiar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 12px;
+    border-radius: var(--r-md);
+    color: var(--text-dim);
+    font-size: 0.86rem;
+    text-decoration: none;
+    transition: color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+
+  .filtros-limpiar:hover { color: #fff; background: rgba(255, 255, 255, 0.06); }
+
   @media (max-width: 720px) {
-    .filtros-nav { padding: 4px 14px; }
-    .filtros-grupo { grid-template-columns: 1fr; gap: 6px; padding: 10px 0; }
-    /* cada grupo es una fila deslizable en lugar de ocupar media pantalla */
-    ul {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      margin: 0 -14px;
-      padding: 2px 14px 6px;
-      scroll-snap-type: x proximity;
-      scroll-padding-inline: 14px;
-      scrollbar-width: none;
+    .filtros { flex-direction: column; align-items: stretch; gap: 8px; }
+    .filtros-etiqueta { margin: 0 0 2px; }
+    .fg > summary { width: 100%; justify-content: flex-start; }
+    .fg-flecha { margin-left: auto; }
+    /* en móvil el menú se despliega dentro del flujo, a todo el ancho */
+    .fg-panel,
+    .fg-panel.fg-der {
+      position: static;
+      min-width: 0;
+      max-width: none;
+      margin-top: 6px;
+      box-shadow: none;
     }
-    ul::-webkit-scrollbar { display: none; }
-    .chip { scroll-snap-align: start; }
+    ul.dos-columnas { grid-template-columns: 1fr; min-width: 0; }
+    .filtros-limpiar { justify-content: center; border: 1px solid var(--line); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fg-panel { animation: none; }
   }
 </style>

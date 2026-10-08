@@ -8,19 +8,21 @@
   color-scheme: dark;
 
   /* Color */
-  --bg: #06080c;
-  --surface: #0b1016;
-  --surface-2: #101720;
-  --line: rgba(255, 255, 255, 0.075);
+  --bg: #05070b;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.08);
   --line-strong: rgba(255, 255, 255, 0.14);
-  --text: #e9f1f7;
-  --text-muted: #9bb0c1;
-  --text-dim: #6f8597;
+  --text: #e6f7ff;
+  --text-muted: #c8d8e8;
+  --text-dim: #8aa0b8;
   --accent: #7cffcb;
-  --accent-ink: #04120d;
+  --accent-ink: #05070b;
   --accent-soft: rgba(124, 255, 203, 0.1);
-  --accent-line: rgba(124, 255, 203, 0.34);
-  --amazon: #ff9f1a;
+  --accent-line: rgba(124, 255, 203, 0.3);
+  --brand-grad: linear-gradient(135deg, #00ffe1, #1bb7ff);
+  --navy: rgba(7, 27, 53, 0.96);
+  --amazon: #ff9900;
 
   /* Forma */
   --r-sm: 10px;
@@ -52,8 +54,8 @@ body {
   margin: 0;
   min-height: 100vh;
   overflow-x: hidden;
-  background:
-    radial-gradient(900px 480px at 12% -8%, rgba(124, 255, 203, 0.07), transparent 70%),
+  background: radial-gradient(circle at top, rgba(0, 255, 162, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(0, 184, 255, 0.16), transparent 26%),
     var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -120,11 +122,12 @@ header {
   padding: 8px 14px 8px 12px;
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
-  background: rgba(8, 12, 18, 0.78);
+  background: rgba(7, 27, 53, 0.62);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   backdrop-filter: blur(16px) saturate(1.2);
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
 }
+
 
 .brand {
   display: flex;
@@ -179,13 +182,14 @@ header {
 }
 
 .btn {
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--brand-grad);
+  color: #05070b;
 }
 
 .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px -8px rgba(124, 255, 203, 0.55);
+  box-shadow: 0 6px 20px rgba(0, 255, 225, 0.35);
+  filter: brightness(1.08);
 }
 
 .btn:active {
@@ -206,13 +210,14 @@ header {
 
 .btn-amazon {
   background: var(--amazon);
-  color: #1a1004;
+  color: #fff;
   text-decoration: none;
 }
 
 .btn-amazon:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px -8px rgba(255, 159, 26, 0.6);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+  filter: brightness(1.1);
 }
 
 .btn-amazon:active {
@@ -238,10 +243,16 @@ header {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  /* dos luces suaves y estáticas: menta a la izquierda, cian tenue a la derecha */
+  background: linear-gradient(180deg, rgba(7, 27, 53, 0.92), rgba(3, 8, 16, 0.97));
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background:
-    radial-gradient(ellipse 60% 70% at 22% 30%, rgba(124, 255, 203, 0.12), transparent 70%),
-    radial-gradient(ellipse 45% 55% at 85% 55%, rgba(53, 214, 255, 0.07), transparent 70%);
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(124, 255, 203, 0.1), transparent 24%);
 }
 
 .hero-copy {
@@ -265,6 +276,19 @@ header {
 .hero-copy h1 em {
   font-style: normal;
   color: var(--accent);
+  background: linear-gradient(90deg, #7cffcb, #00ffe1, #1bb7ff, #7cffcb);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy h1 em { animation: hero-shimmer 4s linear infinite; }
+}
+
+@keyframes hero-shimmer {
+  to { background-position: 300% center; }
 }
 
 .hero-copy p {
@@ -539,7 +563,7 @@ header {
 .product-card:hover {
   transform: translateY(-3px);
   border-color: var(--line-strong);
-  background: var(--surface-2);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .product-card-content {
@@ -564,16 +588,16 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: var(--r-md);
-  background: radial-gradient(circle at 50% 35%, #ffffff, #e9eef3);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
 }
 
 .product-card-image img {
   width: 100%;
   height: 100%;
-  padding: 14px;
+  padding: 12px;
   object-fit: contain;
-  mix-blend-mode: multiply; /* los fondos blancos de las fotos se funden con el fondo claro */
   transition: transform 0.5s var(--ease);
 }
 
@@ -584,13 +608,14 @@ header {
 .brand-tag {
   order: -1;
   align-self: flex-start;
-  margin: 0 4px 8px;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  margin: 0 4px 10px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(124, 255, 203, 0.3);
+  background: rgba(124, 255, 203, 0.1);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -633,7 +658,7 @@ header {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--text);
+  color: var(--accent);
   font-variant-numeric: tabular-nums;
 }
 
@@ -653,27 +678,18 @@ header {
 
 .product-card-actions .btn-small {
   width: 100%;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text);
-  border: 1px solid var(--line-strong);
-}
-
-.product-card-actions .btn-small:hover {
-  border-color: var(--accent-line);
-  background: var(--accent-soft);
-  box-shadow: none;
 }
 
 .product-card-actions .btn-amazon {
   background: var(--amazon);
-  color: #1a1004;
+  color: #fff;
   border-color: transparent;
 }
 
 .product-card-actions .btn-amazon:hover {
-  background: #ffb04a;
+  filter: brightness(1.1);
   border-color: transparent;
-  box-shadow: 0 8px 20px -8px rgba(255, 159, 26, 0.6);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
 }
 
 /* Los más vendidos son 3: se reparten el ancho completo */
@@ -738,8 +754,8 @@ header {
   margin-top: 72px;
   padding: 32px 36px;
   border-radius: var(--r-lg);
-  background: var(--surface);
-  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(124, 255, 203, 0.1);
 }
 
 .category-buying-guide h2 {
