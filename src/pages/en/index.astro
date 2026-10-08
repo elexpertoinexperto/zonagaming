@@ -99,53 +99,26 @@ const bestSellerProducts = [
       <Header />
 
       <section class="hero">
-        <!-- Fondo animado synthwave (fullscreen) -->
-        <div class="hero-bg">
-          <div class="hv-grid"></div>
-          <div class="hv-horizon"></div>
-          <div class="hv-particles">
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
-          </div>
-          <div class="hv-scanline"></div>
-        </div>
+        <div class="hero-bg" aria-hidden="true"></div>
 
-        <!-- Contenido con parallax -->
         <div class="hero-copy" id="hero-copy">
-          <span class="hv-badge">● ONLINE</span>
           <h1>PC Components<br /><em>Gamer Store</em></h1>
           <p class="hero-copy-description">Gear and components that take your performance to the next level</p>
           <p>A curated catalog of PC-building parts — graphics cards, power supplies, mechanical keyboards and liquid cooling. Maximum speed and real gamer style.</p>
           <div class="hero-actions">
             <a class="btn" href="#coleccion">Best Sellers</a>
+            <a class="btn-secondary" href="#categorias">Browse categories</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-card">
-              <strong>+{totalComponentes}</strong>
-              Components for gaming.
-            </div>
-            <div class="stat-card">
-              <strong>24h</strong>
-              Available for you.
-            </div>
-            <div class="stat-card">
-              <strong>Warranty</strong>
-              Direct with Amazon.
-            </div>
-          </div>
-        </div>
-
-        <!-- Flecha de scroll -->
-        <div class="hero-scroll-hint">
-          <span>Scroll</span>
-          <div class="hero-scroll-arrow"></div>
+          <ul class="hero-facts">
+            <li><strong>+{totalComponentes}</strong> components for gaming</li>
+            <li>Available 24/7</li>
+            <li>Warranty direct with Amazon</li>
+          </ul>
         </div>
       </section>
 
       <section id="categorias" class="categories">
         <div class="section-title">
-          <small>Categories</small>
           <h2>Find the ideal component</h2>
         </div>
         <div class="category-grid">
@@ -174,7 +147,6 @@ const bestSellerProducts = [
 
       <section id="ventajas" class="features">
         <div class="section-title">
-          <small>Why visit Monckey Gamer</small>
           <h2>Gamer setup advantages</h2>
         </div>
         <div class="feature-list">

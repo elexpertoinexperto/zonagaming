@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../../components/SiteLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
 import FiltrosNav from '../../../components/FiltrosNav.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import BestSellers from '../../../components/BestSellers.astro';
@@ -27,8 +28,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
 <SiteLayout title={cat.pageTitle} description={cat.metaDescription} robots="index, follow">
   <section class="category-hero">
-    <a class="category-back" href="/en/">Back to Home</a>
-    <small>Category</small>
+    <Breadcrumb catKey="audifonos" lang="en" />
     <h1>{cat.heroTitle}</h1>
     <p class="category-description">{cat.heroDescription}</p>
     <div class="category-meta">

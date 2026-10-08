@@ -22,31 +22,34 @@ const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
     <div class="producto-imagenes">
       <img src={imagenPath} alt={nombre} class="producto-imagen" />
     </div>
-    
+
     <div class="producto-info">
       {marca && <span class="brand-tag">{marca}</span>}
       <h1>{nombre}</h1>
-      
+
       <p class="descripcion">{descripcion}</p>
-      
-      <div class="especificaciones">
-        <h2>{tSpecs}</h2>
-        <ul>
-          {Object.entries(especificaciones).map(([clave, valor]) => (
-            <li>
-              <span class="clave">{clave}:</span>
-              <span class="valor">{valor}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      
+
       <div class="compra">
-        <h2 class="precio-label">{tPrice}</h2>
-        <p class="precio">${precio.toFixed(2)}</p>
+        <div class="compra-precio">
+          <span class="precio-label">{tPrice}</span>
+          <p class="precio">${precio.toFixed(2)} <small>USD</small></p>
+        </div>
         <a href={enlaceAmazon} target="_blank" rel="noopener noreferrer" class="btn-amazon">
           {tAmazon}
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+      </div>
+
+      <div class="especificaciones">
+        <h2>{tSpecs}</h2>
+        <dl>
+          {Object.entries(especificaciones).filter(([, valor]) => String(valor).trim().toUpperCase() !== 'N/D').map(([clave, valor]) => (
+            <div class="spec-fila">
+              <dt class="clave">{clave}</dt>
+              <dd class="valor">{valor}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   </div>
@@ -54,148 +57,165 @@ const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
 
 <style>
   .producto-detalle {
-    padding: 2rem;
+    padding: 0;
   }
 
   .producto-contenedor {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 48px;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: start;
   }
 
   .producto-imagenes {
+    position: sticky;
+    top: 96px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f5f5f5;
-    border-radius: 8px;
-    min-height: 400px;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(circle at 50% 35%, #ffffff, #e9eef3);
+    border-radius: var(--r-lg);
+    overflow: hidden;
   }
 
   .producto-imagen {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    padding: 12px;
+    padding: 28px;
+    mix-blend-mode: multiply;
   }
 
   .brand-tag {
     display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #7cffcb;
-    background: rgba(124, 255, 203, 0.1);
-    border: 1px solid rgba(124, 255, 203, 0.3);
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-bottom: 10px;
+    color: var(--accent);
   }
 
   .producto-info h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: rgb(124, 255, 203);
-
-  } 
+    margin: 0 0 16px;
+    font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
 
   .descripcion {
-    font-size: 1.1rem;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .especificaciones {
-    margin-bottom: 2rem;
-  }
-
-  .especificaciones h2 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: rgb(124, 255, 203);
-
-  }
-
-  .especificaciones ul {
-    list-style: none;
-    padding: 0;
-    background: #f9f9f9;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-
-  .especificaciones li {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-  }
-
-  .especificaciones li:last-child {
-    border-bottom: none;
-  }
-
-  .clave {
-    font-weight: 600;
-    color: #333;
-  }
-
-  .valor {
-    color: #666;
+    margin: 0 0 28px;
+    max-width: 62ch;
+    font-size: 1.02rem;
+    color: var(--text-muted);
+    line-height: 1.7;
   }
 
   .compra {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    padding: 20px 22px;
+    margin-bottom: 36px;
+    border-radius: var(--r-lg);
+    background: var(--surface);
+    border: 1px solid var(--line);
   }
 
   .precio-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: #8aa0b8;
-    margin: 0 0 4px;
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    margin-bottom: 2px;
   }
 
   .precio {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #7cffcb;
-    margin-bottom: 1rem;
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .precio small {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dim);
+    letter-spacing: 0;
   }
 
   .btn-amazon {
-    display: inline-block;
-    background: #FF9900;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--r-md);
+    background: var(--amazon);
+    color: #1a1004;
     font-weight: 600;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
   }
 
   .btn-amazon:hover {
-    background: #FF8800;
+    background: #ffb04a;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 26px -10px rgba(255, 159, 26, 0.7);
   }
 
-  @media (max-width: 768px) {
+  .especificaciones h2 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .especificaciones dl {
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .spec-fila {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.8fr) minmax(0, 1.4fr);
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .clave {
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+
+  .valor {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+
+  @media (max-width: 860px) {
     .producto-contenedor {
       grid-template-columns: 1fr;
+      gap: 24px;
     }
-
-    .producto-info h1 {
-      font-size: 1.5rem;
+    .producto-imagenes {
+      position: static;
+      aspect-ratio: 4 / 3;
     }
-
-    .precio {
-      font-size: 1.5rem;
-    }
+    .compra { padding: 16px; }
+    .precio { font-size: 1.8rem; }
+    .btn-amazon { width: 100%; justify-content: center; }
   }
 </style>

@@ -197,10 +197,6 @@ const t = {
 </script>
 
 <style>
-  header {
-    position: relative;
-  }
-
   .main-nav {
     z-index: 1000;
   }
@@ -209,10 +205,10 @@ const t = {
     display: none;
     width: 44px;
     height: 44px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #e6f7ff;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
     cursor: pointer;
     padding: 10px;
   }
@@ -252,16 +248,18 @@ const t = {
     gap: 8px;
     background: none;
     border: none;
-    color: #c8d8e8;
-    font-size: 0.95rem;
-    font-family: Rubik, Inter, poppins;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-family: inherit;
     cursor: pointer;
-    padding: 0;
-    transition: color 0.2s ease;
+    padding: 8px 12px;
+    border-radius: var(--r-sm);
+    transition: color 0.2s var(--ease), background 0.2s var(--ease);
   }
 
   .dropdown-toggle:hover {
-    color: #7cffcb;
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .dropdown-icon {
@@ -274,18 +272,23 @@ const t = {
 
   .dropdown-menu {
     position: absolute;
-    top: calc(100% + 12px);
-    left: 0;
-    min-width: 240px;
-    background: rgba(7, 27, 53, 0.95);
-    border: 1px solid rgba(124, 255, 203, 0.2);
-    border-radius: 12px;
-    padding: 8px 0;
+    top: calc(100% + 14px);
+    left: -12px;
+    width: min(560px, calc(100vw - 48px));
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    background: rgba(9, 13, 19, 0.96);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-lg);
+    padding: 10px;
+    box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
     transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
     z-index: 1000;
   }
 
@@ -299,28 +302,28 @@ const t = {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 16px;
-    color: #c8d8e8;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    color: var(--text-muted);
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
     font-size: 0.9rem;
   }
 
   .dropdown-item:hover {
-    background: rgba(124, 255, 203, 0.1);
-    color: #7cffcb;
-    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
   }
 
   .dropdown-category-symbol {
     display: inline-grid;
     place-items: center;
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(124, 255, 203, 0.22);
-    border-radius: 6px;
-    color: #7cffcb;
-    background: rgba(124, 255, 203, 0.08);
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--accent-line);
+    border-radius: var(--r-sm);
+    color: var(--accent);
+    background: var(--accent-soft);
     flex: 0 0 auto;
   }
 
@@ -338,9 +341,10 @@ const t = {
   .lang-switch {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 2px;
+    margin-left: 6px;
+    padding: 3px;
+    border: 1px solid var(--line);
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.03);
   }
@@ -354,9 +358,9 @@ const t = {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #8aa0b8;
+    color: var(--text-dim);
     text-decoration: none;
-    opacity: 0.55;
+    opacity: 0.7;
     transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
   }
 
@@ -367,8 +371,8 @@ const t = {
 
   .lang-btn.lang-active {
     opacity: 1;
-    color: #7cffcb;
-    background: rgba(124, 255, 203, 0.08);
+    color: var(--accent);
+    background: var(--accent-soft);
   }
 
   .lang-flag {
@@ -378,9 +382,14 @@ const t = {
   }
 
   .brand-logo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
+  }
+
+  @keyframes dd-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   @media (max-width: 1024px) {
@@ -401,11 +410,12 @@ const t = {
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
       scrollbar-color: rgba(124, 255, 203, 0.4) transparent;
-      border: 1px solid rgba(124, 255, 203, 0.18);
-      border-radius: 16px;
-      background: rgba(7, 27, 53, 0.96);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
-      backdrop-filter: blur(10px);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--r-lg);
+      background: rgba(9, 13, 19, 0.97);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
       opacity: 0;
       visibility: hidden;
       transform: translateY(-8px);
@@ -447,7 +457,7 @@ const t = {
 
     .main-nav > a:hover,
     .dropdown-toggle:hover {
-      background: rgba(124, 255, 203, 0.08);
+      background: rgba(255, 255, 255, 0.05);
     }
 
     .dropdown-menu {
@@ -461,8 +471,8 @@ const t = {
       opacity: 1;
       visibility: visible;
       transform: none;
-      background: rgba(255, 255, 255, 0.04);
-      transition: max-height 0.2s ease, padding 0.2s ease;
+      display: block;
+      background: rgba(255, 255, 255, 0.03);
     }
 
     .dropdown-menu.active {
@@ -473,6 +483,7 @@ const t = {
       scrollbar-color: rgba(124, 255, 203, 0.4) transparent;
       padding: 6px 0;
       transform: none;
+      animation: dd-in 0.22s var(--ease);
     }
 
     .dropdown-menu.active::-webkit-scrollbar {

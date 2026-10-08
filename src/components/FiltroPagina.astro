@@ -6,6 +6,7 @@
 import SiteLayout from './SiteLayout.astro';
 import ProductCard from './ProductCard.astro';
 import FiltrosNav from './FiltrosNav.astro';
+import Breadcrumb from './Breadcrumb.astro';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 
@@ -86,8 +87,7 @@ const t = isEn
 
 <SiteLayout title={title} description={description} robots="index, follow" schema={schema} ogImage={primeraImagen}>
   <section class="category-hero">
-    <a class="category-back" href={urlHome}>{t.back}</a>
-    <small>{t.small}</small>
+    <Breadcrumb catKey={catKey} lang={lang} current={etiq} />
     <h1>{h1}</h1>
     <p class="category-description">{intro}</p>
     <div class="category-meta">
@@ -155,26 +155,33 @@ const t = isEn
   .pc-wrap { display: flex; }
   .pc-wrap :global(.product-card) { width: 100%; }
   .meta-link {
-    padding: 10px 14px;
+    padding: 7px 12px;
     border-radius: 999px;
-    border: 1px solid rgba(124, 255, 203, 0.35);
-    color: #7cffcb;
+    border: 1px solid var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
     text-decoration: none;
-    font-weight: 700;
+    transition: background 0.2s ease;
   }
+  .meta-link:hover { background: rgba(124, 255, 203, 0.18); }
   .orden-barra {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
-    margin: 0 0 18px;
-    color: #c8d8e8;
+    margin: 0 0 16px;
+    color: var(--text-dim);
+    font-size: 0.86rem;
   }
   .orden-barra select {
     padding: 8px 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    background: #0b1118;
-    color: #e6f7ff;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
   }
-  .category-buying-guide a { color: #7cffcb; }
 </style>

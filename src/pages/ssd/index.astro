@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../components/SiteLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
@@ -32,8 +33,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   ]
 }}>
   <section class="category-hero">
-    <a class="category-back" href="/">← Volver al Home</a>
-    <small>Memoria SSD NVMe / SATA</small>
+    <Breadcrumb catKey="ssd" lang="es" />
     <h1>SSD</h1>
     <p class="category-description">{description}</p>
     <div class="category-meta">

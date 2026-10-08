@@ -1,5 +1,6 @@
 ---
 import SiteLayout from '../../../components/SiteLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
 import ProductoDetalle from '../../../components/ProductoDetalle.astro';
 import productos from '../../../data/productos-en.json';
 import { nombreCortoUnico } from '../../../lib/seo.mjs';
@@ -30,7 +31,7 @@ const metaDescription = `${nombreCortoUnico(producto, productosCategoria, 58)} a
 
 <SiteLayout title={`${producto.nombre} | Monckey Gamer`} description={metaDescription} robots="index, follow">
   <div class="producto-header">
-    <a class="back-link" href={`/en/${categoria}/`}>← {cat.backLabel}</a>
+    <Breadcrumb catKey="ssd" lang="en" current={producto.nombre} />
   </div>
 
   <ProductoDetalle
@@ -47,19 +48,35 @@ const metaDescription = `${nombreCortoUnico(producto, productosCategoria, 58)} a
 
 <style>
   .producto-header {
-    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 24px 0 22px;
   }
 
-  .back-link {
-    color: #3b82f6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  .pdp-seo-context {
+    max-width: 1200px;
+    margin: 72px auto 0;
+    padding: 32px 0 0;
+    border-top: 1px solid var(--line);
   }
 
-  .back-link:hover {
-    color: #1d4ed8;
+  .pdp-seo-context h2 {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin: 0 0 14px;
+  }
+
+  .pdp-seo-context p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+    max-width: 78ch;
+  }
+
+  .pdp-seo-context a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 </style>

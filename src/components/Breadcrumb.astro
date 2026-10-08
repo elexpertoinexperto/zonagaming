@@ -1,0 +1,35 @@
+---
+// Migas de pan visibles: Inicio / Categoría [/ actual]. Coinciden con el BreadcrumbList en JSON-LD y
+// enlazan hacia arriba en el silo (producto → subcategoría → categoría → inicio).
+import { NOMBRES } from '../lib/filtros-catalogo';
+import { SLUG_EN } from '../i18n/en';
+
+const { catKey, lang = 'es', current, parent } = Astro.props as {
+  catKey: string;
+  lang?: 'es' | 'en';
+  current?: string;
+  parent?: { label: string; href: string };
+};
+const isEn = lang === 'en';
+const nombres = (NOMBRES as any)[catKey];
+const home = isEn ? { label: 'Home', href: '/en/' } : { label: 'Inicio', href: '/' };
+const catLabel = isEn ? nombres.enTit : nombres.esTit;
+const catHref = isEn ? `/en/${SLUG_EN[catKey] ?? catKey}/` : `/${catKey}/`;
+---
+
+<ol class="breadcrumb" aria-label={isEn ? 'Breadcrumb' : 'Migas de pan'}>
+  <li><a href={home.href}>{home.label}</a></li>
+  {current ? <li><a href={catHref}>{catLabel}</a></li> : <li aria-current="page">{catLabel}</li>}
+  {parent && <li><a href={parent.href}>{parent.label}</a></li>}
+  {current && <li aria-current="page" class="breadcrumb-actual">{current}</li>}
+</ol>
+
+<style is:global>
+  .breadcrumb-actual {
+    min-width: 0;
+    max-width: 46ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>
