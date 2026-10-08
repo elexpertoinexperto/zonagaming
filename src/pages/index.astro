@@ -106,7 +106,34 @@ const bestSellerProducts = [
       <Header />
 
       <section class="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-emblem">
+            <span class="em-glow"></span>
+            <span class="em-pulse"></span>
+            <span class="em-pulse em-pulse-2"></span>
+            <svg class="em-ring em-ring-a" viewBox="0 0 400 400" fill="none">
+              <defs>
+                <linearGradient id="em-grad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#7cffcb" />
+                  <stop offset="1" stop-color="#1bb7ff" />
+                </linearGradient>
+              </defs>
+              <circle cx="200" cy="200" r="190" stroke="url(#em-grad)" stroke-width="2" stroke-dasharray="2 11" stroke-linecap="round" />
+            </svg>
+            <svg class="em-ring em-ring-b" viewBox="0 0 400 400" fill="none">
+              <circle cx="200" cy="200" r="190" stroke="url(#em-grad)" stroke-width="1.5" stroke-dasharray="70 22 6 22" stroke-linecap="round" />
+            </svg>
+            <div class="em-orbit">
+            <span class="em-chip" style="left: 50.00%; top: 4.00%; --d: 0s"><span class="em-chip-in"><CategoryIcon name="gpu" /></span></span>
+            <span class="em-chip" style="left: 89.84%; top: 27.00%; --d: -0.9s"><span class="em-chip-in"><CategoryIcon name="cpu" /></span></span>
+            <span class="em-chip" style="left: 89.84%; top: 73.00%; --d: -1.8s"><span class="em-chip-in"><CategoryIcon name="ram" /></span></span>
+            <span class="em-chip" style="left: 50.00%; top: 96.00%; --d: -2.7s"><span class="em-chip-in"><CategoryIcon name="ssd" /></span></span>
+            <span class="em-chip" style="left: 10.16%; top: 73.00%; --d: -3.6s"><span class="em-chip-in"><CategoryIcon name="mouse" /></span></span>
+            <span class="em-chip" style="left: 10.16%; top: 27.00%; --d: -4.5s"><span class="em-chip-in"><CategoryIcon name="keyboard" /></span></span>
+            </div>
+            <img class="em-logo" src="/logo.png" alt="" width="552" height="552" decoding="async" />
+          </div>
+        </div>
 
         <div class="hero-copy" id="hero-copy">
           <h1>Componentes PC<br /><em>Tienda Gamer</em></h1>

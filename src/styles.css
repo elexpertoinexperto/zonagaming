@@ -255,6 +255,129 @@ header {
     radial-gradient(circle at 20% 80%, rgba(124, 255, 203, 0.1), transparent 24%);
 }
 
+/* ── Emblema animado del fondo de la portada ───────────────── */
+.hero-emblem {
+  position: absolute;
+  top: 50%;
+  right: max(24px, calc((100vw - 1240px) / 2 + 24px));
+  width: clamp(300px, 38vw, 540px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.hero-emblem > * {
+  position: absolute;
+  inset: 0;
+}
+
+.em-glow {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(124, 255, 203, 0.22), transparent 52%),
+    radial-gradient(circle at 60% 40%, rgba(27, 183, 255, 0.16), transparent 62%);
+  filter: blur(14px);
+}
+
+.em-logo {
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  width: 46%;
+  height: auto;
+  translate: -50% -50%;
+  filter: drop-shadow(0 0 26px rgba(124, 255, 203, 0.5)) drop-shadow(0 0 70px rgba(27, 183, 255, 0.25));
+}
+
+.em-pulse {
+  inset: 22%;
+  border-radius: 50%;
+  border: 1.5px solid rgba(124, 255, 203, 0.45);
+  opacity: 0;
+}
+
+.em-ring-b {
+  inset: 12%;
+  width: 76%;
+  height: 76%;
+  opacity: 0.55;
+}
+
+.em-ring-a { opacity: 0.8; }
+
+.em-orbit { inset: 4%; }
+
+.em-chip {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 1;
+  margin: -7.5% 0 0 -7.5%; /* centra el chip en su punto de la órbita */
+}
+
+.em-chip-in {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 28%;
+  border: 1px solid rgba(124, 255, 203, 0.38);
+  background: rgba(7, 27, 53, 0.78);
+  color: var(--accent);
+  box-shadow: 0 0 22px rgba(124, 255, 203, 0.22), inset 0 0 14px rgba(124, 255, 203, 0.08);
+}
+
+.em-chip-in svg {
+  width: 54%;
+  height: 54%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .em-logo { animation: em-float 6s ease-in-out infinite; }
+  .em-ring-a { animation: em-spin 70s linear infinite; }
+  .em-ring-b { animation: em-spin 46s linear infinite reverse; }
+  .em-orbit { animation: em-spin 54s linear infinite; }
+  .em-chip-in { animation: em-spin 54s linear infinite reverse; }
+  .em-chip { animation: em-bob 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
+  .em-pulse { animation: em-pulse 4.2s ease-out infinite; }
+  .em-pulse-2 { animation-delay: 2.1s; }
+  .em-glow { animation: em-breathe 7s ease-in-out infinite; }
+}
+
+@keyframes em-spin { to { transform: rotate(360deg); } }
+@keyframes em-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes em-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -7px; }
+}
+@keyframes em-pulse {
+  0% { transform: scale(0.5); opacity: 0.5; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+@keyframes em-breathe {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 860px) {
+  .hero-emblem {
+    right: -14%;
+    top: 46%;
+    width: min(440px, 92vw);
+    opacity: 0.42;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-emblem {
+    right: -34%;
+    top: 40%;
+    width: 420px;
+    opacity: 0.24;
+  }
+}
+
 .hero-copy {
   position: relative;
   z-index: 2;
