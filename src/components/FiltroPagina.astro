@@ -176,12 +176,26 @@ const t = isEn
     font-size: 0.86rem;
   }
   .orden-barra select {
-    padding: 8px 12px;
+    padding: 9px 38px 9px 14px;
     border-radius: var(--r-sm);
     border: 1px solid var(--line-strong);
-    background: var(--surface);
-    color: var(--text);
+    /* fondo SÓLIDO: la variable --surface es translúcida y el menú desplegable nativo quedaba blanco sobre blanco */
+    background-color: #0b1118;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237cffcb' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    color: #e6f7ff;
     font: inherit;
     cursor: pointer;
+    appearance: none;
+    color-scheme: dark;
+  }
+  .orden-barra select:hover,
+  .orden-barra select:focus-visible {
+    border-color: var(--accent-line);
+  }
+  .orden-barra select option {
+    background: #0b1118;
+    color: #e6f7ff;
   }
 </style>

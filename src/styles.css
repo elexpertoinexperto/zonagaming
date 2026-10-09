@@ -102,6 +102,17 @@ a {
 }
 ::-webkit-scrollbar-thumb:hover { background: rgba(124, 255, 203, 0.5); }
 
+/* Menús desplegables nativos (select/option): siempre texto claro sobre fondo oscuro sólido */
+select {
+  color-scheme: dark;
+}
+
+select option,
+select optgroup {
+  background-color: #0b1118;
+  color: #e6f7ff;
+}
+
 /* ── Estructura ─────────────────────────────────────────────── */
 .page {
   max-width: 1240px;
