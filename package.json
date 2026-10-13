@@ -7,9 +7,12 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node tools/actualizar-lastmod.mjs",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "hooks:install": "node tools/instalar-hooks.mjs",
+    "lastmod": "node tools/actualizar-lastmod.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

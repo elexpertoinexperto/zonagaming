@@ -4,7 +4,9 @@
 //  - TODA página construida (menos la 404) está en un sitemap, y ninguna URL aparece dos veces;
 //  - cada URL está en el sitemap que le toca: el blog (/blog/…) en blog, las fichas de producto en product y
 //    todo lo demás (inicio, categorías, subcategorías…) en pages;
-//  - cada URL del sitemap existe como página; cada una trae hreflang es-CO / en-US / x-default hacia páginas reales;
+//  - cada URL del sitemap existe como página y esa página trae en su <head> hreflang es-CO / en-US / x-default hacia páginas reales;
+//  - formato como eljoseoweb.com: cada <url> lleva solo <loc> y <lastmod> (ISO 8601 UTC con «Z»), y el lastmod de cada
+//    sitemap del índice es la fecha más reciente de las URLs que contiene;
 //  - canonical = URL y ninguna página en noindex.
 import fs from 'node:fs';
 
@@ -51,8 +53,8 @@ for (const h of esperados) {
     if (tipoUrl !== tipoMap) err(`${h}: URL en el sitemap equivocado (es de tipo ${tipoUrl}) → ${loc}`);
     const idioma = h.endsWith('-en.xml') ? 'en' : 'es';
     if (idioma === 'en' !== loc.replace(SITE, '').startsWith('/en')) err(`${h}: idioma equivocado → ${loc}`);
-    const hl = Object.fromEntries([...b.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]));
-    for (const k of ['es-CO', 'en-US', 'x-default']) if (!hl[k]) err(`${h}: falta hreflang ${k} en ${loc}`);
+    const hl = Object.fromEntries([...(paginas.get(loc) ?? '').matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]));
+    for (const k of ['es-CO', 'en-US', 'x-default']) if (!hl[k]) err(`${h}: la página no trae hreflang ${k} → ${loc}`);
     for (const u of [hl['es-CO'], hl['en-US']]) if (u && !paginas.has(u)) err(`${h}: hreflang a una página que no existe → ${u}`);
   }
 }
@@ -74,15 +76,23 @@ for (const h of [...esperados, 'sitemap.xml']) {
     if (/[^!-~]/.test(l)) err(`${h}: URL con espacios o caracteres no ASCII sin codificar → ${l}`);
     if (/&(?!amp;|apos;|quot;|lt;|gt;)/.test(l)) err(`${h}: & sin escapar → ${l}`);
   }
-  if (h === 'sitemap.xml') continue;
-  // orden de los elementos de cada <url>: loc, lastmod y luego xhtml:link (sin priority ni changefreq: Google los ignora)
+  const ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/;
+  if (h === 'sitemap.xml') {
+    // lastmod de cada sitemap del índice = la fecha más reciente de las URLs de ese sitemap
+    for (const b of xml.match(/<sitemap>[\s\S]*?<\/sitemap>/g) ?? []) {
+      const hijo = b.match(/<loc>([^<]+)<\/loc>/)[1].replace(SITE + '/', '');
+      const lm = (b.match(/<lastmod>([^<]+)<\/lastmod>/) ?? [])[1];
+      if (!ISO.test(lm ?? '')) { err(`sitemap.xml: lastmod de ${hijo} ausente o sin formato ISO UTC con Z → ${lm}`); continue; }
+      const fechas = [...fs.readFileSync(`dist/${hijo}`, 'utf8').matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1]).sort();
+      if (fechas.at(-1) !== lm) err(`sitemap.xml: lastmod de ${hijo} (${lm}) no es el de su URL más reciente (${fechas.at(-1)})`);
+    }
+    continue;
+  }
+  // cada <url> lleva solo loc y lastmod (sin priority, changefreq ni xhtml:link: Google ignora los dos primeros y el hreflang va en el HTML)
   for (const b of xml.match(/<url>[\s\S]*?<\/url>/g) ?? []) {
-    const orden = [...b.matchAll(/<(loc|lastmod|changefreq|priority|xhtml:link)[ >\/]/g)].map((m) => m[1]);
-    const rango = { loc: 0, lastmod: 1, changefreq: 2, priority: 3, 'xhtml:link': 4 };
-    if (/<priority>|<changefreq>/.test(b)) err(`${h}: lleva priority o changefreq (Google los ignora; no se usan)`);
-    if (orden.some((e, i) => i && rango[e] < rango[orden[i - 1]])) { err(`${h}: elementos de <url> en orden incorrecto → ${b.match(/<loc>([^<]+)/)[1]}`); break; }
-    if (!/<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(b)) err(`${h}: lastmod ausente o con formato incorrecto`);
-    if (/xhtml:link[^>]*type=/.test(b)) err(`${h}: xhtml:link con atributo type (no está en la especificación de Google)`);
+    const orden = [...b.matchAll(/<([a-z:]+)[ >\/]/g)].map((m) => m[1]).filter((t) => t !== 'url');
+    if (orden.join() !== 'loc,lastmod') { err(`${h}: <url> debe llevar solo loc y lastmod, lleva: ${orden.join()} → ${b.match(/<loc>([^<]+)/)[1]}`); break; }
+    if (!ISO.test(b.match(/<lastmod>([^<]+)<\/lastmod>/)[1])) err(`${h}: lastmod sin formato ISO 8601 UTC con Z → ${b.match(/<loc>([^<]+)/)[1]}`);
   }
 }
 

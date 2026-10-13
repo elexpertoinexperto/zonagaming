@@ -58,10 +58,17 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   versión en inglés), y las fichas y subcategorías salen de `productos.json`. No hay listas que mantener a mano.
 - Prueba: `npm run build && node tools/probar-sitemaps.mjs` (toda página en un sitemap, ninguna repetida ni rota, blog solo
   en los sitemaps del blog, hreflang a páginas reales, canonical y noindex).
-- Formato: cada `<url>` sigue el orden del esquema oficial (`loc` → `lastmod` → `xhtml:link` de hreflang, sin `priority` porque Google lo ignora; Google exige que
-  cada URL liste todas sus versiones, incluida ella misma). Las URLs van escapadas para XML y los archivos se sirven como
+- Formato (igual que eljoseoweb.com): cada `<url>` lleva solo `<loc>` y `<lastmod>`; el hreflang va en el `<head>` de cada página
+  (`SiteLayout.astro`), no en el sitemap. Las URLs van escapadas para XML y los archivos se sirven como
   `application/xml; charset=utf-8` (`public/_headers`). Validación contra los XSD oficiales de sitemaps.org:
   `npm i --no-save xmllint-wasm && node tools/validar-sitemaps-xsd.mjs`.
+- **lastmod real** (ISO 8601 UTC con «Z», p. ej. `2026-10-13T19:40:50.000Z`): sale de `src/data/sitemap-lastmod.json`, que mantiene
+  `tools/actualizar-lastmod.mjs`. De cada URL (por idioma) guarda una huella de lo que muestra su página (su archivo `.astro` y/o su
+  registro de producto, o los productos de su subcategoría; ver `src/lib/sitemap-entradas.mjs`). Si la huella cambia → fecha de ahora;
+  si no → se conserva. El índice toma, para cada sitemap, la fecha de su URL más reciente.
+  Se ejecuta solo en cada `npm run build` (script `prebuild`) y en cada commit (hook: `npm run hooks:install`, una vez por clon;
+  el hook deja el JSON dentro del commit). Manual: `npm run lastmod` · `--check` (solo comprobar) · `--todo` (fecha de hoy a todo).
+  Los cambios de plantilla compartida (cabecera, estilos…) NO cambian fechas: solo el contenido propio de cada URL.
 
 ## Blog (`BlogPost.astro`, `BlogIndex.astro`, `PostBuy.astro`)
 
