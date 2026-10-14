@@ -6,7 +6,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const PLACEHOLDER = '/placeholder-product.svg';
+// imagen "no disponible" de su categoría e idioma (ver tools/generar-placeholders.mjs)
+const placeholderDe = (cat, i) => `/placeholder-${cat}-${i === 0 ? 'es' : 'en'}.svg`;
 const rutas = ['src/data/productos.json', 'src/data/productos-en.json'].map((f) => path.join(root, f));
 const datos = rutas.map((f) => JSON.parse(fs.readFileSync(f, 'utf8')));
 const manifestPath = path.join(root, 'tools/image-manifest.json');
@@ -19,10 +20,10 @@ for (const arg of process.argv.slice(2)) {
     for (const f of fs.readdirSync(dir)) if (f.startsWith('fabricante.')) fs.unlinkSync(path.join(dir, f));
   }
   let tocado = false;
-  for (const d of datos) {
+  datos.forEach((d, i) => {
     const p = d[cat]?.find((x) => String(x.id) === id);
-    if (p) { p.imagenUrl = PLACEHOLDER; tocado = true; }
-  }
+    if (p) { p.imagenUrl = placeholderDe(cat, i); tocado = true; }
+  });
   if (manifest[cat]) delete manifest[cat][id];
   console.log(tocado ? 'quitada ' : 'no existe ', arg);
 }

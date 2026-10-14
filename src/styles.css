@@ -306,28 +306,22 @@ header {
 }
 
 .em-pulse {
-  inset: 22%;
+  inset: 20%;
   border-radius: 50%;
-  border: 1.5px solid rgba(124, 255, 203, 0.45);
+  border: 1px solid rgba(124, 255, 203, 0.4);
   opacity: 0;
 }
 
-.em-ring-b {
-  inset: 12%;
-  width: 76%;
-  height: 76%;
-  opacity: 0.55;
-}
-
-.em-ring-a { opacity: 0.8; }
+.em-ring-a { opacity: 0.9; }
+.em-ring-b { opacity: 1; }
 
 .em-orbit { inset: 4%; }
 
 .em-chip {
   position: absolute;
-  width: 15%;
+  width: 14%;
   aspect-ratio: 1;
-  margin: -7.5% 0 0 -7.5%; /* centra el chip en su punto de la órbita */
+  margin: -7% 0 0 -7%; /* centra el chip en su punto de la órbita */
 }
 
 .em-chip-in {
@@ -335,45 +329,48 @@ header {
   place-items: center;
   width: 100%;
   height: 100%;
-  border-radius: 28%;
-  border: 1px solid rgba(124, 255, 203, 0.38);
-  background: rgba(7, 27, 53, 0.78);
-  color: var(--accent);
-  box-shadow: 0 0 22px rgba(124, 255, 203, 0.22), inset 0 0 14px rgba(124, 255, 203, 0.08);
+  border-radius: 26%;
+  border: 1px solid rgba(124, 255, 203, 0.2);
+  background: linear-gradient(160deg, rgba(14, 32, 56, 0.92), rgba(5, 10, 18, 0.92));
+  color: rgba(124, 255, 203, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.35);
 }
 
 .em-chip-in svg {
-  width: 54%;
-  height: 54%;
+  width: 52%;
+  height: 52%;
 }
 
+/* Brillo suave en el eje del logo */
+.em-logo { filter: drop-shadow(0 0 22px rgba(124, 255, 203, 0.38)) drop-shadow(0 0 60px rgba(27, 183, 255, 0.2)); }
+
 @media (prefers-reduced-motion: no-preference) {
-  .em-logo { animation: em-float 6s ease-in-out infinite; }
-  .em-ring-a { animation: em-spin 70s linear infinite; }
-  .em-ring-b { animation: em-spin 46s linear infinite reverse; }
-  .em-orbit { animation: em-spin 54s linear infinite; }
-  .em-chip-in { animation: em-spin 54s linear infinite reverse; }
-  .em-chip { animation: em-bob 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
-  .em-pulse { animation: em-pulse 4.2s ease-out infinite; }
-  .em-pulse-2 { animation-delay: 2.1s; }
-  .em-glow { animation: em-breathe 7s ease-in-out infinite; }
+  .em-logo { animation: em-float 9s ease-in-out infinite; }
+  .em-ring-a { animation: em-spin 160s linear infinite; }
+  .em-ring-b { animation: em-spin 16s linear infinite; }        /* barrido tipo radar */
+  .em-orbit { animation: em-spin 120s linear infinite; }
+  .em-chip-in { animation: em-spin 120s linear infinite reverse, em-active 9s ease-in-out infinite; animation-delay: 0s, calc(var(--i, 0) * 1.5s); }
+  .em-pulse { animation: em-pulse 6s ease-out infinite; }
+  .em-pulse-2 { animation-delay: 3s; }
+  .em-glow { animation: em-breathe 8s ease-in-out infinite; }
 }
 
 @keyframes em-spin { to { transform: rotate(360deg); } }
 @keyframes em-float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+  50% { transform: translateY(-7px); }
 }
-@keyframes em-bob {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -7px; }
+/* Cada chip se "activa" por turnos, como un sistema que revisa sus piezas */
+@keyframes em-active {
+  0%, 18%, 100% { border-color: rgba(124, 255, 203, 0.2); color: rgba(124, 255, 203, 0.7); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 8px 22px rgba(0, 0, 0, 0.35); }
+  6%, 12% { border-color: rgba(124, 255, 203, 0.95); color: #7cffcb; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 26px rgba(124, 255, 203, 0.32), 0 8px 22px rgba(0, 0, 0, 0.35); }
 }
 @keyframes em-pulse {
-  0% { transform: scale(0.5); opacity: 0.5; }
-  100% { transform: scale(1.7); opacity: 0; }
+  0% { transform: scale(0.55); opacity: 0.4; }
+  100% { transform: scale(1.75); opacity: 0; }
 }
 @keyframes em-breathe {
-  0%, 100% { opacity: 0.75; }
+  0%, 100% { opacity: 0.7; }
   50% { opacity: 1; }
 }
 

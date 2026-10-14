@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-label="Imagen no disponible por el momento">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1a2b"/><stop offset="1" stop-color="#05070b"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cffcb"/><stop offset="1" stop-color="#1bb7ff"/></linearGradient>
+    <radialGradient id="gl" cx="50%" cy="38%" r="45%"><stop offset="0" stop-color="#7cffcb" stop-opacity="0.16"/><stop offset="1" stop-color="#7cffcb" stop-opacity="0"/></radialGradient>
+    <pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7cffcb" stroke-opacity="0.05"/></pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#gr)"/>
+  <rect width="800" height="500" fill="url(#gl)"/>
+  <circle cx="400" cy="128" r="84" fill="none" stroke="url(#ac)" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="3 12" stroke-linecap="round"/>
+  <rect x="346" y="74" width="108" height="108" rx="28" fill="#0b1118" stroke="url(#ac)" stroke-opacity="0.7" stroke-width="2"/>
+  <g transform="translate(368 96) scale(2.7)" fill="none" stroke="url(#ac)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="14" height="10" rx="2"/><path d="M7 10h4"/><path d="M17 9h4"/><path d="M17 13h4"/><path d="M8 18h4"/></g>
+  <text x="400" y="272" text-anchor="middle" fill="#e6f7ff" font-family="system-ui, 'Segoe UI', Roboto, Arial, sans-serif" font-size="50" font-weight="700">Imagen no disponible</text>
+  <text x="400" y="330" text-anchor="middle" fill="#e6f7ff" font-family="system-ui, 'Segoe UI', Roboto, Arial, sans-serif" font-size="50" font-weight="700">por el momento</text>
+  <text x="400" y="400" text-anchor="middle" fill="#7cffcb" font-family="system-ui, 'Segoe UI', Roboto, Arial, sans-serif" font-size="31" font-weight="500">Para ver la imagen, clic en el botón Amazon</text>
+  <text x="400" y="462" text-anchor="middle" fill="#e6f7ff" fill-opacity="0.4" font-family="system-ui, 'Segoe UI', Roboto, Arial, sans-serif" font-size="18" letter-spacing="3">TARJETA GRÁFICA · MONCKEY GAMER</text>
+</svg>
