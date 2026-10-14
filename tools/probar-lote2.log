@@ -1,0 +1,17 @@
+FALLA ssd 11 imagen genérica: https://image-us.samsung.com/SamsungUS/home/samsung-logo-191-1.jpg
+OK    ssd 14 https://content.crucial.com/content/dam/crucial/web-ui/social/facebook-like-crucial.jpg
+OK    ssd 15 https://content.crucial.com/content/dam/crucial/web-ui/social/facebook-like-crucial.jpg
+OK    ssd 22 https://content.crucial.com/content/dam/crucial/web-ui/social/facebook-like-crucial.jpg
+FALLA ssd 28 imagen genérica: https://image-us.samsung.com/SamsungUS/home/samsung-logo-191-1.jpg
+FALLA ssd 30 HTTP 404
+FALLA refrigeracion-normal 8 HTTP 429
+FALLA refrigeracion-normal 9 HTTP 429
+FALLA refrigeracion-normal 10 HTTP 429
+FALLA refrigeracion-normal 11 HTTP 429
+FALLA refrigeracion-normal 12 HTTP 429
+OK    gabinetes-gamer 14 https://nzxt.com/cdn/shop/files/h9-flow-rgb_17_white-build-side.png?v=1789309809&width=2048
+OK    gabinetes-gamer 21 https://nzxt.com/cdn/shop/files/h5-flow_white_09_in-build.png?v=1789351747&width=2048
+OK    gabinetes-gamer 23 https://nzxt.com/cdn/shop/files/h6-flow_white_12_in-build.png?v=1789302072&width=2048
+OK    gabinetes-gamer 24 https://nzxt.com/cdn/shop/files/h6-flow-rgb_white_10_in-build.png?v=1789302646&width=2048
+OK    gabinetes-gamer 27 https://nzxt.com/cdn/shop/files/h5-flow-rgb_white_09_in-build.png?v=1789351745&width=2048
+OK    gabinetes-gamer 30 https://nzxt.com/cdn/shop/files/h6-rgb-plus_white_01_hero.png?v=1789300930&width=2048

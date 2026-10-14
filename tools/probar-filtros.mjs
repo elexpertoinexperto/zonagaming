@@ -43,7 +43,7 @@ for (const [cat, lista] of Object.entries(filtros)) {
       if (!/og:title/.test(h)) err(`${ruta}: sin Open Graph`);
       const hl = Object.fromEntries([...h.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]));
       const esperadoEs = SITE + (lang === 'es' ? ruta : otra), esperadoEn = SITE + (lang === 'es' ? otra : ruta);
-      if (hl['es-CO'] !== esperadoEs || hl['en-US'] !== esperadoEn || hl['x-default'] !== esperadoEs) err(`${ruta}: hreflang incorrecto ${JSON.stringify(hl)}`);
+      if (hl['es'] !== esperadoEs || hl['en-US'] !== esperadoEn || hl['x-default'] !== esperadoEs) err(`${ruta}: hreflang incorrecto ${JSON.stringify(hl)}`);
       const sm = lang === 'es' ? sitemapEs : sitemapEn;
       if (!sm.includes(`<loc>${SITE}${ruta}</loc>`)) err(`${ruta}: falta en el sitemap`);
       // JSON-LD

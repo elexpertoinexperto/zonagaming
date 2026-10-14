@@ -1,0 +1,51 @@
+OK   monitores 2 /imagenes/monitores/2/fabricante.png
+FALLA monitores 3 sin og:image
+OK   monitores 5 /imagenes/monitores/5/fabricante.webp
+OK   monitores 7 /imagenes/monitores/7/fabricante.png
+OK   monitores 8 /imagenes/monitores/8/fabricante.png
+OK   monitores 9 /imagenes/monitores/9/fabricante.png
+OK   monitores 10 /imagenes/monitores/10/fabricante.png
+OK   monitores 11 /imagenes/monitores/11/fabricante.png
+FALLA monitores 12 sin og:image
+OK   monitores 13 /imagenes/monitores/13/fabricante.jpg
+OK   monitores 14 /imagenes/monitores/14/fabricante.webp
+OK   monitores 15 /imagenes/monitores/15/fabricante.png
+OK   monitores 16 /imagenes/monitores/16/fabricante.png
+OK   monitores 17 /imagenes/monitores/17/fabricante.png
+OK   monitores 18 /imagenes/monitores/18/fabricante.png
+FALLA monitores 19 sin og:image
+OK   monitores 20 /imagenes/monitores/20/fabricante.png
+OK   monitores 21 /imagenes/monitores/21/fabricante.png
+FALLA monitores 22 sin og:image
+OK   monitores 25 /imagenes/monitores/25/fabricante.jpg
+OK   monitores 26 /imagenes/monitores/26/fabricante.png
+OK   monitores 28 /imagenes/monitores/28/fabricante.jpg
+OK   monitores 29 /imagenes/monitores/29/fabricante.jpg
+OK   monitores 30 /imagenes/monitores/30/fabricante.png
+OK   tarjetas-graficas 8 /imagenes/tarjetas-graficas/8/fabricante.png
+OK   tarjetas-graficas 9 /imagenes/tarjetas-graficas/9/fabricante.webp
+OK   tarjetas-graficas 10 /imagenes/tarjetas-graficas/10/fabricante.png
+FALLA tarjetas-graficas 11 sin og:image
+OK   tarjetas-graficas 12 /imagenes/tarjetas-graficas/12/fabricante.jpg
+OK   tarjetas-graficas 13 /imagenes/tarjetas-graficas/13/fabricante.jpg
+FALLA tarjetas-graficas 14 sin og:image
+OK   tarjetas-graficas 15 /imagenes/tarjetas-graficas/15/fabricante.png
+OK   tarjetas-graficas 16 /imagenes/tarjetas-graficas/16/fabricante.png
+OK   tarjetas-graficas 17 /imagenes/tarjetas-graficas/17/fabricante.png
+OK   tarjetas-graficas 18 /imagenes/tarjetas-graficas/18/fabricante.png
+FALLA tarjetas-graficas 19 sin og:image
+OK   tarjetas-graficas 20 /imagenes/tarjetas-graficas/20/fabricante.png
+OK   tarjetas-graficas 21 /imagenes/tarjetas-graficas/21/fabricante.png
+OK   tarjetas-graficas 22 /imagenes/tarjetas-graficas/22/fabricante.png
+OK   tarjetas-graficas 23 /imagenes/tarjetas-graficas/23/fabricante.png
+OK   tarjetas-graficas 24 /imagenes/tarjetas-graficas/24/fabricante.jpg
+OK   tarjetas-graficas 25 /imagenes/tarjetas-graficas/25/fabricante.png
+OK   tarjetas-graficas 26 /imagenes/tarjetas-graficas/26/fabricante.png
+FALLA tarjetas-graficas 27 sin og:image
+OK   tarjetas-graficas 28 /imagenes/tarjetas-graficas/28/fabricante.png
+FALLA tarjetas-graficas 29 sin og:image
+OK   tarjetas-graficas 30 /imagenes/tarjetas-graficas/30/fabricante.png
+OK   procesadores 8 /imagenes/procesadores/8/fabricante.jpg
+OK   procesadores 9 /imagenes/procesadores/9/fabricante.jpg
+
+Listo: 40 imágenes, 9 fallas (ver tools/imagenes-reporte.json)

@@ -1,0 +1,18 @@
+FALLA monitores 3 sin og:image
+FALLA monitores 19 sin og:image
+FALLA monitores 22 sin og:image
+FALLA tarjetas-graficas 11 sin og:image
+FALLA tarjetas-graficas 19 sin og:image
+FALLA tarjetas-graficas 27 sin og:image
+FALLA tarjetas-graficas 29 sin og:image
+FALLA ssd 14 fetch failed
+FALLA ssd 15 fetch failed
+FALLA ssd 22 fetch failed
+FALLA mouse 8 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+FALLA mouse 16 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+FALLA teclados 13 no es imagen: application/octet-stream
+OK   fuentes-de-poder 10 /imagenes/fuentes-de-poder/10/fabricante.jpg
+OK   fuentes-de-poder 19 /imagenes/fuentes-de-poder/19/fabricante.png
+OK   refrigeracion-liquida 8 /imagenes/refrigeracion-liquida/8/fabricante.png
+
+Listo: 3 imágenes, 13 fallas (ver tools/imagenes-reporte.json)

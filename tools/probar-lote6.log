@@ -1,0 +1,10 @@
+FALLA tarjetas-graficas 11 sin og:image
+FALLA tarjetas-graficas 14 sin og:image
+FALLA tarjetas-graficas 27 sin og:image
+FALLA fuentes-de-poder 9 sin og:image
+OK    fuentes-de-poder 10 http://thermaltake.com/cdn/shop/files/gf850_6a24e1be-8e4e-4f9d-ab5d-06e96d2e4b3b.jpg?v=1786504077
+FALLA fuentes-de-poder 13 sin og:image
+OK    fuentes-de-poder 19 https://nzxt.com/cdn/shop/files/c1000-gold-core_black_01_hero.png?v=1789353219&width=2048
+FALLA fuentes-de-poder 21 sin og:image
+FALLA gabinetes-gamer 29 HTTP 403
+OK    refrigeracion-liquida 8 https://nzxt.com/cdn/shop/files/kcore360_01_hero.png?v=1789344973&width=2048

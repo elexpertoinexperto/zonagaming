@@ -1,0 +1,24 @@
+OK    fuentes-de-poder 11 https://storage-asset.msi.com/global/picture/product/product_1761892118dc3f0b9b6fee28aecb3ce65db44136a0.webp
+OK    fuentes-de-poder 12 https://storage-asset.msi.com/global/picture/product/product_172969279806bd5452bb9791ef35824869d85224c9.webp
+OK    fuentes-de-poder 16 https://storage-asset.msi.com/global/picture/product/product_176189193187df8065e00609494b871cb96475b1af.webp
+OK    fuentes-de-poder 20 https://storage-asset.msi.com/global/picture/product/product_1761892162dda8d72c16712a660f281e211905bbc3.webp
+FALLA refrigeracion-liquida 9 sin og:image
+OK    refrigeracion-liquida 10 https://storage-asset.msi.com/global/picture/product/product_17351813065941ae4a1c7aeda0e6b4ead04f1f48dc.webp
+FALLA refrigeracion-liquida 11 sin og:image
+OK    refrigeracion-liquida 22 https://storage-asset.msi.com/global/picture/product/product_17356155482b83064c9b6d64b3d50dc5e15180acdb.webp
+OK    refrigeracion-liquida 27 https://storage-asset.msi.com/global/picture/product/product_17292309060b49d7b2f7616b3a4fb7382dc3f2f0bd.webp
+FALLA refrigeracion-normal 13 sin og:image
+FALLA refrigeracion-normal 14 sin og:image
+FALLA refrigeracion-normal 15 sin og:image
+FALLA refrigeracion-normal 17 sin og:image
+FALLA refrigeracion-normal 18 sin og:image
+FALLA refrigeracion-normal 19 sin og:image
+FALLA refrigeracion-normal 23 sin og:image
+FALLA refrigeracion-normal 24 sin og:image
+OK    refrigeracion-normal 26 https://www.arctic.de/media/9f/f3/51/1706615786/Freezer_36_Black_G00.png
+OK    refrigeracion-normal 27 https://www.arctic.de/media/8f/6d/6c/1707835553/Freezer_36_A-RGB_Black_G01.png
+OK    refrigeracion-normal 28 https://www.arctic.de/media/9f/f3/51/1706615786/Freezer_36_Black_G00.png
+FALLA gabinetes-gamer 10 imagen genérica: https://new.nuxmax.com/wp-content/uploads/2020/08/cropped-logo_w-4.png
+FALLA gabinetes-gamer 11 HTTP 404
+OK    monitores 11 https://dlcdnwebimgs.asus.com/gain/C310D27C-8FFB-4DEF-B5E1-D9AB1E728250
+FALLA monitores 13 imagen genérica: https://image-us.samsung.com/SamsungUS/home/samsung-logo-191-1.jpg

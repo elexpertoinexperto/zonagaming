@@ -1,0 +1,8 @@
+FALLA ssd 8 HTTP 403
+FALLA ssd 19 fetch failed
+FALLA ssd 23 HTTP 403
+OK    gabinetes-gamer 15 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Cases/base-frame-4500x-config/gallery/rs-r/black/frame-4500x-rsr-blk_01.png
+OK    gabinetes-gamer 16 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Cases/frame-400d-wood-rs/Gallery/CC-9011340-WW/FRAME_4000D_Wood_RS_BlackWalnut_Artboard01_AA.png
+OK    gabinetes-gamer 17 https://www.montechpc.com/images/370953?stamp=1734062591
+OK    fuentes-de-poder 15 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Power-Supply-Units/base-cx-series-2023-config/CX750/CX750_01.png
+OK    refrigeracion-liquida 12 http://thermaltake.com/cdn/shop/files/w362-pl12sw-a_01_f6b98c53-a975-4a12-9ece-d0f80b338889.jpg?v=1786612970

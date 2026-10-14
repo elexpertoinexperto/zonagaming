@@ -1,0 +1,40 @@
+FALLA monitores 3 sin og:image
+FALLA monitores 19 sin og:image
+FALLA monitores 22 sin og:image
+FALLA tarjetas-graficas 11 sin og:image
+FALLA tarjetas-graficas 19 sin og:image
+FALLA tarjetas-graficas 27 sin og:image
+FALLA tarjetas-graficas 29 sin og:image
+FALLA ssd 14 fetch failed
+FALLA ssd 15 fetch failed
+FALLA ssd 22 fetch failed
+OK   gabinetes-gamer 15 /imagenes/gabinetes-gamer/15/fabricante.png
+OK   gabinetes-gamer 16 /imagenes/gabinetes-gamer/16/fabricante.png
+OK   gabinetes-gamer 17 /imagenes/gabinetes-gamer/17/fabricante.webp
+FALLA mouse 8 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+FALLA mouse 16 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+FALLA mouse 21 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   mouse 25 /imagenes/mouse/25/fabricante.png
+OK   mouse 26 /imagenes/mouse/26/fabricante.png
+FALLA audifonos 10 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   audifonos 18 /imagenes/audifonos/18/fabricante.png
+OK   audifonos 19 /imagenes/audifonos/19/fabricante.png
+FALLA audifonos 24 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   teclados 11 /imagenes/teclados/11/fabricante.webp
+FALLA teclados 13 no es imagen: application/octet-stream
+OK   teclados 16 /imagenes/teclados/16/fabricante.png
+FALLA teclados 28 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   teclados 29 /imagenes/teclados/29/fabricante.jpg
+OK   teclados 30 /imagenes/teclados/30/fabricante.png
+OK   fuentes-de-poder 15 /imagenes/fuentes-de-poder/15/fabricante.png
+OK   refrigeracion-liquida 12 /imagenes/refrigeracion-liquida/12/fabricante.jpg
+OK   refrigeracion-liquida 15 /imagenes/refrigeracion-liquida/15/fabricante.png
+OK   refrigeracion-liquida 21 /imagenes/refrigeracion-liquida/21/fabricante.png
+OK   refrigeracion-liquida 24 /imagenes/refrigeracion-liquida/24/fabricante.png
+OK   memoria-ram 9 /imagenes/memoria-ram/9/fabricante.png
+FALLA memoria-ram 11 fetch failed
+OK   memoria-ram 13 /imagenes/memoria-ram/13/fabricante.jpg
+OK   memoria-ram 23 /imagenes/memoria-ram/23/fabricante.png
+OK   memoria-ram 24 /imagenes/memoria-ram/24/fabricante.png
+
+Listo: 20 imágenes, 18 fallas (ver tools/imagenes-reporte.json)

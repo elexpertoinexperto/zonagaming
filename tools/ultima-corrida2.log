@@ -1,0 +1,65 @@
+FALLA monitores 3 sin og:image
+OK   monitores 12 /imagenes/monitores/12/fabricante.jpg
+FALLA monitores 19 sin og:image
+FALLA monitores 22 sin og:image
+FALLA tarjetas-graficas 11 sin og:image
+OK   tarjetas-graficas 14 /imagenes/tarjetas-graficas/14/fabricante.png
+FALLA tarjetas-graficas 19 sin og:image
+FALLA tarjetas-graficas 27 sin og:image
+FALLA tarjetas-graficas 29 sin og:image
+OK   procesadores 11 /imagenes/procesadores/11/fabricante.jpg
+OK   procesadores 13 /imagenes/procesadores/13/fabricante.jpg
+OK   procesadores 30 /imagenes/procesadores/30/fabricante.jpg
+OK   ssd 13 /imagenes/ssd/13/fabricante.png
+FALLA ssd 14 fetch failed
+FALLA ssd 15 fetch failed
+OK   ssd 21 /imagenes/ssd/21/fabricante.png
+FALLA ssd 22 fetch failed
+OK   ssd 24 /imagenes/ssd/24/fabricante.png
+OK   gabinetes-gamer 8 /imagenes/gabinetes-gamer/8/fabricante.png
+OK   gabinetes-gamer 9 /imagenes/gabinetes-gamer/9/fabricante.png
+OK   gabinetes-gamer 14 /imagenes/gabinetes-gamer/14/fabricante.png
+OK   gabinetes-gamer 21 /imagenes/gabinetes-gamer/21/fabricante.png
+OK   gabinetes-gamer 23 /imagenes/gabinetes-gamer/23/fabricante.png
+OK   gabinetes-gamer 24 /imagenes/gabinetes-gamer/24/fabricante.png
+OK   gabinetes-gamer 27 /imagenes/gabinetes-gamer/27/fabricante.png
+OK   gabinetes-gamer 30 /imagenes/gabinetes-gamer/30/fabricante.png
+FALLA mouse 8 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   mouse 9 /imagenes/mouse/9/fabricante.jpg
+OK   mouse 10 /imagenes/mouse/10/fabricante.jpg
+FALLA mouse 16 imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica
+OK   mouse 19 /imagenes/mouse/19/fabricante.jpg
+OK   mouse 23 /imagenes/mouse/23/fabricante.jpg
+OK   mouse 24 /imagenes/mouse/24/fabricante.jpg
+OK   mouse 27 /imagenes/mouse/27/fabricante.webp
+OK   mouse 28 /imagenes/mouse/28/fabricante.webp
+OK   mouse 29 /imagenes/mouse/29/fabricante.jpg
+OK   audifonos 9 /imagenes/audifonos/9/fabricante.webp
+OK   audifonos 11 /imagenes/audifonos/11/fabricante.jpg
+OK   audifonos 12 /imagenes/audifonos/12/fabricante.webp
+OK   audifonos 26 /imagenes/audifonos/26/fabricante.jpg
+OK   audifonos 27 /imagenes/audifonos/27/fabricante.jpg
+OK   audifonos 29 /imagenes/audifonos/29/fabricante.jpg
+FALLA teclados 13 no es imagen: application/octet-stream
+OK   teclados 14 /imagenes/teclados/14/fabricante.jpg
+OK   teclados 21 /imagenes/teclados/21/fabricante.jpg
+OK   teclados 22 /imagenes/teclados/22/fabricante.jpg
+OK   teclados 23 /imagenes/teclados/23/fabricante.jpg
+OK   teclados 24 /imagenes/teclados/24/fabricante.png
+OK   teclados 25 /imagenes/teclados/25/fabricante.jpg
+OK   teclados 26 /imagenes/teclados/26/fabricante.jpg
+OK   teclados 27 /imagenes/teclados/27/fabricante.jpg
+OK   fuentes-de-poder 8 /imagenes/fuentes-de-poder/8/fabricante.png
+OK   fuentes-de-poder 11 /imagenes/fuentes-de-poder/11/fabricante.webp
+OK   fuentes-de-poder 12 /imagenes/fuentes-de-poder/12/fabricante.webp
+OK   fuentes-de-poder 16 /imagenes/fuentes-de-poder/16/fabricante.webp
+OK   fuentes-de-poder 20 /imagenes/fuentes-de-poder/20/fabricante.webp
+OK   fuentes-de-poder 24 /imagenes/fuentes-de-poder/24/fabricante.png
+OK   refrigeracion-liquida 10 /imagenes/refrigeracion-liquida/10/fabricante.webp
+OK   refrigeracion-liquida 22 /imagenes/refrigeracion-liquida/22/fabricante.webp
+OK   refrigeracion-liquida 27 /imagenes/refrigeracion-liquida/27/fabricante.webp
+OK   refrigeracion-normal 26 /imagenes/refrigeracion-normal/26/fabricante.png
+OK   refrigeracion-normal 27 /imagenes/refrigeracion-normal/27/fabricante.png
+OK   refrigeracion-normal 28 /imagenes/refrigeracion-normal/28/fabricante.png
+
+Listo: 50 imágenes, 13 fallas (ver tools/imagenes-reporte.json)

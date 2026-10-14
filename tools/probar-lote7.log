@@ -1,0 +1,12 @@
+OK    memoria-ram 9 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Memory/vengeance-ddr5-config/Vengeance-DDR5-2UP-BLACK_01.png
+FALLA memoria-ram 10 HTTP 403
+OK    memoria-ram 11 https://content.crucial.com/content/dam/crucial/web-ui/social/facebook-like-crucial.jpg
+OK    memoria-ram 13 https://www.teamgroupinc.com/upload/base_fb_img/enL_01ns_web_base_23C07_cjXCCNoKFm.jpg
+OK    memoria-ram 23 https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_96/products/Memory/vengeance-rgb-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-BLACK_01.png
+OK    memoria-ram 24 https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_96/products/Memory/vengeance-rgb-amd-ddr5-blk-config/Gallery/Vengeance-RGB-DDR5-2UP-32GB-GRAY_01.png
+FALLA memoria-ram 26 imagen genérica: https://www.gskill.com/styles/images/common/logo.png
+FALLA memoria-ram 27 imagen genérica: https://www.gskill.com/styles/images/common/logo.png
+OK    teclados 11 https://assets2.razerzone.com/images/pnx.assets/722850323999ffe512e1d70ed3cfba4c/blackwidow-v4-tenkeyless-hyperspeed_ogimage_1200x630.webp
+OK    teclados 16 https://dlcdnwebimgs.asus.com/gain/9E1FA5D0-65AB-4188-84DE-A80058422939
+OK    teclados 29 http://hyperx.com/cdn/shop/files/hyperx_origins_2_pro_65_us_bn7s3aa_main_1.jpg?v=1787066269
+OK    teclados 30 https://res.cloudinary.com/corsair-pwa/image/upload/c_scale%2Cq_auto%2Cw_96/products/Gaming-Keyboards/CH-91A401A/Gallery/K65_PRO_Mini_PBT_01.png

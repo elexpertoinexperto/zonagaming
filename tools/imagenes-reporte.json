@@ -1,0 +1,214 @@
+{
+  "ok": [
+    [
+      "gabinetes-gamer",
+      "15",
+      "/imagenes/gabinetes-gamer/15/fabricante.png"
+    ],
+    [
+      "gabinetes-gamer",
+      "16",
+      "/imagenes/gabinetes-gamer/16/fabricante.png"
+    ],
+    [
+      "gabinetes-gamer",
+      "17",
+      "/imagenes/gabinetes-gamer/17/fabricante.webp"
+    ],
+    [
+      "mouse",
+      "25",
+      "/imagenes/mouse/25/fabricante.png"
+    ],
+    [
+      "mouse",
+      "26",
+      "/imagenes/mouse/26/fabricante.png"
+    ],
+    [
+      "audifonos",
+      "18",
+      "/imagenes/audifonos/18/fabricante.png"
+    ],
+    [
+      "audifonos",
+      "19",
+      "/imagenes/audifonos/19/fabricante.png"
+    ],
+    [
+      "teclados",
+      "11",
+      "/imagenes/teclados/11/fabricante.webp"
+    ],
+    [
+      "teclados",
+      "16",
+      "/imagenes/teclados/16/fabricante.png"
+    ],
+    [
+      "teclados",
+      "29",
+      "/imagenes/teclados/29/fabricante.jpg"
+    ],
+    [
+      "teclados",
+      "30",
+      "/imagenes/teclados/30/fabricante.png"
+    ],
+    [
+      "fuentes-de-poder",
+      "15",
+      "/imagenes/fuentes-de-poder/15/fabricante.png"
+    ],
+    [
+      "refrigeracion-liquida",
+      "12",
+      "/imagenes/refrigeracion-liquida/12/fabricante.jpg"
+    ],
+    [
+      "refrigeracion-liquida",
+      "15",
+      "/imagenes/refrigeracion-liquida/15/fabricante.png"
+    ],
+    [
+      "refrigeracion-liquida",
+      "21",
+      "/imagenes/refrigeracion-liquida/21/fabricante.png"
+    ],
+    [
+      "refrigeracion-liquida",
+      "24",
+      "/imagenes/refrigeracion-liquida/24/fabricante.png"
+    ],
+    [
+      "memoria-ram",
+      "9",
+      "/imagenes/memoria-ram/9/fabricante.png"
+    ],
+    [
+      "memoria-ram",
+      "13",
+      "/imagenes/memoria-ram/13/fabricante.jpg"
+    ],
+    [
+      "memoria-ram",
+      "23",
+      "/imagenes/memoria-ram/23/fabricante.png"
+    ],
+    [
+      "memoria-ram",
+      "24",
+      "/imagenes/memoria-ram/24/fabricante.png"
+    ]
+  ],
+  "fail": [
+    [
+      "monitores",
+      "3",
+      "sin og:image",
+      "https://www.lg.com/us/monitors/lg-24g411a-b-gaming-monitor"
+    ],
+    [
+      "monitores",
+      "19",
+      "sin og:image",
+      "https://www.acer.com/us-en/predator/monitors/x27u"
+    ],
+    [
+      "monitores",
+      "22",
+      "sin og:image",
+      "https://www.lg.com/us/monitors/lg-34u640b-b-ultrawide-monitor"
+    ],
+    [
+      "tarjetas-graficas",
+      "11",
+      "sin og:image",
+      "https://www.asrock.com/Graphics-Card/AMD/Radeon%20RX%207600%20Challenger%20Pro%208GB%20OC/index.asp"
+    ],
+    [
+      "tarjetas-graficas",
+      "19",
+      "sin og:image",
+      "https://www.pny.com/geforce-rtx-5070-ti-triple-fan-plus-models"
+    ],
+    [
+      "tarjetas-graficas",
+      "27",
+      "sin og:image",
+      "https://www.asrock.com/Graphics-Card/AMD/Radeon%20RX%209070%20Challenger%2016GB/"
+    ],
+    [
+      "tarjetas-graficas",
+      "29",
+      "sin og:image",
+      "https://www.pny.com/geforce-rtx-5070-models"
+    ],
+    [
+      "ssd",
+      "14",
+      "fetch failed",
+      "https://www.crucial.com/ssd/p310/ct1000p310ssd8"
+    ],
+    [
+      "ssd",
+      "15",
+      "fetch failed",
+      "https://www.crucial.com/ssd/p310/ct2000p310ssd8"
+    ],
+    [
+      "ssd",
+      "22",
+      "fetch failed",
+      "https://www.crucial.com/ssd/p310/ct2000p310ssd2"
+    ],
+    [
+      "mouse",
+      "8",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/g502-lightspeed-wireless-gaming-mouse"
+    ],
+    [
+      "mouse",
+      "16",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2-dex"
+    ],
+    [
+      "mouse",
+      "21",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/g203-lightsync-rgb-gaming-mouse"
+    ],
+    [
+      "audifonos",
+      "10",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/pro-x-gaming-headset-blue-voice-mic-tech"
+    ],
+    [
+      "audifonos",
+      "24",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/a50-gen-4"
+    ],
+    [
+      "teclados",
+      "13",
+      "no es imagen: application/octet-stream",
+      "https://www.razer.com/gaming-keyboards/razer-blackwidow-v4-x"
+    ],
+    [
+      "teclados",
+      "28",
+      "imagen demasiado pequeña (3941 bytes), probablemente miniatura o genérica",
+      "https://www.logitechg.com/en-us/shop/p/pro-x-tkl-wireless-keyboard"
+    ],
+    [
+      "memoria-ram",
+      "11",
+      "fetch failed",
+      "https://www.crucial.com/memory/ddr5/cp2k16g60c36u5b"
+    ]
+  ]
+}

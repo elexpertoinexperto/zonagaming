@@ -1,0 +1,31 @@
+OK    mouse 8 https://resource.logitechg.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/homepage/logitechg-global-og-image.png
+OK    mouse 9 https://assets2.razerzone.com/images/og-image/razer-basilisk-v3-pro-og-image.jpg
+OK    mouse 10 //assets2.razerzone.com/images/pnx.assets/a0427959a82f1f5d1c27c2463008e5a8/razer-deathadder-v3-og.jpg
+FALLA mouse 11 imagen genérica: //assets2.razerzone.com/images/pnx.assets/3619568c712284676a300e9b3a7ef028/nagav2hyperspeed_ogimage-1200x630-update.jpg
+OK    mouse 16 https://resource.logitechg.com/c_fill,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/homepage/logitechg-global-og-image.png
+FALLA mouse 18 imagen genérica: https://assets2.razerzone.com/images/pnx.assets/846248a215ecc26cf0ad3f7cf62691bd/razer-deathadder-v3-hyperspeed-ogimage-1200x630.webp
+OK    mouse 19 https://images.ctfassets.net/hmm5mo4qf4mf/5F4pbgGB9CMGwWx67wLePT/da8f9f12428b4c694bc45593ef1b365f/buyimg_prime__001.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-1357.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+FALLA mouse 21 HTTP 404
+OK    mouse 23 https://images.ctfassets.net/hmm5mo4qf4mf/5F4pbgGB9CMGwWx67wLePT/da8f9f12428b4c694bc45593ef1b365f/buyimg_prime__001.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-1357.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    mouse 24 https://images.ctfassets.net/hmm5mo4qf4mf/RkskM0xShu3B8X60CYisz/1651b15f5a04323b3ddfffe6462db9af/buyimg_rival3wl_001.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-1373.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    mouse 27 https://assets2.razerzone.com/images/pnx.assets/504d149d6cba765d01f2a9531b7a8347/razer-viper-v3-pro-se-og-image.webp
+OK    mouse 28 https://assets2.razerzone.com/images/pnx.assets/24970f67be4ba9644e28720377d91cfb/razer-viper-v3-pro-1200x630.webp
+OK    mouse 29 https://cdn.shopify.com/s/files/1/0549/2681/files/GLO-MS-DV2-MB_Web_Gallery_Front_9db47815-ea1e-4cc9-8d00-6f73ee951a59.webp?v=1716393873
+FALLA audifonos 8 HTTP 404
+OK    audifonos 9 https://assets2.razerzone.com/images/pnx.assets/b8c92c1b70690b96602d95374975ef3d/blackshark-v3-x-hyperspeed-og.webp
+OK    audifonos 11 https://images.ctfassets.net/hmm5mo4qf4mf/3DnpXsoaEmcIqzQpCGkQd7/9cca4ae72a4c9dc08108748e0e653596/arctis_nova_5_wl_pdp_img_buy_01.png__1920x1080_crop-fit_optimize_subsampling-2-3253.png?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    audifonos 12 https://assets2.razerzone.com/images/pnx.assets/8864ce1bcf7bbd3001fb4bdf4fc88965/razer-blackshark-v2-x-og-image.webp
+FALLA audifonos 17 imagen genérica: https://assets2.razerzone.com/images/pnx.assets/f4295580f4177b58067801afe86c0f0d/razer-barracuda-x-chroma-ogimage-1200x630.webp
+FALLA audifonos 20 imagen genérica: https://assets2.razerzone.com/images/og-image/razer-barracuda-ogimage-1200x630.jpg
+OK    audifonos 26 http://hyperx.com/cdn/shop/files/hyperx_cloud_ii_red_1_main.jpg?v=1763563198
+OK    audifonos 27 http://hyperx.com/cdn/shop/files/hyperx_cloud_alpha_wireless_1_main_99b8c28d-57bd-42df-bc89-b1d776d5d1d5.jpg?v=1763563176
+OK    audifonos 29 https://images.ctfassets.net/hmm5mo4qf4mf/3DnpXsoaEmcIqzQpCGkQd7/9cca4ae72a4c9dc08108748e0e653596/arctis_nova_5_wl_pdp_img_buy_01.png__1920x1080_crop-fit_optimize_subsampling-2-3253.png?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 13 https://assets2.razerzone.com/images/pnx.assets/12571f27f3f0008c0b2761309d6b26e8/razer-blackwidow-v4-x-og-image-1200x630.webp
+OK    teclados 14 https://assets2.razerzone.com/images/razer-huntsman-mini/razer-huntsman-mini-2020-OGimg.jpg
+OK    teclados 21 https://images.ctfassets.net/hmm5mo4qf4mf/2qRjmq8sglugWCZZQVCgPx/48adf4a522bdee3cd98c3e3ba4784c8c/apex_pro_tkl_black_img_buy_01.png__1920x1080_crop-fit_optimize_subsampling-2-3764.png?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 22 https://images.ctfassets.net/hmm5mo4qf4mf/3w9vDiEZFAqw4Ut7zxG84J/4db5258d3e31607ba87aee3a4a1cf36b/buyimg_apex5_001-fix.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-1000.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 23 https://images.ctfassets.net/hmm5mo4qf4mf/4CWpyzRjEqQO2vV2EHfFnO/b69b628734979de2eac42c2fb37e478b/buyimg_apex3_001.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-2852.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 24 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Gaming-Keyboards/k70-core/Gallery/CH-910971E/CH-910971E_01.png
+OK    teclados 25 https://images.ctfassets.net/hmm5mo4qf4mf/4CWpyzRjEqQO2vV2EHfFnO/b69b628734979de2eac42c2fb37e478b/buyimg_apex3_001.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-2852.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 26 https://images.ctfassets.net/hmm5mo4qf4mf/4nsAjRPVID6YqTP6kftq67/7616fa67a4252a339221fb45b17300b4/buyimg_apex7_001-v2.jpg__1920x1080_q100_crop-fit_optimize_subsampling-2-3104.jpg?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85
+OK    teclados 27 https://images.ctfassets.net/hmm5mo4qf4mf/2qRjmq8sglugWCZZQVCgPx/48adf4a522bdee3cd98c3e3ba4784c8c/apex_pro_tkl_black_img_buy_01.png__1920x1080_crop-fit_optimize_subsampling-2-3764.png?w=1200&amp;h=600&amp;fit=fill&amp;fm=jpg&amp;q=85

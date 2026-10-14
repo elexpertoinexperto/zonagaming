@@ -1,0 +1,10 @@
+OK    fuentes-de-poder 8 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/rme-series-2025/Gallery/CP-9020296-NA_01.png
+FALLA fuentes-de-poder 23 HTTP 403
+OK    fuentes-de-poder 24 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Power-Supply-Units/base-rme-series-with-thermalprotect-12v-2x6-2025/gallery/RM1000e/Black/RM1000e_ThermalProtect_Black_Artboard01_AA.png
+OK    gabinetes-gamer 8 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Cases/3500x/gallery/CC-9011322-WW/CC-9011322-WW_01.png
+OK    gabinetes-gamer 9 https://assets.corsair.com/image/upload/c_scale%2Cq_auto%2Cw_96/products/Cases/3500x/gallery/CC-9011323-WW/CC-9011323-WW_01.png
+OK    ssd 13 https://americas.lexar.com/wp-content/uploads/2023/11/NM790Heatsink_slider_4TB_1.png
+OK    ssd 21 https://americas.lexar.com/wp-content/uploads/2023/11/NM790SSD_slider_4TB_1.png
+OK    ssd 24 https://www.sandisk.com/content/dam/sandisk/en-us/assets/products/internal-storage/wd-black-sn8100-nvme-ssd/gallery/wd-black-sn8100-nvme-ssd-front.png
+OK    monitores 12 https://www.lg.com/content/dam/channel/wcms/uk/images/monitors/gaming/27gs60qc-b/gallery/ultragear-27gs60qc-basic-large.jpg
+FALLA monitores 19 sin og:image

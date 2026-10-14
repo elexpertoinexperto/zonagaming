@@ -1,0 +1,19 @@
+OK    procesadores 8 https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2900400-ryzen-7-9800x3d.jpg
+OK    procesadores 9 https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2613900-ryzen-7-9700x-og.jpg
+OK    procesadores 11 https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-og.jpg
+OK    procesadores 13 https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-5-5600x-og.jpg
+OK    procesadores 30 https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2613900-ryzen-9-9950x-og.jpg
+OK    tarjetas-graficas 8 https://dlcdnwebimgs.asus.com/gain/d99f9dfc-4eaf-45a8-a30e-d7adfe27a204/
+FALLA tarjetas-graficas 9 sin og:image
+OK    tarjetas-graficas 10 https://static.gigabyte.com/StaticFile/Image/Global/5dd1364de41be749adec5415a8a29ff6/ProductRemoveBg/33894
+OK    tarjetas-graficas 15 https://www.asus.com/media/Odin/Websites/global/ProductLine/20201028112226.png
+OK    tarjetas-graficas 17 https://dlcdnwebimgs.asus.com/gain/926199b9-c091-410f-a3ad-bda8a4a8f960/
+OK    tarjetas-graficas 18 https://dlcdnwebimgs.asus.com/gain/67ad565a-a9a5-4692-98b8-a8cb02a1760b/
+OK    tarjetas-graficas 20 https://static.gigabyte.com/StaticFile/Image/Global/38af2d89471f6b313a828c2825305f27/ProductRemoveBg/43884
+FALLA tarjetas-graficas 21 HTTP 404
+OK    tarjetas-graficas 22 https://dlcdnwebimgs.asus.com/gain/2d74cc01-357a-4247-99df-f70cc266247c/
+OK    tarjetas-graficas 23 https://dlcdnwebimgs.asus.com/gain/abb168cf-5ba6-4355-a96d-2bfc1ffcfd91/
+FALLA tarjetas-graficas 25 HTTP 404
+OK    tarjetas-graficas 26 https://dlcdnwebimgs.asus.com/gain/6e4f87b1-b882-43c2-8646-4473c2c01d04/
+OK    tarjetas-graficas 28 https://static.gigabyte.com/StaticFile/Image/Global/ae3c38613edbcb5849b3f3892d223df5/ProductRemoveBg/44329
+OK    tarjetas-graficas 30 https://dlcdnwebimgs.asus.com/gain/7bb494af-8636-46a3-93ee-3cff60d30624/
