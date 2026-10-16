@@ -2,6 +2,7 @@
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import ProductoDetalle from '../../components/ProductoDetalle.astro';
+import AnalisisProducto from '../../components/AnalisisProducto.astro';
 import JuegosCompatibles from '../../components/JuegosCompatibles.astro';
 import productos from '../../data/productos.json';
 import { nombreCortoUnico } from '../../lib/seo.mjs';
@@ -51,6 +52,8 @@ const breadcrumb = {
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
     marca={(producto as any).marca}
   />
+
+  <AnalisisProducto catKey="ssd" id={producto.id} lang="es" />
 
   <JuegosCompatibles categoria="ssd" productoId={numeroId} productoNombre={producto.nombre} />
 

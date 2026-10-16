@@ -1,0 +1,137 @@
+---
+// «Análisis de la selección» de cada subcategoría (ES y EN): resumen del mercado con cifras reales, tres opciones
+// destacadas (la más económica, la equilibrada y la más completa), tabla comparativa de todos los productos y
+// preguntas frecuentes propias. Todo sale de los productos de ESA selección, así que cada página tiene datos distintos.
+import { dinero, corto } from '../lib/analisis.mjs';
+import { marcaNorm } from '../lib/filtros.mjs';
+
+const { items, titulo, plural, etiqueta, base, lang = 'es' } = Astro.props as {
+  items: any[]; titulo: string; plural: string; etiqueta: string; base: string; lang?: 'es' | 'en';
+};
+const isEn = lang === 'en';
+const t = (es: string, en: string) => (isEn ? en : es);
+
+const ord = [...items].sort((a, b) => a.precio - b.precio || a.id - b.id);
+const n = ord.length;
+const precios = ord.map((p) => p.precio);
+const min = precios[0], max = precios[n - 1];
+const mediana = n % 2 ? precios[(n - 1) / 2] : (precios[n / 2 - 1] + precios[n / 2]) / 2;
+const barato = ord[0];
+const caro = ord[n - 1];
+const equilibrado = [...ord].sort((a, b) => Math.abs(a.precio - mediana) - Math.abs(b.precio - mediana))[0];
+
+const marcas = new Map<string, number>();
+for (const p of items) if (p.marca) { const m = marcaNorm(p) || p.marca; marcas.set(m, (marcas.get(m) ?? 0) + 1); }
+const topMarcas = [...marcas.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 4);
+const listaMarcas = topMarcas.map(([m, c]) => `${m} (${c})`).join(', ');
+
+const href = (p: any) => `${base}/${p.slug}-${p.id}/`;
+// Columnas de la tabla: las tres primeras especificaciones útiles de la categoría
+const OMITIR = /^(color|modelo|model|voltaje|voltage)$/i;
+const val = (p: any, k: string) => {
+  const v = String(p.especificaciones?.[k] ?? '');
+  return v.trim().toUpperCase() === 'N/D' || !v ? '—' : v;
+};
+// se eligen las tres columnas con más datos (así la tabla no se llena de guiones), manteniendo su orden original
+const candidatas = Object.keys(items[0]?.especificaciones ?? {}).filter((k) => !OMITIR.test(k));
+const elegidas = new Set([...candidatas].sort((a, b) => items.filter((p) => val(p, b) !== '—').length - items.filter((p) => val(p, a) !== '—').length).slice(0, 3));
+const cols = candidatas.filter((k) => elegidas.has(k));
+const clave = (p: any) => cols[0] ? `${cols[0]}: ${val(p, cols[0])}` : '';
+
+const resumen = t(
+  `En esta selección hay ${n} ${plural} ${etiqueta}, con precios entre ${dinero(min)} y ${dinero(max)} USD y una mediana de ${dinero(mediana)}. ${topMarcas.length ? `Las marcas con más modelos son ${listaMarcas}.` : ''}`,
+  `This selection has ${n} ${plural} ${etiqueta}, priced from ${dinero(min)} to ${dinero(max)} USD with a median of ${dinero(mediana)}. ${topMarcas.length ? `The brands with the most models are ${listaMarcas}.` : ''}`,
+);
+const faqs = [
+  { q: t(`¿Cuál es la opción más económica de ${plural} ${etiqueta}?`, `What is the cheapest of the ${plural} ${etiqueta}?`),
+    a: t(`La más económica del catálogo es ${corto(barato.nombre, 70)}, a ${dinero(barato.precio)} USD${clave(barato) ? ` (${clave(barato)})` : ''}.`, `The cheapest in our catalog is ${corto(barato.nombre, 70)}, at ${dinero(barato.precio)} USD${clave(barato) ? ` (${clave(barato)})` : ''}.`) },
+  { q: t(`¿Cuánto cuestan los ${plural} ${etiqueta}?`, `How much do ${plural} ${etiqueta} cost?`),
+    a: t(`En nuestro catálogo cuestan entre ${dinero(min)} y ${dinero(max)} USD; la mitad de los modelos está por debajo de ${dinero(mediana)}.`, `In our catalog they cost between ${dinero(min)} and ${dinero(max)} USD; half of the models are below ${dinero(mediana)}.`) },
+  { q: t(`¿Qué marcas hay entre los ${plural} ${etiqueta}?`, `Which brands are among the ${plural} ${etiqueta}?`),
+    a: topMarcas.length ? t(`Hay ${marcas.size} marcas; las que más modelos tienen son ${listaMarcas}.`, `There are ${marcas.size} brands; the ones with the most models are ${listaMarcas}.`) : t('El catálogo no indica la marca de estos modelos.', 'The catalog does not list the brand for these models.') },
+];
+const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+const tx = isEn
+  ? { title: 'Selection analysis', picks: 'Our picks in this selection', cheap: 'Most affordable', bal: 'Balanced choice', top: 'Most complete (priciest)', balNote: 'closest to the median price',
+      table: 'Comparison table', prod: 'Product', price: 'Price', faq: 'Frequently asked questions', note: 'Automatic analysis based on this catalog\'s specs and prices.' }
+  : { title: 'Análisis de la selección', picks: 'Nuestras opciones en esta selección', cheap: 'La más económica', bal: 'La opción equilibrada', top: 'La más completa (la más cara)', balNote: 'precio más cercano a la mediana',
+      table: 'Tabla comparativa', prod: 'Producto', price: 'Precio', faq: 'Preguntas frecuentes', note: 'Análisis automático a partir de las especificaciones y precios de este catálogo.' };
+const picks = [
+  { tag: tx.cheap, p: barato },
+  { tag: `${tx.bal} · ${tx.balNote}`, p: equilibrado },
+  { tag: tx.top, p: caro },
+].filter((x, i, a) => a.findIndex((y) => y.p.id === x.p.id) === i); // sin repetir producto
+---
+
+<section class="an-sub" aria-labelledby="an-sub-title">
+  <h2 id="an-sub-title">{tx.title}: {titulo}</h2>
+  <p class="an-sub-resumen">{resumen}</p>
+
+  <h3>{tx.picks}</h3>
+  <div class="an-sub-picks">
+    {picks.map((x) => (
+      <a class="an-sub-pick" href={href(x.p)}>
+        <span class="an-sub-tag">{x.tag}</span>
+        <strong>{corto(x.p.nombre, 70)}</strong>
+        <span class="an-sub-precio">{dinero(x.p.precio)} USD</span>
+        {clave(x.p) && <span class="an-sub-spec">{clave(x.p)}</span>}
+      </a>
+    ))}
+  </div>
+
+  <h3>{tx.table}</h3>
+  <div class="an-sub-tabla">
+    <table>
+      <thead>
+        <tr>
+          <th>{tx.prod}</th>
+          <th>{tx.price}</th>
+          {cols.map((c) => <th>{c}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {ord.map((p) => (
+          <tr>
+            <td><a href={href(p)}>{corto(p.nombre, 64)}</a></td>
+            <td>{dinero(p.precio)}</td>
+            {cols.map((c) => <td>{val(p, c)}</td>)}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>{tx.faq}</h3>
+  <dl class="an-sub-faq">
+    {faqs.map((f) => (<div><dt>{f.q}</dt><dd>{f.a}</dd></div>))}
+  </dl>
+  <p class="an-sub-nota">{tx.note}</p>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+</section>
+
+<style>
+  .an-sub { margin-top: 64px; padding: 32px 36px; border-radius: var(--r-lg); background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(124, 255, 203, 0.1); }
+  .an-sub h2 { margin: 0 0 12px; font-size: 1.35rem; color: var(--text); }
+  .an-sub h3 { margin: 26px 0 12px; font-size: 1rem; color: var(--accent); }
+  .an-sub-resumen { margin: 0; color: var(--text-muted); line-height: 1.7; max-width: 80ch; }
+  .an-sub-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .an-sub-pick { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border-radius: var(--r-md); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.02); color: var(--text); text-decoration: none; transition: border-color 0.5s var(--ease), transform 0.5s var(--ease); }
+  .an-sub-pick:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+  .an-sub-tag { color: var(--text-dim); font-size: 0.72rem; letter-spacing: 0.07em; text-transform: uppercase; }
+  .an-sub-precio { color: var(--accent); font-weight: 600; }
+  .an-sub-spec { color: var(--text-muted); font-size: 0.84rem; }
+  .an-sub-tabla { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); }
+  .an-sub-tabla table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .an-sub-tabla th, .an-sub-tabla td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .an-sub-tabla td:first-child { white-space: normal; min-width: 240px; }
+  .an-sub-tabla th { color: var(--text-dim); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(255, 255, 255, 0.02); }
+  .an-sub-tabla td { color: var(--text-muted); }
+  .an-sub-tabla td a { color: var(--accent); text-decoration: none; }
+  .an-sub-tabla td a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .an-sub-tabla tr:last-child td { border-bottom: 0; }
+  .an-sub-faq { margin: 0; display: grid; gap: 14px; }
+  .an-sub-faq dt { color: var(--text); font-weight: 600; margin-bottom: 4px; }
+  .an-sub-faq dd { margin: 0; color: var(--text-muted); line-height: 1.65; max-width: 80ch; }
+  .an-sub-nota { margin: 22px 0 0; font-size: 0.8rem; color: var(--text-dim); }
+  @media (max-width: 860px) { .an-sub { padding: 24px 18px; } .an-sub-picks { grid-template-columns: 1fr; } }
+</style>

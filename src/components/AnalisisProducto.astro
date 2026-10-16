@@ -1,0 +1,145 @@
+---
+// «Análisis rápido» de cada ficha de producto (ES y EN): veredicto, pros y contras, para quién es, comparación con el
+// producto inmediatamente más barato y más caro de su categoría, y preguntas frecuentes propias del producto.
+// Todo se calcula en el build con datos reales de la ficha (src/lib/analisis.mjs): no hay texto repetido entre productos.
+import productosEs from '../data/productos.json';
+import productosEn from '../data/productos-en.json';
+import { analizar, dinero } from '../lib/analisis.mjs';
+import { NOMBRES } from '../lib/filtros.mjs';
+import { SLUG_EN } from '../i18n/en';
+
+const { catKey, id, lang = 'es' } = Astro.props as { catKey: string; id: number; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const lista = ((isEn ? productosEn : productosEs) as any)[catKey] as any[];
+const producto = lista.find((p) => p.id === id);
+const base = isEn ? `/en/${SLUG_EN[catKey]}` : `/${catKey}`;
+const plural = (NOMBRES as any)[catKey][isEn ? 'en' : 'es'];
+const a = producto ? analizar(catKey, producto, lista, lang, base, plural, (productosEs as any)[catKey]) : null;
+
+const t = isEn
+  ? { title: 'Quick analysis', pros: 'Strengths', cons: 'Things to consider', who: 'Who is it for?', notWho: 'Who should look elsewhere?',
+      cmp: 'How it compares', cheaper: 'Next one down in price', pricier: 'Next one up in price', save: 'cheaper', more: 'more',
+      faq: 'Frequently asked questions about this product', note: 'Automatic analysis based on this catalog\'s specs and prices; it is a guide, not a lab test.',
+      date: 'Price checked on', pos: 'Price position' }
+  : { title: 'Análisis rápido', pros: 'Puntos fuertes', cons: 'A tener en cuenta', who: '¿Para quién es?', notWho: '¿Quién debería mirar otra opción?',
+      cmp: 'Cómo se compara', cheaper: 'El siguiente más barato', pricier: 'El siguiente más caro', save: 'más barato', more: 'más caro',
+      faq: 'Preguntas frecuentes sobre este producto', note: 'Análisis automático a partir de las especificaciones y precios de este catálogo; es una guía, no una prueba de laboratorio.',
+      date: 'Precio verificado el', pos: 'Posición por precio' };
+
+const schema = a && a.faqs.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: a.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+} : null;
+const fecha = producto?.precioFecha ? String(producto.precioFecha).slice(0, 10) : '';
+---
+
+{a && (
+  <section class="analisis" aria-labelledby={`analisis-${id}`}>
+    <h2 id={`analisis-${id}`}>{t.title}: {a.nombreCorto}</h2>
+    <p class="an-veredicto">{a.veredicto}</p>
+    <p class="an-pos"><strong>{t.pos}:</strong> {a.posicion}</p>
+
+    <div class="an-cols">
+      {a.pros.length > 0 && (
+        <div class="an-col an-pros">
+          <h3>{t.pros}</h3>
+          <ul>{a.pros.map((x: string) => <li>{x}</li>)}</ul>
+        </div>
+      )}
+      {a.contras.length > 0 && (
+        <div class="an-col an-cons">
+          <h3>{t.cons}</h3>
+          <ul>{a.contras.map((x: string) => <li>{x}</li>)}</ul>
+        </div>
+      )}
+    </div>
+
+    {a.para && (
+      <div class="an-who">
+        <h3>{t.who}</h3>
+        <p>{a.para}</p>
+        {a.nopara && (<><h3>{t.notWho}</h3><p>{a.nopara}</p></>)}
+      </div>
+    )}
+
+    {(a.masBarato || a.masCaro) && (
+      <div class="an-cmp">
+        <h3>{t.cmp}</h3>
+        <div class="an-cmp-grid">
+          {a.masBarato && (
+            <a class="an-card" href={a.masBarato.href}>
+              <span class="an-tag">{t.cheaper}</span>
+              <strong>{a.masBarato.nombre}</strong>
+              <span class="an-price">{dinero(a.masBarato.precio)} · {dinero(Math.abs(a.masBarato.dif))} ({a.masBarato.pct} %) {t.save}</span>
+              {a.masBarato.diffs.length > 0 && <span class="an-diffs">{a.masBarato.diffs.join(' · ')}</span>}
+            </a>
+          )}
+          {a.masCaro && (
+            <a class="an-card" href={a.masCaro.href}>
+              <span class="an-tag">{t.pricier}</span>
+              <strong>{a.masCaro.nombre}</strong>
+              <span class="an-price">{dinero(a.masCaro.precio)} · {dinero(Math.abs(a.masCaro.dif))} ({a.masCaro.pct} %) {t.more}</span>
+              {a.masCaro.diffs.length > 0 && <span class="an-diffs">{a.masCaro.diffs.join(' · ')}</span>}
+            </a>
+          )}
+        </div>
+      </div>
+    )}
+
+    {a.faqs.length > 0 && (
+      <div class="an-faq">
+        <h3>{t.faq}</h3>
+        <dl>
+          {a.faqs.map((f: any) => (<div><dt>{f.q}</dt><dd>{f.a}</dd></div>))}
+        </dl>
+      </div>
+    )}
+
+    <p class="an-nota">{t.note}{fecha && ` ${t.date} ${fecha}.`}</p>
+    {schema && <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  </section>
+)}
+
+<style>
+  .analisis {
+    max-width: 1200px;
+    margin: 64px auto 0;
+    padding: 32px 36px;
+    border-radius: var(--r-lg);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(124, 255, 203, 0.1);
+  }
+  .analisis h2 { margin: 0 0 14px; font-size: 1.35rem; color: var(--text); }
+  .analisis h3 { margin: 0 0 10px; font-size: 1rem; color: var(--accent); }
+  .analisis p { margin: 0 0 14px; color: var(--text-muted); line-height: 1.7; max-width: 80ch; }
+  .an-veredicto { color: var(--text); font-size: 1.02rem; }
+  .an-pos strong { color: var(--text); }
+  .an-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 22px 0; }
+  .an-col { padding: 18px 20px; border-radius: var(--r-md); border: 1px solid var(--line); background: rgba(5, 7, 11, 0.4); }
+  .an-cons h3 { color: var(--amazon); }
+  .an-col ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .an-col li { position: relative; padding-left: 17px; color: var(--text); font-size: 0.93rem; line-height: 1.55; }
+  .an-col li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .an-cons li::before { background: var(--amazon); }
+  .an-who { margin-bottom: 8px; }
+  .an-cmp { margin: 24px 0; }
+  .an-cmp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .an-card {
+    display: flex; flex-direction: column; gap: 6px; padding: 18px 20px;
+    border-radius: var(--r-md); border: 1px solid var(--line); background: rgba(255, 255, 255, 0.02);
+    color: var(--text); text-decoration: none; transition: border-color 0.5s var(--ease), transform 0.5s var(--ease);
+  }
+  .an-card:hover { border-color: var(--accent-line); transform: translateY(-2px); }
+  .an-tag { color: var(--text-dim); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .an-price { color: var(--accent); font-size: 0.9rem; font-weight: 600; }
+  .an-diffs { color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; }
+  .an-faq dl { margin: 0; display: grid; gap: 14px; }
+  .an-faq dt { color: var(--text); font-weight: 600; margin-bottom: 4px; }
+  .an-faq dd { margin: 0; color: var(--text-muted); line-height: 1.65; max-width: 80ch; }
+  .an-nota { margin: 22px 0 0; font-size: 0.8rem; color: var(--text-dim); }
+  @media (max-width: 760px) {
+    .analisis { padding: 24px 20px; }
+    .an-cols, .an-cmp-grid { grid-template-columns: 1fr; }
+  }
+</style>

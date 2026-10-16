@@ -8,6 +8,7 @@ import ProductCard from './ProductCard.astro';
 import FiltrosNav from './FiltrosNav.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import CategoriasRelacionadas from './CategoriasRelacionadas.astro';
+import AnalisisSubcategoria from './AnalisisSubcategoria.astro';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 
@@ -124,6 +125,8 @@ const t = isEn
       </div>
     ))}
   </section>
+
+  <AnalisisSubcategoria items={items} titulo={h1} plural={plural} etiqueta={etiq} base={base} lang={lang} />
 
   <section class="category-buying-guide">
     <h2>{t.quick}: {h1}</h2>

@@ -2,6 +2,7 @@
 import SiteLayout from '../../../components/SiteLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import ProductoDetalle from '../../../components/ProductoDetalle.astro';
+import AnalisisProducto from '../../../components/AnalisisProducto.astro';
 import productos from '../../../data/productos-en.json';
 import { nombreCortoUnico } from '../../../lib/seo.mjs';
 import { CATS_EN } from '../../../i18n/en';
@@ -44,6 +45,8 @@ const metaDescription = `${nombreCortoUnico(producto, productosCategoria, 58)} a
     imagenPath={(producto as any).imagenUrl || '/placeholder-product.svg'}
     marca={(producto as any).marca}
   />
+
+  <AnalisisProducto catKey="audifonos" id={producto.id} lang="en" />
 </SiteLayout>
 
 <style>

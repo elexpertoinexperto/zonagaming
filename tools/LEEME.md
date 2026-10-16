@@ -91,3 +91,12 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - Enlazado interno automático: `EnlazadoInterno.astro` envuelve la guía, los errores y las preguntas frecuentes y enlaza la primera mención de otra
   categoría (máx. 3 por bloque; no títulos, negritas ni enlaces existentes). Para ampliar los términos: `TERMINOS_ES/EN` en ese archivo.
 - Preguntas frecuentes: `src/data/faq.ts` (`faqEs`/`faqEn`), ya son propias de cada categoría (5 por categoría).
+
+## Análisis automático de fichas y subcategorías (contenido propio por URL)
+
+- **Ficha de producto** (`AnalisisProducto.astro` + `src/lib/analisis.mjs`): veredicto, posición por precio, pros y contras, para quién es,
+  comparación con el producto inmediatamente más barato y más caro (con enlace y diferencias reales de ficha) y 2 preguntas frecuentes con schema FAQPage.
+  Todo sale de las especificaciones y el precio del producto: no hay texto repetido entre productos. Reglas por categoría en `REGLAS` (ES y EN en la misma función).
+- **Subcategoría** (`AnalisisSubcategoria.astro`): resumen del mercado (rango, mediana, marcas), 3 opciones destacadas, tabla comparativa de todos sus
+  productos y 3 preguntas frecuentes con schema FAQPage. Los datos son de ESA selección.
+- Un producto o categoría nueva funciona sin tocar nada; para una categoría con reglas nuevas, añade su función en `REGLAS`.
