@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import CategoryIcon from '../components/CategoryIcon.astro';
 import BestSellers from '../components/BestSellers.astro';
 import Comparador from '../components/Comparador.astro';
+import HexVault from '../components/HexVault.astro';
 import productos from '../data/productos.json';
 
 // Total de productos del catálogo, redondeado a la decena inferior (+360, +370…)
@@ -183,6 +184,8 @@ const bestSellerProducts = [
       />
 
       <Comparador />
+
+      <HexVault lang="es" />
 
       <section id="ventajas" class="features">
         <div class="section-title">

@@ -1,0 +1,375 @@
+---
+// «Bóveda hexagonal»: panel con una retícula de hexágonos que se ilumina con el cursor (con estela), con destellos
+// que corren por las aristas al hacer clic, un barrido de luz lento, grano de película y movimiento propio cuando
+// nadie la toca. Implementación propia en canvas 2D (sin dependencias), inspirada en el efecto «Hexagonal Vault»
+// de React Bits, con la paleta de Monckey Gamer (azul eléctrico, menta y naranja Amazon).
+// Se usa como fondo de una llamada a la acción hacia el recomendador de juegos.
+import productos from '../data/productos.json';
+import juegos from '../data/juegos-index.json';
+
+const { lang = 'es' } = Astro.props as { lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const totalComponentes = Object.values(productos).reduce((n: number, l: any) => n + l.length, 0);
+const totalJuegos = Array.isArray(juegos) ? juegos.length : Object.keys(juegos).length;
+
+const t = isEn
+  ? {
+      kicker: 'Game recommender',
+      title: 'Pick the game, we pick the hardware',
+      text: 'Tell us what you want to play and get the graphics card, processor and RAM that run it best for your budget, with no overspending.',
+      cta: 'Open the recommender',
+      cta2: 'Browse components',
+      href: '/en/recommender/',
+      href2: '#categorias',
+      s1: 'games analyzed',
+      s2: 'components compared',
+      hint: 'Move your cursor · click to send sparks',
+      label: 'Interactive hexagon lattice that lights up with your cursor',
+    }
+  : {
+      kicker: 'Recomendador de juegos',
+      title: 'Elige el juego y nosotros elegimos el hardware',
+      text: 'Dinos qué quieres jugar y te damos la tarjeta gráfica, el procesador y la RAM que mejor lo mueven según tu presupuesto, sin gastar de más.',
+      cta: 'Abrir el recomendador',
+      cta2: 'Ver componentes',
+      href: '/recomendador/',
+      href2: '#categorias',
+      s1: 'juegos analizados',
+      s2: 'componentes comparados',
+      hint: 'Mueve el cursor · haz clic para lanzar destellos',
+      label: 'Retícula hexagonal interactiva que se ilumina con tu cursor',
+    };
+---
+
+<section class="hexvault" id="hexvault" aria-label={t.kicker}>
+  <canvas class="hv-canvas" role="img" aria-label={t.label}></canvas>
+  <div class="hv-scrim" aria-hidden="true"></div>
+  <div class="hv-grain" aria-hidden="true"></div>
+  <div class="hv-vignette" aria-hidden="true"></div>
+
+  <div class="hv-content">
+    <span class="hv-kicker">{t.kicker}</span>
+    <h2>{t.title}</h2>
+    <p>{t.text}</p>
+    <div class="hv-actions">
+      <a class="btn" href={t.href}>{t.cta}</a>
+      <a class="btn-secondary" href={t.href2}>{t.cta2}</a>
+    </div>
+    <ul class="hv-stats">
+      <li><strong>{totalJuegos}</strong> {t.s1}</li>
+      <li><strong>{totalComponentes}</strong> {t.s2}</li>
+    </ul>
+  </div>
+  <span class="hv-hint" aria-hidden="true">{t.hint}</span>
+</section>
+
+<script>
+  // ── Bóveda hexagonal (canvas 2D) ───────────────────────────────────────────
+  const root = document.getElementById('hexvault');
+  const canvas = root?.querySelector<HTMLCanvasElement>('.hv-canvas');
+  const grain = root?.querySelector<HTMLElement>('.hv-grain');
+  const ctx = canvas?.getContext('2d');
+
+  if (root && canvas && ctx) {
+    const CELL = 34; // radio del hexágono en px
+    const COOL = [27, 183, 255]; // #1bb7ff
+    const MINT = [124, 255, 203]; // #7cffcb
+    const HOT = [255, 153, 0]; // #ff9900 (naranja Amazon) para los destellos
+    const WHITE = [230, 255, 246];
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    type V = { x: number; y: number; n: number[] };
+    type E = { a: number; b: number; mx: number; my: number; seed: number };
+    let W = 0, H = 0, dpr = 1;
+    let verts: V[] = [];
+    let edges: E[] = [];
+
+    // Generador pseudoaleatorio con semilla: la retícula y los destellos son reproducibles
+    const rng = (s: number) => () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296);
+    const hash = (a: number, b: number) => {
+      let h = (a * 374761393 + b * 668265263) >>> 0;
+      h = ((h ^ (h >>> 13)) * 1274126177) >>> 0;
+      return ((h ^ (h >>> 16)) >>> 0) / 4294967296;
+    };
+
+    function build() {
+      const r = root!.getBoundingClientRect();
+      W = Math.max(1, Math.round(r.width));
+      H = Math.max(1, Math.round(r.height));
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas!.width = Math.round(W * dpr);
+      canvas!.height = Math.round(H * dpr);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      // Hexágonos de punta arriba: vértices únicos por clave redondeada
+      const dx = Math.sqrt(3) * CELL, dy = 1.5 * CELL;
+      const map = new Map<string, number>();
+      verts = []; edges = [];
+      const vid = (x: number, y: number) => {
+        const k = Math.round(x * 2) + ',' + Math.round(y * 2);
+        let i = map.get(k);
+        if (i === undefined) { i = verts.length; map.set(k, i); verts.push({ x, y, n: [] }); }
+        return i;
+      };
+      const seen = new Set<string>();
+      for (let row = -1; row * dy < H + CELL * 2; row++) {
+        for (let col = -1; col * dx < W + dx * 2; col++) {
+          const cx = col * dx + (row & 1 ? dx / 2 : 0), cy = row * dy;
+          const ids: number[] = [];
+          for (let k = 0; k < 6; k++) {
+            const ang = Math.PI / 6 + (Math.PI / 3) * k;
+            ids.push(vid(cx + CELL * Math.cos(ang), cy + CELL * Math.sin(ang)));
+          }
+          for (let k = 0; k < 6; k++) {
+            const a = ids[k], b = ids[(k + 1) % 6];
+            const key = a < b ? a + '-' + b : b + '-' + a;
+            if (seen.has(key)) continue;
+            seen.add(key);
+            verts[a].n.push(b); verts[b].n.push(a);
+            edges.push({ a, b, mx: (verts[a].x + verts[b].x) / 2, my: (verts[a].y + verts[b].y) / 2, seed: edges.length });
+          }
+        }
+      }
+    }
+
+    // ── Estado de la luz ──
+    const light = { x: 0, y: 0, vx: 0, vy: 0, power: 0.55 };
+    const target = { x: 0, y: 0 };
+    const pointer = { inside: false, last: -1e9, speed: 0 };
+    const trail: { x: number; y: number; t: number }[] = [];
+    type Pulse = { dist: Float32Array; born: number };
+    const pulses: Pulse[] = [];
+    const TRAIL_MS = 900, PULSE_SPEED = 0.0105, PULSE_LIFE = 2300; // saltos de arista por ms
+
+    // Destello: expansión por la retícula desde el vértice más cercano, con ramas aleatorias (corren "por las aristas")
+    function launchPulse(px: number, py: number, now: number) {
+      let best = 0, bd = Infinity;
+      for (let i = 0; i < verts.length; i++) {
+        const d = (verts[i].x - px) ** 2 + (verts[i].y - py) ** 2;
+        if (d < bd) { bd = d; best = i; }
+      }
+      const dist = new Float32Array(verts.length).fill(Infinity);
+      const salt = Math.floor(now) % 9973;
+      dist[best] = 0;
+      let frontier = [best], step = 0;
+      while (frontier.length && step < 60) {
+        step++;
+        const next: number[] = [];
+        for (const v of frontier) for (const n of verts[v].n) {
+          if (dist[n] !== Infinity) continue;
+          if (hash(v * 31 + n, salt) < 0.62) { dist[n] = step; next.push(n); }
+        }
+        frontier = next;
+      }
+      pulses.push({ dist, born: now });
+      if (pulses.length > 6) pulses.shift();
+    }
+
+    const rgba = (c: number[], a: number) => `rgba(${c[0]},${c[1]},${c[2]},${a.toFixed(3)})`;
+    const mix = (a: number[], b: number[], k: number) => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k];
+
+    const BUCKETS = 10;
+    const buckets: number[][] = Array.from({ length: BUCKETS }, () => []);
+    const hotBuckets: number[][] = Array.from({ length: BUCKETS }, () => []);
+
+    function frame(now: number, dt: number) {
+      // Luz: sigue al puntero con un resorte amortiguado; sin puntero, recorre la retícula sola
+      const idle = !pointer.inside || now - pointer.last > 1800;
+      if (idle && !reduce) {
+        const t = now * 0.00021;
+        target.x = W * (0.5 + 0.42 * Math.sin(t * 1.3 + 1.1));
+        target.y = H * (0.5 + 0.36 * Math.sin(t * 1.9));
+      }
+      const k = idle ? 38 : 120, damp = idle ? 9 : 16; // rigidez y amortiguación
+      const s = Math.min(dt, 40) / 1000;
+      light.vx += ((target.x - light.x) * k - light.vx * damp) * s;
+      light.vy += ((target.y - light.y) * k - light.vy * damp) * s;
+      light.x += light.vx * s; light.y += light.vy * s;
+      const speed = Math.hypot(light.vx, light.vy);
+      light.power += ((idle ? 0.55 : 0.8 + Math.min(speed / 1400, 0.45)) - light.power) * Math.min(1, s * 4);
+
+      if (!trail.length || now - trail[trail.length - 1].t > 38) trail.push({ x: light.x, y: light.y, t: now });
+      while (trail.length && now - trail[0].t > TRAIL_MS) trail.shift();
+
+      ctx!.clearRect(0, 0, W, H);
+
+      // Barrido de luz lento en diagonal
+      const sweep = ((now * 0.00006) % 1.6 - 0.3) * (W + H);
+      const R = 190 * light.power + 60; // radio de la luz
+      const R2 = R * R;
+      for (const b of buckets) b.length = 0;
+      for (const b of hotBuckets) b.length = 0;
+
+      for (let i = 0; i < edges.length; i++) {
+        const e = edges[i];
+        // base: retícula tenue con un brillo que viaja
+        const dsw = (e.mx + e.my * 0.6 - sweep) / 120;
+        let v = 0.035 + 0.09 * Math.exp(-dsw * dsw);
+        // luz principal
+        const d2 = (e.mx - light.x) ** 2 + (e.my - light.y) ** 2;
+        if (d2 < R2 * 4) v += light.power * Math.exp(-d2 / R2);
+        // estela (resplandor que se apaga)
+        for (let j = 0; j < trail.length; j += 2) {
+          const tr = trail[j];
+          const dd = (e.mx - tr.x) ** 2 + (e.my - tr.y) ** 2;
+          if (dd < R2 * 2) v += 0.34 * (1 - (now - tr.t) / TRAIL_MS) * Math.exp(-dd / (R2 * 0.55));
+        }
+        // destellos por las aristas
+        let hot = 0;
+        for (const p of pulses) {
+          const age = now - p.born;
+          if (age > PULSE_LIFE) continue;
+          const d = Math.min(p.dist[e.a], p.dist[e.b]);
+          if (d === Infinity) continue;
+          const head = age * PULSE_SPEED * 4.2; // posición del frente (en aristas)
+          const off = head - d;
+          if (off > -0.4 && off < 3.2) hot = Math.max(hot, Math.exp(-Math.max(off, 0) * 0.9) * (1 - age / PULSE_LIFE));
+        }
+        if (hot > 0.04) hotBuckets[Math.min(BUCKETS - 1, Math.floor(hot * BUCKETS))].push(i);
+        v = Math.min(v, 1);
+        buckets[Math.min(BUCKETS - 1, Math.floor(v * BUCKETS))].push(i);
+      }
+
+      ctx!.lineCap = 'round';
+      const pass = (list: number[][], hotColor: boolean) => {
+        for (let bi = 0; bi < BUCKETS; bi++) {
+          const idx = list[bi];
+          if (!idx.length) continue;
+          const lv = (bi + 0.5) / BUCKETS;
+          const base = hotColor ? mix(HOT, WHITE, lv * 0.6) : mix(mix(COOL, MINT, Math.min(1, lv * 1.5)), WHITE, Math.max(0, lv - 0.7) * 1.6);
+          // halo ancho y tenue + línea fina e intensa
+          if (lv > 0.28 || hotColor) {
+            ctx!.beginPath();
+            for (const i of idx) { const e = edges[i]; ctx!.moveTo(verts[e.a].x, verts[e.a].y); ctx!.lineTo(verts[e.b].x, verts[e.b].y); }
+            ctx!.lineWidth = hotColor ? 5 : 4;
+            ctx!.strokeStyle = rgba(base, (hotColor ? 0.2 : 0.16) * lv * 1.6);
+            ctx!.stroke();
+          }
+          ctx!.beginPath();
+          for (const i of idx) { const e = edges[i]; ctx!.moveTo(verts[e.a].x, verts[e.a].y); ctx!.lineTo(verts[e.b].x, verts[e.b].y); }
+          ctx!.lineWidth = lv > 0.3 || hotColor ? 1.6 : 1;
+          ctx!.strokeStyle = rgba(base, hotColor ? Math.min(1, 0.4 + lv) : 0.12 + lv * 0.88);
+          ctx!.stroke();
+        }
+      };
+      pass(buckets, false);
+      pass(hotBuckets, true);
+
+      // Núcleo suave de la luz
+      const g = ctx!.createRadialGradient(light.x, light.y, 0, light.x, light.y, R * 0.8);
+      g.addColorStop(0, rgba(MINT, 0.12 * light.power));
+      g.addColorStop(1, rgba(MINT, 0));
+      ctx!.fillStyle = g;
+      ctx!.fillRect(light.x - R, light.y - R, R * 2, R * 2);
+    }
+
+    // ── Entrada del puntero (ratón y táctil) ──
+    const local = (ev: PointerEvent) => { const r = root.getBoundingClientRect(); return { x: ev.clientX - r.left, y: ev.clientY - r.top }; };
+    root.addEventListener('pointermove', (ev) => {
+      const p = local(ev); target.x = p.x; target.y = p.y;
+      pointer.inside = true; pointer.last = performance.now();
+    });
+    root.addEventListener('pointerleave', () => { pointer.inside = false; });
+    root.addEventListener('pointerdown', (ev) => {
+      if ((ev.target as HTMLElement).closest('a,button')) return; // no robar el clic a los botones
+      const p = local(ev);
+      target.x = p.x; target.y = p.y; pointer.inside = true; pointer.last = performance.now();
+      if (!reduce) launchPulse(p.x, p.y, performance.now());
+    });
+
+    // Grano de película: una sola textura de ruido generada una vez
+    if (grain) {
+      const n = document.createElement('canvas'); n.width = n.height = 160;
+      const nc = n.getContext('2d')!, img = nc.createImageData(160, 160), rnd = rng(7);
+      for (let i = 0; i < img.data.length; i += 4) { const v = rnd() * 255; img.data[i] = img.data[i + 1] = img.data[i + 2] = v; img.data[i + 3] = 255; }
+      nc.putImageData(img, 0, 0);
+      grain.style.backgroundImage = `url(${n.toDataURL('image/png')})`;
+    }
+
+    // ── Bucle: solo corre si el panel está a la vista ──
+    let raf = 0, visible = false, last = 0;
+    const tick = (now: number) => {
+      raf = 0;
+      if (!visible) return;
+      frame(now, last ? now - last : 16);
+      last = now;
+      raf = requestAnimationFrame(tick);
+    };
+    const start = () => { if (!raf && visible && !reduce) { last = 0; raf = requestAnimationFrame(tick); } };
+
+    build();
+    light.x = target.x = W * 0.62; light.y = target.y = H * 0.5;
+    if (reduce) frame(performance.now(), 16); // imagen estática con la luz en reposo
+    else launchPulse(W * 0.7, H * 0.45, performance.now() - 300); // un destello de bienvenida
+
+    new IntersectionObserver((en) => { visible = en[0].isIntersecting; if (visible) start(); }, { threshold: 0.05 }).observe(root);
+    let rt = 0;
+    new ResizeObserver(() => { clearTimeout(rt); rt = window.setTimeout(() => { build(); if (reduce) frame(performance.now(), 16); }, 120); }).observe(root);
+    document.addEventListener('visibilitychange', () => { if (document.hidden) { cancelAnimationFrame(raf); raf = 0; } else start(); });
+  }
+</script>
+
+<style>
+  .hexvault {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    margin-top: 88px;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--line-strong);
+    background:
+      radial-gradient(circle at 78% 30%, rgba(27, 183, 255, 0.1), transparent 45%),
+      linear-gradient(180deg, #07101c, #05070b);
+    touch-action: pan-y;
+  }
+  .hv-canvas, .hv-scrim, .hv-grain, .hv-vignette { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hv-canvas { z-index: 0; display: block; }
+  /* oscurece la zona del texto para que se lea sobre las líneas */
+  .hv-scrim { z-index: 1; pointer-events: none; background: linear-gradient(90deg, rgba(5, 7, 11, 0.9) 0%, rgba(5, 7, 11, 0.62) 38%, rgba(5, 7, 11, 0) 68%); }
+  .hv-grain { z-index: 2; pointer-events: none; opacity: 0.06; mix-blend-mode: overlay; background-size: 160px 160px; }
+  .hv-vignette { z-index: 2; pointer-events: none; background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%); }
+
+  .hv-content {
+    position: relative;
+    z-index: 3;
+    width: min(560px, 100%);
+    padding: clamp(28px, 5vw, 56px);
+    pointer-events: none; /* deja pasar el cursor a la retícula; los botones lo reactivan */
+  }
+  .hv-content a { pointer-events: auto; }
+  .hv-kicker {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .hv-content h2 { margin: 16px 0 12px; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.12; color: var(--text); }
+  .hv-content p { margin: 0 0 24px; color: var(--text-muted); line-height: 1.65; }
+  .hv-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hv-stats { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 24px 0 0; padding: 0; list-style: none; color: var(--text-dim); font-size: 0.86rem; }
+  .hv-stats strong { color: var(--accent); font-size: 1.05rem; margin-right: 4px; }
+  .hv-hint {
+    position: absolute;
+    z-index: 3;
+    right: 18px;
+    bottom: 14px;
+    color: var(--text-dim);
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    pointer-events: none;
+  }
+  @media (hover: none) { .hv-hint { display: none; } }
+  @media (max-width: 760px) {
+    .hexvault { min-height: 480px; align-items: flex-end; }
+    .hv-scrim { background: linear-gradient(180deg, rgba(5, 7, 11, 0.15) 0%, rgba(5, 7, 11, 0.88) 62%); }
+  }
+</style>
