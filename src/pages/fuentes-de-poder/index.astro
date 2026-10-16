@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Las mejores fuentes de poder para PC: certificadas 80+, modulares y eficientes. Fuente de poder para PC y fuente de alimentación PC al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="fuentes-de-poder" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="fuentes-de-poder" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu fuente de poder para PC?</h2>
     <p>La fuente de poder es el componente que protege toda tu inversión. Una fuente de alimentación PC de mala calidad puede dañar tu GPU, CPU o RAM. Estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todas las fuentes de poder de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="fuentes-de-poder" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-fuentes-de-poder"
     title="Fuentes de Poder más vendidas"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['fuentes-de-poder']} />
+  <CategoriasRelacionadas catKey="fuentes-de-poder" lang="es" />
+  <EnlazadoInterno cat="fuentes-de-poder" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['fuentes-de-poder']} />
+  </EnlazadoInterno>
 </SiteLayout>

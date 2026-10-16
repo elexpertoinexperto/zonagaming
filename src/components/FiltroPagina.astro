@@ -7,6 +7,7 @@ import SiteLayout from './SiteLayout.astro';
 import ProductCard from './ProductCard.astro';
 import FiltrosNav from './FiltrosNav.astro';
 import Breadcrumb from './Breadcrumb.astro';
+import CategoriasRelacionadas from './CategoriasRelacionadas.astro';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 
@@ -137,6 +138,8 @@ const t = isEn
       <a href={urlCategoria}>{t.more}</a>
     </p>
   </section>
+
+  <CategoriasRelacionadas catKey={catKey} lang={lang} />
 </SiteLayout>
 
 <script>

@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores monitores gamer 1080p, 1440p, 4K, OLED y ultrawide con alta tasa de refresco. Compara precios y compra monitores gaming con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="monitores" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="monitores" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu monitor gamer?</h2>
     <p>El monitor gamer define cuánto ves y qué tan fluido se siente cada partida. Ya sea que busques un monitor gaming 1080p económico o un panel OLED de alta gama, estos factores marcan la diferencia:</p>
     <ul>
@@ -74,11 +78,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los monitores gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="monitores" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-monitores"
     title="Monitores Gamer más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['monitores']} />
+  <CategoriasRelacionadas catKey="monitores" lang="es" />
+  <EnlazadoInterno cat="monitores" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['monitores']} />
+  </EnlazadoInterno>
 </SiteLayout>

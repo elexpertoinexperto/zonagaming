@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores gabinetes gamer para PC: mid-tower y full-tower con airflow, vidrio templado y RGB. Gabinete para PC al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="gabinetes-gamer" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="gabinetes-gamer" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu gabinete gamer para PC?</h2>
     <p>El gabinete gamer define el flujo de aire, el espacio y la estética de todo tu build. Ya sea que busques un gabinete para PC compacto o una torre full-size, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los gabinetes gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="gabinetes-gamer" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-gabinetes-gamer"
     title="Gabinetes Gamer más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['gabinetes-gamer']} />
+  <CategoriasRelacionadas catKey="gabinetes-gamer" lang="es" />
+  <EnlazadoInterno cat="gabinetes-gamer" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['gabinetes-gamer']} />
+  </EnlazadoInterno>
 </SiteLayout>

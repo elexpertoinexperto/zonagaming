@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores procesadores de PC para gaming: AMD Ryzen e Intel Core. CPU de computadora de alto rendimiento al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="procesadores" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="procesadores" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu procesador de PC para gaming?</h2>
     <p>El procesador de PC es el cerebro de tu build: determina cuántas tareas corres a la vez y qué tan rápido responde tu sistema. Ya sea que busques un CPU de computadora para gaming competitivo o para creación de contenido, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los procesadores de PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="procesadores" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-procesadores"
     title="Procesadores de PC más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['procesadores']} />
+  <CategoriasRelacionadas catKey="procesadores" lang="es" />
+  <EnlazadoInterno cat="procesadores" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['procesadores']} />
+  </EnlazadoInterno>
 </SiteLayout>

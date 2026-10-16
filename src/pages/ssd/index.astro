@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores SSD para PC gaming: NVMe y SATA de alta velocidad. Memoria SSD al mejor precio con envío Amazon para cargar tus juegos en segundos.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="ssd" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="ssd" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu SSD o memoria SSD para gaming?</h2>
     <p>El SSD elimina los tiempos de carga y hace que tu PC responda al instante. Ya sea que busques una memoria SSD NVMe de alta velocidad o un SSD SATA económico, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los SSD de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="ssd" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-ssd"
     title="SSD más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['ssd']} />
+  <CategoriasRelacionadas catKey="ssd" lang="es" />
+  <EnlazadoInterno cat="ssd" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['ssd']} />
+  </EnlazadoInterno>
 </SiteLayout>

@@ -917,9 +917,8 @@ header {
 }
 
 .category-buying-guide li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  position: relative;
+  padding-left: 17px;
   color: var(--text);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -927,16 +926,29 @@ header {
 
 .category-buying-guide li::before {
   content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: var(--accent);
-  flex-shrink: 0;
-  margin-top: 0.62em;
 }
 
-.category-buying-guide a {
+.category-buying-guide a,
+.faq-list a {
   color: var(--accent);
+}
+
+/* Enlaces internos automáticos dentro de guías y preguntas frecuentes */
+.enlace-interno {
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 255, 203, 0.4);
+  text-underline-offset: 3px;
+}
+
+.enlace-interno:hover {
+  text-decoration-color: var(--accent);
 }
 
 /* ── Pie ────────────────────────────────────────────────────── */

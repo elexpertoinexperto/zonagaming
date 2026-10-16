@@ -82,3 +82,12 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   slug en español). Si la subcategoría no existe, el build falla. REGLA: solo tras secciones donde la persona ya decide qué
   comprar (recomendaciones, "¿cuál elegir?", conclusión de una guía de compra), nunca en secciones puramente informativas.
 - Prueba: `npm run build && node tools/probar-blog.mjs` (plantilla, enlaces internos, índice, bloques de compra, paridad ES/EN).
+
+## Contenido de las categorías (ES y EN)
+
+- Orden en cada categoría: guía de compra → **errores comunes** → más vendidos → **categorías relacionadas** → preguntas frecuentes.
+- Errores comunes: `src/data/errores-comunes.ts` (5 por categoría, ES y EN) · componente `ErroresComunes.astro`.
+- Categorías relacionadas (3 por categoría, con el porqué): `src/data/relaciones.ts` · `CategoriasRelacionadas.astro` (también al final de cada subcategoría).
+- Enlazado interno automático: `EnlazadoInterno.astro` envuelve la guía, los errores y las preguntas frecuentes y enlaza la primera mención de otra
+  categoría (máx. 3 por bloque; no títulos, negritas ni enlaces existentes). Para ampliar los términos: `TERMINOS_ES/EN` en ese archivo.
+- Preguntas frecuentes: `src/data/faq.ts` (`faqEs`/`faqEn`), ya son propias de cada categoría (5 por categoría).

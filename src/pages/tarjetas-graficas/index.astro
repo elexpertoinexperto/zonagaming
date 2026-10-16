@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Las mejores tarjetas gráficas para PC gaming: 1080p, 1440p y 4K. Tarjetas de video NVIDIA y AMD al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="tarjetas-graficas" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="tarjetas-graficas" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu tarjeta gráfica para PC?</h2>
     <p>La tarjeta gráfica es el componente más importante para gaming. Ya sea que busques una tarjeta de video para 1080p competitivo o una tarjeta gráfica para PC de alta gama a 4K, estos son los factores que definen tu elección:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todas las tarjetas gráficas para PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="tarjetas-graficas" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-tarjetas-graficas"
     title="Tarjetas Gráficas más vendidas"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['tarjetas-graficas']} />
+  <CategoriasRelacionadas catKey="tarjetas-graficas" lang="es" />
+  <EnlazadoInterno cat="tarjetas-graficas" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['tarjetas-graficas']} />
+  </EnlazadoInterno>
 </SiteLayout>

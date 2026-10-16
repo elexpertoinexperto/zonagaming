@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores audífonos gamer con sonido 7.1 y micrófono nítido. Diademas gamer y cascos gamer al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="audifonos" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="audifonos" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tus audífonos gamer?</h2>
     <p>Unos buenos audífonos gamer mejoran la inmersión y el posicionamiento de sonido en partidas competitivas. Ya sea que busques diademas gamer para FPS o cascos gamer para inmersión total, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los audífonos gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="audifonos" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-audifonos"
     title="Audífonos Gamer más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['audifonos']} />
+  <CategoriasRelacionadas catKey="audifonos" lang="es" />
+  <EnlazadoInterno cat="audifonos" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['audifonos']} />
+  </EnlazadoInterno>
 </SiteLayout>

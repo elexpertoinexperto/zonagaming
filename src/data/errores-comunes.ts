@@ -1,0 +1,178 @@
+// Errores comunes al comprar, por categoría (ES y EN). Cada uno: título corto (t) + explicación (d).
+// Se muestran en ErroresComunes.astro debajo de la guía de compra de cada categoría.
+export type ErrorComun = { t: string; d: string };
+export type ErroresData = Record<string, ErrorComun[]>;
+
+export const erroresEs: ErroresData = {
+  'tarjetas-graficas': [
+    { t: 'Fijarse solo en la VRAM:', d: 'más gigas no significan más rendimiento. Una tarjeta lenta de 16 GB rinde menos que una más potente de 12 GB; mira primero el chip y después la memoria.' },
+    { t: 'Olvidar la fuente de poder:', d: 'cada tarjeta pide una potencia mínima y conectores concretos (8 pines o 12V-2×6). Con una fuente corta el equipo puede apagarse en pleno juego.' },
+    { t: 'No medir el gabinete:', d: 'muchas tarjetas superan los 30 cm y ocupan tres ranuras. Comprueba la longitud máxima que admite tu gabinete antes de comprar.' },
+    { t: 'Emparejarla con un procesador que la frena:', d: 'una GPU potente con un CPU antiguo de pocos núcleos no entrega todos sus FPS (cuello de botella).' },
+    { t: 'Pagar por una resolución que no usas:', d: 'una tarjeta para 4K con un monitor 1080p a 60 Hz es dinero desperdiciado. Ajusta la tarjeta a tu monitor.' },
+  ],
+  procesadores: [
+    { t: 'Ignorar el socket:', d: 'AM4, AM5, LGA1700 o LGA1851 no son intercambiables. La placa base debe tener el mismo socket que el procesador.' },
+    { t: 'Dar por hecho que trae cooler:', d: 'muchos Ryzen serie X y los Intel con sufijo K se venden sin disipador. Súmalo al presupuesto.' },
+    { t: 'Pagar más núcleos de los que vas a usar:', d: 'para jugar bastan 6 u 8 núcleos; en juegos pesa más la tarjeta gráfica. Los 12+ núcleos son para edición, render o compilación.' },
+    { t: 'No revisar la memoria compatible:', d: 'las plataformas AM5 solo aceptan DDR5; otras aceptan DDR4 o DDR5 según la placa. Confírmalo antes de comprar el kit de RAM.' },
+    { t: 'Comparar solo por GHz:', d: 'la arquitectura, la caché y la generación importan más que la frecuencia. Dos CPU a los mismos GHz pueden rendir muy distinto.' },
+  ],
+  'memoria-ram': [
+    { t: 'Comprar el tipo equivocado:', d: 'DDR4 y DDR5 no son compatibles entre sí ni caben en el mismo slot. Revisa qué memoria exigen tu placa base y tu procesador.' },
+    { t: 'Instalar un solo módulo:', d: 'dos módulos en dual channel dan hasta un 30 % más de ancho de banda. Compra kits de 2 × 8 GB o 2 × 16 GB.' },
+    { t: 'No activar el perfil XMP o EXPO:', d: 'sin activarlo en la BIOS, tu RAM trabaja a la velocidad base y desperdicias lo que pagaste.' },
+    { t: 'Pagar el RGB creyendo que rinde más:', d: 'la iluminación no mejora el rendimiento; solo encarece el kit. Si no te importa la estética, ahorra ahí.' },
+    { t: 'Quedarse corto de capacidad:', d: '8 GB ya no alcanza para juegos recientes. 16 GB es el mínimo y 32 GB conviene si haces streaming o editas.' },
+  ],
+  ssd: [
+    { t: 'Confundir SATA con NVMe:', d: 'ambos pueden venir en formato M.2, pero van por interfaces distintas. Verifica qué acepta tu placa antes de comprar.' },
+    { t: 'Mirar solo la velocidad máxima de lectura:', d: 'la escritura sostenida, la caché y la resistencia (TBW) importan igual. Un SSD barato sin caché se degrada al llenarse.' },
+    { t: 'Esperar más FPS:', d: 'un SSD rápido acorta las cargas y reduce tirones por texturas, pero no sube los FPS del juego.' },
+    { t: 'Olvidar el disipador:', d: 'los NVMe PCIe 4.0 y 5.0 se calientan y reducen su velocidad si no tienen disipador o un gabinete con buen flujo de aire.' },
+    { t: 'Comprar la capacidad justa:', d: 'los juegos actuales superan los 100 GB. 1 TB es un buen punto de partida, y un SSD casi lleno rinde peor.' },
+  ],
+  'fuentes-de-poder': [
+    { t: 'Elegir solo por los vatios:', d: 'la calidad real, los condensadores y la certificación importan más que el número de la etiqueta. Una fuente genérica de 800 W puede ser peor que una buena de 650 W.' },
+    { t: 'No revisar los conectores:', d: 'las tarjetas recientes usan el conector 12V-2×6. Si tu fuente no lo trae nativo, tendrías que usar adaptadores.' },
+    { t: 'Quedarse justo:', d: 'deja un margen de unos 150 W sobre el consumo total. Una fuente exigida al máximo hace más ruido y se desgasta antes.' },
+    { t: 'Ignorar la certificación 80 PLUS:', d: 'indica la eficiencia. Una Bronze o superior desperdicia menos energía, genera menos calor y suele ser más fiable.' },
+    { t: 'Olvidar el formato y el cableado:', d: 'comprueba si tu gabinete usa ATX o SFX. Un modelo modular facilita el orden de los cables y el flujo de aire.' },
+  ],
+  'refrigeracion-liquida': [
+    { t: 'Comprar un radiador que no cabe:', d: 'los gabinetes admiten 240, 280 o 360 mm en posiciones concretas (frontal o superior). Revisa la ficha del gabinete.' },
+    { t: 'No verificar el socket:', d: 'comprueba que el kit incluya el soporte para tu socket (AM5, LGA1700, LGA1851…). Algunos requieren adaptador aparte.' },
+    { t: 'Creer que la líquida siempre enfría más:', d: 'un buen disipador de aire de doble torre puede igualar a una AIO de 240 mm. La líquida gana en espacio y estética.' },
+    { t: 'Instalarla con la orientación equivocada:', d: 'la bomba debe quedar por debajo del radiador para evitar burbujas de aire. Revisa el manual antes de montarla.' },
+    { t: 'Descuidar la ventilación del gabinete:', d: 'sin entrada y salida de aire, el radiador recircula aire caliente. Define bien qué ventiladores empujan y cuáles extraen.' },
+  ],
+  'refrigeracion-normal': [
+    { t: 'No medir la altura del disipador:', d: 'si supera lo que admite tu gabinete, el panel lateral no cierra. Compara la altura máxima de ambos.' },
+    { t: 'Chocar con la RAM:', d: 'los disipadores grandes pueden tapar los slots de memoria o no dejar espacio a módulos con disipador alto.' },
+    { t: 'No comprobar el TDP que soporta:', d: 'un disipador básico con un procesador de gama alta se queda corto y el CPU baja su rendimiento por temperatura.' },
+    { t: 'Olvidar la pasta térmica o el plástico protector:', d: 'retira el film de la base y aplica pasta en la cantidad justa. Un error común es dejar el plástico puesto.' },
+    { t: 'Ignorar el flujo de aire del gabinete:', d: 'un buen disipador no basta si el gabinete no renueva el aire. Combina entrada frontal y salida trasera o superior.' },
+  ],
+  'gabinetes-gamer': [
+    { t: 'Elegirlo solo por la estética:', d: 'un frente de vidrio sin malla ahoga los componentes. Prioriza el flujo de aire y los ventiladores incluidos.' },
+    { t: 'No verificar el tamaño de la placa:', d: 'ATX, Micro-ATX y Mini-ITX no caben en cualquier gabinete. Confirma el formato antes de elegir.' },
+    { t: 'Olvidar la longitud de la GPU y la altura del cooler:', d: 'cada gabinete publica sus medidas máximas. Compáralas con las de tu tarjeta y tu disipador.' },
+    { t: 'No planear el radiador:', d: 'si quieres refrigeración líquida, confirma qué tamaño admite y en qué posición (frontal, superior o trasera).' },
+    { t: 'Ignorar los puertos y la gestión de cables:', d: 'revisa que tenga USB-C frontal si tu placa lo ofrece y espacio detrás de la bandeja para ordenar los cables.' },
+  ],
+  teclados: [
+    { t: 'Elegir el switch sin probarlo:', d: 'lineal, táctil o clicky cambian mucho la sensación y el ruido. Si compartes espacio, un lineal o táctil suele ser más discreto.' },
+    { t: 'Equivocarse de tamaño:', d: 'un 100 % trae teclado numérico; un TKL o 75 % libera espacio para el mouse. Piensa cuánto lo usas.' },
+    { t: 'Confundir mecánico con membrana con luces:', d: 'algunos teclados "gamer" son de membrana con RGB. Verifica el tipo de switch en la ficha.' },
+    { t: 'Ignorar la conexión inalámbrica:', d: 'el 2,4 GHz tiene muy baja latencia; el Bluetooth es cómodo pero puede añadir retraso en juegos competitivos.' },
+    { t: 'Olvidar la distribución de teclas:', d: 'si necesitas la ñ y los acentos, busca distribución en español (ISO). Una ANSI en inglés no los trae grabados.' },
+  ],
+  mouse: [
+    { t: 'Pensar que más DPI es mejor:', d: 'un DPI muy alto no mejora la puntería. Importa más la precisión del sensor que la cifra de la caja.' },
+    { t: 'Ignorar el tamaño de tu mano y tu agarre:', d: 'palm, claw o fingertip piden formas distintas. Un mouse que no encaja cansa la mano.' },
+    { t: 'No considerar el peso:', d: 'los ligeros (60–80 g) favorecen la velocidad en FPS; los pesados dan más control en RTS y MMO.' },
+    { t: 'Descartar el inalámbrico por la latencia:', d: 'los modelos actuales en 2,4 GHz no tienen retraso perceptible. Solo vigila la batería.' },
+    { t: 'Olvidar la superficie:', d: 'un buen sensor rinde mejor sobre un mousepad adecuado. No gastes en el mouse y uses la mesa sin protección.' },
+  ],
+  audifonos: [
+    { t: 'Creer que el 7.1 virtual es mejor:', d: 'el sonido envolvente virtual es en buena parte marketing. Unos buenos audífonos estéreo posicionan bien los pasos.' },
+    { t: 'No revisar el micrófono:', d: 'si hablas en partida, importan la calidad y la cancelación de ruido. Uno desmontable o con boom ajustable suele ser mejor.' },
+    { t: 'Ignorar la conexión:', d: 'el jack 3,5 mm, el USB y el inalámbrico no funcionan igual en PC y consola. Confirma la compatibilidad con tu equipo.' },
+    { t: 'Descuidar la comodidad:', d: 'peso, presión y almohadillas deciden si aguantas varias horas. Un buen sonido incómodo no se usa.' },
+    { t: 'Comprar por graves exagerados:', d: 'demasiado bajo tapa los pasos y las voces. Busca un sonido equilibrado antes que el más potente.' },
+  ],
+  monitores: [
+    { t: 'Elegir la resolución sin pensar en la GPU:', d: '1440p y 4K exigen mucho más. Una tarjeta modesta no mueve juegos recientes en 4K con fluidez.' },
+    { t: 'Comprar Hz y no activarlos:', d: 'necesitas el cable y el puerto correctos (DisplayPort o HDMI adecuado) y activar la frecuencia en Windows.' },
+    { t: 'Fiarse del "1 ms":', d: 'el tiempo de respuesta publicado es optimista. Mira el tipo de panel (IPS, VA, TN) y reseñas independientes.' },
+    { t: 'Pagar por un HDR débil:', d: 'muchos monitores anuncian HDR sin brillo ni zonas de atenuación suficientes. Sin eso no aporta nada.' },
+    { t: 'Equivocarse con el tamaño:', d: '24" encaja con 1080p y 27" con 1440p. Un monitor grande con baja resolución se ve pixelado de cerca.' },
+  ],
+};
+
+export const erroresEn: ErroresData = {
+  'tarjetas-graficas': [
+    { t: 'Looking only at VRAM:', d: 'more gigabytes do not mean more performance. A slow 16 GB card can lose to a faster 12 GB one; check the chip first and the memory second.' },
+    { t: 'Forgetting the power supply:', d: 'every card asks for a minimum wattage and specific connectors (8-pin or 12V-2×6). With an undersized PSU the PC can shut off mid-game.' },
+    { t: 'Not measuring the case:', d: 'many cards are over 30 cm long and take up three slots. Check your case\'s maximum GPU length before buying.' },
+    { t: 'Pairing it with a CPU that holds it back:', d: 'a powerful GPU with an old low-core CPU cannot deliver all its frames (bottleneck).' },
+    { t: 'Paying for a resolution you do not use:', d: 'a 4K-class card with a 1080p 60 Hz monitor is wasted money. Match the card to your monitor.' },
+  ],
+  procesadores: [
+    { t: 'Ignoring the socket:', d: 'AM4, AM5, LGA1700 and LGA1851 are not interchangeable. The motherboard must have the same socket as the processor.' },
+    { t: 'Assuming a cooler is included:', d: 'many Ryzen X-series and Intel K-series chips are sold without a cooler. Add one to your budget.' },
+    { t: 'Paying for cores you will not use:', d: '6 to 8 cores are enough for gaming; the graphics card matters more. 12+ cores are for editing, rendering or compiling.' },
+    { t: 'Not checking compatible memory:', d: 'AM5 platforms only take DDR5; others take DDR4 or DDR5 depending on the board. Confirm before buying the RAM kit.' },
+    { t: 'Comparing only by GHz:', d: 'architecture, cache and generation matter more than clock speed. Two CPUs at the same GHz can perform very differently.' },
+  ],
+  'memoria-ram': [
+    { t: 'Buying the wrong type:', d: 'DDR4 and DDR5 are not compatible and do not fit the same slot. Check what your motherboard and processor require.' },
+    { t: 'Installing a single module:', d: 'two modules in dual channel give up to 30% more bandwidth. Buy 2 × 8 GB or 2 × 16 GB kits.' },
+    { t: 'Not enabling the XMP or EXPO profile:', d: 'if you skip it in the BIOS, your RAM runs at base speed and you waste what you paid for.' },
+    { t: 'Paying for RGB thinking it is faster:', d: 'lighting does not improve performance, it only raises the price. If looks do not matter to you, save there.' },
+    { t: 'Falling short on capacity:', d: '8 GB is no longer enough for recent games. 16 GB is the minimum and 32 GB makes sense if you stream or edit.' },
+  ],
+  ssd: [
+    { t: 'Mixing up SATA and NVMe:', d: 'both can come in M.2 form factor but use different interfaces. Check what your motherboard accepts before buying.' },
+    { t: 'Looking only at peak read speed:', d: 'sustained writes, cache and endurance (TBW) matter just as much. A cheap cacheless SSD slows down as it fills.' },
+    { t: 'Expecting more FPS:', d: 'a fast SSD shortens load times and reduces texture stutter, but it does not raise the game\'s frame rate.' },
+    { t: 'Forgetting the heatsink:', d: 'PCIe 4.0 and 5.0 NVMe drives get hot and throttle without a heatsink or a PC case with good airflow.' },
+    { t: 'Buying just enough capacity:', d: 'current games exceed 100 GB. 1 TB is a good starting point, and a nearly full SSD performs worse.' },
+  ],
+  'fuentes-de-poder': [
+    { t: 'Choosing by wattage alone:', d: 'real quality, capacitors and certification matter more than the number on the label. A generic 800 W unit can be worse than a good 650 W one.' },
+    { t: 'Not checking connectors:', d: 'recent cards use the 12V-2×6 connector. If your PSU lacks it natively you will need adapters.' },
+    { t: 'Cutting it too close:', d: 'leave about 150 W of headroom over total consumption. A PSU pushed to its limit is noisier and wears out sooner.' },
+    { t: 'Ignoring the 80 PLUS rating:', d: 'it shows efficiency. Bronze or better wastes less energy, runs cooler and is usually more reliable.' },
+    { t: 'Forgetting form factor and cabling:', d: 'check whether your case uses ATX or SFX. A modular unit makes cable routing and airflow easier.' },
+  ],
+  'refrigeracion-liquida': [
+    { t: 'Buying a radiator that does not fit:', d: 'cases support 240, 280 or 360 mm only in specific spots (front or top). Check your case specs.' },
+    { t: 'Not verifying the socket:', d: 'make sure the kit includes the bracket for your socket (AM5, LGA1700, LGA1851…). Some need a separate adapter.' },
+    { t: 'Assuming liquid always cools better:', d: 'a good dual-tower air cooler can match a 240 mm AIO. Liquid wins on space and looks.' },
+    { t: 'Installing it in the wrong orientation:', d: 'the pump should sit below the radiator to avoid air bubbles. Read the manual before mounting.' },
+    { t: 'Neglecting case airflow:', d: 'without intake and exhaust, the radiator recirculates hot air. Plan which fans push and which pull.' },
+  ],
+  'refrigeracion-normal': [
+    { t: 'Not measuring the cooler height:', d: 'if it is taller than your case supports, the side panel will not close. Compare both maximum heights.' },
+    { t: 'Clashing with the RAM:', d: 'large coolers can cover memory slots or leave no room for tall-heatsink modules.' },
+    { t: 'Not checking the supported TDP:', d: 'a basic cooler on a high-end processor falls short and the CPU throttles under heat.' },
+    { t: 'Forgetting thermal paste or the protective film:', d: 'remove the plastic film from the base and apply the right amount of paste. Leaving the plastic on is a common mistake.' },
+    { t: 'Ignoring case airflow:', d: 'a good cooler is not enough if the case does not exchange air. Combine front intake with rear or top exhaust.' },
+  ],
+  'gabinetes-gamer': [
+    { t: 'Choosing on looks alone:', d: 'a glass front without mesh suffocates your parts. Prioritize airflow and the fans included.' },
+    { t: 'Not checking motherboard size:', d: 'ATX, Micro-ATX and Mini-ITX do not fit every case. Confirm the form factor before choosing.' },
+    { t: 'Forgetting GPU length and cooler height:', d: 'every case publishes its maximum clearances. Compare them with your card and cooler.' },
+    { t: 'Not planning for the radiator:', d: 'if you want liquid cooling, confirm what size the case supports and where (front, top or rear).' },
+    { t: 'Ignoring ports and cable management:', d: 'check for a front USB-C if your board has the header, and space behind the tray to route cables.' },
+  ],
+  teclados: [
+    { t: 'Picking a switch without trying it:', d: 'linear, tactile and clicky change feel and noise a lot. If you share a room, linear or tactile is usually quieter.' },
+    { t: 'Getting the size wrong:', d: 'a full-size has a numpad; a TKL or 75% frees up room for the mouse. Think about how much you use it.' },
+    { t: 'Confusing mechanical with RGB membrane:', d: 'some "gaming" keyboards are membrane with RGB. Check the switch type on the spec sheet.' },
+    { t: 'Ignoring the wireless connection:', d: '2.4 GHz has very low latency; Bluetooth is convenient but can add delay in competitive games.' },
+    { t: 'Overlooking the key layout:', d: 'if you need accented characters, look for the right layout (ISO). An ANSI layout may not print them.' },
+  ],
+  mouse: [
+    { t: 'Thinking more DPI is better:', d: 'very high DPI does not improve aim. Sensor accuracy matters more than the number on the box.' },
+    { t: 'Ignoring hand size and grip:', d: 'palm, claw and fingertip grips need different shapes. A mouse that does not fit tires your hand.' },
+    { t: 'Not considering weight:', d: 'lightweight models (60–80 g) favor speed in FPS games; heavier ones give more control in RTS and MMO.' },
+    { t: 'Ruling out wireless over latency:', d: 'current 2.4 GHz models have no noticeable delay. Just keep an eye on battery life.' },
+    { t: 'Forgetting the surface:', d: 'a good sensor performs best on a proper mousepad. Do not spend on the mouse and use a bare desk.' },
+  ],
+  audifonos: [
+    { t: 'Believing virtual 7.1 is better:', d: 'virtual surround is largely marketing. Good stereo headsets position footsteps very well.' },
+    { t: 'Not checking the microphone:', d: 'if you talk in-game, quality and noise cancellation matter. A detachable or adjustable boom is usually better.' },
+    { t: 'Ignoring the connection:', d: '3.5 mm, USB and wireless do not behave the same on PC and console. Confirm compatibility with your device.' },
+    { t: 'Neglecting comfort:', d: 'weight, clamping force and ear pads decide whether you last for hours. Great sound that hurts does not get used.' },
+    { t: 'Buying for exaggerated bass:', d: 'too much low end masks footsteps and voices. Look for balanced sound over the loudest one.' },
+  ],
+  monitores: [
+    { t: 'Picking resolution without thinking of the GPU:', d: '1440p and 4K demand far more. A modest card will not run recent games smoothly at 4K.' },
+    { t: 'Buying Hz and never enabling them:', d: 'you need the right cable and port (DisplayPort or a suitable HDMI) and to set the refresh rate in Windows.' },
+    { t: 'Trusting the "1 ms" claim:', d: 'the advertised response time is optimistic. Look at the panel type (IPS, VA, TN) and independent reviews.' },
+    { t: 'Paying for weak HDR:', d: 'many monitors advertise HDR without enough brightness or local dimming. Without that it adds nothing.' },
+    { t: 'Getting the size wrong:', d: '24" suits 1080p and 27" suits 1440p. A large monitor at low resolution looks pixelated up close.' },
+  ],
+};

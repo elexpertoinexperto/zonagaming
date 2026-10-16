@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "La mejor refrigeración líquida para PC gaming: AIOs 240 mm y 360 mm. Sistema de refrigeración de PC con enfriamiento líquido silencioso al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="refrigeracion-liquida" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="refrigeracion-liquida" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu refrigeración líquida para PC?</h2>
     <p>La refrigeración líquida para PC es la opción premium para mantener temperaturas bajas con el mínimo ruido y un look limpio. Ya sea que busques un sistema de refrigeración de PC básico o enfriamiento líquido para overclocking, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los sistemas de refrigeración de PC de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="refrigeracion-liquida" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-refrigeracion-liquida"
     title="Refrigeración Líquida más vendida"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-liquida']} />
+  <CategoriasRelacionadas catKey="refrigeracion-liquida" lang="es" />
+  <EnlazadoInterno cat="refrigeracion-liquida" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-liquida']} />
+  </EnlazadoInterno>
 </SiteLayout>

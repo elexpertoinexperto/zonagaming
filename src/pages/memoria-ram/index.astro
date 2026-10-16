@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "La mejor Memoria RAM para PC gaming: DDR4 y DDR5 de alto rendimiento. Tarjeta RAM con velocidad real al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="memoria-ram" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="memoria-ram" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu memoria RAM para gaming?</h2>
     <p>La memoria RAM determina la fluidez general de tu PC y los tiempos de carga en juego. Ya sea que busques una tarjeta RAM económica o un módulo DDR5 de alta velocidad, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Toda la memoria RAM de nuestro catálogo está disponible con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="memoria-ram" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-memoria-ram"
     title="Memoria RAM más vendida"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['memoria-ram']} />
+  <CategoriasRelacionadas catKey="memoria-ram" lang="es" />
+  <EnlazadoInterno cat="memoria-ram" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['memoria-ram']} />
+  </EnlazadoInterno>
 </SiteLayout>

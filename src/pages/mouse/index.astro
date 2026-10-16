@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores mouse gamer ópticos y ergonómicos para gaming competitivo. Ratón gamer con sensor de precisión al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="mouse" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="mouse" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu mouse gamer?</h2>
     <p>El mouse gamer correcto marca la diferencia en precisión, velocidad y comodidad durante horas de juego. Ya sea que busques un ratón gamer ligero para FPS o uno ergonómico para sesiones largas, estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los mouse gamer de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="mouse" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-mouse"
     title="Mouse Gamer más vendidos"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['mouse']} />
+  <CategoriasRelacionadas catKey="mouse" lang="es" />
+  <EnlazadoInterno cat="mouse" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['mouse']} />
+  </EnlazadoInterno>
 </SiteLayout>

@@ -8,6 +8,9 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import ErroresComunes from '../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
 const metaDescription = "Los mejores refrigeración cooler para PC: disipadores de torre y sistemas de enfriamiento por aire al mejor precio con envío Amazon.";
@@ -61,7 +64,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija="refrigeracion-normal" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="refrigeracion-normal" lang="es">
+    <section class="category-buying-guide">
     <h2>¿Cómo elegir tu refrigeración cooler para PC?</h2>
     <p>Un buen sistema de enfriamiento por aire mantiene tu CPU a temperatura óptima, reduce el ruido y alarga la vida de tus componentes. Estos son los factores clave:</p>
     <ul>
@@ -73,11 +77,16 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>Todos los sistemas de refrigeración de nuestro catálogo están disponibles con envío directo desde Amazon, con garantía oficial y devoluciones sin complicaciones.</p>
   </section>
+    <ErroresComunes catKey="refrigeracion-normal" lang="es" />
+  </EnlazadoInterno>
 
   <BestSellers
     id="mas-vendidos-refrigeracion-normal"
     title="Refrigeración Cooler más vendida"
     products={bestSellerProducts}
   />
-  <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-normal']} />
+  <CategoriasRelacionadas catKey="refrigeracion-normal" lang="es" />
+  <EnlazadoInterno cat="refrigeracion-normal" lang="es">
+    <FAQ title="Preguntas Frecuentes" items={faqEs['refrigeracion-normal']} />
+  </EnlazadoInterno>
 </SiteLayout>

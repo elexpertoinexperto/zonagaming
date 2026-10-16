@@ -6,6 +6,9 @@ import ProductCard from '../../../components/ProductCard.astro';
 import BestSellers from '../../../components/BestSellers.astro';
 import Comparador from '../../../components/Comparador.astro';
 import FAQ from '../../../components/FAQ.astro';
+import ErroresComunes from '../../../components/ErroresComunes.astro';
+import CategoriasRelacionadas from '../../../components/CategoriasRelacionadas.astro';
+import EnlazadoInterno from '../../../components/EnlazadoInterno.astro';
 import { faqEn } from '../../../data/faq';
 import productos from '../../../data/productos-en.json';
 import { CATS_EN } from '../../../i18n/en';
@@ -56,7 +59,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 
   <Comparador categoriaFija={catKey} lang="en" />
 
-  <section class="category-buying-guide">
+  <EnlazadoInterno cat="procesadores" lang="en">
+    <section class="category-buying-guide">
     <h2>{cat.guide.title}</h2>
     <p>{cat.guide.intro}</p>
     <ul>
@@ -66,6 +70,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     </ul>
     <p>{cat.guide.outro}</p>
   </section>
+    <ErroresComunes catKey="procesadores" lang="en" />
+  </EnlazadoInterno>
 
   <BestSellers
     id={`best-selling-${categoria}`}
@@ -73,5 +79,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     title={cat.bsTitle}
     products={bestSellerProducts}
   />
-  <FAQ title="Frequently Asked Questions" items={faqEn['procesadores']} />
+  <CategoriasRelacionadas catKey="procesadores" lang="en" />
+  <EnlazadoInterno cat="procesadores" lang="en">
+    <FAQ title="Frequently Asked Questions" items={faqEn['procesadores']} />
+  </EnlazadoInterno>
 </SiteLayout>

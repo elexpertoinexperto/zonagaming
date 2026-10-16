@@ -1,0 +1,82 @@
+---
+// Enlazado interno automático entre categorías, DENTRO del texto de las guías y las preguntas frecuentes.
+// Envuelve un bloque ya renderizado y, en sus párrafos, listas y respuestas, enlaza la PRIMERA mención de cada
+// otra categoría (no la propia; no en títulos, negritas ni enlaces existentes; máximo `max` por bloque).
+//   <EnlazadoInterno cat="mouse" lang="es"> …bloque… </EnlazadoInterno>
+import { SLUG_EN } from '../i18n/en';
+
+const { cat, lang = 'es', max = 3 } = Astro.props as { cat: string; lang?: 'es' | 'en'; max?: number };
+const isEn = lang === 'en';
+
+const TERMINOS_ES: Record<string, string[]> = {
+  'tarjetas-graficas': ['tarjetas? gráficas?', 'GPUs?', 'placas? de video'],
+  procesadores: ['procesadores?', 'CPUs?'],
+  'memoria-ram': ['memorias? RAM', 'RAM'],
+  ssd: ['SSDs?', 'NVMe'],
+  'fuentes-de-poder': ['fuentes? de poder', 'fuentes? de alimentación', 'PSUs?'],
+  'refrigeracion-liquida': ['refrigeración líquida', 'refrigeraciones líquidas', 'enfriamiento líquido', 'AIOs?'],
+  'refrigeracion-normal': ['refrigeración por aire', 'disipadores? de aire', 'disipadores?'],
+  'gabinetes-gamer': ['gabinetes?'],
+  teclados: ['teclados?'],
+  mouse: ['mouse'],
+  audifonos: ['audífonos', 'auriculares'],
+  monitores: ['monitores?'],
+};
+const TERMINOS_EN: Record<string, string[]> = {
+  'tarjetas-graficas': ['graphics cards?', 'video cards?', 'GPUs?'],
+  procesadores: ['processors?', 'CPUs?'],
+  'memoria-ram': ['RAM', 'memory kits?'],
+  ssd: ['SSDs?', 'NVMe'],
+  'fuentes-de-poder': ['power suppl(?:y|ies)', 'PSUs?'],
+  'refrigeracion-liquida': ['liquid coolers?', 'liquid cooling', 'AIOs?'],
+  'refrigeracion-normal': ['air coolers?', 'air cooling', 'CPU coolers?', 'heatsinks?'],
+  'gabinetes-gamer': ['PC cases?', 'gaming cases?', 'computer cases?'],
+  teclados: ['keyboards?'],
+  mouse: ['mouse', 'mice'],
+  audifonos: ['headsets?', 'headphones?'],
+  monitores: ['monitors?'],
+};
+const terminos = isEn ? TERMINOS_EN : TERMINOS_ES;
+const href = (c: string) => (isEn ? `/en/${SLUG_EN[c]}/` : `/${c}/`);
+
+// Una sola expresión con todos los términos (los más largos primero) y su categoría
+const lista: { cat: string; re: RegExp }[] = [];
+for (const [c, ts] of Object.entries(terminos)) {
+  if (c === cat) continue;
+  for (const t of ts) lista.push({ cat: c, re: new RegExp('^(?:' + t + ')$', 'iu') });
+}
+const alternativas = Object.entries(terminos)
+  .filter(([c]) => c !== cat)
+  .flatMap(([, ts]) => ts)
+  .sort((a, b) => b.length - a.length);
+const L = '[\\p{L}\\p{N}]';
+const buscador = new RegExp(`(?<!${L})(?:${alternativas.join('|')})(?!${L})`, 'giu');
+
+const html = await Astro.slots.render('default');
+const usadas = new Set<string>();
+let enlazadas = 0;
+
+// Partimos el HTML en etiquetas y texto; solo se toca el texto, y solo fuera de títulos, negritas y enlaces
+const partes = html.split(/(<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>|<!--[\s\S]*?-->|<[^>]+>)/);
+let bloqueado = 0; // >0 dentro de h1-h6, dt, strong, b, a, button, label, summary
+const BLOQ = /^(h[1-6]|dt|strong|b|a|button|label|summary|th)$/i;
+const out = partes.map((p) => {
+  if (p.startsWith('<')) {
+    const m = p.match(/^<(\/?)([a-zA-Z][a-zA-Z0-9]*)/);
+    if (m && BLOQ.test(m[2]) && !p.endsWith('/>')) bloqueado += m[1] ? -1 : 1;
+    if (bloqueado < 0) bloqueado = 0;
+    return p;
+  }
+  if (bloqueado > 0 || enlazadas >= max || !p.trim()) return p;
+  return p.replace(buscador, (txt) => {
+    if (enlazadas >= max) return txt;
+    const regla = lista.find((r) => r.re.test(txt));
+    if (!regla || usadas.has(regla.cat)) return txt;
+    usadas.add(regla.cat);
+    enlazadas++;
+    return `<a class="enlace-interno" href="${href(regla.cat)}">${txt}</a>`;
+  });
+}).join('');
+---
+
+<Fragment set:html={out} />

@@ -1,0 +1,32 @@
+---
+// «Errores comunes al comprar»: va debajo de la guía de compra de cada categoría (ES y EN).
+// Contenido en src/data/errores-comunes.ts
+import { erroresEs, erroresEn } from '../data/errores-comunes';
+import { NOMBRES } from '../lib/filtros.mjs';
+
+const { catKey, lang = 'es' } = Astro.props as { catKey: string; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const items = (isEn ? erroresEn : erroresEs)[catKey] ?? [];
+const nombres = (NOMBRES as any)[catKey];
+const title = isEn ? `Common mistakes when buying ${nombres.enUno}` : `Errores comunes al comprar ${nombres.esUno}`;
+const intro = isEn
+  ? 'Avoid these slips before you add anything to your cart:'
+  : 'Evita estos descuidos antes de añadir algo al carrito:';
+---
+
+{items.length > 0 && (
+  <section class="category-buying-guide errores-comunes">
+    <h2>{title}</h2>
+    <p>{intro}</p>
+    <ul>
+      {items.map((e) => (
+        <li><strong>{e.t}</strong> {e.d}</li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .errores-comunes { margin-top: 24px; }
+  .errores-comunes :global(li::before) { background: #ff9900; }
+</style>

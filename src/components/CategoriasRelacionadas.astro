@@ -1,0 +1,102 @@
+---
+// «Categorías relacionadas»: 3 enlaces a categorías que se compran junto a la actual, con el porqué.
+// Va justo debajo de «más vendidos». Contenido en src/data/relaciones.ts
+import CategoryIcon from './CategoryIcon.astro';
+import { RELACIONES } from '../data/relaciones';
+import { SLUG_EN, CATS_EN } from '../i18n/en';
+import { NOMBRES } from '../lib/filtros.mjs';
+
+const { catKey, lang = 'es' } = Astro.props as { catKey: string; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+
+const ICONOS: Record<string, string> = {
+  'tarjetas-graficas': 'gpu', procesadores: 'cpu', 'memoria-ram': 'ram', ssd: 'ssd', 'fuentes-de-poder': 'psu',
+  'refrigeracion-liquida': 'aio', 'refrigeracion-normal': 'fan', 'gabinetes-gamer': 'box', teclados: 'keyboard',
+  mouse: 'mouse', audifonos: 'audio', monitores: 'monitor',
+};
+const nombres = (NOMBRES as any)[catKey];
+const items = (RELACIONES[catKey] ?? []).map((r) => {
+  const n = (NOMBRES as any)[r.cat];
+  return {
+    href: isEn ? `/en/${SLUG_EN[r.cat]}/` : `/${r.cat}/`,
+    nombre: isEn ? CATS_EN[r.cat].label : n.esTit,
+    texto: isEn ? r.en : r.es,
+    icono: ICONOS[r.cat],
+  };
+});
+const title = isEn ? 'Related categories' : 'Categorías relacionadas';
+const intro = isEn
+  ? `Components that go hand in hand with ${nombres.en}:`
+  : `Componentes que van de la mano con ${nombres.es}:`;
+const ver = isEn ? 'View' : 'Ver';
+---
+
+{items.length > 0 && (
+  <section class="related-categories" aria-labelledby="related-title">
+    <div class="section-title section-title-stacked">
+      <div>
+        <h2 id="related-title">{title}</h2>
+        <p class="related-intro">{intro}</p>
+      </div>
+    </div>
+    <div class="related-grid">
+      {items.map((r) => (
+        <a class="related-card" href={r.href}>
+          <span class="related-icon"><CategoryIcon name={r.icono} /></span>
+          <span class="related-body">
+            <strong>{r.nombre}</strong>
+            <span>{r.texto}</span>
+          </span>
+          <span class="related-go">{ver} →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-categories { margin-top: 64px; }
+  .related-intro { margin: 6px 0 0; color: var(--text-muted); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 22px;
+  }
+  .related-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text);
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  }
+  .related-card:hover,
+  .related-card:focus-visible {
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
+    transform: translateY(-2px);
+  }
+  .related-icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 1px solid var(--accent-line);
+    background: rgba(124, 255, 203, 0.08);
+    color: var(--accent);
+  }
+  .related-icon :global(svg) { width: 22px; height: 22px; }
+  .related-body { display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .related-body strong { font-size: 1.05rem; }
+  .related-body span { color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; }
+  .related-go { color: var(--accent); font-size: 0.88rem; font-weight: 600; }
+  @media (max-width: 860px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
