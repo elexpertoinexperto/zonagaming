@@ -1103,3 +1103,58 @@ footer {
   border-radius: 2px;
   pointer-events: none;
 }
+
+/* Hover etéreo: transiciones largas y suaves; la luz se expande y se apaga despacio (--lit se anima como número) */
+@property --lit {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.category-card,
+.product-card,
+.related-card {
+  --lit: 0;
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    --lit 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card::before,
+.product-card::before,
+.related-card::before,
+.category-card::after,
+.product-card::after,
+.related-card::after {
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card::before,
+.product-card::before,
+.related-card::before {
+  background: radial-gradient(calc(150px + 190px * var(--lit)) circle at var(--mx) var(--my), rgba(124, 255, 203, 0.085), rgba(27, 183, 255, 0.03) 45%, transparent 72%);
+}
+
+.category-card::after,
+.product-card::after,
+.related-card::after {
+  background: radial-gradient(calc(110px + 150px * var(--lit)) circle at var(--mx) var(--my), rgba(124, 255, 203, 0.8), rgba(27, 183, 255, 0.38) 42%, transparent 74%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .category-card:hover,
+  .product-card:hover,
+  .related-card:hover {
+    --lit: 1;
+  }
+}
+
+.category-card .category-icon {
+  transition: background-color 0.8s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.category-card:hover .category-icon {
+  box-shadow: 0 0 22px rgba(124, 255, 203, 0.22);
+}

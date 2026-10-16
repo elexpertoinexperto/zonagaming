@@ -7,21 +7,40 @@ const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 // ── Spotlight + Border Glow ─────────────────────────────────────────────
+// La luz no salta al cursor: lo persigue con inercia (suavizado exponencial) y nace en el punto de entrada.
 if (fine && !reduce) {
   const SEL = '.category-card, .product-card, .related-card';
+  type S = { el: HTMLElement; tx: number; ty: number; cx: number; cy: number };
+  const estado = new WeakMap<HTMLElement, S>();
+  const activas = new Set<S>();
   let raf = 0;
-  let ev: PointerEvent | null = null;
+  let prev = 0;
+
+  const tick = (now: number) => {
+    const dt = prev ? Math.min(now - prev, 50) : 16;
+    prev = now;
+    const k = 1 - Math.exp(-dt / 110); // ~110 ms de "arrastre"
+    for (const s of activas) {
+      s.cx += (s.tx - s.cx) * k;
+      s.cy += (s.ty - s.cy) * k;
+      s.el.style.setProperty('--mx', `${s.cx.toFixed(1)}px`);
+      s.el.style.setProperty('--my', `${s.cy.toFixed(1)}px`);
+      if (!s.el.matches(':hover') && Math.hypot(s.tx - s.cx, s.ty - s.cy) < 0.5) activas.delete(s);
+    }
+    if (activas.size) raf = requestAnimationFrame(tick);
+    else { raf = 0; prev = 0; }
+  };
+
   document.addEventListener('pointermove', (e) => {
-    ev = e;
-    if (raf) return;
-    raf = requestAnimationFrame(() => {
-      raf = 0;
-      const card = (ev?.target as Element | null)?.closest?.(SEL) as HTMLElement | null;
-      if (!card || !ev) return;
-      const r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${ev.clientX - r.left}px`);
-      card.style.setProperty('--my', `${ev.clientY - r.top}px`);
-    });
+    const card = (e.target as Element | null)?.closest?.(SEL) as HTMLElement | null;
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    const x = e.clientX - r.left, y = e.clientY - r.top;
+    let s = estado.get(card);
+    if (!s) { s = { el: card, tx: x, ty: y, cx: x, cy: y }; estado.set(card, s); }
+    if (!activas.has(s)) { s.cx = x; s.cy = y; activas.add(s); } // al entrar, la luz nace bajo el cursor
+    s.tx = x; s.ty = y;
+    if (!raf) raf = requestAnimationFrame(tick);
   }, { passive: true });
 }
 
