@@ -986,3 +986,120 @@ footer {
   .product-grid,
   .best-sellers .product-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Efectos ligeros (sin librerías; ver src/scripts/fx.ts) ─────────────────
+   Spotlight + Border Glow: la luz sigue al cursor dentro de la tarjeta (--mx / --my).
+   Glare: brillo diagonal sobre la foto del producto. Star Border: aro de luz en el botón principal.
+   Chispas de clic. Todo en la paleta de la marca y apagado con prefers-reduced-motion. */
+.category-card,
+.product-card,
+.related-card {
+  position: relative;
+  --mx: 50%;
+  --my: 0%;
+}
+
+.category-card::before,
+.product-card::before,
+.related-card::before,
+.category-card::after,
+.product-card::after,
+.related-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+}
+
+/* Spotlight: velo de luz menta bajo el cursor */
+.category-card::before,
+.product-card::before,
+.related-card::before {
+  background: radial-gradient(260px circle at var(--mx) var(--my), rgba(124, 255, 203, 0.1), transparent 65%);
+}
+
+/* Border Glow: solo se ilumina el borde cerca del cursor */
+.category-card::after,
+.product-card::after,
+.related-card::after {
+  inset: -1px;
+  padding: 1px;
+  background: radial-gradient(200px circle at var(--mx) var(--my), rgba(124, 255, 203, 0.85), rgba(27, 183, 255, 0.4) 45%, transparent 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .category-card:hover::before,
+  .product-card:hover::before,
+  .related-card:hover::before,
+  .category-card:hover::after,
+  .product-card:hover::after,
+  .related-card:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Glare Hover: un destello cruza la foto del producto */
+.product-card-image {
+  position: relative;
+}
+
+.product-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 35%, rgba(230, 255, 246, 0.16) 50%, transparent 65%);
+  transform: translateX(-130%);
+}
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .product-card:hover .product-card-image::after {
+    transform: translateX(130%);
+    transition: transform 0.8s var(--ease);
+  }
+}
+
+/* Star Border: aro de luz que recorre el borde del botón principal (uno por página) */
+@property --sb-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.btn-star {
+  position: relative;
+  isolation: isolate;
+}
+
+.btn-star::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(from var(--sb-angle), transparent 0 68%, #1bb7ff 80%, #7cffcb 90%, #e6fff6 96%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-star::before { animation: sb-spin 3.4s linear infinite; }
+}
+
+@keyframes sb-spin {
+  to { --sb-angle: 360deg; }
+}
+
+/* Chispas de clic */
+.fx-spark {
+  position: fixed;
+  z-index: 9999;
+  width: 2px;
+  height: 9px;
+  border-radius: 2px;
+  pointer-events: none;
+}

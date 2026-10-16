@@ -52,12 +52,12 @@ const t = isEn
     <h2>{t.title}</h2>
     <p>{t.text}</p>
     <div class="hv-actions">
-      <a class="btn" href={t.href}>{t.cta}</a>
+      <a class="btn btn-star" href={t.href}>{t.cta}</a>
       <a class="btn-secondary" href={t.href2}>{t.cta2}</a>
     </div>
     <ul class="hv-stats">
-      <li><strong>{totalJuegos}</strong> {t.s1}</li>
-      <li><strong>{totalComponentes}</strong> {t.s2}</li>
+      <li><strong data-countup>{totalJuegos}</strong> {t.s1}</li>
+      <li><strong data-countup>{totalComponentes}</strong> {t.s2}</li>
     </ul>
   </div>
   <span class="hv-hint" aria-hidden="true">{t.hint}</span>
@@ -351,7 +351,20 @@ const t = isEn
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
   }
+  .hv-kicker::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 30%, rgba(230, 255, 246, 0.35) 50%, transparent 70%);
+    transform: translateX(-120%);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hv-kicker::after { animation: hv-shine 5s ease-in-out 1s infinite; }
+  }
+  @keyframes hv-shine { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
   .hv-content h2 { margin: 16px 0 12px; font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.12; color: var(--text); }
   .hv-content p { margin: 0 0 24px; color: var(--text-muted); line-height: 1.65; }
   .hv-actions { display: flex; flex-wrap: wrap; gap: 12px; }
