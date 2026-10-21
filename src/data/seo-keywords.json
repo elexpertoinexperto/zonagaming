@@ -1,0 +1,2476 @@
+{
+ "/audifonos/con-bluetooth/": {
+  "kw": "audífonos gamer bluetooth",
+  "vol": 50,
+  "h1": "Audífonos Gamer Bluetooth",
+  "sec": [
+   "diadema gamer bluetooth"
+  ],
+  "ter": []
+ },
+ "/audifonos/con-cable/": {
+  "kw": "audífonos gamer de cable",
+  "vol": 170,
+  "h1": "Audífonos Gamer de Cable",
+  "sec": [],
+  "ter": []
+ },
+ "/audifonos/inalambricos/": {
+  "kw": "audífonos gamer inalámbricos",
+  "vol": 590,
+  "h1": "Audífonos Gamer Inalámbricos",
+  "sec": [
+   "auriculares gamer inalámbrico"
+  ],
+  "ter": []
+ },
+ "/audifonos/razer/": {
+  "kw": "audífonos gamer razer",
+  "vol": 30,
+  "h1": "Audífonos Gamer Razer",
+  "sec": [],
+  "ter": []
+ },
+ "/en/air-cooling/arctic/": {
+  "kw": "ARCTIC air cooler",
+  "vol": 6600,
+  "h1": "ARCTIC Air Cooler",
+  "sec": [
+   "ARCTIC air fan",
+   "ARCTIC CPU cooler"
+  ],
+  "ter": []
+ },
+ "/en/air-cooling/cooler-master/": {
+  "kw": "cooler master CPU cooler",
+  "vol": 1600,
+  "h1": "Cooler Master CPU Cooler",
+  "sec": [],
+  "ter": [
+   "computer cooler master"
+  ]
+ },
+ "/en/air-cooling/dual-tower/": {
+  "kw": "dual tower CPU cooler",
+  "vol": 720,
+  "h1": "Dual Tower CPU Cooler",
+  "sec": [
+   "dual tower air cooler"
+  ],
+  "ter": []
+ },
+ "/en/air-cooling/noctua/": {
+  "kw": "noctua CPU cooler",
+  "vol": 2900,
+  "h1": "Noctua CPU Cooler",
+  "sec": [],
+  "ter": [
+   "noctua CPU fan",
+   "air cooler noctua"
+  ]
+ },
+ "/en/air-cooling/single-tower/": {
+  "kw": "best single tower CPU cooler",
+  "vol": 30,
+  "h1": "Best Single Tower CPU Cooler",
+  "sec": [],
+  "ter": []
+ },
+ "/en/air-cooling/thermalright/": {
+  "kw": "thermalright CPU cooler",
+  "vol": 880,
+  "h1": "Thermalright CPU Cooler",
+  "sec": [],
+  "ter": [
+   "thermalright air cooler",
+   "thermalright heatsink"
+  ]
+ },
+ "/en/air-cooling/white/": {
+  "kw": "white CPU fan & air coolers",
+  "vol": 480,
+  "h1": "White CPU Fan & Air Coolers",
+  "sec": [
+   "white CPU air cooler",
+   "best white CPU cooler"
+  ],
+  "ter": []
+ },
+ "/en/air-cooling/with-argb/": {
+  "kw": "ARGB CPU cooler",
+  "vol": 70,
+  "h1": "ARGB CPU Cooler",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/black/": {
+  "kw": "black PC case",
+  "vol": 1300,
+  "h1": "Black PC Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/cooler-master/": {
+  "kw": "cooler master cases",
+  "vol": 2900,
+  "h1": "Cooler Master Cases",
+  "sec": [
+   "case computer cooler master"
+  ],
+  "ter": []
+ },
+ "/en/gaming-cases/corsair/": {
+  "kw": "corsair case",
+  "vol": 6600,
+  "h1": "Corsair Case",
+  "sec": [
+   "corsair chassis",
+   "corsair computer cases"
+  ],
+  "ter": []
+ },
+ "/en/gaming-cases/high-airflow/": {
+  "kw": "high airflow case",
+  "vol": 590,
+  "h1": "High Airflow Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/lian-li/": {
+  "kw": "lian li case",
+  "vol": 12100,
+  "h1": "Lian Li Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/micro-atx/": {
+  "kw": "micro ATX case",
+  "vol": 12100,
+  "h1": "Micro ATX Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/nzxt/": {
+  "kw": "NZXT case",
+  "vol": 9900,
+  "h1": "NZXT Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-cases/under-100/": {
+  "kw": "best PC case under $100",
+  "vol": 110,
+  "h1": "Best PC Case under $100",
+  "sec": [
+   "best sub $100 PC case"
+  ],
+  "ter": [
+   "computer case under $100"
+  ]
+ },
+ "/en/gaming-cases/white/": {
+  "kw": "white PC case",
+  "vol": 4400,
+  "h1": "White PC Case",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-mice/for-mmo/": {
+  "kw": "MMO mice",
+  "vol": 6600,
+  "h1": "MMO Mice",
+  "sec": [
+   "MMO mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/glorious/": {
+  "kw": "glorious mouse",
+  "vol": 5400,
+  "h1": "Glorious Mouse",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-mice/logitech/": {
+  "kw": "logitech mice",
+  "vol": 74000,
+  "h1": "Logitech Mice",
+  "sec": [
+   "logitech mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/razer/": {
+  "kw": "razer mice",
+  "vol": 27100,
+  "h1": "Razer Mice",
+  "sec": [
+   "razer mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/steelseries/": {
+  "kw": "SteelSeries mice",
+  "vol": 6600,
+  "h1": "SteelSeries Mice",
+  "sec": [
+   "SteelSeries mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/ultralight/": {
+  "kw": "ultralight gaming mouse",
+  "vol": 880,
+  "h1": "Ultralight Gaming Mouse",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-mice/under-40/": {
+  "kw": "best gaming mice under $40",
+  "vol": 40,
+  "h1": "Best Gaming Mice under $40",
+  "sec": [
+   "best gaming mouse under $40",
+   "40 dollar mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/under-70/": {
+  "kw": "best gaming mouse under $70",
+  "vol": 20,
+  "h1": "Best Gaming Mouse under $70",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-mice/wired/": {
+  "kw": "wired gaming mouse",
+  "vol": 12100,
+  "h1": "Wired Gaming Mouse",
+  "sec": [
+   "wired mice"
+  ],
+  "ter": []
+ },
+ "/en/gaming-mice/wireless/": {
+  "kw": "wireless gaming mouse",
+  "vol": 49500,
+  "h1": "Wireless Gaming Mouse",
+  "sec": [
+   "wireless gaming mouse"
+  ],
+  "ter": []
+ },
+ "/en/gaming-monitors/180-hz/": {
+  "kw": "180Hz monitor",
+  "vol": 2900,
+  "h1": "180Hz Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/24-inch/": {
+  "kw": "24 inch monitor",
+  "vol": 22200,
+  "h1": "24 Inch Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/240-hz-or-higher/": {
+  "kw": "240Hz monitor",
+  "vol": 9900,
+  "h1": "240Hz Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/27-inch/": {
+  "kw": "27 inch monitor",
+  "vol": 22200,
+  "h1": "27 Inch Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/2k-qhd-1440p/": {
+  "kw": "1440p monitor",
+  "vol": 27100,
+  "h1": "1440p Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/34-inch/": {
+  "kw": "34 inch monitor",
+  "vol": 4400,
+  "h1": "34 Inch Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/4k/": {
+  "kw": "4K monitor",
+  "vol": 33100,
+  "h1": "4K Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/asus/": {
+  "kw": "ASUS monitor",
+  "vol": 27100,
+  "h1": "ASUS Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/curved/": {
+  "kw": "curved monitor",
+  "vol": 40500,
+  "h1": "Curved Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/full-hd-1080p/": {
+  "kw": "1080p monitor",
+  "vol": 14800,
+  "h1": "1080p Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/ips-panel/": {
+  "kw": "gaming monitor IPS",
+  "vol": 2400,
+  "h1": "Gaming Monitor IPS",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/koorui/": {
+  "kw": "KOORUI monitor",
+  "vol": 5400,
+  "h1": "KOORUI Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/lg/": {
+  "kw": "LG monitor",
+  "vol": 22200,
+  "h1": "LG Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/oled-panel/": {
+  "kw": "OLED PC monitor",
+  "vol": 74000,
+  "h1": "OLED PC Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/samsung/": {
+  "kw": "samsung monitor",
+  "vol": 27100,
+  "h1": "Samsung Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/ultrawide/": {
+  "kw": "ultrawide monitor",
+  "vol": 12100,
+  "h1": "Ultrawide Monitor",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/under-150/": {
+  "kw": "best monitor under $150",
+  "vol": 140,
+  "h1": "Best Monitor under $150",
+  "sec": [
+   "good monitors under $150"
+  ],
+  "ter": [
+   "150 dollar monitor"
+  ]
+ },
+ "/en/gaming-monitors/under-250/": {
+  "kw": "best monitor under $250",
+  "vol": 40,
+  "h1": "Best Monitor under $250",
+  "sec": [],
+  "ter": []
+ },
+ "/en/gaming-monitors/va-panel/": {
+  "kw": "monitor VA",
+  "vol": 1000,
+  "h1": "Monitor VA",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/amd-radeon/": {
+  "kw": "AMD radeon",
+  "vol": 14800,
+  "h1": "AMD Radeon: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/asrock/": {
+  "kw": "ASRock GPU",
+  "vol": 480,
+  "h1": "ASRock GPU",
+  "sec": [
+   "ASRock graphics card"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/asus/": {
+  "kw": "ASUS graphics card",
+  "vol": 2400,
+  "h1": "ASUS Graphics Card",
+  "sec": [
+   "ASUS GPU"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/for-1080p/": {
+  "kw": "1080p gaming graphics card",
+  "vol": 6600,
+  "h1": "1080p Gaming Graphics Card",
+  "sec": [
+   "1080p gaming GPU"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/for-1440p/": {
+  "kw": "1440p gaming graphics card",
+  "vol": 6600,
+  "h1": "1440p Gaming Graphics Card",
+  "sec": [
+   "1440p gaming GPU"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/for-4k/": {
+  "kw": "4K gaming graphics card",
+  "vol": 2900,
+  "h1": "4K Gaming Graphics Card",
+  "sec": [
+   "4K gaming GPU"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/gigabyte/": {
+  "kw": "gigabyte graphics card",
+  "vol": 1000,
+  "h1": "Gigabyte Graphics Card",
+  "sec": [
+   "gigabyte GPU"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/nvidia-geforce/": {
+  "kw": "NVIDIA GeForce",
+  "vol": 40500,
+  "h1": "NVIDIA GeForce: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/radeon-rx-9060-xt/": {
+  "kw": "radeon RX 9060 XT",
+  "vol": 4400,
+  "h1": "Radeon RX 9060 XT: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/radeon-rx-9070/": {
+  "kw": "radeon RX 9070",
+  "vol": 1900,
+  "h1": "Radeon RX 9070: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/rtx-5060/": {
+  "kw": "RTX 5060",
+  "vol": 60500,
+  "h1": "RTX 5060: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/rtx-5060-ti/": {
+  "kw": "RTX 5060 Ti",
+  "vol": 14800,
+  "h1": "RTX 5060 Ti: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/rtx-5070/": {
+  "kw": "RTX 5070",
+  "vol": 74000,
+  "h1": "RTX 5070: Graphics Cards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/graphics-cards/under-200/": {
+  "kw": "best GPU for $200",
+  "vol": 590,
+  "h1": "Best GPU for $200",
+  "sec": [
+   "best GPU under $200",
+   "best graphics card for $200",
+   "best graphics card under $200"
+  ],
+  "ter": [
+   "good graphics card under $200",
+   "best 200 dollar GPU"
+  ]
+ },
+ "/en/graphics-cards/under-400/": {
+  "kw": "best GPU under $400",
+  "vol": 320,
+  "h1": "Best GPU under $400",
+  "sec": [
+   "best graphics card under $400",
+   "best 400 dollar GPU"
+  ],
+  "ter": [
+   "best GPU for $400",
+   "best graphics card 400 dollars"
+  ]
+ },
+ "/en/graphics-cards/under-600/": {
+  "kw": "best GPU under $600",
+  "vol": 70,
+  "h1": "Best GPU under $600",
+  "sec": [
+   "best GPU for $600",
+   "600 dollar GPU"
+  ],
+  "ter": [
+   "best graphics card for $600 dollars",
+   "best graphics card under $600"
+  ]
+ },
+ "/en/graphics-cards/with-12-gb/": {
+  "kw": "12GB graphics card",
+  "vol": 720,
+  "h1": "12GB Graphics Card",
+  "sec": [],
+  "ter": [
+   "12GB GPU"
+  ]
+ },
+ "/en/graphics-cards/with-16-gb/": {
+  "kw": "16GB GPU",
+  "vol": 1300,
+  "h1": "16GB GPU",
+  "sec": [
+   "16GB graphics card"
+  ],
+  "ter": []
+ },
+ "/en/graphics-cards/with-6-gb/": {
+  "kw": "6GB graphics card",
+  "vol": 210,
+  "h1": "6GB Graphics Card",
+  "sec": [],
+  "ter": [
+   "6GB GPU"
+  ]
+ },
+ "/en/graphics-cards/with-8-gb/": {
+  "kw": "8GB graphics card",
+  "vol": 880,
+  "h1": "8GB Graphics Card",
+  "sec": [
+   "8GB GPU"
+  ],
+  "ter": []
+ },
+ "/en/headsets/corsair/": {
+  "kw": "corsair headset",
+  "vol": 9900,
+  "h1": "Corsair Headset",
+  "sec": [
+   "corsair gaming headphones"
+  ],
+  "ter": []
+ },
+ "/en/headsets/eksa/": {
+  "kw": "EKSA headset",
+  "vol": 590,
+  "h1": "EKSA Headset",
+  "sec": [
+   "EKSA headphones"
+  ],
+  "ter": []
+ },
+ "/en/headsets/hyperx/": {
+  "kw": "HyperX headset",
+  "vol": 18100,
+  "h1": "HyperX Headset",
+  "sec": [
+   "HyperX headphones"
+  ],
+  "ter": []
+ },
+ "/en/headsets/razer/": {
+  "kw": "razer headset",
+  "vol": 22200,
+  "h1": "Razer Headset",
+  "sec": [
+   "razer headphones"
+  ],
+  "ter": []
+ },
+ "/en/headsets/turtle-beach/": {
+  "kw": "turtle beach headset",
+  "vol": 40500,
+  "h1": "Turtle Beach Headset",
+  "sec": [
+   "turtle beach headphones"
+  ],
+  "ter": []
+ },
+ "/en/headsets/under-100/": {
+  "kw": "best headphone under $100",
+  "vol": 1300,
+  "h1": "Best Headphone under $100",
+  "sec": [
+   "best sub $100 gaming headset",
+   "top gaming headset under $100"
+  ],
+  "ter": [
+   "best gaming headset under $100",
+   "good gaming headset under $100"
+  ]
+ },
+ "/en/headsets/under-50/": {
+  "kw": "best gaming headset under $50",
+  "vol": 260,
+  "h1": "Best Gaming Headset under $50",
+  "sec": [
+   "good gaming headset under $50",
+   "best headphones 50 dollars"
+  ],
+  "ter": []
+ },
+ "/en/headsets/wired/": {
+  "kw": "wired headphones",
+  "vol": 74000,
+  "h1": "Wired Headphones",
+  "sec": [
+   "wired gaming headset"
+  ],
+  "ter": []
+ },
+ "/en/headsets/wireless/": {
+  "kw": "wireless headphones",
+  "vol": 110000,
+  "h1": "Wireless Headphones",
+  "sec": [
+   "wireless gaming headset"
+  ],
+  "ter": []
+ },
+ "/en/headsets/with-bluetooth/": {
+  "kw": "bluetooth headphones",
+  "vol": 60500,
+  "h1": "Bluetooth Headphones",
+  "sec": [
+   "bluetooth headset"
+  ],
+  "ter": []
+ },
+ "/en/headsets/with-surround-sound/": {
+  "kw": "surround sound headphones",
+  "vol": 880,
+  "h1": "Surround Sound Headphones",
+  "sec": [
+   "best gaming headset for surround sound"
+  ],
+  "ter": []
+ },
+ "/en/keyboards/60-percent/": {
+  "kw": "60 keyboard",
+  "vol": 18100,
+  "h1": "60 Keyboard: 60% Gaming Keyboards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/75-percent/": {
+  "kw": "75 keyboard",
+  "vol": 14800,
+  "h1": "75 Keyboard: 75% Gaming Keyboards",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/aula/": {
+  "kw": "AULA keyboard",
+  "vol": 18100,
+  "h1": "AULA Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/full-size/": {
+  "kw": "full size keyboard",
+  "vol": 9900,
+  "h1": "Full Size Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/hot-swap/": {
+  "kw": "hot swap keyboard",
+  "vol": 2900,
+  "h1": "Hot Swap Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/mechanical/": {
+  "kw": "mechanical keyboard",
+  "vol": 90500,
+  "h1": "Mechanical Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/razer/": {
+  "kw": "razer keyboard",
+  "vol": 27100,
+  "h1": "Razer Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/redragon/": {
+  "kw": "redragon keyboard",
+  "vol": 12100,
+  "h1": "Redragon Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/steelseries/": {
+  "kw": "SteelSeries keyboard",
+  "vol": 12100,
+  "h1": "SteelSeries Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/tkl-tenkeyless/": {
+  "kw": "TKL keyboard",
+  "vol": 8100,
+  "h1": "TKL Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/under-40/": {
+  "kw": "40 dollar keyboard",
+  "vol": 30,
+  "h1": "40 Dollar Keyboard: Gaming Keyboards under $40",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/wired/": {
+  "kw": "wired keyboard",
+  "vol": 5400,
+  "h1": "Wired Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/keyboards/wireless/": {
+  "kw": "wireless keyboard",
+  "vol": 33100,
+  "h1": "Wireless Keyboard",
+  "sec": [],
+  "ter": []
+ },
+ "/en/liquid-cooling/240-mm/": {
+  "kw": "240mm AIO liquid cooler",
+  "vol": 1300,
+  "h1": "240mm AIO Liquid Cooler",
+  "sec": [],
+  "ter": [
+   "240mm liquid cooler"
+  ]
+ },
+ "/en/liquid-cooling/360-mm/": {
+  "kw": "360mm AIO liquid cooler",
+  "vol": 1900,
+  "h1": "360mm AIO Liquid Cooler",
+  "sec": [],
+  "ter": [
+   "360mm liquid cooler"
+  ]
+ },
+ "/en/liquid-cooling/arctic/": {
+  "kw": "ARCTIC AIO liquid cooler",
+  "vol": 880,
+  "h1": "ARCTIC AIO Liquid Cooler",
+  "sec": [],
+  "ter": [
+   "ARCTIC water cooler",
+   "ARCTIC liquid cooler"
+  ]
+ },
+ "/en/liquid-cooling/msi/": {
+  "kw": "MSI cooler",
+  "vol": 320,
+  "h1": "MSI Cooler: MSI Liquid Cooling",
+  "sec": [],
+  "ter": []
+ },
+ "/en/liquid-cooling/thermalright/": {
+  "kw": "thermalright AIO liquid cooler",
+  "vol": 1300,
+  "h1": "Thermalright AIO Liquid Cooler",
+  "sec": [
+   "thermalright liquid cooler"
+  ],
+  "ter": []
+ },
+ "/en/liquid-cooling/white/": {
+  "kw": "white CPU cooler",
+  "vol": 480,
+  "h1": "White CPU Cooler: White AIO Liquid Cooling",
+  "sec": [
+   "AIO white"
+  ],
+  "ter": [
+   "white water cooler",
+   "white liquid cooler"
+  ]
+ },
+ "/en/liquid-cooling/with-argb/": {
+  "kw": "ARGB AIO liquid cooler",
+  "vol": 30,
+  "h1": "ARGB AIO Liquid Cooler",
+  "sec": [],
+  "ter": []
+ },
+ "/en/liquid-cooling/with-display/": {
+  "kw": "CPU cooler with display",
+  "vol": 90,
+  "h1": "CPU Cooler with Display: AIO Liquid Cooling",
+  "sec": [
+   "AIO display"
+  ],
+  "ter": [
+   "water cooler display"
+  ]
+ },
+ "/en/power-supplies/1000-w/": {
+  "kw": "1000W power supply",
+  "vol": 3600,
+  "h1": "1000W Power Supply",
+  "sec": [
+   "1000W PSU"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/650-w/": {
+  "kw": "650W power supply",
+  "vol": 1000,
+  "h1": "650W Power Supply",
+  "sec": [
+   "650W PSU"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/750-w/": {
+  "kw": "750W PSU",
+  "vol": 1600,
+  "h1": "750W PSU",
+  "sec": [
+   "750W computer power supply"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/80-plus-bronze/": {
+  "kw": "80 plus bronze power supply",
+  "vol": 720,
+  "h1": "80 Plus Bronze Power Supply",
+  "sec": [
+   "80 plus bronze PSU"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/80-plus-gold/": {
+  "kw": "80 plus gold power supply",
+  "vol": 1600,
+  "h1": "80 Plus Gold Power Supply",
+  "sec": [
+   "80 plus gold PSU"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/850-w/": {
+  "kw": "850W PSU",
+  "vol": 3600,
+  "h1": "850W PSU",
+  "sec": [
+   "850W power supply"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/asrock/": {
+  "kw": "ASRock PSU",
+  "vol": 140,
+  "h1": "ASRock PSU",
+  "sec": [
+   "ASRock power supply"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/corsair/": {
+  "kw": "corsair PSU",
+  "vol": 5400,
+  "h1": "Corsair PSU",
+  "sec": [
+   "corsair power supply"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/fully-modular/": {
+  "kw": "fully modular PSU",
+  "vol": 1600,
+  "h1": "Fully Modular PSU",
+  "sec": [
+   "fully modular power supply"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/msi/": {
+  "kw": "MSI power supply",
+  "vol": 720,
+  "h1": "MSI Power Supply",
+  "sec": [
+   "MSI PSU"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/under-100/": {
+  "kw": "best power supply under $100",
+  "vol": 20,
+  "h1": "Best Power Supply under $100",
+  "sec": [
+   "best PSU under $100"
+  ],
+  "ter": []
+ },
+ "/en/power-supplies/white/": {
+  "kw": "white PSU",
+  "vol": 260,
+  "h1": "White PSU",
+  "sec": [],
+  "ter": [
+   "white computer power supply"
+  ]
+ },
+ "/en/processors/6-core/": {
+  "kw": "6 core CPU",
+  "vol": 390,
+  "h1": "6 Core CPU",
+  "sec": [
+   "6 CPU cores"
+  ],
+  "ter": [
+   "6 core processor"
+  ]
+ },
+ "/en/processors/8-core/": {
+  "kw": "8 core CPU",
+  "vol": 720,
+  "h1": "8 Core CPU",
+  "sec": [
+   "8 core processor"
+  ],
+  "ter": [
+   "8 cores"
+  ]
+ },
+ "/en/processors/am4-socket/": {
+  "kw": "AM4 socket CPU",
+  "vol": 8100,
+  "h1": "AM4 Socket CPU",
+  "sec": [
+   "AM4 socket processors"
+  ],
+  "ter": []
+ },
+ "/en/processors/am5-socket/": {
+  "kw": "AM5 socket CPU",
+  "vol": 320,
+  "h1": "AM5 Socket CPU",
+  "sec": [],
+  "ter": []
+ },
+ "/en/processors/amd/": {
+  "kw": "AMD CPU",
+  "vol": 9900,
+  "h1": "AMD CPU",
+  "sec": [],
+  "ter": [
+   "AMD processor"
+  ]
+ },
+ "/en/processors/core-ultra/": {
+  "kw": "core ultra",
+  "vol": 480,
+  "h1": "Core Ultra",
+  "sec": [],
+  "ter": []
+ },
+ "/en/processors/intel/": {
+  "kw": "intel CPU",
+  "vol": 9900,
+  "h1": "Intel CPU",
+  "sec": [],
+  "ter": [
+   "intel core",
+   "intel processor"
+  ]
+ },
+ "/en/processors/ryzen-5/": {
+  "kw": "ryzen 5",
+  "vol": 8100,
+  "h1": "Ryzen 5: Processors",
+  "sec": [],
+  "ter": []
+ },
+ "/en/processors/ryzen-7/": {
+  "kw": "ryzen 7",
+  "vol": 14800,
+  "h1": "Ryzen 7: Processors",
+  "sec": [],
+  "ter": []
+ },
+ "/en/processors/ryzen-9/": {
+  "kw": "ryzen 9",
+  "vol": 9900,
+  "h1": "Ryzen 9: Processors",
+  "sec": [],
+  "ter": []
+ },
+ "/en/processors/under-150/": {
+  "kw": "best CPU under $150",
+  "vol": 30,
+  "h1": "Best CPU under $150",
+  "sec": [
+   "best processor under $150",
+   "best 150 dollar CPU"
+  ],
+  "ter": []
+ },
+ "/en/processors/under-250/": {
+  "kw": "best CPU under $250",
+  "vol": 20,
+  "h1": "Best CPU under $250",
+  "sec": [
+   "best processor under $250"
+  ],
+  "ter": []
+ },
+ "/en/processors/with-12-or-more-cores/": {
+  "kw": "12 core CPU",
+  "vol": 320,
+  "h1": "12 Core CPU",
+  "sec": [
+   "12 core processor"
+  ],
+  "ter": []
+ },
+ "/en/ram-memory/16-gb/": {
+  "kw": "16GB RAM",
+  "vol": 33100,
+  "h1": "16GB RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/32-gb/": {
+  "kw": "32GB RAM",
+  "vol": 49500,
+  "h1": "32GB RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/3200-mhz/": {
+  "kw": "3200MHz RAM",
+  "vol": 480,
+  "h1": "3200MHz RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/3600-mhz/": {
+  "kw": "3600MHz RAM",
+  "vol": 210,
+  "h1": "3600MHz RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/6000-mhz/": {
+  "kw": "6000MHz RAM",
+  "vol": 140,
+  "h1": "6000MHz RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/amd-expo-compatible/": {
+  "kw": "AMD EXPO RAM",
+  "vol": 720,
+  "h1": "AMD EXPO RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/corsair/": {
+  "kw": "corsair RAM",
+  "vol": 9900,
+  "h1": "Corsair RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/ddr4/": {
+  "kw": "DDR4 RAM",
+  "vol": 74000,
+  "h1": "DDR4 RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/ddr4-16-gb/": {
+  "kw": "DDR4 RAM 16GB",
+  "vol": 6600,
+  "h1": "DDR4 RAM 16GB",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/ddr5/": {
+  "kw": "DDR5 RAM",
+  "vol": 110000,
+  "h1": "DDR5 RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/ddr5-32-gb/": {
+  "kw": "DDR5 RAM 32GB",
+  "vol": 27100,
+  "h1": "DDR5 RAM 32GB",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/gigastone/": {
+  "kw": "gigastone RAM",
+  "vol": 140,
+  "h1": "Gigastone RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/in-white/": {
+  "kw": "white RAM",
+  "vol": 1300,
+  "h1": "White RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/oloy/": {
+  "kw": "OLOY RAM",
+  "vol": 880,
+  "h1": "OLOY RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/teamgroup/": {
+  "kw": "TEAMGROUP RAM",
+  "vol": 1300,
+  "h1": "TEAMGROUP RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ram-memory/with-rgb/": {
+  "kw": "RGB RAM",
+  "vol": 880,
+  "h1": "RGB RAM",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/1-tb/": {
+  "kw": "1TB SSD",
+  "vol": 49500,
+  "h1": "1TB SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/2-tb/": {
+  "kw": "2TB SSD",
+  "vol": 33100,
+  "h1": "2TB SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/4-tb/": {
+  "kw": "4TB SSD",
+  "vol": 22200,
+  "h1": "4TB SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/500-gb-and-512-gb/": {
+  "kw": "512GB SSD",
+  "vol": 5400,
+  "h1": "512GB SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/crucial/": {
+  "kw": "crucial SSD",
+  "vol": 5400,
+  "h1": "Crucial SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/lexar/": {
+  "kw": "lexar SSD",
+  "vol": 1600,
+  "h1": "Lexar SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/nvme/": {
+  "kw": "NVMe SSD",
+  "vol": 40500,
+  "h1": "NVMe SSD",
+  "sec": [],
+  "ter": [
+   "NVMe drive"
+  ]
+ },
+ "/en/ssd/nvme-1-tb/": {
+  "kw": "1TB NVMe SSD",
+  "vol": 5400,
+  "h1": "1TB NVMe SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/nvme-2-tb/": {
+  "kw": "2TB NVMe SSD",
+  "vol": 6600,
+  "h1": "2TB NVMe SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/samsung/": {
+  "kw": "samsung SSD",
+  "vol": 14800,
+  "h1": "Samsung SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/sata/": {
+  "kw": "SATA SSD",
+  "vol": 33100,
+  "h1": "SATA SSD",
+  "sec": [],
+  "ter": []
+ },
+ "/en/ssd/under-100/": {
+  "kw": "best SSD under $100",
+  "vol": 30,
+  "h1": "Best SSD under $100",
+  "sec": [],
+  "ter": []
+ },
+ "/fuentes-de-poder/80-plus-bronze/": {
+  "kw": "fuente de poder 80 plus bronze",
+  "vol": 30,
+  "h1": "Fuente de Poder 80 Plus Bronze",
+  "sec": [],
+  "ter": []
+ },
+ "/fuentes-de-poder/80-plus-gold/": {
+  "kw": "fuente de poder 80 plus gold",
+  "vol": 20,
+  "h1": "Fuente de Poder 80 Plus Gold",
+  "sec": [],
+  "ter": [
+   "fuentes de poder 80 plus gold"
+  ]
+ },
+ "/fuentes-de-poder/corsair/": {
+  "kw": "fuente de poder corsair",
+  "vol": 90,
+  "h1": "Fuente de Poder Corsair",
+  "sec": [
+   "fuentes corsair"
+  ],
+  "ter": []
+ },
+ "/fuentes-de-poder/de-1000-w/": {
+  "kw": "fuente de poder 1000W",
+  "vol": 90,
+  "h1": "Fuente de Poder 1000W",
+  "sec": [
+   "fuentes 1000W"
+  ],
+  "ter": []
+ },
+ "/fuentes-de-poder/de-650-w/": {
+  "kw": "fuente de poder 650W",
+  "vol": 210,
+  "h1": "Fuente de Poder 650W",
+  "sec": [
+   "fuentes 650W"
+  ],
+  "ter": []
+ },
+ "/fuentes-de-poder/de-750-w/": {
+  "kw": "fuente de poder 750W",
+  "vol": 320,
+  "h1": "Fuente de Poder 750W",
+  "sec": [],
+  "ter": []
+ },
+ "/fuentes-de-poder/de-850-w/": {
+  "kw": "fuente de poder 850W",
+  "vol": 90,
+  "h1": "Fuente de Poder 850W",
+  "sec": [],
+  "ter": []
+ },
+ "/fuentes-de-poder/msi/": {
+  "kw": "fuente de poder MSI",
+  "vol": 20,
+  "h1": "Fuente de Poder MSI",
+  "sec": [],
+  "ter": []
+ },
+ "/fuentes-de-poder/totalmente-modulares/": {
+  "kw": "fuente de poder modular",
+  "vol": 70,
+  "h1": "Fuente de Poder Modular",
+  "sec": [],
+  "ter": []
+ },
+ "/gabinetes-gamer/blancos/": {
+  "kw": "gabinete blanco",
+  "vol": 70,
+  "h1": "Gabinete Blanco",
+  "sec": [],
+  "ter": []
+ },
+ "/gabinetes-gamer/cooler-master/": {
+  "kw": "gabinetes cooler master",
+  "vol": 70,
+  "h1": "Gabinetes Cooler Master",
+  "sec": [],
+  "ter": []
+ },
+ "/gabinetes-gamer/lian-li/": {
+  "kw": "gabinetes lian li",
+  "vol": 40,
+  "h1": "Gabinetes Lian Li",
+  "sec": [],
+  "ter": []
+ },
+ "/gabinetes-gamer/nzxt/": {
+  "kw": "gabinetes NZXT",
+  "vol": 30,
+  "h1": "Gabinetes NZXT",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/blancas/": {
+  "kw": "RAM blanca",
+  "vol": 20,
+  "h1": "RAM Blanca",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/con-rgb/": {
+  "kw": "memoria RAM RGB",
+  "vol": 20,
+  "h1": "Memoria RAM RGB",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/corsair/": {
+  "kw": "RAM corsair",
+  "vol": 90,
+  "h1": "RAM Corsair",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/ddr4/": {
+  "kw": "memoria RAM DDR4",
+  "vol": 1300,
+  "h1": "Memoria RAM DDR4",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/ddr4-de-16-gb/": {
+  "kw": "RAM DDR4 16GB",
+  "vol": 1000,
+  "h1": "RAM DDR4 16GB",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/ddr5/": {
+  "kw": "memoria RAM DDR5",
+  "vol": 1600,
+  "h1": "Memoria RAM DDR5",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/ddr5-de-32-gb/": {
+  "kw": "32GB RAM DDR5",
+  "vol": 720,
+  "h1": "32GB RAM DDR5",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/de-16-gb/": {
+  "kw": "memoria RAM 16GB",
+  "vol": 1600,
+  "h1": "Memoria RAM 16GB",
+  "sec": [],
+  "ter": []
+ },
+ "/memoria-ram/de-32-gb/": {
+  "kw": "memoria RAM de 32 GB",
+  "vol": 390,
+  "h1": "Memoria RAM de 32 GB",
+  "sec": [],
+  "ter": [
+   "32 GB RAM precio"
+  ]
+ },
+ "/monitores/2k-qhd-1440p/": {
+  "kw": "monitor PC 1440p",
+  "vol": 40,
+  "h1": "Monitor PC 1440p",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/4k/": {
+  "kw": "monitor gamer 4K",
+  "vol": 170,
+  "h1": "Monitor Gamer 4K",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/asus/": {
+  "kw": "monitor ASUS",
+  "vol": 590,
+  "h1": "Monitor ASUS",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/curvos/": {
+  "kw": "monitor curvo",
+  "vol": 1300,
+  "h1": "Monitor Curvo",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/de-180-hz/": {
+  "kw": "monitor de 180Hz",
+  "vol": 20,
+  "h1": "Monitor de 180Hz",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/de-24-pulgadas/": {
+  "kw": "monitor 24 pulgadas",
+  "vol": 1900,
+  "h1": "Monitor 24 Pulgadas",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/de-240-hz-o-mas/": {
+  "kw": "monitor 240Hz",
+  "vol": 390,
+  "h1": "Monitor 240Hz",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/de-27-pulgadas/": {
+  "kw": "monitor 27 pulgadas",
+  "vol": 2900,
+  "h1": "Monitor 27 Pulgadas",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/de-34-pulgadas/": {
+  "kw": "monitor 34 pulgadas",
+  "vol": 260,
+  "h1": "Monitor 34 Pulgadas",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/full-hd-1080p/": {
+  "kw": "monitores 1080p",
+  "vol": 110,
+  "h1": "Monitores 1080p",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/koorui/": {
+  "kw": "monitores KOORUI",
+  "vol": 70,
+  "h1": "Monitores KOORUI",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/lg/": {
+  "kw": "monitor LG",
+  "vol": 880,
+  "h1": "Monitor LG",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/panel-ips/": {
+  "kw": "monitor IPS",
+  "vol": 320,
+  "h1": "Monitor IPS",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/panel-oled/": {
+  "kw": "monitor OLED",
+  "vol": 2400,
+  "h1": "Monitor OLED",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/samsung/": {
+  "kw": "monitor samsung",
+  "vol": 1600,
+  "h1": "Monitor Samsung",
+  "sec": [],
+  "ter": []
+ },
+ "/monitores/ultrawide/": {
+  "kw": "monitor ultrawide",
+  "vol": 720,
+  "h1": "Monitor Ultrawide",
+  "sec": [],
+  "ter": []
+ },
+ "/mouse/con-cable/": {
+  "kw": "mouse con cable",
+  "vol": 170,
+  "h1": "Mouse con Cable",
+  "sec": [],
+  "ter": []
+ },
+ "/mouse/inalambricos/": {
+  "kw": "mouse inalámbrico",
+  "vol": 9900,
+  "h1": "Mouse Inalámbrico",
+  "sec": [],
+  "ter": []
+ },
+ "/mouse/logitech/": {
+  "kw": "mouse logitech",
+  "vol": 4400,
+  "h1": "Mouse Logitech",
+  "sec": [],
+  "ter": []
+ },
+ "/mouse/razer/": {
+  "kw": "mouse razer",
+  "vol": 720,
+  "h1": "Mouse Razer",
+  "sec": [],
+  "ter": []
+ },
+ "/mouse/steelseries/": {
+  "kw": "mouse SteelSeries",
+  "vol": 90,
+  "h1": "Mouse SteelSeries",
+  "sec": [],
+  "ter": []
+ },
+ "/procesadores/amd/": {
+  "kw": "procesador AMD",
+  "vol": 590,
+  "h1": "Procesador AMD",
+  "sec": [],
+  "ter": [
+   "CPU AMD"
+  ]
+ },
+ "/procesadores/core-i5/": {
+  "kw": "procesador core i5",
+  "vol": 170,
+  "h1": "Procesador Core i5",
+  "sec": [],
+  "ter": [
+   "CPU core i5"
+  ]
+ },
+ "/procesadores/de-8-nucleos/": {
+  "kw": "procesador 8 núcleos",
+  "vol": 30,
+  "h1": "Procesador 8 Núcleos",
+  "sec": [],
+  "ter": []
+ },
+ "/procesadores/intel/": {
+  "kw": "procesador intel",
+  "vol": 880,
+  "h1": "Procesador Intel",
+  "sec": [],
+  "ter": []
+ },
+ "/procesadores/ryzen-5/": {
+  "kw": "procesador ryzen 5",
+  "vol": 720,
+  "h1": "Procesador Ryzen 5",
+  "sec": [],
+  "ter": [
+   "ryzen 5 precio"
+  ]
+ },
+ "/procesadores/ryzen-7/": {
+  "kw": "procesador ryzen 7",
+  "vol": 880,
+  "h1": "Procesador Ryzen 7",
+  "sec": [],
+  "ter": [
+   "ryzen 7 precio"
+  ]
+ },
+ "/procesadores/ryzen-9/": {
+  "kw": "procesador ryzen 9",
+  "vol": 210,
+  "h1": "Procesador Ryzen 9",
+  "sec": [
+   "ryzen 9 precio"
+  ],
+  "ter": []
+ },
+ "/procesadores/socket-am4/": {
+  "kw": "CPU socket AM4",
+  "vol": 170,
+  "h1": "CPU Socket AM4",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-liquida/con-pantalla/": {
+  "kw": "refrigeración líquida con pantalla",
+  "vol": 70,
+  "h1": "Refrigeración Líquida con Pantalla",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-liquida/de-240-mm/": {
+  "kw": "refrigeración líquida 240mm",
+  "vol": 50,
+  "h1": "Refrigeración Líquida 240mm",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-liquida/de-360-mm/": {
+  "kw": "refrigeración líquida 360mm",
+  "vol": 40,
+  "h1": "Refrigeración Líquida 360mm",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-liquida/msi/": {
+  "kw": "refrigeración líquida MSI",
+  "vol": 20,
+  "h1": "Refrigeración Líquida MSI",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-liquida/thermalright/": {
+  "kw": "refrigeración líquida thermalright",
+  "vol": 30,
+  "h1": "Refrigeración Líquida Thermalright",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-normal/cooler-master/": {
+  "kw": "disipador cooler master",
+  "vol": 90,
+  "h1": "Disipador Cooler Master",
+  "sec": [],
+  "ter": []
+ },
+ "/refrigeracion-normal/noctua/": {
+  "kw": "disipador noctua",
+  "vol": 40,
+  "h1": "Disipador Noctua",
+  "sec": [],
+  "ter": []
+ },
+ "/ssd/crucial/": {
+  "kw": "SSD crucial",
+  "vol": 90,
+  "h1": "SSD Crucial",
+  "sec": [
+   "disco duro crucial"
+  ],
+  "ter": []
+ },
+ "/ssd/de-1-tb/": {
+  "kw": "disco SSD 1TB",
+  "vol": 880,
+  "h1": "Disco SSD 1TB",
+  "sec": [
+   "disco sólido 1TB"
+  ],
+  "ter": []
+ },
+ "/ssd/de-2-tb/": {
+  "kw": "disco duro 2TB SSD",
+  "vol": 170,
+  "h1": "Disco Duro 2TB SSD",
+  "sec": [
+   "disco duro sólido 2TB"
+  ],
+  "ter": [
+   "disco duro m2 2TB"
+  ]
+ },
+ "/ssd/de-4-tb/": {
+  "kw": "disco SSD 4TB",
+  "vol": 30,
+  "h1": "Disco SSD 4TB",
+  "sec": [],
+  "ter": [
+   "disco duro sólido 4TB"
+  ]
+ },
+ "/ssd/de-500-gb-y-512-gb/": {
+  "kw": "disco 512 GB SSD",
+  "vol": 140,
+  "h1": "Disco 512 GB SSD",
+  "sec": [
+   "disco sólido 512GB"
+  ],
+  "ter": [
+   "disco duro 512 GB"
+  ]
+ },
+ "/ssd/nvme/": {
+  "kw": "disco NVMe",
+  "vol": 210,
+  "h1": "Disco NVMe",
+  "sec": [],
+  "ter": []
+ },
+ "/ssd/nvme-de-1-tb/": {
+  "kw": "SSD NVMe 1TB",
+  "vol": 320,
+  "h1": "SSD NVMe 1TB",
+  "sec": [
+   "disco NVMe 1TB"
+  ],
+  "ter": []
+ },
+ "/ssd/nvme-de-2-tb/": {
+  "kw": "SSD m.2 NVMe 2TB",
+  "vol": 50,
+  "h1": "SSD M.2 NVMe 2TB",
+  "sec": [],
+  "ter": []
+ },
+ "/ssd/pcie-4-0/": {
+  "kw": "SSD PCIe 4.0",
+  "vol": 20,
+  "h1": "SSD PCIe 4.0",
+  "sec": [],
+  "ter": []
+ },
+ "/ssd/samsung/": {
+  "kw": "SSD samsung",
+  "vol": 140,
+  "h1": "SSD Samsung",
+  "sec": [],
+  "ter": []
+ },
+ "/ssd/sata/": {
+  "kw": "disco SSD SATA",
+  "vol": 210,
+  "h1": "Disco SSD SATA",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/amd-radeon/": {
+  "kw": "tarjeta gráfica AMD radeon",
+  "vol": 90,
+  "h1": "Tarjeta Gráfica AMD Radeon",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/asus/": {
+  "kw": "tarjeta gráfica ASUS",
+  "vol": 70,
+  "h1": "Tarjeta Gráfica ASUS",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/de-12-gb/": {
+  "kw": "tarjeta gráfica 12GB",
+  "vol": 20,
+  "h1": "Tarjeta Gráfica 12GB",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/de-16-gb/": {
+  "kw": "tarjeta gráfica 16GB",
+  "vol": 40,
+  "h1": "Tarjeta Gráfica 16GB",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/de-6-gb/": {
+  "kw": "tarjeta gráfica 6GB",
+  "vol": 20,
+  "h1": "Tarjeta Gráfica 6GB",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/de-8-gb/": {
+  "kw": "tarjeta gráfica 8GB",
+  "vol": 50,
+  "h1": "Tarjeta Gráfica 8GB",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/gigabyte/": {
+  "kw": "tarjeta gráfica gigabyte",
+  "vol": 30,
+  "h1": "Tarjeta Gráfica Gigabyte",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/nvidia-geforce/": {
+  "kw": "tarjeta de video NVIDIA GeForce",
+  "vol": 70,
+  "h1": "Tarjeta de Video NVIDIA GeForce",
+  "sec": [
+   "tarjeta gráfica NVIDIA GeForce"
+  ],
+  "ter": []
+ },
+ "/tarjetas-graficas/rtx-5060/": {
+  "kw": "RTX 5060 precio",
+  "vol": 260,
+  "h1": "RTX 5060 Precio: Tarjetas Gráficas",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/rtx-5060-ti/": {
+  "kw": "RTX 5060 Ti precio",
+  "vol": 50,
+  "h1": "RTX 5060 Ti Precio: Tarjetas Gráficas",
+  "sec": [],
+  "ter": []
+ },
+ "/tarjetas-graficas/rtx-5070/": {
+  "kw": "RTX 5070 precio",
+  "vol": 210,
+  "h1": "RTX 5070 Precio: Tarjetas Gráficas",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/aula/": {
+  "kw": "teclado AULA",
+  "vol": 260,
+  "h1": "Teclado AULA",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/compactos-60/": {
+  "kw": "teclado 60%",
+  "vol": 590,
+  "h1": "Teclado 60%",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/compactos-75/": {
+  "kw": "teclado 75%",
+  "vol": 320,
+  "h1": "Teclado 75%",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/con-cable/": {
+  "kw": "teclado con cable",
+  "vol": 70,
+  "h1": "Teclado con Cable",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/de-tamano-completo/": {
+  "kw": "teclado completo",
+  "vol": 170,
+  "h1": "Teclado Completo",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/hot-swap/": {
+  "kw": "teclado hot swap",
+  "vol": 20,
+  "h1": "Teclado Hot Swap",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/inalambricos/": {
+  "kw": "teclado inalámbrico",
+  "vol": 5400,
+  "h1": "Teclado Inalámbrico",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/mecanicos/": {
+  "kw": "teclado mecánico",
+  "vol": 8100,
+  "h1": "Teclado Mecánico",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/razer/": {
+  "kw": "teclado razer",
+  "vol": 390,
+  "h1": "Teclado Razer",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/redragon/": {
+  "kw": "teclado redragon",
+  "vol": 1300,
+  "h1": "Teclado Redragon",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/steelseries/": {
+  "kw": "teclado SteelSeries",
+  "vol": 70,
+  "h1": "Teclado SteelSeries",
+  "sec": [],
+  "ter": []
+ },
+ "/teclados/": {
+  "kw": "teclados gamer",
+  "vol": 3600,
+  "h1": "Teclados Gamer",
+  "title": "Teclados Gamer Mecánicos y RGB | Monckey Gamer",
+  "meta": "Teclados gamer mecánicos, RGB e inalámbricos: compara cada teclado gaming por formato, switches y precio, con compra directa en Amazon.",
+  "intro": "Estos son nuestros teclados gamer: cada teclado de la lista es mecánico o de gaming con iluminación RGB, respuesta rápida y compra directa en Amazon. Compara formato, switches y precio para elegir tu teclado gamer ideal.",
+  "h2": "Teclado gamer: cómo elegir el tuyo",
+  "p": [
+   "Un buen teclado marca la diferencia en cada partida. Si buscas un <a href=\"/teclados/mecanicos/\">teclado mecánico</a>, fíjate en el tipo de switch y en el formato: los <a href=\"/teclados/compactos-60/\">teclados al 60 %</a> y <a href=\"/teclados/compactos-75/\">al 75 %</a> ganan espacio para el mouse, mientras que el <a href=\"/teclados/tkl-sin-teclado-numerico/\">teclado TKL</a> y el de <a href=\"/teclados/de-tamano-completo/\">tamaño completo</a> conservan más teclas.",
+   "Hay un teclado gamer para cada setup: teclado RGB para ambientar el escritorio, teclado LED más sobrio, opciones <a href=\"/teclados/inalambricos/\">inalámbricas</a> o <a href=\"/teclados/con-cable/\">con cable</a>, y modelos <a href=\"/teclados/hot-swap/\">hot-swap</a> para cambiar los switches sin soldar. Usa los filtros de arriba para ir directo a lo que necesitas."
+  ],
+  "sec": [
+   "teclado",
+   "teclado gamer"
+  ],
+  "ter": [
+   "teclado rgb",
+   "teclado led"
+  ],
+  "categoria": true
+ },
+ "/refrigeracion-liquida/": {
+  "kw": "refrigeracion liquida",
+  "vol": 1000,
+  "h1": "Refrigeración Líquida para PC",
+  "title": "Refrigeración Líquida para PC: AIO 240 y 360 mm | Monckey Gamer",
+  "meta": "Refrigeración líquida para PC: AIO de 240 y 360 mm con ARGB y pantalla. Compara radiadores, marcas y precios y compra directo en Amazon.",
+  "intro": "Aquí tienes la refrigeración líquida para PC de nuestro catálogo: kits AIO de 240 y 360 mm para mantener fría tu CPU, con precio actualizado y enlace directo a Amazon.",
+  "h2": "Refrigeración líquida: qué mirar antes de comprar",
+  "p": [
+   "La refrigeración líquida pc (kit AIO) mueve el calor del procesador hacia un radiador con ventiladores. Elegir entre <a href=\"/refrigeracion-liquida/de-240-mm/\">240 mm</a> y <a href=\"/refrigeracion-liquida/de-360-mm/\">360 mm</a> depende de tu CPU y del espacio del gabinete: más radiador significa más superficie de disipación y, normalmente, menos ruido a la misma temperatura.",
+   "Si quieres algo más llamativo, hay modelos <a href=\"/refrigeracion-liquida/con-pantalla/\">con pantalla</a>. Y si dudas entre este enfriamiento líquido y otra refrigeración pc, como un <a href=\"/refrigeracion-normal/\">disipador de aire</a>, revisa nuestras guías: para procesadores de gama media un buen disipador suele bastar."
+  ],
+  "sec": [
+   "refrigeración líquida pc",
+   "refrigeración pc"
+  ],
+  "ter": [
+   "enfriamiento líquido"
+  ],
+  "categoria": true
+ },
+ "/gabinetes-gamer/": {
+  "kw": "gabinetes pc",
+  "vol": 1000,
+  "h1": "Gabinetes PC: Gabinete Gamer ATX y Micro ATX",
+  "title": "Gabinetes PC Gamer: ATX y Micro ATX | Monckey Gamer",
+  "meta": "Gabinetes PC gamer: gabinete ATX y Micro ATX con flujo de aire, vidrio templado y RGB. Compara cada gabinete y compra directo en Amazon.",
+  "intro": "Elige tu gabinete gamer para PC entre nuestra selección: gabinete ATX y Micro ATX con buen flujo de aire, panel de vidrio y espacio para tarjetas gráficas grandes, con compra directa en Amazon.",
+  "h2": "Gabinete pc: cómo elegir el gabinete gamer ideal",
+  "p": [
+   "Antes de comprar un gabinete pc comprueba el formato de tu placa base: un gabinete ATX admite la mayoría de placas, mientras que un <a href=\"/gabinetes-gamer/micro-atx/\">gabinete Micro ATX</a> es más compacto. También conviene revisar la longitud máxima de la tarjeta gráfica y el soporte para radiadores de refrigeración líquida.",
+   "En este catálogo de gabinetes pc (o gabinete para pc, como también se busca) encontrarás opciones <a href=\"/gabinetes-gamer/blancos/\">blancas</a> y de marcas como <a href=\"/gabinetes-gamer/nzxt/\">NZXT</a>, <a href=\"/gabinetes-gamer/lian-li/\">Lian Li</a> y <a href=\"/gabinetes-gamer/cooler-master/\">Cooler Master</a>. Si buscas un gabinete de computadora económico, ordena por precio y compara el flujo de aire de cada modelo."
+  ],
+  "sec": [
+   "gabinete gamer",
+   "gabinete para pc"
+  ],
+  "ter": [
+   "gabinete de computadora"
+  ],
+  "categoria": true
+ },
+ "/memoria-ram/": {
+  "kw": "memoria ram",
+  "vol": 14800,
+  "h1": "Memoria RAM Gamer DDR4 y DDR5",
+  "title": "Memoria RAM Gamer DDR4 y DDR5 | Monckey Gamer",
+  "meta": "Memoria RAM gamer DDR4 y DDR5 de 16 y 32 GB: compara velocidades, latencias y precio de cada memoria RAM y compra directo en Amazon.",
+  "intro": "Compara la memoria RAM de nuestro catálogo: kits DDR4 y DDR5 de 16 y 32 GB para gaming, con velocidad, latencia, RGB opcional y compra directa en Amazon.",
+  "h2": "Memoria RAM: tipos, capacidad y velocidad",
+  "p": [
+   "Los tipos de memoria RAM que encontrarás aquí son <a href=\"/memoria-ram/ddr4/\">DDR4</a> y <a href=\"/memoria-ram/ddr5/\">DDR5</a>, y no son intercambiables: tu placa base solo acepta uno. En capacidad, <a href=\"/memoria-ram/de-16-gb/\">16 GB</a> es el mínimo cómodo para jugar y <a href=\"/memoria-ram/de-32-gb/\">32 GB</a> da margen para juegos exigentes, streaming y multitarea.",
+   "La ram memoria también se distingue por frecuencia y latencia: <a href=\"/memoria-ram/de-3200-mhz/\">3200 MHz</a> y <a href=\"/memoria-ram/de-3600-mhz/\">3600 MHz</a> en DDR4, y <a href=\"/memoria-ram/de-6000-mhz/\">6000 MHz</a> en DDR5. Si buscas ram precio, ordena la lista de menor a mayor y elige el kit que encaje con tu plataforma. Algunas personas la llaman «tarjeta RAM»: es lo mismo."
+  ],
+  "sec": [
+   "ram memoria",
+   "tarjeta ram"
+  ],
+  "ter": [
+   "ram precio",
+   "tipos de memoria ram"
+  ],
+  "categoria": true
+ },
+ "/audifonos/": {
+  "kw": "audifonos gamer",
+  "vol": 3600,
+  "h1": "Audífonos Gamer",
+  "title": "Audífonos Gamer y Diademas con Micrófono | Monckey Gamer",
+  "meta": "Audífonos gamer y diadema gamer con micrófono: inalámbricos, con cable, Bluetooth y sonido envolvente. Compara precios y compra directo en Amazon.",
+  "intro": "Estos son nuestros audífonos gamer: diademas con micrófono, con cable o inalámbricas, pensadas para escuchar pasos y mantener la comunicación con tu equipo. Compra directa en Amazon.",
+  "h2": "Audífonos gamer: qué diadema te conviene",
+  "p": [
+   "Una diadema gamer cómoda y con buen micrófono es clave en partidas largas. Decide primero si quieres <a href=\"/audifonos/inalambricos/\">audífonos gamer inalámbricos</a>, que dan libertad, o <a href=\"/audifonos/con-cable/\">con cable</a>, que no dependen de batería, y revisa el peso y las almohadillas.",
+   "Si usas también el celular, hay audífonos <a href=\"/audifonos/con-bluetooth/\">con Bluetooth</a>; y para ubicar enemigos, los de <a href=\"/audifonos/con-sonido-envolvente/\">sonido envolvente</a>. Cada modelo indica si trae micrófono, así que encontrar audífonos gamer con micrófono o una diadema gamer inalámbrica es cuestión de filtrar la lista."
+  ],
+  "sec": [
+   "diadema gamer",
+   "diademas gamer"
+  ],
+  "ter": [
+   "diadema gamer inalámbrica",
+   "audífonos gamer con micrófono"
+  ],
+  "categoria": true
+ },
+ "/refrigeracion-normal/": {
+  "kw": "disipador de calor de pc",
+  "vol": 480,
+  "h1": "Disipador de Calor de PC: Refrigeración por Aire",
+  "title": "Disipador de Calor de PC: Torre y Doble Torre | Monckey Gamer",
+  "meta": "Disipador de calor de PC: disipadores de aire de torre sencilla y doble torre para CPU AMD e Intel. Compara marcas y precios y compra en Amazon.",
+  "intro": "Compara el disipador de calor de PC de nuestro catálogo: disipadores de aire de torre sencilla y doble torre, compatibles con AMD e Intel, con compra directa en Amazon.",
+  "h2": "Disipador de CPU: refrigeración por aire para tu procesador",
+  "p": [
+   "Un buen disipador cpu mantiene tu procesador a raya sin la complejidad de una refrigeración líquida; es mucho más que un simple ventilador cpu. Fíjate en la compatibilidad de socket (un disipador AM4, un disipador AMD AM5 y un disipador Intel usan anclajes distintos, así que cualquier disipador procesador debe indicar su compatibilidad), en la altura frente a tu gabinete y en el tamaño del ventilador.",
+   "Hay modelos de <a href=\"/refrigeracion-normal/cooler-master/\">Cooler Master</a>, <a href=\"/refrigeracion-normal/noctua/\">Noctua</a> y <a href=\"/refrigeracion-normal/arctic/\">ARCTIC</a>, entre otros. Un disipador de aire de torre ofrece el mejor equilibrio entre precio y ruido, y si tu CPU es más potente, un <a href=\"/refrigeracion-normal/de-doble-torre/\">disipador de doble torre</a> añade margen."
+  ],
+  "sec": [
+   "disipador cpu",
+   "disipador amd",
+   "disipador de aire",
+   "ventilador cpu"
+  ],
+  "ter": [
+   "disipador intel",
+   "disipador procesador",
+   "disipador am4",
+   "disipador de torre"
+  ],
+  "categoria": true
+ },
+ "/fuentes-de-poder/": {
+  "kw": "fuente de poder",
+  "vol": 5400,
+  "h1": "Fuente de Poder para PC",
+  "title": "Fuente de Poder para PC: 650 W a 1000 W 80 Plus | Monckey Gamer",
+  "meta": "Fuente de poder para PC de 650 W a 1000 W, 80 Plus Bronze y Gold, modulares. Compara cada fuente de poder pc por potencia y precio en Amazon.",
+  "intro": "Elige la fuente de poder para PC de nuestro catálogo: fuentes ATX de 650 W a 1000 W con certificación 80 Plus, modulares o no, con precio actualizado y enlace directo a Amazon.",
+  "h2": "Fuente de poder pc: potencia y certificación",
+  "p": [
+   "La fuente de poder es la que alimenta todo tu equipo, así que no conviene ahorrar de más. Calcula el consumo de tu tarjeta gráfica y procesador y elige una potencia con margen: <a href=\"/fuentes-de-poder/de-650-w/\">650 W</a> para equipos de gama media, <a href=\"/fuentes-de-poder/de-750-w/\">750 W</a> y <a href=\"/fuentes-de-poder/de-850-w/\">850 W</a> para gamas altas y <a href=\"/fuentes-de-poder/de-1000-w/\">1000 W</a> para configuraciones extremas.",
+   "La certificación <a href=\"/fuentes-de-poder/80-plus-bronze/\">80 Plus Bronze</a> o <a href=\"/fuentes-de-poder/80-plus-gold/\">80 Plus Gold</a> indica eficiencia, y las <a href=\"/fuentes-de-poder/totalmente-modulares/\">fuentes totalmente modulares</a> facilitan el cableado. Todas son modelos de fuente de poder ATX estándar para gabinetes de PC; no son fuentes de 12 V de las que alimentan cámaras o routers."
+  ],
+  "sec": [
+   "fuente de poder para pc",
+   "fuente de poder pc"
+  ],
+  "ter": [
+   "fuente atx",
+   "fuente de poder atx",
+   "fuente de alimentación pc"
+  ],
+  "categoria": true
+ },
+ "/procesadores/": {
+  "kw": "procesador",
+  "vol": 6600,
+  "h1": "Procesadores para PC",
+  "title": "Procesador para PC: AMD Ryzen e Intel Core | Monckey Gamer",
+  "meta": "Procesador para PC gaming: AMD Ryzen 5, 7 y 9 e Intel Core i5 y Core Ultra. Compara núcleos, socket y precio y compra directo en Amazon.",
+  "intro": "Compara los procesadores para PC de nuestro catálogo: AMD Ryzen 5, 7 y 9 e Intel Core i5, i7 y Core Ultra, con núcleos, socket y precio actualizado. Compra directa en Amazon.",
+  "h2": "Procesador de computadora: cómo elegir el tuyo",
+  "p": [
+   "Elegir procesador empieza por la plataforma: los <a href=\"/procesadores/socket-am4/\">procesadores AM4</a> y <a href=\"/procesadores/socket-am5/\">AM5</a> de AMD y los Intel Core necesitan placas base distintas. Un procesador cpu de <a href=\"/procesadores/de-6-nucleos/\">6 núcleos</a> o <a href=\"/procesadores/de-8-nucleos/\">8 núcleos</a> es la elección habitual para jugar.",
+   "Entre las familias de AMD, el <a href=\"/procesadores/ryzen-5/\">procesador Ryzen 5</a> da el mejor equilibrio precio-rendimiento, el <a href=\"/procesadores/ryzen-7/\">Ryzen 7</a> sube la potencia y el <a href=\"/procesadores/ryzen-9/\">Ryzen 9</a> apunta a edición y multitarea. Si prefieres Intel, mira los <a href=\"/procesadores/core-i5/\">Core i5</a> y los <a href=\"/procesadores/core-ultra/\">Core Ultra</a>. Un procesador pc moderno rinde mejor con una buena memoria RAM."
+  ],
+  "sec": [
+   "procesador cpu",
+   "procesador ryzen"
+  ],
+  "ter": [
+   "procesador de computadora",
+   "procesador pc"
+  ],
+  "categoria": true
+ },
+ "/ssd/": {
+  "kw": "disco duro solido",
+  "vol": 3600,
+  "h1": "SSD: Disco Duro Sólido para PC",
+  "title": "SSD Disco Duro Sólido NVMe y SATA | Monckey Gamer",
+  "meta": "SSD disco duro sólido NVMe M.2 y SATA de 500 GB a 4 TB: compara velocidad, capacidad y precio de cada disco SSD y compra directo en Amazon.",
+  "intro": "Compara el disco duro sólido (SSD) de nuestro catálogo: unidades NVMe M.2 y SATA de 500 GB a 4 TB para que tu PC arranque y cargue juegos mucho más rápido. Compra directa en Amazon.",
+  "h2": "Disco duro SSD: NVMe o SATA",
+  "p": [
+   "Un disco ssd es mucho más rápido que un disco duro mecánico y reduce los tiempos de carga de los juegos. Hay dos formatos: el <a href=\"/ssd/sata/\">SSD SATA</a> de 2,5 pulgadas, más económico, y el <a href=\"/ssd/nvme/\">SSD NVMe M.2</a>, mucho más veloz, que se conecta directo a la placa base (<a href=\"/ssd/pcie-4-0/\">PCIe 4.0</a> y <a href=\"/ssd/pcie-5-0/\">PCIe 5.0</a>).",
+   "En capacidad, un <a href=\"/ssd/de-500-gb-y-512-gb/\">SSD 500GB</a> sirve para el sistema y unos pocos juegos, mientras que <a href=\"/ssd/de-1-tb/\">1 TB</a> y <a href=\"/ssd/de-2-tb/\">2 TB</a> son lo más práctico hoy. Los llamados disco de estado sólido, disco m2 y disco duro m2 son, en la práctica, el mismo SSD en distintos formatos."
+  ],
+  "sec": [
+   "disco duro ssd",
+   "disco ssd",
+   "ssd 500gb"
+  ],
+  "ter": [
+   "disco de estado sólido",
+   "disco m2",
+   "disco duro m2"
+  ],
+  "categoria": true
+ },
+ "/tarjetas-graficas/": {
+  "kw": "tarjeta grafica",
+  "vol": 6600,
+  "h1": "Tarjeta Gráfica para PC",
+  "title": "Tarjeta Gráfica NVIDIA GeForce y AMD Radeon | Monckey Gamer",
+  "meta": "Tarjeta gráfica para PC: NVIDIA GeForce RTX y AMD Radeon para 1080p, 1440p y 4K. Compara VRAM, rendimiento y precio y compra directo en Amazon.",
+  "intro": "Compara las tarjetas gráficas de nuestro catálogo: NVIDIA GeForce RTX y AMD Radeon RX para jugar en 1080p, 1440p y 4K, con VRAM, precio actualizado y compra directa en Amazon.",
+  "h2": "Tarjeta de video: cómo elegir según tu monitor",
+  "p": [
+   "La tarjeta gráfica (o tarjeta de video) decide los FPS que obtienes. Elige según tu resolución: una <a href=\"/tarjetas-graficas/para-1080p/\">tarjeta gráfica para 1080p</a> no necesita mucha VRAM, mientras que para <a href=\"/tarjetas-graficas/para-1440p/\">1440p</a> y <a href=\"/tarjetas-graficas/para-4k/\">4K</a> conviene más memoria y más potencia.",
+   "Puedes elegir entre una tarjeta gráfica <a href=\"/tarjetas-graficas/nvidia-geforce/\">NVIDIA GeForce</a>, con DLSS y trazado de rayos, o una tarjeta gráfica <a href=\"/tarjetas-graficas/amd-radeon/\">AMD Radeon</a>, con muy buen precio por rendimiento. Muchos buscan una tarjeta de video para PC por VRAM: filtra por <a href=\"/tarjetas-graficas/de-8-gb/\">8 GB</a>, <a href=\"/tarjetas-graficas/de-12-gb/\">12 GB</a> o <a href=\"/tarjetas-graficas/de-16-gb/\">16 GB</a> y revisa también la fuente de poder que necesitas."
+  ],
+  "sec": [
+   "tarjeta de video",
+   "tarjeta gráfica nvidia",
+   "tarjeta de video para pc"
+  ],
+  "ter": [
+   "tarjeta gráfica amd",
+   "tarjetas de video para pc"
+  ],
+  "categoria": true
+ },
+ "/monitores/": {
+  "kw": "monitor gamer",
+  "vol": 2900,
+  "h1": "Monitor Gamer",
+  "title": "Monitor Gamer 4K, 240 Hz, Curvo y Ultrawide | Monckey Gamer",
+  "meta": "Monitor gamer 4K, 1440p, 240 Hz, curvo, OLED y ultrawide: compara monitores gamer por panel, tamaño y precio y compra directo en Amazon.",
+  "intro": "Estos son nuestros monitores gamer: modelos 1080p, 1440p y 4K con alta tasa de refresco, panel IPS, VA u OLED, y compra directa en Amazon. Compara tamaño, Hz y precio.",
+  "h2": "Monitor gamer: tamaño, panel y frecuencia",
+  "p": [
+   "Para elegir un monitor gamer fíjate en tres cosas: resolución, frecuencia y tipo de panel. Los <a href=\"/monitores/de-24-pulgadas/\">monitores de 24 pulgadas</a> y los <a href=\"/monitores/de-27-pulgadas/\">de 27 pulgadas</a> son los más populares; si buscas inmersión, hay <a href=\"/monitores/curvos/\">monitores curvos</a> y <a href=\"/monitores/ultrawide/\">ultrawide</a>.",
+   "En fluidez, un <a href=\"/monitores/de-240-hz-o-mas/\">monitor de 240 Hz o más</a> favorece los shooters competitivos. Entre los paneles, el <a href=\"/monitores/panel-ips/\">IPS</a> destaca en color y el <a href=\"/monitores/panel-oled/\">OLED</a> en contraste. Cada monitor pc gaming de la lista indica su frecuencia, así que comparar los monitores gamer es sencillo."
+  ],
+  "sec": [
+   "monitores gamer",
+   "monitores de 24 pulgadas"
+  ],
+  "ter": [
+   "monitor pc gaming"
+  ],
+  "categoria": true
+ },
+ "/mouse/": {
+  "kw": "mouse gamer",
+  "vol": 4400,
+  "h1": "Mouse Gamer",
+  "title": "Mouse Gamer Inalámbrico y con Cable | Monckey Gamer",
+  "meta": "Mouse gamer inalámbrico y con cable: sensor preciso, ultraligero, RGB y de marcas como Logitech y Razer. Compara precios y compra directo en Amazon.",
+  "intro": "Compara el mouse gamer de nuestro catálogo: modelos inalámbricos y con cable, ultraligeros o con botones extra para MMO, con sensor preciso y compra directa en Amazon.",
+  "h2": "Mouse gamer: cómo elegir el tuyo",
+  "p": [
+   "El mouse gamer ideal depende de tu mano y de tus juegos. Un <a href=\"/mouse/inalambricos/\">mouse inalámbrico</a> evita cables, mientras que un <a href=\"/mouse/con-cable/\">mouse con cable</a> (mouse alámbrico) elimina cualquier latencia y no necesita carga. Fíjate en el peso, los DPI del sensor y la ergonomía.",
+   "Si juegas MMO, mira los <a href=\"/mouse/para-mmo/\">mouse para MMO</a>; si buscas velocidad, los <a href=\"/mouse/ultraligeros/\">ultraligeros</a>. También tenemos mouse de marcas como <a href=\"/mouse/logitech/\">Logitech</a>, <a href=\"/mouse/razer/\">Razer</a> y <a href=\"/mouse/steelseries/\">SteelSeries</a>. Estos ratones gaming están pensados para jugar; para ver el mouse precio de cada modelo, ordena la lista de menor a mayor."
+  ],
+  "sec": [
+   "mouse alámbrico",
+   "ratones gaming"
+  ],
+  "ter": [
+   "mouse precio"
+  ],
+  "categoria": true
+ },
+ "/en/keyboards/": {
+  "kw": "gaming keyboard",
+  "vol": 60500,
+  "h1": "Gaming Keyboards",
+  "title": "Gaming Keyboards: Mechanical, Wireless & RGB | Monckey Gamer",
+  "meta": "Gaming keyboards: mechanical, wireless and RGB keyboards in 60%, 75%, TKL and full size. Compare switches and prices and buy direct on Amazon.",
+  "intro": "Browse our gaming keyboards: every keyboard on the list is mechanical or built for gaming, with fast response, RGB lighting and a direct Amazon link. Compare layout, switches and price to find the keyboard for you.",
+  "h2": "Gaming keyboard: how to choose",
+  "p": [
+   "A good keyboard for gaming changes how every match feels. If you want a <a href=\"/en/keyboards/mechanical/\">mechanical keyboard</a>, check the switch type and the layout: a <a href=\"/en/keyboards/60-percent/\">60% keyboard</a> or <a href=\"/en/keyboards/75-percent/\">75% keyboard</a> frees up desk space for your mouse, while a <a href=\"/en/keyboards/tkl-tenkeyless/\">TKL keyboard</a> or a <a href=\"/en/keyboards/full-size/\">full size keyboard</a> keeps more keys.",
+   "You will find the best gaming keyboard for your setup: <a href=\"/en/keyboards/wireless/\">wireless</a> or <a href=\"/en/keyboards/wired/\">wired</a>, <a href=\"/en/keyboards/hot-swap/\">hot swap</a> for changing switches without soldering, and brands like <a href=\"/en/keyboards/razer/\">Razer</a>, <a href=\"/en/keyboards/redragon/\">Redragon</a> and <a href=\"/en/keyboards/steelseries/\">SteelSeries</a>. Whether you want the best gaming keyboard or just want to compare top gaming keyboards, use the filters above to jump straight to what you need."
+  ],
+  "sec": [
+   "keyboard",
+   "keyboard for gaming",
+   "best gaming keyboard"
+  ],
+  "ter": [
+   "top gaming keyboards"
+  ],
+  "categoria": true
+ },
+ "/en/gaming-cases/": {
+  "kw": "pc case",
+  "vol": 49500,
+  "h1": "PC Cases for Gaming",
+  "title": "PC Cases for Gaming: ATX & Micro ATX | Monckey Gamer",
+  "meta": "PC cases for gaming: ATX and micro ATX computer cases with strong airflow, glass panels and RGB. Compare sizes and prices and buy on Amazon.",
+  "intro": "Pick your gaming PC case from our selection: ATX and micro ATX computer cases with good airflow, tempered glass and room for big graphics cards, with a direct Amazon link.",
+  "h2": "PC case: how to pick the right computer case",
+  "p": [
+   "Before buying a pc case, check your motherboard size: an ATX computer case fits most boards, while a <a href=\"/en/gaming-cases/micro-atx/\">micro ATX case</a> (mATX PC case) is more compact. Also check the maximum graphics card length and radiator support if you plan on liquid cooling.",
+   "Our PC cases include <a href=\"/en/gaming-cases/white/\">white</a> and <a href=\"/en/gaming-cases/black/\">black</a> options with <a href=\"/en/gaming-cases/high-airflow/\">high airflow</a>, and brands such as <a href=\"/en/gaming-cases/nzxt/\">NZXT</a>, <a href=\"/en/gaming-cases/corsair/\">Corsair</a>, <a href=\"/en/gaming-cases/lian-li/\">Lian Li</a> and <a href=\"/en/gaming-cases/cooler-master/\">Cooler Master</a>. Looking for a computer case on a budget? Sort by price or see the cases <a href=\"/en/gaming-cases/under-100/\">under $100</a>."
+  ],
+  "sec": [
+   "computer case",
+   "matx pc case"
+  ],
+  "ter": [],
+  "categoria": true
+ },
+ "/en/liquid-cooling/": {
+  "kw": "water cooling",
+  "vol": 33100,
+  "h1": "Water Cooling: AIO Liquid CPU Coolers",
+  "title": "Water Cooling: AIO Liquid CPU Coolers | Monckey Gamer",
+  "meta": "Water cooling for PC: 240mm and 360mm AIO liquid CPU coolers with ARGB and display. Compare radiators, brands and prices and buy on Amazon.",
+  "intro": "Browse the water cooling kits in our catalog: 240mm and 360mm AIO liquid coolers to keep your CPU cool, with up-to-date prices and a direct Amazon link.",
+  "h2": "AIO cooler: what to check before you buy",
+  "p": [
+   "An AIO cooler (all-in-one liquid cooler, also sold as a CPU water cooler) moves heat from the processor to a radiator with fans. Choosing between a <a href=\"/en/liquid-cooling/240-mm/\">240mm</a> and a <a href=\"/en/liquid-cooling/360-mm/\">360mm AIO</a> depends on your CPU and case: more radiator means more cooling surface and usually less noise at the same temperature.",
+   "A liquid cooled pc is also a showpiece: many AIO CPU coolers come <a href=\"/en/liquid-cooling/with-argb/\">with ARGB</a> or <a href=\"/en/liquid-cooling/with-display/\">with a display</a>. If you are not sure whether you need a water cooled pc, compare it with an <a href=\"/en/air-cooling/\">air cooler</a>: mid-range CPUs often run fine on a good one."
+  ],
+  "sec": [
+   "aio cooler",
+   "aio cpu cooler",
+   "water cooled pc"
+  ],
+  "ter": [
+   "liquid cooled pc",
+   "liquid cooler",
+   "cpu water cooler"
+  ],
+  "categoria": true
+ },
+ "/en/processors/": {
+  "kw": "cpu",
+  "vol": 110000,
+  "h1": "CPU: AMD Ryzen & Intel Core Processors",
+  "title": "CPU for Gaming: AMD Ryzen & Intel Core | Monckey Gamer",
+  "meta": "Gaming CPU and processors: AMD Ryzen 5, 7 and 9 and Intel Core i5 and Core Ultra. Compare cores, socket and price and buy direct on Amazon.",
+  "intro": "Compare the CPUs in our catalog: AMD Ryzen 5, 7 and 9 and Intel Core i5, i7 and Core Ultra processors, with cores, socket and up-to-date prices, all linked straight to Amazon.",
+  "h2": "Best CPU for gaming: how to choose a processor",
+  "p": [
+   "Picking a processor starts with the platform: <a href=\"/en/processors/am4-socket/\">AM4</a> and <a href=\"/en/processors/am5-socket/\">AM5 socket CPUs</a> from AMD and Intel Core chips need different motherboards. A <a href=\"/en/processors/6-core/\">6 core</a> or <a href=\"/en/processors/8-core/\">8 core</a> CPU is the usual choice for gaming.",
+   "Among AMD families, <a href=\"/en/processors/ryzen-5/\">Ryzen 5</a> gives the best value, <a href=\"/en/processors/ryzen-7/\">Ryzen 7</a> adds power and <a href=\"/en/processors/ryzen-9/\">Ryzen 9</a> targets editing and multitasking. On the Intel side, see <a href=\"/en/processors/core-i5/\">Core i5</a> and <a href=\"/en/processors/core-ultra/\">Core Ultra</a>. If you are after the best processor for gaming, a mid-range CPU paired with a strong graphics card is usually the best use of your budget."
+  ],
+  "sec": [
+   "ryzen",
+   "best cpu for gaming",
+   "best processor for gaming"
+  ],
+  "ter": [
+   "processor",
+   "cpu for gaming"
+  ],
+  "categoria": true
+ },
+ "/en/headsets/": {
+  "kw": "gaming headset",
+  "vol": 74000,
+  "h1": "Gaming Headset",
+  "title": "Gaming Headset: Wireless, Wired & Surround | Monckey Gamer",
+  "meta": "Gaming headset: wireless, wired, Bluetooth and surround sound headsets with mic. Compare brands and prices and buy direct on Amazon.",
+  "intro": "These are our gaming headsets: wired and wireless models with a mic, built to hear footsteps and keep in touch with your team, with a direct Amazon link.",
+  "h2": "Headset for gaming: which one fits you",
+  "p": [
+   "A comfortable headset for gaming with a clear mic matters in long sessions. Decide first between <a href=\"/en/headsets/wireless/\">wireless headphones</a>, which give you freedom, and <a href=\"/en/headsets/wired/\">wired headphones</a>, which never need charging, and check weight and ear cushions.",
+   "If you also use your phone, there are <a href=\"/en/headsets/with-bluetooth/\">Bluetooth headphones</a>; to pinpoint enemies, try <a href=\"/en/headsets/with-surround-sound/\">surround sound</a>. You can also filter by brand — <a href=\"/en/headsets/hyperx/\">HyperX</a>, <a href=\"/en/headsets/razer/\">Razer</a>, <a href=\"/en/headsets/corsair/\">Corsair</a> and <a href=\"/en/headsets/turtle-beach/\">Turtle Beach</a> — or by budget, from the best headset <a href=\"/en/headsets/under-50/\">under $50</a> to <a href=\"/en/headsets/under-100/\">under $100</a>."
+  ],
+  "sec": [
+   "headset for gaming",
+   "headset"
+  ],
+  "ter": [
+   "bluetooth headphones",
+   "headsets"
+  ],
+  "categoria": true
+ },
+ "/en/ssd/": {
+  "kw": "ssd",
+  "vol": 135000,
+  "h1": "SSD: NVMe & SATA Solid State Drives",
+  "title": "SSD: NVMe & SATA Solid State Drives | Monckey Gamer",
+  "meta": "SSD solid state drives: NVMe M.2 and SATA from 500GB to 4TB. Compare speed, capacity and price and buy direct on Amazon.",
+  "intro": "Compare the SSDs in our catalog: NVMe M.2 and SATA solid state drives from 500GB to 4TB, so your PC boots and loads games much faster. Direct Amazon links.",
+  "h2": "SSD drive: NVMe or SATA?",
+  "p": [
+   "A solid state drive is far faster than a mechanical hard drive and cuts game loading times. There are two main kinds: the cheaper <a href=\"/en/ssd/sata/\">SATA SSD</a> and the much faster <a href=\"/en/ssd/nvme/\">NVMe SSD</a>, which plugs straight into the motherboard (the M.2 SSD slot).",
+   "For capacity, a <a href=\"/en/ssd/500-gb-and-512-gb/\">512GB SSD</a> works for the system and a few games, while <a href=\"/en/ssd/1-tb/\">1TB</a> and <a href=\"/en/ssd/2-tb/\">2TB</a> are the most practical today. Some shoppers call it an SSD hard drive, but it is the same product. A good SSD for PC is simply the one that matches your motherboard slots and your budget."
+  ],
+  "sec": [
+   "solid state drive",
+   "m.2 ssd",
+   "ssd drive"
+  ],
+  "ter": [
+   "ssd for pc",
+   "ssd hard drive"
+  ],
+  "categoria": true
+ },
+ "/en/power-supplies/": {
+  "kw": "psu",
+  "vol": 74000,
+  "h1": "PC Power Supply (PSU)",
+  "title": "PC Power Supply (PSU): 650W to 1000W 80 Plus | Monckey Gamer",
+  "meta": "PC power supply (PSU) from 650W to 1000W, 80 Plus Bronze and Gold, fully modular. Compare each ATX power supply by wattage and price on Amazon.",
+  "intro": "Choose the PC power supply from our catalog: ATX PSUs from 650W to 1000W with 80 Plus certification, modular or not, with up-to-date prices and a direct Amazon link.",
+  "h2": "Power supply for PC: wattage and efficiency",
+  "p": [
+   "The power supply feeds your whole computer, so do not skimp. Add up your graphics card and CPU consumption and pick a PSU with some headroom: <a href=\"/en/power-supplies/650-w/\">650W</a> for mid-range builds, <a href=\"/en/power-supplies/750-w/\">750W</a> and <a href=\"/en/power-supplies/850-w/\">850W</a> for high-end builds, and <a href=\"/en/power-supplies/1000-w/\">1000W</a> for extreme setups.",
+   "The <a href=\"/en/power-supplies/80-plus-bronze/\">80 Plus Bronze</a> or <a href=\"/en/power-supplies/80-plus-gold/\">80 Plus Gold</a> label tells you about efficiency, and a <a href=\"/en/power-supplies/fully-modular/\">fully modular PSU</a> makes cabling easier. These are ATX power supplies for PC cases, not DC or 12V adapters, and not an uninterruptible power supply (UPS)."
+  ],
+  "sec": [
+   "pc power supply",
+   "power supply"
+  ],
+  "ter": [
+   "atx power supply"
+  ],
+  "categoria": true
+ },
+ "/en/ram-memory/": {
+  "kw": "ram",
+  "vol": 450000,
+  "h1": "RAM Memory: DDR4 & DDR5 Gaming RAM",
+  "title": "RAM Memory: DDR4 & DDR5 Gaming RAM | Monckey Gamer",
+  "meta": "RAM memory for gaming PC: DDR4 and DDR5 kits in 16GB and 32GB. Compare speed, latency and RAM price and buy direct on Amazon.",
+  "intro": "Compare the RAM in our catalog: DDR4 and DDR5 kits in 16GB and 32GB for gaming, with speed, latency, optional RGB and a direct Amazon link.",
+  "h2": "PC RAM: type, capacity and speed",
+  "p": [
+   "The pc ram you can buy here is <a href=\"/en/ram-memory/ddr4/\">DDR4</a> or <a href=\"/en/ram-memory/ddr5/\">DDR5 RAM</a>, and they are not interchangeable: your motherboard accepts only one. For capacity, <a href=\"/en/ram-memory/16-gb/\">16GB RAM</a> is the comfortable minimum for gaming, and <a href=\"/en/ram-memory/32-gb/\">32GB RAM</a> gives room for demanding games, streaming and multitasking.",
+   "Speed and latency also matter: <a href=\"/en/ram-memory/3200-mhz/\">3200MHz</a> and <a href=\"/en/ram-memory/3600-mhz/\">3600MHz</a> on DDR4, and <a href=\"/en/ram-memory/6000-mhz/\">6000MHz</a> on DDR5. If you are checking the RAM price, sort the list from low to high and choose the kit that fits your platform."
+  ],
+  "sec": [
+   "ram price",
+   "pc ram"
+  ],
+  "ter": [],
+  "categoria": true
+ },
+ "/en/air-cooling/": {
+  "kw": "cpu cooler",
+  "vol": 27100,
+  "h1": "CPU Coolers: Air Cooling for PC",
+  "title": "CPU Cooler: Air Cooling for PC | Monckey Gamer",
+  "meta": "CPU cooler for PC: single tower and dual tower air coolers for AMD and Intel CPUs. Compare brands and prices and buy direct on Amazon.",
+  "intro": "Compare the CPU coolers in our catalog: single tower and dual tower air coolers compatible with AMD and Intel, with a direct Amazon link.",
+  "h2": "CPU air cooler: what to look for",
+  "p": [
+   "A good cpu air cooler keeps your processor in check without the complexity of liquid cooling. Check socket compatibility, the cooler height against your case and the fan size. A cpu fan with a big heatsink usually gives the best balance of price and noise. In practice a good pc cooler is just a CPU heatsink plus a fan.",
+   "We have coolers from <a href=\"/en/air-cooling/cooler-master/\">Cooler Master</a>, <a href=\"/en/air-cooling/noctua/\">Noctua</a>, <a href=\"/en/air-cooling/arctic/\">ARCTIC</a> and <a href=\"/en/air-cooling/thermalright/\">Thermalright</a>. A <a href=\"/en/air-cooling/dual-tower/\">dual tower CPU cooler</a> adds headroom for more powerful processors, and if you want to compare, see our <a href=\"/en/liquid-cooling/\">liquid cooling</a>. Looking for the best CPU cooler for your budget? Sort by price."
+  ],
+  "sec": [
+   "cpu fan",
+   "cpu air cooler"
+  ],
+  "ter": [
+   "best cpu cooler",
+   "cpu heatsink",
+   "pc cooler"
+  ],
+  "categoria": true
+ },
+ "/en/gaming-mice/": {
+  "kw": "mouse",
+  "vol": 301000,
+  "h1": "Gaming Mouse: Wireless & Wired Gaming Mice",
+  "title": "Gaming Mouse: Wireless & Wired Mice | Monckey Gamer",
+  "meta": "Gaming mouse: wireless and wired gaming mice, ultralight, RGB and from brands like Logitech and Razer. Compare prices and buy direct on Amazon.",
+  "intro": "Compare the gaming mice in our catalog: wireless and wired models, ultralight or with extra MMO buttons, with accurate sensors and a direct Amazon link.",
+  "h2": "Gaming mouse: how to choose",
+  "p": [
+   "The best gaming mouse depends on your hand and your games. A <a href=\"/en/gaming-mice/wireless/\">wireless gaming mouse</a> cuts cables, while a <a href=\"/en/gaming-mice/wired/\">wired gaming mouse</a> removes any latency and never needs charging. Check weight, sensor DPI and ergonomics.",
+   "If you play MMOs, see the <a href=\"/en/gaming-mice/for-mmo/\">MMO mice</a>; for speed, the <a href=\"/en/gaming-mice/ultralight/\">ultralight gaming mouse</a>. We also carry <a href=\"/en/gaming-mice/logitech/\">Logitech</a>, <a href=\"/en/gaming-mice/razer/\">Razer</a>, <a href=\"/en/gaming-mice/steelseries/\">SteelSeries</a> and <a href=\"/en/gaming-mice/glorious/\">Glorious</a>. Whether you want the best gaming mouse, to compare the best gaming mice or just a mouse for gaming on a budget, sort by price and compare specs."
+  ],
+  "sec": [
+   "gaming mouse",
+   "mouse for gaming"
+  ],
+  "ter": [
+   "best gaming mouse",
+   "best gaming mice"
+  ],
+  "categoria": true
+ },
+ "/en/gaming-monitors/": {
+  "kw": "monitor",
+  "vol": 246000,
+  "h1": "Gaming Monitors",
+  "title": "Gaming Monitors: 4K, 240Hz, OLED & Ultrawide | Monckey Gamer",
+  "meta": "Gaming monitors: 4K, 1440p, 240Hz, curved, OLED and ultrawide. Compare panel, size and price of each gaming monitor and buy direct on Amazon.",
+  "intro": "These are our gaming monitors: 1080p, 1440p and 4K models with high refresh rate, IPS, VA or OLED panels, with a direct Amazon link. Compare size, Hz and price.",
+  "h2": "Gaming monitor: size, panel and refresh rate",
+  "p": [
+   "To pick a gaming monitor, focus on resolution, refresh rate and panel type. A <a href=\"/en/gaming-monitors/24-inch/\">24 inch monitor</a> or <a href=\"/en/gaming-monitors/27-inch/\">27 inch monitor</a> is the most popular choice, and for immersion there are <a href=\"/en/gaming-monitors/curved/\">curved</a> and <a href=\"/en/gaming-monitors/ultrawide/\">ultrawide monitors</a>.",
+   "For smoothness, a <a href=\"/en/gaming-monitors/240-hz-or-higher/\">240Hz monitor</a> helps in competitive shooters. Among panels, <a href=\"/en/gaming-monitors/ips-panel/\">IPS</a> stands out for color and <a href=\"/en/gaming-monitors/oled-panel/\">OLED</a> for contrast. Whether you want a PC monitor for work and play, the top gaming monitors for esports, the best gaming monitor or a cheap monitor for gaming (see those <a href=\"/en/gaming-monitors/under-150/\">under $150</a>), compare the list above."
+  ],
+  "sec": [
+   "gaming monitor",
+   "monitor for gaming",
+   "best gaming monitor"
+  ],
+  "ter": [
+   "pc monitor",
+   "top gaming monitors"
+  ],
+  "categoria": true
+ },
+ "/en/graphics-cards/": {
+  "kw": "geforce",
+  "vol": 135000,
+  "h1": "Graphics Cards (GPU): NVIDIA GeForce & AMD Radeon",
+  "title": "Graphics Cards: NVIDIA GeForce & AMD Radeon | Monckey Gamer",
+  "meta": "Graphics cards (GPU): NVIDIA GeForce RTX and AMD Radeon RX for 1080p, 1440p and 4K gaming. Compare VRAM and price and buy direct on Amazon.",
+  "intro": "Compare the graphics cards in our catalog: NVIDIA GeForce RTX and AMD Radeon RX GPUs for 1080p, 1440p and 4K gaming, with VRAM, up-to-date prices and a direct Amazon link.",
+  "h2": "Graphics card for gaming: how to choose a GPU",
+  "p": [
+   "The graphics card (GPU) decides your FPS. Choose by resolution: a <a href=\"/en/graphics-cards/for-1080p/\">1080p graphics card</a> needs less VRAM, while <a href=\"/en/graphics-cards/for-1440p/\">1440p</a> and <a href=\"/en/graphics-cards/for-4k/\">4K</a> need more memory and more power. Many shoppers also filter by video memory: <a href=\"/en/graphics-cards/with-8-gb/\">8GB</a>, <a href=\"/en/graphics-cards/with-12-gb/\">12GB</a> or <a href=\"/en/graphics-cards/with-16-gb/\">16GB</a>.",
+   "You can pick an <a href=\"/en/graphics-cards/nvidia-geforce/\">NVIDIA GeForce</a> card, with DLSS and ray tracing, or an <a href=\"/en/graphics-cards/amd-radeon/\">AMD Radeon</a> one, with great value per dollar. All the NVIDIA graphics cards and AMD graphics cards on the list (every NVIDIA GPU and AMD GPU) show price and specs, and you can set a budget with the <a href=\"/en/graphics-cards/under-400/\">graphics cards under $400</a>. Pair your graphics card for PC with a power supply that has enough wattage."
+  ],
+  "sec": [
+   "gpu",
+   "graphics card",
+   "nvidia graphics cards"
+  ],
+  "ter": [
+   "graphics card for pc",
+   "nvidia gpu",
+   "amd gpu",
+   "amd graphics cards"
+  ],
+  "categoria": true
+ }
+}

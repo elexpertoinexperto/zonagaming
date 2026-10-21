@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../components/TextoSEO.astro';
+import { seoDe } from '../../lib/seo-keywords.mjs';
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
@@ -13,8 +15,8 @@ import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astr
 import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
-const metaDescription = "La mejor Memoria RAM para PC gaming: DDR4 y DDR5 de alto rendimiento. Tarjeta RAM con velocidad real al mejor precio con envío Amazon.";
-const description = 'La mejor memoria RAM para gaming, streaming y multitarea. Encuentra tu tarjeta RAM DDR4 o DDR5 ideal con la mejor relación rendimiento/precio para tu PC.';
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/memoria-ram/')!;
 const productsData = productos['memoria-ram'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -27,7 +29,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Memoria RAM para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -37,8 +39,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }}>
   <section class="category-hero">
     <Breadcrumb catKey="memoria-ram" lang="es" />
-    <h1>Memoria RAM</h1>
-    <p class="category-description">{description}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} módulos de RAM disponibles</span>
       <span>Stock validado y envío seguro vía Amazon</span>
@@ -63,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija="memoria-ram" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="memoria-ram" lang="es">
     <section class="category-buying-guide">

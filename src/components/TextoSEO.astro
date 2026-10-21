@@ -1,0 +1,10 @@
+---
+// Bloque de texto de una categoría o subcategoría con sus keywords secundarias y terciarias (ver src/lib/seo-keywords.mjs).
+// Los párrafos pueden llevar enlaces internos (HTML escrito por nosotros, no entrada de usuario).
+const { h2, parrafos } = Astro.props as { h2: string; parrafos: string[] };
+---
+
+<section class="category-buying-guide texto-seo">
+  <h2>{h2}</h2>
+  {parrafos.map((p) => <p set:html={p} />)}
+</section>

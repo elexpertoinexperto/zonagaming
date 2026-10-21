@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../components/TextoSEO.astro';
+import { seoDe } from '../../lib/seo-keywords.mjs';
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
@@ -13,8 +15,8 @@ import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astr
 import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
-const metaDescription = "Los mejores monitores gamer 1080p, 1440p, 4K, OLED y ultrawide con alta tasa de refresco. Compara precios y compra monitores gaming con envío Amazon.";
-const description = 'Monitores gamer para cada presupuesto: Full HD de 240 Hz, QHD de 180 a 300 Hz, 4K, ultrawide curvos y paneles OLED con respuesta de 0.03 ms. Encuentra el monitor gaming ideal para tu PC y tu tarjeta gráfica.';
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/monitores/')!;
 const productsData = productos['monitores'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -27,7 +29,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Monitores Gamer: 1080p, 1440p, 4K y OLED | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -37,8 +39,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }}>
   <section class="category-hero">
     <Breadcrumb catKey="monitores" lang="es" />
-    <h1>Monitores Gamer</h1>
-    <p class="category-description">{description}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} monitores disponibles</span>
       <span>Stock validado y envío seguro vía Amazon</span>
@@ -63,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija="monitores" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="monitores" lang="es">
     <section class="category-buying-guide">

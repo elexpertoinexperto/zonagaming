@@ -9,6 +9,8 @@ import FiltrosNav from './FiltrosNav.astro';
 import Breadcrumb from './Breadcrumb.astro';
 import CategoriasRelacionadas from './CategoriasRelacionadas.astro';
 import AnalisisSubcategoria from './AnalisisSubcategoria.astro';
+import TextoSEO from './TextoSEO.astro';
+import { seoDe, tituloPagina, descripcionSub, introSub, textoSub } from '../lib/seo-keywords.mjs';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 
@@ -23,7 +25,10 @@ const base = isEn ? `/en/${catEn}` : `/${catKey}`;
 const urlCategoria = `${base}/`;
 const urlFiltro = `${base}/${slug}/`;
 const urlHome = isEn ? '/en/' : '/';
-const h1 = tituloFiltro(f, lang);
+const h1Base = tituloFiltro(f, lang);
+// Keyword principal (con volumen) de esta URL, si la investigación la tiene: manda en title, H1, meta e introducción
+const seo = seoDe(urlFiltro);
+const h1 = seo?.h1 ?? h1Base;
 const catNombre = isEn ? nombres.enTit : nombres.esTit;
 const plural = isEn ? nombres.en : nombres.es;
 const etiq = etiqueta(f, lang);
@@ -37,15 +42,18 @@ const caro = items[items.length - 1];
 const marcas = f.marcas.slice(0, 5);
 const listaMarcas = marcas.join(', ');
 
-const title = `${h1} | Monckey Gamer`;
-const description = isEn
+const title = seo ? tituloPagina(h1, catKey, lang) : `${h1} | Monckey Gamer`;
+const description = seo ? descripcionSub({ h1, total: f.total, min: f.min, max: f.max, lang }) : isEn
   ? `Compare ${f.total} ${plural} ${etiq}: from $${Math.round(f.min)} to $${Math.round(f.max)} USD. Specs, prices and direct Amazon links at Monckey Gamer.`
   : `Compara ${f.total} ${plural} ${etiq}: desde $${Math.round(f.min)} hasta $${Math.round(f.max)} USD. Specs, precios y compra directa en Amazon con Monckey Gamer.`;
 
-const intro = isEn
+const intro = seo ? introSub({ kw: seo.kw, total: f.total, min: precio(f.min), max: precio(f.max), lang }) : isEn
   ? `We have ${f.total} ${plural} ${etiq} in our catalog, with prices from ${precio(f.min)} to ${precio(f.max)} USD. All of them link straight to Amazon.`
   : `Tenemos ${f.total} ${plural} ${etiq} en el catálogo, con precios desde ${precio(f.min)} hasta ${precio(f.max)} USD. Todos enlazan directo a Amazon.`;
 const tip = isEn ? f.tipEn : f.tipEs;
+const textoKw = seo
+  ? textoSub({ kw: seo.kw, sec: seo.sec, ter: seo.ter, total: f.total, min: f.min, max: f.max, lang, hrefCategoria: urlCategoria, nombreCategoria: plural })
+  : null;
 
 const schema = [
   {
@@ -54,7 +62,7 @@ const schema = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: isEn ? 'Home' : 'Inicio', item: `${site}${urlHome}` },
       { '@type': 'ListItem', position: 2, name: catNombre, item: `${site}${urlCategoria}` },
-      { '@type': 'ListItem', position: 3, name: h1, item: `${site}${urlFiltro}` },
+      { '@type': 'ListItem', position: 3, name: h1Base, item: `${site}${urlFiltro}` },
     ],
   },
   {
@@ -126,10 +134,12 @@ const t = isEn
     ))}
   </section>
 
-  <AnalisisSubcategoria items={items} titulo={h1} plural={plural} etiqueta={etiq} base={base} lang={lang} />
+  <AnalisisSubcategoria items={items} titulo={h1Base} plural={plural} etiqueta={etiq} base={base} lang={lang} />
+
+  {textoKw && <TextoSEO h2={textoKw.h2} parrafos={textoKw.parrafos} />}
 
   <section class="category-buying-guide">
-    <h2>{t.quick}: {h1}</h2>
+    <h2>{t.quick}: {h1Base}</h2>
     <p>{tip}</p>
     <ul>
       <li><strong>{t.cheapest}:</strong> <a href={hrefProducto(barato)}>{barato.nombre}</a> — {precio(barato.precio)} USD</li>

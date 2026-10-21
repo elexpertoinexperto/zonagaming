@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../components/TextoSEO.astro';
+import { seoDe } from '../../lib/seo-keywords.mjs';
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
@@ -13,8 +15,8 @@ import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astr
 import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
-const metaDescription = "Los mejores procesadores de PC para gaming: AMD Ryzen e Intel Core. CPU de computadora de alto rendimiento al mejor precio con envío Amazon.";
-const description = 'Los mejores procesadores de PC para gaming, streaming y multitarea. Encuentra el CPU de computadora ideal para tu build con la mejor relación rendimiento/precio.';
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/procesadores/')!;
 const productsData = productos['procesadores'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -27,7 +29,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Procesadores de PC para Gaming | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -37,8 +39,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }}>
   <section class="category-hero">
     <Breadcrumb catKey="procesadores" lang="es" />
-    <h1>Procesadores de PC</h1>
-    <p class="category-description">{description}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} procesadores disponibles</span>
       <span>Stock validado y envío seguro vía Amazon</span>
@@ -63,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija="procesadores" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="procesadores" lang="es">
     <section class="category-buying-guide">

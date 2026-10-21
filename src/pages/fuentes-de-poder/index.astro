@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../components/TextoSEO.astro';
+import { seoDe } from '../../lib/seo-keywords.mjs';
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
@@ -13,8 +15,8 @@ import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astr
 import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
-const metaDescription = "Las mejores fuentes de poder para PC: certificadas 80+, modulares y eficientes. Fuente de poder para PC y fuente de alimentación PC al mejor precio con envío Amazon.";
-const description = 'Las mejores fuentes de poder para PC, modulares y certificadas 80+. Encuentra tu fuente de alimentación PC ideal para proteger tu build y entregar energía limpia y estable.';
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/fuentes-de-poder/')!;
 const productsData = productos['fuentes-de-poder'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -27,7 +29,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Fuentes de Poder para PC Gaming | Monckey Gamer" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -37,8 +39,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }}>
   <section class="category-hero">
     <Breadcrumb catKey="fuentes-de-poder" lang="es" />
-    <h1>Fuentes de Poder</h1>
-    <p class="category-description">{description}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} fuentes de poder disponibles</span>
       <span>Stock validado y envío seguro vía Amazon</span>
@@ -63,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija="fuentes-de-poder" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="fuentes-de-poder" lang="es">
     <section class="category-buying-guide">

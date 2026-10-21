@@ -1,0 +1,331 @@
+﻿URL;Keyword principal usada;Volumen;H1 nuevo;Nota;Principal del Excel;Vol Excel
+audifonos/con-bluetooth/;audifonos gamer bluetooth;50;Audífonos Gamer Bluetooth;;audifonos gamer bluetooth;50
+audifonos/con-cable/;audifonos gamer de cable;170;Audífonos Gamer de Cable;;audifonos gamer de cable;170
+audifonos/con-sonido-envolvente/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;audifonos gamer sonido envolvente;10
+audifonos/corsair/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;diadema gamer corsair;10
+audifonos/hyperx/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;audifonos hyperx 7.1;10
+audifonos/inalambricos/;audifonos gamer inalambricos;590;Audífonos Gamer Inalámbricos;;audifonos gamer inalambricos;590
+audifonos/por-menos-de-100/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;auriculares jbl quantum 100;10
+audifonos/razer/;audifonos gamer razer;30;Audífonos Gamer Razer;;audifonos gamer razer;30
+audifonos/turtle-beach/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;audifonos gamer turtle beach;10
+en/air-cooling/arctic/;arctic air cooler;6600;ARCTIC Air Cooler;;arctic air cooler;6600
+en/air-cooling/cooler-master/;cooler cpu cooler master;1600;Cooler Master CPU Cooler;principal Excel descartada (cooler master 212 evo, 3600): no encaja con la pagina;cooler master 212 evo;3600
+en/air-cooling/dual-tower/;dual tower cpu cooler;720;Dual Tower CPU Cooler;;dual tower cpu cooler;720
+en/air-cooling/noctua/;cooler cpu noctua;2900;Noctua CPU Cooler;principal Excel descartada (cooler noctua nh d15, 6600): no encaja con la pagina;cooler noctua nh d15;6600
+en/air-cooling/single-tower/;best single tower cpu cooler;30;Best Single Tower CPU Cooler;;best single tower cpu cooler;30
+en/air-cooling/thermalright/;thermalright cpu cooler;880;Thermalright CPU Cooler;principal Excel descartada (thermalright peerless assassin 120 se cpu air cooler, 1600): no encaja con la pagina;thermalright peerless assassin 120 se cpu air cooler;1600
+en/air-cooling/under-30/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;cpu cooler under 30;10
+en/air-cooling/under-50/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;best $50 cpu cooler;10
+en/air-cooling/white/;white cpu fan;480;White CPU Fan & Air Coolers;;white cpu fan;480
+en/air-cooling/with-argb/;argb cpu cooler;70;ARGB CPU Cooler;;argb cpu cooler;70
+en/air-cooling/with-display/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;corsair icue elite cpu cooler lcd display upgrade kit;140
+en/gaming-cases/black/;black case pc;1300;Black PC Case;;black case pc;1300
+en/gaming-cases/cooler-master/;cooler master cases;2900;Cooler Master Cases;;cooler master cases;2900
+en/gaming-cases/corsair/;corsair case;6600;Corsair Case;;corsair case;6600
+en/gaming-cases/high-airflow/;high airflow case;590;High Airflow Case;;high airflow case;590
+en/gaming-cases/lian-li/;lian li case;12100;Lian Li Case;;lian li case;12100
+en/gaming-cases/micro-atx/;micro atx case;12100;Micro ATX Case;;micro atx case;12100
+en/gaming-cases/nzxt/;nzxt case;9900;NZXT Case;;nzxt case;9900
+en/gaming-cases/under-100/;best case under 100;110;Best PC Case under $100;;best case under 100;110
+en/gaming-cases/under-60/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;pc case under 60;10
+en/gaming-cases/white/;case pc white;4400;White PC Case;;case pc white;4400
+en/gaming-cases/with-front-usb-c/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;pc case with usb c front panel;40
+en/gaming-mice/for-mmo/;mmo mice;6600;MMO Mice;principal Excel descartada (g600 mmo gaming mouse, 8100): no encaja con la pagina;g600 mmo gaming mouse;8100
+en/gaming-mice/glorious/;glorious mouse;5400;Glorious Mouse;;glorious mouse;5400
+en/gaming-mice/logitech/;logitech mice;74000;Logitech Mice;;logitech mice;74000
+en/gaming-mice/over-100/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;100 dollar gaming mouse;10
+en/gaming-mice/razer/;razer mice;27100;Razer Mice;;razer mice;27100
+en/gaming-mice/steelseries/;steelseries mice;6600;SteelSeries Mice;;steelseries mice;6600
+en/gaming-mice/ultralight/;ultralight gaming mouse;880;Ultralight Gaming Mouse;;ultralight gaming mouse;880
+en/gaming-mice/under-40/;best gaming mice under 40;40;Best Gaming Mice under $40;;best gaming mice under 40;40
+en/gaming-mice/under-70/;best gaming mouse under 70;20;Best Gaming Mouse under $70;;best gaming mouse under 70;20
+en/gaming-mice/wired/;wired gaming mouse;12100;Wired Gaming Mouse;;wired gaming mouse;12100
+en/gaming-mice/wireless/;wireless mice;49500;Wireless Gaming Mouse;;wireless mice;49500
+en/gaming-monitors/180-hz/;180hz monitor;2900;180Hz Monitor;;180hz monitor;2900
+en/gaming-monitors/24-inch/;24 inch monitor;22200;24 Inch Monitor;;24 inch monitor;22200
+en/gaming-monitors/240-hz-or-higher/;240hz monitor;9900;240Hz Monitor;;240hz monitor;9900
+en/gaming-monitors/27-inch/;27 inch monitor;22200;27 Inch Monitor;;27 inch monitor;22200
+en/gaming-monitors/2k-qhd-1440p/;1440p monitor;27100;1440p Monitor;;1440p monitor;27100
+en/gaming-monitors/34-inch/;34 inch monitor;4400;34 Inch Monitor;;34 inch monitor;4400
+en/gaming-monitors/4k/;4k monitor;33100;4K Monitor;;4k monitor;33100
+en/gaming-monitors/asus/;asus monitor;27100;ASUS Monitor;;asus monitor;27100
+en/gaming-monitors/curved/;curved monitor;40500;Curved Monitor;;curved monitor;40500
+en/gaming-monitors/full-hd-1080p/;1080p monitor;14800;1080p Monitor;;1080p monitor;14800
+en/gaming-monitors/ips-panel/;gaming monitor ips;2400;Gaming Monitor IPS;;gaming monitor ips;2400
+en/gaming-monitors/koorui/;koorui monitor;5400;KOORUI Monitor;;koorui monitor;5400
+en/gaming-monitors/lg/;lg monitor;22200;LG Monitor;;lg monitor;22200
+en/gaming-monitors/oled-panel/;oled pc monitor;74000;OLED PC Monitor;;oled pc monitor;74000
+en/gaming-monitors/samsung/;samsung monitor;27100;Samsung Monitor;;samsung monitor;27100
+en/gaming-monitors/ultrawide/;ultrawide monitor;12100;Ultrawide Monitor;;ultrawide monitor;12100
+en/gaming-monitors/under-150/;best monitor under 150;140;Best Monitor under $150;;best monitor under 150;140
+en/gaming-monitors/under-250/;best monitor under 250;40;Best Monitor under $250;;best monitor under 250;40
+en/gaming-monitors/va-panel/;monitor va;1000;Monitor VA;;monitor va;1000
+en/graphics-cards/amd-radeon/;amd radeon;14800;AMD Radeon: Graphics Cards;;amd radeon;14800
+en/graphics-cards/asrock/;asrock gpu;480;ASRock GPU;;asrock gpu;480
+en/graphics-cards/asus/;asus graphics card;2400;ASUS Graphics Card;;asus graphics card;2400
+en/graphics-cards/for-1080p/;1080p gaming graphics card;6600;1080p Gaming Graphics Card;;1080p gaming graphics card;6600
+en/graphics-cards/for-1440p/;1440p gaming graphics card;6600;1440p Gaming Graphics Card;;1440p gaming graphics card;6600
+en/graphics-cards/for-4k/;4k gaming graphics card;2900;4K Gaming Graphics Card;;4k gaming graphics card;2900
+en/graphics-cards/gigabyte/;gigabyte graphics card;1000;Gigabyte Graphics Card;;gigabyte graphics card;1000
+en/graphics-cards/nvidia-geforce/;nvidia geforce;40500;NVIDIA GeForce: Graphics Cards;;nvidia geforce;40500
+en/graphics-cards/over-1000/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;210 gq 1000 rx;10
+en/graphics-cards/radeon-rx-9060-xt/;radeon rx 9060 xt;4400;Radeon RX 9060 XT: Graphics Cards;;radeon rx 9060 xt;4400
+en/graphics-cards/radeon-rx-9070/;radeon rx 9070;1900;Radeon RX 9070: Graphics Cards;;radeon rx 9070;1900
+en/graphics-cards/rtx-5060/;rtx 5060;60500;RTX 5060: Graphics Cards;;rtx 5060;60500
+en/graphics-cards/rtx-5060-ti/;rtx 5060 ti;14800;RTX 5060 Ti: Graphics Cards;;rtx 5060 ti;14800
+en/graphics-cards/rtx-5070/;rtx 5070;74000;RTX 5070: Graphics Cards;;rtx 5070;74000
+en/graphics-cards/under-200/;best gpu for 200;590;Best GPU for $200;;best gpu for 200;590
+en/graphics-cards/under-400/;best gpu under 400;320;Best GPU under $400;;best gpu under 400;320
+en/graphics-cards/under-600/;best gpu under 600;70;Best GPU under $600;;best gpu under 600;70
+en/graphics-cards/with-12-gb/;12gb graphics card;720;12GB Graphics Card;principal Excel descartada (nvidia rtx 3060 12gb, 1600): no encaja con la pagina;nvidia rtx 3060 12gb;1600
+en/graphics-cards/with-16-gb/;16gb gpu;1300;16GB GPU;;16gb gpu;1300
+en/graphics-cards/with-6-gb/;6gb graphics card;210;6GB Graphics Card;principal Excel descartada (nvidia rtx a2000 6gb, 260): no encaja con la pagina;nvidia rtx a2000 6gb;260
+en/graphics-cards/with-8-gb/;8gb graphics card;880;8GB Graphics Card;;8gb graphics card;880
+en/headsets/corsair/;corsair headset;9900;Corsair Headset;;corsair headset;9900
+en/headsets/eksa/;eksa headset;590;EKSA Headset;;eksa headset;590
+en/headsets/hyperx/;hyperx headset;18100;HyperX Headset;;hyperx headset;18100
+en/headsets/over-150/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;headphones under $150;20
+en/headsets/razer/;razer headset;22200;Razer Headset;;razer headset;22200
+en/headsets/turtle-beach/;turtle beach headset;40500;Turtle Beach Headset;;turtle beach headset;40500
+en/headsets/under-100/;best headphone under 100;1300;Best Headphone under $100;;best headphone under 100;1300
+en/headsets/under-50/;best gaming headset under 50;260;Best Gaming Headset under $50;;best gaming headset under 50;260
+en/headsets/wired/;wired headphones;74000;Wired Headphones;;wired headphones;74000
+en/headsets/wireless/;wireless headphones;110000;Wireless Headphones;;wireless headphones;110000
+en/headsets/with-bluetooth/;bluetooth headphones;60500;Bluetooth Headphones;;bluetooth headphones;60500
+en/headsets/with-surround-sound/;surround sound headphones;880;Surround Sound Headphones;;surround sound headphones;880
+en/keyboards/60-percent/;60 keyboard;18100;60 Keyboard: 60% Gaming Keyboards;;60 keyboard;18100
+en/keyboards/75-percent/;75 keyboard;14800;75 Keyboard: 75% Gaming Keyboards;;75 keyboard;14800
+en/keyboards/aula/;aula keyboard;18100;AULA Keyboard;;aula keyboard;18100
+en/keyboards/full-size/;full size keyboard;9900;Full Size Keyboard;;full size keyboard;9900
+en/keyboards/hot-swap/;hot swap keyboard;2900;Hot Swap Keyboard;;hot swap keyboard;2900
+en/keyboards/mechanical/;mechanical keyboard;90500;Mechanical Keyboard;;mechanical keyboard;90500
+en/keyboards/razer/;razer keyboard;27100;Razer Keyboard;;razer keyboard;27100
+en/keyboards/redragon/;redragon keyboard;12100;Redragon Keyboard;;redragon keyboard;12100
+en/keyboards/steelseries/;steelseries keyboard;12100;SteelSeries Keyboard;;steelseries keyboard;12100
+en/keyboards/tkl-tenkeyless/;tkl keyboard;8100;TKL Keyboard;;tkl keyboard;8100
+en/keyboards/under-40/;40 dollar keyboard;30;40 Dollar Keyboard: Gaming Keyboards under $40;;40 dollar keyboard;30
+en/keyboards/under-70/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;70 dollar keyboard;10
+en/keyboards/wired/;wired keyboard;5400;Wired Keyboard;;wired keyboard;5400
+en/keyboards/wireless/;wireless keyboard;33100;Wireless Keyboard;;wireless keyboard;33100
+en/liquid-cooling/240-mm/;240mm aio;1300;240mm AIO Liquid Cooler;;240mm aio;1300
+en/liquid-cooling/360-mm/;360mm aio;1900;360mm AIO Liquid Cooler;;360mm aio;1900
+en/liquid-cooling/arctic/;arctic aio;880;ARCTIC AIO Liquid Cooler;principal Excel descartada (arctic liquid freezer ii 360, 3600): no encaja con la pagina;arctic liquid freezer ii 360;3600
+en/liquid-cooling/msi/;msi cooler;320;MSI Cooler: MSI Liquid Cooling;;msi cooler;320
+en/liquid-cooling/thermalright/;thermalright aio;1300;Thermalright AIO Liquid Cooler;;thermalright aio;1300
+en/liquid-cooling/white/;white cpu cooler;480;White CPU Cooler: White AIO Liquid Cooling;;white cpu cooler;480
+en/liquid-cooling/with-argb/;argb aio;30;ARGB AIO Liquid Cooler;;argb aio;30
+en/liquid-cooling/with-display/;cpu cooler with display;90;CPU Cooler with Display: AIO Liquid Cooling;;cpu cooler with display;90
+en/liquid-cooling/without-rgb/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;rgb cpu cooler;170
+en/power-supplies/1000-w/;1000w power supply;3600;1000W Power Supply;;1000w power supply;3600
+en/power-supplies/650-w/;650w power supply;1000;650W Power Supply;;650w power supply;1000
+en/power-supplies/750-w/;750w psu;1600;750W PSU;;750w psu;1600
+en/power-supplies/80-plus-bronze/;80 plus bronze power supply;720;80 Plus Bronze Power Supply;;80 plus bronze power supply;720
+en/power-supplies/80-plus-gold/;80 plus gold power supply;1600;80 Plus Gold Power Supply;;80 plus gold power supply;1600
+en/power-supplies/850-w/;850w psu;3600;850W PSU;;850w psu;3600
+en/power-supplies/asrock/;asrock psu;140;ASRock PSU;;asrock psu;140
+en/power-supplies/corsair/;corsair psu;5400;Corsair PSU;;corsair psu;5400
+en/power-supplies/fully-modular/;fully modular psu;1600;Fully Modular PSU;;fully modular psu;1600
+en/power-supplies/msi/;msi power supply;720;MSI Power Supply;;msi power supply;720
+en/power-supplies/under-100/;best power supply under 100;20;Best Power Supply under $100;principal Excel descartada (100 000 mah power bank, 720): no encaja con la pagina;100 000 mah power bank;720
+en/power-supplies/under-70/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;best psu under 70;10
+en/power-supplies/white/;white psu;260;White PSU;;white psu;260
+en/processors/6-core/;6 core cpu;390;6 Core CPU;principal Excel descartada (amd ryzen 5 3600 6 core processor, 1300): no encaja con la pagina;amd ryzen 5 3600 6 core processor;1300
+en/processors/8-core/;8 core cpu;720;8 Core CPU;principal Excel descartada (amd ryzen 7 5800x 8 core processor, 880): no encaja con la pagina;amd ryzen 7 5800x 8 core processor;880
+en/processors/am4-socket/;am4 socket cpu;8100;AM4 Socket CPU;;am4 socket cpu;8100
+en/processors/am5-socket/;am5 socket cpu;320;AM5 Socket CPU;;am5 socket cpu;320
+en/processors/amd/;amd cpu;9900;AMD CPU;principal Excel descartada (amd ryzen, 12100): no encaja con la pagina;amd ryzen;12100
+en/processors/core-i5/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;;
+en/processors/core-ultra/;core ultra;480;Core Ultra;;core ultra;480
+en/processors/intel/;intel cpu;9900;Intel CPU;principal Excel descartada (intel core i7, 12100): no encaja con la pagina;intel core i7;12100
+en/processors/ryzen-5/;ryzen 5;8100;Ryzen 5: Processors;principal Excel descartada (ryzen 5 5600x, 33100): no encaja con la pagina;ryzen 5 5600x;33100
+en/processors/ryzen-7/;ryzen 7;14800;Ryzen 7: Processors;principal Excel descartada (ryzen 7 7800x3d, 33100): no encaja con la pagina;ryzen 7 7800x3d;33100
+en/processors/ryzen-9/;ryzen 9;9900;Ryzen 9: Processors;;ryzen 9;9900
+en/processors/under-150/;best cpu under 150;30;Best CPU under $150;;best cpu under 150;30
+en/processors/under-250/;best cpu under 250;20;Best CPU under $250;principal Excel descartada (hp 250 g8 i5, 390): no encaja con la pagina;hp 250 g8 i5;390
+en/processors/with-12-or-more-cores/;12 core cpu;320;12 Core CPU;principal Excel descartada (amd ryzen 9 7900x 12 core processor, 880): no encaja con la pagina;amd ryzen 9 7900x 12 core processor;880
+en/ram-memory/16-gb/;16gb ram;33100;16GB RAM;;16gb ram;33100
+en/ram-memory/32-gb/;32gb ram;49500;32GB RAM;;32gb ram;49500
+en/ram-memory/3200-mhz/;3200mhz ram;480;3200MHz RAM;;3200mhz ram;480
+en/ram-memory/3600-mhz/;3600mhz ram;210;3600MHz RAM;principal Excel descartada (corsair vengeance ddr4 32gb 3600mhz, 320): no encaja con la pagina;corsair vengeance ddr4 32gb 3600mhz;320
+en/ram-memory/6000-mhz/;6000mhz ram;140;6000MHz RAM;principal Excel descartada (ddr5 6000mhz ram, 880): no encaja con la pagina;ddr5 6000mhz ram;880
+en/ram-memory/amd-expo-compatible/;amd expo ram;720;AMD EXPO RAM;;amd expo ram;720
+en/ram-memory/corsair/;corsair ram;9900;Corsair RAM;;corsair ram;9900
+en/ram-memory/ddr4/;ddr4 ram;74000;DDR4 RAM;;ddr4 ram;74000
+en/ram-memory/ddr4-16-gb/;ddr4 ram 16gb;6600;DDR4 RAM 16GB;;ddr4 ram 16gb;6600
+en/ram-memory/ddr5/;ddr5 ram;110000;DDR5 RAM;;ddr5 ram;110000
+en/ram-memory/ddr5-32-gb/;ddr5 ram 32gb;27100;DDR5 RAM 32GB;;ddr5 ram 32gb;27100
+en/ram-memory/gigastone/;gigastone ram;140;Gigastone RAM;;gigastone ram;140
+en/ram-memory/in-white/;white ram;1300;White RAM;;white ram;1300
+en/ram-memory/oloy/;oloy ram;880;OLOY RAM;;oloy ram;880
+en/ram-memory/teamgroup/;teamgroup ram;1300;TEAMGROUP RAM;;teamgroup ram;1300
+en/ram-memory/with-rgb/;rgb ram;880;RGB RAM;;rgb ram;880
+en/ssd/1-tb/;1tb ssd;49500;1TB SSD;;1tb ssd;49500
+en/ssd/2-tb/;2tb ssd;33100;2TB SSD;;2tb ssd;33100
+en/ssd/4-tb/;4tb ssd;22200;4TB SSD;;4tb ssd;22200
+en/ssd/500-gb-and-512-gb/;512gb ssd;5400;512GB SSD;;512gb ssd;5400
+en/ssd/crucial/;crucial ssd;5400;Crucial SSD;;crucial ssd;5400
+en/ssd/lexar/;lexar ssd;1600;Lexar SSD;;lexar ssd;1600
+en/ssd/nvme/;nvme ssd;40500;NVMe SSD;;nvme ssd;40500
+en/ssd/nvme-1-tb/;1tb nvme;5400;1TB NVMe SSD;;1tb nvme;5400
+en/ssd/nvme-2-tb/;2tb nvme;6600;2TB NVMe SSD;;2tb nvme;6600
+en/ssd/samsung/;samsung ssd;14800;Samsung SSD;principal Excel descartada (samsung 990 pro ssd, 33100): no encaja con la pagina;samsung 990 pro ssd;33100
+en/ssd/sata/;sata ssd;33100;SATA SSD;;sata ssd;33100
+en/ssd/under-100/;best ssd under 100;30;Best SSD under $100;;best ssd under 100;30
+en/ssd/under-200/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;best ssd under 200;10
+fuentes-de-poder/80-plus-bronze/;fuente de poder 80 plus bronze;30;Fuente de Poder 80 Plus Bronze;principal Excel descartada (fuente de poder 600w 80 plus bronze, 90): no encaja con la pagina;fuente de poder 600w 80 plus bronze;90
+fuentes-de-poder/80-plus-gold/;fuente de poder 80 plus gold;20;Fuente de Poder 80 Plus Gold;principal Excel descartada (fuente de poder 750w 80 plus gold, 110): no encaja con la pagina;fuente de poder 750w 80 plus gold;110
+fuentes-de-poder/asrock/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;asrock fuente de poder;10
+fuentes-de-poder/blancas/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;fuente de poder blanca;10
+fuentes-de-poder/corsair/;corsair fuente de poder;90;Fuente de Poder Corsair;;corsair fuente de poder;90
+fuentes-de-poder/de-1000-w/;fuente de poder 1000w;90;Fuente de Poder 1000W;;fuente de poder 1000w;90
+fuentes-de-poder/de-650-w/;fuente de poder 650w;210;Fuente de Poder 650W;;fuente de poder 650w;210
+fuentes-de-poder/de-750-w/;fuente de poder 750w;320;Fuente de Poder 750W;;fuente de poder 750w;320
+fuentes-de-poder/de-850-w/;fuente de poder 850w;90;Fuente de Poder 850W;;fuente de poder 850w;90
+fuentes-de-poder/msi/;fuente de poder msi;20;Fuente de Poder MSI;;fuente de poder msi;20
+fuentes-de-poder/totalmente-modulares/;fuente de poder modular;70;Fuente de Poder Modular;;fuente de poder modular;70
+gabinetes-gamer/blancos/;gabinete blanco;70;Gabinete Blanco;;gabinete blanco;70
+gabinetes-gamer/cooler-master/;cooler master gabinetes;70;Gabinetes Cooler Master;;cooler master gabinetes;70
+gabinetes-gamer/corsair/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;case gaming corsair;10
+gabinetes-gamer/lian-li/;gabinetes lian li;40;Gabinetes Lian Li;;gabinetes lian li;40
+gabinetes-gamer/micro-atx/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;gabinete atx micro atx;10
+gabinetes-gamer/nzxt/;gabinetes nzxt;30;Gabinetes NZXT;;gabinetes nzxt;30
+gabinetes-gamer/por-menos-de-100/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;gabinete montech air 100 lite black;10
+memoria-ram/blancas/;ram blanca;20;RAM Blanca;;ram blanca;20
+memoria-ram/compatibles-con-amd-expo/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;memoria ram amd expo;10
+memoria-ram/con-rgb/;memoria ram rgb;20;Memoria RAM RGB;;memoria ram rgb;20
+memoria-ram/corsair/;ram corsair;90;RAM Corsair;;ram corsair;90
+memoria-ram/ddr4/;memoria ram ddr4;1300;Memoria RAM DDR4;;memoria ram ddr4;1300
+memoria-ram/ddr4-de-16-gb/;ram ddr4 16gb;1000;RAM DDR4 16GB;;ram ddr4 16gb;1000
+memoria-ram/ddr5/;ddr5 memoria ram;1600;Memoria RAM DDR5;principal Excel descartada (16 gb ram ddr5, 1900): no encaja con la pagina;16 gb ram ddr5;1900
+memoria-ram/ddr5-de-32-gb/;32gb ram ddr5;720;32GB RAM DDR5;;32gb ram ddr5;720
+memoria-ram/de-16-gb/;memoria ram 16gb;1600;Memoria RAM 16GB;principal Excel descartada (16 gb ram ddr 5, 1900): no encaja con la pagina;16 gb ram ddr 5;1900
+memoria-ram/de-32-gb/;32 gb memoria ram;390;Memoria RAM de 32 GB;;32 gb memoria ram;390
+memoria-ram/de-3200-mhz/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ram sodimm ddr4 8gb 3200mhz;40
+memoria-ram/de-3600-mhz/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ram de 3600mhz;10
+memoria-ram/de-6000-mhz/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;memoria ram 6000mhz;10
+memoria-ram/gigastone/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ram gigastone;10
+memoria-ram/oloy/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ram oloy 8gb;10
+memoria-ram/teamgroup/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ram teamgroup;10
+monitores/2k-qhd-1440p/;monitor pc 1440p;40;Monitor PC 1440p;principal Excel descartada (monitor 1440p 144hz, 50): no encaja con la pagina;monitor 1440p 144hz;50
+monitores/4k/;monitor gamer 4k;170;Monitor Gamer 4K;principal Excel descartada (monitor 32 pulgadas 4k, 320): no encaja con la pagina;monitor 32 pulgadas 4k;320
+monitores/asus/;monitor asus;590;Monitor ASUS;;monitor asus;590
+monitores/curvos/;monitor curvo;1300;Monitor Curvo;;monitor curvo;1300
+monitores/de-180-hz/;monitor de 180hz;20;Monitor de 180Hz;;monitor de 180hz;20
+monitores/de-24-pulgadas/;monitor 24 pulgadas;1900;Monitor 24 Pulgadas;;monitor 24 pulgadas;1900
+monitores/de-240-hz-o-mas/;monitor 240hz;390;Monitor 240Hz;;monitor 240hz;390
+monitores/de-27-pulgadas/;monitor 27 pulgadas;2900;Monitor 27 Pulgadas;;monitor 27 pulgadas;2900
+monitores/de-34-pulgadas/;monitor 34 pulgadas;260;Monitor 34 Pulgadas;;monitor 34 pulgadas;260
+monitores/full-hd-1080p/;monitores 1080p;110;Monitores 1080p;;monitores 1080p;110
+monitores/koorui/;monitores koorui;70;Monitores KOORUI;;monitores koorui;70
+monitores/lg/;monitor lg;880;Monitor LG;;monitor lg;880
+monitores/panel-ips/;monitor ips;320;Monitor IPS;;monitor ips;320
+monitores/panel-oled/;monitor oled;2400;Monitor OLED;;monitor oled;2400
+monitores/panel-va/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;monitores va;10
+monitores/samsung/;monitor samsung;1600;Monitor Samsung;;monitor samsung;1600
+monitores/ultrawide/;monitor ultrawide;720;Monitor Ultrawide;;monitor ultrawide;720
+mouse/con-cable/;mouse con cable;170;Mouse con Cable;;mouse con cable;170
+mouse/glorious/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;glorious mouse gamer;10
+mouse/inalambricos/;mouse inalambrico;9900;Mouse Inalámbrico;;mouse inalambrico;9900
+mouse/logitech/;mouse logitech;4400;Mouse Logitech;;mouse logitech;4400
+mouse/para-mmo/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;mouse para mmo;10
+mouse/por-menos-de-70/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;mouse pad 70 x 30;10
+mouse/razer/;mouse razer;720;Mouse Razer;;mouse razer;720
+mouse/steelseries/;mouse steelseries;90;Mouse SteelSeries;;mouse steelseries;90
+mouse/ultraligeros/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;mouse ultraligero;10
+procesadores/amd/;amd procesador;590;Procesador AMD;;amd procesador;590
+procesadores/core-i5/;procesador core i5;170;Procesador Core i5;principal Excel descartada (intel i core i5, 2400): no encaja con la pagina;intel i core i5;2400
+procesadores/core-ultra/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;intel core i5;2400
+procesadores/de-12-o-mas-nucleos/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;i7 12 nucleos;10
+procesadores/de-6-nucleos/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;i7 6 nucleos;10
+procesadores/de-8-nucleos/;procesador 8 nucleos;30;Procesador 8 Núcleos;;procesador 8 nucleos;30
+procesadores/intel/;intel procesador;880;Procesador Intel;principal Excel descartada (i7 intel, 1600): no encaja con la pagina;i7 intel;1600
+procesadores/ryzen-5/;procesador ryzen 5;720;Procesador Ryzen 5;;procesador ryzen 5;720
+procesadores/ryzen-7/;procesador ryzen 7;880;Procesador Ryzen 7;principal Excel descartada (ryzen 7 5700x 3d, 1300): no encaja con la pagina;ryzen 7 5700x 3d;1300
+procesadores/ryzen-9/;procesador ryzen 9;210;Procesador Ryzen 9;;procesador ryzen 9;210
+procesadores/socket-am4/;cpu socket am4;170;CPU Socket AM4;;cpu socket am4;170
+procesadores/socket-am5/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;procesador socket am5;10
+procesadores/socket-lga1700/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ryzen socket am4;10
+refrigeracion-liquida/arctic/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;arctic refrigeracion liquida;10
+refrigeracion-liquida/blancas/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;refrigeracion liquida blanca;10
+refrigeracion-liquida/con-argb/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;refrigeracion liquida cougar aqua 240 argb;10
+refrigeracion-liquida/con-pantalla/;refrigeracion liquida con pantalla;70;Refrigeración Líquida con Pantalla;;refrigeracion liquida con pantalla;70
+refrigeracion-liquida/de-240-mm/;refrigeracion liquida 240mm;50;Refrigeración Líquida 240mm;;refrigeracion liquida 240mm;50
+refrigeracion-liquida/de-360-mm/;refrigeracion liquida 360mm;40;Refrigeración Líquida 360mm;;refrigeracion liquida 360mm;40
+refrigeracion-liquida/msi/;refrigeracion liquida msi;20;Refrigeración Líquida MSI;;refrigeracion liquida msi;20
+refrigeracion-liquida/sin-rgb/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;enfriamiento liquido rgb;10
+refrigeracion-liquida/thermalright/;refrigeracion liquida thermalright;30;Refrigeración Líquida Thermalright;;refrigeracion liquida thermalright;30
+refrigeracion-normal/arctic/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;arctic disipador;10
+refrigeracion-normal/blancos/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;disipador cpu blanco;10
+refrigeracion-normal/con-argb/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;disipador argb;10
+refrigeracion-normal/con-pantalla/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;disipador cpu con pantalla;10
+refrigeracion-normal/cooler-master/;disipador cooler master;90;Disipador Cooler Master;;disipador cooler master;90
+refrigeracion-normal/de-doble-torre/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;disipador doble torre;10
+refrigeracion-normal/noctua/;disipador noctua;40;Disipador Noctua;;disipador noctua;40
+ssd/crucial/;ssd crucial;90;SSD Crucial;;ssd crucial;90
+ssd/de-1-tb/;disco ssd 1tb;880;Disco SSD 1TB;;disco ssd 1tb;880
+ssd/de-2-tb/;disco duro 2tb ssd;170;Disco Duro 2TB SSD;;disco duro 2tb ssd;170
+ssd/de-4-tb/;disco ssd 4tb;30;Disco SSD 4TB;principal Excel descartada (sata ssd 4tb, 30): no encaja con la pagina;sata ssd 4tb;30
+ssd/de-500-gb-y-512-gb/;disco 512 gb ssd;140;Disco 512 GB SSD;principal Excel descartada (disco m2 512gb, 140): no encaja con la pagina;disco m2 512gb;140
+ssd/lexar/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;lexar ssd 240;10
+ssd/nvme/;disco nvme;210;Disco NVMe;principal Excel descartada (ssd m 2 nvme, 390): no encaja con la pagina;ssd m 2 nvme;390
+ssd/nvme-de-1-tb/;ssd nvme 1tb;320;SSD NVMe 1TB;;ssd nvme 1tb;320
+ssd/nvme-de-2-tb/;ssd m 2 nvme 2tb;50;SSD M.2 NVMe 2TB;;ssd m 2 nvme 2tb;50
+ssd/pcie-4-0/;ssd pcie 4.0;20;SSD PCIe 4.0;principal Excel descartada (pcie nvme, 30): no encaja con la pagina;pcie nvme;30
+ssd/pcie-5-0/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;ssd pcie gen5;10
+ssd/samsung/;ssd samsung;140;SSD Samsung;;ssd samsung;140
+ssd/sata/;disco ssd sata;210;Disco SSD SATA;principal Excel descartada (ssd sata 2.5, 320): no encaja con la pagina;ssd sata 2.5;320
+tarjetas-graficas/amd-radeon/;grafica amd radeon;90;Tarjeta Gráfica AMD Radeon;;grafica amd radeon;90
+tarjetas-graficas/asrock/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;asrock tarjeta grafica;10
+tarjetas-graficas/asus/;asus tarjeta grafica;70;Tarjeta Gráfica ASUS;;asus tarjeta grafica;70
+tarjetas-graficas/de-12-gb/;tarjeta grafica 12gb;20;Tarjeta Gráfica 12GB;;tarjeta grafica 12gb;20
+tarjetas-graficas/de-16-gb/;tarjeta grafica 16gb;40;Tarjeta Gráfica 16GB;;tarjeta grafica 16gb;40
+tarjetas-graficas/de-6-gb/;tarjeta grafica 6gb;20;Tarjeta Gráfica 6GB;;tarjeta grafica 6gb;20
+tarjetas-graficas/de-8-gb/;tarjeta grafica 8gb;50;Tarjeta Gráfica 8GB;principal Excel descartada (tarjeta ram 8gb, 90): no encaja con la pagina;tarjeta ram 8gb;90
+tarjetas-graficas/gigabyte/;gigabyte tarjeta grafica;30;Tarjeta Gráfica Gigabyte;;gigabyte tarjeta grafica;30
+tarjetas-graficas/nvidia-geforce/;tarjeta de video nvidia geforce;70;Tarjeta de Video NVIDIA GeForce;principal Excel descartada (nvidia geforce rtx 3050 precio, 70): no encaja con la pagina;nvidia geforce rtx 3050 precio;70
+tarjetas-graficas/para-1080p/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;grafica 1080p;10
+tarjetas-graficas/para-1440p/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;grafica para 1440p;10
+tarjetas-graficas/para-4k/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;grafica 4k;10
+tarjetas-graficas/por-menos-de-200/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;mejor tarjeta grafica por menos de 200 euros;10
+tarjetas-graficas/radeon-rx-9060-xt/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;radeon rx 9060 xt precio;10
+tarjetas-graficas/radeon-rx-9070/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;radeon rx 9070 precio;10
+tarjetas-graficas/rtx-5060/;rtx 5060 precio;260;RTX 5060 Precio: Tarjetas Gráficas;;rtx 5060 precio;260
+tarjetas-graficas/rtx-5060-ti/;rtx 5060 ti precio;50;RTX 5060 Ti Precio: Tarjetas Gráficas;;rtx 5060 ti precio;50
+tarjetas-graficas/rtx-5070/;rtx 5070 precio;210;RTX 5070 Precio: Tarjetas Gráficas;;rtx 5070 precio;210
+teclados/aula/;aula teclado;260;Teclado AULA;;aula teclado;260
+teclados/compactos-60/;teclado 60;590;Teclado 60%;;teclado 60;590
+teclados/compactos-75/;teclado 75;320;Teclado 75%;;teclado 75;320
+teclados/con-cable/;teclado con cable;70;Teclado con Cable;;teclado con cable;70
+teclados/de-tamano-completo/;teclado completo;170;Teclado Completo;;teclado completo;170
+teclados/hot-swap/;teclado hot swap;20;Teclado Hot Swap;;teclado hot swap;20
+teclados/inalambricos/;teclado inalambrico;5400;Teclado Inalámbrico;;teclado inalambrico;5400
+teclados/magneticos-rapid-trigger/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;teclado magnetico rapid trigger;10
+teclados/mecanicos/;teclado mecanico;8100;Teclado Mecánico;;teclado mecanico;8100
+teclados/razer/;teclado razer;390;Teclado Razer;;teclado razer;390
+teclados/redragon/;teclado redragon;1300;Teclado Redragon;;teclado redragon;1300
+teclados/steelseries/;steelseries teclado;70;Teclado SteelSeries;;steelseries teclado;70
+teclados/tkl-sin-teclado-numerico/;;;;SIN CAMBIOS: todas las keywords del Excel tienen volumen <=10 o no encajan con la pagina;teclado tkl;140
+teclados/;teclados gamer;3600;Teclados Gamer;CATEGORIA (texto a mano);;
+refrigeracion-liquida/;refrigeracion liquida;1000;Refrigeración Líquida para PC;CATEGORIA (texto a mano);;
+gabinetes-gamer/;gabinetes pc;1000;Gabinetes PC: Gabinete Gamer ATX y Micro ATX;CATEGORIA (texto a mano);;
+memoria-ram/;memoria ram;14800;Memoria RAM Gamer DDR4 y DDR5;CATEGORIA (texto a mano);;
+audifonos/;audifonos gamer;3600;Audífonos Gamer;CATEGORIA (texto a mano);;
+refrigeracion-normal/;disipador de calor de pc;480;Disipador de Calor de PC: Refrigeración por Aire;CATEGORIA (texto a mano);;
+fuentes-de-poder/;fuente de poder;5400;Fuente de Poder para PC;CATEGORIA (texto a mano);;
+procesadores/;procesador;6600;Procesadores para PC;CATEGORIA (texto a mano);;
+ssd/;disco duro solido;3600;SSD: Disco Duro Sólido para PC;CATEGORIA (texto a mano);;
+tarjetas-graficas/;tarjeta grafica;6600;Tarjeta Gráfica para PC;CATEGORIA (texto a mano);;
+monitores/;monitor gamer;2900;Monitor Gamer;CATEGORIA (texto a mano);;
+mouse/;mouse gamer;4400;Mouse Gamer;CATEGORIA (texto a mano);;
+en/keyboards/;gaming keyboard;60500;Gaming Keyboards;CATEGORIA (texto a mano);;
+en/gaming-cases/;pc case;49500;PC Cases for Gaming;CATEGORIA (texto a mano);;
+en/liquid-cooling/;water cooling;33100;Water Cooling: AIO Liquid CPU Coolers;CATEGORIA (texto a mano);;
+en/processors/;cpu;110000;CPU: AMD Ryzen & Intel Core Processors;CATEGORIA (texto a mano);;
+en/headsets/;gaming headset;74000;Gaming Headset;CATEGORIA (texto a mano);;
+en/ssd/;ssd;135000;SSD: NVMe & SATA Solid State Drives;CATEGORIA (texto a mano);;
+en/power-supplies/;psu;74000;PC Power Supply (PSU);CATEGORIA (texto a mano);;
+en/ram-memory/;ram;450000;RAM Memory: DDR4 & DDR5 Gaming RAM;CATEGORIA (texto a mano);;
+en/air-cooling/;cpu cooler;27100;CPU Coolers: Air Cooling for PC;CATEGORIA (texto a mano);;
+en/gaming-mice/;mouse;301000;Gaming Mouse: Wireless & Wired Gaming Mice;CATEGORIA (texto a mano);;
+en/gaming-monitors/;monitor;246000;Gaming Monitors;CATEGORIA (texto a mano);;
+en/graphics-cards/;geforce;135000;Graphics Cards (GPU): NVIDIA GeForce & AMD Radeon;CATEGORIA (texto a mano);;

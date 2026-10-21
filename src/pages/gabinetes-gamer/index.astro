@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../components/TextoSEO.astro';
+import { seoDe } from '../../lib/seo-keywords.mjs';
 import SiteLayout from '../../components/SiteLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
 import FiltrosNav from '../../components/FiltrosNav.astro';
@@ -13,8 +15,8 @@ import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astr
 import EnlazadoInterno from '../../components/EnlazadoInterno.astro';
 import { faqEs } from '../../data/faq';
 
-const metaDescription = "Los mejores gabinetes gamer para PC: mid-tower y full-tower con airflow, vidrio templado y RGB. Gabinete para PC al mejor precio con envío Amazon.";
-const description = 'Los mejores gabinetes gamer y gabinetes para PC con máximo flujo de aire, panel de vidrio templado y espacio para builds potentes. Encuentra el gabinete ideal para tu setup.';
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/gabinetes-gamer/')!;
 const productsData = productos['gabinetes-gamer'] as unknown as Producto[];
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,
@@ -27,7 +29,7 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title="Gabinetes/Chasis Gamer para PC ¡A buenos precios!" description={metaDescription} robots="index, follow" schema={{
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow" schema={{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
@@ -37,8 +39,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }}>
   <section class="category-hero">
     <Breadcrumb catKey="gabinetes-gamer" lang="es" />
-    <h1>Gabinetes Gamer</h1>
-    <p class="category-description">{description}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} gabinetes disponibles</span>
       <span>Stock validado y envío seguro vía Amazon</span>
@@ -63,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija="gabinetes-gamer" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="gabinetes-gamer" lang="es">
     <section class="category-buying-guide">

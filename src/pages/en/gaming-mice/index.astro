@@ -1,4 +1,6 @@
 ---
+import TextoSEO from '../../../components/TextoSEO.astro';
+import { seoDe } from '../../../lib/seo-keywords.mjs';
 import SiteLayout from '../../../components/SiteLayout.astro';
 import Breadcrumb from '../../../components/Breadcrumb.astro';
 import FiltrosNav from '../../../components/FiltrosNav.astro';
@@ -16,6 +18,8 @@ import { CATS_EN } from '../../../i18n/en';
 const catKey = 'mouse';
 const categoria = 'gaming-mice';
 const cat = CATS_EN[catKey];
+// SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
+const seo = seoDe('/en/gaming-mice/')!;
 const productsData = productos[catKey] as any[];
 
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
@@ -29,11 +33,11 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
 }));
 ---
 
-<SiteLayout title={cat.pageTitle} description={cat.metaDescription} robots="index, follow">
+<SiteLayout title={seo.title} description={seo.meta} robots="index, follow">
   <section class="category-hero">
     <Breadcrumb catKey="mouse" lang="en" />
-    <h1>{cat.heroTitle}</h1>
-    <p class="category-description">{cat.heroDescription}</p>
+    <h1>{seo.h1}</h1>
+    <p class="category-description">{seo.intro}</p>
     <div class="category-meta">
       <span>{productsData.length} products available</span>
       <span>Verified stock and secure shipping</span>
@@ -58,6 +62,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <Comparador categoriaFija={catKey} lang="en" />
+
+  <TextoSEO h2={seo.h2} parrafos={seo.p} />
 
   <EnlazadoInterno cat="mouse" lang="en">
     <section class="category-buying-guide">

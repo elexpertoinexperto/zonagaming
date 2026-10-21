@@ -100,3 +100,13 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - **Subcategoría** (`AnalisisSubcategoria.astro`): resumen del mercado (rango, mediana, marcas), 3 opciones destacadas, tabla comparativa de todos sus
   productos y 3 preguntas frecuentes con schema FAQPage. Los datos son de ESA selección.
 - Un producto o categoría nueva funciona sin tocar nada; para una categoría con reglas nuevas, añade su función en `REGLAS`.
+
+## SEO por keyword (`src/data/seo-keywords.json` + `src/lib/seo-keywords.mjs`)
+
+- Viene de la investigación de palabras clave por URL (Excel «mapa por URL»): por cada categoría y subcategoría con keywords de **volumen >10**
+  (el 10 es el piso de Google Ads = «sin volumen real») hay una keyword principal, y secundarias/terciarias relevantes. Informe URL por URL, con las
+  principales del Excel que se descartaron por no encajar (p. ej. «uninterruptible power supply»): `tools/seo-keywords-informe.csv`.
+- **Categorías (24)**: title, H1, meta description, introducción y bloque de texto (`TextoSEO.astro`, con enlaces a sus subcategorías) escritos a mano en el JSON.
+- **Subcategorías**: el JSON solo guarda keyword, H1 y secundarias/terciarias; title («H1 al mejor precio | Monckey Gamer», ≤62), meta (con nº de modelos y rango de
+  precios reales), introducción y bloque de texto los construye `seo-keywords.mjs` en cada build → al añadir productos no hay nada que mantener.
+- Una URL que no está en el JSON conserva su SEO de siempre (las 60 sin keyword con volumen). Para cambiar una keyword o un H1: editar su entrada en el JSON.
