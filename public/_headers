@@ -13,3 +13,9 @@
   Content-Type: application/xml; charset=utf-8
 /sitemap-blog-en.xml
   Content-Type: application/xml; charset=utf-8
+
+# Índice del buscador: solo lo usa la lupa, no debe indexarse
+/buscar-es.json
+  X-Robots-Tag: noindex
+/buscar-en.json
+  X-Robots-Tag: noindex

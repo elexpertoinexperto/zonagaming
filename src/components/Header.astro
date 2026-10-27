@@ -38,7 +38,13 @@ const t = {
   recommender: isEn ? UI_EN.nav.recommender : 'Recomendador',
   blog: isEn ? UI_EN.nav.blog : 'Blog',
   contact: isEn ? UI_EN.nav.contact : 'Contacto',
+  search: isEn ? 'Search' : 'Buscar',
+  searchPlaceholder: isEn ? 'Search products, brands or categories…' : 'Busca productos, marcas o categorías…',
+  close: isEn ? 'Close' : 'Cerrar',
+  hint: isEn ? 'to move · Enter to open · Esc to close' : 'para moverte · Enter para abrir · Esc para cerrar',
 };
+
+const iconoLupa = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>';
 ---
 
 <header>
@@ -46,6 +52,7 @@ const t = {
     <img src="/logo.png" alt="Monckey Gamer" class="brand-logo" />
     Monckey Gamer
   </a>
+  <button class="search-btn search-btn--bar" type="button" data-abrir-buscador hidden aria-label={t.search} aria-haspopup="dialog" set:html={iconoLupa}></button>
   <button
     class="menu-toggle"
     id="mobile-menu-toggle"
@@ -86,6 +93,9 @@ const t = {
     <a href={`${prefix}/blog/`}>{t.blog}</a>
     <a href={`${prefix}/contacto/`}>{t.contact}</a>
 
+    <!-- Lupa: abre el buscador (catálogo primero, luego productos) -->
+    <button class="search-btn search-btn--nav" type="button" data-abrir-buscador hidden aria-label={`${t.search} (/)`} title={`${t.search} (/)`} aria-haspopup="dialog" set:html={iconoLupa}></button>
+
     <!-- Selector de idioma -->
     <div class="lang-switch" aria-label="Idioma / Language">
       <a href={esPath} class={`lang-btn${!isEn ? ' lang-active' : ''}`} title="Español" aria-label="Versión en español">
@@ -97,6 +107,35 @@ const t = {
     </div>
   </nav>
 </header>
+
+<dialog id="buscador" class="buscador" data-lang={isEn ? 'en' : 'es'} aria-label={t.search}>
+  <div class="bq-panel">
+    <div class="bq-campo">
+      <span class="bq-lupa" set:html={iconoLupa}></span>
+      <input
+        id="buscador-input"
+        type="search"
+        role="combobox"
+        aria-expanded="true"
+        aria-controls="buscador-lista"
+        aria-autocomplete="list"
+        placeholder={t.searchPlaceholder}
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        enterkeyhint="search"
+      />
+      <button type="button" class="bq-cerrar" data-cerrar aria-label={t.close}>Esc</button>
+    </div>
+    <ul id="buscador-lista" class="bq-lista" role="listbox" aria-label={t.search}></ul>
+    <p id="buscador-estado" class="bq-estado" aria-live="polite"></p>
+    <p class="bq-pista"><kbd>↑</kbd> <kbd>↓</kbd> {t.hint}</p>
+  </div>
+</dialog>
+
+<script>
+  import '../scripts/buscador.ts';
+</script>
 
 <script>
   const btn = document.getElementById('componentes-btn');
@@ -309,6 +348,143 @@ const t = {
     color: inherit;
   }
 
+  /* Lupa */
+  .search-btn {
+    display: inline-grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid var(--accent-line);
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    cursor: pointer;
+    transition: background 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  }
+  .search-btn[hidden] { display: none; }
+  .search-btn:hover,
+  .search-btn:focus-visible {
+    background: rgba(124, 255, 203, 0.2);
+    box-shadow: 0 0 0 3px rgba(124, 255, 203, 0.12);
+  }
+  .search-btn--nav { margin-left: 6px; }
+  .search-btn--bar { display: none; margin-left: auto; margin-right: -6px; }
+
+  /* Diálogo del buscador */
+  :global(dialog.buscador) {
+    width: min(680px, calc(100vw - 24px));
+    max-width: none;
+    margin: 12vh auto 0;
+    padding: 0;
+    border: 1px solid rgba(124, 255, 203, 0.22);
+    border-radius: var(--r-lg);
+    background: #07111d;
+    color: var(--text);
+    box-shadow: 0 30px 80px -10px rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+  }
+  :global(dialog.buscador)::backdrop {
+    background: rgba(2, 6, 12, 0.72);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+  :global(dialog.buscador[open]) { animation: bq-in 0.18s var(--ease); }
+  @keyframes bq-in { from { opacity: 0; transform: translateY(-8px) scale(0.99); } to { opacity: 1; transform: none; } }
+
+  :global(.bq-panel) { display: flex; flex-direction: column; max-height: min(76vh, 640px); }
+  :global(.bq-campo) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  :global(.bq-lupa) { color: var(--accent); display: inline-flex; flex: 0 0 auto; }
+  :global(.bq-campo input) {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 1.05rem;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  :global(.bq-campo input::-webkit-search-cancel-button) { display: none; }
+  :global(.bq-campo input::placeholder) { color: var(--text-dim); }
+  :global(.bq-cerrar) {
+    flex: 0 0 auto;
+    padding: 4px 8px;
+    border: 1px solid var(--line-strong);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-dim);
+    font: inherit;
+    font-size: 0.72rem;
+    cursor: pointer;
+  }
+  :global(.bq-lista) {
+    list-style: none;
+    margin: 0;
+    padding: 6px 8px 10px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(124, 255, 203, 0.4) transparent;
+  }
+  :global(.bq-grupo) {
+    padding: 12px 10px 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  :global(.bq-item) {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 10px;
+    border-radius: var(--r-sm);
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  :global(.bq-item.bq-sel) { background: var(--accent-soft); color: var(--text); }
+  :global(.bq-ico) {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex: 0 0 auto;
+    border: 1px solid var(--accent-line);
+    border-radius: 8px;
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  :global(.bq-txt) { display: flex; flex-direction: column; min-width: 0; gap: 2px; }
+  :global(.bq-t) { font-size: 0.95rem; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  :global(.bq-t mark) { background: transparent; color: var(--accent); font-weight: 700; }
+  :global(.bq-s) { font-size: 0.78rem; color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  :global(.bq-vacio) { padding: 18px 12px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; }
+  :global(.bq-estado) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); margin: 0; }
+  :global(.bq-pista) {
+    margin: 0;
+    padding: 9px 16px;
+    border-top: 1px solid var(--line);
+    font-size: 0.74rem;
+    color: var(--text-dim);
+  }
+  :global(.bq-pista kbd) {
+    padding: 1px 6px;
+    border: 1px solid var(--line-strong);
+    border-radius: 5px;
+    font: inherit;
+    font-size: 0.72rem;
+  }
+
   /* Selector de idioma (solo letras ES / EN) */
   .lang-switch {
     display: inline-flex;
@@ -363,6 +539,13 @@ const t = {
     .menu-toggle {
       display: block;
     }
+
+    /* En móvil la lupa va fuera del menú, junto a la hamburguesa */
+    .search-btn--nav { display: none; }
+    .search-btn--bar { display: inline-grid; }
+    .search-btn--bar[hidden] { display: none; }
+    :global(dialog.buscador) { margin-top: 8vh; }
+    :global(.bq-pista) { display: none; }
 
     .main-nav {
       position: absolute;

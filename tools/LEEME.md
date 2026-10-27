@@ -110,3 +110,12 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - **Subcategorías**: el JSON solo guarda keyword, H1 y secundarias/terciarias; title («H1 al mejor precio | Monckey Gamer», ≤62), meta (con nº de modelos y rango de
   precios reales), introducción y bloque de texto los construye `seo-keywords.mjs` en cada build → al añadir productos no hay nada que mantener.
 - Una URL que no está en el JSON conserva su SEO de siempre (las 60 sin keyword con volumen). Para cambiar una keyword o un H1: editar su entrada en el JSON.
+
+## Buscador (lupa de la cabecera)
+
+- La lupa (`Header.astro`) abre un diálogo nativo `<dialog>` con el buscador (`src/scripts/buscador.ts`). Atajos: `/` o Ctrl/Cmd+K; ↑ ↓ Enter Esc.
+- **Prioridad de resultados**: 1.º Catálogo (categorías y subcategorías) · 2.º Productos concretos · 3.º Guías del blog. Sin texto muestra las categorías.
+  Sin tildes ni mayúsculas; todas las palabras deben aparecer (título, marca, especificaciones o keywords del SEO).
+- El índice (`/buscar-es.json` y `/buscar-en.json`, ~23 KB gzip cada uno) lo genera el build desde el catálogo real (`src/lib/buscador-indice.ts`):
+  al añadir productos, subcategorías o artículos aparecen solos. Se descarga solo al abrir la lupa (o al pasar el ratón por ella). Sin imágenes a propósito.
+- Para las campañas manda eventos a GTM/GA4: `site_search` (término + nº de resultados), `site_search_no_results` y `site_search_select` (destino).
