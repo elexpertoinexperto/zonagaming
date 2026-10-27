@@ -47,6 +47,8 @@ const t = isEn
       contact: UI_EN.footer.contact,
       sitemap: UI_EN.footer.sitemap,
       made: UI_EN.footer.made,
+      follow: 'Follow us',
+      followDesc: 'Deals and Amazon links on our channels',
     }
   : {
       tagline1: 'El setup perfecto',
@@ -59,6 +61,8 @@ const t = isEn
       contact: 'Contacto',
       sitemap: 'Mapa del sitio',
       made: 'Hecho para gamers, por gamers',
+      follow: 'Síguenos',
+      followDesc: 'Ofertas y enlaces de Amazon en nuestros canales',
     };
 ---
 
@@ -74,6 +78,20 @@ const t = isEn
       <div class="footer-brand-badge">
         <span class="badge-dot"></span>
         {t.badge}
+      </div>
+      <div class="footer-social" aria-label={t.follow}>
+        <span class="footer-social-title">{t.follow}</span>
+        <p class="footer-social-desc">{t.followDesc}</p>
+        <div class="footer-social-links">
+          <a href="https://www.tiktok.com/@monckeygamer1" target="_blank" rel="noopener me" aria-label="TikTok @monckeygamer1">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.9 4.9 0 0 1-3-1.7 4.9 4.9 0 0 1-1.2-3.1h-3.3v13.3a2.8 2.8 0 1 1-2-2.7V9.2a6.1 6.1 0 1 0 5.3 6V9.4a8.1 8.1 0 0 0 4.7 1.5V7.6a4.9 4.9 0 0 1-.5-.9z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://www.youtube.com/@monckeygamer" target="_blank" rel="noopener me" aria-label="YouTube @monckeygamer">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            <span>YouTube</span>
+          </a>
+        </div>
       </div>
     </div>
 
@@ -203,6 +221,49 @@ const t = isEn
     height: 6px;
     border-radius: 50%;
     background: var(--accent);
+  }
+
+  /* Redes sociales */
+  .footer-social-title {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .footer-social-desc {
+    margin: 0 0 12px;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    max-width: 34ch;
+  }
+
+  .footer-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    text-decoration: none;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+  }
+
+  .footer-social-links a:hover,
+  .footer-social-links a:focus-visible {
+    color: var(--accent);
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
   }
 
   /* Navegación */
