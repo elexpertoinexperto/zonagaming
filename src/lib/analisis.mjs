@@ -13,11 +13,13 @@ const num = (s) => {
 const spec = (p, ...nombres) => {
   for (const [k, v] of Object.entries(p.especificaciones || {})) {
     const kn = quitaTildes(k);
-    if (nombres.some((n) => kn.startsWith(quitaTildes(n)))) return String(v);
+    if (nombres.some((n) => kn.startsWith(quitaTildes(n)))) return /^n\/[da]$/i.test(String(v).trim()) ? '' : String(v);
   }
   return '';
 };
-const valido = (v) => v && String(v).trim().toUpperCase() !== 'N/D';
+// «Sin RGB», «Sin incluir», «Sin Microfono»… son una ausencia, no un dato: no deben salir como si fueran una característica
+const AUSENTE = /^(n\/[da]|sin\s+(incluir|rgb|micr[oó]fono)|not included|no\s+(rgb|microphone))$/i;
+const valido = (v) => v && !AUSENTE.test(String(v).trim());
 export const dinero = (n) => `$${n.toFixed(2)}`;
 export const corto = (nombre, n = 58) => (nombre.length > n ? nombre.slice(0, n).replace(/\s+\S*$/, '') + '…' : nombre);
 
@@ -71,7 +73,8 @@ const REGLAS = {
     else if (nucleos >= 6) pros.push(t(`${nucleos} núcleos: suficiente para juego y uso diario con un coste contenido.`, `${nucleos} cores: enough for gaming and daily use at a low cost.`));
     if (turbo >= 5) pros.push(t(`Turbo de hasta ${turbo} GHz: ritmo alto en juegos que dependen de un solo núcleo.`, `Up to ${turbo} GHz boost: strong pace in games that lean on a single core.`));
     if (/X3D/i.test(p.nombre)) pros.push(t('Caché 3D V-Cache: de lo mejor para FPS en juegos.', '3D V-Cache: among the best for in-game FPS.'));
-    if (tdp && tdp <= 65) pros.push(t(`TDP de ${tdp} W: se enfría bien con un disipador de aire sencillo.`, `${tdp} W TDP: runs fine with a simple air cooler.`));
+    // El TDP de 65 W es la potencia base: con 12+ hilos de gama alta el procesador consume bastante más en turbo
+    if (tdp && tdp <= 65 && nucleos <= 10) pros.push(t(`TDP de ${tdp} W: se enfría bien con un disipador de aire sencillo.`, `${tdp} W TDP: runs fine with a simple air cooler.`));
     if (tdp >= 125) contras.push(t(`TDP de ${tdp} W: conviene un disipador de doble torre o una refrigeración líquida.`, `${tdp} W TDP: a dual-tower air cooler or liquid cooling is advisable.`));
     if (nucleos && nucleos <= 6) contras.push(t(`${nucleos} núcleos: justo para producción pesada (render, compilación).`, `${nucleos} cores: tight for heavy production work (rendering, compiling).`));
     if (/AM4/.test(plataforma)) contras.push(t('Plataforma AM4: no admite DDR5 y su camino de mejoras ya es limitado.', 'AM4 platform: no DDR5 support and a limited upgrade path.'));
@@ -188,7 +191,7 @@ const REGLAS = {
     if (mm >= 360) pros.push(t(`Radiador de ${mm} mm: máxima capacidad de enfriamiento para procesadores de gama alta.`, `${mm} mm radiator: maximum cooling capacity for high-end processors.`));
     else if (mm >= 280) pros.push(t(`Radiador de ${mm} mm: muy buen equilibrio entre enfriamiento y tamaño.`, `${mm} mm radiator: a very good balance of cooling and size.`));
     else if (mm) pros.push(t(`Radiador de ${mm} mm: cabe en la mayoría de gabinetes.`, `${mm} mm radiator: fits most cases.`));
-    if (/pantalla|screen|IPS/i.test(rgb)) pros.push(t('Incluye pantalla en el bloque: muestra temperaturas o animaciones.', 'Includes a display on the block for temperatures or animations.'));
+    if (/pantalla|screen|display|LCD|IPS/i.test(rgb)) pros.push(t('Incluye pantalla en el bloque: muestra temperaturas o animaciones.', 'Includes a display on the block for temperatures or animations.'));
     else if (valido(rgb)) pros.push(t(`Iluminación ${rgb} para combinar con el resto del equipo.`, `${rgb} lighting to match the rest of your build.`));
     if (mm >= 360) contras.push(t('Exige un gabinete con soporte para radiador de 360 mm (frontal o superior).', 'Requires a case with 360 mm radiator support (front or top).'));
     contras.push(t('Más complejo de montar que un disipador de aire y con bomba que puede hacer ruido con el tiempo.', 'More complex to install than an air cooler, and the pump can get noisy over time.'));
@@ -241,7 +244,6 @@ const REGLAS = {
     if (/\d/.test(vent) && valido(vent)) pros.push(t(`Ventiladores incluidos (${vent}): no tendrás que comprarlos aparte.`, `Fans included (${vent}): nothing extra to buy.`));
     if (/C\b|Type-C|USB-C/i.test(puerto)) pros.push(t('USB-C en el frontal: conexión moderna a mano.', 'Front USB-C: modern connectivity within reach.'));
     if (/Micro-ATX/i.test(formato)) contras.push(t('Formato Micro-ATX: solo admite placas Micro-ATX o Mini-ITX.', 'Micro-ATX form factor: only fits Micro-ATX or Mini-ITX boards.'));
-    if (vidrio && !malla) contras.push(t('Frente de vidrio: se ve bien pero ventila menos que uno de malla.', 'Glass front: looks great but ventilates less than mesh.'));
     if (!valido(puerto)) contras.push(t('La ficha no indica los puertos frontales; confírmalo en la tienda.', 'The spec sheet does not list front ports; confirm in the store.'));
     return {
       pros, contras,
@@ -249,7 +251,9 @@ const REGLAS = {
       nopara: t('Si montas una tarjeta gráfica muy larga o un radiador de 360 mm, revisa las medidas máximas del fabricante.', 'If you plan a very long graphics card or a 360 mm radiator, check the manufacturer\'s maximum clearances.'),
       faqs: [
         { q: t('¿Qué placas base admite?', 'Which motherboards does it support?'), a: t(`Es un gabinete ${formato || 'N/D'}; consulta la ficha para el listado exacto de formatos de placa.`, `It is a ${formato || 'N/A'} case; see the spec sheet for the exact motherboard formats.`) },
-        { q: t('¿Trae ventiladores?', 'Does it include fans?'), a: valido(vent) ? t(`Sí: ${vent}.`, `Yes: ${vent}.`) : t('La ficha no lo detalla; confírmalo antes de comprar.', 'The spec sheet does not say; confirm before buying.') },
+        { q: t('¿Trae ventiladores?', 'Does it include fans?'), a: valido(vent) ? t(`Sí: ${vent}.`, `Yes: ${vent}.`)
+          : AUSENTE.test(vent.trim()) && !/n\/[da]/i.test(vent) ? t('No: este gabinete se vende sin ventiladores incluidos.', 'No: this case is sold without fans included.')
+          : t('La ficha no lo detalla; confírmalo antes de comprar.', 'The spec sheet does not say; confirm before buying.') },
       ],
     };
   },
@@ -259,11 +263,14 @@ const REGLAS = {
     const con = spec(p, 'Conex');
     const sw = spec(p, 'Switches');
     const layout = spec(p, 'Layout');
-    const inal = /BT|2\.4|Tri|Bluetooth/i.test(con);
+    const inal = /Inal|Wireless|BT|2\.4|Tri|Bluetooth|HyperSpeed|Lightspeed/i.test(con);
+    const multi = /BT|Bluetooth|Tri/i.test(con); // varios modos de conexión (2,4 GHz / Bluetooth / cable)
     const pros = [], contras = [];
     if (/Hall|Magn/i.test(tipo + sw)) pros.push(t('Interruptores magnéticos: punto de activación ajustable y respuesta muy rápida.', 'Magnetic switches: adjustable actuation point and very fast response.'));
     if (/hot.?swap/i.test(sw)) pros.push(t('Hot-swap: cambias los switches sin soldar.', 'Hot-swap: change switches without soldering.'));
-    if (inal) pros.push(t(`Conexión flexible (${con}): cable, 2,4 GHz o Bluetooth según el momento.`, `Flexible connectivity (${con}): wired, 2.4 GHz or Bluetooth as needed.`));
+    const soloInal = /^(Inal\S*|Wireless)$/i.test(con.trim()); // «Inalámbrico» a secas: no repetirlo entre paréntesis
+    if (multi) pros.push(t(`Conexión flexible (${con}): varios modos de conexión según el momento.`, `Flexible connectivity (${con}): several connection modes as needed.`));
+    else if (inal) pros.push(t(`Conexión inalámbrica${soloInal ? '' : ` (${con})`}: sin cable sobre el escritorio.`, `Wireless connection${soloInal ? '' : ` (${con})`}: no cable across the desk.`));
     if (/60|65|75|TKL/i.test(layout + tipo)) pros.push(t(`Formato compacto (${layout || tipo}): libera espacio para mover el mouse.`, `Compact layout (${layout || tipo}): frees up room for mouse movement.`));
     if (/60%/.test(layout + tipo)) contras.push(t('60 %: sin teclas de función, flechas ni bloque numérico dedicados.', '60%: no dedicated function keys, arrows or numpad.'));
     else if (/65|75|TKL/i.test(layout + tipo)) contras.push(t('Sin bloque numérico: algunos trabajos de oficina lo echan de menos.', 'No numpad: some office work will miss it.'));
@@ -271,10 +278,10 @@ const REGLAS = {
     if (inal) contras.push(t('Inalámbrico: hay que cargar la batería de vez en cuando.', 'Wireless: you will need to charge the battery from time to time.'));
     return {
       pros, contras,
-      para: t(`Teclado ${tipo || 'gamer'} en formato ${layout || 'N/D'}. Pensado para jugar con respuesta rápida${inal ? ' y usar también en otros dispositivos' : ''}.`, `${tipo || 'Gaming'} keyboard in ${layout || 'N/A'} layout. Built for gaming with fast response${inal ? ' and multi-device use' : ''}.`),
+      para: t(`Teclado ${tipo || 'gamer'}${layout ? ` en formato ${layout}` : ''}. Pensado para jugar con respuesta rápida${inal ? ' y usar también en otros dispositivos' : ''}.`, `${tipo || 'Gaming'} keyboard${layout ? ` in ${layout} layout` : ''}. Built for gaming with fast response${inal ? ' and multi-device use' : ''}.`),
       nopara: t('Si necesitas la distribución en español con ñ grabada, revisa la ficha: muchos modelos vienen solo en ANSI inglés.', 'If you need a specific language layout, check the spec sheet: many models ship in ANSI only.'),
       faqs: [
-        { q: t('¿Es mecánico?', 'Is it mechanical?'), a: t(`Tipo: ${tipo || 'N/D'}; switches: ${valido(sw) ? sw : 'N/D'}.`, `Type: ${tipo || 'N/A'}; switches: ${valido(sw) ? sw : 'N/A'}.`) },
+        { q: t('¿Es mecánico?', 'Is it mechanical?'), a: t(`Tipo: ${tipo || 'no especificado'}; switches: ${valido(sw) ? sw : 'no especificados'}.`, `Type: ${tipo || 'not specified'}; switches: ${valido(sw) ? sw : 'not specified'}.`) },
         { q: t('¿Cómo se conecta?', 'How does it connect?'), a: t(`Conexión: ${con || 'N/D'}.`, `Connection: ${con || 'N/A'}.`) },
       ],
     };
@@ -285,12 +292,14 @@ const REGLAS = {
     const dpi = num(spec(p, 'DPI'));
     const peso = num(spec(p, 'Peso'));
     const con = spec(p, 'Conex');
-    const inal = /2\.4|BT|Bluetooth|HyperSpeed|Wireless/i.test(con);
+    const inal = /Inal|2\.4|BT|Bluetooth|HyperSpeed|Lightspeed|Wireless/i.test(con);
+    const rf = /2\.4|HyperSpeed|Lightspeed/i.test(con); // enlace por dongle: la latencia baja es de este modo, no del Bluetooth
     const pros = [], contras = [];
     if (peso && peso <= 60) pros.push(t(`Ultraligero (${peso} g): ideal para mover rápido en shooters.`, `Ultralight (${peso} g): ideal for fast movement in shooters.`));
     else if (peso && peso <= 85) pros.push(t(`Ligero (${peso} g): buen equilibrio entre velocidad y control.`, `Lightweight (${peso} g): a good balance of speed and control.`));
     if (dpi >= 25000) pros.push(t(`Sensor ${sensor} de hasta ${dpi} DPI: sobrado de resolución.`, `${sensor} sensor up to ${dpi} DPI: more resolution than you will need.`));
-    if (inal) pros.push(t(`Inalámbrico (${con}) con latencia imperceptible en 2,4 GHz.`, `Wireless (${con}) with imperceptible latency on 2.4 GHz.`));
+    if (inal && rf) pros.push(t(`Inalámbrico (${con}) con latencia muy baja por el receptor de 2,4 GHz.`, `Wireless (${con}) with very low latency through the 2.4 GHz receiver.`));
+    else if (inal) pros.push(t(`Inalámbrico${/^(Inal\S*|Wireless)$/i.test(con.trim()) ? '' : ` (${con})`}: sin cable que estorbe.`, `Wireless${/^(Inal\S*|Wireless)$/i.test(con.trim()) ? '' : ` (${con})`}: no cable in the way.`));
     if (peso >= 100) contras.push(t(`Pesa ${peso} g: pesado para mover rápido, mejor para control y juegos de estrategia.`, `Weighs ${peso} g: heavy for fast flicks, better for control and strategy games.`));
     if (!inal) contras.push(t('Con cable: no hay batería que cargar, pero el cable limita el movimiento.', 'Wired: no battery to charge, but the cable limits movement.'));
     if (inal) contras.push(t('Inalámbrico: depende de la batería y suele costar más.', 'Wireless: depends on battery and usually costs more.'));
@@ -300,7 +309,7 @@ const REGLAS = {
         : t('Para juegos de estrategia, MMO o sesiones largas donde se prefiere control y agarre firme.', 'For strategy, MMO or long sessions where control and a firm grip are preferred.'),
       nopara: t('Si tienes manos muy grandes o muy pequeñas, revisa las medidas del cuerpo: el agarre importa más que el DPI.', 'If you have very large or very small hands, check the body size: grip matters more than DPI.'),
       faqs: [
-        { q: t('¿Cuánto pesa y qué sensor usa?', 'How much does it weigh and what sensor does it use?'), a: t(`Pesa ${peso || 'N/D'} g y usa el sensor ${sensor || 'N/D'} (${dpi || 'N/D'} DPI máximos).`, `It weighs ${peso || 'N/A'} g and uses the ${sensor || 'N/A'} sensor (up to ${dpi || 'N/A'} DPI).`) },
+        { q: t('¿Cuánto pesa y qué sensor usa?', 'How much does it weigh and what sensor does it use?'), a: t(`${peso ? `Pesa ${peso} g` : 'La ficha no indica su peso'}${sensor ? ` y usa el sensor ${sensor}${dpi ? ` (${dpi} DPI máximos)` : ''}` : ''}.`, `${peso ? `It weighs ${peso} g` : 'The spec sheet does not list its weight'}${sensor ? ` and uses the ${sensor} sensor${dpi ? ` (up to ${dpi} DPI)` : ''}` : ''}.`) },
         { q: t('¿Es inalámbrico?', 'Is it wireless?'), a: t(`Conexión: ${con || 'N/D'}.`, `Connection: ${con || 'N/A'}.`) },
       ],
     };
@@ -328,7 +337,9 @@ const REGLAS = {
       para: t(`Audífonos ${tipo || 'gamer'} con conexión ${con || 'N/D'}. Para quien quiere ubicar bien a los rivales y hablar con el equipo.`, `${tipo || 'Gaming'} headset with ${con || 'N/A'} connection. For players who want to locate opponents and talk to teammates.`),
       nopara: t('Si juegas en consola, confirma que la conexión (USB, 3,5 mm o dongle) sea compatible con tu equipo.', 'If you play on console, confirm the connection (USB, 3.5 mm or dongle) is compatible with your system.'),
       faqs: [
-        { q: t('¿Tiene micrófono?', 'Does it have a microphone?'), a: valido(mic) ? t(`Sí: ${mic}.`, `Yes: ${mic}.`) : t('La ficha no lo detalla.', 'The spec sheet does not say.') },
+        { q: t('¿Tiene micrófono?', 'Does it have a microphone?'), a: valido(mic) ? t(`Sí: ${mic}.`, `Yes: ${mic}.`)
+          : AUSENTE.test(String(mic).trim()) && !/n\/[da]/i.test(mic) ? t('No: es un modelo sin micrófono.', 'No: this model has no microphone.')
+          : t('La ficha no lo detalla.', 'The spec sheet does not say.') },
         { q: t('¿Cómo se conecta?', 'How does it connect?'), a: t(`Conexión: ${con || 'N/D'}; tipo: ${tipo || 'N/D'}.`, `Connection: ${con || 'N/A'}; type: ${tipo || 'N/A'}.`) },
       ],
     };
@@ -357,11 +368,14 @@ const REGLAS = {
       : t('una tarjeta de gama media (RTX 5060 / RX 9060 XT)', 'a midrange card (RTX 5060 / RX 9060 XT)');
     return {
       pros, contras,
-      para: t(`Monitor de ${tam || 'N/D'} con ${reso || 'N/D'} a ${hz || 'N/D'} Hz. Para exprimirlo conviene ${gpu}.`, `${tam || 'N/A'} monitor with ${reso || 'N/A'} at ${hz || 'N/A'} Hz. To get the most from it, pair it with ${gpu}.`),
+      para: t(`Monitor${tam ? ` de ${tam}` : ''}${reso ? ` con ${reso}` : ''}${hz ? ` a ${hz} Hz` : ''}. Para exprimirlo conviene ${gpu}.`, `${tam ? `${tam} monitor` : 'Monitor'}${reso ? ` with ${reso}` : ''}${hz ? ` at ${hz} Hz` : ''}. To get the most from it, pair it with ${gpu}.`),
       nopara: t('Si tu tarjeta gráfica es modesta, no llegarás a los FPS que esta frecuencia permite; ajusta resolución y calidad.', 'If your graphics card is modest, you will not reach the frame rates this refresh rate allows; adjust resolution and quality.'),
       faqs: [
-        { q: t('¿Qué tarjeta gráfica necesito?', 'What graphics card do I need?'), a: t(`Para ${reso || 'su resolución'} a ${hz || 'su frecuencia'} Hz recomendamos ${gpu}.`, `For ${reso || 'its resolution'} at ${hz || 'its refresh rate'} Hz we recommend ${gpu}.`) },
-        { q: t('¿Qué panel y tiempo de respuesta tiene?', 'What panel and response time does it have?'), a: t(`Panel ${valido(panel) ? panel : 'N/D'} y respuesta de ${valido(resp) ? resp : 'N/D'}.`, `${valido(panel) ? panel : 'N/A'} panel with ${valido(resp) ? resp : 'N/A'} response time.`) },
+        { q: t('¿Qué tarjeta gráfica necesito?', 'What graphics card do I need?'), a: t(`Para ${reso || 'su resolución'}${hz ? ` a ${hz} Hz` : ''} recomendamos ${gpu}.`, `For ${reso || 'its resolution'}${hz ? ` at ${hz} Hz` : ''} we recommend ${gpu}.`) },
+        { q: t('¿Qué panel y tiempo de respuesta tiene?', 'What panel and response time does it have?'), a: valido(panel) && valido(resp) ? t(`Panel ${panel} y respuesta de ${resp}.`, `${panel} panel with ${resp} response time.`)
+          : valido(panel) ? t(`Panel ${panel}; la ficha no indica el tiempo de respuesta.`, `${panel} panel; the spec sheet does not list the response time.`)
+          : valido(resp) ? t(`Respuesta de ${resp}; la ficha no indica el tipo de panel.`, `${resp} response time; the spec sheet does not list the panel type.`)
+          : t('La ficha no detalla el panel ni el tiempo de respuesta.', 'The spec sheet does not detail the panel or the response time.') },
       ],
     };
   },

@@ -61,7 +61,7 @@
       "descripcion": "Tarjeta gráfica Radeon RX 9060 XT con 16GB GDDR6, PCIe 5.0 y sistema WINDFORCE para gaming de alto rendimiento en 1440p",
       "especificaciones": {
         "VRAM": "16 GB GDDR6",
-        "Velocidad": "2700 MHz",
+        "Velocidad": "3320 MHz Boost",
         "AnchoBus": "128 bits",
         "TDP": "182 W"
       },
@@ -1124,7 +1124,7 @@
         "Latencia": "CL36-44-44-96",
         "Voltaje": "1.35V",
         "Compatibilidad": "AMD EXPO / Intel XMP",
-        "Color": "Gray",
+        "Color": "Gris",
         "Modelo": "CMG16GX5M2E6000Z36"
       },
       "precio": 285.99,
@@ -1146,7 +1146,7 @@
         "Latencia": "CL16",
         "Voltaje": "1.35V",
         "Compatibilidad": "Intel XMP",
-        "Color": "Black",
+        "Color": "Negro",
         "Modelo": "Gigastone Game PRO"
       },
       "precio": 218.99,
@@ -1168,7 +1168,7 @@
         "Latencia": "CL16",
         "Voltaje": "1.35V",
         "Compatibilidad": "Intel XMP",
-        "Color": "White",
+        "Color": "Blanco",
         "Modelo": "MD4U0832161BHWDA"
       },
       "precio": 124.99,
@@ -1190,7 +1190,7 @@
         "Latencia": "CL18",
         "Voltaje": "1.35V",
         "Compatibilidad": "Intel XMP",
-        "Color": "White",
+        "Color": "Blanco",
         "Modelo": "TF4D416G3600HC18JDC01"
       },
       "precio": 159.99,
@@ -1212,7 +1212,7 @@
         "Latencia": "CL19",
         "Voltaje": "1.2V",
         "Compatibilidad": "Intel XMP",
-        "Color": "Black",
+        "Color": "Negro",
         "Modelo": "MD4U0826190BRKDA"
       },
       "precio": 114.99,
@@ -1234,14 +1234,14 @@
         "Latencia": "CL19",
         "Voltaje": "1.2V",
         "Compatibilidad": "Intel XMP / Aura Sync",
-        "Color": "Black",
+        "Color": "Negro",
         "Modelo": "MD4U162619BEDA"
       },
       "precio": 204.99,
       "enlaceAmazon": "https://amzn.to/4x53tkx",
       "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png",
       "marca": "OLOy",
-      "asin": "B0H1GYMVHF",
+      "asin": "B084JKGJKH",
       "precioFecha": "2026-10-07"
     },
     {
@@ -1256,7 +1256,7 @@
         "Latencia": "CL19",
         "Voltaje": "1.2V",
         "Compatibilidad": "Intel XMP",
-        "Color": "Black",
+        "Color": "Negro",
         "Modelo": "MD4U082619BJDA"
       },
       "precio": 103.99,
@@ -1987,11 +1987,11 @@
       "id": 12,
       "slug": "lexar-nq780-1tb-pcie4",
       "nombre": "Lexar NQ780 1TB PCIe Gen4 NVMe M.2 2280",
-      "descripcion": "SSD NVMe de 1TB con lecturas de hasta 6500 MB/s para equipos de escritorio y portátiles, a un precio equilibrado.",
+      "descripcion": "SSD NVMe de 1TB con lecturas de hasta 6000 MB/s para equipos de escritorio y portátiles, a un precio equilibrado.",
       "especificaciones": {
         "Capacidad": "1 TB",
         "Interfaz": "PCIe Gen4 x4 NVMe",
-        "Velocidad Lectura": "6500 MB/s",
+        "Velocidad Lectura": "6000 MB/s",
         "Velocidad Escritura": "2500 MB/s",
         "Factor Forma": "M.2 2280"
       },
@@ -2271,13 +2271,13 @@
     {
       "id": 27,
       "slug": "wd-black-sn7100x-4tb",
-      "nombre": "WD_BLACK SN7100X 4TB NVMe",
-      "descripcion": "SSD WD_BLACK SN7100X 4TB NVMe de Western Digital: 4 TB con interfaz PCIe NVMe, lectura de hasta N/D. Más velocidad de carga y respuesta para tu PC gamer.",
+      "nombre": "WD_BLACK SN7100 4TB NVMe",
+      "descripcion": "SSD WD_BLACK SN7100 4TB NVMe de Western Digital: 4 TB con interfaz PCIe 4.0 x4, lectura de hasta 7000 MB/s y escritura de hasta 6700 MB/s. Más velocidad de carga y respuesta para tu PC gamer.",
       "especificaciones": {
         "Capacidad": "4 TB",
-        "Interfaz": "PCIe NVMe",
-        "Velocidad Lectura": "N/D",
-        "Velocidad Escritura": "N/D",
+        "Interfaz": "PCIe Gen4 x4 NVMe",
+        "Velocidad Lectura": "7000 MB/s",
+        "Velocidad Escritura": "6700 MB/s",
         "Factor Forma": "M.2 2280"
       },
       "precio": 649.99,
@@ -2361,7 +2361,7 @@
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/43kKiFR",
       "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png",
-      "marca": "Genérico",
+      "marca": "SKYLZOR",
       "asin": "B0GKFXSQXL",
       "precioFecha": "2026-10-07"
     },
@@ -2380,7 +2380,7 @@
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3SmBuwJ",
       "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png",
-      "marca": "Genérico",
+      "marca": "Auotac",
       "asin": "B0FDVKJBML",
       "precioFecha": "2026-10-07"
     },
@@ -2391,7 +2391,7 @@
       "descripcion": "Fuente Corsair RM750e de 750W totalmente modular con eficiencia Cybenetics Gold, ATX 3.1 & PCIe 5.1, modo Modern Standby y capacitores a 105°C",
       "especificaciones": {
         "Potencia": "750 W",
-        "Certificación": "Cybenetics Gold",
+        "Certificación": "80+ Gold / Cybenetics Gold",
         "Estándar": "ATX 3.1 / PCIe 5.1",
         "Modular": "Totalmente Modular",
         "Ventilador": "N/D"
@@ -3550,13 +3550,13 @@
       "id": 4,
       "slug": "noctua-nh-d15-g2-hbc",
       "nombre": "Noctua NH-D15 G2 HBC Dual Tower Premium",
-      "descripcion": "Disipador premium dual tower Noctua con versión HBC (High Base Convexity) optimizada para Intel LGA1700, referencia en rendimiento y silencio absoluto",
+      "descripcion": "Disipador premium dual tower Noctua con versión HBC (High Base Convexity) optimizada para Intel LGA1700 y LGA1851 (compatible también con AM5 y AM4), referencia en rendimiento y silencio absoluto",
       "especificaciones": {
         "Tipo": "Aire",
         "Torres": "Doble",
         "Ventiladores": "2x140mm NF-A15",
         "Extra": "Alta Convexidad LGA1700",
-        "Compatibilidad": "Intel LGA1700"
+        "Compatibilidad": "AM5/AM4 / LGA1851/1700"
       },
       "precio": 159.95,
       "enlaceAmazon": "https://amzn.to/49KpDia",
@@ -3599,7 +3599,7 @@
       "precio": 34.71,
       "enlaceAmazon": "https://amzn.to/4of8GCy",
       "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png",
-      "marca": "Genérico",
+      "marca": "Jungle Leopard",
       "asin": "B0FJ27YMV5",
       "precioFecha": "2026-10-07"
     },
@@ -3618,7 +3618,7 @@
       "precio": 33.89,
       "enlaceAmazon": "https://amzn.to/4fxCUOR",
       "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png",
-      "marca": "Genérico",
+      "marca": "ABSOLIX",
       "asin": "B0GF8GGT7S",
       "precioFecha": "2026-10-07"
     },
@@ -3853,12 +3853,12 @@
     {
       "id": 20,
       "slug": "thermalright-ps120se",
-      "nombre": "Thermalright PS120SE CPU Air Cooler",
-      "descripcion": "Disipador de torre simple con 7 heatpipes y ventilador de 120mm. Muy buen rendimiento térmico a bajo precio.",
+      "nombre": "Thermalright Phantom Spirit 120 SE (PS120SE) CPU Air Cooler",
+      "descripcion": "Disipador de doble torre con 7 heatpipes y dos ventiladores de 120mm. Muy buen rendimiento térmico a bajo precio.",
       "especificaciones": {
         "Tipo": "Aire",
-        "Torres": "Simple",
-        "Ventiladores": "1x120mm",
+        "Torres": "Doble",
+        "Ventiladores": "2x120mm PWM",
         "Extra": "7 Heatpipes",
         "Compatibilidad": "AM5/AM4 / LGA1700"
       },
@@ -3960,7 +3960,7 @@
       "precio": 33.86,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GF5Z13MX?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-refrigeracion-normal-es.svg",
-      "marca": "Genérico",
+      "marca": "ABSOLIX",
       "asin": "B0GF5Z13MX",
       "precioFecha": "2026-10-07"
     },
@@ -4171,7 +4171,7 @@
       "enlaceAmazon": "https://amzn.to/4o8APLt",
       "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png",
       "marca": "Genérico",
-      "asin": "B0FF3H6TN4",
+      "asin": "B0FF3L65TT",
       "precioFecha": "2026-10-07"
     },
     {
@@ -5606,7 +5606,7 @@
       "id": 22,
       "slug": "pulsar-xlite-wired",
       "nombre": "Pulsar Xlite Wired Ultraligero 52g",
-      "descripcion": "Mouse gamer Pulsar Xlite Wired Ultraligero 52g de Pulsar con sensor Óptico, N/D DPI y conexión Cableado. Precisión para competir.",
+      "descripcion": "Mouse gamer Pulsar Xlite Wired Ultraligero 52g de Pulsar con sensor óptico y conexión cableada. Precisión para competir.",
       "especificaciones": {
         "Sensor": "Óptico",
         "DPI": "N/D",
@@ -5739,7 +5739,7 @@
       "id": 29,
       "slug": "glorious-model-d-2-wired",
       "nombre": "GLORIOUS Model D 2 Ergonómico con cable",
-      "descripcion": "Mouse gamer GLORIOUS Model D 2 Ergonómico con cable de Glorious con sensor Óptico, N/D DPI y conexión Cableado. Precisión para competir.",
+      "descripcion": "Mouse gamer GLORIOUS Model D 2 Ergonómico con cable de Glorious con sensor óptico y conexión cableada. Precisión para competir.",
       "especificaciones": {
         "Sensor": "Óptico",
         "DPI": "N/D",
@@ -5993,7 +5993,7 @@
         "Conexión": "3.5mm",
         "Drivers": "50mm",
         "Microfono": "HyperClear Cardioid",
-        "Sonido": "THX Spatial / 7.1"
+        "Sonido": "7.1 Surround virtual"
       },
       "precio": 33.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B086PKMZ21?tag=mockeygamer-20",
@@ -6234,7 +6234,7 @@
       "id": 25,
       "slug": "turtle-beach-stealth-500-wireless",
       "nombre": "Turtle Beach Stealth 500 Wireless",
-      "descripcion": "Auricular gamer Turtle Beach Stealth 500 Wireless de Turtle Beach: Inalámbrico, drivers de 40mm y N/D. Inmersión y comunicación clara en cada partida.",
+      "descripcion": "Auricular gamer Turtle Beach Stealth 500 Wireless de Turtle Beach: inalámbrico y con drivers de 40mm. Inmersión y comunicación clara en cada partida.",
       "especificaciones": {
         "Tipo": "Inalámbrico",
         "Conexión": "2.4 GHz / Bluetooth",
@@ -6291,7 +6291,7 @@
       "id": 28,
       "slug": "turtle-beach-stealth-600-wireless",
       "nombre": "Turtle Beach Stealth 600 Wireless",
-      "descripcion": "Auricular gamer Turtle Beach Stealth 600 Wireless de Turtle Beach: Inalámbrico, drivers de 50mm y N/D. Inmersión y comunicación clara en cada partida.",
+      "descripcion": "Auricular gamer Turtle Beach Stealth 600 Wireless de Turtle Beach: inalámbrico y con drivers de 50mm. Inmersión y comunicación clara en cada partida.",
       "especificaciones": {
         "Tipo": "Inalámbrico",
         "Conexión": "2.4 GHz / Bluetooth",
@@ -6310,7 +6310,7 @@
       "id": 29,
       "slug": "steelseries-arctis-nova-5p-white",
       "nombre": "SteelSeries Arctis Nova 5P Wireless Blanco",
-      "descripcion": "Auricular gamer SteelSeries Arctis Nova 5P Wireless Blanco de SteelSeries: Inalámbrico, drivers de N/D y Sonido espacial. Inmersión y comunicación clara en cada partida.",
+      "descripcion": "Auricular gamer SteelSeries Arctis Nova 5P Wireless Blanco de SteelSeries: inalámbrico con sonido espacial. Inmersión y comunicación clara en cada partida.",
       "especificaciones": {
         "Tipo": "Inalámbrico",
         "Conexión": "2.4G / Bluetooth",
@@ -6329,7 +6329,7 @@
       "id": 30,
       "slug": "corsair-void-v2-wireless",
       "nombre": "Corsair VOID v2 Wireless",
-      "descripcion": "Auricular gamer Corsair VOID v2 Wireless de Corsair: Inalámbrico, drivers de N/D y N/D. Inmersión y comunicación clara en cada partida.",
+      "descripcion": "Auricular gamer Corsair VOID v2 Wireless de Corsair: inalámbrico, con micrófono y comodidad para largas sesiones. Inmersión y comunicación clara en cada partida.",
       "especificaciones": {
         "Tipo": "Inalámbrico",
         "Conexión": "2.4G / Bluetooth",
@@ -6578,13 +6578,13 @@
       "id": 13,
       "slug": "samsung-odyssey-oled-g6-g61sh",
       "nombre": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD",
-      "descripcion": "Monitor gamer Samsung Odyssey OLED G6 G61SH QD-OLED QHD de Samsung: pantalla de N/D con resolución 2560x1440 (QHD). Imagen fluida y nítida para jugar y competir.",
+      "descripcion": "Monitor gamer Samsung Odyssey OLED G6 G61SH QD-OLED QHD de Samsung: pantalla de 27\" con resolución 2560x1440 (QHD) y 240Hz. Imagen fluida y nítida para jugar y competir.",
       "especificaciones": {
         "Tamaño": "27\"",
         "Resolución": "2560x1440 (QHD)",
         "Frecuencia": "240Hz",
         "Panel": "QD-OLED",
-        "Respuesta": "N/D"
+        "Respuesta": "0.03ms"
       },
       "precio": 384.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GDSC8K2H?tag=mockeygamer-20",
@@ -6691,13 +6691,13 @@
     {
       "id": 19,
       "slug": "acer-predator-x27u-qd-oled-240hz",
-      "nombre": "Acer Predator X27U 26.5\" QD-OLED 240Hz",
-      "descripcion": "Monitor gamer Acer Predator X27U 26.5\" QD-OLED 240Hz de Acer: pantalla de 26.5\" con resolución 2560x1440 (QHD). Imagen fluida y nítida para jugar y competir.",
+      "nombre": "Acer Predator X27U 26.5\" OLED 240Hz",
+      "descripcion": "Monitor gamer Acer Predator X27U 26.5\" OLED 240Hz de Acer: pantalla de 26.5\" con resolución 2560x1440 (QHD). Imagen fluida y nítida para jugar y competir.",
       "especificaciones": {
         "Tamaño": "26.5\"",
         "Resolución": "2560x1440 (QHD)",
         "Frecuencia": "240Hz",
-        "Panel": "QD-OLED",
+        "Panel": "OLED",
         "Respuesta": "N/D"
       },
       "precio": 314.99,

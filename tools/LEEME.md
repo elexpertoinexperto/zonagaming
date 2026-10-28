@@ -119,3 +119,13 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - El índice (`/buscar-es.json` y `/buscar-en.json`, ~23 KB gzip cada uno) lo genera el build desde el catálogo real (`src/lib/buscador-indice.ts`):
   al añadir productos, subcategorías o artículos aparecen solos. Se descarga solo al abrir la lupa (o al pasar el ratón por ella). Sin imágenes a propósito.
 - Para las campañas manda eventos a GTM/GA4: `site_search` (término + nº de resultados), `site_search_no_results` y `site_search_select` (destino).
+
+## Auditoría de datos del catálogo (`tools/auditar-catalogo.mjs`)
+
+- `npm run auditar` (sin red) revisa los 360 productos: ES y EN con los mismos ids/precios/ASIN/marca/imagen, sin duplicados, ASIN del enlace
+  directo = ASIN de la ficha, nombre acorde a la ficha (VRAM, capacidad, DDR, potencia, radiador, Hz, peso…), sin español en la versión inglesa y sin «N/D» en
+  las descripciones. Sale con error si algo falla: ejecútalo cada vez que añadas o cambies productos.
+- `node tools/verificar-enlaces-amazon.mjs` (con red, ~1 min) comprueba que cada enlace corto `amzn.to` apunta al ASIN de su ficha (solo lee la redirección).
+- Lo que NO se puede comprobar por código (especificaciones reales de cada modelo) se verificó a mano contra fuentes oficiales/retailers el 28-oct-2026;
+  los precios son los de `precioFecha` y cambian en Amazon.
+- El análisis de cada ficha (`src/lib/analisis.mjs`) trata «N/D», «Sin RGB», «Sin incluir» y «Sin micrófono» como AUSENCIA de dato: no los muestra como si fueran una característica.

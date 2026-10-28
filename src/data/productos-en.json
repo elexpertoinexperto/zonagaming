@@ -61,7 +61,7 @@
       "descripcion": "Radeon RX 9060 XT graphics card with 16GB GDDR6, PCIe 5.0 and the WINDFORCE cooling system for high-performance 1440p gaming",
       "especificaciones": {
         "VRAM": "16 GB GDDR6",
-        "Speed": "2700 MHz",
+        "Speed": "3320 MHz Boost",
         "Bus Width": "128 bits",
         "TDP": "182 W"
       },
@@ -1241,7 +1241,7 @@
       "enlaceAmazon": "https://amzn.to/4x53tkx",
       "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png",
       "marca": "OLOy",
-      "asin": "B0H1GYMVHF",
+      "asin": "B084JKGJKH",
       "precioFecha": "2026-10-07"
     },
     {
@@ -1454,7 +1454,7 @@
         "Latency": "CL16",
         "Voltage": "N/D",
         "Compatibility": "N/D",
-        "Color": "Blanco",
+        "Color": "White",
         "Model": "N/D"
       },
       "precio": 175.99,
@@ -1467,7 +1467,7 @@
     {
       "id": 17,
       "slug": "kingbank-ddr4-32gb-3200-cl16",
-      "nombre": "KingBank DDR4 32GB (2x16GB) 3200MHz CL16 con disipador",
+      "nombre": "KingBank DDR4 32GB (2x16GB) 3200MHz CL16 with Heatsink",
       "descripcion": "32GB DDR4 kit at 3200MHz with a heatsink and XMP 2.0 profile, plenty of capacity for gaming and multitasking without overspending.",
       "especificaciones": {
         "Capacity": "32GB (2x16GB)",
@@ -1520,7 +1520,7 @@
         "Latency": "CL16-20-20-38",
         "Voltage": "1.35V",
         "Compatibility": "Intel / AMD",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "N/D"
       },
       "precio": 123.49,
@@ -1564,7 +1564,7 @@
         "Latency": "N/D",
         "Voltage": "N/D",
         "Compatibility": "AMD EXPO / Intel XMP",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Vengeance RGB RS"
       },
       "precio": 504.99,
@@ -1586,7 +1586,7 @@
         "Latency": "N/D",
         "Voltage": "N/D",
         "Compatibility": "AMD EXPO / Intel XMP",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Vengeance RS"
       },
       "precio": 505.99,
@@ -1608,7 +1608,7 @@
         "Latency": "N/D",
         "Voltage": "N/D",
         "Compatibility": "AMD EXPO / Intel XMP",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Vengeance RGB"
       },
       "precio": 639.99,
@@ -1630,7 +1630,7 @@
         "Latency": "CL30",
         "Voltage": "1.40V",
         "Compatibility": "AMD EXPO",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Vengeance RGB"
       },
       "precio": 619.51,
@@ -1652,7 +1652,7 @@
         "Latency": "CL18",
         "Voltage": "N/D",
         "Compatibility": "Intel XMP 2.0 / AMD",
-        "Color": "Gris",
+        "Color": "Gray",
         "Model": "T-Force Vulcan Z"
       },
       "precio": 118,
@@ -1674,7 +1674,7 @@
         "Latency": "CL16",
         "Voltage": "1.35V",
         "Compatibility": "Intel XMP",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Ripjaws V"
       },
       "precio": 259,
@@ -1696,7 +1696,7 @@
         "Latency": "CL16",
         "Voltage": "1.35V",
         "Compatibility": "Intel XMP",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Ripjaws V"
       },
       "precio": 239,
@@ -1718,7 +1718,7 @@
         "Latency": "CL16",
         "Voltage": "N/D",
         "Compatibility": "Intel / AMD",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Game TURBO RGB"
       },
       "precio": 128.99,
@@ -1740,7 +1740,7 @@
         "Latency": "CL18",
         "Voltage": "N/D",
         "Compatibility": "Intel / AMD",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "Game PRO"
       },
       "precio": 128.99,
@@ -1762,7 +1762,7 @@
         "Latency": "N/D",
         "Voltage": "N/D",
         "Compatibility": "Intel XMP 2.0",
-        "Color": "Negro",
+        "Color": "Black",
         "Model": "T-Create Expert"
       },
       "precio": 209.99,
@@ -1777,7 +1777,7 @@
     {
       "id": 1,
       "slug": "six-nvme-m2-512gb-pcie4",
-      "nombre": "SIX NVMe M.2 SSD PCIe 4.0 512GB con Disipador",
+      "nombre": "SIX NVMe M.2 SSD PCIe 4.0 512GB with Heatsink",
       "descripcion": "512GB NVMe PCIe Gen4 x4 SSD with included heatsink, up to 7,100 MB/s reads, compatible with PS5, laptops and desktop PCs",
       "especificaciones": {
         "Capacity": "512 GB",
@@ -1834,7 +1834,7 @@
     {
       "id": 4,
       "slug": "fikwot-fn960-512gb-pcie4",
-      "nombre": "Fikwot FN960 512GB M.2 NVMe PCIe Gen4 con Disipador",
+      "nombre": "Fikwot FN960 512GB M.2 NVMe PCIe Gen4 with Heatsink",
       "descripcion": "512GB NVMe PCIe Gen4 x4 SSD with heatsink, up to 4,800 MB/s reads, Dynamic SLC Cache and PS5 compatibility",
       "especificaciones": {
         "Capacity": "512 GB",
@@ -1987,11 +1987,11 @@
       "id": 12,
       "slug": "lexar-nq780-1tb-pcie4",
       "nombre": "Lexar NQ780 1TB PCIe Gen4 NVMe M.2 2280",
-      "descripcion": "1TB NVMe SSD with reads of up to 6500 MB/s for desktops and laptops, at a balanced price.",
+      "descripcion": "1TB NVMe SSD with reads of up to 6000 MB/s for desktops and laptops, at a balanced price.",
       "especificaciones": {
         "Capacity": "1 TB",
         "Interface": "PCIe Gen4 x4 NVMe",
-        "Read Speed": "6500 MB/s",
+        "Read Speed": "6000 MB/s",
         "Write Speed": "2500 MB/s",
         "Form Factor": "M.2 2280"
       },
@@ -2005,7 +2005,7 @@
     {
       "id": 13,
       "slug": "lexar-nm790-2tb-heatsink",
-      "nombre": "Lexar NM790 2TB PCIe Gen4 NVMe M.2 2280 con disipador",
+      "nombre": "Lexar NM790 2TB PCIe Gen4 NVMe M.2 2280 with Heatsink",
       "descripcion": "2TB NVMe SSD with an included heatsink and reads of up to 7400 MB/s. Plenty of space for large game libraries.",
       "especificaciones": {
         "Capacity": "2 TB",
@@ -2271,13 +2271,13 @@
     {
       "id": 27,
       "slug": "wd-black-sn7100x-4tb",
-      "nombre": "WD_BLACK SN7100X 4TB NVMe",
-      "descripcion": "WD_BLACK SN7100X 4TB NVMe SSD from Western Digital: 4 TB with a PCIe NVMe interface, reads up to N/D. Faster load times and responsiveness for your gaming PC.",
+      "nombre": "WD_BLACK SN7100 4TB NVMe",
+      "descripcion": "WD_BLACK SN7100 4TB NVMe SSD from Western Digital: 4 TB with a PCIe 4.0 x4 interface, up to 7000 MB/s read and 6700 MB/s write. Faster load times and responsiveness for your gaming PC.",
       "especificaciones": {
         "Capacity": "4 TB",
-        "Interface": "PCIe NVMe",
-        "Read Speed": "N/D",
-        "Write Speed": "N/D",
+        "Interface": "PCIe Gen4 x4 NVMe",
+        "Read Speed": "7000 MB/s",
+        "Write Speed": "6700 MB/s",
         "Form Factor": "M.2 2280"
       },
       "precio": 649.99,
@@ -2349,7 +2349,7 @@
     {
       "id": 1,
       "slug": "psu-1000w-gold-atx31-modular-black",
-      "nombre": "Fuente 1000W 80+ Gold Totalmente Modular ATX 3.1 Black",
+      "nombre": "Fuente 1000W 80+ Gold Fully Modular ATX 3.1 Black",
       "descripcion": "1000W fully modular PSU with 80+ Gold, ATX 3.1 and PCIe 5.1, quiet 140mm fan, 105°C Japanese capacitors and a 12V-2x6 connector",
       "especificaciones": {
         "Wattage": "1000 W",
@@ -2361,7 +2361,7 @@
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/43kKiFR",
       "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png",
-      "marca": "Genérico",
+      "marca": "SKYLZOR",
       "asin": "B0GKFXSQXL",
       "precioFecha": "2026-10-07"
     },
@@ -2380,18 +2380,18 @@
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3SmBuwJ",
       "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png",
-      "marca": "Genérico",
+      "marca": "Auotac",
       "asin": "B0FDVKJBML",
       "precioFecha": "2026-10-07"
     },
     {
       "id": 3,
       "slug": "corsair-rm750e-750w-atx31",
-      "nombre": "CORSAIR RM750e 750W ATX 3.1 PCIe 5.1 Totalmente Modular",
+      "nombre": "CORSAIR RM750e 750W ATX 3.1 PCIe 5.1 Fully Modular",
       "descripcion": "Corsair RM750e 750W fully modular PSU with Cybenetics Gold efficiency, ATX 3.1 & PCIe 5.1, Modern Standby mode and 105°C capacitors",
       "especificaciones": {
         "Wattage": "750 W",
-        "Certification": "Cybenetics Gold",
+        "Certification": "80+ Gold / Cybenetics Gold",
         "Standard": "ATX 3.1 / PCIe 5.1",
         "Modular": "Fully Modular",
         "Fan": "N/A"
@@ -2406,7 +2406,7 @@
     {
       "id": 4,
       "slug": "golden-field-850w-gold-atx31",
-      "nombre": "GOLDEN FIELD 850W 80+ Gold Totalmente Modular ATX 3.1",
+      "nombre": "GOLDEN FIELD 850W 80+ Gold Fully Modular ATX 3.1",
       "descripcion": "850W fully modular gaming PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, native 600W 12V-2x6 cable and high-quality Japanese capacitors",
       "especificaciones": {
         "Wattage": "850 W",
@@ -2425,7 +2425,7 @@
     {
       "id": 5,
       "slug": "vetroo-850w-gold-modular-white",
-      "nombre": "Vetroo 850W 80+ Gold Totalmente Modular White PCIe 5.1",
+      "nombre": "Vetroo 850W 80+ Gold Fully Modular White PCIe 5.1",
       "descripcion": "850W fully modular white PSU with 80+ Gold, ATX 3.1 & PCIe 5.1, quiet 120mm FDB fan and a 10-year warranty",
       "especificaciones": {
         "Wattage": "850 W",
@@ -2481,13 +2481,13 @@
     {
       "id": 8,
       "slug": "corsair-rm850e-2025-850w-atx31",
-      "nombre": "CORSAIR RM850e (2025) 850W ATX 3.1 Totalmente Modular",
+      "nombre": "CORSAIR RM850e (2025) 850W ATX 3.1 Fully Modular",
       "descripcion": "Corsair RM850e 850W fully modular PSU, low-noise and with a 12V-2x6 cable. Plenty of headroom for high-end GPUs.",
       "especificaciones": {
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1 / PCIe 5.1",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 94.99,
@@ -2506,7 +2506,7 @@
         "Wattage": "850 W",
         "Certification": "80+ Gold / Cybenetics Platinum",
         "Standard": "N/D",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 80.99,
@@ -2519,13 +2519,13 @@
     {
       "id": 10,
       "slug": "thermaltake-gf1-850w-gold",
-      "nombre": "Thermaltake GF1 850W 80+ Gold Totalmente Modular",
+      "nombre": "Thermaltake GF1 850W 80+ Gold Fully Modular",
       "descripcion": "Thermaltake GF1 850W fully modular and quiet PSU, a well-known brand at a good price.",
       "especificaciones": {
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "N/D",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 72.1,
@@ -2538,13 +2538,13 @@
     {
       "id": 11,
       "slug": "msi-mag-a850gls-pcie5-850w",
-      "nombre": "MSI MAG A850GLS PCIE5 850W 80+ Gold Totalmente Modular",
+      "nombre": "MSI MAG A850GLS PCIE5 850W 80+ Gold Fully Modular",
       "descripcion": "Compact MSI MAG 850W fully modular PSU with PCIe 5 support for modern graphics cards.",
       "especificaciones": {
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "PCIe 5",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 94.99,
@@ -2557,13 +2557,13 @@
     {
       "id": 12,
       "slug": "msi-mag-a750gl-pcie5-750w",
-      "nombre": "MSI MAG A750GL PCIE5 750W 80+ Gold Totalmente Modular",
+      "nombre": "MSI MAG A750GL PCIE5 750W 80+ Gold Fully Modular",
       "descripcion": "Compact MSI MAG 750W fully modular, 80+ Gold PSU, suited to mid-range gaming builds.",
       "especificaciones": {
         "Wattage": "750 W",
         "Certification": "80+ Gold",
         "Standard": "PCIe 5",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 80.74,
@@ -2620,7 +2620,7 @@
         "Wattage": "750 W",
         "Certification": "80+ Bronze",
         "Standard": "ATX",
-        "Modular": "No Modular",
+        "Modular": "Non-Modular",
         "Fan": "N/D"
       },
       "precio": 54.99,
@@ -2633,13 +2633,13 @@
     {
       "id": 16,
       "slug": "msi-mag-a650gls-pcie5-650w",
-      "nombre": "MSI MAG A650GLS PCIE5 650W 80+ Gold Totalmente Modular",
+      "nombre": "MSI MAG A650GLS PCIE5 650W 80+ Gold Fully Modular",
       "descripcion": "Compact MSI MAG 650W fully modular PSU, suited to builds with a mid-range GPU and limited space.",
       "especificaciones": {
         "Wattage": "650 W",
         "Certification": "80+ Gold",
         "Standard": "PCIe 5",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 66.49,
@@ -2652,13 +2652,13 @@
     {
       "id": 17,
       "slug": "asus-prime-750w-gold",
-      "nombre": "ASUS Prime 750W Gold Totalmente Modular ATX 3.0",
+      "nombre": "ASUS Prime 750W Gold Fully Modular ATX 3.0",
       "descripcion": "ASUS Prime 750W fully modular PSU with 80+ Gold certification and ATX 3.0 compatibility.",
       "especificaciones": {
         "Wattage": "750 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.0",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 85.49,
@@ -2709,13 +2709,13 @@
     {
       "id": 20,
       "slug": "msi-mag-a1000gls-pcie5-1000w",
-      "nombre": "MSI MAG A1000GLS PCIE5 1000W 80+ Gold Totalmente Modular",
+      "nombre": "MSI MAG A1000GLS PCIE5 1000W 80+ Gold Fully Modular",
       "descripcion": "Compact MSI MAG 1000W fully modular PSU for high-end systems and the latest GPUs.",
       "especificaciones": {
         "Wattage": "1000 W",
         "Certification": "80+ Gold",
         "Standard": "PCIe 5",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 113.99,
@@ -2728,13 +2728,13 @@
     {
       "id": 21,
       "slug": "asrock-steel-legend-sl-850gw-white",
-      "nombre": "ASRock Steel Legend SL-850GW 850W Blanca",
-      "descripcion": "ASRock Steel Legend SL-850GW 850W Blanca power supply from ASRock: 850 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
+      "nombre": "ASRock Steel Legend SL-850GW 850W White",
+      "descripcion": "ASRock Steel Legend SL-850GW 850W White power supply from ASRock: 850 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
       "especificaciones": {
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1 / PCIe 5.1",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 84.99,
@@ -2747,13 +2747,13 @@
     {
       "id": 22,
       "slug": "lian-li-edge-1000g-white",
-      "nombre": "LIAN LI Edge Gold 1000W ATX 3.1 Blanca",
-      "descripcion": "LIAN LI Edge Gold 1000W ATX 3.1 Blanca power supply from Lian Li: 1000 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
+      "nombre": "LIAN LI Edge Gold 1000W ATX 3.1 White",
+      "descripcion": "LIAN LI Edge Gold 1000W ATX 3.1 White power supply from Lian Li: 1000 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
       "especificaciones": {
         "Wattage": "1000 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 148.74,
@@ -2772,7 +2772,7 @@
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1 / PCIe 5.1",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 129.99,
@@ -2791,8 +2791,8 @@
         "Wattage": "1000 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1 / PCIe 5.1",
-        "Modular": "Totalmente Modular",
-        "Fan": "Bajo ruido"
+        "Modular": "Fully Modular",
+        "Fan": "Low noise"
       },
       "precio": 132.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DZXKYWSH?tag=mockeygamer-20",
@@ -2804,14 +2804,14 @@
     {
       "id": 25,
       "slug": "lian-li-edge-850w",
-      "nombre": "Lian Li EDGE 850W ATX Totalmente Modular",
-      "descripcion": "Lian Li EDGE 850W ATX Totalmente Modular power supply from Lian Li: 850 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
+      "nombre": "Lian Li EDGE 850W ATX Fully Modular",
+      "descripcion": "Lian Li EDGE 850W ATX Fully Modular power supply from Lian Li: 850 W with 80+ Gold certification. Stable, efficient power for your gaming rig.",
       "especificaciones": {
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1",
-        "Modular": "Totalmente Modular",
-        "Fan": "Bajo ruido"
+        "Modular": "Fully Modular",
+        "Fan": "Low noise"
       },
       "precio": 111.37,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DKXCRVGP?tag=mockeygamer-20",
@@ -2829,7 +2829,7 @@
         "Wattage": "850 W",
         "Certification": "80+ Gold",
         "Standard": "ATX 3.1",
-        "Modular": "Totalmente Modular",
+        "Modular": "Fully Modular",
         "Fan": "N/D"
       },
       "precio": 115.26,
@@ -2848,7 +2848,7 @@
         "Wattage": "650 W",
         "Certification": "80+ Bronze",
         "Standard": "ATX 3.1 / PCIe 5",
-        "Modular": "Semi Modular",
+        "Modular": "Semi-Modular",
         "Fan": "N/D"
       },
       "precio": 47.99,
@@ -2958,7 +2958,7 @@
     {
       "id": 3,
       "slug": "arctic-liquid-freezer-iii-pro-360-black",
-      "nombre": "ARCTIC Liquid Freezer III Pro 360 Black (Sin RGB)",
+      "nombre": "ARCTIC Liquid Freezer III Pro 360 Black (No RGB)",
       "descripcion": "RGB-free 360mm AIO with 3 PWM fans, 38mm radiator and PWM pump with built-in VRM fan — maximum thermal performance with low noise",
       "especificaciones": {
         "Radiator": "360mm (38mm thick)",
@@ -2996,7 +2996,7 @@
     {
       "id": 5,
       "slug": "minorsonic-aio-360mm-argb",
-      "nombre": "Minorsonic AIO CPU Cooler 360mm ARGB 3 Fases",
+      "nombre": "Minorsonic AIO CPU Cooler 360mm ARGB 3-Phase",
       "descripcion": "360mm AIO with a 3-phase motor, high-speed ceramic-bearing pump, 3 ARGB PWM fans and excellent low-noise thermal performance",
       "especificaciones": {
         "Radiator": "360mm",
@@ -3167,13 +3167,13 @@
     {
       "id": 14,
       "slug": "thermalright-peerless-vision-360-argb",
-      "nombre": "Thermalright Peerless Vision 360 ARGB AIO con pantalla",
+      "nombre": "Thermalright Peerless Vision 360 ARGB AIO with Display",
       "descripcion": "360mm AIO with a display on the block and ARGB fans, for builds where looks matter as much as temperatures.",
       "especificaciones": {
         "Radiator": "360mm",
         "Fans": "3x120mm ARGB",
         "Pump": "N/D",
-        "RGB": "ARGB + Pantalla",
+        "RGB": "ARGB + Display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 81.52,
@@ -3224,13 +3224,13 @@
     {
       "id": 17,
       "slug": "thermalright-fw240-argb-v2-white",
-      "nombre": "Thermalright FW240 ARGB V2 AIO White con pantalla",
+      "nombre": "Thermalright FW240 ARGB V2 AIO White with Display",
       "descripcion": "White 240mm AIO with two PWM fans at 2000 RPM and a display on the block.",
       "especificaciones": {
         "Radiator": "240mm",
         "Fans": "2x120mm PWM 2000 RPM",
         "Pump": "N/D",
-        "RGB": "ARGB + Pantalla",
+        "RGB": "ARGB + Display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 47.12,
@@ -3306,7 +3306,7 @@
         "Radiator": "240mm",
         "Fans": "2x120mm P12 Pro",
         "Pump": "PWM",
-        "RGB": "Sin RGB",
+        "RGB": "No RGB",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 58.79,
@@ -3338,13 +3338,13 @@
     {
       "id": 23,
       "slug": "lian-li-galahad-ii-lite-240",
-      "nombre": "LIAN LI Galahad II Lite 240 AIO Negro",
-      "descripcion": "LIAN LI Galahad II Lite 240 AIO Negro AIO liquid cooler with a 240mm radiator and 2x120mm FDB. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "LIAN LI Galahad II Lite 240 AIO Black",
+      "descripcion": "LIAN LI Galahad II Lite 240 AIO Black AIO liquid cooler with a 240mm radiator and 2x120mm FDB. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "240mm",
         "Fans": "2x120mm FDB",
         "Pump": "PWM",
-        "RGB": "Sin RGB",
+        "RGB": "No RGB",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 93.2,
@@ -3363,7 +3363,7 @@
         "Radiator": "240mm",
         "Fans": "2x120mm",
         "Pump": "PWM",
-        "RGB": "Sin RGB",
+        "RGB": "No RGB",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 79.99,
@@ -3376,13 +3376,13 @@
     {
       "id": 25,
       "slug": "thermalright-fw360-white-lcd",
-      "nombre": "Thermalright FW 360 Blanco ARGB con pantalla LCD",
-      "descripcion": "Thermalright FW 360 Blanco ARGB con pantalla LCD AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "Thermalright FW 360 White ARGB with LCD Display",
+      "descripcion": "Thermalright FW 360 White ARGB with LCD Display AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "360mm",
         "Fans": "3x120mm ARGB",
         "Pump": "PWM",
-        "RGB": "ARGB + pantalla IPS",
+        "RGB": "ARGB + IPS display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 66.87,
@@ -3395,8 +3395,8 @@
     {
       "id": 26,
       "slug": "thermalright-aqua-elite-360-white-v3",
-      "nombre": "Thermalright Aqua Elite 360 Blanco V3",
-      "descripcion": "Thermalright Aqua Elite 360 Blanco V3 AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "Thermalright Aqua Elite 360 White V3",
+      "descripcion": "Thermalright Aqua Elite 360 White V3 AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "360mm",
         "Fans": "3x120mm ARGB",
@@ -3433,8 +3433,8 @@
     {
       "id": 28,
       "slug": "thermalright-magic-qube-360-white",
-      "nombre": "Thermalright Magic Qube 360 ARGB Blanco",
-      "descripcion": "Thermalright Magic Qube 360 ARGB Blanco AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "Thermalright Magic Qube 360 ARGB White",
+      "descripcion": "Thermalright Magic Qube 360 ARGB White AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "360mm",
         "Fans": "3x120mm ARGB",
@@ -3452,13 +3452,13 @@
     {
       "id": 29,
       "slug": "msi-meg-coreliquid-s280",
-      "nombre": "MSI MEG CORELIQUID S280 con pantalla IPS",
-      "descripcion": "MSI MEG CORELIQUID S280 con pantalla IPS AIO liquid cooler with a 280mm radiator and 2x140mm. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "MSI MEG CORELIQUID S280 with IPS Display",
+      "descripcion": "MSI MEG CORELIQUID S280 with IPS Display AIO liquid cooler with a 280mm radiator and 2x140mm. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "280mm",
         "Fans": "2x140mm",
         "Pump": "PWM",
-        "RGB": "Pantalla IPS 2.4\"",
+        "RGB": "2.4\" IPS display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 260.95,
@@ -3471,13 +3471,13 @@
     {
       "id": 30,
       "slug": "proflow-se-360-argb-pantalla",
-      "nombre": "ProFlow SE 360mm ARGB AIO con pantalla",
-      "descripcion": "ProFlow SE 360mm ARGB AIO con pantalla AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
+      "nombre": "ProFlow SE 360mm ARGB AIO with Display",
+      "descripcion": "ProFlow SE 360mm ARGB AIO with Display AIO liquid cooler with a 360mm radiator and 3x120mm ARGB. Keeps your CPU cool under demanding gaming loads.",
       "especificaciones": {
         "Radiator": "360mm",
         "Fans": "3x120mm ARGB",
         "Pump": "PWM",
-        "RGB": "ARGB + pantalla",
+        "RGB": "ARGB + display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 94.99,
@@ -3550,13 +3550,13 @@
       "id": 4,
       "slug": "noctua-nh-d15-g2-hbc",
       "nombre": "Noctua NH-D15 G2 HBC Dual Tower Premium",
-      "descripcion": "Premium Noctua dual-tower cooler in the HBC (High Base Convexity) version optimized for Intel LGA1700 — the benchmark in performance and absolute silence",
+      "descripcion": "Premium Noctua dual-tower cooler in the HBC (High Base Convexity) version optimized for Intel LGA1700 and LGA1851 (also compatible with AM5 and AM4) — the benchmark in performance and absolute silence",
       "especificaciones": {
         "Type": "Air",
         "Towers": "Dual",
         "Fans": "2x140mm NF-A15",
         "Extra": "High Convexity LGA1700",
-        "Compatibility": "Intel LGA1700"
+        "Compatibility": "AM5/AM4 / LGA1851/1700"
       },
       "precio": 159.95,
       "enlaceAmazon": "https://amzn.to/49KpDia",
@@ -3587,7 +3587,7 @@
     {
       "id": 6,
       "slug": "kf620-dgt-dual-argb-display",
-      "nombre": "KF620-DGT CPU Cooler Dual ARGB con Display Digital",
+      "nombre": "KF620-DGT CPU Cooler Dual ARGB with Digital Display",
       "descripcion": "Black dual-tower cooler with a digital display on the shroud, 6 heatpipes and 2 ARGB PWM fans, compatible with AM4/AM5 and Intel up to LGA1851",
       "especificaciones": {
         "Type": "Air",
@@ -3599,7 +3599,7 @@
       "precio": 34.71,
       "enlaceAmazon": "https://amzn.to/4of8GCy",
       "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png",
-      "marca": "Genérico",
+      "marca": "Jungle Leopard",
       "asin": "B0FJ27YMV5",
       "precioFecha": "2026-10-07"
     },
@@ -3618,7 +3618,7 @@
       "precio": 33.89,
       "enlaceAmazon": "https://amzn.to/4fxCUOR",
       "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png",
-      "marca": "Genérico",
+      "marca": "ABSOLIX",
       "asin": "B0GF8GGT7S",
       "precioFecha": "2026-10-07"
     },
@@ -3628,10 +3628,10 @@
       "nombre": "Noctua NH-U12S Redux",
       "descripcion": "Single-tower Noctua cooler in the Redux version: quiet, high-performing and with the brand's typical reliability.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm PWM",
-        "Extra": "Silencioso",
+        "Extra": "Quiet",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 59.95,
@@ -3647,8 +3647,8 @@
       "nombre": "Noctua NH-U12A",
       "descripcion": "Premium single-tower cooler with two NF-A12x25 PWM fans. Near dual-tower performance in a compact format.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm NF-A12x25 PWM",
         "Extra": "Premium",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3666,10 +3666,10 @@
       "nombre": "Noctua NH-U12A chromax.black",
       "descripcion": "All-black version of Noctua's NH-U12A, for dark builds without sacrificing performance or silence.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm NF-A12x25 PWM",
-        "Extra": "Color Negro",
+        "Extra": "Black color",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 119.95,
@@ -3685,10 +3685,10 @@
       "nombre": "Noctua NH-U12S chromax.Black",
       "descripcion": "Black version of Noctua's NH-U12S, a quiet single-tower cooler with good clearance for tall RAM.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm PWM",
-        "Extra": "Color Negro",
+        "Extra": "Black color",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 99.95,
@@ -3704,10 +3704,10 @@
       "nombre": "Noctua NH-D12L chromax.Black",
       "descripcion": "Low-profile Noctua dual-tower cooler, built for compact cases that cannot fit tall towers.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "120mm",
-        "Extra": "Perfil bajo",
+        "Extra": "Low profile",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 109.95,
@@ -3723,8 +3723,8 @@
       "nombre": "Cooler Master Hyper 212 Black CPU Air Cooler",
       "descripcion": "The classic Hyper 212 in a black finish with 4 heatpipes and a PWM fan. A reliable, affordable option for mid-range CPUs.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm PWM",
         "Extra": "4 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3742,8 +3742,8 @@
       "nombre": "Cooler Master Hyper 212 Halo White",
       "descripcion": "Hyper 212 Halo in a white finish with ARGB lighting and 4 direct-contact heatpipes.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm ARGB",
         "Extra": "4 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3761,8 +3761,8 @@
       "nombre": "Cooler Master Hyper 212 Halo Black",
       "descripcion": "Hyper 212 Halo in a black finish with ARGB lighting and 4 direct-contact heatpipes.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm ARGB",
         "Extra": "4 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3780,8 +3780,8 @@
       "nombre": "Cooler Master V4 Alpha 3DHP CPU Air Cooler",
       "descripcion": "Cooler Master single-tower cooler at a very low price, suited to entry-level CPUs and basic builds.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "120mm",
         "Extra": "3DHP",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3799,10 +3799,10 @@
       "nombre": "Thermalright Peerless Assassin 120 Digital ARGB White",
       "descripcion": "White dual-tower cooler with a digital display on the top cover and ARGB fans.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm ARGB",
-        "Extra": "Pantalla Digital",
+        "Extra": "Digital display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 41.9,
@@ -3818,10 +3818,10 @@
       "nombre": "Thermalright Peerless Assassin 140 Digital Black",
       "descripcion": "Dual-tower cooler with 6 heatpipes, 140mm fans and a digital display, built for high-power CPUs.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x140mm",
-        "Extra": "6 Heatpipes + Pantalla",
+        "Extra": "6 Heatpipes + display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 42.87,
@@ -3837,10 +3837,10 @@
       "nombre": "Thermalright Peerless Assassin 120 Digital ARGB Black",
       "descripcion": "Black version of the Peerless Assassin 120 Digital with ARGB fans and a digital display on the cover.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm ARGB",
-        "Extra": "Pantalla Digital",
+        "Extra": "Digital display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 36.72,
@@ -3853,12 +3853,12 @@
     {
       "id": 20,
       "slug": "thermalright-ps120se",
-      "nombre": "Thermalright PS120SE CPU Air Cooler",
-      "descripcion": "Single-tower cooler with 7 heatpipes and a 120mm fan. Very good thermal performance at a low price.",
+      "nombre": "Thermalright Phantom Spirit 120 SE (PS120SE) CPU Air Cooler",
+      "descripcion": "Dual-tower cooler with 7 heatpipes and two 120mm fans. Very good thermal performance at a low price.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
-        "Fans": "1x120mm",
+        "Type": "Air",
+        "Towers": "Dual",
+        "Fans": "2x120mm PWM",
         "Extra": "7 Heatpipes",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
@@ -3872,13 +3872,13 @@
     {
       "id": 21,
       "slug": "scythe-magoroku",
-      "nombre": "Scythe Magoroku Doble Torre Recta",
-      "descripcion": "Scythe Magoroku Doble Torre Recta air cooler with a Doble tower design and 120mm. Reliable cooling without liquid hassles.",
+      "nombre": "Scythe Magoroku Dual Tower (Straight)",
+      "descripcion": "Scythe Magoroku Dual Tower (Straight) air cooler with a Dual tower design and 120mm. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "120mm",
-        "Extra": "Torres rectas",
+        "Extra": "Straight towers",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 28.25,
@@ -3891,13 +3891,13 @@
     {
       "id": 22,
       "slug": "scythe-fuma-3",
-      "nombre": "Scythe Fuma 3 Doble Torre",
-      "descripcion": "Scythe Fuma 3 Doble Torre air cooler with a Doble tower design and 2x120mm. Reliable cooling without liquid hassles.",
+      "nombre": "Scythe Fuma 3 Dual Tower",
+      "descripcion": "Scythe Fuma 3 Dual Tower air cooler with a Dual tower design and 2x120mm. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm",
-        "Extra": "Perfil compacto",
+        "Extra": "Compact profile",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 37.99,
@@ -3910,13 +3910,13 @@
     {
       "id": 23,
       "slug": "thermalright-pa120-vision-max-white",
-      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB Blanco",
-      "descripcion": "Thermalright Peerless Assassin 120 Vision MAX ARGB Blanco air cooler with a Doble tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
+      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB White",
+      "descripcion": "Thermalright Peerless Assassin 120 Vision MAX ARGB White air cooler with a Dual tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm ARGB",
-        "Extra": "Pantalla",
+        "Extra": "Display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 46.07,
@@ -3929,13 +3929,13 @@
     {
       "id": 24,
       "slug": "thermalright-pa120-vision-max-black",
-      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB Negro",
-      "descripcion": "Thermalright Peerless Assassin 120 Vision MAX ARGB Negro air cooler with a Doble tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
+      "nombre": "Thermalright Peerless Assassin 120 Vision MAX ARGB Black",
+      "descripcion": "Thermalright Peerless Assassin 120 Vision MAX ARGB Black air cooler with a Dual tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm ARGB",
-        "Extra": "Pantalla",
+        "Extra": "Display",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 46.32,
@@ -3948,11 +3948,11 @@
     {
       "id": 25,
       "slug": "ix20-argb-twin-tower-black",
-      "nombre": "IX20 ARGB Twin Tower CPU Cooler Negro",
-      "descripcion": "IX20 ARGB Twin Tower CPU Cooler Negro air cooler with a Doble tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
+      "nombre": "IX20 ARGB Twin Tower CPU Cooler Black",
+      "descripcion": "IX20 ARGB Twin Tower CPU Cooler Black air cooler with a Dual tower design and 2x120mm ARGB. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Doble",
+        "Type": "Air",
+        "Towers": "Dual",
         "Fans": "2x120mm ARGB",
         "Extra": "ARGB",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3960,18 +3960,18 @@
       "precio": 33.86,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GF5Z13MX?tag=mockeygamer-20",
       "imagenUrl": "/placeholder-refrigeracion-normal-en.svg",
-      "marca": "Genérico",
+      "marca": "ABSOLIX",
       "asin": "B0GF5Z13MX",
       "precioFecha": "2026-10-07"
     },
     {
       "id": 26,
       "slug": "arctic-freezer-36-black",
-      "nombre": "ARCTIC Freezer 36 Negro Push-Pull",
-      "descripcion": "ARCTIC Freezer 36 Negro Push-Pull air cooler with a Simple tower design and 2x120mm. Reliable cooling without liquid hassles.",
+      "nombre": "ARCTIC Freezer 36 Black Push-Pull",
+      "descripcion": "ARCTIC Freezer 36 Black Push-Pull air cooler with a Single tower design and 2x120mm. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm",
         "Extra": "Push-pull",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -3987,10 +3987,10 @@
       "id": 27,
       "slug": "arctic-freezer-36-argb",
       "nombre": "ARCTIC Freezer 36 A-RGB",
-      "descripcion": "ARCTIC Freezer 36 A-RGB air cooler with a Simple tower design and 2x120mm A-RGB. Reliable cooling without liquid hassles.",
+      "descripcion": "ARCTIC Freezer 36 A-RGB air cooler with a Single tower design and 2x120mm A-RGB. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm A-RGB",
         "Extra": "Push-pull",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -4005,11 +4005,11 @@
     {
       "id": 28,
       "slug": "arctic-freezer-36",
-      "nombre": "ARCTIC Freezer 36 Torre Simple",
-      "descripcion": "ARCTIC Freezer 36 Torre Simple air cooler with a Simple tower design and 2x120mm. Reliable cooling without liquid hassles.",
+      "nombre": "ARCTIC Freezer 36 Single Tower",
+      "descripcion": "ARCTIC Freezer 36 Single Tower air cooler with a Single tower design and 2x120mm. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm",
         "Extra": "Push-pull",
         "Compatibility": "AM5/AM4 / LGA1700"
@@ -4025,12 +4025,12 @@
       "id": 29,
       "slug": "arctic-freezer-36-s",
       "nombre": "ARCTIC Freezer 36-S Intel & AMD",
-      "descripcion": "ARCTIC Freezer 36-S Intel & AMD air cooler with a Simple tower design and 1x120mm P12 Pro. Reliable cooling without liquid hassles.",
+      "descripcion": "ARCTIC Freezer 36-S Intel & AMD air cooler with a Single tower design and 1x120mm P12 Pro. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "1x120mm P12 Pro",
-        "Extra": "Económico",
+        "Extra": "Budget",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 19.99,
@@ -4044,12 +4044,12 @@
       "id": 30,
       "slug": "arctic-freezer-36-co",
       "nombre": "ARCTIC Freezer 36 CO",
-      "descripcion": "ARCTIC Freezer 36 CO air cooler with a Simple tower design and 2x120mm. Reliable cooling without liquid hassles.",
+      "descripcion": "ARCTIC Freezer 36 CO air cooler with a Single tower design and 2x120mm. Reliable cooling without liquid hassles.",
       "especificaciones": {
-        "Type": "Aire",
-        "Towers": "Simple",
+        "Type": "Air",
+        "Towers": "Single",
         "Fans": "2x120mm",
-        "Extra": "Uso continuo",
+        "Extra": "Continuous use",
         "Compatibility": "AM5/AM4 / LGA1700"
       },
       "precio": 30.27,
@@ -4077,7 +4077,8 @@
       "enlaceAmazon": "https://amzn.to/49CU6Pc",
       "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.png",
       "asin": "B0DFWQDRW1",
-      "precioFecha": "2026-10-07"
+      "precioFecha": "2026-10-07",
+      "marca": "FOIFKIN"
     },
     {
       "id": 2,
@@ -4095,12 +4096,13 @@
       "enlaceAmazon": "https://amzn.to/3RPC4TJ",
       "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.png",
       "asin": "B0DPVPJKNC",
-      "precioFecha": "2026-10-07"
+      "precioFecha": "2026-10-07",
+      "marca": "RUIX"
     },
     {
       "id": 3,
       "slug": "gamdias-atx-3fans-argb-white",
-      "nombre": "GAMDIAS ATX Mid-Tower 3 Fans ARGB White con App",
+      "nombre": "GAMDIAS ATX Mid-Tower 3 Fans ARGB White with App",
       "descripcion": "White ATX case with tempered glass, 3 120mm ARGB PWM fans, support for 410mm GPUs and 360mm AIOs, plus a display and control app",
       "especificaciones": {
         "Format": "ATX Mid-Tower",
@@ -4112,7 +4114,8 @@
       "precio": 86.99,
       "enlaceAmazon": "https://amzn.to/4vpHfIo",
       "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.png",
-      "asin": "B0CXDX69LM"
+      "asin": "B0CXDX69LM",
+      "marca": "GAMDIAS"
     },
     {
       "id": 4,
@@ -4130,7 +4133,8 @@
       "enlaceAmazon": "https://amzn.to/4ea3cUX",
       "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.png",
       "asin": "B0CNKB4BGH",
-      "precioFecha": "2026-10-07"
+      "precioFecha": "2026-10-07",
+      "marca": "JONSBO"
     },
     {
       "id": 5,
@@ -4148,12 +4152,13 @@
       "enlaceAmazon": "https://amzn.to/4dVdQ1u",
       "imagenUrl": "https://assets.corsair.com/image/upload/c_pad,q_85,h_1100,w_1100,f_auto/products/Cases/frame-4000d/Content/FRAME-4000D-RS-ARGB/Gallery/CC-9011296-WW_01.webp",
       "asin": "B0DFHNV7TK",
-      "precioFecha": "2026-10-07"
+      "precioFecha": "2026-10-07",
+      "marca": "CORSAIR"
     },
     {
       "id": 6,
       "slug": "gaming-case-h4-7fans-argb-black",
-      "nombre": "Gaming PC Case H4 7 Fans ARGB Dual Vidrio Templado Black",
+      "nombre": "Gaming PC Case H4 7 Fans ARGB Dual Tempered Glass Black",
       "descripcion": "Black ATX case with full-view dual tempered glass, 7 pre-installed ARGB PWM fans and front Type-C for gaming builds with maximum visibility",
       "especificaciones": {
         "Format": "ATX Mid-Tower",
@@ -4165,13 +4170,14 @@
       "precio": 55.98,
       "enlaceAmazon": "https://amzn.to/4o8APLt",
       "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png",
-      "asin": "B0FF3H6TN4",
-      "precioFecha": "2026-10-07"
+      "asin": "B0FF3L65TT",
+      "precioFecha": "2026-10-07",
+      "marca": "Generic"
     },
     {
       "id": 7,
       "slug": "gaming-case-7fans-argb-white",
-      "nombre": "White PC Case ATX 7 Fans ARGB Dual Vidrio Templado",
+      "nombre": "White PC Case ATX 7 Fans ARGB Dual Tempered Glass",
       "descripcion": "White ATX gaming case with full-view dual tempered glass, 7 pre-installed ARGB PWM fans and front Type-C — a clean, bright design",
       "especificaciones": {
         "Format": "ATX Mid-Tower",
@@ -4184,19 +4190,20 @@
       "enlaceAmazon": "https://amzn.to/49JizlT",
       "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.png",
       "asin": "B0FF3H6TN4",
-      "precioFecha": "2026-10-07"
+      "precioFecha": "2026-10-07",
+      "marca": "Generic"
     },
     {
       "id": 8,
       "slug": "corsair-3500x-rs-argb-negro",
-      "nombre": "CORSAIR 3500X RS ARGB Panoramic Mid-Tower Negro",
+      "nombre": "CORSAIR 3500X RS ARGB Panoramic Mid-Tower Black",
       "descripcion": "Panoramic glass case with included ARGB fans and good airflow; a showcase for your build.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado panorámico",
-        "Fans": "3x ARGB incluidos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Panoramic tempered glass",
+        "Fans": "3x ARGB included",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 75.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ2ZBK8J?tag=mockeygamer-20",
@@ -4208,14 +4215,14 @@
     {
       "id": 9,
       "slug": "corsair-3500x-rs-argb-blanco",
-      "nombre": "CORSAIR 3500X RS ARGB Panoramic Mid-Tower Blanco",
+      "nombre": "CORSAIR 3500X RS ARGB Panoramic Mid-Tower White",
       "descripcion": "White version of the 3500X with a panoramic view and included ARGB fans.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado panorámico",
-        "Fans": "3x ARGB incluidos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Panoramic tempered glass",
+        "Fans": "3x ARGB included",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Blanco"
+        "Color": "White"
       },
       "precio": 75.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ2Y9GK1?tag=mockeygamer-20",
@@ -4227,14 +4234,14 @@
     {
       "id": 10,
       "slug": "lian-li-vector-v100-blanco",
-      "nombre": "Lian Li Vector V100 ATX Mid-Tower Blanco",
+      "nombre": "Lian Li Vector V100 ATX Mid-Tower White",
       "descripcion": "Lian Li case with a clean design and tempered glass, very easy to build in.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Blanco"
+        "Color": "White"
       },
       "precio": 79.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F2T9777V?tag=mockeygamer-20",
@@ -4246,14 +4253,14 @@
     {
       "id": 11,
       "slug": "lian-li-vector-v100x-negro",
-      "nombre": "Lian Li Vector V100X ATX Mid-Tower Negro",
+      "nombre": "Lian Li Vector V100X ATX Mid-Tower Black",
       "descripcion": "Affordable Lian Li case with tempered glass and a sober look.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 59.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F2T74ZBX?tag=mockeygamer-20",
@@ -4268,11 +4275,11 @@
       "nombre": "Lian Li LANCOOL 217 INF Mid-Tower ATX",
       "descripcion": "INF version of the Lancool 217, focused on strong airflow and cable management.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 124.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FMDKDKFS?tag=mockeygamer-20",
@@ -4287,11 +4294,11 @@
       "nombre": "Lian Li LANCOOL 217 ATX Black Walnut Wood",
       "descripcion": "Lancool 217 with a black walnut wood finish and five PWM fans included.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "5x PWM",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro / Nogal"
+        "Color": "Black / Walnut"
       },
       "precio": 119.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DWF95QP7?tag=mockeygamer-20",
@@ -4303,14 +4310,14 @@
     {
       "id": 14,
       "slug": "nzxt-h9-flow-rgb-blanco",
-      "nombre": "NZXT H9 Flow RGB Dual-Chamber ATX Blanco",
+      "nombre": "NZXT H9 Flow RGB Dual-Chamber ATX White",
       "descripcion": "NZXT dual-chamber case with a mesh front and RGB fans, for high-performance builds.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado doble cámara",
-        "Fans": "RGB incluidos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Dual-chamber tempered glass",
+        "Fans": "RGB included",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Blanco"
+        "Color": "White"
       },
       "precio": 119.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DQPSPPSZ?tag=mockeygamer-20",
@@ -4322,12 +4329,12 @@
     {
       "id": 15,
       "slug": "corsair-frame-4500x-rs-r-argb",
-      "nombre": "CORSAIR Frame 4500X RS-R ARGB Panorámico",
+      "nombre": "CORSAIR Frame 4500X RS-R ARGB Panoramic",
       "descripcion": "Corsair modular case with panoramic glass and ARGB fans.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio panorámico",
-        "Fans": "ARGB incluidos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Panoramic glass",
+        "Fans": "ARGB included",
         "Front Ports": "USB-C + USB-A",
         "Color": "N/D"
       },
@@ -4344,11 +4351,11 @@
       "nombre": "Corsair 4000D Wood RS Modular Mid-Tower ATX",
       "descripcion": "The 4000D with wood accents, modular cabling and good airflow.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
-        "Fans": "RS incluidos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
+        "Fans": "RS included",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Blanco / Roble"
+        "Color": "White / Oak"
       },
       "precio": 99.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GF9L2P4J?tag=mockeygamer-20",
@@ -4363,11 +4370,11 @@
       "nombre": "MONTECH X3 Mesh High Airflow ATX Mid-Tower",
       "descripcion": "Budget case with a mesh front and six fans included; excellent airflow for the price.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Frontal en malla",
-        "Fans": "6x RGB fijos",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Mesh front",
+        "Fans": "6x fixed RGB",
         "Front Ports": "USB 3.0",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 69.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B09246FCTZ?tag=mockeygamer-20",
@@ -4382,8 +4389,8 @@
       "nombre": "Cooler Master QUBE 540 ATX Mid-Tower",
       "descripcion": "Flexible Cooler Master case with high airflow and tempered glass, at an accessible price.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "N/D",
         "Front Ports": "USB 3.0",
         "Color": "N/D"
@@ -4398,12 +4405,12 @@
     {
       "id": 19,
       "slug": "thermaltake-torre-600",
-      "nombre": "Thermaltake Media Torre 600 con ventiladores CT",
+      "nombre": "Thermaltake Mid-Tower 600 with CT Fans",
       "descripcion": "Thermaltake case with CT fans included and support for powerful setups.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
+        "Format": "ATX Mid-Tower",
         "Panel": "N/D",
-        "Fans": "Ventiladores CT incluidos",
+        "Fans": "CT fans included",
         "Front Ports": "N/D",
         "Color": "N/D"
       },
@@ -4420,11 +4427,11 @@
       "nombre": "Fractal Design North Walnut Mesh",
       "descripcion": "Fractal case with a walnut wood front and mesh panels; Scandinavian design aesthetic.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Malla / vidrio",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Mesh / glass",
         "Fans": "2x 140mm",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Nogal"
+        "Color": "Walnut"
       },
       "precio": 123.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B09V878FXQ?tag=mockeygamer-20",
@@ -4436,14 +4443,14 @@
     {
       "id": 21,
       "slug": "nzxt-h5-flow",
-      "nombre": "NZXT H5 Flow ATX Mid-Tower Negro",
-      "descripcion": "NZXT H5 Flow ATX Mid-Tower Negro gaming case from NZXT, ATX Media Torre format with a Vidrio templado panel. Designed for airflow and a clean build.",
+      "nombre": "NZXT H5 Flow ATX Mid-Tower Black",
+      "descripcion": "NZXT H5 Flow ATX Mid-Tower Black gaming case from NZXT, ATX Mid-Tower format with a Tempered glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Vidrio templado",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "2x 120mm",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 64.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2MK6NML?tag=mockeygamer-20",
@@ -4456,13 +4463,13 @@
       "id": 22,
       "slug": "cooler-master-q300l",
       "nombre": "Cooler Master Q300L Micro-ATX",
-      "descripcion": "Cooler Master Q300L Micro-ATX gaming case from Cooler Master, Micro-ATX format with a Acrílico panel. Designed for airflow and a clean build.",
+      "descripcion": "Cooler Master Q300L Micro-ATX gaming case from Cooler Master, Micro-ATX format with a Acrylic panel. Designed for airflow and a clean build.",
       "especificaciones": {
         "Format": "Micro-ATX",
-        "Panel": "Acrílico",
+        "Panel": "Acrylic",
         "Fans": "N/D",
         "Front Ports": "USB 3.0",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 29.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0785GRMPG?tag=mockeygamer-20",
@@ -4474,14 +4481,14 @@
     {
       "id": 23,
       "slug": "nzxt-h6-flow",
-      "nombre": "NZXT H6 Flow Doble Cámara Negro",
-      "descripcion": "NZXT H6 Flow Doble Cámara Negro gaming case from NZXT, ATX Media Torre compacta format with a Vidrio panorámico panel. Designed for airflow and a clean build.",
+      "nombre": "NZXT H6 Flow Dual-Chamber Black",
+      "descripcion": "NZXT H6 Flow Dual-Chamber Black gaming case from NZXT, Compact ATX Mid-Tower format with a Panoramic glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre compacta",
-        "Panel": "Vidrio panorámico",
+        "Format": "Compact ATX Mid-Tower",
+        "Panel": "Panoramic glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 69.97,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C89FCDFP?tag=mockeygamer-20",
@@ -4493,14 +4500,14 @@
     {
       "id": 24,
       "slug": "nzxt-h6-flow-rgb",
-      "nombre": "NZXT H6 Flow RGB 3 Ventiladores",
-      "descripcion": "NZXT H6 Flow RGB 3 Ventiladores gaming case from NZXT, ATX Media Torre compacta format with a Vidrio panorámico panel. Designed for airflow and a clean build.",
+      "nombre": "NZXT H6 Flow RGB 3 Fans",
+      "descripcion": "NZXT H6 Flow RGB 3 Fans gaming case from NZXT, Compact ATX Mid-Tower format with a Panoramic glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre compacta",
-        "Panel": "Vidrio panorámico",
+        "Format": "Compact ATX Mid-Tower",
+        "Panel": "Panoramic glass",
         "Fans": "3x RGB",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 89.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0C89S5PC5?tag=mockeygamer-20",
@@ -4513,13 +4520,13 @@
       "id": 25,
       "slug": "cooler-master-elite-301-lite",
       "nombre": "Cooler Master Elite 301 Lite Micro-ATX",
-      "descripcion": "Cooler Master Elite 301 Lite Micro-ATX gaming case from Cooler Master, Micro-ATX format with a Malla panel. Designed for airflow and a clean build.",
+      "descripcion": "Cooler Master Elite 301 Lite Micro-ATX gaming case from Cooler Master, Micro-ATX format with a Mesh panel. Designed for airflow and a clean build.",
       "especificaciones": {
         "Format": "Micro-ATX",
-        "Panel": "Malla",
+        "Panel": "Mesh",
         "Fans": "N/D",
         "Front Ports": "USB 3.0",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 59.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D7N5WPF3?tag=mockeygamer-20",
@@ -4532,11 +4539,11 @@
       "id": 26,
       "slug": "darkflash-db330m-micro-atx",
       "nombre": "darkFlash DB330M Micro-ATX",
-      "descripcion": "darkFlash DB330M Micro-ATX gaming case from darkFlash, Micro-ATX format with a Vidrio templado panel. Designed for airflow and a clean build.",
+      "descripcion": "darkFlash DB330M Micro-ATX gaming case from darkFlash, Micro-ATX format with a Tempered glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
         "Format": "Micro-ATX",
-        "Panel": "Vidrio templado",
-        "Fans": "3x preinstalados",
+        "Panel": "Tempered glass",
+        "Fans": "3x pre-installed",
         "Front Ports": "USB 3.0",
         "Color": "N/D"
       },
@@ -4551,10 +4558,10 @@
       "id": 27,
       "slug": "nzxt-h5-flow-rgb",
       "nombre": "NZXT H5 Flow RGB Compact ATX",
-      "descripcion": "NZXT H5 Flow RGB Compact ATX gaming case from NZXT, ATX Media Torre compacta format with a Vidrio templado panel. Designed for airflow and a clean build.",
+      "descripcion": "NZXT H5 Flow RGB Compact ATX gaming case from NZXT, Compact ATX Mid-Tower format with a Tempered glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre compacta",
-        "Panel": "Vidrio templado",
+        "Format": "Compact ATX Mid-Tower",
+        "Panel": "Tempered glass",
         "Fans": "2x RGB",
         "Front Ports": "USB-C + USB-A",
         "Color": "N/D"
@@ -4569,14 +4576,14 @@
     {
       "id": 28,
       "slug": "nzxt-h6-blanco",
-      "nombre": "NZXT H6 Doble Cámara ATX Blanco",
-      "descripcion": "NZXT H6 Doble Cámara ATX Blanco gaming case from NZXT, ATX Media Torre compacta format with a Vidrio panorámico panel. Designed for airflow and a clean build.",
+      "nombre": "NZXT H6 Dual-Chamber ATX White",
+      "descripcion": "NZXT H6 Dual-Chamber ATX White gaming case from NZXT, Compact ATX Mid-Tower format with a Panoramic glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre compacta",
-        "Panel": "Vidrio panorámico",
+        "Format": "Compact ATX Mid-Tower",
+        "Panel": "Panoramic glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Blanco"
+        "Color": "White"
       },
       "precio": 99.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GQ8L13BG?tag=mockeygamer-20",
@@ -4588,11 +4595,11 @@
     {
       "id": 29,
       "slug": "hyte-y70",
-      "nombre": "HYTE Y70 Cristal Panorámico",
-      "descripcion": "HYTE Y70 Cristal Panorámico gaming case from HYTE, ATX Media Torre format with a Cristal panorámico panel. Designed for airflow and a clean build.",
+      "nombre": "HYTE Y70 Panoramic Glass",
+      "descripcion": "HYTE Y70 Panoramic Glass gaming case from HYTE, ATX Mid-Tower format with a Panoramic glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre",
-        "Panel": "Cristal panorámico",
+        "Format": "ATX Mid-Tower",
+        "Panel": "Panoramic glass",
         "Fans": "N/D",
         "Front Ports": "USB-C + USB-A",
         "Color": "N/D"
@@ -4607,14 +4614,14 @@
     {
       "id": 30,
       "slug": "nzxt-h6-rgb-plus",
-      "nombre": "NZXT H6 RGB+ Doble Cámara Negro",
-      "descripcion": "NZXT H6 RGB+ Doble Cámara Negro gaming case from NZXT, ATX Media Torre compacta format with a Vidrio panorámico panel. Designed for airflow and a clean build.",
+      "nombre": "NZXT H6 RGB+ Dual-Chamber Black",
+      "descripcion": "NZXT H6 RGB+ Dual-Chamber Black gaming case from NZXT, Compact ATX Mid-Tower format with a Panoramic glass panel. Designed for airflow and a clean build.",
       "especificaciones": {
-        "Format": "ATX Media Torre compacta",
-        "Panel": "Vidrio panorámico",
-        "Fans": "RGB incluidos",
+        "Format": "Compact ATX Mid-Tower",
+        "Panel": "Panoramic glass",
+        "Fans": "RGB included",
         "Front Ports": "USB-C + USB-A",
-        "Color": "Negro"
+        "Color": "Black"
       },
       "precio": 199.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GQ9L7QRW?tag=mockeygamer-20",
@@ -4628,7 +4635,7 @@
     {
       "id": 1,
       "slug": "redthunder-k10-combo-rgb-wired",
-      "nombre": "RedThunder K10 Combo Teclado + Mouse + Reposamuñecas RGB",
+      "nombre": "RedThunder K10 Combo Keyboard + Mouse + Wrist Rest RGB",
       "descripcion": "3-in-1 gaming combo with an anti-ghosting RGB keyboard with a mechanical feel, a 7,200 DPI mouse and a soft leather wrist rest, all over USB for gaming PCs",
       "especificaciones": {
         "Type": "Membrane / Mechanical Feel",
@@ -4647,7 +4654,7 @@
     {
       "id": 2,
       "slug": "redthunder-k75-wireless-75pct-hotswap",
-      "nombre": "RedThunder K75 Mecánico Inalámbrico 75% Hot-Swap RGB",
+      "nombre": "RedThunder K75 Wireless Mechanical 75% Hot-Swap RGB",
       "descripcion": "75% wireless mechanical keyboard with hot-swap, pre-lubed linear switches, side-printed PBT keycaps, RGB and triple Wireless/USB/BT5.0 modes",
       "especificaciones": {
         "Type": "Mechanical",
@@ -4666,7 +4673,7 @@
     {
       "id": 3,
       "slug": "aula-f75-pro-wireless-75pct-reaper",
-      "nombre": "AULA F75 Pro Mecánico Inalámbrico 75% Reaper Switches",
+      "nombre": "AULA F75 Pro Wireless Mechanical 75% Reaper Switches",
       "descripcion": "75% mechanical keyboard with hot-swap, pre-lubed Reaper switches, a volume knob, PBT keycaps and triple 2.4GHz/USB-C/BT5.0 connectivity",
       "especificaciones": {
         "Type": "Mechanical",
@@ -4685,7 +4692,7 @@
     {
       "id": 4,
       "slug": "redragon-mechanical-wired-hotswap-red",
-      "nombre": "Redragon Mecánico Cableado Hot-Swap Red Switch RGB",
+      "nombre": "Redragon Wired Mechanical Hot-Swap Red Switch RGB",
       "descripcion": "Wired mechanical keyboard with hot-swappable Red switches, 11 backlight modes, anti-ghosting and double-shot PBT keycaps, for PC and Mac",
       "especificaciones": {
         "Type": "Mechanical",
@@ -4703,7 +4710,7 @@
     {
       "id": 5,
       "slug": "aula-f75-pro-white-wireless-knob",
-      "nombre": "AULA F75 Pro White Mecánico Inalámbrico 75% con Knob",
+      "nombre": "AULA F75 Pro White Wireless Mechanical 75% with Knob",
       "descripcion": "White 75% mechanical keyboard with hot-swap, pre-lubed switches, a volume knob, PBT keycaps and triple connectivity — creamy sound and minimalist design",
       "especificaciones": {
         "Type": "Mechanical",
@@ -4722,7 +4729,7 @@
     {
       "id": 6,
       "slug": "m75-mechanical-gasket-75pct-black-pink",
-      "nombre": "M75 Mecánico Gasket 75% Black & Pink Hot-Swap RGB",
+      "nombre": "M75 Mechanical Gasket 75% Black & Pink Hot-Swap RGB",
       "descripcion": "75% mechanical keyboard with a gasket-mount structure, hot-swap, side-printed PBT keycaps, RGB and triple 2.4GHz/Bluetooth/USB-C connectivity in black and pink",
       "especificaciones": {
         "Type": "Mechanical Gasket",
@@ -4734,14 +4741,14 @@
       "precio": 34.99,
       "enlaceAmazon": "https://amzn.to/4e6FNUc",
       "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.png",
-      "marca": "Genérico",
+      "marca": "Generic",
       "asin": "B0DSPYBCS7",
       "precioFecha": "2026-10-07"
     },
     {
       "id": 7,
       "slug": "aula-s75-pro-screen-knob-trimode",
-      "nombre": "AULA S75 PRO Mecánico 75% Tri-Mode con Pantalla y Knob",
+      "nombre": "AULA S75 PRO Mechanical 75% Tri-Mode with Display and Knob",
       "descripcion": "75% tri-mode mechanical keyboard with a built-in display, knob, pre-lubed hot-swap switches and PBT keycaps — the most complete option for gaming and creativity",
       "especificaciones": {
         "Type": "Mechanical",
@@ -4760,14 +4767,14 @@
     {
       "id": 8,
       "slug": "redragon-k752-wireless-60",
-      "nombre": "Redragon K752 Wireless 60% Mecánico",
+      "nombre": "Redragon K752 Wireless 60% Mechanical",
       "descripcion": "Compact 60% wireless mechanical keyboard from Redragon with backlighting, ideal for small desks at a very good price.",
       "especificaciones": {
-        "Type": "Mecánico 60%",
-        "Connection": "Inalámbrico",
+        "Type": "Mechanical 60%",
+        "Connection": "Wireless",
         "Switches": "Hot-swap",
         "Layout": "60%",
-        "RGB": "Retroiluminado"
+        "RGB": "Backlit"
       },
       "precio": 31.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GJRGLGNF?tag=mockeygamer-20",
@@ -4782,8 +4789,8 @@
       "nombre": "Redragon K617 Fizz 60% Hot-Swap RGB",
       "descripcion": "Wired 60% keyboard with hot-swappable switches and RGB lighting. One of the most popular options in its range.",
       "especificaciones": {
-        "Type": "Mecánico 60%",
-        "Connection": "Cableado USB-C",
+        "Type": "Mechanical 60%",
+        "Connection": "Wired USB-C",
         "Switches": "Hot-swap",
         "Layout": "60%",
         "RGB": "RGB"
@@ -4801,8 +4808,8 @@
       "nombre": "Redragon K617 HE Hall-Effect Rapid Trigger",
       "descripcion": "60% keyboard with Hall-effect magnetic switches and rapid trigger, technology once reserved for much pricier models.",
       "especificaciones": {
-        "Type": "Magnético 60%",
-        "Connection": "Cableado",
+        "Type": "Magnetic 60%",
+        "Connection": "Wired",
         "Switches": "Hall-effect",
         "Layout": "60%",
         "RGB": "RGB"
@@ -4820,8 +4827,8 @@
       "nombre": "Razer BlackWidow V4 TKL Wireless Orange Switches",
       "descripcion": "Wireless TKL keyboard from Razer with tactile, quiet Orange switches and Chroma RGB lighting.",
       "especificaciones": {
-        "Type": "Mecánico TKL",
-        "Connection": "Inalámbrico",
+        "Type": "Mechanical TKL",
+        "Connection": "Wireless",
         "Switches": "Razer Orange",
         "Layout": "TKL",
         "RGB": "Razer Chroma RGB"
@@ -4836,11 +4843,11 @@
     {
       "id": 12,
       "slug": "redragon-k742-wireless-knob",
-      "nombre": "Redragon K742 Wireless con Perilla",
+      "nombre": "Redragon K742 Wireless with Knob",
       "descripcion": "Wireless mechanical keyboard from Redragon with a multifunction knob, a good option for work and play.",
       "especificaciones": {
-        "Type": "Mecánico",
-        "Connection": "Inalámbrico",
+        "Type": "Mechanical",
+        "Connection": "Wireless",
         "Switches": "Hot-swap",
         "Layout": "N/D",
         "RGB": "RGB"
@@ -4858,8 +4865,8 @@
       "nombre": "Razer BlackWidow V4 X Yellow Switches",
       "descripcion": "Full-size mechanical keyboard with dedicated macro keys and Razer's linear Yellow switches.",
       "especificaciones": {
-        "Type": "Mecánico completo",
-        "Connection": "Cableado",
+        "Type": "Full-size mechanical",
+        "Connection": "Wired",
         "Switches": "Razer Yellow",
         "Layout": "Full-size",
         "RGB": "Razer Chroma RGB"
@@ -4874,12 +4881,12 @@
     {
       "id": 14,
       "slug": "razer-huntsman-mini",
-      "nombre": "Razer Huntsman Mini 60% Switches Ópticos Lineales",
+      "nombre": "Razer Huntsman Mini 60% Linear Optical Switches",
       "descripcion": "Razer 60% keyboard with fast-actuating linear optical switches, compact and highly responsive.",
       "especificaciones": {
-        "Type": "Óptico 60%",
-        "Connection": "Cableado USB-C",
-        "Switches": "Óptico lineal",
+        "Type": "Optical 60%",
+        "Connection": "Wired USB-C",
+        "Switches": "Linear optical",
         "Layout": "60%",
         "RGB": "Razer Chroma RGB"
       },
@@ -4896,8 +4903,8 @@
       "nombre": "Redragon K671KS Tri-Mode BT/2.4G/USB-C",
       "descripcion": "Customizable mechanical keyboard with three connection modes (Bluetooth, 2.4G and USB-C).",
       "especificaciones": {
-        "Type": "Mecánico",
-        "Connection": "Tri-modo",
+        "Type": "Mechanical",
+        "Connection": "Tri-mode",
         "Switches": "Hot-swap",
         "Layout": "N/D",
         "RGB": "RGB"
@@ -4915,8 +4922,8 @@
       "nombre": "ASUS ROG Strix Scope II 96 Wireless",
       "descripcion": "ASUS ROG 96% wireless keyboard with ROG NX switches and acoustic dampening, for compact desks that still need a numpad.",
       "especificaciones": {
-        "Type": "Mecánico 96%",
-        "Connection": "Tri-modo inalámbrico",
+        "Type": "Mechanical 96%",
+        "Connection": "Tri-mode wireless",
         "Switches": "ROG NX",
         "Layout": "96%",
         "RGB": "Aura Sync RGB"
@@ -4934,8 +4941,8 @@
       "nombre": "AOC GK330 Wireless 75% RGB",
       "descripcion": "AOC 75% wireless mechanical keyboard with three connection modes and RGB at an entry-level price.",
       "especificaciones": {
-        "Type": "Mecánico 75%",
-        "Connection": "Tri-modo inalámbrico",
+        "Type": "Mechanical 75%",
+        "Connection": "Tri-mode wireless",
         "Switches": "N/D",
         "Layout": "75%",
         "RGB": "RGB"
@@ -4953,8 +4960,8 @@
       "nombre": "EPOMAKER x AULA F75 Gasket Wireless",
       "descripcion": "75% gasket-mount keyboard with hot-swap and wireless connectivity, well regarded for its sound and feel.",
       "especificaciones": {
-        "Type": "Mecánico 75% Gasket",
-        "Connection": "Tri-modo inalámbrico",
+        "Type": "Mechanical 75% Gasket",
+        "Connection": "Tri-mode wireless",
         "Switches": "Hot-swap",
         "Layout": "75%",
         "RGB": "RGB"
@@ -4972,8 +4979,8 @@
       "nombre": "YUNZII B75 PRO Wireless 75%",
       "descripcion": "YUNZII 75% wireless mechanical keyboard with swappable switches and multiple connection modes.",
       "especificaciones": {
-        "Type": "Mecánico 75%",
-        "Connection": "Tri-modo inalámbrico",
+        "Type": "Mechanical 75%",
+        "Connection": "Tri-mode wireless",
         "Switches": "Hot-swap",
         "Layout": "75%",
         "RGB": "RGB"
@@ -4991,8 +4998,8 @@
       "nombre": "AJAZZ AK820 75% Hot-Swap Black",
       "descripcion": "Wired 75% mechanical keyboard with hot-swap and RGB, among the best value for money.",
       "especificaciones": {
-        "Type": "Mecánico 75%",
-        "Connection": "Cableado",
+        "Type": "Mechanical 75%",
+        "Connection": "Wired",
         "Switches": "Hot-swap",
         "Layout": "75%",
         "RGB": "RGB"
@@ -5011,10 +5018,10 @@
       "descripcion": "SteelSeries Apex Pro TKL Gen 3 gaming keyboard from SteelSeries, Hall-effect TKL type with OmniPoint 3.0 ajustables switches and TKL layout. Control and responsiveness for every match.",
       "especificaciones": {
         "Type": "Hall-effect TKL",
-        "Connection": "Cableado",
-        "Switches": "OmniPoint 3.0 ajustables",
+        "Connection": "Wired",
+        "Switches": "Adjustable OmniPoint 3.0",
         "Layout": "TKL",
-        "RGB": "RGB por tecla"
+        "RGB": "Per-key RGB"
       },
       "precio": 199.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DGZLHN8G?tag=mockeygamer-20",
@@ -5026,14 +5033,14 @@
     {
       "id": 22,
       "slug": "steelseries-apex-5",
-      "nombre": "SteelSeries Apex 5 Híbrido",
-      "descripcion": "SteelSeries Apex 5 Híbrido gaming keyboard from SteelSeries, Mecánico híbrido type with Híbridos switches and Full-size layout. Control and responsiveness for every match.",
+      "nombre": "SteelSeries Apex 5 Hybrid",
+      "descripcion": "SteelSeries Apex 5 Hybrid gaming keyboard from SteelSeries, Hybrid mechanical type with Hybrid switches and Full-size layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Mecánico híbrido",
-        "Connection": "Cableado",
-        "Switches": "Híbridos",
+        "Type": "Hybrid mechanical",
+        "Connection": "Wired",
+        "Switches": "Hybrid",
         "Layout": "Full-size",
-        "RGB": "RGB por tecla"
+        "RGB": "Per-key RGB"
       },
       "precio": 95.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B07ZGDD6B1?tag=mockeygamer-20",
@@ -5046,13 +5053,13 @@
       "id": 23,
       "slug": "steelseries-apex-3",
       "nombre": "SteelSeries Apex 3 RGB",
-      "descripcion": "SteelSeries Apex 3 RGB gaming keyboard from SteelSeries, Membrana type with Membrana switches and Full-size layout. Control and responsiveness for every match.",
+      "descripcion": "SteelSeries Apex 3 RGB gaming keyboard from SteelSeries, Membrane type with Membrane switches and Full-size layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Membrana",
-        "Connection": "Cableado",
-        "Switches": "Membrana",
+        "Type": "Membrane",
+        "Connection": "Wired",
+        "Switches": "Membrane",
         "Layout": "Full-size",
-        "RGB": "RGB 10 zonas"
+        "RGB": "10-zone RGB"
       },
       "precio": 49.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B07ZGDPT4M?tag=mockeygamer-20",
@@ -5064,12 +5071,12 @@
     {
       "id": 24,
       "slug": "corsair-k70-core-rgb",
-      "nombre": "Corsair K70 Core RGB con reposamuñecas",
-      "descripcion": "Corsair K70 Core RGB con reposamuñecas gaming keyboard from Corsair, Mecánico type with Lineales switches and Full-size layout. Control and responsiveness for every match.",
+      "nombre": "Corsair K70 Core RGB with Wrist Rest",
+      "descripcion": "Corsair K70 Core RGB with Wrist Rest gaming keyboard from Corsair, Mechanical type with Linear switches and Full-size layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Mecánico",
-        "Connection": "Cableado",
-        "Switches": "Lineales",
+        "Type": "Mechanical",
+        "Connection": "Wired",
+        "Switches": "Linear",
         "Layout": "Full-size",
         "RGB": "RGB"
       },
@@ -5084,11 +5091,11 @@
       "id": 25,
       "slug": "steelseries-apex-3-tkl",
       "nombre": "SteelSeries Apex 3 TKL RGB",
-      "descripcion": "SteelSeries Apex 3 TKL RGB gaming keyboard from SteelSeries, Membrana TKL type with Membrana switches and TKL layout. Control and responsiveness for every match.",
+      "descripcion": "SteelSeries Apex 3 TKL RGB gaming keyboard from SteelSeries, Membrane TKL type with Membrane switches and TKL layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Membrana TKL",
-        "Connection": "Cableado",
-        "Switches": "Membrana",
+        "Type": "Membrane TKL",
+        "Connection": "Wired",
+        "Switches": "Membrane",
         "Layout": "TKL",
         "RGB": "RGB"
       },
@@ -5102,11 +5109,11 @@
     {
       "id": 26,
       "slug": "steelseries-apex-7",
-      "nombre": "SteelSeries Apex 7 con pantalla OLED",
-      "descripcion": "SteelSeries Apex 7 con pantalla OLED gaming keyboard from SteelSeries, Mecánico type with Red / Blue / Brown switches and Full-size layout. Control and responsiveness for every match.",
+      "nombre": "SteelSeries Apex 7 with OLED Display",
+      "descripcion": "SteelSeries Apex 7 with OLED Display gaming keyboard from SteelSeries, Mechanical type with Red / Blue / Brown switches and Full-size layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Mecánico",
-        "Connection": "Cableado",
+        "Type": "Mechanical",
+        "Connection": "Wired",
         "Switches": "Red / Blue / Brown",
         "Layout": "Full-size",
         "RGB": "RGB + OLED"
@@ -5125,10 +5132,10 @@
       "descripcion": "SteelSeries Apex Pro Gen 3 OmniPoint 3.0 gaming keyboard from SteelSeries, Hall-effect type with OmniPoint 3.0 ajustables switches and Full-size layout. Control and responsiveness for every match.",
       "especificaciones": {
         "Type": "Hall-effect",
-        "Connection": "Cableado",
-        "Switches": "OmniPoint 3.0 ajustables",
+        "Connection": "Wired",
+        "Switches": "Adjustable OmniPoint 3.0",
         "Layout": "Full-size",
-        "RGB": "RGB por tecla"
+        "RGB": "Per-key RGB"
       },
       "precio": 197.59,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D4RKYZJ5?tag=mockeygamer-20",
@@ -5140,12 +5147,12 @@
     {
       "id": 28,
       "slug": "logitech-g-pro-x-tkl-wired",
-      "nombre": "Logitech G PRO X TKL con cable",
-      "descripcion": "Logitech G PRO X TKL con cable gaming keyboard from Logitech, Mecánico TKL type with Intercambiables switches and TKL layout. Control and responsiveness for every match.",
+      "nombre": "Logitech G PRO X TKL Wired",
+      "descripcion": "Logitech G PRO X TKL Wired gaming keyboard from Logitech, Mechanical TKL type with Swappable switches and TKL layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Mecánico TKL",
-        "Connection": "Cableado",
-        "Switches": "Intercambiables",
+        "Type": "Mechanical TKL",
+        "Connection": "Wired",
+        "Switches": "Swappable",
         "Layout": "TKL",
         "RGB": "RGB"
       },
@@ -5159,12 +5166,12 @@
     {
       "id": 29,
       "slug": "hyperx-origins-2-pro-65",
-      "nombre": "HyperX Origins 2 Pro 65 Magnético",
-      "descripcion": "HyperX Origins 2 Pro 65 Magnético gaming keyboard from HyperX, Magnético 65% type with Lineales magnéticos switches and 65% layout. Control and responsiveness for every match.",
+      "nombre": "HyperX Origins 2 Pro 65 Magnetic",
+      "descripcion": "HyperX Origins 2 Pro 65 Magnetic gaming keyboard from HyperX, Magnetic 65% type with Magnetic linear switches and 65% layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Magnético 65%",
-        "Connection": "Cableado",
-        "Switches": "Lineales magnéticos",
+        "Type": "Magnetic 65%",
+        "Connection": "Wired",
+        "Switches": "Magnetic linear",
         "Layout": "65%",
         "RGB": "RGB"
       },
@@ -5178,12 +5185,12 @@
     {
       "id": 30,
       "slug": "corsair-k65-pro-mini",
-      "nombre": "Corsair K65 PRO Mini RGB 65% Óptico",
-      "descripcion": "Corsair K65 PRO Mini RGB 65% Óptico gaming keyboard from Corsair, Óptico-mecánico 65% type with Ópticos switches and 65% layout. Control and responsiveness for every match.",
+      "nombre": "Corsair K65 PRO Mini RGB 65% Optical",
+      "descripcion": "Corsair K65 PRO Mini RGB 65% Optical gaming keyboard from Corsair, Optical-mechanical 65% type with Optical switches and 65% layout. Control and responsiveness for every match.",
       "especificaciones": {
-        "Type": "Óptico-mecánico 65%",
-        "Connection": "Cableado",
-        "Switches": "Ópticos",
+        "Type": "Optical-mechanical 65%",
+        "Connection": "Wired",
+        "Switches": "Optical",
         "Layout": "65%",
         "RGB": "RGB"
       },
@@ -5237,7 +5244,7 @@
     {
       "id": 3,
       "slug": "razer-basilisk-v3-wired-26k-11buttons",
-      "nombre": "Razer Basilisk V3 Cableado 26K DPI 11 Botones Ergonómico",
+      "nombre": "Razer Basilisk V3 Wired 26K DPI 11 Buttons Ergonomic",
       "descripcion": "Ergonomic gaming mouse with a 26,000 DPI optical sensor, 11 programmable buttons, tiltable HyperScroll wheel, Chroma RGB and Razer's fastest switch",
       "especificaciones": {
         "Sensor": "Focus Pro 26K",
@@ -5294,7 +5301,7 @@
     {
       "id": 6,
       "slug": "ajazz-aj159p-wireless-paw3395-dock-rgb",
-      "nombre": "AJAZZ AJ159P Wireless PAW3395 26K DPI Base RGB Carga",
+      "nombre": "AJAZZ AJ159P Wireless PAW3395 26K DPI RGB Charging Base",
       "descripcion": "56g wireless gaming mouse with a 26,000 DPI PAW3395 sensor, included RGB charging dock, a light ergonomic design and 80 million clicks",
       "especificaciones": {
         "Sensor": "PAW3395",
@@ -5338,8 +5345,8 @@
         "Sensor": "HERO 25K",
         "DPI": "25600",
         "Weight": "114 g",
-        "Connection": "Inalámbrico Lightspeed",
-        "Switches": "Mecánicos"
+        "Connection": "Lightspeed Wireless",
+        "Switches": "Mechanical"
       },
       "precio": 89.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B07L4BM851?tag=mockeygamer-20",
@@ -5358,7 +5365,7 @@
         "DPI": "30000",
         "Weight": "112 g",
         "Connection": "HyperSpeed / Bluetooth / USB-C",
-        "Switches": "Ópticos"
+        "Switches": "Optical"
       },
       "precio": 85.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BHFDVLF8?tag=mockeygamer-20",
@@ -5377,7 +5384,7 @@
         "DPI": "30000",
         "Weight": "63 g",
         "Connection": "HyperSpeed Wireless",
-        "Switches": "Ópticos"
+        "Switches": "Optical"
       },
       "precio": 61.74,
       "enlaceAmazon": "https://www.amazon.com/dp/B0B6XZLNHQ?tag=mockeygamer-20",
@@ -5396,7 +5403,7 @@
         "DPI": "30000",
         "Weight": "134 g",
         "Connection": "HyperSpeed / Bluetooth",
-        "Switches": "Mecánicos"
+        "Switches": "Mechanical"
       },
       "precio": 59.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BGJT87N2?tag=mockeygamer-20",
@@ -5414,8 +5421,8 @@
         "Sensor": "BAMF 2.0",
         "DPI": "26000",
         "Weight": "75 g",
-        "Connection": "Inalámbrico",
-        "Switches": "Mecánicos"
+        "Connection": "Wireless",
+        "Switches": "Mechanical"
       },
       "precio": 98.87,
       "enlaceAmazon": "https://www.amazon.com/dp/B0BLFB5RRD?tag=mockeygamer-20",
@@ -5430,11 +5437,11 @@
       "nombre": "GLORIOUS Model O Eternal",
       "descripcion": "Ultralight wired mouse with a honeycomb shell and RGB lighting, at an accessible price.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "N/D",
         "Weight": "55 g",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 39.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F9B79WBR?tag=mockeygamer-20",
@@ -5446,14 +5453,14 @@
     {
       "id": 14,
       "slug": "redragon-wireless-ergonomico-tri-modo",
-      "nombre": "Redragon Mouse Inalámbrico Ergonómico Tri-Modo",
+      "nombre": "Redragon Wireless Ergonomic Tri-Mode Mouse",
       "descripcion": "Large ergonomic mouse with three connection modes, ideal for big hands and very low cost.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "N/D",
         "Weight": "N/D",
         "Connection": "2.4G / Bluetooth",
-        "Switches": "Mecánicos"
+        "Switches": "Mechanical"
       },
       "precio": 16.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FJ54Q9DH?tag=mockeygamer-20",
@@ -5468,11 +5475,11 @@
       "nombre": "MAMBASNAKE M3 Wireless 40K DPI",
       "descripcion": "Ultralight wireless mouse with a 40K DPI sensor at a very low price.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "40000",
         "Weight": "39 g",
-        "Connection": "Inalámbrico",
-        "Switches": "Mecánicos"
+        "Connection": "Wireless",
+        "Switches": "Mechanical"
       },
       "precio": 29.91,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F6C1RVFW?tag=mockeygamer-20",
@@ -5491,7 +5498,7 @@
         "DPI": "44000",
         "Weight": "60 g",
         "Connection": "Lightspeed Wireless",
-        "Switches": "Híbridos"
+        "Switches": "Hybrid"
       },
       "precio": 159.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DB59DXMZ?tag=mockeygamer-20",
@@ -5503,14 +5510,14 @@
     {
       "id": 17,
       "slug": "logitech-g-pro-2-lightspeed-black",
-      "nombre": "Logitech G PRO 2 Lightspeed Ambidiestro Negro",
+      "nombre": "Logitech G PRO 2 Lightspeed Ambidextrous Black",
       "descripcion": "Ambidextrous Logitech wireless mouse with the HERO 2 sensor and low latency.",
       "especificaciones": {
         "Sensor": "HERO 2",
         "DPI": "32000",
         "Weight": "N/D",
         "Connection": "Lightspeed Wireless",
-        "Switches": "Híbridos"
+        "Switches": "Hybrid"
       },
       "precio": 122.95,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CJ4TPLRM?tag=mockeygamer-20",
@@ -5529,7 +5536,7 @@
         "DPI": "30000",
         "Weight": "55 g",
         "Connection": "HyperSpeed Wireless",
-        "Switches": "Ópticos"
+        "Switches": "Optical"
       },
       "precio": 63.1,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D4RF55QK?tag=mockeygamer-20",
@@ -5566,7 +5573,7 @@
         "Sensor": "ROG AimPoint 36K",
         "DPI": "36000",
         "Weight": "54 g",
-        "Connection": "Tri-modo inalámbrico",
+        "Connection": "Tri-mode wireless",
         "Switches": "ROG Micro Switch"
       },
       "precio": 73.14,
@@ -5579,14 +5586,14 @@
     {
       "id": 21,
       "slug": "logitech-g203-wired-blue",
-      "nombre": "Logitech G203 Wired Gaming Mouse Azul",
-      "descripcion": "Logitech G203 Wired Gaming Mouse Azul gaming mouse from Logitech with a Óptico sensor, 8000 DPI and Cableado connection. Precision to compete.",
+      "nombre": "Logitech G203 Wired Gaming Mouse Blue",
+      "descripcion": "Logitech G203 Wired Gaming Mouse Blue gaming mouse from Logitech with a Optical sensor, 8000 DPI and Wired connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "8000",
         "Weight": "85 g",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 29.41,
       "enlaceAmazon": "https://www.amazon.com/dp/B082FQL8SB?tag=mockeygamer-20",
@@ -5598,14 +5605,14 @@
     {
       "id": 22,
       "slug": "pulsar-xlite-wired",
-      "nombre": "Pulsar Xlite Wired Ultraligero 52g",
-      "descripcion": "Pulsar Xlite Wired Ultraligero 52g gaming mouse from Pulsar with a Óptico sensor, N/D DPI and Cableado connection. Precision to compete.",
+      "nombre": "Pulsar Xlite Wired Ultralight 52g",
+      "descripcion": "Pulsar Xlite Wired Ultralight 52g gaming mouse from Pulsar with an optical sensor and wired connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "N/D",
         "Weight": "52 g",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 24.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DFWM5Z7T?tag=mockeygamer-20",
@@ -5618,12 +5625,12 @@
       "id": 23,
       "slug": "steelseries-prime-wired",
       "nombre": "SteelSeries Prime FPS 18,000 CPI",
-      "descripcion": "SteelSeries Prime FPS 18,000 CPI gaming mouse from SteelSeries with a TrueMove Pro sensor, 18000 DPI and Cableado connection. Precision to compete.",
+      "descripcion": "SteelSeries Prime FPS 18,000 CPI gaming mouse from SteelSeries with a TrueMove Pro sensor, 18000 DPI and Wired connection. Precision to compete.",
       "especificaciones": {
         "Sensor": "TrueMove Pro",
         "DPI": "18000",
         "Weight": "69 g",
-        "Connection": "Cableado",
+        "Connection": "Wired",
         "Switches": "Prestige OM"
       },
       "precio": 25.95,
@@ -5637,13 +5644,13 @@
       "id": 24,
       "slug": "steelseries-rival-3-wireless",
       "nombre": "SteelSeries Rival 3 Wireless",
-      "descripcion": "SteelSeries Rival 3 Wireless gaming mouse from SteelSeries with a TrueMove Core sensor, 18000 DPI and Inalámbrico / Bluetooth connection. Precision to compete.",
+      "descripcion": "SteelSeries Rival 3 Wireless gaming mouse from SteelSeries with a TrueMove Core sensor, 18000 DPI and Wireless / Bluetooth connection. Precision to compete.",
       "especificaciones": {
         "Sensor": "TrueMove Core",
         "DPI": "18000",
         "Weight": "106 g",
-        "Connection": "Inalámbrico / Bluetooth",
-        "Switches": "Mecánicos"
+        "Connection": "Wireless / Bluetooth",
+        "Switches": "Mechanical"
       },
       "precio": 21.8,
       "enlaceAmazon": "https://www.amazon.com/dp/B08GDDZML8?tag=mockeygamer-20",
@@ -5656,13 +5663,13 @@
       "id": 25,
       "slug": "corsair-scimitar-elite-wireless-se",
       "nombre": "Corsair Scimitar Elite Wireless SE MMO",
-      "descripcion": "Corsair Scimitar Elite Wireless SE MMO gaming mouse from Corsair with a Óptico sensor, 33000 DPI and Inalámbrico connection. Precision to compete.",
+      "descripcion": "Corsair Scimitar Elite Wireless SE MMO gaming mouse from Corsair with a Optical sensor, 33000 DPI and Wireless connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "33000",
         "Weight": "N/D",
-        "Connection": "Inalámbrico",
-        "Switches": "Mecánicos"
+        "Connection": "Wireless",
+        "Switches": "Mechanical"
       },
       "precio": 66.49,
       "enlaceAmazon": "https://www.amazon.com/dp/B0F6NJYMWF?tag=mockeygamer-20",
@@ -5675,13 +5682,13 @@
       "id": 26,
       "slug": "corsair-scimitar-rgb-elite",
       "nombre": "Corsair Scimitar RGB Elite MMO/MOBA",
-      "descripcion": "Corsair Scimitar RGB Elite MMO/MOBA gaming mouse from Corsair with a Óptico sensor, 18000 DPI and Cableado connection. Precision to compete.",
+      "descripcion": "Corsair Scimitar RGB Elite MMO/MOBA gaming mouse from Corsair with a Optical sensor, 18000 DPI and Wired connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "18000",
         "Weight": "122 g",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 62,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FWR3P1FT?tag=mockeygamer-20",
@@ -5700,7 +5707,7 @@
         "DPI": "35000",
         "Weight": "54 g",
         "Connection": "HyperSpeed Wireless",
-        "Switches": "Ópticos"
+        "Switches": "Optical"
       },
       "precio": 72.18,
       "enlaceAmazon": "https://www.amazon.com/dp/B0FSG67VPX?tag=mockeygamer-20",
@@ -5719,7 +5726,7 @@
         "DPI": "35000",
         "Weight": "54 g",
         "Connection": "HyperSpeed Wireless",
-        "Switches": "Ópticos"
+        "Switches": "Optical"
       },
       "precio": 125.42,
       "enlaceAmazon": "https://www.amazon.com/dp/B0CW25XR5S?tag=mockeygamer-20",
@@ -5731,14 +5738,14 @@
     {
       "id": 29,
       "slug": "glorious-model-d-2-wired",
-      "nombre": "GLORIOUS Model D 2 Ergonómico con cable",
-      "descripcion": "GLORIOUS Model D 2 Ergonómico con cable gaming mouse from Glorious with a Óptico sensor, N/D DPI and Cableado connection. Precision to compete.",
+      "nombre": "GLORIOUS Model D 2 Ergonomic Wired",
+      "descripcion": "GLORIOUS Model D 2 ergonomic wired gaming mouse from Glorious with an optical sensor and wired connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "N/D",
         "Weight": "N/D",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 63.24,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D38B66W3?tag=mockeygamer-20",
@@ -5750,14 +5757,14 @@
     {
       "id": 30,
       "slug": "glorious-model-d-minus",
-      "nombre": "GLORIOUS Model D- (Minus) con cable",
-      "descripcion": "GLORIOUS Model D- (Minus) con cable gaming mouse from Glorious with a Óptico sensor, 12000 DPI and Cableado connection. Precision to compete.",
+      "nombre": "GLORIOUS Model D- (Minus) Wired",
+      "descripcion": "GLORIOUS Model D- (Minus) Wired gaming mouse from Glorious with a Optical sensor, 12000 DPI and Wired connection. Precision to compete.",
       "especificaciones": {
-        "Sensor": "Óptico",
+        "Sensor": "Optical",
         "DPI": "12000",
         "Weight": "61 g",
-        "Connection": "Cableado",
-        "Switches": "Mecánicos"
+        "Connection": "Wired",
+        "Switches": "Mechanical"
       },
       "precio": 47.25,
       "enlaceAmazon": "https://www.amazon.com/dp/B088C4X4HP?tag=mockeygamer-20",
@@ -5839,7 +5846,7 @@
       "precio": 48.8,
       "enlaceAmazon": "https://amzn.to/3S5Fce5",
       "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.png",
-      "marca": "Genérico",
+      "marca": "Generic",
       "asin": "B0GWR8F411",
       "precioFecha": "2026-10-07"
     },
@@ -5906,10 +5913,10 @@
       "nombre": "HyperX Cloud III S Wireless",
       "descripcion": "HyperX multiplatform wireless headset, comfortable with strong battery life.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "53mm",
-        "Microphone": "Micrófono desmontable",
+        "Microphone": "Detachable microphone",
         "Sound": "DTS Spatial"
       },
       "precio": 113.99,
@@ -5925,10 +5932,10 @@
       "nombre": "Razer BlackShark V3 X HyperSpeed Wireless",
       "descripcion": "Lightweight wireless Razer headset focused on esports.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz HyperSpeed",
         "Drivers": "N/D",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "N/D"
       },
       "precio": 79.99,
@@ -5944,7 +5951,7 @@
       "nombre": "Logitech G PRO X Wired Gaming Headset",
       "descripcion": "Logitech pro headset with a Blue VO!CE microphone and surround sound.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "USB / 3.5mm",
         "Drivers": "50mm",
         "Microphone": "Blue VO!CE",
@@ -5963,11 +5970,11 @@
       "nombre": "SteelSeries Arctis Nova 5 Wireless",
       "descripcion": "Multisystem SteelSeries wireless headset with strong app-based EQ.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "N/D",
         "Microphone": "ClearCast",
-        "Sound": "Sonido espacial"
+        "Sound": "Spatial audio"
       },
       "precio": 113.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0D2YBQQ1P?tag=mockeygamer-20",
@@ -5982,11 +5989,11 @@
       "nombre": "Razer BlackShark V2 X",
       "descripcion": "Affordable Razer headset with 7.1 surround and a cardioid microphone.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "3.5mm",
         "Drivers": "50mm",
         "Microphone": "HyperClear Cardioid",
-        "Sound": "THX Spatial / 7.1"
+        "Sound": "7.1 virtual surround"
       },
       "precio": 33.98,
       "enlaceAmazon": "https://www.amazon.com/dp/B086PKMZ21?tag=mockeygamer-20",
@@ -6001,10 +6008,10 @@
       "nombre": "Corsair HS35 Surround v2",
       "descripcion": "Corsair multiplatform wired headset with Dolby 7.1.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "3.5mm / USB",
         "Drivers": "50mm",
-        "Microphone": "Micrófono unidireccional",
+        "Microphone": "Unidirectional microphone",
         "Sound": "Dolby 7.1"
       },
       "precio": 59,
@@ -6017,13 +6024,13 @@
     {
       "id": 14,
       "slug": "eksa-usb-micro-desmontable",
-      "nombre": "EKSA USB con micrófono desmontable",
+      "nombre": "EKSA USB with Detachable Microphone",
       "descripcion": "Budget USB headset with a detachable microphone for PC.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "USB",
         "Drivers": "N/D",
-        "Microphone": "Micrófono desmontable",
+        "Microphone": "Detachable microphone",
         "Sound": "N/D"
       },
       "precio": 49.99,
@@ -6039,10 +6046,10 @@
       "nombre": "EKSA E1000 USB Gaming Headset",
       "descripcion": "Very affordable USB headset with noise cancelling on the microphone.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "USB",
         "Drivers": "N/D",
-        "Microphone": "Micrófono con cancelación de ruido",
+        "Microphone": "Noise-cancelling microphone",
         "Sound": "7.1"
       },
       "precio": 23.99,
@@ -6058,10 +6065,10 @@
       "nombre": "Redragon Gaming USB 7.1 Surround",
       "descripcion": "Redragon USB headset with 7.1 surround at an entry-level price.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "USB",
         "Drivers": "N/D",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "7.1"
       },
       "precio": 30.39,
@@ -6077,10 +6084,10 @@
       "nombre": "Razer Barracuda X Chroma Wireless",
       "descripcion": "Wireless headset with Chroma lighting for PC and mobile.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz / Bluetooth",
         "Drivers": "N/D",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "N/D"
       },
       "precio": 94.99,
@@ -6096,10 +6103,10 @@
       "nombre": "Corsair HS80 MAX Wireless Xbox",
       "descripcion": "Premium Corsair wireless headset compatible with Xbox and PC.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "50mm",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "Dolby Atmos"
       },
       "precio": 94.99,
@@ -6115,10 +6122,10 @@
       "nombre": "Turtle Beach Stealth 700 Wireless Xbox",
       "descripcion": "High-end Turtle Beach wireless headset.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "N/D",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "N/D"
       },
       "precio": 159.98,
@@ -6134,10 +6141,10 @@
       "nombre": "Razer Barracuda Wireless 2.4GHz + Bluetooth",
       "descripcion": "Razer wireless headset for gaming and mobile use.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz / Bluetooth",
         "Drivers": "50mm",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "THX Spatial"
       },
       "precio": 78.2,
@@ -6151,12 +6158,12 @@
       "id": 21,
       "slug": "jbl-quantum-610-wireless",
       "nombre": "JBL Quantum 610 Wireless",
-      "descripcion": "JBL Quantum 610 Wireless gaming headset from JBL: Inalámbrico, 50mm drivers and JBL QuantumSURROUND. Immersion and clear communication in every match.",
+      "descripcion": "JBL Quantum 610 Wireless gaming headset from JBL: Wireless, 50mm drivers and JBL QuantumSURROUND. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz",
         "Drivers": "50mm",
-        "Microphone": "Micrófono boom",
+        "Microphone": "Boom microphone",
         "Sound": "JBL QuantumSURROUND"
       },
       "precio": 109.95,
@@ -6170,12 +6177,12 @@
       "id": 22,
       "slug": "jbl-quantum-910x-wireless",
       "nombre": "JBL Quantum 910X Wireless",
-      "descripcion": "JBL Quantum 910X Wireless gaming headset from JBL: Inalámbrico, 50mm drivers and JBL QuantumSPATIAL. Immersion and clear communication in every match.",
+      "descripcion": "JBL Quantum 910X Wireless gaming headset from JBL: Wireless, 50mm drivers and JBL QuantumSPATIAL. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz / Bluetooth",
         "Drivers": "50mm",
-        "Microphone": "Micrófono boom",
+        "Microphone": "Boom microphone",
         "Sound": "JBL QuantumSPATIAL"
       },
       "precio": 209.95,
@@ -6188,14 +6195,14 @@
     {
       "id": 23,
       "slug": "astro-a10-gen-2",
-      "nombre": "ASTRO Gaming A10 Gen 2 con cable",
-      "descripcion": "ASTRO Gaming A10 Gen 2 con cable gaming headset from ASTRO: Cableado, 40mm drivers and Estéreo. Immersion and clear communication in every match.",
+      "nombre": "ASTRO Gaming A10 Gen 2 Wired",
+      "descripcion": "ASTRO Gaming A10 Gen 2 Wired gaming headset from ASTRO: Wired, 40mm drivers and Stereo. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "3.5mm",
         "Drivers": "40mm",
-        "Microphone": "Micrófono flexible",
-        "Sound": "Estéreo"
+        "Microphone": "Flexible microphone",
+        "Sound": "Stereo"
       },
       "precio": 25,
       "enlaceAmazon": "https://www.amazon.com/dp/B0B6GWV7P7?tag=mockeygamer-20",
@@ -6208,12 +6215,12 @@
       "id": 24,
       "slug": "astro-a50-gen-4-base-station",
       "nombre": "ASTRO A50 Wireless + Base Station Gen 4",
-      "descripcion": "ASTRO A50 Wireless + Base Station Gen 4 gaming headset from ASTRO: Inalámbrico, 40mm drivers and Dolby Audio. Immersion and clear communication in every match.",
+      "descripcion": "ASTRO A50 Wireless + Base Station Gen 4 gaming headset from ASTRO: Wireless, 40mm drivers and Dolby Audio. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz + base",
         "Drivers": "40mm",
-        "Microphone": "Micrófono boom",
+        "Microphone": "Boom microphone",
         "Sound": "Dolby Audio"
       },
       "precio": 219.99,
@@ -6227,12 +6234,12 @@
       "id": 25,
       "slug": "turtle-beach-stealth-500-wireless",
       "nombre": "Turtle Beach Stealth 500 Wireless",
-      "descripcion": "Turtle Beach Stealth 500 Wireless gaming headset from Turtle Beach: Inalámbrico, 40mm drivers and N/D. Immersion and clear communication in every match.",
+      "descripcion": "Turtle Beach Stealth 500 Wireless gaming headset from Turtle Beach: wireless with 40mm drivers. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz / Bluetooth",
         "Drivers": "40mm",
-        "Microphone": "Micrófono flip-to-mute",
+        "Microphone": "Flip-to-mute microphone",
         "Sound": "N/D"
       },
       "precio": 89.86,
@@ -6246,12 +6253,12 @@
       "id": 26,
       "slug": "hyperx-cloud-ii",
       "nombre": "HyperX Cloud II Sonido Envolvente 7.1",
-      "descripcion": "HyperX Cloud II Sonido Envolvente 7.1 gaming headset from HyperX: Cableado, 53mm drivers and Virtual 7.1. Immersion and clear communication in every match.",
+      "descripcion": "HyperX Cloud II Sonido Envolvente 7.1 gaming headset from HyperX: Wired, 53mm drivers and Virtual 7.1. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Cableado",
+        "Type": "Wired",
         "Connection": "USB / 3.5mm",
         "Drivers": "53mm",
-        "Microphone": "Micrófono desmontable",
+        "Microphone": "Detachable microphone",
         "Sound": "Virtual 7.1"
       },
       "precio": 45.1,
@@ -6265,12 +6272,12 @@
       "id": 27,
       "slug": "hyperx-cloud-alpha-wireless",
       "nombre": "HyperX Cloud Alpha Wireless",
-      "descripcion": "HyperX Cloud Alpha Wireless gaming headset from HyperX: Inalámbrico, 50mm drivers and DTS Headphone:X. Immersion and clear communication in every match.",
+      "descripcion": "HyperX Cloud Alpha Wireless gaming headset from HyperX: Wireless, 50mm drivers and DTS Headphone:X. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz",
         "Drivers": "50mm",
-        "Microphone": "Micrófono desmontable",
+        "Microphone": "Detachable microphone",
         "Sound": "DTS Headphone:X"
       },
       "precio": 108.99,
@@ -6284,12 +6291,12 @@
       "id": 28,
       "slug": "turtle-beach-stealth-600-wireless",
       "nombre": "Turtle Beach Stealth 600 Wireless",
-      "descripcion": "Turtle Beach Stealth 600 Wireless gaming headset from Turtle Beach: Inalámbrico, 50mm drivers and N/D. Immersion and clear communication in every match.",
+      "descripcion": "Turtle Beach Stealth 600 Wireless gaming headset from Turtle Beach: wireless with 50mm drivers. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4 GHz / Bluetooth",
         "Drivers": "50mm",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "N/D"
       },
       "precio": 109,
@@ -6302,14 +6309,14 @@
     {
       "id": 29,
       "slug": "steelseries-arctis-nova-5p-white",
-      "nombre": "SteelSeries Arctis Nova 5P Wireless Blanco",
-      "descripcion": "SteelSeries Arctis Nova 5P Wireless Blanco gaming headset from SteelSeries: Inalámbrico, N/D drivers and Sonido espacial. Immersion and clear communication in every match.",
+      "nombre": "SteelSeries Arctis Nova 5P Wireless White",
+      "descripcion": "SteelSeries Arctis Nova 5P Wireless White gaming headset from SteelSeries: wireless with spatial audio. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "N/D",
         "Microphone": "ClearCast",
-        "Sound": "Sonido espacial"
+        "Sound": "Spatial audio"
       },
       "precio": 108.28,
       "enlaceAmazon": "https://www.amazon.com/dp/B0DFS1DGXR?tag=mockeygamer-20",
@@ -6322,12 +6329,12 @@
       "id": 30,
       "slug": "corsair-void-v2-wireless",
       "nombre": "Corsair VOID v2 Wireless",
-      "descripcion": "Corsair VOID v2 Wireless gaming headset from Corsair: Inalámbrico, N/D drivers and N/D. Immersion and clear communication in every match.",
+      "descripcion": "Corsair VOID v2 Wireless gaming headset from Corsair: wireless with a microphone and comfort for long sessions. Immersion and clear communication in every match.",
       "especificaciones": {
-        "Type": "Inalámbrico",
+        "Type": "Wireless",
         "Connection": "2.4G / Bluetooth",
         "Drivers": "N/D",
-        "Microphone": "Micrófono",
+        "Microphone": "Microphone",
         "Sound": "N/D"
       },
       "precio": 75.99,
@@ -6554,7 +6561,7 @@
       "nombre": "LG UltraGear 27GS60QC-B 27\" QHD Curvo 180Hz",
       "descripcion": "LG UltraGear 27GS60QC-B 27\" QHD Curvo 180Hz gaming monitor from LG: 27\" curvo 1000R display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "27\" curvo 1000R",
+        "Size": "27\" curved 1000R",
         "Resolution": "2560x1440 (QHD)",
         "Refresh Rate": "180Hz",
         "Panel": "VA",
@@ -6571,13 +6578,13 @@
       "id": 13,
       "slug": "samsung-odyssey-oled-g6-g61sh",
       "nombre": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD",
-      "descripcion": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD gaming monitor from Samsung: N/D display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
+      "descripcion": "Samsung Odyssey OLED G6 G61SH QD-OLED QHD gaming monitor from Samsung: 27\" display with 2560x1440 (QHD) resolution at 240Hz. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
         "Size": "27\"",
         "Resolution": "2560x1440 (QHD)",
         "Refresh Rate": "240Hz",
         "Panel": "QD-OLED",
-        "Response Time": "N/D"
+        "Response Time": "0.03ms"
       },
       "precio": 384.99,
       "enlaceAmazon": "https://www.amazon.com/dp/B0GDSC8K2H?tag=mockeygamer-20",
@@ -6684,13 +6691,13 @@
     {
       "id": 19,
       "slug": "acer-predator-x27u-qd-oled-240hz",
-      "nombre": "Acer Predator X27U 26.5\" QD-OLED 240Hz",
-      "descripcion": "Acer Predator X27U 26.5\" QD-OLED 240Hz gaming monitor from Acer: 26.5\" display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
+      "nombre": "Acer Predator X27U 26.5\" OLED 240Hz",
+      "descripcion": "Acer Predator X27U 26.5\" OLED 240Hz gaming monitor from Acer: 26.5\" display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
         "Size": "26.5\"",
         "Resolution": "2560x1440 (QHD)",
         "Refresh Rate": "240Hz",
-        "Panel": "QD-OLED",
+        "Panel": "OLED",
         "Response Time": "N/D"
       },
       "precio": 314.99,
@@ -6706,7 +6713,7 @@
       "nombre": "Samsung Odyssey G5 34\" Ultrawide Curvo 1000R",
       "descripcion": "Samsung Odyssey G5 34\" Ultrawide Curvo 1000R gaming monitor from Samsung: 34\" curvo 1000R display with 3440x1440 (UWQHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "34\" curvo 1000R",
+        "Size": "34\" curved 1000R",
         "Resolution": "3440x1440 (UWQHD)",
         "Refresh Rate": "165Hz",
         "Panel": "VA",
@@ -6725,7 +6732,7 @@
       "nombre": "ASUS TUF Gaming VG34VQL1B 34\" 165Hz Ultrawide",
       "descripcion": "ASUS TUF Gaming VG34VQL1B 34\" 165Hz Ultrawide gaming monitor from ASUS: 34\" curvo display with 3440x1440 (UWQHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "34\" curvo",
+        "Size": "34\" curved",
         "Resolution": "3440x1440 (UWQHD)",
         "Refresh Rate": "165Hz",
         "Panel": "VA",
@@ -6763,7 +6770,7 @@
       "nombre": "Sceptre 34\" Ultrawide Curvo WQHD 180Hz",
       "descripcion": "Sceptre 34\" Ultrawide Curvo WQHD 180Hz gaming monitor from Sceptre: 34\" curvo R1500 display with 3440x1440 (UWQHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "34\" curvo R1500",
+        "Size": "34\" curved R1500",
         "Resolution": "3440x1440 (UWQHD)",
         "Refresh Rate": "180Hz / 165Hz",
         "Panel": "VA",
@@ -6782,7 +6789,7 @@
       "nombre": "KOORUI 34\" Ultrawide WQHD 200Hz Curvo",
       "descripcion": "KOORUI 34\" Ultrawide WQHD 200Hz Curvo gaming monitor from KOORUI: 34\" curvo 1000R display with 3440x1440 (UWQHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "34\" curvo 1000R",
+        "Size": "34\" curved 1000R",
         "Resolution": "3440x1440 (UWQHD)",
         "Refresh Rate": "200Hz",
         "Panel": "N/D",
@@ -6801,7 +6808,7 @@
       "nombre": "LG UltraGear 34G600A-B 34\" WQHD 160Hz",
       "descripcion": "LG UltraGear 34G600A-B 34\" WQHD 160Hz gaming monitor from LG: 34\" curvo display with 3440x1440 (UWQHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "34\" curvo",
+        "Size": "34\" curved",
         "Resolution": "3440x1440 (UWQHD)",
         "Refresh Rate": "160Hz",
         "Panel": "N/D",
@@ -6877,7 +6884,7 @@
       "nombre": "Samsung Odyssey G55C 32\" QHD Curvo 1000R",
       "descripcion": "Samsung Odyssey G55C 32\" QHD Curvo 1000R gaming monitor from Samsung: 32\" curvo 1000R display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "32\" curvo 1000R",
+        "Size": "32\" curved 1000R",
         "Resolution": "2560x1440 (QHD)",
         "Refresh Rate": "N/D",
         "Panel": "VA",
@@ -6896,7 +6903,7 @@
       "nombre": "ASUS TUF Gaming VG32WQ3B 31.5\" QHD Curvo 180Hz",
       "descripcion": "ASUS TUF Gaming VG32WQ3B 31.5\" QHD Curvo 180Hz gaming monitor from ASUS: 31.5\" curvo 1500R display with 2560x1440 (QHD) resolution. Smooth, sharp visuals for gaming and competing.",
       "especificaciones": {
-        "Size": "31.5\" curvo 1500R",
+        "Size": "31.5\" curved 1500R",
         "Resolution": "2560x1440 (QHD)",
         "Refresh Rate": "180Hz",
         "Panel": "VA",

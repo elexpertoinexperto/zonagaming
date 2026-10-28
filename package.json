@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "hooks:install": "node tools/instalar-hooks.mjs",
-    "lastmod": "node tools/actualizar-lastmod.mjs"
+    "lastmod": "node tools/actualizar-lastmod.mjs",
+    "auditar": "node tools/auditar-catalogo.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
