@@ -8,6 +8,7 @@ import ProductCard from '../../../components/ProductCard.astro';
 import BestSellers from '../../../components/BestSellers.astro';
 import Comparador from '../../../components/Comparador.astro';
 import FAQ from '../../../components/FAQ.astro';
+import { conImagenPrimero } from '../../../lib/orden.mjs';
 import ErroresComunes from '../../../components/ErroresComunes.astro';
 import CategoriasRelacionadas from '../../../components/CategoriasRelacionadas.astro';
 import EnlazadoInterno from '../../../components/EnlazadoInterno.astro';
@@ -20,7 +21,7 @@ const categoria = 'graphics-cards';
 const cat = CATS_EN[catKey];
 // SEO por keyword (volumen real): title, H1, meta, introducción y texto salen de src/data/seo-keywords.json
 const seo = seoDe('/en/graphics-cards/')!;
-const productsData = productos[catKey] as any[];
+const productsData = conImagenPrimero(productos[catKey] as any[]);
 
 const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   id: p.id,

@@ -13,6 +13,7 @@ import TextoSEO from './TextoSEO.astro';
 import { seoDe, tituloPagina, descripcionSub, introSub, textoSub } from '../lib/seo-keywords.mjs';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
+import { conImagenPrimero } from '../lib/orden.mjs';
 
 const { catKey, slug, lang = 'es' } = Astro.props as { catKey: string; slug: string; lang?: 'es' | 'en' };
 const isEn = lang === 'en';
@@ -35,6 +36,8 @@ const etiq = etiqueta(f, lang);
 
 // Productos: del más barato al más caro (el orden se puede cambiar en la página)
 const items = productosDelFiltro(f, lang).slice().sort((a: any, b: any) => a.precio - b.precio);
+// Listado: con imagen primero y, dentro de cada grupo, del más barato al más caro (el visitante puede cambiar el orden)
+const listado = conImagenPrimero(items);
 const precio = (n: number) => `$${n.toFixed(2)}`;
 const hrefProducto = (p: any) => `${base}/${p.slug}-${p.id}/`;
 const barato = items[0];
@@ -88,10 +91,10 @@ const schema = [
 const primeraImagen = items.find((p: any) => !String(p.imagenUrl).includes('placeholder'))?.imagenUrl;
 const t = isEn
   ? { back: 'Back to Home', all: `See all ${plural}`, avail: 'products found', stock: 'Verified stock and secure shipping',
-      sort: 'Sort by', def: 'Price: low to high', desc: 'Price: high to low', quick: 'Quick guide', cheapest: 'Cheapest', priciest: 'Most expensive',
+      sort: 'Sort by', rec: 'Featured (with photo first)', def: 'Price: low to high', desc: 'Price: high to low', quick: 'Quick guide', cheapest: 'Cheapest', priciest: 'Most expensive',
       brands: 'Brands in this selection', more: `More ${plural}`, small: catNombre }
   : { back: 'Volver al Home', all: `Ver todas las ${plural}`, avail: 'productos encontrados', stock: 'Stock validado y envío seguro vía Amazon',
-      sort: 'Ordenar por', def: 'Precio: de menor a mayor', desc: 'Precio: de mayor a menor', quick: 'Guía rápida', cheapest: 'El más económico', priciest: 'El más completo / caro',
+      sort: 'Ordenar por', rec: 'Destacados (con foto primero)', def: 'Precio: de menor a mayor', desc: 'Precio: de mayor a menor', quick: 'Guía rápida', cheapest: 'El más económico', priciest: 'El más completo / caro',
       brands: 'Marcas en esta selección', more: `Más ${plural}`, small: catNombre };
 ---
 
@@ -112,14 +115,15 @@ const t = isEn
   <div class="orden-barra">
     <label for="orden-select">{t.sort}</label>
     <select id="orden-select">
+      <option value="rec">{t.rec}</option>
       <option value="asc">{t.def}</option>
       <option value="desc">{t.desc}</option>
     </select>
   </div>
 
   <section class="product-grid" id="listado-filtro">
-    {items.map((p: any) => (
-      <div class="pc-wrap" data-precio={p.precio}>
+    {listado.map((p: any, pos: number) => (
+      <div class="pc-wrap" data-precio={p.precio} data-pos={pos}>
         <ProductCard lang={lang} product={{
           id: p.id,
           name: p.nombre,
@@ -162,7 +166,8 @@ const t = isEn
   select?.addEventListener('change', () => {
     if (!grid) return;
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('.pc-wrap'));
-    cards.sort((a, b) => (Number(a.dataset.precio) - Number(b.dataset.precio)) * (select.value === 'desc' ? -1 : 1));
+    if (select.value === 'rec') cards.sort((a, b) => Number(a.dataset.pos) - Number(b.dataset.pos));
+    else cards.sort((a, b) => (Number(a.dataset.precio) - Number(b.dataset.precio)) * (select.value === 'desc' ? -1 : 1));
     cards.forEach((c) => grid.appendChild(c));
   });
 </script>
