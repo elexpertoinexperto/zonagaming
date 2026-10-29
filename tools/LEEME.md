@@ -129,3 +129,11 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - Lo que NO se puede comprobar por código (especificaciones reales de cada modelo) se verificó a mano contra fuentes oficiales/retailers el 28-oct-2026;
   los precios son los de `precioFecha` y cambian en Amazon.
 - El análisis de cada ficha (`src/lib/analisis.mjs`) trata «N/D», «Sin RGB», «Sin incluir» y «Sin micrófono» como AUSENCIA de dato: no los muestra como si fueran una característica.
+
+### Qué cuenta como «contenido» de una URL en el sitemap (revisado 29-oct-2026)
+
+- **Ficha**: su archivo `[id].astro`, su registro de producto (cada idioma) y su **análisis** (`analisis.mjs`; depende de toda la categoría: si cambia el precio de un vecino, cambia la fecha).
+- **Subcategoría**: su definición de filtro, sus productos, su entrada de SEO por keyword (`seo-keywords.json`) y los bloques de su categoría en `relaciones.ts` y `errores-comunes.ts`.
+- **Categoría**: su `index.astro`, FAQ, su SEO por keyword, `relaciones.ts`, `errores-comunes.ts` y sus productos.
+- NO cuentan (a propósito): cabecera, pie, estilos, buscador y efectos. Si cambias el TEXTO de `AnalisisSubcategoria.astro` o `FiltroPagina.astro`, esas 352 páginas cambian de contenido pero no de huella: ejecuta `node tools/actualizar-lastmod.mjs --todo` solo si de verdad quieres fecharlas.
+- Al cambiar qué cuenta como contenido, usa `node tools/actualizar-lastmod.mjs --adoptar` (guarda las huellas nuevas SIN mover fechas) y corrige a mano las fechas con la del commit real.

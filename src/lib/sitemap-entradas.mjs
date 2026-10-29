@@ -5,7 +5,8 @@
 // Es .mjs puro (sin TypeScript ni import.meta.glob) para que Node lo pueda ejecutar directamente desde el hook de git.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { construirFiltros } from './filtros.mjs';
+import { construirFiltros, NOMBRES } from './filtros.mjs';
+import { analizar } from './analisis.mjs';
 
 // Todo cuelga de la raíz del proyecto; tanto `astro build` como el hook se ejecutan desde ahí.
 const RAIZ = process.cwd();
@@ -42,6 +43,24 @@ for (const cat of CATEGORIAS) {
 }
 
 const FILTROS = construirFiltros(productos.es);
+
+// Contenido propio de cada URL que NO sale del registro del producto: SEO por keyword, errores comunes y categorías relacionadas.
+const SEO_KW = json('src/data/seo-keywords.json');
+const bloque = (rel, cat) => {
+  // líneas de un archivo .ts de datos que pertenecen a UNA categoría (desde «  'cat': [» hasta «  ],»): cambiar una categoría no mueve las demás
+  const lineas = texto(rel).split('\n');
+  const salida = [];
+  for (let k = 0; k < lineas.length; k++) {
+    if (lineas[k] === `  '${cat}': [` || lineas[k] === `  ${cat}: [`) {
+      while (k < lineas.length && lineas[k] !== '  ],') salida.push(lineas[k++]);
+    }
+  }
+  return salida.join('\n');
+};
+const datosCat = (cat) => [
+  datos('src/data/relaciones.ts', bloque('src/data/relaciones.ts', cat)),
+  datos('src/data/errores-comunes.ts', bloque('src/data/errores-comunes.ts', cat)),
+];
 
 // Los artículos del blog se descubren solos: cada archivo de src/pages/blog/*.astro es un artículo.
 // Si existe en un idioma pero no en el otro el build lo avisa, porque el hreflang quedaría roto.
@@ -81,22 +100,30 @@ export function listarEntradas() {
   for (const cat of CATEGORIAS) {
     const catEn = SLUG_EN[cat];
     add(`/${cat}/`, 'pages',
-      () => [archivo(`src/pages/${cat}/index.astro`), archivo(FAQ), datos(PRODUCTOS.es, productos.es[cat])],
-      () => [archivo(`src/pages/en/${catEn}/index.astro`), archivo(FAQ), archivo(EN_TS), datos(PRODUCTOS.en, productos.en[cat])]);
+      () => [archivo(`src/pages/${cat}/index.astro`), archivo(FAQ), datos('src/data/seo-keywords.json', SEO_KW[`/${cat}/`] ?? null), ...datosCat(cat), datos(PRODUCTOS.es, productos.es[cat])],
+      () => [archivo(`src/pages/en/${catEn}/index.astro`), archivo(FAQ), archivo(EN_TS), datos('src/data/seo-keywords.json', SEO_KW[`/en/${catEn}/`] ?? null), ...datosCat(cat), datos(PRODUCTOS.en, productos.en[cat])]);
 
     // Subcategorías (filtros): cambian si cambia su definición (textos, rango de precios, productos) o los productos que contienen
     for (const f of FILTROS[cat] ?? []) {
       const lista = (lang) => f.ids.map((id) => productos[lang][cat].find((p) => p.id === id)).filter(Boolean);
+      const seoEs = SEO_KW[`/${cat}/${f.slugEs}/`] ?? null;
+      const seoEn = SEO_KW[`/en/${catEn}/${f.slugEn}/`] ?? null;
       add(`/${cat}/${f.slugEs}/`, 'pages',
-        () => [datos('src/lib/filtros.mjs', f), datos(PRODUCTOS.es, lista('es'))],
-        () => [datos('src/lib/filtros.mjs', f), datos(PRODUCTOS.en, lista('en'))]);
+        () => [datos('src/lib/filtros.mjs', f), datos('src/data/seo-keywords.json', seoEs), ...datosCat(cat), datos(PRODUCTOS.es, lista('es'))],
+        () => [datos('src/lib/filtros.mjs', f), datos('src/data/seo-keywords.json', seoEn), ...datosCat(cat), datos(PRODUCTOS.en, lista('en'))]);
     }
 
-    // Fichas de producto: cambian cuando cambia SU registro (precio, ficha, enlace, imagen…) en ese idioma
+    // Fichas de producto: cambian cuando cambia SU registro (precio, ficha, enlace, imagen…) en ese idioma, su archivo de página
+    // o su ANÁLISIS (veredicto, posición por precio, comparación con el vecino más barato y más caro: depende de la categoría entera)
+    const analisis = (lang, p) => {
+      const lista = productos[lang][cat];
+      const q = lista.find((x) => x.id === p.id);
+      return q ? analizar(cat, q, lista, lang, lang === 'en' ? `/en/${catEn}` : `/${cat}`, NOMBRES[cat][lang], productos.es[cat]) : null;
+    };
     for (const p of productos.es[cat]) {
       add(`/${cat}/${p.slug}-${p.id}/`, 'product',
-        () => [datos(PRODUCTOS.es, p)],
-        () => [datos(PRODUCTOS.en, productos.en[cat].find((q) => q.id === p.id) ?? null)]);
+        () => [archivo(`src/pages/${cat}/[id].astro`), datos(PRODUCTOS.es, p), datos('src/lib/analisis.mjs', analisis('es', p))],
+        () => [archivo(`src/pages/en/${catEn}/[id].astro`), datos(PRODUCTOS.en, productos.en[cat].find((q) => q.id === p.id) ?? null), datos('src/lib/analisis.mjs', analisis('en', p))]);
     }
   }
   return entradas;

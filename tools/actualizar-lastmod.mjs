@@ -14,6 +14,7 @@
 //   node tools/actualizar-lastmod.mjs --check      no escribe nada; sale con error si el manifiesto está desactualizado
 //   node tools/actualizar-lastmod.mjs --sembrar    para URLs sin fecha usa el último commit de git de sus archivos
 //                                                  (solo para la primera vez; después las nuevas reciben «ahora»)
+//   node tools/actualizar-lastmod.mjs --adoptar    guarda las huellas nuevas SIN tocar las fechas (cuando cambia qué cuenta como contenido)
 //   node tools/actualizar-lastmod.mjs --todo       fuerza «ahora» en TODAS las URLs (rediseño total del sitio)
 // Se ejecuta solo antes de cada `npm run build` (script «prebuild») y en cada commit (hook: `npm run hooks:install`).
 import { createHash } from 'node:crypto';
@@ -51,7 +52,7 @@ const ultimoCommit = (fuentes) => {
 const previo = existsSync(MANIFIESTO) ? JSON.parse(readFileSync(MANIFIESTO, 'utf8')) : {};
 const ahora = new Date().toISOString();
 const nuevo = {};
-const resumen = { nuevas: 0, modificadas: 0, iguales: 0, sembradas: 0 };
+const resumen = { nuevas: 0, modificadas: 0, iguales: 0, sembradas: 0, adoptadas: 0 };
 const ejemplos = [];
 
 for (const e of listarEntradas()) {
@@ -65,6 +66,8 @@ for (const e of listarEntradas()) {
     else if (!antes) {
       lastmod = (args.has('--sembrar') && ultimoCommit(insumos.map((i) => i.fuente))) || ahora;
       resumen[args.has('--sembrar') ? 'sembradas' : 'nuevas']++;
+    } else if (antes.h !== h && args.has('--adoptar')) {
+      lastmod = antes.m; resumen.adoptadas++; // huella nueva SIN mover la fecha (al cambiar qué cuenta como contenido de una URL)
     } else if (antes.h !== h) {
       lastmod = ahora; resumen.modificadas++;
       if (ejemplos.length < 8) ejemplos.push(`${lang.toUpperCase()} ${e.path}`);
