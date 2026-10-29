@@ -18,7 +18,9 @@ export type Idioma = 'es' | 'en';
 type Entry = { path: string; tipo: TipoSitemap };
 
 const entradas: Entry[] = listarEntradas();
-const manifiesto = lastmods as Record<string, Partial<Record<Idioma, { h: string; m: string }>>>;
+const manifiesto = lastmods as unknown as Record<string, Partial<Record<Idioma, { h: string; m: string }>>>;
+// Fecha de cada ARCHIVO sitemap (la del índice): la guarda tools/actualizar-lastmod.mjs en el manifiesto, bajo «_sitemaps»
+const fechasSitemap = ((lastmods as any)._sitemaps ?? {}) as Record<string, { h: string; m: string }>;
 
 // Fecha de modificación de una URL en un idioma. Si falta en el manifiesto (build sin pasar por `npm run build`),
 // se omite en lugar de inventarla: una fecha falsa es peor que ninguna.
@@ -35,9 +37,10 @@ export function entradasDe(tipo: TipoSitemap): Entry[] {
 // Fecha más reciente de un conjunto de fechas ISO (todas en UTC con «Z», así que se ordenan como texto)
 const masReciente = (fechas: (string | undefined)[]) => fechas.filter(Boolean).sort().pop();
 
-// lastmod de un sitemap = el de su URL modificada más recientemente. Si una URL cambia, sube su sitemap y sube el índice.
+// lastmod de un sitemap en el índice = la fecha en que se modificó ESE ARCHIVO (protocolo sitemaps.org y Google). Cambia cuando se añade o
+// quita una URL o cambia la fecha de cualquiera de ellas; el manifiesto la lleva al día. Sin dato, la fecha más reciente de sus URLs.
 export function ultimaModificacion(tipo: TipoSitemap, lang: Idioma): string | undefined {
-  return masReciente(entradasDe(tipo).map((e) => fechaDe(e.path, lang)));
+  return fechasSitemap[`${tipo}-${lang}`]?.m ?? masReciente(entradasDe(tipo).map((e) => fechaDe(e.path, lang)));
 }
 
 // Escapa los caracteres reservados de XML (& ' " < >) en las URLs, como exige el protocolo de sitemaps

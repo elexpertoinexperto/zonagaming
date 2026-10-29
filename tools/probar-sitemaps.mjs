@@ -84,7 +84,10 @@ for (const h of [...esperados, 'sitemap.xml']) {
       const lm = (b.match(/<lastmod>([^<]+)<\/lastmod>/) ?? [])[1];
       if (!ISO.test(lm ?? '')) { err(`sitemap.xml: lastmod de ${hijo} ausente o sin formato ISO UTC con Z → ${lm}`); continue; }
       const fechas = [...fs.readFileSync(`dist/${hijo}`, 'utf8').matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1]).sort();
-      if (fechas.at(-1) !== lm) err(`sitemap.xml: lastmod de ${hijo} (${lm}) no es el de su URL más reciente (${fechas.at(-1)})`);
+      // el índice fecha el ARCHIVO sitemap: nunca puede ser anterior a la URL más reciente que contiene, y debe ser la del manifiesto
+      if (lm < fechas.at(-1)) err(`sitemap.xml: lastmod de ${hijo} (${lm}) es ANTERIOR a su URL más reciente (${fechas.at(-1)})`);
+      const guardado = leer('src/data/sitemap-lastmod.json')._sitemaps?.[hijo.replace(/^sitemap-/, '').replace(/\.xml$/, '')]?.m;
+      if (guardado !== lm) err(`sitemap.xml: lastmod de ${hijo} (${lm}) no coincide con el del manifiesto (${guardado})`);
     }
     continue;
   }

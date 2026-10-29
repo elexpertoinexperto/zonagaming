@@ -137,3 +137,17 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 - **Categoría**: su `index.astro`, FAQ, su SEO por keyword, `relaciones.ts`, `errores-comunes.ts` y sus productos.
 - NO cuentan (a propósito): cabecera, pie, estilos, buscador y efectos. Si cambias el TEXTO de `AnalisisSubcategoria.astro` o `FiltroPagina.astro`, esas 352 páginas cambian de contenido pero no de huella: ejecuta `node tools/actualizar-lastmod.mjs --todo` solo si de verdad quieres fecharlas.
 - Al cambiar qué cuenta como contenido, usa `node tools/actualizar-lastmod.mjs --adoptar` (guarda las huellas nuevas SIN mover fechas) y corrige a mano las fechas con la del commit real.
+
+### Cómo se garantiza que el sitemap nunca se quede atrasado (29-oct-2026)
+
+Tres capas, todas automáticas en cada commit (hook `pre-commit`, instalado con `npm run hooks:install`; ya está en este clon):
+1. **Huella por fuentes** (`sitemap-entradas.mjs`): fecha de cada URL según su registro, su archivo de página, su análisis, su SEO por keyword…
+2. **Red de seguridad por contenido renderizado** (`--render`, `tools/huella-render.mjs`): el hook compila el sitio (~6 s) y compara lo que MUESTRA cada
+   página (cuerpo sin cabecera/pie, title, meta description, robots, canonical y JSON-LD) con lo guardado en `src/data/sitemap-render.json`. Si cambió y
+   su fecha no se movió, se mueve. Atrapa cualquier cambio visible aunque nadie declarara de qué dependía la página (p. ej. un artículo del blog que lista productos).
+3. **Fecha del archivo sitemap en el índice** (`_sitemaps` en el manifiesto): según sitemaps.org y Google, el `<lastmod>` de cada sitemap en `sitemap.xml` es la fecha
+   en que se modificó ESE archivo. Se guarda una huella de la lista (URL + fecha) de cada uno de los 6; si cambia —se añade, se quita o se refecha una URL— el sitemap y
+   su entrada del índice se fechan «ahora». Prueba: `node tools/probar-sitemaps.mjs`.
+- **Auditoría de toda la historia:** `npm run build && node tools/auditar-lastmod-historial.mjs` compila cada commit desde el 13-oct y comprueba que toda página cuyo
+  contenido cambió tiene hoy un lastmod posterior al commit anterior (sale con error si no). Resultado a 29-oct-2026: 0 páginas atrasadas.
+- Si se hace un cambio masivo y NO quieres refechar nada: `node tools/actualizar-lastmod.mjs --render --render-base` (guarda las huellas sin mover fechas).

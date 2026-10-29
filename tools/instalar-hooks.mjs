@@ -9,6 +9,6 @@ const git = join(process.cwd(), '.git');
 if (!existsSync(git)) { console.log('[hooks] No hay .git aquí, nada que instalar.'); process.exit(0); }
 mkdirSync(join(git, 'hooks'), { recursive: true });
 const hook = join(git, 'hooks', 'pre-commit');
-writeFileSync(hook, '#!/bin/sh\nnode tools/actualizar-lastmod.mjs --git-add\n');
+writeFileSync(hook, '#!/bin/sh\nnode tools/actualizar-lastmod.mjs --render --git-add\n');
 chmodSync(hook, 0o755);
-console.log('[hooks] pre-commit instalado: cada commit actualiza src/data/sitemap-lastmod.json');
+console.log('[hooks] pre-commit instalado: cada commit compila el sitio y actualiza src/data/sitemap-lastmod.json (y sitemap-render.json)');

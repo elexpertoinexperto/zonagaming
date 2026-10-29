@@ -75,13 +75,75 @@ for (const e of listarEntradas()) {
     nuevo[e.path][lang] = { h, m: lastmod };
   }
 }
-const eliminadas = Object.keys(previo).filter((p) => !(p in nuevo)).length;
+const eliminadas = Object.keys(previo).filter((p) => !p.startsWith('_') && !(p in nuevo)).length;
+
+// ── Red de seguridad por CONTENIDO RENDERIZADO (--render) ─────────────────────────────────────────────────────────────
+// La huella de arriba solo conoce las fuentes que se le declararon. Esta compila el sitio y compara lo que MUESTRA cada página
+// (sin cabecera, pie ni scripts; ver tools/huella-render.mjs) con lo que mostraba la última vez: si cambió y su fecha no se movió,
+// se mueve. Así ningún cambio visible puede quedar sin lastmod, aunque nadie declarara de qué dependía esa página.
+// --render-base: guarda las huellas actuales SIN mover fechas (primera vez o tras una corrección manual de fechas).
+const RENDER = 'src/data/sitemap-render.json';
+let renderMovidas = 0;
+if (args.has('--render')) {
+  const { huellasDeDist } = await import('./huella-render.mjs');
+  if (!args.has('--sin-compilar')) {
+    console.log('[lastmod] compilando para comparar el contenido renderizado…');
+    execFileSync(process.execPath, ['node_modules/astro/bin/astro.mjs', 'build'], { stdio: 'pipe', maxBuffer: 1e9 });
+  }
+  const ahoraRender = huellasDeDist('dist');
+  const guardadas = existsSync(RENDER) ? JSON.parse(readFileSync(RENDER, 'utf8')) : {};
+  // ruta renderizada → (clave del manifiesto, idioma): los sitemaps de dist listan las URLs en el mismo orden que las entradas
+  const entradas = listarEntradas();
+  const mapa = new Map();
+  for (const tipo of ['pages', 'product', 'blog']) {
+    const es = entradas.filter((e) => e.tipo === tipo);
+    for (const lang of ['es', 'en']) {
+      const xml = readFileSync(`dist/sitemap-${tipo}-${lang}.xml`, 'utf8');
+      const locs = [...xml.matchAll(/<loc>https?:\/\/[^/]+([^<]*)<\/loc>/g)].map((m) => m[1]);
+      if (locs.length !== es.length) throw new Error(`[lastmod] sitemap-${tipo}-${lang}.xml tiene ${locs.length} URLs y el manifiesto ${es.length}`);
+      locs.forEach((ruta, k) => mapa.set(ruta, { key: es[k].path, lang }));
+    }
+  }
+  const nuevasGuardadas = {};
+  for (const [ruta, { key, lang }] of mapa) {
+    const r = ahoraRender[ruta];
+    if (!r) throw new Error(`[lastmod] ${ruta} está en el sitemap pero no se construyó`);
+    nuevasGuardadas[ruta] = r;
+    if (args.has('--render-base') || !guardadas[ruta] || guardadas[ruta] === r) continue;
+    const fila = nuevo[key][lang];
+    if (fila.m !== previo[key]?.[lang]?.m || fila.h !== previo[key]?.[lang]?.h) continue; // ya se movió por su huella
+    fila.m = ahora; renderMovidas++;
+    if (ejemplos.length < 12) ejemplos.push(`${lang.toUpperCase()} ${key}  (por contenido renderizado)`);
+  }
+  const salidaR = '{\n' + Object.entries(nuevasGuardadas).map(([p, v]) => `  ${JSON.stringify(p)}: ${JSON.stringify(v)}`).join(',\n') + '\n}\n';
+  if (salidaR !== (existsSync(RENDER) ? readFileSync(RENDER, 'utf8').replace(/\r\n/g, '\n') : '')) {
+    if (!args.has('--check')) {
+      writeFileSync(RENDER, salidaR, 'utf8');
+      if (args.has('--git-add')) { try { execFileSync('git', ['add', RENDER]); } catch { /* fuera de git */ } }
+    }
+  }
+}
+
+// ── Fecha de cada ARCHIVO sitemap (la que lleva el índice) ────────────────────────────────────────────────────────────
+// Protocolo y Google: el <lastmod> de un sitemap en el índice es «la fecha en que se modificó ESE archivo sitemap». Un sitemap cambia cuando
+// se añade o quita una URL o cambia la fecha de cualquiera: por eso se guarda una huella de su lista (URL + fecha) y, si cambia, el archivo
+// y su entrada del índice se fechan «ahora». (Tomar solo la fecha más reciente de sus URLs fallaba al QUITAR una URL.)
+const hijos = {};
+for (const tipo of ['pages', 'product', 'blog']) for (const lang of ['es', 'en']) {
+  const filas = listarEntradas().filter((e) => e.tipo === tipo).map((e) => `${e.path}|${nuevo[e.path][lang].m}`);
+  const h = createHash('sha256').update(filas.join('\n')).digest('hex').slice(0, 16);
+  const clave = `${tipo}-${lang}`;
+  const antes = previo._sitemaps?.[clave];
+  const maxUrl = filas.map((f) => f.split('|')[1]).sort().pop();
+  hijos[clave] = { h, m: !antes ? maxUrl : antes.h === h ? antes.m : (args.has('--adoptar') ? antes.m : ahora) };
+}
+nuevo._sitemaps = hijos;
 
 // Una línea por URL: el diff de git queda legible
 const salida = '{\n' + Object.entries(nuevo).map(([p, v]) => `  ${JSON.stringify(p)}: ${JSON.stringify(v)}`).join(',\n') + '\n}\n';
 const cambio = salida !== (existsSync(MANIFIESTO) ? readFileSync(MANIFIESTO, 'utf8').replace(/\r\n/g, '\n') : '');
 
-console.log(`[lastmod] ${resumen.iguales} sin cambios · ${resumen.modificadas} modificadas · ${resumen.nuevas + resumen.sembradas} nuevas · ${eliminadas} eliminadas`);
+console.log(`[lastmod] ${resumen.iguales} sin cambios · ${resumen.modificadas} modificadas · ${renderMovidas} por contenido renderizado · ${resumen.nuevas + resumen.sembradas} nuevas · ${eliminadas} eliminadas`);
 for (const x of ejemplos) console.log(`[lastmod]   modificada: ${x}`);
 
 if (args.has('--check')) {
