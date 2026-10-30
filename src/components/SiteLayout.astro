@@ -94,7 +94,7 @@ const articleSchema = article ? {
     <meta name="generator" content={Astro.generator} />
     {robots && <meta name="robots" content={robots} />}
     <link rel="canonical" href={Astro.url.href} />
-    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="es-CO" href={esUrl} />
     <link rel="alternate" hreflang="en-US" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={esUrl} />
     {description && <meta name="description" content={description} />}
@@ -104,8 +104,8 @@ const articleSchema = article ? {
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={Astro.url.href} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content={isEn ? 'en_US' : 'es_LA'} />
-    <meta property="og:locale:alternate" content={isEn ? 'es_LA' : 'en_US'} />
+    <meta property="og:locale" content={isEn ? 'en_US' : 'es_CO'} />
+    <meta property="og:locale:alternate" content={isEn ? 'es_CO' : 'en_US'} />
     <meta name="twitter:card" content={imagenProducto || ogImageProp ? 'summary_large_image' : 'summary'} />
     <meta name="twitter:title" content={title} />
     {description && <meta name="twitter:description" content={description} />}
