@@ -10,6 +10,8 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import GuiaEntradaGpu from '../../components/GuiaEntradaGpu.astro';
+import SchemaCategoria from '../../components/SchemaCategoria.astro';
 import { conImagenPrimero } from '../../lib/orden.mjs';
 import ErroresComunes from '../../components/ErroresComunes.astro';
 import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
@@ -65,9 +67,13 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
     ))}
   </section>
 
+  <SchemaCategoria catKey={"tarjetas-graficas"} lang="es" items={productsData} />
+
   <Comparador categoriaFija="tarjetas-graficas" />
 
   <TextoSEO h2={seo.h2} parrafos={seo.p} />
+
+  <GuiaEntradaGpu lang="es" />
 
   <EnlazadoInterno cat="tarjetas-graficas" lang="es">
     <section class="category-buying-guide">

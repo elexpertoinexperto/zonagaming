@@ -10,6 +10,7 @@ import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
 import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
+import SchemaCategoria from '../../components/SchemaCategoria.astro';
 import { conImagenPrimero } from '../../lib/orden.mjs';
 import ErroresComunes from '../../components/ErroresComunes.astro';
 import CategoriasRelacionadas from '../../components/CategoriasRelacionadas.astro';
@@ -64,6 +65,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
       }} />
     ))}
   </section>
+
+  <SchemaCategoria catKey={"ssd"} lang="es" items={productsData} />
 
   <Comparador categoriaFija="ssd" />
 

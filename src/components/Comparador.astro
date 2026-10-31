@@ -6,6 +6,8 @@ import { CATS_EN, UI_EN, SLUG_EN } from '../i18n/en';
 const { categoriaFija, lang = 'es' } = Astro.props as { categoriaFija?: string; lang?: 'es' | 'en' };
 const isEn = lang === 'en';
 const productos = isEn ? productosEnData : productosEs;
+// El comparador solo lleva a la ficha: los enlaces de compra (Amazon) no viajan en los datos de la página
+const productosInline = Object.fromEntries(Object.entries(productos).map(([k, l]: [string, any]) => [k, l.map(({ enlaceAmazon, asin, precioFecha, ...resto }: any) => resto)]));
 const urlPrefix = isEn ? '/en' : '';
 // Mapa clave ES → slug de URL según idioma (en ES el slug es la propia clave)
 const catSlugs = Object.fromEntries(
@@ -114,7 +116,6 @@ const t = isEn
         </div>
         <div class="product-card-actions">
           <a id="slot-a-detail" class="btn btn-small" href="#">{t.details}</a>
-          <a id="slot-a-amazon" class="btn btn-small btn-amazon" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
         </div>
       </div>
     </div>
@@ -153,7 +154,6 @@ const t = isEn
         </div>
         <div class="product-card-actions">
           <a id="slot-b-detail" class="btn btn-small" href="#">{t.details}</a>
-          <a id="slot-b-amazon" class="btn btn-small btn-amazon" href="#" target="_blank" rel="noopener noreferrer">Amazon</a>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@ const t = isEn
   </div>
 </section>
 
-<script define:vars={{ productosData: productos, categoriasData: categorias, categoriaFija, urlPrefix, catSlugs, jsT: { chooseProduct: t.chooseProduct, specification: t.specification, price: t.price, bestPrice: t.bestPrice } }} is:inline>
+<script define:vars={{ productosData: productosInline, categoriasData: categorias, categoriaFija, urlPrefix, catSlugs, jsT: { chooseProduct: t.chooseProduct, specification: t.specification, price: t.price, bestPrice: t.bestPrice } }} is:inline>
   const selCat   = document.getElementById('comp-categoria');
   const selA     = document.getElementById('comp-a');
   const selB     = document.getElementById('comp-b');
@@ -195,7 +195,6 @@ const t = isEn
 
     const href = `${urlPrefix}/${catSlugs[catKey] || catKey}/${product.slug}-${product.id}/`;
     document.getElementById(`slot-${slot}-detail`).href = href;
-    document.getElementById(`slot-${slot}-amazon`).href = product.enlaceAmazon;
 
     content.hidden = false;
     empty.hidden   = true;

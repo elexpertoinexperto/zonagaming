@@ -3,6 +3,7 @@
 // sale de un valor concreto de la ficha, así que dos productos distintos nunca comparten el mismo análisis.
 // Se muestra con src/components/AnalisisProducto.astro. Para afinar una categoría, edita su función en REGLAS.
 import { puntuarGpu, puntuarCpu } from './rendimiento.mjs';
+import { nivelGpu } from './gpu-nivel.mjs';
 
 const quitaTildes = (s) => String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const num = (s) => {
@@ -32,8 +33,10 @@ const REGLAS = {
     const bus = num(spec(p, 'AnchoBus', 'Ancho'));
     const ram = spec(p, 'VRAM');
     const pros = [], contras = [];
-    if (vram >= 16) pros.push(t(`${vram} GB de VRAM: margen de sobra para texturas altas en 1440p e incluso 4K.`, `${vram} GB of VRAM: plenty of headroom for high textures at 1440p and even 4K.`));
-    else if (vram >= 12) pros.push(t(`${vram} GB de VRAM: cómoda para 1440p con texturas altas.`, `${vram} GB of VRAM: comfortable for 1440p with high textures.`));
+    // la VRAM habla de texturas, no de FPS: solo se menciona 1440p/4K si el chip rinde para eso
+    if (vram >= 16 && puntos >= 120) pros.push(t(`${vram} GB de VRAM: margen de sobra para texturas altas en 1440p e incluso 4K.`, `${vram} GB of VRAM: plenty of headroom for high textures at 1440p and even 4K.`));
+    else if (vram >= 12 && puntos >= 120) pros.push(t(`${vram} GB de VRAM: cómoda para 1440p con texturas altas.`, `${vram} GB of VRAM: comfortable for 1440p with high textures.`));
+    else if (vram >= 12) pros.push(t(`${vram} GB de VRAM: memoria de sobra para texturas altas; los FPS los marca el chip, no la memoria.`, `${vram} GB of VRAM: plenty of memory for high textures; the chip, not the memory, sets the frame rate.`));
     else if (vram >= 8) pros.push(t(`${vram} GB de VRAM: suficiente para 1080p en calidad alta.`, `${vram} GB of VRAM: enough for 1080p at high settings.`));
     if (/GDDR7/i.test(ram)) pros.push(t('Memoria GDDR7, la generación más reciente y rápida.', 'GDDR7 memory, the newest and fastest generation.'));
     if (tdp && tdp <= 160) pros.push(t(`Consumo contenido (${tdp} W): una fuente de calidad de 550–650 W suele bastar.`, `Modest power draw (${tdp} W): a quality 550–650 W PSU is usually enough.`));
@@ -48,12 +51,15 @@ const REGLAS = {
       : puntos >= 60 ? t('1080p en ajustes medios', '1080p at medium settings')
       : t('esports y títulos ligeros en 1080p', 'esports and light titles at 1080p');
     const w = tdp <= 130 ? 550 : tdp <= 180 ? 650 : tdp <= 250 ? 750 : 850;
+    const nv = nivelGpu(p); // ¿gráfica de entrada, media o alta? (src/lib/gpu-nivel.mjs)
     return {
+      nivel: nv.nivel, clase: t(nv.clase.es, nv.clase.en),
       pros, contras,
       para: t(`Pensada para jugar en ${res}. Su chip (${chip}) está dentro del grupo de rendimiento de ${Math.round(puntos)} puntos de nuestro índice.`, `Built for ${res}. Its chip (${chip}) sits at ${Math.round(puntos)} points on our performance index.`),
       nopara: puntos >= 160 ? t('Si juegas a 1080p en esports, probablemente pagues más rendimiento del que vas a usar.', 'If you only play esports at 1080p, you may pay for performance you will not use.')
         : t('Si buscas 4K nativo con todo al máximo, necesitarás un modelo de mayor gama.', 'If you want native 4K with everything maxed, you will need a higher-tier model.'),
       faqs: [
+        { q: t('¿Es una gráfica de entrada?', 'Is it an entry-level graphics card?'), a: t(nv.porque.es, nv.porque.en) },
         { q: t(`¿Qué fuente necesita la ${chip}?`, `What power supply does the ${chip} need?`),
           a: t(`Con un consumo de ${tdp || 'N/D'} W, lo razonable es una fuente de calidad de al menos ${w} W (80+ Bronze o superior) para dejar margen al resto del equipo.`, `At ${tdp || 'N/A'} W, a quality PSU of at least ${w} W (80+ Bronze or better) leaves room for the rest of the system.`) },
         { q: t(`¿Para qué resolución sirve esta tarjeta?`, `What resolution is this card for?`),
@@ -402,9 +408,10 @@ export function analizar(catKey, producto, lista, lang, base, plural, listaEs = 
   const pct = Math.round(Math.abs(producto.precio / mediana - 1) * 100);
   const tier = rank <= n / 3 ? 'entrada' : rank <= (2 * n) / 3 ? 'media' : 'alta';
   const tierTxt = t({ entrada: 'gama de entrada', media: 'gama media', alta: 'gama alta' }[tier], { entrada: 'entry-level', media: 'mid-range', alta: 'high-end' }[tier]);
+  const tercio = t({ entrada: 'el tercio más económico', media: 'el tercio intermedio', alta: 'el tercio más caro' }[tier], { entrada: 'the cheapest third', media: 'the middle third', alta: 'the most expensive third' }[tier]);
   const posicion = t(
-    `Es el n.º ${rank} más económico de los ${n} productos de nuestro catálogo de ${plural} (${tierTxt} por precio). Cuesta ${pct === 0 ? 'lo mismo que' : `${pct} % ${producto.precio < mediana ? 'menos que' : 'más que'}`} la mediana de la categoría (${dinero(mediana)}).`,
-    `It is the #${rank} cheapest of the ${n} products in our ${plural} catalog (${tierTxt} by price). It costs ${pct === 0 ? 'the same as' : `${pct}% ${producto.precio < mediana ? 'less than' : 'more than'}`} the category median (${dinero(mediana)}).`,
+    `Es el n.º ${rank} más económico de los ${n} productos de nuestro catálogo de ${plural} (${tercio} por precio). Cuesta ${pct === 0 ? 'lo mismo que' : `${pct} % ${producto.precio < mediana ? 'menos que' : 'más que'}`} la mediana de la categoría (${dinero(mediana)}).`,
+    `It is the #${rank} cheapest of the ${n} products in our ${plural} catalog (${tercio} by price). It costs ${pct === 0 ? 'the same as' : `${pct}% ${producto.precio < mediana ? 'less than' : 'more than'}`} the category median (${dinero(mediana)}).`,
   );
 
   // vecinos por precio: el inmediatamente más barato y el inmediatamente más caro (con enlace y diferencias reales de ficha)
@@ -425,7 +432,10 @@ export function analizar(catKey, producto, lista, lang, base, plural, listaEs = 
 
   const nombreCorto = corto(producto.nombre, 48);
   const destaca = r.pros[0] ? r.pros[0].replace(/[.]$/, '') : '';
-  const veredicto = t(
+  const veredicto = r.clase ? t(
+    `${nombreCorto} es ${r.clase} (${dinero(producto.precio)})${destaca ? `. Lo mejor: ${destaca.charAt(0).toLowerCase() + destaca.slice(1)}` : ''}${r.contras[0] ? `. A tener en cuenta: ${r.contras[0].replace(/[.]$/, '').replace(/^./, (c) => c.toLowerCase())}` : ''}.`,
+    `${nombreCorto} is ${r.clase} (${dinero(producto.precio)})${destaca ? `. Best part: ${destaca.charAt(0).toLowerCase() + destaca.slice(1)}` : ''}${r.contras[0] ? `. Keep in mind: ${r.contras[0].replace(/[.]$/, '').replace(/^./, (c) => c.toLowerCase())}` : ''}.`,
+  ) : t(
     `${nombreCorto} es una opción de ${tierTxt} dentro de nuestro catálogo de ${plural} (${dinero(producto.precio)})${destaca ? `. Lo mejor: ${destaca.charAt(0).toLowerCase() + destaca.slice(1)}` : ''}${r.contras[0] ? `. A tener en cuenta: ${r.contras[0].replace(/[.]$/, '').replace(/^./, (c) => c.toLowerCase())}` : ''}.`,
     `${nombreCorto} is ${tier === 'entrada' ? 'an' : 'a'} ${tierTxt} option in our ${plural} catalog (${dinero(producto.precio)})${destaca ? `. Best part: ${destaca.charAt(0).toLowerCase() + destaca.slice(1)}` : ''}${r.contras[0] ? `. Keep in mind: ${r.contras[0].replace(/[.]$/, '').replace(/^./, (c) => c.toLowerCase())}` : ''}.`,
   );

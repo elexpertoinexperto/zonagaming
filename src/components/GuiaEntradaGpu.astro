@@ -1,0 +1,116 @@
+---
+// «Gráficas de entrada: cuáles sí lo son y cuáles no» (solo en la categoría de tarjetas gráficas, ES y EN).
+// Clasifica cada tarjeta del catálogo por su rendimiento real (src/lib/gpu-nivel.mjs) y lo cuenta con datos del catálogo:
+// no hay lista a mano, así que al añadir o cambiar una tarjeta el bloque se rehace solo en el siguiente build.
+import productosEs from '../data/productos.json';
+import productosEn from '../data/productos-en.json';
+import { nivelGpu, LIMITE_ENTRADA } from '../lib/gpu-nivel.mjs';
+import { dinero, corto } from '../lib/analisis.mjs';
+import { SLUG_EN } from '../i18n/en';
+
+const { lang = 'es' } = Astro.props as { lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const t = (es: string, en: string) => (isEn ? en : es);
+const cat = 'tarjetas-graficas';
+const base = isEn ? `/en/${SLUG_EN[cat]}` : `/${cat}`;
+const lista = ((isEn ? productosEn : productosEs) as any)[cat] as any[];
+
+const filas = lista
+  .map((p) => { const es = (productosEs as any)[cat].find((x: any) => x.id === p.id); return { p, n: nivelGpu(es) }; })
+  .sort((a, b) => a.p.precio - b.p.precio || a.p.id - b.p.id);
+const href = (p: any) => `${base}/${p.slug}-${p.id}/`;
+const entrada = filas.filter((f) => f.n.nivel === 'entrada');
+const media = filas.filter((f) => f.n.nivel === 'media');
+const alta = filas.filter((f) => f.n.nivel === 'alta');
+const recomendadas = entrada.filter((f) => f.n.grado === 'recomendada');
+const masBarataRec = recomendadas[0];
+const masBarata = entrada[0];
+// mejor relación rendimiento/precio entre las de entrada con 6 GB o más y generación vigente o 12 GB
+const valor = [...entrada].filter((f) => f.n.vram >= 8).sort((a, b) => b.n.puntos / b.p.precio - a.n.puntos / a.p.precio)[0];
+const minMedia = media[0], minAlta = alta[0];
+
+const tx = isEn
+  ? { h2: 'Entry-level graphics cards: which ones are and which are not', rule: `We call a card entry-level when it performs at or below an RTX 5060 (${LIMITE_ENTRADA} points on our performance index, where the RTX 5060 is 100). That is the usual starting point for playing at 1080p. We classify by performance, not by price, because prices change every week.`,
+      h3a: `Entry-level cards in our catalog (${entrada.length})`, card: 'Graphics card', price: 'Price', vram: 'VRAM', pts: 'Points', kind: 'Type', for: 'For',
+      h3b: 'Which one should I pick?', h3c: 'Which ones are NOT entry-level?', note: 'Classification based on each model\'s performance index; it is a guide, not a lab test. Prices are those of the catalog.' }
+  : { h2: 'Gráficas de entrada: cuáles sí lo son y cuáles no', rule: `Llamamos gráfica de entrada a la que rinde igual o menos que una RTX 5060 (${LIMITE_ENTRADA} puntos en nuestro índice de rendimiento, donde la RTX 5060 vale 100). Es el punto de partida habitual para jugar en 1080p. Clasificamos por rendimiento y no por precio, porque los precios cambian cada semana.`,
+      h3a: `Gráficas de entrada de nuestro catálogo (${entrada.length})`, card: 'Gráfica', price: 'Precio', vram: 'VRAM', pts: 'Puntos', kind: 'Tipo', for: 'Para',
+      h3b: '¿Cuál elijo?', h3c: '¿Cuáles NO son de entrada?', note: 'Clasificación según el índice de rendimiento de cada modelo; es una guía, no una prueba de laboratorio. Los precios son los del catálogo.' };
+
+const nombre = (f: any) => corto(f.p.nombre, 60);
+const rec = t(
+  masBarataRec ? `La entrada recomendada más económica es ${nombre(masBarataRec)}, a ${dinero(masBarataRec.p.precio)} USD (${masBarataRec.n.vram} GB de VRAM, ${Math.round(masBarataRec.n.puntos)} puntos): ${masBarataRec.n.res.es}.` : '',
+  masBarataRec ? `The cheapest recommended entry-level card is ${nombre(masBarataRec)}, at ${dinero(masBarataRec.p.precio)} USD (${masBarataRec.n.vram} GB of VRAM, ${Math.round(masBarataRec.n.puntos)} points): ${masBarataRec.n.res.en}.` : '');
+const baratas = t(
+  masBarata ? `La más barata de todo el catálogo es ${nombre(masBarata)} (${dinero(masBarata.p.precio)} USD), pero rinde solo ${Math.round(masBarata.n.puntos)} puntos y tiene ${masBarata.n.vram} GB de VRAM: sirve para esports y juegos ligeros, no para estrenos.` : '',
+  masBarata ? `The cheapest in the whole catalog is ${nombre(masBarata)} (${dinero(masBarata.p.precio)} USD), but it only scores ${Math.round(masBarata.n.puntos)} points and has ${masBarata.n.vram} GB of VRAM: fine for esports and light games, not for new releases.` : '');
+const mejorValor = t(
+  valor ? `La mejor relación rendimiento/precio entre las de entrada con 8 GB o más es ${nombre(valor)} (${Math.round(valor.n.puntos)} puntos por ${dinero(valor.p.precio)} USD).` : '',
+  valor ? `The best performance per dollar among entry-level cards with 8 GB or more is ${nombre(valor)} (${Math.round(valor.n.puntos)} points for ${dinero(valor.p.precio)} USD).` : '');
+const noEntrada = t(
+  `Las otras ${media.length + alta.length} tarjetas del catálogo NO son de entrada: ${media.length} son de gama media (desde ${minMedia ? dinero(minMedia.p.precio) : 'N/D'} USD) y ${alta.length} de gama alta (desde ${minAlta ? dinero(minAlta.p.precio) : 'N/D'} USD). Si tu presupuesto es ajustado y solo juegas en 1080p, no necesitas pagar por ellas.`,
+  `The other ${media.length + alta.length} cards in the catalog are NOT entry-level: ${media.length} are mid-range (from ${minMedia ? dinero(minMedia.p.precio) : 'N/A'} USD) and ${alta.length} are high-end (from ${minAlta ? dinero(minAlta.p.precio) : 'N/A'} USD). If your budget is tight and you only play at 1080p, you do not need to pay for them.`);
+const faqs = [
+  { q: t('¿Cuál es la mejor gráfica de entrada?', 'What is the best entry-level graphics card?'), a: [rec, mejorValor].filter(Boolean).join(' ') },
+  { q: t('¿Qué gráficas no son de entrada?', 'Which graphics cards are not entry-level?'), a: noEntrada },
+].filter((f) => f.a);
+const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+
+<section class="gde" aria-labelledby="gde-title">
+  <h2 id="gde-title">{tx.h2}</h2>
+  <p>{tx.rule}</p>
+
+  <h3>{tx.h3a}</h3>
+  <div class="gde-tabla">
+    <table>
+      <thead><tr><th>{tx.card}</th><th>{tx.price}</th><th>{tx.vram}</th><th>{tx.pts}</th><th>{tx.kind}</th><th>{tx.for}</th></tr></thead>
+      <tbody>
+        {entrada.map((f) => (
+          <tr>
+            <td><a href={href(f.p)}>{corto(f.p.nombre, 64)}</a></td>
+            <td>{dinero(f.p.precio)}</td>
+            <td>{f.n.vram} GB</td>
+            <td>{Math.round(f.n.puntos)}</td>
+            <td>{f.n.clase.etiqueta[lang]}{f.n.anterior ? t(' · gen. anterior', ' · older gen.') : ''}</td>
+            <td>{f.n.res[lang]}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>{tx.h3b}</h3>
+  <ul class="gde-lista">
+    {rec && <li>{rec}</li>}
+    {mejorValor && <li>{mejorValor}</li>}
+    {baratas && <li>{baratas}</li>}
+  </ul>
+
+  <h3>{tx.h3c}</h3>
+  <p>{noEntrada}</p>
+  <p class="gde-nota">{tx.note}</p>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+</section>
+
+<style>
+  .gde { margin-top: 64px; padding: 32px 36px; border-radius: var(--r-lg); background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(124, 255, 203, 0.1); }
+  .gde h2 { margin: 0 0 12px; font-size: 1.35rem; color: var(--text); }
+  .gde h3 { margin: 26px 0 12px; font-size: 1rem; color: var(--accent); }
+  .gde p { margin: 0 0 12px; color: var(--text-muted); line-height: 1.7; max-width: 80ch; }
+  .gde-tabla { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-md); }
+  .gde-tabla table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .gde-tabla th, .gde-tabla td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .gde-tabla td:first-child { white-space: normal; min-width: 240px; }
+  .gde-tabla td:last-child { white-space: normal; min-width: 200px; }
+  .gde-tabla th { color: var(--text-dim); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.05em; text-transform: uppercase; background: rgba(255, 255, 255, 0.02); }
+  .gde-tabla td { color: var(--text-muted); }
+  .gde-tabla td a { color: var(--accent); text-decoration: none; }
+  .gde-tabla td a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .gde-tabla tr:last-child td { border-bottom: 0; }
+  .gde-lista { margin: 0 0 8px; padding: 0; list-style: none; display: grid; gap: 10px; }
+  .gde-lista li { position: relative; padding-left: 17px; color: var(--text); font-size: 0.95rem; line-height: 1.6; max-width: 80ch; }
+  .gde-lista li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+  .gde-nota { font-size: 0.8rem; color: var(--text-dim); }
+  @media (max-width: 860px) { .gde { padding: 24px 18px; } }
+</style>

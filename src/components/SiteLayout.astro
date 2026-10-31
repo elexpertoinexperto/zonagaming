@@ -5,6 +5,7 @@ import Footer from './Footer.astro';
 import { toEnPath, toEsPath } from '../i18n/en';
 import productosEs from '../data/productos.json';
 import productosEn from '../data/productos-en.json';
+import { NOMBRES } from '../lib/filtros.mjs';
 const { title, description, robots, schema, article, ogImage: ogImageProp } = Astro.props;
 
 // Idioma derivado de la URL: /en/... es inglés, el resto español
@@ -33,15 +34,29 @@ const imagenProducto = productoPagina && !sinImagen ? `${site}${productoPagina.i
 const ogImage = ogImageProp ? `${site}${ogImageProp}` : (imagenProducto ?? `${site}/logo-fondoblanco.png`);
 const ogType = article ? 'article' : productoPagina ? 'product' : 'website';
 
+// Datos del producto en el idioma de la página (nombre, descripción y especificaciones) para el JSON-LD de e-commerce
+const pLang = isEn ? productoLang : productoPagina;
+const especificacionesSchema = pLang
+  ? Object.entries(pLang.especificaciones ?? {})
+      .filter(([, v]) => String(v).trim() !== '' && String(v).trim().toUpperCase() !== 'N/D')
+      .map(([k, v]) => ({ "@type": "PropertyValue", "name": k, "value": String(v) }))
+  : [];
+const nombreCategoria = productoPagina ? ((NOMBRES as any)[segs[0]]?.[isEn ? 'enTit' : 'esTit'] ?? undefined) : undefined;
+
+// Product + Offer (precio y moneda reales de la ficha). Sin availability ni valoraciones: no verificamos stock en Amazon ni tenemos reseñas propias,
+// y marcarlo sería afirmar algo falso; el precio sí es el del catálogo (con su fecha en la propia página).
 const productSchema = productoPagina && productoLang ? {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": productoPagina.nombre,
-  "description": (isEn ? productoLang : productoPagina).descripcion,
+  "@id": `${Astro.url.href}#product`,
+  "url": Astro.url.href,
+  "name": pLang.nombre,
+  "description": pLang.descripcion,
+  ...(nombreCategoria ? { "category": nombreCategoria } : {}),
+  ...(especificacionesSchema.length ? { "additionalProperty": especificacionesSchema } : {}),
   ...(imagenProducto ? { "image": [imagenProducto] } : {}),
   ...(productoPagina.marca ? { "brand": { "@type": "Brand", "name": productoPagina.marca } } : {}),
   ...(productoPagina.asin ? { "sku": productoPagina.asin } : {}),
-  "inLanguage": lang,
   "offers": {
     "@type": "Offer",
     "url": Astro.url.href,

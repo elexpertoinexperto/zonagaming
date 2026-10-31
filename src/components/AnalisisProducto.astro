@@ -18,11 +18,11 @@ const a = producto ? analizar(catKey, producto, lista, lang, base, plural, (prod
 
 const t = isEn
   ? { title: 'Quick analysis', pros: 'Strengths', cons: 'Things to consider', who: 'Who is it for?', notWho: 'Who should look elsewhere?',
-      cmp: 'How it compares', cheaper: 'Next one down in price', pricier: 'Next one up in price', save: 'cheaper', more: 'more',
+      cmp: 'How it compares', cheaper: 'Next one down in price', pricier: 'Next one up in price', save: 'cheaper', more: 'more', same: 'same price',
       faq: 'Frequently asked questions about this product', note: 'Automatic analysis based on this catalog\'s specs and prices; it is a guide, not a lab test.',
       date: 'Price checked on', pos: 'Price position' }
   : { title: 'Análisis rápido', pros: 'Puntos fuertes', cons: 'A tener en cuenta', who: '¿Para quién es?', notWho: '¿Quién debería mirar otra opción?',
-      cmp: 'Cómo se compara', cheaper: 'El siguiente más barato', pricier: 'El siguiente más caro', save: 'más barato', more: 'más caro',
+      cmp: 'Cómo se compara', cheaper: 'El siguiente más barato', pricier: 'El siguiente más caro', save: 'más barato', more: 'más caro', same: 'mismo precio',
       faq: 'Preguntas frecuentes sobre este producto', note: 'Análisis automático a partir de las especificaciones y precios de este catálogo; es una guía, no una prueba de laboratorio.',
       date: 'Precio verificado el', pos: 'Posición por precio' };
 
@@ -71,7 +71,7 @@ const fecha = producto?.precioFecha ? String(producto.precioFecha).slice(0, 10) 
             <a class="an-card" href={a.masBarato.href}>
               <span class="an-tag">{t.cheaper}</span>
               <strong>{a.masBarato.nombre}</strong>
-              <span class="an-price">{dinero(a.masBarato.precio)} · {dinero(Math.abs(a.masBarato.dif))} ({a.masBarato.pct} %) {t.save}</span>
+              <span class="an-price">{dinero(a.masBarato.precio)} · {a.masBarato.dif === 0 ? t.same : `${dinero(Math.abs(a.masBarato.dif))} (${a.masBarato.pct} %) ${t.save}`}</span>
               {a.masBarato.diffs.length > 0 && <span class="an-diffs">{a.masBarato.diffs.join(' · ')}</span>}
             </a>
           )}
@@ -79,7 +79,7 @@ const fecha = producto?.precioFecha ? String(producto.precioFecha).slice(0, 10) 
             <a class="an-card" href={a.masCaro.href}>
               <span class="an-tag">{t.pricier}</span>
               <strong>{a.masCaro.nombre}</strong>
-              <span class="an-price">{dinero(a.masCaro.precio)} · {dinero(Math.abs(a.masCaro.dif))} ({a.masCaro.pct} %) {t.more}</span>
+              <span class="an-price">{dinero(a.masCaro.precio)} · {a.masCaro.dif === 0 ? t.same : `${dinero(Math.abs(a.masCaro.dif))} (${a.masCaro.pct} %) ${t.more}`}</span>
               {a.masCaro.diffs.length > 0 && <span class="an-diffs">{a.masCaro.diffs.join(' · ')}</span>}
             </a>
           )}

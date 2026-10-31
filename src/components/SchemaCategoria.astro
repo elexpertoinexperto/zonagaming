@@ -1,0 +1,32 @@
+---
+// Datos estructurados del listado de una categoría (ES y EN): CollectionPage + ItemList con cada producto, su enlace, imagen y precio.
+// Mismo formato que las subcategorías (FiltroPagina.astro). Los productos llegan ya ordenados como se ven en la página.
+import { NOMBRES } from '../lib/filtros.mjs';
+import { SLUG_EN } from '../i18n/en';
+
+const { catKey, lang = 'es', items } = Astro.props as { catKey: string; lang?: 'es' | 'en'; items: any[] };
+const isEn = lang === 'en';
+const site = 'https://monckeygamer.com';
+const base = isEn ? `/en/${SLUG_EN[catKey]}` : `/${catKey}`;
+const nombre = (NOMBRES as any)[catKey]?.[isEn ? 'enTit' : 'esTit'];
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: nombre,
+  url: `${site}${base}/`,
+  inLanguage: lang,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: items.length,
+    itemListElement: items.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `${site}${base}/${p.slug}-${p.id}/`,
+      name: p.nombre,
+      ...(!String(p.imagenUrl ?? '').includes('placeholder') && p.imagenUrl ? { image: `${site}${p.imagenUrl}` } : {}),
+    })),
+  },
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
