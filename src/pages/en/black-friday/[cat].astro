@@ -1,0 +1,14 @@
+---
+// Black Friday (TEMPORAL, ver src/data/black-friday.mjs): /en/black-friday/graphics-cards/ …
+import BlackFridayCategoria from '../../../components/BlackFridayCategoria.astro';
+import { BLACK_FRIDAY, CATEGORIAS_BF } from '../../../data/black-friday.mjs';
+import { SLUG_EN } from '../../../i18n/en';
+
+export function getStaticPaths() {
+  return BLACK_FRIDAY.activo ? CATEGORIAS_BF.map((cat) => ({ params: { cat: SLUG_EN[cat] }, props: { catKey: cat } })) : [];
+}
+
+const { catKey } = Astro.props;
+---
+
+<BlackFridayCategoria catKey={catKey} lang="en" />

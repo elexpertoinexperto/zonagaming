@@ -1,0 +1,94 @@
+---
+// Portada TEMPORAL de la campaña de Black Friday: enlaza a la página de cada categoría principal (ver src/data/black-friday.mjs).
+import SiteLayout from './SiteLayout.astro';
+import TextoSEO from './TextoSEO.astro';
+import { NOMBRES } from '../lib/filtros-catalogo';
+import { SLUG_EN } from '../i18n/en';
+import productosEs from '../data/productos.json';
+import productosEn from '../data/productos-en.json';
+import { BLACK_FRIDAY, CATEGORIAS_BF, fechaTexto, tituloCaso } from '../data/black-friday.mjs';
+
+const { lang = 'es' } = Astro.props as { lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const site = 'https://monckeygamer.com';
+const anio = BLACK_FRIDAY.anio;
+const viernes = fechaTexto(BLACK_FRIDAY.viernes, lang);
+const cyber = fechaTexto(BLACK_FRIDAY.cyberMonday, lang);
+const base = isEn ? '/en/black-friday' : '/black-friday';
+const urlHome = isEn ? '/en/' : '/';
+
+const cats = CATEGORIAS_BF.map((cat) => {
+  const lista = ((isEn ? productosEn : productosEs) as any)[cat] as any[];
+  const precios = lista.map((p) => p.precio);
+  const n = (NOMBRES as any)[cat];
+  return { cat, nombre: isEn ? n.enTit : n.esTit, total: lista.length, min: Math.min(...precios), href: `${base}/${isEn ? SLUG_EN[cat] : cat}/` };
+});
+
+const h1 = isEn ? `Black Friday ${anio}: Gaming PC Parts & Peripherals` : `Black Friday ${anio}: Componentes y Periféricos Gamer`;
+const title = `${h1} | Monckey Gamer`;
+const description = isEn
+  ? `Black Friday ${anio} (${viernes}): graphics cards, processors, RAM, SSDs, monitors and more, sorted from cheapest to most expensive with direct Amazon links.`
+  : `Black Friday ${anio} (${viernes}): tarjetas gráficas, procesadores, RAM, SSD, monitores y más, del más barato al más caro y con enlace directo a Amazon.`;
+const intro = isEn
+  ? `Black Friday ${anio} is ${viernes} and Cyber Monday is ${cyber}. Pick a category and see every model in our catalog sorted from the lowest to the highest price.`
+  : `Black Friday ${anio} es el ${viernes} y el Cyber Monday el ${cyber}. Elige una categoría y mira todos los modelos de nuestro catálogo ordenados del precio más bajo al más alto.`;
+const texto = isEn
+  ? { h2: 'How to use these Black Friday pages', p: [
+      'Each page lists the whole catalog of that category from the cheapest product to the most expensive one. Prices are the ones in our catalog on the day we checked them; Amazon can change them during Black Friday, so confirm the final price before you buy.',
+      'Building a PC? Start with the <a href="/en/graphics-cards/">graphics card</a>, the biggest part of the budget, then match the <a href="/en/processors/">processor</a>, <a href="/en/ram-memory/">RAM</a> and <a href="/en/ssd/">SSD</a>.'] }
+  : { h2: 'Cómo usar estas páginas de Black Friday', p: [
+      'Cada página lista todo el catálogo de esa categoría desde el producto más barato hasta el más caro. Los precios son los de nuestro catálogo el día que los revisamos; Amazon puede cambiarlos durante Black Friday, así que confirma el precio final antes de comprar.',
+      '¿Armando un PC? Empieza por la <a href="/tarjetas-graficas/">tarjeta gráfica</a>, la parte más grande del presupuesto, y luego combina el <a href="/procesadores/">procesador</a>, la <a href="/memoria-ram/">memoria RAM</a> y el <a href="/ssd/">SSD</a>.'] };
+const t = isEn ? { home: 'Home', bf: 'Black Friday', models: 'models', from: 'from', go: 'See the cheapest first' } : { home: 'Inicio', bf: 'Black Friday', models: 'modelos', from: 'desde', go: 'Ver del más barato al más caro' };
+
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: t.home, item: `${site}${urlHome}` },
+    { '@type': 'ListItem', position: 2, name: t.bf, item: `${site}${base}/` },
+  ] },
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: h1, description, url: `${site}${base}/`, inLanguage: lang,
+    mainEntity: { '@type': 'ItemList', numberOfItems: cats.length, itemListElement: cats.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site}${c.href}`, name: `Black Friday ${tituloCaso(c.nombre)}` })) } },
+];
+---
+
+<SiteLayout title={title} description={description} robots="index, follow" schema={schema}>
+  <section class="category-hero">
+    <ol class="breadcrumb" aria-label={isEn ? 'Breadcrumb' : 'Migas de pan'}>
+      <li><a href={urlHome}>{t.home}</a></li>
+      <li aria-current="page" class="breadcrumb-actual">{t.bf}</li>
+    </ol>
+    <h1>{h1}</h1>
+    <p class="category-description">{intro}</p>
+  </section>
+
+  <section class="product-grid bf-hub">
+    {cats.map((c) => (
+      <a class="bf-card" href={c.href}>
+        <h2>Black Friday {tituloCaso(c.nombre)}</h2>
+        <p>{c.total} {t.models} · {t.from} ${Math.round(c.min)} USD</p>
+        <span class="bf-go">{t.go} →</span>
+      </a>
+    ))}
+  </section>
+
+  <TextoSEO h2={texto.h2} parrafos={texto.p} />
+</SiteLayout>
+
+<style>
+  .bf-card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+    border-radius: var(--r-md, 14px);
+    border: 1px solid var(--line-strong);
+    background: var(--surface);
+    color: inherit;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .bf-card:hover { border-color: var(--accent-line); background: var(--accent-soft); }
+  .bf-card h2 { margin: 0; font-size: 1.1rem; }
+  .bf-card p { margin: 0; color: var(--text-dim); font-size: 0.9rem; }
+  .bf-go { margin-top: 6px; color: var(--accent); font-size: 0.85rem; font-weight: 500; }
+</style>

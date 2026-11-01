@@ -35,6 +35,8 @@ export function toEnPath(pathname: string): string {
   if (segs[1] && SLUG_EN[segs[1]]) segs[1] = SLUG_EN[segs[1]];
   // Subcategoría (filtro): /tarjetas-graficas/para-1080p/ → /en/graphics-cards/for-1080p/
   if (catEs && segs[2] && FILTRO_ES_A_EN[catEs]?.[segs[2]]) segs[2] = FILTRO_ES_A_EN[catEs][segs[2]];
+  // Campaña temporal: /black-friday/tarjetas-graficas/ → /en/black-friday/graphics-cards/
+  if (segs[1] === 'black-friday' && segs[2] && SLUG_EN[segs[2]]) segs[2] = SLUG_EN[segs[2]];
   const joined = segs.join('/');
   return joined === '/' ? '/en/' : `/en${joined}`;
 }
@@ -47,6 +49,7 @@ export function toEsPath(pathname: string): string {
   const catEn = segs[1];
   if (segs[1] && SLUG_ES[segs[1]]) segs[1] = SLUG_ES[segs[1]];
   if (catEn && segs[2] && FILTRO_EN_A_ES[segs[1]]?.[segs[2]]) segs[2] = FILTRO_EN_A_ES[segs[1]][segs[2]];
+  if (catEn === 'black-friday' && segs[2] && SLUG_ES[segs[2]]) segs[2] = SLUG_ES[segs[2]];
   return segs.join('/');
 }
 

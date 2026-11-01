@@ -7,6 +7,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { construirFiltros, NOMBRES } from './filtros.mjs';
 import { analizar } from './analisis.mjs';
+import { BLACK_FRIDAY, CATEGORIAS_BF } from '../data/black-friday.mjs';
 
 // Todo cuelga de la raíz del proyecto; tanto `astro build` como el hook se ejecutan desde ahí.
 const RAIZ = process.cwd();
@@ -124,6 +125,18 @@ export function listarEntradas() {
       add(`/${cat}/${p.slug}-${p.id}/`, 'product',
         () => [archivo(`src/pages/${cat}/[id].astro`), datos(PRODUCTOS.es, p), datos('src/lib/analisis.mjs', analisis('es', p))],
         () => [archivo(`src/pages/en/${catEn}/[id].astro`), datos(PRODUCTOS.en, productos.en[cat].find((q) => q.id === p.id) ?? null), datos('src/lib/analisis.mjs', analisis('en', p))]);
+    }
+  }
+  // Campaña TEMPORAL de Black Friday (src/data/black-friday.mjs): sale de los sitemaps en cuanto se apaga con tools/black-friday-cerrar.mjs
+  if (BLACK_FRIDAY.activo) {
+    const bf = archivo('src/data/black-friday.mjs');
+    add('/black-friday/', 'pages',
+      () => [archivo('src/components/BlackFridayHub.astro'), bf, ...CATEGORIAS_BF.map((c) => datos(PRODUCTOS.es, productos.es[c].map((p) => p.precio)))],
+      () => [archivo('src/components/BlackFridayHub.astro'), bf, ...CATEGORIAS_BF.map((c) => datos(PRODUCTOS.en, productos.en[c].map((p) => p.precio)))]);
+    for (const cat of CATEGORIAS_BF) {
+      add(`/black-friday/${cat}/`, 'pages',
+        () => [archivo('src/components/BlackFridayCategoria.astro'), bf, datos(PRODUCTOS.es, productos.es[cat])],
+        () => [archivo('src/components/BlackFridayCategoria.astro'), bf, archivo(EN_TS), datos(PRODUCTOS.en, productos.en[cat])]);
     }
   }
   return entradas;

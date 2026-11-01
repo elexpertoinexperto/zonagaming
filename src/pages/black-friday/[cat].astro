@@ -1,0 +1,13 @@
+---
+// Black Friday (TEMPORAL, ver src/data/black-friday.mjs): /black-friday/tarjetas-graficas/ …
+import BlackFridayCategoria from '../../components/BlackFridayCategoria.astro';
+import { BLACK_FRIDAY, CATEGORIAS_BF } from '../../data/black-friday.mjs';
+
+export function getStaticPaths() {
+  return BLACK_FRIDAY.activo ? CATEGORIAS_BF.map((cat) => ({ params: { cat } })) : [];
+}
+
+const { cat } = Astro.params;
+---
+
+<BlackFridayCategoria catKey={cat!} lang="es" />

@@ -1,0 +1,226 @@
+---
+// Página TEMPORAL de Black Friday de una categoría principal (ver src/data/black-friday.mjs):
+//   /black-friday/tarjetas-graficas/  ·  /en/black-friday/graphics-cards/
+// Todos los productos de la categoría del más barato al más caro (orden por defecto). No afirma descuentos: el catálogo no guarda
+// precios anteriores, así que dice la verdad (precio actual del catálogo, a confirmar en Amazon) y ordena por precio.
+import SiteLayout from './SiteLayout.astro';
+import ProductCard from './ProductCard.astro';
+import FAQ from './FAQ.astro';
+import TextoSEO from './TextoSEO.astro';
+import { FILTROS, NOMBRES, productosDelFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
+import { SLUG_EN } from '../i18n/en';
+import productosEs from '../data/productos.json';
+import productosEn from '../data/productos-en.json';
+import { BLACK_FRIDAY, fechaTexto, tituloCaso } from '../data/black-friday.mjs';
+
+const { catKey, lang = 'es' } = Astro.props as { catKey: string; lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const site = 'https://monckeygamer.com';
+const n = (NOMBRES as any)[catKey];
+const plural = isEn ? n.en : n.es;
+const tit = isEn ? n.enTit : n.esTit;
+const uno = isEn ? n.enUno : n.esUno;
+const anio = BLACK_FRIDAY.anio;
+const catEn = SLUG_EN[catKey] ?? catKey;
+
+const baseBF = isEn ? '/en/black-friday' : '/black-friday';
+const urlBF = `${baseBF}/${isEn ? catEn : catKey}/`;
+const urlCat = isEn ? `/en/${catEn}/` : `/${catKey}/`;
+const baseCat = isEn ? `/en/${catEn}` : `/${catKey}`;
+const urlHome = isEn ? '/en/' : '/';
+
+// Del más barato al más caro (orden por defecto de la campaña)
+const items = ([...((isEn ? productosEn : productosEs) as any)[catKey]] as any[]).sort((a, b) => a.precio - b.precio);
+const barato = items[0];
+const caro = items[items.length - 1];
+const precio = (x: number) => `$${x.toFixed(2)}`;
+const total = items.length;
+const min = Math.round(barato.precio);
+const max = Math.round(caro.precio);
+const hrefProducto = (p: any) => `${baseCat}/${p.slug}-${p.id}/`;
+
+const viernes = fechaTexto(BLACK_FRIDAY.viernes, lang);
+const cyber = fechaTexto(BLACK_FRIDAY.cyberMonday, lang);
+
+const h1 = `Black Friday ${tituloCaso(tit)}`;
+const title = `Black Friday ${tituloCaso(tit)} ${anio} | Monckey Gamer`;
+const description = isEn
+  ? `Black Friday ${anio} ${plural}: ${total} models sorted from cheapest to most expensive, from $${min} to $${max} USD. Compare and buy direct on Amazon.`
+  : `Black Friday ${anio} en ${plural}: ${total} modelos del más barato al más caro, desde $${min} hasta $${max} USD. Compara y compra directo en Amazon.`;
+const intro = isEn
+  ? `Black Friday ${anio} is ${viernes}. These are all the ${plural} in our catalog, sorted from the cheapest to the most expensive: ${total} models from ${precio(barato.precio)} to ${precio(caro.precio)} USD, each with a direct Amazon link.`
+  : `Black Friday ${anio} es el ${viernes}. Aquí tienes todo el catálogo de ${plural}, ordenado del precio más bajo al más alto: ${total} modelos desde ${precio(barato.precio)} hasta ${precio(caro.precio)} USD, cada uno con enlace directo a Amazon.`;
+
+// Compra por presupuesto: los filtros de precio de la categoría (enlaces internos a las subcategorías permanentes)
+const precios = (FILTROS[catKey] ?? []).filter((f: any) => f.grupo === 'precio');
+
+const t = isEn
+  ? { sort: 'Sort by', asc: 'Price: low to high', desc: 'Price: high to low', all: `See all ${plural}`, avail: 'products found', home: 'Home', bf: 'Black Friday',
+      cheapest: 'Cheapest', priciest: 'Most expensive', budget: 'Shop by budget', faq: 'Black Friday FAQ', stock: 'Prices from our catalog, confirm the final price on Amazon' }
+  : { sort: 'Ordenar por', asc: 'Precio: de menor a mayor', desc: 'Precio: de mayor a menor', all: `Ver todo el catálogo de ${plural}`, avail: 'productos encontrados', home: 'Inicio', bf: 'Black Friday',
+      cheapest: 'El más económico', priciest: 'El más caro', budget: 'Compra por presupuesto', faq: 'Preguntas frecuentes de Black Friday', stock: 'Precios de nuestro catálogo, confirma el precio final en Amazon' };
+
+const texto = isEn
+  ? { h2: `Black Friday ${plural}: how to find the best price`,
+      p: [
+        `Black Friday ${anio} falls on ${viernes}, and Cyber Monday on ${cyber}. If you are planning to buy ${uno} this season, this page puts every option in our catalog in order of price, so the cheapest ones come first.`,
+        `The prices shown are the ones in our catalog on the day we checked them, not a promise of a discount. During Black Friday, Amazon prices can drop, rise or sell out within hours, so open the product and check the final price before you buy. Sorting by price is a good start, but compare specs too: the cheapest ${plural} are not always the best fit for your PC.`,
+        `Looking for something specific? <a href="${urlCat}">Browse all ${plural}</a> or jump straight to a budget: ${precios.length ? precios.map((f: any) => `<a href="${baseCat}/${slugDe(f, lang)}/">${tit} ${etiqueta(f, lang)}</a>`).join(', ') : `<a href="${urlCat}">${tit}</a>`}.`,
+      ] }
+  : { h2: `Black Friday en ${plural}: cómo encontrar el mejor precio`,
+      p: [
+        `Black Friday ${anio} cae el ${viernes} y el Cyber Monday el ${cyber}. Si piensas comprar ${uno} esta temporada, esta página pone todas las opciones de nuestro catálogo en orden de precio, con las más baratas primero.`,
+        `Los precios que ves son los de nuestro catálogo el día que los revisamos, no la promesa de un descuento. Durante Black Friday los precios de Amazon pueden bajar, subir o agotarse en pocas horas, así que abre el producto y confirma el precio final antes de comprar. Ordenar por precio es un buen comienzo, pero compara también las especificaciones: las opciones más baratas no siempre son las que mejor encajan con tu PC.`,
+        `¿Buscas algo en concreto? <a href="${urlCat}">Explora todo el catálogo de ${plural}</a> o ve directo a un presupuesto: ${precios.length ? precios.map((f: any) => `<a href="${baseCat}/${slugDe(f, lang)}/">${tit} ${etiqueta(f, lang)}</a>`).join(', ') : `<a href="${urlCat}">${tit}</a>`}.`,
+      ] };
+
+const faqItems = isEn
+  ? [
+      { q: `When is Black Friday ${anio}?`, a: `Black Friday ${anio} is ${viernes}, and Cyber Monday is ${cyber}. Many stores start their offers earlier and keep them for a few days.` },
+      { q: `Are the prices on this page Black Friday prices?`, a: `They are the prices in our catalog on the date we checked them. During Black Friday, Amazon can lower or change them, so always confirm the final price on Amazon before buying.` },
+      { q: `How do I find the cheapest ${plural}?`, a: `This page sorts every model in our catalog from the lowest to the highest price, so the first ones are the cheapest. Check the specs before choosing by price alone.` },
+    ]
+  : [
+      { q: `¿Cuándo es Black Friday ${anio}?`, a: `Black Friday ${anio} es el ${viernes} y el Cyber Monday el ${cyber}. Muchas tiendas empiezan sus ofertas antes y las mantienen unos días.` },
+      { q: `¿Los precios de esta página son precios de Black Friday?`, a: `Son los precios de nuestro catálogo en la fecha en que los revisamos. Durante Black Friday Amazon puede bajarlos o cambiarlos, así que confirma siempre el precio final en Amazon antes de comprar.` },
+      { q: `¿Cómo encuentro la opción más barata en ${plural}?`, a: `Esta página ordena todos los modelos de nuestro catálogo del precio más bajo al más alto, así que los primeros son los más baratos. Revisa las especificaciones antes de elegir solo por precio.` },
+    ];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: t.home, item: `${site}${urlHome}` },
+      { '@type': 'ListItem', position: 2, name: t.bf, item: `${site}${baseBF}/` },
+      { '@type': 'ListItem', position: 3, name: tit, item: `${site}${urlBF}` },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: h1,
+    description,
+    url: `${site}${urlBF}`,
+    inLanguage: lang,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: total,
+      itemListElement: items.map((p: any, i: number) => ({ '@type': 'ListItem', position: i + 1, url: `${site}${hrefProducto(p)}`, name: p.nombre })),
+    },
+  },
+];
+const primeraImagen = items.find((p: any) => !String(p.imagenUrl).includes('placeholder'))?.imagenUrl;
+---
+
+<SiteLayout title={title} description={description} robots="index, follow" schema={schema} ogImage={primeraImagen}>
+  <section class="category-hero">
+    <ol class="breadcrumb" aria-label={isEn ? 'Breadcrumb' : 'Migas de pan'}>
+      <li><a href={urlHome}>{t.home}</a></li>
+      <li><a href={`${baseBF}/`}>{t.bf}</a></li>
+      <li aria-current="page" class="breadcrumb-actual">{tit}</li>
+    </ol>
+    <h1>{h1}</h1>
+    <p class="category-description">{intro}</p>
+    <div class="category-meta">
+      <span>{total} {t.avail}</span>
+      <span>{t.stock}</span>
+      <a class="meta-link" href={urlCat}>← {t.all}</a>
+    </div>
+  </section>
+
+  <div class="orden-barra">
+    <label for="orden-select">{t.sort}</label>
+    <select id="orden-select">
+      <option value="asc" selected>{t.asc}</option>
+      <option value="desc">{t.desc}</option>
+    </select>
+  </div>
+
+  <section class="product-grid" id="listado-bf">
+    {items.map((p: any, pos: number) => (
+      <div class="pc-wrap" data-precio={p.precio} data-pos={pos}>
+        <ProductCard lang={lang} product={{
+          id: p.id,
+          name: p.nombre,
+          price: `${precio(p.precio)} USD`,
+          description: p.descripcion,
+          imageUrl: p.imagenUrl,
+          detailHref: hrefProducto(p),
+          amazonHref: p.enlaceAmazon,
+          marca: p.marca,
+        }} />
+      </div>
+    ))}
+  </section>
+
+  <TextoSEO h2={texto.h2} parrafos={texto.p} />
+
+  <section class="category-buying-guide">
+    <h2>{t.budget}</h2>
+    <ul>
+      <li><strong>{t.cheapest}:</strong> <a href={hrefProducto(barato)}>{barato.nombre}</a> — {precio(barato.precio)} USD</li>
+      <li><strong>{t.priciest}:</strong> <a href={hrefProducto(caro)}>{caro.nombre}</a> — {precio(caro.precio)} USD</li>
+      {precios.map((f: any) => (
+        <li><a href={`${baseCat}/${slugDe(f, lang)}/`}>{tit} {etiqueta(f, lang)}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <FAQ title={t.faq} items={faqItems} />
+</SiteLayout>
+
+<script>
+  // Orden por precio sin recargar la página (las páginas funcionan igual sin JavaScript: ya vienen del más barato al más caro)
+  const select = document.getElementById('orden-select') as HTMLSelectElement | null;
+  const grid = document.getElementById('listado-bf');
+  select?.addEventListener('change', () => {
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.pc-wrap'));
+    cards.sort((a, b) => (Number(a.dataset.precio) - Number(b.dataset.precio)) * (select.value === 'desc' ? -1 : 1));
+    cards.forEach((c) => grid.appendChild(c));
+  });
+</script>
+
+<style>
+  .pc-wrap { display: flex; }
+  .pc-wrap :global(.product-card) { width: 100%; }
+  .meta-link {
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--accent-line);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  .meta-link:hover { background: rgba(124, 255, 203, 0.18); }
+  .orden-barra {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 0 16px;
+    color: var(--text-dim);
+    font-size: 0.86rem;
+  }
+  .orden-barra select {
+    padding: 9px 38px 9px 14px;
+    border-radius: var(--r-sm);
+    border: 1px solid var(--line-strong);
+    background-color: #0b1118;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237cffcb' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    color: #e6f7ff;
+    font: inherit;
+    cursor: pointer;
+    appearance: none;
+    color-scheme: dark;
+  }
+  .orden-barra select:hover,
+  .orden-barra select:focus-visible { border-color: var(--accent-line); }
+  .orden-barra select option { background: #0b1118; color: #e6f7ff; }
+</style>

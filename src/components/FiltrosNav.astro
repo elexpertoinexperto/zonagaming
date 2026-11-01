@@ -4,6 +4,7 @@
 // funciona sin JavaScript (<details>), Google rastrea todos los enlaces y los menús se abren de uno en uno.
 import { FILTROS, GRUPOS, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN } from '../i18n/en';
+import { BLACK_FRIDAY, CATEGORIAS_BF } from '../data/black-friday.mjs';
 
 const { catKey, lang = 'es', actual = '' } = Astro.props as { catKey: string; lang?: 'es' | 'en'; actual?: string };
 const isEn = lang === 'en';
@@ -96,6 +97,13 @@ const icono = (clave: string) => ICONOS[clave] ?? ICONOS.tipo;
       <a class="filtros-limpiar" href={`${base}/`}>
         <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         {t.limpiar}
+      </a>
+    )}
+
+    {BLACK_FRIDAY.activo && CATEGORIAS_BF.includes(catKey) && (
+      <a class="filtros-limpiar filtros-bf" href={`${isEn ? '/en' : ''}/black-friday/${isEn ? (SLUG_EN[catKey] ?? catKey) : catKey}/`}>
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="8.5" r="1.2"/></svg>
+        Black Friday
       </a>
     )}
   </div>
