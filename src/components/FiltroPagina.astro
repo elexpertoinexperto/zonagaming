@@ -10,7 +10,7 @@ import Breadcrumb from './Breadcrumb.astro';
 import CategoriasRelacionadas from './CategoriasRelacionadas.astro';
 import AnalisisSubcategoria from './AnalisisSubcategoria.astro';
 import TextoSEO from './TextoSEO.astro';
-import { seoDe, tituloPagina, descripcionSub, introSub, textoSub } from '../lib/seo-keywords.mjs';
+import { seoDe, tituloPagina, descripcionSub, introSub, textoSub, parrafoMadre } from '../lib/seo-keywords.mjs';
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 import { conImagenPrimero } from '../lib/orden.mjs';
@@ -46,7 +46,9 @@ const marcas = f.marcas.slice(0, 5);
 const listaMarcas = marcas.join(', ');
 
 const title = seo ? tituloPagina(h1, catKey, lang) : `${h1} | Monckey Gamer`;
-const description = seo ? descripcionSub({ h1, total: f.total, min: f.min, max: f.max, lang }) : isEn
+// En las de memoria de video la meta dice también «VRAM»: «16GB Graphics Card (16GB VRAM)»
+const nVram = f.grupo === 'vram' ? (etiq.match(/\d+/) || [])[0] : null;
+const description = seo ? descripcionSub({ h1: nVram ? `${h1} (${nVram}GB VRAM)` : h1, total: f.total, min: f.min, max: f.max, lang }) : isEn
   ? `Compare ${f.total} ${plural} ${etiq}: from $${Math.round(f.min)} to $${Math.round(f.max)} USD. Specs, prices and direct Amazon links at Monckey Gamer.`
   : `Compara ${f.total} ${plural} ${etiq}: desde $${Math.round(f.min)} hasta $${Math.round(f.max)} USD. Specs, precios y compra directa en Amazon con Monckey Gamer.`;
 
@@ -57,6 +59,9 @@ const tip = isEn ? f.tipEn : f.tipEs;
 const textoKw = seo
   ? textoSub({ kw: seo.kw, sec: seo.sec, ter: seo.ter, total: f.total, min: f.min, max: f.max, lang, hrefCategoria: urlCategoria, nombreCategoria: plural })
   : null;
+// La keyword de la categoría madre + lo que distingue a esta subcategoría (VRAM, chip, resolución…) también en el cuerpo del texto
+const madre = parrafoMadre({ grupo: f.grupo, etiqueta: etiq, madre: plural, total: f.total, lang });
+if (textoKw && madre) textoKw.parrafos.unshift(madre);
 
 const schema = [
   {

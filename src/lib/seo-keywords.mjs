@@ -22,7 +22,8 @@ const lista = (items, lang) =>
 export function tituloPagina(h1, catKey, lang) {
   const gaming = CON_GAMING.has(catKey);
   const extra = !gaming ? '' : lang === 'es' ? (/gamer|gaming/i.test(h1) ? '' : ' Gamer') : (/gaming/i.test(h1) ? '' : ' for Gaming');
-  const cola = lang === 'es' ? ' al Mejor Precio' : ' at the Best Price';
+  // («Best Graphics Card for $200 at the Best Price» repetía «best»: si el H1 ya dice «best/mejor», no se añade la cola)
+  const cola = /^(best|mejor)/i.test(h1) ? '' : lang === 'es' ? ' al Mejor Precio' : ' at the Best Price';
   for (const t of [h1 + extra + cola, h1 + extra, h1]) {
     const s = `${t} | ${MARCA}`;
     if (s.length <= LIMITE_TITLE) return s;
@@ -83,4 +84,36 @@ export function textoSub({ kw, sec, ter, total, min, max, lang, hrefCategoria, n
     h2: es ? `${mayus(kw)}: qué mirar antes de comprar` : `${mayus(kw)}: what to check before you buy`,
     parrafos,
   };
+}
+
+// Párrafo que repite la keyword de la categoría madre junto a lo que distingue a la subcategoría (VRAM, chip, resolución, marca, precio…).
+// Así «16 GB» se lee como «tarjetas gráficas con 16 GB de VRAM» y no solo como un número suelto. Devuelve null si la agrupación no tiene plantilla.
+//   madre: nombre plural de la categoría en el idioma de la página («tarjetas gráficas» / «graphics cards»)
+export function parrafoMadre({ grupo, etiqueta, madre, total, lang }) {
+  const es = lang === 'es';
+  const n = (String(etiqueta).match(/\d+(?:[.,]\d+)?/) || [])[0];
+  switch (grupo) {
+    case 'vram':
+      return n && (es
+        ? `Estas ${madre} tienen ${n} GB de VRAM (memoria de video dedicada): ${total} modelos de ${n} GB de VRAM para que elijas según tu resolución y los juegos que usas.`
+        : `These ${madre} come with ${n}GB of VRAM (dedicated video memory): ${total} models with ${n}GB of VRAM so you can choose by resolution and the games you play.`);
+    case 'chip':
+      return es
+        ? `Aquí están las ${madre} con chip ${etiqueta}: ${total} modelos de distintas marcas y precios, con la misma base de rendimiento del chip.`
+        : `These are the ${madre} with an ${etiqueta} chip: ${total} models from different brands and price points, all built on the same chip family.`;
+    case 'resolucion':
+      return es
+        ? `Si juegas a ${etiqueta.replace(/^para\s+/i, '')}, estas ${madre} son las que mejor encajan: ${total} modelos con la VRAM y la potencia que pide esa resolución.`
+        : `If you game at ${etiqueta.replace(/^for\s+/i, '')}, these ${madre} fit best: ${total} models with the VRAM and power that resolution needs.`;
+    case 'marca':
+      return es
+        ? `${mayus(madre)} ${etiqueta}: ${total} modelos de la marca en nuestro catálogo, con precio y especificaciones actualizados.`
+        : `${etiqueta} ${madre}: ${total} models from the brand in our catalog, with up-to-date prices and specs.`;
+    case 'precio':
+      return es
+        ? `${mayus(madre)} ${etiqueta}: ${total} opciones ordenadas de la más barata a la más cara.`
+        : `${mayus(madre)} ${etiqueta}: ${total} options sorted from cheapest to most expensive.`;
+    default:
+      return null;
+  }
 }

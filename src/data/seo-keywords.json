@@ -255,9 +255,7 @@
   "kw": "wireless gaming mouse",
   "vol": 49500,
   "h1": "Wireless Gaming Mouse",
-  "sec": [
-   "wireless gaming mouse"
-  ],
+  "sec": [],
   "ter": []
  },
  "/en/gaming-monitors/180-hz/": {
@@ -405,11 +403,11 @@
   "ter": []
  },
  "/en/graphics-cards/asrock/": {
-  "kw": "ASRock GPU",
+  "kw": "ASRock graphics card",
   "vol": 480,
-  "h1": "ASRock GPU",
+  "h1": "ASRock Graphics Card",
   "sec": [
-   "ASRock graphics card"
+   "ASRock GPU"
   ],
   "ter": []
  },
@@ -501,12 +499,12 @@
   "ter": []
  },
  "/en/graphics-cards/under-200/": {
-  "kw": "best GPU for $200",
+  "kw": "best graphics card for $200",
   "vol": 590,
-  "h1": "Best GPU for $200",
+  "h1": "Best Graphics Card for $200",
   "sec": [
+   "best GPU for $200",
    "best GPU under $200",
-   "best graphics card for $200",
    "best graphics card under $200"
   ],
   "ter": [
@@ -515,11 +513,11 @@
   ]
  },
  "/en/graphics-cards/under-400/": {
-  "kw": "best GPU under $400",
+  "kw": "best graphics card under $400",
   "vol": 320,
-  "h1": "Best GPU under $400",
+  "h1": "Best Graphics Card under $400",
   "sec": [
-   "best graphics card under $400",
+   "best GPU under $400",
    "best 400 dollar GPU"
   ],
   "ter": [
@@ -528,16 +526,16 @@
   ]
  },
  "/en/graphics-cards/under-600/": {
-  "kw": "best GPU under $600",
+  "kw": "best graphics card under $600",
   "vol": 70,
-  "h1": "Best GPU under $600",
+  "h1": "Best Graphics Card under $600",
   "sec": [
+   "best GPU under $600",
    "best GPU for $600",
    "600 dollar GPU"
   ],
   "ter": [
-   "best graphics card for $600 dollars",
-   "best graphics card under $600"
+   "best graphics card for $600 dollars"
   ]
  },
  "/en/graphics-cards/with-12-gb/": {
@@ -550,11 +548,11 @@
   ]
  },
  "/en/graphics-cards/with-16-gb/": {
-  "kw": "16GB GPU",
+  "kw": "16GB graphics card",
   "vol": 1300,
-  "h1": "16GB GPU",
+  "h1": "16GB Graphics Card",
   "sec": [
-   "16GB graphics card"
+   "16GB GPU"
   ],
   "ter": []
  },
@@ -622,15 +620,15 @@
   "ter": []
  },
  "/en/headsets/under-100/": {
-  "kw": "best headphone under $100",
+  "kw": "best gaming headset under $100",
   "vol": 1300,
-  "h1": "Best Headphone under $100",
+  "h1": "Best Gaming Headset under $100",
   "sec": [
+   "best headphone under $100",
    "best sub $100 gaming headset",
    "top gaming headset under $100"
   ],
   "ter": [
-   "best gaming headset under $100",
    "good gaming headset under $100"
   ]
  },
@@ -645,37 +643,39 @@
   "ter": []
  },
  "/en/headsets/wired/": {
-  "kw": "wired headphones",
+  "kw": "wired gaming headset",
   "vol": 74000,
-  "h1": "Wired Headphones",
+  "h1": "Wired Gaming Headset",
   "sec": [
-   "wired gaming headset"
+   "wired headphones"
   ],
   "ter": []
  },
  "/en/headsets/wireless/": {
-  "kw": "wireless headphones",
+  "kw": "wireless gaming headset",
   "vol": 110000,
-  "h1": "Wireless Headphones",
+  "h1": "Wireless Gaming Headset",
   "sec": [
-   "wireless gaming headset"
+   "wireless headphones"
   ],
   "ter": []
  },
  "/en/headsets/with-bluetooth/": {
-  "kw": "bluetooth headphones",
+  "kw": "bluetooth gaming headset",
   "vol": 60500,
-  "h1": "Bluetooth Headphones",
+  "h1": "Bluetooth Gaming Headset",
   "sec": [
+   "bluetooth headphones",
    "bluetooth headset"
   ],
   "ter": []
  },
  "/en/headsets/with-surround-sound/": {
-  "kw": "surround sound headphones",
+  "kw": "surround sound gaming headset",
   "vol": 880,
-  "h1": "Surround Sound Headphones",
+  "h1": "Surround Sound Gaming Headset",
   "sec": [
+   "surround sound headphones",
    "best gaming headset for surround sound"
   ],
   "ter": []
@@ -1001,10 +1001,12 @@
   ]
  },
  "/en/processors/core-ultra/": {
-  "kw": "core ultra",
+  "kw": "Core Ultra processors",
   "vol": 480,
-  "h1": "Core Ultra",
-  "sec": [],
+  "h1": "Core Ultra Processors",
+  "sec": [
+   "core ultra"
+  ],
   "ter": []
  },
  "/en/processors/intel/": {
@@ -1635,10 +1637,12 @@
   "ter": []
  },
  "/procesadores/socket-am4/": {
-  "kw": "CPU socket AM4",
+  "kw": "procesador socket AM4 (CPU)",
   "vol": 170,
-  "h1": "CPU Socket AM4",
-  "sec": [],
+  "h1": "Procesador Socket AM4 (CPU)",
+  "sec": [
+   "CPU socket AM4"
+  ],
   "ter": []
  },
  "/refrigeracion-liquida/con-pantalla/": {
@@ -1740,10 +1744,12 @@
   ]
  },
  "/ssd/nvme/": {
-  "kw": "disco NVMe",
+  "kw": "disco SSD NVMe",
   "vol": 210,
-  "h1": "Disco NVMe",
-  "sec": [],
+  "h1": "Disco SSD NVMe",
+  "sec": [
+   "disco NVMe"
+  ],
   "ter": []
  },
  "/ssd/nvme-de-1-tb/": {
@@ -1833,11 +1839,11 @@
   "ter": []
  },
  "/tarjetas-graficas/nvidia-geforce/": {
-  "kw": "tarjeta de video NVIDIA GeForce",
+  "kw": "tarjeta gráfica NVIDIA GeForce",
   "vol": 70,
-  "h1": "Tarjeta de Video NVIDIA GeForce",
+  "h1": "Tarjeta Gráfica NVIDIA GeForce",
   "sec": [
-   "tarjeta gráfica NVIDIA GeForce"
+   "tarjeta de video NVIDIA GeForce"
   ],
   "ter": []
  },
