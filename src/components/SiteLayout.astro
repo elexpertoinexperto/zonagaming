@@ -29,9 +29,11 @@ const listaCat = (productosEs as any)[segs[0]];
 const productoPagina = Number.isFinite(idProducto) && listaCat ? listaCat.find((p: any) => p.id === idProducto && segs[1] === `${p.slug}-${p.id}`) : null;
 const productoLang = productoPagina ? ((productosEn as any)[segs[0]]?.find((p: any) => p.id === idProducto) ?? productoPagina) : null;
 const sinImagen = !productoPagina || String(productoPagina.imagenUrl).includes('placeholder');
-const imagenProducto = productoPagina && !sinImagen ? `${site}${productoPagina.imagenUrl}` : null;
+// Algunas fotos son rutas del sitio (/imagenes/…) y otras URLs completas del fabricante: solo las rutas llevan el dominio por delante
+const absoluta = (u: string) => (/^https?:\/\//.test(u) ? u : `${site}${u}`);
+const imagenProducto = productoPagina && !sinImagen ? absoluta(productoPagina.imagenUrl) : null;
 // Imagen para redes sociales: la del producto (si es real) o el logo
-const ogImage = ogImageProp ? `${site}${ogImageProp}` : (imagenProducto ?? `${site}/logo-fondoblanco.png`);
+const ogImage = ogImageProp ? absoluta(ogImageProp) : (imagenProducto ?? `${site}/logo-fondoblanco.png`);
 const ogType = article ? 'article' : productoPagina ? 'product' : 'website';
 
 // Datos del producto en el idioma de la página (nombre, descripción y especificaciones) para el JSON-LD de e-commerce

@@ -23,7 +23,7 @@ const schema = {
       position: i + 1,
       url: `${site}${base}/${p.slug}-${p.id}/`,
       name: p.nombre,
-      ...(!String(p.imagenUrl ?? '').includes('placeholder') && p.imagenUrl ? { image: `${site}${p.imagenUrl}` } : {}),
+      ...(!String(p.imagenUrl ?? '').includes('placeholder') && p.imagenUrl ? { image: /^https?:\/\//.test(p.imagenUrl) ? p.imagenUrl : `${site}${p.imagenUrl}` } : {}),
     })),
   },
 };
