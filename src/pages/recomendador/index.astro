@@ -86,7 +86,7 @@ const schema = {
           >
             <div class="game-img-wrap">
               <img
-                src={`https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`}
+                src={juego.imagen ?? `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`}
                 alt={juego.titulo}
                 loading="lazy"
                 width="460"
@@ -149,7 +149,7 @@ const schema = {
   function renderPanel(juego) {
     panelTitle.textContent = juego.titulo;
     panelGenre.textContent = juego.genero;
-    panelImg.src = `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`;
+    panelImg.src = juego.imagen || `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`;
     panelImg.alt = juego.titulo;
 
     const catOrder = { 'tarjetas-graficas': 0, 'procesadores': 1, 'memoria-ram': 2 };

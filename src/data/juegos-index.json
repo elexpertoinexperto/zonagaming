@@ -1,5 +1,39 @@
 [
   {
+    "titulo": "007 First Light",
+    "tituloEn": "007 First Light",
+    "steamId": 3768760,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3768760/c5b553fd05ba41aefa6daeddac95849a10c93022/header_alt_assets_4.jpg",
+    "genero": "Aventura de Espionaje",
+    "generoEn": "Spy Action Adventure",
+    "aaa": true,
+    "esports": false,
+    "gpu": 62,
+    "cpu": 105,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "AION 2",
+    "tituloEn": "AION 2",
+    "steamId": 3393110,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3393110/10aa4b096ebe6af0d1dd7882e5ba004271aef6f7/header.jpg",
+    "genero": "MMORPG",
+    "generoEn": "MMORPG",
+    "aaa": false,
+    "esports": false,
+    "gpu": 40,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Apex Legends",
     "tituloEn": "Apex Legends",
     "steamId": 1172470,
@@ -12,6 +46,22 @@
     "ramGB": 16,
     "objetivo": {
       "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "ARC Raiders",
+    "tituloEn": "ARC Raiders",
+    "steamId": 1808500,
+    "genero": "Shooter de Extracción",
+    "generoEn": "Extraction Shooter",
+    "aaa": true,
+    "esports": false,
+    "gpu": 48,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
       "ajuste": "Alto"
     }
   },
@@ -80,6 +130,22 @@
     }
   },
   {
+    "titulo": "Battlefield 6",
+    "tituloEn": "Battlefield 6",
+    "steamId": 2807960,
+    "genero": "FPS Multijugador",
+    "generoEn": "Multiplayer FPS",
+    "aaa": true,
+    "esports": false,
+    "gpu": 60,
+    "cpu": 110,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Ultra"
+    }
+  },
+  {
     "titulo": "Black Myth: Wukong",
     "tituloEn": "Black Myth: Wukong",
     "steamId": 2358720,
@@ -96,9 +162,59 @@
     }
   },
   {
+    "titulo": "Borderlands 4",
+    "tituloEn": "Borderlands 4",
+    "steamId": 1285190,
+    "genero": "Looter Shooter",
+    "generoEn": "Looter Shooter",
+    "aaa": true,
+    "esports": false,
+    "gpu": 80,
+    "cpu": 105,
+    "ramGB": 32,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Call of Duty: Black Ops 6",
     "tituloEn": "Call of Duty: Black Ops 6",
     "steamId": 2933620,
+    "genero": "FPS",
+    "generoEn": "FPS",
+    "aaa": true,
+    "esports": true,
+    "gpu": 45,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Call of Duty: Black Ops 7",
+    "tituloEn": "Call of Duty: Black Ops 7",
+    "steamId": 3606480,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3606480/d7041a15f572f7702d5f4bc97e498cd3e1cc62e2/header.jpg",
+    "genero": "FPS",
+    "generoEn": "FPS",
+    "aaa": true,
+    "esports": true,
+    "gpu": 45,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Call of Duty: Modern Warfare 4",
+    "tituloEn": "Call of Duty: Modern Warfare 4",
+    "steamId": 4435490,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4435490/0c492be3204835d71e8b454b6eb1817f8ff68c0d/header.jpg",
     "genero": "FPS",
     "generoEn": "FPS",
     "aaa": true,
@@ -128,6 +244,22 @@
     }
   },
   {
+    "titulo": "Clair Obscur: Expedition 33",
+    "tituloEn": "Clair Obscur: Expedition 33",
+    "steamId": 1903340,
+    "genero": "RPG por Turnos",
+    "generoEn": "Turn-Based RPG",
+    "aaa": true,
+    "esports": false,
+    "gpu": 55,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Control",
     "tituloEn": "Control",
     "steamId": 870780,
@@ -141,6 +273,22 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Crimson Desert",
+    "tituloEn": "Crimson Desert",
+    "steamId": 3321460,
+    "genero": "RPG de Acción Mundo Abierto",
+    "generoEn": "Open World Action RPG",
+    "aaa": true,
+    "esports": false,
+    "gpu": 60,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -173,6 +321,71 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Dead by Daylight",
+    "tituloEn": "Dead by Daylight",
+    "steamId": 381210,
+    "genero": "Horror Asimétrico",
+    "generoEn": "Asymmetric Horror",
+    "aaa": false,
+    "esports": false,
+    "gpu": 20,
+    "cpu": 80,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Death Stranding 2: On the Beach",
+    "tituloEn": "Death Stranding 2: On the Beach",
+    "steamId": 3280350,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3280350/6270c77b0729e2df0a17d660286eeddfd9169386/header.jpg",
+    "genero": "Acción Aventura",
+    "generoEn": "Action Adventure",
+    "aaa": true,
+    "esports": false,
+    "gpu": 60,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Delta Force",
+    "tituloEn": "Delta Force",
+    "steamId": 2507950,
+    "genero": "Shooter Táctico",
+    "generoEn": "Tactical Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 25,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Destiny 2",
+    "tituloEn": "Destiny 2",
+    "steamId": 1085660,
+    "genero": "Looter Shooter",
+    "generoEn": "Looter Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 22,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -240,6 +453,23 @@
     }
   },
   {
+    "titulo": "EA SPORTS FC 27",
+    "tituloEn": "EA SPORTS FC 27",
+    "steamId": 4080220,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4080220/ff6a3779f1ca83aae8ad3878454f6c11008ea24d/header.jpg",
+    "genero": "Deportes / Fútbol",
+    "generoEn": "Sports / Soccer",
+    "aaa": true,
+    "esports": false,
+    "gpu": 28,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Elden Ring",
     "tituloEn": "Elden Ring",
     "steamId": 1245620,
@@ -265,6 +495,22 @@
     "esports": false,
     "gpu": 40,
     "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Euro Truck Simulator 2",
+    "tituloEn": "Euro Truck Simulator 2",
+    "steamId": 227300,
+    "genero": "Simulación de Conducción",
+    "generoEn": "Driving Simulation",
+    "aaa": false,
+    "esports": false,
+    "gpu": 28,
+    "cpu": 75,
     "ramGB": 16,
     "objetivo": {
       "res": "1080p",
@@ -301,6 +547,39 @@
     "objetivo": {
       "res": "1080p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Forza Horizon 6",
+    "tituloEn": "Forza Horizon 6",
+    "steamId": 2483190,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2483190/c53fe3362cc3267a5d34aca3e796b90963e0e23f/header_alt_assets_6.jpg",
+    "genero": "Carreras",
+    "generoEn": "Racing",
+    "aaa": true,
+    "esports": false,
+    "gpu": 55,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Ghost of Tsushima",
+    "tituloEn": "Ghost of Tsushima",
+    "steamId": 2215430,
+    "genero": "Acción Mundo Abierto",
+    "generoEn": "Open World Action",
+    "aaa": true,
+    "esports": false,
+    "gpu": 45,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -344,6 +623,22 @@
     "aaa": false,
     "esports": false,
     "gpu": 12,
+    "cpu": 70,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Hades II",
+    "tituloEn": "Hades II",
+    "steamId": 1145350,
+    "genero": "Roguelike de Acción",
+    "generoEn": "Action Roguelike",
+    "aaa": false,
+    "esports": false,
+    "gpu": 18,
     "cpu": 70,
     "ramGB": 16,
     "objetivo": {
@@ -400,6 +695,38 @@
     }
   },
   {
+    "titulo": "Hollow Knight: Silksong",
+    "tituloEn": "Hollow Knight: Silksong",
+    "steamId": 1030300,
+    "genero": "Metroidvania",
+    "generoEn": "Metroidvania",
+    "aaa": false,
+    "esports": false,
+    "gpu": 8,
+    "cpu": 65,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Hunt: Showdown 1896",
+    "tituloEn": "Hunt: Showdown 1896",
+    "steamId": 594650,
+    "genero": "Shooter PvPvE",
+    "generoEn": "PvPvE Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 45,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Indiana Jones and the Great Circle",
     "tituloEn": "Indiana Jones and the Great Circle",
     "steamId": 2677660,
@@ -413,6 +740,22 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Kingdom Come: Deliverance II",
+    "tituloEn": "Kingdom Come: Deliverance II",
+    "steamId": 1771300,
+    "genero": "RPG Histórico",
+    "generoEn": "Historical RPG",
+    "aaa": true,
+    "esports": false,
+    "gpu": 62,
+    "cpu": 110,
+    "ramGB": 32,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -448,6 +791,22 @@
     }
   },
   {
+    "titulo": "Mafia: The Old Country",
+    "tituloEn": "Mafia: The Old Country",
+    "steamId": 1941540,
+    "genero": "Acción en Tercera Persona",
+    "generoEn": "Third-Person Action",
+    "aaa": true,
+    "esports": false,
+    "gpu": 65,
+    "cpu": 100,
+    "ramGB": 32,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Marvel Rivals",
     "tituloEn": "Marvel Rivals",
     "steamId": 2767030,
@@ -457,6 +816,22 @@
     "esports": true,
     "gpu": 45,
     "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Marvel's Spider-Man 2",
+    "tituloEn": "Marvel's Spider-Man 2",
+    "steamId": 2651280,
+    "genero": "Acción Mundo Abierto",
+    "generoEn": "Open World Action",
+    "aaa": true,
+    "esports": false,
+    "gpu": 55,
+    "cpu": 90,
     "ramGB": 16,
     "objetivo": {
       "res": "1440p",
@@ -496,6 +871,22 @@
     }
   },
   {
+    "titulo": "Monster Hunter Wilds",
+    "tituloEn": "Monster Hunter Wilds",
+    "steamId": 2246340,
+    "genero": "Action RPG / Caza",
+    "generoEn": "Action RPG / Hunting",
+    "aaa": true,
+    "esports": false,
+    "gpu": 65,
+    "cpu": 105,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Monster Hunter: World",
     "tituloEn": "Monster Hunter: World",
     "steamId": 582010,
@@ -509,6 +900,22 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Overwatch",
+    "tituloEn": "Overwatch",
+    "steamId": 2357570,
+    "genero": "Hero Shooter",
+    "generoEn": "Hero Shooter",
+    "aaa": true,
+    "esports": true,
+    "gpu": 25,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -544,6 +951,22 @@
     }
   },
   {
+    "titulo": "Path of Exile 2",
+    "tituloEn": "Path of Exile 2",
+    "steamId": 2694490,
+    "genero": "Action RPG",
+    "generoEn": "Action RPG",
+    "aaa": false,
+    "esports": false,
+    "gpu": 45,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Persona 5 Royal",
     "tituloEn": "Persona 5 Royal",
     "steamId": 1687950,
@@ -557,6 +980,120 @@
     "objetivo": {
       "res": "1080p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Phantom Blade Zero",
+    "tituloEn": "Phantom Blade Zero",
+    "steamId": 4115450,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4115450/7f882f889630270d3d3fb93825ac6f55b55e7a6c/header.jpg",
+    "genero": "Acción Wuxia",
+    "generoEn": "Wuxia Action",
+    "aaa": true,
+    "esports": false,
+    "gpu": 62,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "PRAGMATA",
+    "tituloEn": "PRAGMATA",
+    "steamId": 3357650,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3357650/e32e168b25ed68a0cf6264c220c07e96c2abfb56/header.jpg",
+    "genero": "Acción de Ciencia Ficción",
+    "generoEn": "Sci-Fi Action",
+    "aaa": true,
+    "esports": false,
+    "gpu": 50,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Project Zomboid",
+    "tituloEn": "Project Zomboid",
+    "steamId": 108600,
+    "genero": "Supervivencia Zombi",
+    "generoEn": "Zombie Survival",
+    "aaa": false,
+    "esports": false,
+    "gpu": 12,
+    "cpu": 80,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "PUBG: BATTLEGROUNDS",
+    "tituloEn": "PUBG: BATTLEGROUNDS",
+    "steamId": 578080,
+    "genero": "Battle Royale FPS",
+    "generoEn": "Battle Royale FPS",
+    "aaa": false,
+    "esports": true,
+    "gpu": 30,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "R.E.P.O.",
+    "tituloEn": "R.E.P.O.",
+    "steamId": 3241660,
+    "genero": "Terror Cooperativo",
+    "generoEn": "Co-op Horror",
+    "aaa": false,
+    "esports": false,
+    "gpu": 20,
+    "cpu": 80,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Rainbow Six Siege",
+    "tituloEn": "Rainbow Six Siege",
+    "steamId": 359550,
+    "genero": "FPS Táctico",
+    "generoEn": "Tactical FPS",
+    "aaa": true,
+    "esports": true,
+    "gpu": 38,
+    "cpu": 105,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Ready or Not",
+    "tituloEn": "Ready or Not",
+    "steamId": 1144200,
+    "genero": "Shooter Táctico",
+    "generoEn": "Tactical Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 38,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -588,6 +1125,23 @@
     "ramGB": 16,
     "objetivo": {
       "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Resident Evil Requiem",
+    "tituloEn": "Resident Evil Requiem",
+    "steamId": 3764200,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/ce5437442768e38eb575f205ab9397d0264017b0/header.jpg",
+    "genero": "Survival Horror",
+    "generoEn": "Survival Horror",
+    "aaa": true,
+    "esports": false,
+    "gpu": 55,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
       "ajuste": "Alto"
     }
   },
@@ -624,6 +1178,22 @@
     }
   },
   {
+    "titulo": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+    "tituloEn": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+    "steamId": 1643320,
+    "genero": "Shooter de Supervivencia",
+    "generoEn": "Survival Shooter",
+    "aaa": true,
+    "esports": false,
+    "gpu": 75,
+    "cpu": 110,
+    "ramGB": 32,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Satisfactory",
     "tituloEn": "Satisfactory",
     "steamId": 526870,
@@ -637,6 +1207,54 @@
     "objetivo": {
       "res": "1080p",
       "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Schedule I",
+    "tituloEn": "Schedule I",
+    "steamId": 3164500,
+    "genero": "Simulación y Gestión",
+    "generoEn": "Simulation / Management",
+    "aaa": false,
+    "esports": false,
+    "gpu": 40,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Silent Hill f",
+    "tituloEn": "Silent Hill f",
+    "steamId": 2947440,
+    "genero": "Survival Horror",
+    "generoEn": "Survival Horror",
+    "aaa": true,
+    "esports": false,
+    "gpu": 55,
+    "cpu": 95,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Slay the Spire 2",
+    "tituloEn": "Slay the Spire 2",
+    "steamId": 2868840,
+    "genero": "Roguelike de Cartas",
+    "generoEn": "Card Roguelike",
+    "aaa": false,
+    "esports": false,
+    "gpu": 6,
+    "cpu": 65,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Ultra"
     }
   },
   {
@@ -704,6 +1322,22 @@
     }
   },
   {
+    "titulo": "Stellar Blade",
+    "tituloEn": "Stellar Blade",
+    "steamId": 3489700,
+    "genero": "Acción de Espadas",
+    "generoEn": "Action Hack and Slash",
+    "aaa": true,
+    "esports": false,
+    "gpu": 50,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Street Fighter 6",
     "tituloEn": "Street Fighter 6",
     "steamId": 1364780,
@@ -720,6 +1354,22 @@
     }
   },
   {
+    "titulo": "Subnautica 2",
+    "tituloEn": "Subnautica 2",
+    "steamId": 1962700,
+    "genero": "Supervivencia Submarina",
+    "generoEn": "Underwater Survival",
+    "aaa": false,
+    "esports": false,
+    "gpu": 62,
+    "cpu": 105,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Tekken 8",
     "tituloEn": "Tekken 8",
     "steamId": 1778820,
@@ -733,6 +1383,39 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "The Elder Scrolls IV: Oblivion Remastered",
+    "tituloEn": "The Elder Scrolls IV: Oblivion Remastered",
+    "steamId": 2623190,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2623190/a7cee9165bb1bfc092c390c5cff215ce0e381dfc/header.jpg",
+    "genero": "RPG Mundo Abierto",
+    "generoEn": "Open World RPG",
+    "aaa": true,
+    "esports": false,
+    "gpu": 70,
+    "cpu": 100,
+    "ramGB": 32,
+    "objetivo": {
+      "res": "1440p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "THE FINALS",
+    "tituloEn": "THE FINALS",
+    "steamId": 2073850,
+    "genero": "Shooter Competitivo",
+    "generoEn": "Competitive Shooter",
+    "aaa": false,
+    "esports": true,
+    "gpu": 45,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -797,6 +1480,55 @@
     "objetivo": {
       "res": "1080p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Valheim",
+    "tituloEn": "Valheim",
+    "steamId": 892970,
+    "genero": "Supervivencia y Exploración",
+    "generoEn": "Survival & Exploration",
+    "aaa": false,
+    "esports": false,
+    "gpu": 30,
+    "cpu": 85,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "WARDOGS",
+    "tituloEn": "WARDOGS",
+    "steamId": 1867240,
+    "imagen": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1867240/bb62feb8f59915d00bade38910f1bfdad5232b90/header_alt_assets_0.jpg",
+    "genero": "Shooter Táctico de 100 Jugadores",
+    "generoEn": "100-Player Tactical Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 65,
+    "cpu": 105,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "Warframe",
+    "tituloEn": "Warframe",
+    "steamId": 230410,
+    "genero": "Shooter de Acción Cooperativo",
+    "generoEn": "Cooperative Action Shooter",
+    "aaa": false,
+    "esports": false,
+    "gpu": 25,
+    "cpu": 85,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {

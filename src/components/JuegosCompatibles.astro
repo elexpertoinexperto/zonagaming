@@ -16,8 +16,9 @@ interface Props {
 
 const { categoria, productoId, productoNombre } = Astro.props;
 
-const steamImg = (steamId: number) => `https://cdn.akamai.steamstatic.com/steam/apps/${steamId}/header.jpg`;
-const steamIdPorTitulo = Object.fromEntries(juegosData.map((j: any) => [j.titulo, j.steamId]));
+// Los lanzamientos recientes de Steam llevan la portada en otra ruta: el juego trae `imagen` y, si no, se usa la clásica
+const steamImg = (j: any) => j.imagen ?? `https://cdn.akamai.steamstatic.com/steam/apps/${j.steamId}/header.jpg`;
+const juegoPorTitulo = Object.fromEntries(juegosData.map((j: any) => [j.titulo, j]));
 
 const catalogo = prepararCatalogo(productos as any);
 const producto = (productos as any)[categoria].find((p: any) => p.id === productoId);
@@ -47,10 +48,10 @@ const catLabel: Record<string, string> = {
     <div class="juegos-grid">
       {juegos.map((juego) => (
         <div class="juego-card">
-          {steamIdPorTitulo[juego.titulo] && (
+          {juegoPorTitulo[juego.titulo]?.steamId && (
             <img
               class="juego-img"
-              src={steamImg(steamIdPorTitulo[juego.titulo])}
+              src={steamImg(juegoPorTitulo[juego.titulo])}
               alt={juego.titulo}
               loading="lazy"
               width="460"
