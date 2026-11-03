@@ -534,6 +534,22 @@
     }
   },
   {
+    "titulo": "Fortnite",
+    "tituloEn": "Fortnite",
+    "imagen": "/imagenes/juegos/fortnite.webp",
+    "genero": "Battle Royale / Shooter",
+    "generoEn": "Battle Royale / Shooter",
+    "aaa": false,
+    "esports": true,
+    "gpu": 55,
+    "cpu": 100,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Forza Horizon 5",
     "tituloEn": "Forza Horizon 5",
     "steamId": 1551360,
@@ -759,6 +775,22 @@
     }
   },
   {
+    "titulo": "League of Legends",
+    "tituloEn": "League of Legends",
+    "imagen": "/imagenes/juegos/league-of-legends.webp",
+    "genero": "MOBA",
+    "generoEn": "MOBA",
+    "aaa": false,
+    "esports": true,
+    "gpu": 10,
+    "cpu": 85,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
     "titulo": "Lies of P",
     "tituloEn": "Lies of P",
     "steamId": 1627720,
@@ -852,6 +884,22 @@
     "objetivo": {
       "res": "1440p",
       "ajuste": "Ultra"
+    }
+  },
+  {
+    "titulo": "Minecraft",
+    "tituloEn": "Minecraft",
+    "imagen": "/imagenes/juegos/minecraft.webp",
+    "genero": "Sandbox y Construcción",
+    "generoEn": "Sandbox / Building",
+    "aaa": false,
+    "esports": false,
+    "gpu": 25,
+    "cpu": 90,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
     }
   },
   {
@@ -1492,6 +1540,22 @@
     "esports": false,
     "gpu": 30,
     "cpu": 85,
+    "ramGB": 16,
+    "objetivo": {
+      "res": "1080p",
+      "ajuste": "Alto"
+    }
+  },
+  {
+    "titulo": "VALORANT",
+    "tituloEn": "VALORANT",
+    "imagen": "/imagenes/juegos/valorant.webp",
+    "genero": "FPS Táctico",
+    "generoEn": "Tactical FPS",
+    "aaa": false,
+    "esports": true,
+    "gpu": 12,
+    "cpu": 105,
     "ramGB": 16,
     "objetivo": {
       "res": "1080p",

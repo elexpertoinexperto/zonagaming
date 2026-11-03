@@ -48,7 +48,7 @@ const catLabel: Record<string, string> = {
     <div class="juegos-grid">
       {juegos.map((juego) => (
         <div class="juego-card">
-          {juegoPorTitulo[juego.titulo]?.steamId && (
+          {(juegoPorTitulo[juego.titulo]?.steamId || juegoPorTitulo[juego.titulo]?.imagen) && (
             <img
               class="juego-img"
               src={steamImg(juegoPorTitulo[juego.titulo])}
