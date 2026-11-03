@@ -129,7 +129,7 @@ const t = isEn
   <section class="product-grid" id="listado-filtro">
     {listado.map((p: any, pos: number) => (
       <div class="pc-wrap" data-precio={p.precio} data-pos={pos}>
-        <ProductCard lang={lang} product={{
+        <ProductCard lang={lang} pos={pos} product={{
           id: p.id,
           name: p.nombre,
           price: `$${p.precio.toFixed(2)} USD`,

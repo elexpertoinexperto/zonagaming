@@ -12,7 +12,13 @@ type ProductCardData = {
   marca?: string;
 };
 
-const { product, lang = 'es' } = Astro.props as { product: ProductCardData; lang?: 'es' | 'en' };
+// pos = lugar de la tarjeta en su listado (0 = la primera). Sin pos (p. ej. «Más vendidos» de la portada, que queda bajo el pliegue) siempre lazy.
+const { product, lang = 'es', pos } = Astro.props as { product: ProductCardData; lang?: 'es' | 'en'; pos?: number };
+// Carga de la imagen: lo que se ve al abrir la página va «eager» y el resto «lazy» (web.dev: no hacer lazy lo que está en el primer pantallazo).
+// El HTML no distingue dispositivo: la primera fila de escritorio son 4 tarjetas (en móvil solo la 1.ª asoma, pero las 2.ª–3.ª entran en la
+// distancia de precarga del navegador de todas formas, así que eager no les cuesta nada extra).
+const PRIMERA_FILA = 4;
+const eager = typeof pos === 'number' && pos < PRIMERA_FILA;
 const tDetails = lang === 'en' ? 'Details' : 'Detalles';
 // alt = keyword principal de la categoría (la del H1) + nombre; la categoría sale del enlace a la ficha
 const hrefFicha = product.detailHref ?? '';
@@ -28,7 +34,8 @@ const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.st
         <img
           src={product.imageUrl || '/placeholder-product.svg'}
           alt={altImagen}
-          loading="lazy"
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
         />
       </div>
       <p>{product.description}</p>

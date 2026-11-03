@@ -89,7 +89,7 @@ const schema = {
               <img
                 src={juego.imagen ?? `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`}
                 alt={altJuego(juego.titulo)}
-                loading="lazy"
+                loading={i < 5 ? 'eager' : 'lazy'}
                 width="460"
                 height="215"
                 class="game-img"

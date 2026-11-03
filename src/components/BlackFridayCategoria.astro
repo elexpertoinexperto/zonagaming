@@ -140,7 +140,7 @@ const primeraImagen = items.find((p: any) => !String(p.imagenUrl).includes('plac
   <section class="product-grid" id="listado-bf">
     {items.map((p: any, pos: number) => (
       <div class="pc-wrap" data-precio={p.precio} data-pos={pos}>
-        <ProductCard lang={lang} product={{
+        <ProductCard lang={lang} pos={pos} product={{
           id: p.id,
           name: p.nombre,
           price: `${precio(p.precio)} USD`,

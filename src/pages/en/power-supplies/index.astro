@@ -49,8 +49,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <FiltrosNav catKey="fuentes-de-poder" lang="en" />
 
   <section class="product-grid">
-    {productsData.map((product) => (
-      <ProductCard lang="en" product={{
+    {productsData.map((product, pos) => (
+      <ProductCard pos={pos} lang="en" product={{
         id: product.id,
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,

@@ -17,6 +17,7 @@ const isEn = lang === 'en';
 const tSpecs = isEn ? 'Specifications' : 'Especificaciones';
 const tPrice = isEn ? 'Price' : 'Precio';
 const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
+// La foto de la ficha es la imagen más grande del primer pantallazo (la candidata a LCP): eager + prioridad alta, nunca lazy.
 // alt = keyword principal de la categoría (la del H1) + nombre del producto; la categoría sale de la URL de la ficha
 const altImagen = altProducto(claveDeRuta(Astro.url.pathname), nombre, lang);
 ---
@@ -24,7 +25,7 @@ const altImagen = altProducto(claveDeRuta(Astro.url.pathname), nombre, lang);
 <div class="producto-detalle">
   <div class="producto-contenedor">
     <div class="producto-imagenes">
-      <img src={imagenPath} alt={altImagen} class="producto-imagen" />
+      <img src={imagenPath} alt={altImagen} class="producto-imagen" loading="eager" fetchpriority="high" decoding="async" />
     </div>
 
     <div class="producto-info">

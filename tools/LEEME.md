@@ -128,6 +128,14 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   Lo usan `ProductCard` (la categoría sale del enlace a la ficha), `ProductoDetalle` (de la URL), `Comparador` y las portadas de juegos (`altJuego`).
 - `node tools/auditar-alt.mjs` (tras `npm run build`) revisa TODAS las páginas: ningún «imagen de», ninguna `<img>` sin alt y cada foto de producto con su alt esperado.
 
+## Carga de imágenes: eager / lazy (`ProductCard.astro`)
+
+- Regla (web.dev, «Browser-level image lazy loading» y «Optimize LCP»): lo que se ve al abrir la página va **eager**, el resto **lazy**, y la imagen LCP lleva `fetchpriority="high"` (solo 1–2 por página).
+- El HTML no puede distinguir móvil de escritorio. Se usa la primera fila de escritorio: las **4 primeras tarjetas** de cada listado (categorías, subcategorías, Black Friday) son eager
+  (`PRIMERA_FILA` en `ProductCard.astro`, que recibe `pos`); en móvil solo asoma la 1.ª, pero las 2.ª–3.ª están dentro de la distancia de precarga del navegador, así que eager no les cuesta más.
+- Ficha de producto: foto principal `loading="eager" fetchpriority="high"`. Recomendador: 5 primeras portadas eager. «Más vendidos» de la portada y logo del pie: lazy (están bajo el pliegue).
+- `node tools/auditar-carga-imagenes.mjs` (tras `npm run build`) lo comprueba en las 1.100+ páginas. Si cambian las columnas del listado, se ajusta `PRIMERA_FILA` y el número de la herramienta.
+
 ## Auditoría de datos del catálogo (`tools/auditar-catalogo.mjs`)
 
 - `npm run auditar` (sin red) revisa los 360 productos: ES y EN con los mismos ids/precios/ASIN/marca/imagen, sin duplicados, ASIN del enlace

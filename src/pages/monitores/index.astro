@@ -52,8 +52,8 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   <FiltrosNav catKey="monitores" lang="es" />
 
   <section class="product-grid">
-    {productsData.map((product) => (
-      <ProductCard product={{
+    {productsData.map((product, pos) => (
+      <ProductCard pos={pos} product={{
         id: product.id,
         name: product.nombre,
         price: `$${product.precio.toFixed(2)} USD`,
