@@ -13,7 +13,7 @@
       },
       "precio": 86.99,
       "enlaceAmazon": "https://amzn.to/4u5AmuV",
-      "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L_transparent.png",
+      "imagenUrl": "/imagenes/tarjetas-graficas/1/imgi_68_61KKrjJQ82L_transparent.webp",
       "marca": "ZOTAC",
       "asin": "B00SIOOLS2",
       "precioFecha": "2026-10-07"
@@ -49,7 +49,7 @@
       },
       "precio": 124.99,
       "enlaceAmazon": "https://amzn.to/4uMk5Mw",
-      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/tarjetas-graficas/3/71AyG0e41dL._AC_SX466__transparent.webp",
       "marca": "HyperRender",
       "asin": "B0DTHTQ7HP",
       "precioFecha": "2026-10-07"
@@ -67,7 +67,7 @@
       },
       "precio": 459.99,
       "enlaceAmazon": "https://amzn.to/4a4BjME",
-      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/tarjetas-graficas/4/71L08TQedJL._AC_SX466__transparent.webp",
       "marca": "GIGABYTE",
       "asin": "B0F91KM1CK"
     },
@@ -102,7 +102,7 @@
       },
       "precio": 635.99,
       "enlaceAmazon": "https://amzn.to/4fUa8b8",
-      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/tarjetas-graficas/6/71kUODqPVoL._AC_SX466__transparent.webp",
       "marca": "GIGABYTE",
       "asin": "B0DTQMLX4F"
     },
@@ -119,7 +119,7 @@
       },
       "precio": 862.63,
       "enlaceAmazon": "https://amzn.to/3RY1ZbH",
-      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/tarjetas-graficas/7/71R7fXnFGCL._AC_SX466__transparent.webp",
       "marca": "GIGABYTE",
       "asin": "B0DS2QG2KW",
       "precioFecha": "2026-10-07"
@@ -554,7 +554,7 @@
       },
       "precio": 174,
       "enlaceAmazon": "https://amzn.to/4uEUKUA",
-      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/1/61RfWUr4kvL._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B0D6NN6TM7",
       "precioFecha": "2026-10-07"
@@ -573,7 +573,7 @@
       },
       "precio": 345,
       "enlaceAmazon": "https://amzn.to/4fUakam",
-      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/2/51DY7a--LrL._AC_SX466__transparent.webp",
       "marca": "Intel",
       "asin": "B09MDD882B",
       "precioFecha": "2026-10-07"
@@ -592,7 +592,7 @@
       },
       "precio": 87.95,
       "enlaceAmazon": "https://amzn.to/3PEAiEi",
-      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/3/51So7GoGvxL._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B09VCJ171S",
       "precioFecha": "2026-10-07"
@@ -611,7 +611,7 @@
       },
       "precio": 229.95,
       "enlaceAmazon": "https://amzn.to/435HhJx",
-      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/4/51kIHB4GNYL._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B0D6NNDQ92",
       "precioFecha": "2026-10-07"
@@ -630,7 +630,7 @@
       },
       "precio": 142.49,
       "enlaceAmazon": "https://amzn.to/4anaiEh",
-      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/5/51m7L9bQI8L._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B0BBJDS62N",
       "precioFecha": "2026-10-07"
@@ -649,7 +649,7 @@
       },
       "precio": 188.99,
       "enlaceAmazon": "https://amzn.to/4uMp4wJ",
-      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/6/51hfER1cZVL._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B0BBHHT8LY",
       "precioFecha": "2026-10-07"
@@ -668,7 +668,7 @@
       },
       "precio": 249.99,
       "enlaceAmazon": "https://amzn.to/4dYSAIv",
-      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/procesadores/7/61IIbwz-+ML._AC_SX466__transparent.webp",
       "marca": "AMD",
       "asin": "B0815XFSGK",
       "precioFecha": "2026-10-07"
@@ -1129,7 +1129,7 @@
       },
       "precio": 285.99,
       "enlaceAmazon": "https://amzn.to/43ONmu1",
-      "imagenUrl": "/imagenes/memoria-ram/1/1_transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/1/1_transparent.webp",
       "marca": "CORSAIR",
       "asin": "B0GQC6MV6C",
       "precioFecha": "2026-10-07"
@@ -1151,7 +1151,7 @@
       },
       "precio": 218.99,
       "enlaceAmazon": "https://amzn.to/43cHSsS",
-      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/2/51BM392zpdL._AC_SX466__transparent.webp",
       "marca": "Gigastone",
       "asin": "B0CB2TZKCG",
       "precioFecha": "2026-10-07"
@@ -1173,7 +1173,7 @@
       },
       "precio": 124.99,
       "enlaceAmazon": "https://amzn.to/4x53qFn",
-      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/3/71c1E2brloL._AC_SX679__transparent.webp",
       "marca": "OLOy",
       "asin": "B0G8GZS8GL",
       "precioFecha": "2026-10-07"
@@ -1195,7 +1195,7 @@
       },
       "precio": 159.99,
       "enlaceAmazon": "https://amzn.to/4uSUHos",
-      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/4/71KvpD-WuNL._AC_SX466__transparent.webp",
       "marca": "TEAMGROUP",
       "asin": "B08FBGSPK2",
       "precioFecha": "2026-10-07"
@@ -1217,7 +1217,7 @@
       },
       "precio": 114.99,
       "enlaceAmazon": "https://amzn.to/4xgdRpY",
-      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/5/711R15tivGL._AC_SX466__transparent.webp",
       "marca": "OLOy",
       "asin": "B0FZHDDRG5",
       "precioFecha": "2026-10-07"
@@ -1239,7 +1239,7 @@
       },
       "precio": 204.99,
       "enlaceAmazon": "https://amzn.to/4x53tkx",
-      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/6/71OyqVy09rL._AC_SX466__transparent.webp",
       "marca": "OLOy",
       "asin": "B084JKGJKH",
       "precioFecha": "2026-10-07"
@@ -1261,7 +1261,7 @@
       },
       "precio": 103.99,
       "enlaceAmazon": "https://amzn.to/4dQYBIo",
-      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/memoria-ram/7/61bv6oB+NCL._AC_SX466__transparent.webp",
       "marca": "OLOy",
       "asin": "B08H84NXSH",
       "precioFecha": "2026-10-07"
@@ -1788,7 +1788,7 @@
       },
       "precio": 92.14,
       "enlaceAmazon": "https://amzn.to/4o6FNIm",
-      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/1/71wCn2cvuuL._AC_SX466__transparent.webp",
       "marca": "SIX",
       "asin": "B0FGPJ2BRF",
       "precioFecha": "2026-10-07"
@@ -1807,7 +1807,7 @@
       },
       "precio": 156.99,
       "enlaceAmazon": "https://amzn.to/4uRL2yn",
-      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/2/71c5uuoM1bL._AC_SX466__transparent.webp",
       "marca": "Kingston",
       "asin": "B0DBR3DZWG",
       "precioFecha": "2026-10-07"
@@ -1845,7 +1845,7 @@
       },
       "precio": 95.99,
       "enlaceAmazon": "https://amzn.to/4fZHiWO",
-      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/4/61j6GQ5vtxL._AC_SX466__transparent.webp",
       "marca": "Fikwot",
       "asin": "B0FYF5PLND",
       "precioFecha": "2026-10-07"
@@ -1864,7 +1864,7 @@
       },
       "precio": 83.49,
       "enlaceAmazon": "https://amzn.to/3RKHCyR",
-      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/5/61llO83NLOL._AC_SX466__transparent.webp",
       "marca": "KOOTION",
       "asin": "B0CDWH7W5T",
       "precioFecha": "2026-10-07"
@@ -1883,7 +1883,7 @@
       },
       "precio": 300,
       "enlaceAmazon": "https://amzn.to/3RR3SHh",
-      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/6/61uDl4amtnL._AC_SX466__transparent.webp",
       "marca": "WD",
       "asin": "B0DN6ZQ3PD",
       "precioFecha": "2026-10-07"
@@ -1902,7 +1902,7 @@
       },
       "precio": 85.99,
       "enlaceAmazon": "https://amzn.to/4e2Vg7X",
-      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/ssd/7/51tSeu7wBKL._AC_SX466__transparent.webp",
       "marca": "fanxiang",
       "asin": "B0CNSV1M47",
       "precioFecha": "2026-10-07"
@@ -2360,7 +2360,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/43kKiFR",
-      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/1/71Iaph8qz9L._AC_SX466__transparent.webp",
       "marca": "SKYLZOR",
       "asin": "B0GKFXSQXL",
       "precioFecha": "2026-10-07"
@@ -2379,7 +2379,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/3SmBuwJ",
-      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/2/81HpOs+qmSL._AC_SX466__transparent.webp",
       "marca": "Auotac",
       "asin": "B0FDVKJBML",
       "precioFecha": "2026-10-07"
@@ -2398,7 +2398,7 @@
       },
       "precio": 89.99,
       "enlaceAmazon": "https://amzn.to/4ucnyml",
-      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/3/71ifAJ6M-uL._AC_SX466__transparent.webp",
       "marca": "CORSAIR",
       "asin": "B0FLFGGDK3",
       "precioFecha": "2026-10-07"
@@ -2417,7 +2417,7 @@
       },
       "precio": 99.99,
       "enlaceAmazon": "https://amzn.to/4o9nkep",
-      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/4/71X788j8fcL._AC_SX466__transparent.webp",
       "marca": "GOLDEN FIELD",
       "asin": "B0FBGRW29R",
       "precioFecha": "2026-10-07"
@@ -2436,7 +2436,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/4vt3ey7",
-      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/5/71pgyyN1dfL._AC_SX466__transparent.webp",
       "marca": "Vetroo",
       "asin": "B0DP2LBPPY",
       "precioFecha": "2026-10-07"
@@ -2455,7 +2455,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/4ac6DJs",
-      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/6/61c+XEDHswL._AC_SX466__transparent.webp",
       "marca": "ASRock",
       "asin": "B0FSTL4VDZ",
       "precioFecha": "2026-10-07"
@@ -2474,7 +2474,7 @@
       },
       "precio": 64.99,
       "enlaceAmazon": "https://amzn.to/4vyUQ0g",
-      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/fuentes-de-poder/7/61J-ffQmE5L._AC_SX466__transparent.webp",
       "marca": "ASRock",
       "asin": "B0FSTHTLZT"
     },
@@ -2969,7 +2969,7 @@
       },
       "precio": 69.89,
       "enlaceAmazon": "https://amzn.to/4dMyJgI",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/3/61NTew7Du+L._SX522__transparent.webp",
       "marca": "ARCTIC",
       "asin": "B0DLWGG85P",
       "precioFecha": "2026-10-07"
@@ -2988,7 +2988,7 @@
       },
       "precio": 94.98,
       "enlaceAmazon": "https://amzn.to/4e5l57h",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/4/510X4+092JL._AC_SX466__transparent.webp",
       "marca": "CORSAIR",
       "asin": "B0DF7C4YPQ",
       "precioFecha": "2026-10-07"
@@ -3007,7 +3007,7 @@
       },
       "precio": 47.49,
       "enlaceAmazon": "https://amzn.to/4e8ymvW",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/5/71ceKgb2dHL._SX522__transparent.webp",
       "marca": "Minorsonic",
       "asin": "B0FHW333V3",
       "precioFecha": "2026-10-07"
@@ -3026,7 +3026,7 @@
       },
       "precio": 49.99,
       "enlaceAmazon": "https://amzn.to/3RLqJnG",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/6/616RP2Y69OL._AC_SX679__transparent.webp",
       "marca": "Antec",
       "asin": "B0FND8XGV1",
       "precioFecha": "2026-10-07"
@@ -3045,7 +3045,7 @@
       },
       "precio": 44.9,
       "enlaceAmazon": "https://amzn.to/4dMyORy",
-      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-liquida/7/611EbTikbpL._SX522__transparent.webp",
       "marca": "Thermalright",
       "asin": "B0CCNS5NZ9",
       "precioFecha": "2026-10-07"
@@ -3503,7 +3503,7 @@
       },
       "precio": 57.69,
       "enlaceAmazon": "https://amzn.to/4dQ6rSz",
-      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/1/612ZIxCFy1L._SX522__transparent.webp",
       "marca": "Thermalright",
       "asin": "B0GCZV21C7",
       "precioFecha": "2026-10-07"
@@ -3522,7 +3522,7 @@
       },
       "precio": 22.9,
       "enlaceAmazon": "https://amzn.to/4o6hIl2",
-      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/2/71eigWJ9YiL._SX522__transparent.webp",
       "marca": "Thermalright",
       "asin": "B0D39K37WP",
       "precioFecha": "2026-10-07"
@@ -3541,7 +3541,7 @@
       },
       "precio": 23.99,
       "enlaceAmazon": "https://amzn.to/4dQQ203",
-      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/3/612nmOrw71L._SX522__transparent.webp",
       "marca": "Vetroo",
       "asin": "B08F2FS7SR",
       "precioFecha": "2026-10-07"
@@ -3560,7 +3560,7 @@
       },
       "precio": 159.95,
       "enlaceAmazon": "https://amzn.to/49KpDia",
-      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/4/81i9YOlnPEL._SX522__transparent.webp",
       "marca": "Noctua",
       "asin": "B0D5B4KWMD",
       "precioFecha": "2026-10-07"
@@ -3579,7 +3579,7 @@
       },
       "precio": 34.9,
       "enlaceAmazon": "https://amzn.to/4g1ZQFS",
-      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/5/71sEMx7F+TL._AC_SX466__transparent.webp",
       "marca": "Thermalright",
       "asin": "B09LGY38L4",
       "precioFecha": "2026-10-07"
@@ -3598,7 +3598,7 @@
       },
       "precio": 34.71,
       "enlaceAmazon": "https://amzn.to/4of8GCy",
-      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/6/61bbD4lMUZL._SX522__transparent.webp",
       "marca": "Jungle Leopard",
       "asin": "B0FJ27YMV5",
       "precioFecha": "2026-10-07"
@@ -3617,7 +3617,7 @@
       },
       "precio": 33.89,
       "enlaceAmazon": "https://amzn.to/4fxCUOR",
-      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.png",
+      "imagenUrl": "/imagenes/refrigeracion-normal/7/71kK-nKFYXL._SX522__transparent.webp",
       "marca": "ABSOLIX",
       "asin": "B0GF8GGT7S",
       "precioFecha": "2026-10-07"
@@ -4075,7 +4075,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/49CU6Pc",
-      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/1/81llRKYgKBL._AC_SX466__transparent.webp",
       "marca": "FOIFKIN",
       "asin": "B0DFWQDRW1",
       "precioFecha": "2026-10-07"
@@ -4094,7 +4094,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/3RPC4TJ",
-      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/2/81Se8T+ftHL._AC_SX466__transparent.webp",
       "marca": "RUIX",
       "asin": "B0DPVPJKNC",
       "precioFecha": "2026-10-07"
@@ -4113,7 +4113,7 @@
       },
       "precio": 86.99,
       "enlaceAmazon": "https://amzn.to/4vpHfIo",
-      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/3/71u81yjhqfL._AC_SX466__transparent.webp",
       "marca": "GAMDIAS",
       "asin": "B0CXDX69LM"
     },
@@ -4131,7 +4131,7 @@
       },
       "precio": 169,
       "enlaceAmazon": "https://amzn.to/4ea3cUX",
-      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/4/71+dQ-+g1pL._AC_SX466__transparent.webp",
       "marca": "JONSBO",
       "asin": "B0CNKB4BGH",
       "precioFecha": "2026-10-07"
@@ -4169,7 +4169,7 @@
       },
       "precio": 55.98,
       "enlaceAmazon": "https://amzn.to/4o8APLt",
-      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/6/81jUGiXYX2L._AC_SX466__transparent.webp",
       "marca": "Genérico",
       "asin": "B0FF3L65TT",
       "precioFecha": "2026-10-07"
@@ -4188,7 +4188,7 @@
       },
       "precio": 55.98,
       "enlaceAmazon": "https://amzn.to/49JizlT",
-      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/gabinetes-gamer/7/81MnzpJk0hL._AC_SX466__transparent.webp",
       "marca": "Genérico",
       "asin": "B0FF3H6TN4",
       "precioFecha": "2026-10-07"
@@ -4646,7 +4646,7 @@
       },
       "precio": 42.99,
       "enlaceAmazon": "https://amzn.to/4uf6cVO",
-      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/teclados/1/71RyPHQp6ML._AC_SX466__transparent.webp",
       "marca": "RedThunder",
       "asin": "B09N9FR2FH",
       "precioFecha": "2026-10-07"
@@ -4665,7 +4665,7 @@
       },
       "precio": 68.99,
       "enlaceAmazon": "https://amzn.to/43TJ4kY",
-      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/teclados/2/71WXhjTVDKL._AC_SX466__transparent.webp",
       "marca": "RedThunder",
       "asin": "B0FH6Y1HYN",
       "precioFecha": "2026-10-07"
@@ -4703,7 +4703,7 @@
       },
       "precio": 29.99,
       "enlaceAmazon": "https://amzn.to/43hRWAL",
-      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/teclados/4/71Bk2A2WmOL._AC_SX466__transparent.webp",
       "marca": "Redragon",
       "asin": "B0CF3VGQFL"
     },
@@ -4740,7 +4740,7 @@
       },
       "precio": 34.99,
       "enlaceAmazon": "https://amzn.to/4e6FNUc",
-      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/teclados/6/71yPdbOQ-4L._AC_SX466__transparent.webp",
       "marca": "Genérico",
       "asin": "B0DSPYBCS7",
       "precioFecha": "2026-10-07"
@@ -4759,7 +4759,7 @@
       },
       "precio": 71.99,
       "enlaceAmazon": "https://amzn.to/4vv1rJ4",
-      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/teclados/7/71iz1MXIpzL._AC_SX466__transparent.webp",
       "marca": "AULA",
       "asin": "B0FQJ3HBBW",
       "precioFecha": "2026-10-07"
@@ -5217,7 +5217,7 @@
       },
       "precio": 39.09,
       "enlaceAmazon": "https://amzn.to/4o6ukIR",
-      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/mouse/1/71n8anxijsL._AC_SX679__transparent.webp",
       "marca": "Attack Shark",
       "asin": "B0D4QJR5TG",
       "precioFecha": "2026-10-07"
@@ -5274,7 +5274,7 @@
       },
       "precio": 159.99,
       "enlaceAmazon": "https://amzn.to/3QqHeFf",
-      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/mouse/4/51Vqc9mwhLL._AC_SX466__transparent.webp",
       "marca": "Razer",
       "asin": "B0GMLBSSTD",
       "precioFecha": "2026-10-07"
@@ -5293,7 +5293,7 @@
       },
       "precio": 67.95,
       "enlaceAmazon": "https://amzn.to/4ujsZjx",
-      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466__transparent.png",
+      "imagenUrl": "/imagenes/mouse/5/61MaTHWYylL._AC_SX466__transparent.webp",
       "marca": "GravaStar",
       "asin": "B0CSP61VR4",
       "precioFecha": "2026-10-07"
@@ -5312,7 +5312,7 @@
       },
       "precio": 34.95,
       "enlaceAmazon": "https://amzn.to/4aeSsTX",
-      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/mouse/6/51aFma5a-OL._AC_SX679__transparent.webp",
       "marca": "AJAZZ",
       "asin": "B0DWWJG8C9",
       "precioFecha": "2026-10-07"
@@ -5826,7 +5826,7 @@
       },
       "precio": 201.85,
       "enlaceAmazon": "https://amzn.to/3S7ybcN",
-      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/audifonos/3/71xNjrzG69L._AC_SX679__transparent.webp",
       "marca": "Logitech",
       "asin": "B081415GCS",
       "precioFecha": "2026-10-07"
@@ -5845,7 +5845,7 @@
       },
       "precio": 48.8,
       "enlaceAmazon": "https://amzn.to/3S5Fce5",
-      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/audifonos/4/71eWw8+bzyL._AC_SX679__transparent.webp",
       "marca": "Genérico",
       "asin": "B0GWR8F411",
       "precioFecha": "2026-10-07"
@@ -5883,7 +5883,7 @@
       },
       "precio": 79.99,
       "enlaceAmazon": "https://amzn.to/3RGyyLp",
-      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/audifonos/6/716qg8683eL._AC_SX679__transparent.webp",
       "marca": "KZ",
       "asin": "B0BTDG5BJR",
       "precioFecha": "2026-10-07"
@@ -5902,7 +5902,7 @@
       },
       "precio": 35.99,
       "enlaceAmazon": "https://amzn.to/4e5RN8q",
-      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679__transparent.png",
+      "imagenUrl": "/imagenes/audifonos/7/716XjjzR7iL._AC_SX679__transparent.webp",
       "marca": "NUBWO",
       "asin": "B0FFT4W8MR",
       "precioFecha": "2026-10-07"

@@ -18,6 +18,9 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
      una og:image propia; las que fallan quedan en `tools/probar-urls-fallos.json`).
    - `node tools/descargar-imagenes.mjs` baja las imágenes con pausas de 4 a 10 s entre peticiones.
      Rechaza miniaturas (<6 KB), logos y la misma imagen repetida en dos productos, y guarda todo como WebP de máx. 900 px (si ya hay imágenes pesadas: `node tools/optimizar-imagenes.mjs`).
+   - **Después de descargar o cambiar fotos**: `node tools/optimizar-fotos-producto.mjs` (idempotente) pasa a WebP (máx. 900 px, con transparencia) cualquier foto local que no lo sea, reduce las WebP de
+     más de 900 px o 150 KB y crea la versión de 480 px (`nombre-480.webp`) de las anchas, anotándola en `src/data/imagenes-variantes.json`; `ProductCard` la usa en `srcset`/`sizes`.
+     `--simular` solo cuenta; `--verificar` comprueba sin escribir (todas WebP/SVG ligeras, con su variante y manifiesto al día).
    - Si una imagen bajó mal: `node tools/quitar-imagen.mjs categoria/id` la revierte al placeholder.
    - Si un sitio responde 429, sube la pausa: `PAUSA=20 node tools/probar-urls.mjs lote.json`.
    - Intel (ark.intel.com / intel.com) bloquea las descargas automáticas (403): esas se dejan sin imagen o se

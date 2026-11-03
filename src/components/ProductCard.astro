@@ -1,5 +1,6 @@
 ---
 import { altProducto, claveDeRuta } from '../lib/alt-texto.mjs';
+import variantes from '../data/imagenes-variantes.json';
 
 type ProductCardData = {
   id?: number | string;
@@ -20,6 +21,9 @@ const { product, lang = 'es', pos } = Astro.props as { product: ProductCardData;
 const PRIMERA_FILA = 4;
 const eager = typeof pos === 'number' && pos < PRIMERA_FILA;
 const tDetails = lang === 'en' ? 'Details' : 'Detalles';
+// Versiones por tamaño (tools/optimizar-fotos-producto.mjs): la tarjeta muestra la foto a ~260–340 px, así que el navegador baja la de 480 px
+// salvo que la pantalla tenga mucha densidad (móvil retina → la grande). Las fotos sin variante (ya pequeñas, SVG o externas) van tal cual.
+const variante = (variantes as Record<string, { w: number; s: string }>)[product.imageUrl ?? ''];
 // alt = keyword principal de la categoría (la del H1) + nombre; la categoría sale del enlace a la ficha
 const hrefFicha = product.detailHref ?? '';
 const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.startsWith('/en/') ? 'en' : lang);
@@ -33,6 +37,8 @@ const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.st
       <div class="product-card-image">
         <img
           src={product.imageUrl || '/placeholder-product.svg'}
+          srcset={variante ? `${variante.s} 480w, ${product.imageUrl} ${variante.w}w` : undefined}
+          sizes={variante ? '(max-width: 560px) 100vw, 300px' : undefined}
           alt={altImagen}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
