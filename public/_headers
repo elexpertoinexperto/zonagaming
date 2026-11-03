@@ -19,3 +19,10 @@
   X-Robots-Tag: noindex
 /buscar-en.json
   X-Robots-Tag: noindex
+
+# La dirección de Pages (zonagaming-1zl.pages.dev y sus previews) sirve la web completa pero NO es la oficial:
+# el dominio real es monckeygamer.com. Aquí se pide a los buscadores que no la indexen (el dominio propio no se toca).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
