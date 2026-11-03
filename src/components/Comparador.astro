@@ -2,6 +2,7 @@
 import productosEs from '../data/productos.json';
 import productosEnData from '../data/productos-en.json';
 import { CATS_EN, UI_EN, SLUG_EN } from '../i18n/en';
+import { keywordAlt } from '../lib/alt-texto.mjs';
 
 const { categoriaFija, lang = 'es' } = Astro.props as { categoriaFija?: string; lang?: 'es' | 'en' };
 const isEn = lang === 'en';
@@ -9,6 +10,8 @@ const productos = isEn ? productosEnData : productosEs;
 // El comparador solo lleva a la ficha: los enlaces de compra (Amazon) no viajan en los datos de la página
 const productosInline = Object.fromEntries(Object.entries(productos).map(([k, l]: [string, any]) => [k, l.map(({ enlaceAmazon, asin, precioFecha, ...resto }: any) => resto)]));
 const urlPrefix = isEn ? '/en' : '';
+// Keyword principal de cada categoría para el alt de las fotos (misma regla que altProducto en src/lib/alt-texto.mjs)
+const altKw = Object.fromEntries(Object.keys(productosEs).map((k) => [k, keywordAlt(k, lang)]));
 // Mapa clave ES → slug de URL según idioma (en ES el slug es la propia clave)
 const catSlugs = Object.fromEntries(
   Object.keys(productosEs).map((k) => [k, isEn ? (SLUG_EN[k] || k) : k])
@@ -171,19 +174,26 @@ const t = isEn
   </div>
 </section>
 
-<script define:vars={{ productosData: productosInline, categoriasData: categorias, categoriaFija, urlPrefix, catSlugs, jsT: { chooseProduct: t.chooseProduct, specification: t.specification, price: t.price, bestPrice: t.bestPrice } }} is:inline>
+<script define:vars={{ productosData: productosInline, categoriasData: categorias, categoriaFija, urlPrefix, catSlugs, altKw, jsT: { chooseProduct: t.chooseProduct, specification: t.specification, price: t.price, bestPrice: t.bestPrice } }} is:inline>
   const selCat   = document.getElementById('comp-categoria');
   const selA     = document.getElementById('comp-a');
   const selB     = document.getElementById('comp-b');
   const tabla    = document.getElementById('comp-tabla');
   const table    = document.getElementById('comp-table');
 
+  // alt = keyword principal de la categoría + nombre (si el nombre ya empieza por la keyword no se repite)
+  function altDe(catKey, nombre) {
+    const kw = altKw[catKey];
+    const plegar = (s) => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+    return !kw || plegar(nombre).startsWith(plegar(kw).split(' ')[0]) ? nombre : `${kw} ${nombre}`;
+  }
+
   function fillSlot(slot, product, catKey) {
     const content = document.getElementById(`slot-${slot}-content`);
     const empty   = document.getElementById(`slot-${slot}-empty`);
 
     document.getElementById(`slot-${slot}-img`).src   = product.imagenUrl || '/placeholder-product.svg';
-    document.getElementById(`slot-${slot}-img`).alt   = product.nombre;
+    document.getElementById(`slot-${slot}-img`).alt   = altDe(catKey, product.nombre);
     document.getElementById(`slot-${slot}-name`).textContent  = product.nombre;
     document.getElementById(`slot-${slot}-desc`).textContent  = product.descripcion;
     document.getElementById(`slot-${slot}-price`).textContent = `$${product.precio.toFixed(2)} USD`;

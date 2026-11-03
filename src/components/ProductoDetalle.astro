@@ -1,4 +1,6 @@
 ---
+import { altProducto, claveDeRuta } from '../lib/alt-texto.mjs';
+
 interface Props {
   nombre: string;
   descripcion: string;
@@ -15,12 +17,14 @@ const isEn = lang === 'en';
 const tSpecs = isEn ? 'Specifications' : 'Especificaciones';
 const tPrice = isEn ? 'Price' : 'Precio';
 const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
+// alt = keyword principal de la categoría (la del H1) + nombre del producto; la categoría sale de la URL de la ficha
+const altImagen = altProducto(claveDeRuta(Astro.url.pathname), nombre, lang);
 ---
 
 <div class="producto-detalle">
   <div class="producto-contenedor">
     <div class="producto-imagenes">
-      <img src={imagenPath} alt={nombre} class="producto-imagen" />
+      <img src={imagenPath} alt={altImagen} class="producto-imagen" />
     </div>
 
     <div class="producto-info">

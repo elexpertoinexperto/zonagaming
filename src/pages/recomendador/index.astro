@@ -3,6 +3,7 @@ import SiteLayout from '../../components/SiteLayout.astro';
 import juegosRaw from '../../data/juegos-index.json';
 import productos from '../../data/productos.json';
 import { juegosConRecomendaciones } from '../../lib/rendimiento.mjs';
+import { altJuego } from '../../lib/alt-texto.mjs';
 
 // Las recomendaciones (GPU + CPU + RAM por juego) se calculan en el build con todo el catálogo
 const juegos = juegosConRecomendaciones(juegosRaw as any, productos as any);
@@ -87,7 +88,7 @@ const schema = {
             <div class="game-img-wrap">
               <img
                 src={juego.imagen ?? `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`}
-                alt={juego.titulo}
+                alt={altJuego(juego.titulo)}
                 loading="lazy"
                 width="460"
                 height="215"
@@ -150,7 +151,7 @@ const schema = {
     panelTitle.textContent = juego.titulo;
     panelGenre.textContent = juego.genero;
     panelImg.src = juego.imagen || `https://cdn.akamai.steamstatic.com/steam/apps/${juego.steamId}/header.jpg`;
-    panelImg.alt = juego.titulo;
+    panelImg.alt = `${juego.titulo}: componentes de PC recomendados`;
 
     const catOrder = { 'tarjetas-graficas': 0, 'procesadores': 1, 'memoria-ram': 2 };
     const sorted = [...juego.recomendaciones].sort((a, b) =>

@@ -1,4 +1,6 @@
 ---
+import { altProducto, claveDeRuta } from '../lib/alt-texto.mjs';
+
 type ProductCardData = {
   id?: number | string;
   name: string;
@@ -12,7 +14,9 @@ type ProductCardData = {
 
 const { product, lang = 'es' } = Astro.props as { product: ProductCardData; lang?: 'es' | 'en' };
 const tDetails = lang === 'en' ? 'Details' : 'Detalles';
-const tImageOf = lang === 'en' ? 'Image of' : 'Imagen de';
+// alt = keyword principal de la categoría (la del H1) + nombre; la categoría sale del enlace a la ficha
+const hrefFicha = product.detailHref ?? '';
+const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.startsWith('/en/') ? 'en' : lang);
 ---
 
 <article class="product-card">
@@ -23,7 +27,7 @@ const tImageOf = lang === 'en' ? 'Image of' : 'Imagen de';
       <div class="product-card-image">
         <img
           src={product.imageUrl || '/placeholder-product.svg'}
-          alt={`${tImageOf} ${product.name}`}
+          alt={altImagen}
           loading="lazy"
         />
       </div>

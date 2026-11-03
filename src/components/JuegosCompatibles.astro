@@ -5,6 +5,7 @@
 import productos from '../data/productos.json';
 import juegosData from '../data/juegos-index.json';
 import { prepararCatalogo, juegosParaProducto } from '../lib/rendimiento.mjs';
+import { altJuego } from '../lib/alt-texto.mjs';
 
 type Categoria = 'tarjetas-graficas' | 'procesadores' | 'memoria-ram' | 'ssd' | 'refrigeracion-normal' | 'refrigeracion-liquida';
 
@@ -52,7 +53,7 @@ const catLabel: Record<string, string> = {
             <img
               class="juego-img"
               src={steamImg(juegoPorTitulo[juego.titulo])}
-              alt={juego.titulo}
+              alt={altJuego(juego.titulo)}
               loading="lazy"
               width="460"
               height="215"

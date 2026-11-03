@@ -120,6 +120,14 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   al añadir productos, subcategorías o artículos aparecen solos. Se descarga solo al abrir la lupa (o al pasar el ratón por ella). Sin imágenes a propósito.
 - Para las campañas manda eventos a GTM/GA4: `site_search` (término + nº de resultados), `site_search_no_results` y `site_search_select` (destino).
 
+## Alt-text de las imágenes (`src/lib/alt-texto.mjs`)
+
+- El alt de cada foto de producto = **keyword principal de su categoría (la del H1) + nombre del producto**, p. ej. «Tarjeta gráfica para PC ASUS Prime Radeon RX 9070 XT…»
+  / «Gaming mouse Razer Basilisk V3…». Nunca «Imagen de…» / «Image of…». Si el nombre ya empieza por la keyword no se repite.
+- La keyword de cada categoría (ES y EN) está en la tabla `KW` de `alt-texto.mjs`: si cambia el H1 principal de una categoría, se edita ahí.
+  Lo usan `ProductCard` (la categoría sale del enlace a la ficha), `ProductoDetalle` (de la URL), `Comparador` y las portadas de juegos (`altJuego`).
+- `node tools/auditar-alt.mjs` (tras `npm run build`) revisa TODAS las páginas: ningún «imagen de», ninguna `<img>` sin alt y cada foto de producto con su alt esperado.
+
 ## Auditoría de datos del catálogo (`tools/auditar-catalogo.mjs`)
 
 - `npm run auditar` (sin red) revisa los 360 productos: ES y EN con los mismos ids/precios/ASIN/marca/imagen, sin duplicados, ASIN del enlace
