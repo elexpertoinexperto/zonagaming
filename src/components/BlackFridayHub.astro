@@ -7,6 +7,7 @@ import { SLUG_EN } from '../i18n/en';
 import productosEs from '../data/productos.json';
 import productosEn from '../data/productos-en.json';
 import { BLACK_FRIDAY, CATEGORIAS_BF, fechaTexto, tituloCaso } from '../data/black-friday.mjs';
+import { codigoIdioma } from '../lib/idioma.mjs';
 
 const { lang = 'es' } = Astro.props as { lang?: 'es' | 'en' };
 const isEn = lang === 'en';
@@ -46,7 +47,7 @@ const schema = [
     { '@type': 'ListItem', position: 1, name: t.home, item: `${site}${urlHome}` },
     { '@type': 'ListItem', position: 2, name: t.bf, item: `${site}${base}/` },
   ] },
-  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: h1, description, url: `${site}${base}/`, inLanguage: lang,
+  { '@context': 'https://schema.org', '@type': 'CollectionPage', name: h1, description, url: `${site}${base}/`, inLanguage: codigoIdioma(lang),
     mainEntity: { '@type': 'ItemList', numberOfItems: cats.length, itemListElement: cats.map((c, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site}${c.href}`, name: `Black Friday ${tituloCaso(c.nombre)}` })) } },
 ];
 ---

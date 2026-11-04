@@ -12,6 +12,7 @@ import { SLUG_EN } from '../i18n/en';
 import productosEs from '../data/productos.json';
 import productosEn from '../data/productos-en.json';
 import { BLACK_FRIDAY, fechaTexto, tituloCaso } from '../data/black-friday.mjs';
+import { codigoIdioma } from '../lib/idioma.mjs';
 
 const { catKey, lang = 'es' } = Astro.props as { catKey: string; lang?: 'es' | 'en' };
 const isEn = lang === 'en';
@@ -102,7 +103,7 @@ const schema = [
     name: h1,
     description,
     url: `${site}${urlBF}`,
-    inLanguage: lang,
+    inLanguage: codigoIdioma(lang),
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: total,

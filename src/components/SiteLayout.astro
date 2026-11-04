@@ -3,6 +3,7 @@ import '../styles.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 import { toEnPath, toEsPath } from '../i18n/en';
+import { codigoIdioma } from '../lib/idioma.mjs';
 import productosEs from '../data/productos.json';
 import productosEn from '../data/productos-en.json';
 import { NOMBRES } from '../lib/filtros.mjs';
@@ -75,7 +76,7 @@ const articleSchema = article ? {
   "description": description,
   "datePublished": article.dateISO,
   "dateModified": article.dateISO,
-  "inLanguage": lang,
+  "inLanguage": codigoIdioma(lang),
   "author": {
     "@type": "Organization",
     "name": "Monckey Gamer",
@@ -97,7 +98,7 @@ const articleSchema = article ? {
 } : null;
 ---
 
-<html lang={lang}>
+<html lang={codigoIdioma(lang)}>
   <head>
     <meta charset="utf-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

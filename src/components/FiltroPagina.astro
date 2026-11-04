@@ -14,6 +14,7 @@ import { seoDe, tituloPagina, descripcionSub, introSub, textoSub, parrafoMadre }
 import { FILTROS, NOMBRES, productosDelFiltro, tituloFiltro, etiqueta, slugDe } from '../lib/filtros-catalogo';
 import { SLUG_EN, CATS_EN } from '../i18n/en';
 import { conImagenPrimero } from '../lib/orden.mjs';
+import { codigoIdioma } from '../lib/idioma.mjs';
 
 const { catKey, slug, lang = 'es' } = Astro.props as { catKey: string; slug: string; lang?: 'es' | 'en' };
 const isEn = lang === 'en';
@@ -79,7 +80,7 @@ const schema = [
     name: h1,
     description,
     url: `${site}${urlFiltro}`,
-    inLanguage: lang,
+    inLanguage: codigoIdioma(lang),
     mainEntity: {
       '@type': 'ItemList',
       numberOfItems: items.length,

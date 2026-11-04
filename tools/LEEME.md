@@ -123,6 +123,11 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
   al añadir productos, subcategorías o artículos aparecen solos. Se descarga solo al abrir la lupa (o al pasar el ratón por ella). Sin imágenes a propósito.
 - Para las campañas manda eventos a GTM/GA4: `site_search` (término + nº de resultados), `site_search_no_results` y `site_search_select` (destino).
 
+## Idioma de las páginas (`src/lib/idioma.mjs`)
+
+- Español = **es-CO** (Colombia) e inglés = **en-US** (Estados Unidos), igual que el hreflang y `og:locale`: `<html lang>` (SiteLayout y las dos portadas) y el `inLanguage` del JSON-LD usan `codigoIdioma(lang)`.
+- `node tools/auditar-idioma.mjs` (tras `npm run build`) revisa las 1.169 páginas: html lang, og:locale, inLanguage y que todos los hreflang sean es-CO / en-US / x-default.
+
 ## Alt-text de las imágenes (`src/lib/alt-texto.mjs`)
 
 - El alt de cada foto de producto = **keyword principal de su categoría (la del H1) + nombre del producto**, p. ej. «Tarjeta gráfica para PC ASUS Prime Radeon RX 9070 XT…»

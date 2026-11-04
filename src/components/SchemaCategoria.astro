@@ -3,6 +3,7 @@
 // Mismo formato que las subcategorías (FiltroPagina.astro). Los productos llegan ya ordenados como se ven en la página.
 import { NOMBRES } from '../lib/filtros.mjs';
 import { SLUG_EN } from '../i18n/en';
+import { codigoIdioma } from '../lib/idioma.mjs';
 
 const { catKey, lang = 'es', items } = Astro.props as { catKey: string; lang?: 'es' | 'en'; items: any[] };
 const isEn = lang === 'en';
@@ -14,7 +15,7 @@ const schema = {
   '@type': 'CollectionPage',
   name: nombre,
   url: `${site}${base}/`,
-  inLanguage: lang,
+  inLanguage: codigoIdioma(lang),
   mainEntity: {
     '@type': 'ItemList',
     numberOfItems: items.length,
