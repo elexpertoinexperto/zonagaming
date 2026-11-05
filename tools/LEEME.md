@@ -125,8 +125,8 @@ Todo se ejecuta desde la raíz del proyecto (`D:\Proyecto Astro\zona-gaming`).
 
 ## Idioma de las páginas (`src/lib/idioma.mjs`)
 
-- Español = **es-CO** (Colombia) e inglés = **en-US** (Estados Unidos), igual que el hreflang y `og:locale`: `<html lang>` (SiteLayout y las dos portadas) y el `inLanguage` del JSON-LD usan `codigoIdioma(lang)`.
-- `node tools/auditar-idioma.mjs` (tras `npm run build`) revisa las 1.169 páginas: html lang, og:locale, inLanguage y que todos los hreflang sean es-CO / en-US / x-default.
+- Español = **es** (genérico, toda Latinoamérica) e inglés = **en-US** (Estados Unidos), igual que el hreflang y `og:locale`: `<html lang>` (SiteLayout y las dos portadas) y el `inLanguage` del JSON-LD usan `codigoIdioma(lang)`.
+- `node tools/auditar-idioma.mjs` (tras `npm run build`) revisa las 1.169 páginas: html lang, og:locale, inLanguage y que todos los hreflang sean es / en-US / x-default.
 
 ## Alt-text de las imágenes (`src/lib/alt-texto.mjs`)
 

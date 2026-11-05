@@ -4,7 +4,7 @@
 //  - TODA página construida (menos la 404) está en un sitemap, y ninguna URL aparece dos veces;
 //  - cada URL está en el sitemap que le toca: el blog (/blog/…) en blog, las fichas de producto en product y
 //    todo lo demás (inicio, categorías, subcategorías…) en pages;
-//  - cada URL del sitemap existe como página y esa página trae en su <head> hreflang es-CO / en-US / x-default hacia páginas reales;
+//  - cada URL del sitemap existe como página y esa página trae en su <head> hreflang es / en-US / x-default hacia páginas reales;
 //  - formato como eljoseoweb.com: cada <url> lleva solo <loc> y <lastmod> (ISO 8601 UTC con «Z»), y el lastmod de cada
 //    sitemap del índice es la fecha más reciente de las URLs que contiene;
 //  - canonical = URL y ninguna página en noindex.
@@ -54,8 +54,8 @@ for (const h of esperados) {
     const idioma = h.endsWith('-en.xml') ? 'en' : 'es';
     if (idioma === 'en' !== loc.replace(SITE, '').startsWith('/en')) err(`${h}: idioma equivocado → ${loc}`);
     const hl = Object.fromEntries([...(paginas.get(loc) ?? '').matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => [m[1], m[2]]));
-    for (const k of ['es-CO', 'en-US', 'x-default']) if (!hl[k]) err(`${h}: la página no trae hreflang ${k} → ${loc}`);
-    for (const u of [hl['es-CO'], hl['en-US']]) if (u && !paginas.has(u)) err(`${h}: hreflang a una página que no existe → ${u}`);
+    for (const k of ['es', 'en-US', 'x-default']) if (!hl[k]) err(`${h}: la página no trae hreflang ${k} → ${loc}`);
+    for (const u of [hl['es'], hl['en-US']]) if (u && !paginas.has(u)) err(`${h}: hreflang a una página que no existe → ${u}`);
   }
 }
 
