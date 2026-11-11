@@ -757,6 +757,18 @@ header {
   color: var(--accent);
 }
 
+.product-card h2 a,
+.product-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s var(--ease);
+}
+
+.product-card h2 a:hover,
+.product-card h3 a:hover {
+  color: var(--accent);
+}
+
 .product-card h2,
 .product-card h3 {
   margin: 0 4px 8px;

@@ -11,7 +11,7 @@ const { title, items } = Astro.props;
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: items.map(({ q, a }) => ({
+  mainEntity: items.map(({ q, a }: FaqItem) => ({
     '@type': 'Question',
     name: q,
     acceptedAnswer: { '@type': 'Answer', text: a },
@@ -23,10 +23,10 @@ const schema = {
   <div class="faq-inner">
     <h2>{title}</h2>
     <dl class="faq-list">
-      {items.map(({ q, a }) => (
+      {items.map(({ q, a, html }) => (
         <div class="faq-item">
           <dt>{q}</dt>
-          <dd>{a}</dd>
+          {html ? <dd set:html={html} /> : <dd>{a}</dd>}
         </div>
       ))}
     </dl>

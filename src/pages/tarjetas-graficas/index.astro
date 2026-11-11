@@ -8,7 +8,6 @@ import ProductCard from '../../components/ProductCard.astro';
 import BestSellers from '../../components/BestSellers.astro';
 import type { Producto } from '../../types/productos';
 import productos from '../../data/productos.json';
-import Comparador from '../../components/Comparador.astro';
 import FAQ from '../../components/FAQ.astro';
 import GuiaEntradaGpu from '../../components/GuiaEntradaGpu.astro';
 import SchemaCategoria from '../../components/SchemaCategoria.astro';
@@ -68,8 +67,6 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <SchemaCategoria catKey={"tarjetas-graficas"} lang="es" items={productsData} />
-
-  <Comparador categoriaFija="tarjetas-graficas" />
 
   <TextoSEO h2={seo.h2} parrafos={seo.p} />
 

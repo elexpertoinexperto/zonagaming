@@ -175,3 +175,13 @@ Tres capas, todas automáticas en cada commit (hook `pre-commit`, instalado con 
 - **Auditoría de toda la historia:** `npm run build && node tools/auditar-lastmod-historial.mjs` compila cada commit desde el 13-oct y comprueba que toda página cuyo
   contenido cambió tiene hoy un lastmod posterior al commit anterior (sale con error si no). Resultado a 29-oct-2026: 0 páginas atrasadas.
 - Si se hace un cambio masivo y NO quieres refechar nada: `node tools/actualizar-lastmod.mjs --render --render-base` (guarda las huellas sin mover fechas).
+
+## Comparador (casilla «Comparar» + /comparar/) — 11-nov-2026
+
+- Cada tarjeta (`ProductCard.astro`) trae la casilla «Comparar»; al marcarla sale la bandeja fija (`CompareTray.astro`, en el pie) con hasta 4 productos de la
+  MISMA categoría y el botón «Comparar», que abre `/comparar/?c=<categoria>&ids=1,2,3` (EN: `/en/compare/`). Lógica: `src/scripts/comparar.ts`.
+- La página (`ComparePage.astro`) pinta la tabla en el navegador con `/datos/comparar-<categoria>-<idioma>.json` (`src/pages/datos/[archivo].json.ts`, generado en el build):
+  precio y fecha, rendimiento y gama (gráficas/procesadores) y todas las especificaciones; «ver solo las diferencias»; quitar o añadir productos.
+- Es una sola página por idioma: va en `noindex, follow` y fuera del sitemap (excepción en `probar-sitemaps.mjs`). Sin enlaces de Amazon: solo «Detalles».
+- El comparador antiguo de dos huecos (`Comparador.astro`) ya solo está en la portada; salió de las 24 categorías (≈160 KB menos por página).
+- El nombre del producto en las tarjetas es un enlace a la ficha (h2 > a). Filtro de gráficas «Fabricante del chipset»: NVIDIA, AMD e Intel (Intel con `min: 2`).

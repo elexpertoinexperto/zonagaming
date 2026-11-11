@@ -1,0 +1,104 @@
+---
+// Página del comparador: /comparar/ (ES) y /en/compare/ (EN). La tabla la pinta src/scripts/comparar.ts en el navegador con los
+// productos de la URL (?c=<categoria>&ids=1,2,3), así que la página es una sola por idioma: va en noindex y fuera del sitemap.
+import SiteLayout from './SiteLayout.astro';
+import CategoryIcon from './CategoryIcon.astro';
+import { NOMBRES } from '../lib/filtros.mjs';
+import { SLUG_EN } from '../i18n/en';
+
+const { lang = 'es' } = Astro.props as { lang?: 'es' | 'en' };
+const isEn = lang === 'en';
+const ICONOS: Record<string, string> = {
+  'tarjetas-graficas': 'gpu', procesadores: 'cpu', 'memoria-ram': 'ram', ssd: 'ssd', 'fuentes-de-poder': 'psu',
+  'refrigeracion-liquida': 'aio', 'refrigeracion-normal': 'fan', 'gabinetes-gamer': 'box', teclados: 'keyboard',
+  mouse: 'mouse', audifonos: 'audio', monitores: 'monitor',
+};
+const categorias = Object.keys(ICONOS).map((c) => ({
+  href: isEn ? `/en/${SLUG_EN[c]}/` : `/${c}/`,
+  nombre: (NOMBRES as any)[c][isEn ? 'enTit' : 'esTit'],
+  icono: ICONOS[c],
+}));
+const t = isEn
+  ? { title: 'Compare PC components side by side | Monckey Gamer', h1: 'Compare products',
+      desc: 'Compare up to 4 PC components side by side: price, performance and every spec in one table.',
+      intro: 'Up to 4 products from the same category, side by side.',
+      emptyTitle: 'Nothing to compare yet', emptyText: 'Open a category, tick “Compare” on up to 4 products and press the Compare button.',
+      quitar: 'Remove', detalles: 'Details', precio: 'Price', rendimiento: 'Performance', puntos: 'pts', gama: 'Tier', masBarato: 'Cheapest',
+      masPotente: 'Fastest', revisado: 'Checked on', anadeOtro: 'Add a product', comparando: 'Comparing', soloDiferencias: 'Show differences only',
+      nota: 'Prices are those of the date shown and may have changed on Amazon. Performance points come from our index (the RTX 5060 is 100); it is a guide, not a lab test.' }
+  : { title: 'Comparar componentes de PC lado a lado | Monckey Gamer', h1: 'Comparar productos',
+      desc: 'Compara hasta 4 componentes de PC lado a lado: precio, rendimiento y todas las especificaciones en una tabla.',
+      intro: 'Hasta 4 productos de la misma categoría, lado a lado.',
+      emptyTitle: 'Todavía no hay nada que comparar', emptyText: 'Entra a una categoría, marca «Comparar» en hasta 4 productos y pulsa el botón Comparar.',
+      quitar: 'Quitar', detalles: 'Detalles', precio: 'Precio', rendimiento: 'Rendimiento', puntos: 'pts', gama: 'Gama', masBarato: 'El más barato',
+      masPotente: 'El más potente', revisado: 'Revisado el', anadeOtro: 'Añadir producto', comparando: 'Comparando', soloDiferencias: 'Ver solo las diferencias',
+      nota: 'Los precios son los de la fecha indicada y pueden haber cambiado en Amazon. Los puntos de rendimiento salen de nuestro índice (la RTX 5060 vale 100); es una guía, no una prueba de laboratorio.' };
+---
+
+<SiteLayout title={t.title} description={t.desc} robots="noindex, follow">
+  <section class="category-hero">
+    <h1>{t.h1}</h1>
+    <p class="category-description">{t.intro}</p>
+  </section>
+
+  <div id="cmp-page" data-t={JSON.stringify(t)}>
+    <div id="cmp-body" hidden></div>
+    <div id="cmp-empty" class="cmp-empty">
+      <h2>{t.emptyTitle}</h2>
+      <p>{t.emptyText}</p>
+      <ul class="cmp-cats">
+        {categorias.map((c) => (
+          <li><a href={c.href}><span><CategoryIcon name={c.icono} /></span>{c.nombre}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</SiteLayout>
+
+<style is:global>
+  #cmp-page { margin-top: 8px; }
+  .cmp-empty h2 { margin: 0 0 8px; font-size: 1.3rem; }
+  .cmp-empty p { margin: 0 0 22px; color: var(--text-muted); max-width: 60ch; }
+  .cmp-cats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .cmp-cats a { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 0.4s var(--ease), background 0.4s var(--ease); }
+  .cmp-cats a:hover { border-color: var(--accent-line); background: var(--accent-soft); }
+  .cmp-cats span { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-line); flex: none; }
+  .cmp-cats svg { width: 20px; height: 20px; }
+
+  .cmp-sub { margin: 0 0 12px; color: var(--text-muted); }
+  .cmp-sub a { color: var(--accent); }
+  .cmp-solo { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; color: var(--text-muted); font-size: 0.9rem; cursor: pointer; }
+  .cmp-solo input { width: 16px; height: 16px; accent-color: var(--accent); }
+  .cmp-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r-lg); background: rgba(255, 255, 255, 0.02); }
+  .cmp-tabla { width: 100%; border-collapse: collapse; table-layout: fixed; min-width: 720px; font-size: 0.92rem; }
+  .cmp-tabla th, .cmp-tabla td { padding: 14px 16px; text-align: left; vertical-align: top; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .cmp-tabla thead th, .cmp-tabla thead td { border-top: 0; }
+  .cmp-tabla tr > :first-child { border-left: 0; width: 150px; position: sticky; left: 0; z-index: 1; background: #070c13; }
+  .cmp-tabla tbody th { color: var(--text-dim); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .cmp-tabla td { color: var(--text); }
+  .cmp-tabla td small { display: block; margin-top: 4px; color: var(--text-dim); font-size: 0.76rem; }
+  .cmp-tabla tbody tr:hover td { background: rgba(255, 255, 255, 0.025); }
+  .cmp-col { position: relative; font-weight: 400; }
+  .cmp-col > * { display: block; }
+  .cmp-foto { display: grid; place-items: center; height: 150px; margin-bottom: 12px; border-radius: var(--r-md); background: rgba(255, 255, 255, 0.04); }
+  .cmp-foto img { max-width: 86%; max-height: 130px; object-fit: contain; }
+  .cmp-marca { color: var(--accent); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .cmp-nombre { color: var(--text); font-weight: 600; line-height: 1.3; text-decoration: none; margin-bottom: 12px; }
+  .cmp-nombre:hover { color: var(--accent); }
+  .cmp-col .btn { display: inline-flex; }
+  .cmp-x { position: absolute; top: 8px; right: 8px; z-index: 2; width: 28px; height: 28px; border: 1px solid var(--line-strong); border-radius: 50%; background: #0b1118; color: var(--text); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+  .cmp-x:hover { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  .cmp-precio { font-size: 1.25rem; }
+  .cmp-pill { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; }
+  .cmp-barra { display: block; height: 6px; margin-bottom: 6px; border-radius: 99px; background: rgba(255, 255, 255, 0.1); overflow: hidden; }
+  .cmp-barra i { display: block; height: 100%; border-radius: 99px; background: var(--brand-grad); }
+  .cmp-hueco { background: repeating-linear-gradient(135deg, transparent 0 10px, rgba(255, 255, 255, 0.015) 10px 20px); }
+  .cmp-mas { display: grid; place-items: center; height: 150px; border: 1px dashed var(--line-strong); border-radius: var(--r-md); color: var(--accent); text-decoration: none; font-weight: 500; text-align: center; padding: 10px; }
+  .cmp-mas:hover { background: var(--accent-soft); }
+  .cmp-dif .cmp-igual { display: none; }
+  .cmp-nota { margin: 16px 0 0; color: var(--text-dim); font-size: 0.8rem; max-width: 90ch; }
+  @media (max-width: 720px) {
+    .cmp-tabla tr > :first-child { width: 104px; }
+    .cmp-tabla th, .cmp-tabla td { padding: 10px; }
+  }
+</style>

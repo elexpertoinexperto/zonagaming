@@ -6,7 +6,6 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import FiltrosNav from '../../../components/FiltrosNav.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import BestSellers from '../../../components/BestSellers.astro';
-import Comparador from '../../../components/Comparador.astro';
 import FAQ from '../../../components/FAQ.astro';
 import SchemaCategoria from '../../../components/SchemaCategoria.astro';
 import { conImagenPrimero } from '../../../lib/orden.mjs';
@@ -64,8 +63,6 @@ const bestSellerProducts = productsData.slice(0, 3).map((p) => ({
   </section>
 
   <SchemaCategoria catKey={catKey} lang="en" items={productsData} />
-
-  <Comparador categoriaFija={catKey} lang="en" />
 
   <TextoSEO h2={seo.h2} parrafos={seo.p} />
 

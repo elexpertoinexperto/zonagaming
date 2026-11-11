@@ -26,6 +26,10 @@ const tDetails = lang === 'en' ? 'Details' : 'Detalles';
 const variante = (variantes as Record<string, { w: number; s: string }>)[product.imageUrl ?? ''];
 // alt = keyword principal de la categoría (la del H1) + nombre; la categoría sale del enlace a la ficha
 const hrefFicha = product.detailHref ?? '';
+// Casilla «Comparar»: categoría e id salen del enlace a la ficha (/categoria/slug-ID/); ver src/scripts/comparar.ts
+const cmpCat = claveDeRuta(hrefFicha);
+const cmpId = Number((hrefFicha.match(/-([0-9]+)[/]$/) ?? [])[1]);
+const tCompare = (hrefFicha.startsWith('/en/') ? 'en' : lang) === 'en' ? 'Compare' : 'Comparar';
 const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.startsWith('/en/') ? 'en' : lang);
 ---
 
@@ -33,7 +37,7 @@ const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.st
   <div class="product-card-content">
     <div>
       {product.marca && <span class="brand-tag">{product.marca}</span>}
-      <h2>{product.name}</h2>
+      <h2>{product.detailHref ? <a href={product.detailHref}>{product.name}</a> : product.name}</h2>
       <div class="product-card-image">
         <img
           src={product.imageUrl || '/placeholder-product.svg'}
@@ -55,6 +59,12 @@ const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.st
         )}
       </div>
     </div>
+    {cmpCat && cmpId > 0 && (
+      <label class="cmp-check">
+        <input type="checkbox" class="cmp-input" data-cat={cmpCat} data-id={cmpId} data-name={product.name} data-img={variante ? variante.s : (product.imageUrl || '/placeholder-product.svg')} data-href={hrefFicha} />
+        <span>{tCompare}</span>
+      </label>
+    )}
   </div>
 </article>
 

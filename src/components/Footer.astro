@@ -1,4 +1,5 @@
 ---
+import CompareTray from './CompareTray.astro';
 import { CATS_EN, UI_EN, SLUG_EN, toEnPath, toEsPath } from '../i18n/en';
 
 // Idioma derivado de la URL: /en/... es inglés
@@ -135,8 +136,11 @@ const t = isEn
   </div>
 </footer>
 
+<CompareTray />
+
 <script>
   import '../scripts/fx.ts';
+  import '../scripts/comparar.ts';
 </script>
 
 <style>

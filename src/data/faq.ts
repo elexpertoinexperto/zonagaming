@@ -1,4 +1,5 @@
-export type FaqItem = { q: string; a: string };
+// a = respuesta en texto plano (también va al schema FAQPage) · html = la misma respuesta con enlaces, solo para mostrarla
+export type FaqItem = { q: string; a: string; html?: string };
 export type FaqData = Record<string, FaqItem[]>;
 
 export const faqEs: FaqData = {
@@ -90,6 +91,14 @@ export const faqEs: FaqData = {
 
 export const faqEn: FaqData = {
   'tarjetas-graficas': [
+    { q: 'Which graphics card is best for gaming?',
+      a: 'It depends on your monitor and your budget. For 1080p, an RTX 5060 or an Intel Arc B580 is enough. For 1440p, look at the RX 9060 XT 16 GB or the RTX 5070. For 4K, you need an RX 9070 XT or an RTX 5080, usually with upscaling. The best card is the cheapest one that runs your games at your monitor resolution.',
+      html: 'It depends on your monitor and your budget. For 1080p, an <a href="/en/graphics-cards/asus-dual-rtx-5060-8gb-oc-2/">RTX 5060</a> or an <a href="/en/graphics-cards/sparkle-intel-arc-b580-titan-oc-12gb-12/">Intel Arc B580</a> is enough. For 1440p, look at the <a href="/en/graphics-cards/asrock-rx-9060-xt-challenger-16gb-oc-14/">RX 9060 XT 16 GB</a> or the <a href="/en/graphics-cards/gigabyte-rtx-5070-windforce-oc-sff-12g-6/">RTX 5070</a>. For 4K, you need an <a href="/en/graphics-cards/gigabyte-radeon-rx-9070-xt-gaming-oc-16g-7/">RX 9070 XT</a> or an <a href="/en/graphics-cards/gigabyte-rtx-5080-gaming-oc-16g-20/">RTX 5080</a>, usually with upscaling. The best card is the cheapest one that runs your games at your monitor resolution.' },
+    { q: 'Is a GTX or RTX better?',
+      a: 'RTX is better for current games. RTX cards are newer and add ray tracing and DLSS upscaling, which GTX cards do not have. A GTX card is older and cheaper, so it only makes sense for esports and light games on a tight budget.',
+      html: 'RTX is better for current games. <a href="/en/graphics-cards/nvidia-geforce/">RTX cards</a> are newer and add ray tracing and DLSS upscaling, which GTX cards do not have. A GTX card is older and cheaper, so it only makes sense for esports and light games on a tight budget.' },
+    { q: 'What is a graphics card?',
+      a: 'A graphics card, or GPU, is the PC component that draws the images you see on screen. In games it sets your frame rate and how much detail you can turn on. It has its own memory (VRAM) and plugs into the PCIe slot of the motherboard.' },
     { q: 'How much VRAM do I need for gaming?', a: '8 GB covers high-settings 1080p. 12 GB for stable 1440p with ray tracing. 16 GB+ for 4K or heavy texture-mod workloads.' },
     { q: 'NVIDIA or AMD?', a: 'NVIDIA leads in ray tracing and DLSS 4. AMD matches or beats it in rasterized price/performance with FSR. Choose by budget and target games.' },
     { q: 'What PSU do modern GPUs require?', a: 'RTX 5060 / RX 9060 XT: 650 W. RTX 5070 / RX 9070 XT: 750–850 W. Always add 150 W headroom above total system draw.' },

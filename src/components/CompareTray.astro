@@ -1,0 +1,101 @@
+---
+// Bandeja del comparador (fija abajo): aparece al marcar «Comparar» en una tarjeta y lleva a /comparar/ (EN: /en/compare/).
+// Va en el pie, así está en todas las páginas. Lógica en src/scripts/comparar.ts (se carga desde Footer.astro).
+const isEn = Astro.url.pathname === '/en' || Astro.url.pathname.startsWith('/en/');
+const t = isEn
+  ? { comparar: 'Compare', quitar: 'Remove', anade: 'Add another', minimo: 'Pick at least 2 products', maximo: 'You can compare up to 4 products',
+      otraCategoria: 'Only products from the same category can be compared: we started a new list', limpiar: 'Clear all', titulo: 'Compare products' }
+  : { comparar: 'Comparar', quitar: 'Quitar', anade: 'Añade otro', minimo: 'Elige al menos 2 productos', maximo: 'Puedes comparar hasta 4 productos',
+      otraCategoria: 'Solo se comparan productos de la misma categoría: empezamos una lista nueva', limpiar: 'Quitar todo', titulo: 'Comparar productos' };
+---
+
+<div id="cmp-tray" class="cmp-tray" hidden data-url={isEn ? '/en/compare/' : '/comparar/'} data-t={JSON.stringify(t)} role="region" aria-label={t.titulo}>
+  <div class="cmp-tray-in">
+    <div id="cmp-slots" class="cmp-slots"></div>
+    <div class="cmp-acciones">
+      <span id="cmp-msg" class="cmp-msg" aria-live="polite"></span>
+      <button type="button" id="cmp-clear" class="cmp-clear">{t.limpiar}</button>
+      <a id="cmp-go" class="btn cmp-go" href="#">{t.comparar}</a>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  /* Casilla «Comparar» de cada tarjeta */
+  .cmp-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 4px 0;
+    color: var(--text-dim);
+    font-size: 0.84rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  .cmp-check input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+  .cmp-check:hover, .cmp-check:has(input:checked) { color: var(--accent); }
+  .cmp-check:has(input:disabled) { opacity: 0.45; cursor: not-allowed; }
+
+  /* Bandeja fija */
+  .cmp-tray {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+    background: rgba(6, 12, 20, 0.94);
+    border-top: 1px solid var(--accent-line);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 -18px 50px rgba(0, 0, 0, 0.55);
+    animation: cmp-sube 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  @keyframes cmp-sube { from { transform: translateY(100%); } }
+  @media (prefers-reduced-motion: reduce) { .cmp-tray { animation: none; } }
+  .cmp-abierta body { padding-bottom: 120px; }
+  .cmp-tray-in { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; gap: 18px; }
+  .cmp-slots { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .cmp-slot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    height: 56px;
+    padding: 6px 30px 6px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .cmp-slot img { width: 42px; height: 42px; object-fit: contain; border-radius: 8px; background: #fff; flex: none; }
+  .cmp-slot span { font-size: 0.8rem; line-height: 1.25; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cmp-vacio { border-style: dashed; border-color: var(--line); background: none; justify-content: center; padding: 6px; }
+  .cmp-vacio span { color: var(--text-dim); }
+  .cmp-quitar {
+    position: absolute; top: 4px; right: 4px;
+    width: 22px; height: 22px;
+    border: 0; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-size: 1rem; line-height: 1;
+    cursor: pointer;
+  }
+  .cmp-quitar:hover { background: var(--accent); color: var(--accent-ink); }
+  .cmp-acciones { display: flex; align-items: center; gap: 14px; flex: none; }
+  .cmp-msg { max-width: 220px; color: var(--text-dim); font-size: 0.78rem; line-height: 1.3; text-align: right; }
+  .cmp-clear { background: none; border: 0; color: var(--text-dim); font: inherit; font-size: 0.84rem; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+  .cmp-clear:hover { color: var(--text); }
+  .cmp-go { padding: 13px 26px; font-size: 1rem; white-space: nowrap; }
+  .cmp-go[aria-disabled='true'] { opacity: 0.45; pointer-events: none; }
+
+  @media (max-width: 860px) {
+    .cmp-tray-in { flex-direction: column; align-items: stretch; gap: 10px; }
+    .cmp-slots { gap: 6px; }
+    .cmp-slot { height: 48px; padding: 4px; justify-content: center; }
+    .cmp-slot span { display: none; }
+    .cmp-slot img { width: 38px; height: 38px; }
+    .cmp-vacio span { display: block; font-size: 0.68rem; text-align: center; }
+    .cmp-quitar { top: -6px; right: -6px; background: #1c2a3a; }
+    .cmp-acciones { justify-content: space-between; }
+    .cmp-msg { text-align: left; flex: 1; max-width: none; }
+    .cmp-abierta body { padding-bottom: 150px; }
+  }
+</style>

@@ -58,7 +58,7 @@ export const NOMBRES = {
 export const GRUPOS = {
   resolucion: { es: 'Resolución', en: 'Resolution' },
   vram: { es: 'Memoria de video', en: 'Video memory' },
-  chip: { es: 'Fabricante del chip', en: 'Chip maker' },
+  chip: { es: 'Fabricante del chipset', en: 'Chipset manufacturer' },
   modelo: { es: 'Modelo', en: 'Model' },
   serie: { es: 'Serie', en: 'Series' },
   socket: { es: 'Plataforma', en: 'Platform' },
@@ -98,6 +98,8 @@ const DEFINICIONES = {
       F('vram', 'de 16 GB', 'with 16 GB', (p) => g(p).vram === 16, 'Con 16 GB de VRAM estás cubierto para 1440p ultra, 4K y juegos con texturas pesadas.', '16 GB of VRAM has you covered for 1440p ultra, 4K and texture-heavy games.'),
       F('chip', 'NVIDIA GeForce', 'NVIDIA GeForce', (p) => /geforce|rtx|gtx/i.test(p.nombre), 'Tarjetas con chip NVIDIA: DLSS, trazado de rayos maduro y gran soporte de drivers.', 'NVIDIA-powered cards: DLSS, mature ray tracing and great driver support.'),
       F('chip', 'AMD Radeon', 'AMD Radeon', (p) => /radeon|\brx\b/i.test(p.nombre), 'Tarjetas con chip AMD: gran rendimiento por dólar y FSR compatible con casi cualquier juego.', 'AMD-powered cards: strong value per dollar and FSR that works in nearly any game.'),
+      // Intel solo tiene 2 tarjetas en catálogo: se admite con min 2 porque es uno de los tres fabricantes de chipset
+      { ...F('chip', 'Intel Arc', 'Intel Arc', (p) => / arc /i.test(` ${p.nombre} `), 'Tarjetas con chip Intel Arc: precios ajustados y reescalado XeSS; la serie B es la interesante para 1080p.', 'Intel Arc-powered cards: sharp pricing and XeSS upscaling; the B-series is the one to look at for 1080p.'), min: 2 },
       F('modelo', 'RTX 5060', 'RTX 5060', (p) => chipDe(p) === 'RTX 5060', 'La RTX 5060 es la puerta de entrada a la serie 50: DLSS 4 y Frame Generation para 1080p y 1440p.', 'The RTX 5060 is the entry point to the 50 series: DLSS 4 and Frame Generation for 1080p and 1440p.'),
       F('modelo', 'RTX 5060 Ti', 'RTX 5060 Ti', (p) => chipDe(p) === 'RTX 5060 Ti', 'La RTX 5060 Ti, sobre todo en versión 16 GB, es muy recomendable para 1440p.', 'The RTX 5060 Ti, especially the 16 GB version, is a great pick for 1440p.'),
       F('modelo', 'RTX 5070', 'RTX 5070', (p) => chipDe(p) === 'RTX 5070', 'La RTX 5070 apunta a 1440p alto con trazado de rayos y DLSS 4.', 'The RTX 5070 targets high-refresh 1440p with ray tracing and DLSS 4.'),
@@ -334,7 +336,7 @@ export function construirFiltros(productos) {
     salida[cat] = [];
     for (const d of defs) {
       const items = lista.filter((p) => d.test(p));
-      if (items.length < MIN_PRODUCTOS || items.length === lista.length) continue;
+      if (items.length < (d.min ?? MIN_PRODUCTOS) || items.length === lista.length) continue;
       let slugEs = d.slugEs ?? slugify(d.es);
       let slugEn = d.slugEn ?? slugify(d.en);
       if (usadosEs.has(slugEs) || usadosEn.has(slugEn)) continue;

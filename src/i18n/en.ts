@@ -20,6 +20,7 @@ export const SLUG_EN: Record<string, string> = {
   'audifonos': 'headsets',
   'monitores': 'gaming-monitors',
   'recomendador': 'recommender',
+  'comparar': 'compare',
 };
 
 // Slug EN → clave ES (inverso)

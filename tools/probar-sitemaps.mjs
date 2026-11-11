@@ -101,6 +101,8 @@ for (const h of [...esperados, 'sitemap.xml']) {
 
 for (const [url, html] of paginas) {
   if (url === SITE + '/404/') continue;
+  // el comparador es una sola página por idioma que se llena con ?c=…&ids=…: va en noindex y fuera del sitemap, a propósito
+  if (url === SITE + '/comparar/' || url === SITE + '/en/compare/') continue;
   if (!enSitemaps.has(url)) err(`página fuera de los sitemaps: ${url}`);
   const canon = (html.match(/rel="canonical" href="([^"]+)"/) ?? [])[1];
   if (canon && canon !== url) err(`canonical distinto de la URL: ${url} → ${canon}`);
