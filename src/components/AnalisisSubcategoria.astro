@@ -53,9 +53,9 @@ const faqs = [
 const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
 const tx = isEn
   ? { title: 'Selection analysis', picks: 'Our picks in this selection', cheap: 'Most affordable', bal: 'Balanced choice', top: 'Most complete (priciest)', balNote: 'closest to the median price',
-      table: 'Comparison table', prod: 'Product', price: 'Price', faq: 'Frequently asked questions', note: 'Automatic analysis based on this catalog\'s specs and prices.' }
+      table: 'Comparison table', prod: 'Product', price: 'Price', faq: 'Frequently asked questions', note: 'Automatic analysis based on this catalog\'s specs and prices. *Check the price for your location' }
   : { title: 'Análisis de la selección', picks: 'Nuestras opciones en esta selección', cheap: 'La más económica', bal: 'La opción equilibrada', top: 'La más completa (la más cara)', balNote: 'precio más cercano a la mediana',
-      table: 'Tabla comparativa', prod: 'Producto', price: 'Precio', faq: 'Preguntas frecuentes', note: 'Análisis automático a partir de las especificaciones y precios de este catálogo.' };
+      table: 'Tabla comparativa', prod: 'Producto', price: 'Precio', faq: 'Preguntas frecuentes', note: 'Análisis automático a partir de las especificaciones y precios de este catálogo. *Verifica el precio según tu ubicación' };
 const picks = [
   { tag: tx.cheap, p: barato },
   { tag: `${tx.bal} · ${tx.balNote}`, p: equilibrado },
@@ -73,7 +73,7 @@ const picks = [
       <a class="an-sub-pick" href={href(x.p)}>
         <span class="an-sub-tag">{x.tag}</span>
         <strong>{corto(x.p.nombre, 70)}</strong>
-        <span class="an-sub-precio">{dinero(x.p.precio)} USD</span>
+        <span class="an-sub-precio">{dinero(x.p.precio)} USD*</span>
         {clave(x.p) && <span class="an-sub-spec">{clave(x.p)}</span>}
       </a>
     ))}
@@ -93,7 +93,7 @@ const picks = [
         {ord.map((p) => (
           <tr>
             <td><a href={href(p)}>{corto(p.nombre, 64)}</a></td>
-            <td>{dinero(p.precio)}</td>
+            <td>{dinero(p.precio)}*</td>
             {cols.map((c) => <td>{val(p, c)}</td>)}
           </tr>
         ))}

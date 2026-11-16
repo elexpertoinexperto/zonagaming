@@ -150,7 +150,7 @@ async function pintarPagina() {
       </th>`).join('') + (prods.length < MAX ? `<th scope="col" class="cmp-col cmp-hueco"><a class="cmp-mas" href="${esc(datos.base)}/">+ ${esc(T.anadeOtro)}</a></th>` : '');
 
     const filas = [
-      fila(T.precio, prods.map((p) => `<strong class="cmp-precio">${dinero(p.p)}</strong> USD${varios && p.p === minPrecio ? ` <span class="cmp-pill">${esc(T.masBarato)}</span>` : ''}${fecha(p.f) ? `<small>${esc(T.revisado)} ${esc(fecha(p.f))}</small>` : ''}`), prods.map((p) => String(p.p))),
+      fila(T.precio, prods.map((p) => `<strong class="cmp-precio">${dinero(p.p)}</strong> USD*${varios && p.p === minPrecio ? ` <span class="cmp-pill">${esc(T.masBarato)}</span>` : ''}${fecha(p.f) ? `<small>${esc(T.revisado)} ${esc(fecha(p.f))}</small>` : ''}`), prods.map((p) => String(p.p))),
       prods.some((p) => p.pts != null) ? fila(T.rendimiento, prods.map((p) => p.pts == null ? '—' : `<span class="cmp-barra"><i style="width:${Math.min(100, (p.pts / 270) * 100).toFixed(1)}%"></i></span>${Math.round(p.pts)} ${esc(T.puntos)}${varios && p.pts === maxPts ? ` <span class="cmp-pill">${esc(T.masPotente)}</span>` : ''}`), prods.map((p) => String(p.pts))) : '',
       prods.some((p) => p.nivel) ? fila(T.gama, prods.map((p) => esc(p.nivel || '—')), prods.map((p) => p.nivel || '')) : '',
       ...claves.map((k) => fila(k, prods.map((p) => esc(p.specs[k] ?? '—')), prods.map((p) => p.specs[k] ?? ''))),

@@ -16,6 +16,7 @@ const { nombre, descripcion, especificaciones, precio, enlaceAmazon, imagenPath,
 const isEn = lang === 'en';
 const tSpecs = isEn ? 'Specifications' : 'Especificaciones';
 const tPrice = isEn ? 'Price' : 'Precio';
+const tPriceNote = isEn ? '*Check the price for your location' : '*Verifica el precio según tu ubicación';
 const tAmazon = isEn ? 'View on Amazon' : 'Ver en Amazon';
 // La foto de la ficha es la imagen más grande del primer pantallazo (la candidata a LCP): eager + prioridad alta, nunca lazy.
 // alt = keyword principal de la categoría (la del H1) + nombre del producto; la categoría sale de la URL de la ficha
@@ -37,7 +38,8 @@ const altImagen = altProducto(claveDeRuta(Astro.url.pathname), nombre, lang);
       <div class="compra">
         <div class="compra-precio">
           <span class="precio-label">{tPrice}</span>
-          <p class="precio">${precio.toFixed(2)} <small>USD</small></p>
+          <p class="precio">${precio.toFixed(2)} <small>USD</small>*</p>
+          <small class="price-note">{tPriceNote}</small>
         </div>
         <a href={enlaceAmazon} target="_blank" rel="sponsored noopener noreferrer" class="btn-amazon">
           {tAmazon}

@@ -29,7 +29,9 @@ const hrefFicha = product.detailHref ?? '';
 // Casilla «Comparar»: categoría e id salen del enlace a la ficha (/categoria/slug-ID/); ver src/scripts/comparar.ts
 const cmpCat = claveDeRuta(hrefFicha);
 const cmpId = Number((hrefFicha.match(/-([0-9]+)[/]$/) ?? [])[1]);
-const tCompare = (hrefFicha.startsWith('/en/') ? 'en' : lang) === 'en' ? 'Compare' : 'Comparar';
+const idioma = hrefFicha.startsWith('/en/') ? 'en' : lang;
+const tCompare = idioma === 'en' ? 'Compare' : 'Comparar';
+const tPriceNote = idioma === 'en' ? '*Check the price for your location' : '*Verifica el precio según tu ubicación';
 const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.startsWith('/en/') ? 'en' : lang);
 ---
 
@@ -52,7 +54,7 @@ const altImagen = altProducto(claveDeRuta(hrefFicha), product.name, hrefFicha.st
     </div>
 
     <div class="product-card-footer">
-      <span>{product.price}</span>
+      <span>{product.price}*<small class="price-note">{tPriceNote}</small></span>
        <div class="product-card-actions">
         {product.detailHref && (
           <a class="btn btn-small" href={product.detailHref}>{tDetails}</a>

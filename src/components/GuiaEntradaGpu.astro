@@ -32,10 +32,10 @@ const minMedia = media[0], minAlta = alta[0];
 const tx = isEn
   ? { h2: 'Entry-level graphics cards: which ones are and which are not', rule: `We call a card entry-level when it performs at or below an RTX 5060 (${LIMITE_ENTRADA} points on our performance index, where the RTX 5060 is 100). That is the usual starting point for playing at 1080p. We classify by performance, not by price, because prices change every week.`,
       h3a: `Entry-level cards in our catalog (${entrada.length})`, card: 'Graphics card', price: 'Price', vram: 'VRAM', pts: 'Points', kind: 'Type', for: 'For',
-      h3b: 'Which one should I pick?', h3c: 'Which ones are NOT entry-level?', note: 'Classification based on each model\'s performance index; it is a guide, not a lab test. Prices are those of the catalog.' }
+      h3b: 'Which one should I pick?', h3c: 'Which ones are NOT entry-level?', note: 'Classification based on each model\'s performance index; it is a guide, not a lab test. Prices are those of the catalog. *Check the price for your location' }
   : { h2: 'Gráficas de entrada: cuáles sí lo son y cuáles no', rule: `Llamamos gráfica de entrada a la que rinde igual o menos que una RTX 5060 (${LIMITE_ENTRADA} puntos en nuestro índice de rendimiento, donde la RTX 5060 vale 100). Es el punto de partida habitual para jugar en 1080p. Clasificamos por rendimiento y no por precio, porque los precios cambian cada semana.`,
       h3a: `Gráficas de entrada de nuestro catálogo (${entrada.length})`, card: 'Gráfica', price: 'Precio', vram: 'VRAM', pts: 'Puntos', kind: 'Tipo', for: 'Para',
-      h3b: '¿Cuál elijo?', h3c: '¿Cuáles NO son de entrada?', note: 'Clasificación según el índice de rendimiento de cada modelo; es una guía, no una prueba de laboratorio. Los precios son los del catálogo.' };
+      h3b: '¿Cuál elijo?', h3c: '¿Cuáles NO son de entrada?', note: 'Clasificación según el índice de rendimiento de cada modelo; es una guía, no una prueba de laboratorio. Los precios son los del catálogo. *Verifica el precio según tu ubicación' };
 
 const nombre = (f: any) => corto(f.p.nombre, 60);
 const rec = t(
@@ -69,7 +69,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntit
         {entrada.map((f) => (
           <tr>
             <td><a href={href(f.p)}>{corto(f.p.nombre, 64)}</a></td>
-            <td>{dinero(f.p.precio)}</td>
+            <td>{dinero(f.p.precio)}*</td>
             <td>{f.n.vram} GB</td>
             <td>{Math.round(f.n.puntos)}</td>
             <td>{f.n.clase.etiqueta[lang]}{f.n.anterior ? t(' · gen. anterior', ' · older gen.') : ''}</td>

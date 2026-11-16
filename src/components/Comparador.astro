@@ -196,7 +196,7 @@ const t = isEn
     document.getElementById(`slot-${slot}-img`).alt   = altDe(catKey, product.nombre);
     document.getElementById(`slot-${slot}-name`).textContent  = product.nombre;
     document.getElementById(`slot-${slot}-desc`).textContent  = product.descripcion;
-    document.getElementById(`slot-${slot}-price`).textContent = `$${product.precio.toFixed(2)} USD`;
+    document.getElementById(`slot-${slot}-price`).textContent = `$${product.precio.toFixed(2)} USD*`;
 
     const specsList = document.getElementById(`slot-${slot}-specs`);
     specsList.innerHTML = Object.entries(product.especificaciones || {})
@@ -249,11 +249,11 @@ const t = isEn
           <td style="${specStyle}">${jsT.price}</td>
           <td class="${cheaperA ? 'price-winner' : ''}">
             ${cheaperA ? `<span class="winner-badge">${jsT.bestPrice}</span>` : ''}
-            $${pA.precio.toFixed(2)} USD
+            $${pA.precio.toFixed(2)} USD*
           </td>
           <td class="${cheaperB ? 'price-winner' : ''}">
             ${cheaperB ? `<span class="winner-badge">${jsT.bestPrice}</span>` : ''}
-            $${pB.precio.toFixed(2)} USD
+            $${pB.precio.toFixed(2)} USD*
           </td>
         </tr>
         ${rows}
